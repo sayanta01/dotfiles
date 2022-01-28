@@ -1,0 +1,34 @@
+#! /bin/sh
+
+
+bspc monitor -d I II III IV V VI VII
+
+bspc config border_width           3
+bspc config window_gap             4
+bspc config split_ratio            0.50
+
+bspc config borderless_monocle     true
+bspc config focus_follows_pointer  true
+bspc config pointer_modifier       mod1
+bspc config focused_border_color   "#81A1C1" 
+
+
+#Autostart
+xsetroot -cursor_name left_ptr &
+~/.config/polybar/launch.sh &
+pgrep -x sxhkd > /dev/null || sxhkd &
+nm-applet &
+blueman-applet &
+feh --bg-scale ~/Desktop/LinuxCustomization/Wallpaper/WP .png &
+nitrogen --restore &
+xset s off &
+xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/xresources & 
+#sxhkd &
+#dunst &
+#picom --experimental-backends &
+
+
+
+
+
+

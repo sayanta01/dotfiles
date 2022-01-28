@@ -1,0 +1,226 @@
+#
+# wm independent hotkeys
+#
+           
+# vol down
+alt + F2
+       amixer set Master 5%-
+
+# vol up
+alt + F3
+       amixer set Master 5%+
+ 
+# mute
+alt + F4
+        amixer set Master toggle         
+
+# switch audio
+alt + F5       
+       bash ~/.config/polybar/scripts/audioswitch
+
+# previous
+alt + F6 
+       playerctl previous   
+    
+# play, pause   
+alt + F7
+       playerctl play-pause
+  
+# next
+alt + F8
+       playerctl next
+ 
+# ss window
+Print
+     scrot /home/bot/Pictures/%I:%M-%d-%b-Fullscreenshot.png 
+                 
+# ss select   
+shift + Print
+            scrot --select --line mode=edge /home/bot/Pictures/%I:%M-%d-%b-Selescreenshot.png
+                         
+# ss window
+alt + Print
+          scrot --focused /home/bot/Pictures/%I:%M-%d-%b-Windscreenshot.png  
+           
+# reboot
+ctrl + shift + F4
+                reboot
+       
+# shutdown
+ctrl + super + F4
+                shutdown now
+         
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+                      
+# thunar
+super + e
+        thunar $HOME
+
+# chrome
+alt + b
+      cd /opt/google/chrome/; ./chrome 
+        
+# firefox
+alt + w
+      firefox
+           
+# terminal
+super + Return
+             st 
+
+# kitty
+alt + space
+          kitty
+
+#
+ dmenu
+ctrl + space 
+           dmenu_run
+# launcher
+super + space
+	    rofi -show drun -show-icons
+
+# spotify
+alt + s
+      LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U                 
+                        
+# telegram
+alt + t
+      telegram-desktop
+          
+# virtual-box
+alt + shift + v 
+              virtualbox
+
+# calc
+ctrl + alt + k
+             mate-calculator
+       
+# vs-code 
+alt + shift + c
+              code
+ 
+# obs
+alt + o
+      obs
+      
+# wireshark
+alt + shift + w
+              wireshark
+              
+# burpsuite
+alt + shift + b
+              cd BurpSuiteCommunity; ./BurpSuiteCommunity
+      
+   
+      
+
+      
+                            
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+super + {_,shift + }w
+	bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# send the newest marked node to the newest preselected node
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
