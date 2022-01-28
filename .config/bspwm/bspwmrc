@@ -23,7 +23,6 @@ feh --bg-scale ~/Desktop/LinuxCustomization/Wallpaper/WP .png &
 nitrogen --restore &
 xset s off &
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/xresources & 
-#sxhkd &
 #dunst &
 #picom --experimental-backends &
 
