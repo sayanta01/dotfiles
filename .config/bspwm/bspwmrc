@@ -24,7 +24,6 @@ nitrogen --restore &
 xset s off &
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/xresources & 
 #dunst &
-#picom --experimental-backends &
 
 
 
