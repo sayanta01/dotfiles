@@ -116,7 +116,7 @@ label-unmounted = %mountpoint%
 type = internal/memory
 interval = 2
 format-foreground = #ffb86c
-label = 󰘚 %mb_used%
+label = 󰘚%mb_used%
 
 
 [module/uptime]
