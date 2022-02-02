@@ -1,32 +1,28 @@
 configuration {
-  display-drun: " >";
-  font: "Google sans bold 11";
+  display-drun:         " >    ";
 }
 
 @theme "/dev/null"
 
 * {
-  bg: #000000;
-  bg-alt: #617BE3;
-
-  fg: #FFFFFF;
-  fg-alt: #787c99;
-
-  background-color: @bg;
+  font:                 "jetbrainsmono semibold  12";
+  background:           #111;
+  foreground:           #fff;
+  background-alt:       #617BE3;
+  text-color:           #aaa;
+  foreground-alt:       #787c99;
+  highlight:	        #0f5ff9;
+  background-color:     @background;
   
-  border: 0;
-  margin: 0;
-  padding: 4;
-  spacing: 0;
+  border-radius:    6px;
+  padding:          4;
+  spacing:          4;
 }
+
 
 window {
-  width: 20%;
-}
-
-element {
-  padding: 4 0;
-  text-color: @fg-alt;
+  width:    22%;
+  border:   9;
 }
 
 element selected {
@@ -42,9 +38,9 @@ element-icon {
 }
 
 entry {
-  background-color: @bg-alt;
-  padding: 13;
-  text-color: @fg;
+  background-color: @background-alt;
+  padding: 12;
+  text-color: #000;
 }
 
 inputbar {
@@ -52,16 +48,13 @@ inputbar {
 }
 
 listview {
-  padding: 1 1;
   columns: 1;
   lines: 9;
 }
 
 prompt {
-  background-color: @bg-alt;
-  enabled: true;
-  padding: 12 0 0 12;
-  text-color: @fg;
+  background-color: @background-alt;
+  enabled: false;
 }
 
 /* vim: ft=sass
