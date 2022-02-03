@@ -259,6 +259,6 @@ alias zshrc='sudo vim ~/.zshrc'
 alias not='notion-snap'
 alias senable='sudo systemctl enable --now snapd apparmor && bash && source && sources'
 alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*; sudo timedatectl set-local-rtc 1 --adjust-system-clock'
-alias sinstall='sudo snap install lsd && sudo snap install discord && sudo snap install ascii-image-converter && sudo snap install slack --classic && sudo snap install mari0 && sudo snap install notion-snap && sudo snap install cointop && sudo snap install android-studio --classic'
+alias sinstall='sudo snap install lsd && sudo snap install discord && sudo snap install slack --classic && sudo snap install mari0 && sudo snap install notion-snap && sudo snap install cointop'
 
 export PATH=$PATH:/snap/bin
