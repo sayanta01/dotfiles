@@ -16,13 +16,13 @@ bspc config focused_border_color   "#81A1C1"
 #Autostart
 xsetroot -cursor_name left_ptr &
 ~/.config/polybar/launch.sh &
-pgrep -x sxhkd > /dev/null || sxhkd &
+sxhkd &
 nm-applet &
 blueman-applet &
 feh --bg-scale ~/Desktop/LinuxCustomization/Wallpaper/WP .png &
 nitrogen --restore &
-xset s off &
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/xresources & 
+xset s off &
 #dunst &
 
 
