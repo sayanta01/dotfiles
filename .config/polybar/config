@@ -14,7 +14,7 @@ alert = #bd2c40
 [bar/example]
 width = 100%
 height = 26
-offset-y = 0.3%
+offset-y = 0.0%
 offset-x = 0.3%
 fixed-center = true
 monitor = "HDMI-0"
