@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+sudo apt install -y bspwm polybar pip rofi kitty
+
+git clone https://github.com/sayanta01/dotfiles ~/Desktop/dotfiles
+cd ~/Desktop/dotfiles && cp -fr .zshrc .fonts .xinitrc ~/
+cp -r ~/Desktop/dotfiles/.config/* ~/.config
+chmod +x ~/.config/bspwm/bspwmrc 
+chmod +x ~/.config/polybar/launch.sh
+chmod +x ~/.config/polybar/scripts/* 
+
+sudo apt install -y pulsemixer alsa-utils playerctl nitrogen lxappearance scrot
+sudo apt install -y libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
+
+cd ~/Desktop/dotfiles/.config/st
+sudo make clean install
+bash STcolor
+
+cd ~/.config/dmenu
+sudo make clean install
