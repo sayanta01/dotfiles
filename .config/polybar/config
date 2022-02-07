@@ -14,9 +14,9 @@ alert = #bd2c40
 [bar/example]
 width = 100%
 height = 26
-offset-y = 0.0%
-offset-x = 0.3%
 fixed-center = true
+;offset-y = 0.0%
+;offset-x = 0.0%
 monitor = "HDMI-0"
 
 background = ${colors.background}
@@ -24,7 +24,7 @@ foreground = ${colors.foreground}
 
 line-size = 3
 padding-left = 0
-padding-right = 2
+padding-right = 1
 module-margin-left = 0
 module-margin-right = 1
 
