@@ -19,7 +19,7 @@ xsetroot -cursor_name left_ptr &
 sxhkd &
 nm-applet &
 blueman-applet &
-feh --bg-scale ~/Desktop/LinuxCustomization/Wallpaper/WP .png &
+feh --bg-scale ~/Desktop/LinuxCustomization/Wallpaper/samurai_girl.jpg &
 nitrogen --restore &
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/xresources & 
 xset s off &
