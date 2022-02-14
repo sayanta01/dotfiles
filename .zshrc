@@ -242,23 +242,22 @@ fi
 
 
 
-
 # MY-ALIAS
-alias lsa='ls -alpsh | lolcat' 
+alias lsa='ls -al | lolcat' 
 alias typer='~/.cargo/bin/ttyper'
-alias ff='firefox'
 alias update='sudo apt update'
 alias upgrade='sudo apt -y full-upgrade'
 alias h='history'
 alias clean='sudo apt -y autoremove; sudo apt clean'
-alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt --fix-missing update; sudo apt update --fix-missing'
+alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
 alias bashrc='sudo vim ~/.bashrc'
 alias zshrc='sudo vim ~/.zshrc'
 
 #
 alias not='notion-snap'
-alias senable='sudo systemctl enable --now snapd apparmor && bash && source && sources'
-alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*; sudo timedatectl set-local-rtc 1 --adjust-system-clock'
-alias sinstall='sudo snap install lsd && sudo snap install discord && sudo snap install slack --classic && sudo snap install mari0 && sudo snap install notion-snap && sudo snap install cointop'
+alias senable='sudo systemctl enable --now snapd apparmor'
+alias sinstall='sudo snap install lsd discord mari0 notion-snap cointop && sudo snap install slack --classic'
+alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
 
 export PATH=$PATH:/snap/bin
+
