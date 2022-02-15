@@ -1,11 +1,7 @@
 #!/bin/bash
 
 
-
-cd ~/.config
-sudo touch xresources
-sudo chown $USER xresources
-sudo cat > xresources <<EOF
+cat <<EOF > ~/.config/xresources
 ! Dracula Xresources palette:
  *.foreground: #F8F8F2
  *.background: #111217
