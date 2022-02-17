@@ -29,6 +29,10 @@ alt + F7
 # next
 alt + F8
        playerctl next
+       
+# bluetooth connect/dis
+alt + F1
+       bash ~/.config/polybar/scripts/bc       
  
 # ss window
 Print
