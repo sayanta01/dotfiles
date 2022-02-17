@@ -1,7 +1,11 @@
 #
 # wm independent hotkeys
 #
-           
+
+# bluetooth
+alt + F1
+       bash ~/.config/polybar/scripts/bc
+       
 # vol down
 alt + F2
        amixer set Master 5%-
@@ -30,9 +34,9 @@ alt + F7
 alt + F8
        playerctl next
        
-# bluetooth connect/dis
-alt + F1
-       bash ~/.config/polybar/scripts/bc       
+# wifi
+alt + F9
+      bash ~/.config/polybar/scripts/wifi             
  
 # ss window
 Print
