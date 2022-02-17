@@ -18,7 +18,6 @@ xsetroot -cursor_name left_ptr &
 ~/.config/polybar/launch.sh &
 sxhkd &
 kdeconnect-indicator &
-blueman-applet &
 nm-applet &
 feh --bg-scale ~/Desktop/LinuxCustomization/Wallpaper/samurai_girl.jpg &
 nitrogen --restore &
