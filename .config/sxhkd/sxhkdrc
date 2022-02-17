@@ -40,15 +40,15 @@ alt + F9
  
 # ss window
 Print
-     scrot /home/bot/Pictures/%I:%M-%d-%b-Fullscreenshot.png 
+     scrot /home/bot/Pictures/'%I:%M:%d %b Full.png'
                  
 # ss select   
 shift + Print
-            scrot --select --line mode=edge /home/bot/Pictures/%I:%M-%d-%b-Selescreenshot.png
+            scrot --select --line mode=edge /home/bot/Pictures/'%I:%M:%d %b Selected.png'
                          
 # ss window
 alt + Print
-          scrot --focused /home/bot/Pictures/%I:%M-%d-%b-Windscreenshot.png  
+          scrot --focused /home/bot/Pictures/'%I:%M:%d %b Window.png' 
            
 # reboot
 ctrl + shift + F4
