@@ -1,15 +1,5 @@
 #!/bin/sh
 
-bssid=$(nmcli device wifi list | sed -n '1!p' | cut -b 9- | dmenu -p "Select Wifi  " -l 20 | cut -d' ' -f1)
-pass=$(echo "" | dmenu -p "Enter Pswd  ")
-nmcli device wifi connect $bssid password $pass
-
-
-
-
-
-#!/bin/sh
-
 
 ethstatus=$(nmcli d | grep eth0 | cut -d ' ' -f7)
 wifistatus=$(nmcli d | grep wlan0 | cut -d ' ' -f10)
