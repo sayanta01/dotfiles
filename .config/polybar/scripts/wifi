@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-choice=$(echo -e "up\nconnect" | dmenu -p "Options")
+choice=$(echo -e "up\nconnect" | dmenu -p "Select")
 
 case $choice in
     "connect")
