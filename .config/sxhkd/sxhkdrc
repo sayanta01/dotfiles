@@ -12,7 +12,7 @@ alt + n
       
 # bluetooth
 alt + F1
-       bash ~/.config/polybar/scripts/bc
+       bash ~/.config/polybar/scripts/bluetoothcd
        
 # vol down
 alt + F2
