@@ -2,6 +2,10 @@
 # wm independent hotkeys
 #
 
+# wifi off
+super + F1
+         nmcli d disconnect wlan0 && nmcli d connect eth0
+	 
 # notes
 alt + n
       open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
