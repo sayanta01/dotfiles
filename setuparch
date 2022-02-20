@@ -1,14 +1,15 @@
 #!/bin/sh
 
 
-cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-sudo reflector --latest 20 --sort rate > /etc/pacman.d/mirrorlist
+
+ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime       #set zone time
+hwclock --systohc                                           #set hardware clock
 
 
 sudo pacman -Syu
 sudo pacman -Sy cargo && cargo install ttyper
 sudo pacman -Sy ttf-jetbrains-mono ttf-cascadia-code noto-fonts-emoji ttf-joypixels ttf-font-awesome \
-linux-headers linux-lts linux-lts-headers python python-pip dbus-python openssh nano wget curl \
+linux linux-headers linux-lts linux-lts-headers linux-firmware python python-pip dbus-python openssh nano wget curl \
 thunar firefox emacs ranger zathura \
 neovim fzf translate-shell \
 tree ncdu rsync unrar unzip zip p7zip tar \
