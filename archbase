@@ -1,0 +1,60 @@
+
+mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+rankmirrors /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
+
+
+# enable efi                            #VM settings
+# ls /sys/firmware/efi/efivars          #check uefi
+
+
+fdisk /dev/sda                          #sel drive
+n  1st partition Last sector give +500M to +1G
+n  2nd partition (Root)      give +20G  to +30G
+n  3rd partition (Home)      give all space
+w  write partition 
+
+
+mkfs.ext4 /dev/sda3
+mkfs.ext4 /dev/sda2
+mkfs.fat -F32 /dev/sda1
+
+
+mount /dev/sda2 /mnt
+mkdir /mnt/home
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot
+mount /dev/sda3 /mnt/home
+
+
+pacstrap /mnt linux base base-devel vim grub efibootmgr dosfstools mtools git
+
+genfstab -U /mnt > /mnt/etc/fstab
+
+
+arch-chroot /mnt
+
+
+vim /etc/locale.gen  #uncmnt both US
+locale-gen
+
+echo LANG=en_US.UTF-8 > /etc/locale.conf 
+echo LilWarmachine > /etc/hostname
+
+vim /etc/hosts
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	LilWarmachine.localdomain LilWarmachine
+
+
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
+grub-mkconfig -o /boot/grub/grub.cfg
+
+
+passwd  #set root pswd
+useradd -m -g users -G wheel,storage,power -s /bin/zsh bot
+useradd -m -g wheel bot
+
+passwd bot
+
+EDITOR=vim visudo  #uncmnt %wheel ALL=(ALL:ALL) ALL
+
