@@ -94,7 +94,7 @@ format = <label>
 format-padding = 0
 format-margin = 1
 label = 󰍛%percentage%
-format-foreground = #3CB9FC
+format-foreground = #3CC9FC
 
 
 [module/filesystem]
