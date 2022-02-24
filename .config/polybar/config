@@ -102,7 +102,7 @@ type = internal/fs
 interval = 30
 mount-0 = /
 label-mounted = "  %free%"
-label-mounted-foreground = #6EABBC
+label-mounted-foreground = #7FBCCD
 label-unmounted = %mountpoint% 
 
 
@@ -124,7 +124,7 @@ format-foreground = #8BE9FD
 [module/pulseaudio]
 type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
-label-volume-foreground = #FFFF66
+label-volume-foreground = #FFB86C
 use-ui-max = false
 label-muted = "  0"
 label-muted-foreground = #666
