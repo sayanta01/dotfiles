@@ -23,7 +23,7 @@ feh --bg-scale ~/Desktop/LinuxCustomization/Wallpaper/samurai_girl.jpg &
 nitrogen --restore &
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/xresources & 
 xset s off &
-#dunst &
+dunst &
 
 
 
