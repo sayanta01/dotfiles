@@ -28,6 +28,7 @@ history_length = 9
 always_run_script = true
 title = Dunst
 class = Dunst
+browser = x-www-browser -new-tab
 
 
 [shortcuts]
