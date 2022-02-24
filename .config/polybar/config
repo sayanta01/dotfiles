@@ -102,14 +102,14 @@ type = internal/fs
 interval = 30
 mount-0 = /
 label-mounted = "  %free%"
-label-mounted-foreground = #49E20E
+label-mounted-foreground = #6EABBC
 label-unmounted = %mountpoint% 
 
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-foreground = #FFB86C
+format-foreground = #EDB96C
 label = 󰘚%mb_used%
 
 
