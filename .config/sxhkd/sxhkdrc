@@ -97,7 +97,11 @@ super + Return
 # kitty
 alt + space
           kitty
-
+	  
+# screenlock
+super + l
+        slock
+	
 #
  dmenu
 ctrl + space 
