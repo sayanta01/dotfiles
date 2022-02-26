@@ -11,7 +11,7 @@ sudo pacman -Sy --noconfirm cargo && cargo install ttyper
 sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-cascadia-code noto-fonts-emoji ttf-joypixels ttf-font-awesome \
 linux-firmware linux-headers linux-lts linux-lts-headers linux-firmware \
 thunar firefox ranger zathura \
-neovim fzf translate-shell openssh wget curl \
+neovim fzf translate-shell openssh wget curl mate-calc \
 tree ncdu rsync unrar unzip zip p7zip tar \
 dhcpcd networkmanager network-manager-applet wireless_tools dialog \
 feh sxiv ffmpeg imagemagick lolcat \
@@ -21,7 +21,7 @@ bpytop neofetch htop alacritty \
 tor torbrowser-launcher \
 lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings intel-ucode \
 virtualbox-guest-utils \
-unclutter zsh-syntax-highlighting zsh-completions jq slock xdg-user-dirs xorg xclip
+unclutter zsh-syntax-highlighting zsh-completions jq xdg-user-dirs xorg xclip
 
 sudo systemctl enable NetworkManager
 sudo systemctl enable lightdm 

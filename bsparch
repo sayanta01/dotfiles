@@ -1,9 +1,7 @@
 #!/bin/sh
 
 
-# playerctl
-
-sudo pacman -Sy --noconfirm bspwm sxhkd dmenu rofi kitty dunst nitrogen lxappearance scrot xfce4-terminal alsa-utils dbus-python
+sudo pacman -Sy --noconfirm bspwm sxhkd dmenu rofi kitty slock dunst nitrogen lxappearance scrot xfce4-terminal alsa-utils dbus-python
 
 
 git clone https://github.com/sayanta01/dotfiles ~/Desktop/dotfiles
