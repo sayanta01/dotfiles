@@ -92,8 +92,7 @@ type = internal/cpu
 interval = 2
 format = <label> 
 format-padding = 0
-format-margin = 1
-label = 󰍛%percentage%
+label = " 󰍛%percentage% "
 format-foreground = #3CC9FC
 
 
@@ -124,7 +123,7 @@ format-foreground = #CAFAFE
 [module/pulseaudio]
 type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
-label-volume-foreground = #FFB86C
+label-volume-foreground = #DDE
 use-ui-max = false
 label-muted = "  0"
 label-muted-foreground = #666
@@ -154,10 +153,9 @@ thermal-zone = 0
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 warn-temperature = 70
 format = <ramp> <label>
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
 format-warn = <label-warn>
 label = %temperature-c%
+label-foreground = #81D8A5
 label-warn = "  %temperature-c%"
 label-warn-foreground = #f00
 ramp-0 = " "
