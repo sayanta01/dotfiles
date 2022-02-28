@@ -1,1 +1,0 @@
-playerctl --ignore-player=chromium,firefox metadata -f " {{artist}}, {{title}}"
