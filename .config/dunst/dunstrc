@@ -12,7 +12,7 @@ frame_width = 0
 sort = no
 idle_threshold = 120
 font = Jetbrains Mono Bold 11
-line_height = 0
+line_height = 2
 markup = full
 format = %s\n%b
 alignment = center
@@ -52,7 +52,7 @@ foreground = "#D8DEE9"
 frame_color = "#434C5E"
 
 [urgency_critical]
-timeout = 2
+timeout = 0
 background = "#2F3440AA"
 foreground = "#BF616A"
 frame_color = "#434C5E"
