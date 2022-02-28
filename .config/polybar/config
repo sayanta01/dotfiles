@@ -1,5 +1,3 @@
-
-
 [colors]
 background = #000
 background-alt = #444
@@ -120,6 +118,7 @@ format-foreground = #CAFAFE
 [module/pulseaudio]
 type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
+ramp-volume-foreground = #50FA7D
 label-volume-foreground = #DDE
 use-ui-max = false
 label-muted = "  0"
