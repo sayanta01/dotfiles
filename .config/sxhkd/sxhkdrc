@@ -99,13 +99,14 @@ alt + space
           kitty
 	  
 # screenlock
-super + l
-        slock
+ctrl + alt + l
+             slock
 	
 #
  dmenu
 ctrl + space 
            dmenu_run
+	   
 # launcher
 super + space
 	    rofi -show drun -show-icons
