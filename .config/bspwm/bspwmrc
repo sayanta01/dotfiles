@@ -17,7 +17,7 @@ xsetroot -cursor_name left_ptr &
 sxhkd &
 kdeconnect-indicator &
 nm-applet &
-feh --bg-scale ~/Desktop/LinuxCustomization/Wallpaper/samurai_girl.jpg &
+feh --bg-scale ~/.config/walls/wallpaper.jpg &
 nitrogen --restore &
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/xresources & 
 xset s off &
