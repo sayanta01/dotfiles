@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+DIR="${HOME}/.config/walls"
+BGD="$(ls $DIR/*.jpg | shuf -n1)"
+cat $BGD > ~/.config/walls/wallpaper.jpg
+feh --bg-scale ~/.config/walls/wallpaper.jpg
