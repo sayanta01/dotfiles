@@ -12,7 +12,7 @@ alt + n
       
 # bluetooth
 alt + F1
-       bash ~/.config/polybar/scripts/bluetoothcd
+       bash ~/.config/scripts/bluetoothcd
        
 # vol down
 alt + F2
@@ -28,7 +28,11 @@ alt + F4
 
 # switch audio
 alt + F5       
-       bash ~/.config/polybar/scripts/audioswitch
+       bash ~/.config/scripts/audioswitch
+   
+# wallch
+ctrl + alt + p
+             bash ~/.config/scripts/wallch
 
 # previous
 alt + F6 
@@ -52,7 +56,7 @@ alt + F8
        
 # wifi
 alt + F9
-      bash ~/.config/polybar/scripts/wifi             
+      bash ~/.config/scripts/wifi             
  
 # ss window
 Print
