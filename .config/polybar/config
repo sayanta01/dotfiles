@@ -1,12 +1,11 @@
 #!/bin/bash
 
-
 [colors]
 background = #000
 background-alt = #444
-foreground = #70F79F
 foreground-alt = #636360
-primary = #ffb52a
+foreground = #fff
+primary = #50fa7b
 secondary = #e60053
 alert = #bd2c40
 
@@ -19,8 +18,6 @@ fixed-center = true
 ;offset-x = 0.0%
 monitor = "HDMI-0"
 
-background = ${colors.background}
-foreground = ${colors.foreground}
 
 line-size = 3
 padding-left = 0
@@ -155,7 +152,7 @@ warn-temperature = 70
 format = <ramp> <label>
 format-warn = <label-warn>
 label = %temperature-c%
-label-foreground = #81D8A5
+label-foreground = #50FA7B
 label-warn = "  %temperature-c%"
 label-warn-foreground = #f00
 ramp-0 = " "
