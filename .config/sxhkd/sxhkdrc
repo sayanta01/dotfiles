@@ -5,14 +5,18 @@
 # wifi off
 super + F1
          nmcli d disconnect wlan0 && nmcli d connect eth0
-	 
+
+# wallch
+ctrl + alt + p
+             bash ~/.config/scripts/wallch
+             
 # notes
 alt + n
       open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
       
 # bluetooth
 alt + F1
-       bash ~/.config/scripts/bluetoothcd
+       bash ~/.config/scripts/blutoothcd
        
 # vol down
 alt + F2
@@ -29,10 +33,6 @@ alt + F4
 # switch audio
 alt + F5       
        bash ~/.config/scripts/audioswitch
-   
-# wallch
-ctrl + alt + p
-             bash ~/.config/scripts/wallch
 
 # previous
 alt + F6 
@@ -41,7 +41,7 @@ alt + F6
 # play, pause   
 alt + F7
        playerctl play-pause
-
+  
 # spotify play pause
 super + F7
         dbus-send \
@@ -49,7 +49,7 @@ super + F7
     --dest=org.mpris.MediaPlayer2.spotify \
     /org/mpris/MediaPlayer2 \
     org.mpris.MediaPlayer2.Player.PlayPause
-    
+
 # next
 alt + F8
        playerctl next
@@ -57,7 +57,7 @@ alt + F8
 # wifi
 alt + F9
       bash ~/.config/scripts/wifi             
- 
+    
 # ss window
 Print
      scrot /home/bot/Pictures/'%I:%M:%d %b Full.png'
@@ -77,11 +77,7 @@ ctrl + shift + F4
 # shutdown
 ctrl + super + F4
                 shutdown now
-         
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
-                      
+                         
 # thunar
 super + e
         thunar $HOME
@@ -101,16 +97,12 @@ super + Return
 # kitty
 alt + space
           kitty
-	  
-# screenlock
-ctrl + alt + l
-             slock
-	
+        
 #
  dmenu
 ctrl + space 
            dmenu_run
-	   
+           
 # launcher
 super + space
 	    rofi -show drun -show-icons
@@ -130,7 +122,11 @@ alt + shift + v
 # calc
 ctrl + alt + k
              mate-calculator
-       
+
+# screenlock
+ctrl + alt + l
+             slock
+                    
 # vs-code 
 alt + shift + c
               code
@@ -145,13 +141,15 @@ alt + shift + w
               
 # burpsuite
 alt + shift + b
-              cd BurpSuiteCommunity; ./BurpSuiteCommunity
-      
+              cd BurpSuiteCommunity; ./BurpSuiteCommunity     
    
-      
+# make sxhkd reload its configuration files
+super + Escape
+	pkill -USR1 -x sxhkd      
 
       
-                            
+
+
 #
 # bspwm hotkeys
 #
@@ -257,3 +255,4 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
