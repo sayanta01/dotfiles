@@ -15,9 +15,9 @@ esac
 wifistatus=$(nmcli d | grep wlan0 | cut -d ' ' -f10)
 case $wifistatus in
     "connected")
-        nmcli con down eth0 "Wired connection 1";;
+        nmcli con down eth0 "Wired connection 1";
     "disconnected")
-        nmcli con up eth0 "Wired connection 1";;
+        nmcli con up eth0 "Wired connection 1";
 esac
 ethstatus=$(nmcli d | grep eth0 | cut -d ' ' -f7)
 notify-send "Ethernet connection is $ethstatus"
