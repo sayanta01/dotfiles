@@ -25,13 +25,12 @@ module-margin-right = 1
 
 font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=11;3
 font-1 = Material Design Icons:style=Regular:size=13;3
-font-2 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
+font-2 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false:size=11;2
 font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 wm-restack = bspwm
 modules-left = bspwm xwindow spotify
-modules-center = date 
-modules-right = nettraf pulseaudio cpu memory uptime temperature filesystem
+modules-right = date nettraf pulseaudio cpu memory uptime temperature filesystem
 
 tray-position = right 
 cursor-click = pointer
@@ -76,16 +75,15 @@ label-empty-padding = 1
 [module/date]
 type = internal/date
 interval = 1
-date = 󰃭 %a %d %b,
-time = 󰥔 %I:%M:%S %p
-format-foreground = #fff
+date = " %a %d 󰥔 %I:%M:%S "
+date-alt = " %B, %p "
+format-foreground = #eef
 
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 format = <label> 
-format-padding = 0
 label = " 󰍛%percentage% "
 format-foreground = #3CC9FC
 
