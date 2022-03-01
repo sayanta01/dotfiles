@@ -31,6 +31,7 @@ always_run_script = true
 corner_radius = 2
 title = Dunst
 class = Dunst
+icon_path = false
 
 
 [shortcuts]
