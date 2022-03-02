@@ -98,7 +98,7 @@ label-mounted-foreground = #CE93f9
 type = internal/memory
 interval = 2
 format-foreground = #EDB96C
-label = 󰘚%mb_used%
+label = 󰘚%gb_used%
 
 
 [module/uptime]
