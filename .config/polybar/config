@@ -22,9 +22,10 @@ module-margin-left = 0
 module-margin-right = 1
 
 font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=11;3
-font-1 = Material Design Icons:style=Regular:size=13;3
-font-2 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false:size=11;2
-font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-1 = Material Design Icons:size=13;3
+font-2 = Feather:size=11;3
+font-3 = Noto ColorEmoji:fontformat=truetype:scale=9:antialias=false:size=11;2
+font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 wm-restack = bspwm
 modules-left = bspwm xwindow spotify
