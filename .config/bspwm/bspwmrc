@@ -1,6 +1,8 @@
 #! /bin/sh
 
-bspc monitor -d       ﮊ 
+
+bspc monitor -d    󰹂 󱞐  ﮊ 
+
 bspc config border_width           3
 bspc config window_gap             2
 bspc config split_ratio            0.50
@@ -19,12 +21,6 @@ kdeconnect-indicator &
 feh --bg-scale ~/.config/walls/wallpaper.jpg &
 nitrogen --restore &
 dunst &
-xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/xresources & 
+xrdb ${XDG_CONFIG_HOME-$HOME/.config}/xresources & 
 xset s off &
-
-
-
-
-
-
 
