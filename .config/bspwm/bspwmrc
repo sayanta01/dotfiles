@@ -2,7 +2,7 @@
 
 bspc monitor -d       ﮊ 
 bspc config border_width           3
-bspc config window_gap             4
+bspc config window_gap             2
 bspc config split_ratio            0.50
 
 bspc config borderless_monocle     true
@@ -16,12 +16,12 @@ xsetroot -cursor_name left_ptr &
 ~/.config/polybar/launch.sh &
 sxhkd &
 kdeconnect-indicator &
-nm-applet &
 feh --bg-scale ~/.config/walls/wallpaper.jpg &
 nitrogen --restore &
+dunst &
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/xresources & 
 xset s off &
-dunst &
+
 
 
 
