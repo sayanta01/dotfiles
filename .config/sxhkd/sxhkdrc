@@ -4,8 +4,8 @@
 
 # wifi off
 super + F1
-         nmcli d disconnect wlan0 && nmcli d connect eth0
-
+         nmcli d connect wlan0 && nmcli d disconnect wlan0 && nmcli d connect eth0
+	 
 # wallch
 ctrl + alt + p
              bash ~/.config/scripts/wallch
