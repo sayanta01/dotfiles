@@ -107,7 +107,7 @@ format-foreground = #3CC9FC
 
 [module/filesystem]
 type = internal/fs
-interval = 30
+interval = 99
 mount-0 = /
 label-mounted = "  %free%"
 label-mounted-foreground = #CE93f9
