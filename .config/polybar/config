@@ -29,7 +29,7 @@ font-2 = Material Design Icons:style=Bold:size=12;3
 font-3 = Noto ColorEmoji:fontformat=truetype:scale=9:size=2;2
 font-4 = Unifont:fontformat=truetype:size=9;3
 
-modules-left = bspwm xwindow spotify
+modules-left = bspwm rl xwindow rr space spotify
 modules-right = rl time rr space nettraf space rl pulseaudio rr space rl cpu rr space memory space rl uptime rr space filesystem
 
 wm-restack = bspwm
@@ -42,13 +42,13 @@ cursor-click = pointer
 
 [module/rl]
 type = custom/text
-content = %{T3}%{T-}
-content-foreground = #2a2e36
+content = %{T3}
+content-foreground = #373c47
 
 [module/rr]
 type = custom/text
-content = %{T3}%{T-}
-content-foreground = #2a2e36
+content = %{T3}
+content-foreground = #373c47
 
 
 [module/space]
@@ -58,13 +58,13 @@ content = " "
 
 [module/nettraf]  
 type = custom/script  
-exec = "~/.config/scripts/nettraf"  
+exec = ~/.config/scripts/nettraf
 format-foreground = #B175EC
 
 
 [module/spotify]
 type = custom/script  
-exec = "~/.config/scripts/spotify"
+exec = ~/.config/scripts/spotify
 format-prefix = " "
 format-foreground = #F1FA8C
 
@@ -73,6 +73,7 @@ format-foreground = #F1FA8C
 type = internal/xwindow
 label = %title:0:60:...%
 format-foreground = #CE93F9
+format-background = #373c47
 
 
 [module/bspwm]
@@ -90,17 +91,17 @@ label-empty-padding = 1
 [module/time]
 type = internal/date
 interval = 1
-format-background = #2a2e36
-format-foreground = #EEF
 date = %a %d, 󱑅 %I:%M:%S
 date-alt = 󰃭 %B, %p
+format-background = #373c47
+format-foreground = #EEF
 
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 label =  %percentage%
-format-background = #2a2e36
+format-background = #373c47
 format-foreground = #3CC9FC
 
 
@@ -115,8 +116,8 @@ label-mounted-foreground = #CE93f9
 [module/memory]
 type = internal/memory
 interval = 2
-format-foreground = #EDB96C
 label = 󰘚%gb_used%
+format-foreground = #EDB96C
 
 
 [module/uptime]
@@ -125,22 +126,52 @@ exec = uptime --pretty | sed 's/up //' | sed 's/\ days\?,/d/' | sed 's/\ hours\?
 interval = 99
 format-prefix = " "
 format-foreground = #CAFAFE
-format-background = #2a2e36
+format-background = #373c47
 
 
 [module/pulseaudio]
 type = internal/pulseaudio
-format-volume-background = #2a2e36
+format-volume-background = #373c47
 format-volume = <ramp-volume> <label-volume>
 ramp-volume-foreground = #50FA7D
 label-volume-foreground = #DDE
 use-ui-max = false
 label-muted = " 0"
 label-muted-foreground = #666
-label-muted-background = #2a2e36
+label-muted-background = #373c47
 label-volume = %percentage%
 ramp-volume-0 = " "
 ramp-volume-1 = " "
 ramp-volume-2 = " "
 click-right = pavucontrol &
+
+
+#[module/temperature]
+#type = internal/temperature
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+warn-temperature = 70
+format = <ramp> <label>
+format-warn = <label-warn>
+label = %temperature-c%
+label-foreground = #50FA7B
+format-warn-background = #373c47
+label-warn = "  %temperature-c%"
+label-warn-foreground = #f00
+ramp-0 = " "
+ramp-foreground = #fc4949
+format-background = #373c47
+
+
+#[module/powermenu]
+#type = custom/menu
+expand-right = true
+format-spacing = 2
+label-open = %{A}
+label-close = 
+menu-0-0 = 
+menu-0-0-exec = reboot
+menu-0-1 = 
+menu-0-1-exec = poweroff
+format-foreground = #DD0004
 
