@@ -12,7 +12,7 @@ alert = #BD2C40
 width =  100%
 height = 23
 fixed-center = true
-#monitor = HDMI-0
+monitor = HDMI-0
 
 
 line-size = 3
@@ -43,12 +43,12 @@ cursor-click = pointer
 [module/rl]
 type = custom/text
 content = %{T3}
-content-foreground = #373c47
+content-foreground = #2a2e36
 
 [module/rr]
 type = custom/text
 content = %{T3}
-content-foreground = #373c47
+content-foreground = #2a2e36
 
 
 [module/space]
@@ -73,7 +73,7 @@ format-foreground = #F1FA8C
 type = internal/xwindow
 label = %title:0:60:...%
 format-foreground = #CE93F9
-format-background = #373c47
+format-background = #2a2e36
 
 
 [module/bspwm]
@@ -93,7 +93,7 @@ type = internal/date
 interval = 1
 date = %a %d, 󱑅 %I:%M:%S
 date-alt = 󰃭 %B, %p
-format-background = #373c47
+format-background = #2a2e36
 format-foreground = #EEF
 
 
@@ -101,7 +101,7 @@ format-foreground = #EEF
 type = internal/cpu
 interval = 2
 label =  %percentage%
-format-background = #373c47
+format-background = #2a2e36
 format-foreground = #3CC9FC
 
 
@@ -126,19 +126,19 @@ exec = uptime --pretty | sed 's/up //' | sed 's/\ days\?,/d/' | sed 's/\ hours\?
 interval = 99
 format-prefix = " "
 format-foreground = #CAFAFE
-format-background = #373c47
+format-background = #2a2e36
 
 
 [module/pulseaudio]
 type = internal/pulseaudio
-format-volume-background = #373c47
+format-volume-background = #2a2e36
 format-volume = <ramp-volume> <label-volume>
 ramp-volume-foreground = #50FA7D
 label-volume-foreground = #DDE
 use-ui-max = false
 label-muted = " 0"
 label-muted-foreground = #666
-label-muted-background = #373c47
+label-muted-background = #2a2e36
 label-volume = %percentage%
 ramp-volume-0 = " "
 ramp-volume-1 = " "
@@ -155,12 +155,12 @@ format = <ramp> <label>
 format-warn = <label-warn>
 label = %temperature-c%
 label-foreground = #50FA7B
-format-warn-background = #373c47
+format-warn-background = #2a2e36
 label-warn = "  %temperature-c%"
 label-warn-foreground = #f00
 ramp-0 = " "
 ramp-foreground = #fc4949
-format-background = #373c47
+format-background = #2a2e36
 
 
 #[module/powermenu]
@@ -174,4 +174,3 @@ menu-0-0-exec = reboot
 menu-0-1 = 
 menu-0-1-exec = poweroff
 format-foreground = #DD0004
-
