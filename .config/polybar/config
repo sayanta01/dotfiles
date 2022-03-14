@@ -29,8 +29,8 @@ font-2 = Material Design Icons:style=Bold:size=12;3
 font-3 = Noto ColorEmoji:fontformat=truetype:scale=9:size=2;2
 font-4 = Unifont:fontformat=truetype:size=9;3
 
-modules-left = bspwm rl xwindow rr space spotify
-modules-right = rl time rr space nettraf space rl pulseaudio rr space rl cpu rr space memory space rl uptime rr space filesystem
+modules-left = bspwm rl xwindow rr sp spotify
+modules-right = l time r sp nettraf sp l pulseaudio r sp l cpu r sp memory sp l uptime r sp filesystem
 
 wm-restack = bspwm
 tray-position = right
@@ -40,18 +40,18 @@ cursor-click = pointer
 ################  MODULES ################
 
 
-[module/rl]
+[module/l]
 type = custom/text
 content = %{T3}
 content-foreground = #2a2e36
 
-[module/rr]
+[module/r]
 type = custom/text
 content = %{T3}
 content-foreground = #2a2e36
 
 
-[module/space]
+[module/sp]
 type = custom/text
 content = " "
 
@@ -174,3 +174,4 @@ menu-0-0-exec = reboot
 menu-0-1 = 
 menu-0-1-exec = poweroff
 format-foreground = #DD0004
+
