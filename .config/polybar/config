@@ -146,8 +146,8 @@ ramp-volume-2 = " "
 click-right = pavucontrol &
 
 
-#[module/temperature]
-#type = internal/temperature
+[module/temperature]
+type = internal/temperature
 thermal-zone = 0
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 warn-temperature = 70
@@ -163,8 +163,8 @@ ramp-foreground = #fc4949
 format-background = #2a2e36
 
 
-#[module/powermenu]
-#type = custom/menu
+[module/powermenu]
+type = custom/menu
 expand-right = true
 format-spacing = 2
 label-open = %{A}
