@@ -29,7 +29,7 @@ font-2 = Material Design Icons:style=Bold:size=12;3
 font-3 = Noto ColorEmoji:fontformat=truetype:scale=9:size=2;2
 font-4 = Unifont:fontformat=truetype:size=9;3
 
-modules-left = bspwm rl xwindow rr sp spotify
+modules-left = bspwm l xwindow r sp spotify
 modules-right = l time r sp nettraf sp l pulseaudio r sp l cpu r sp memory sp l uptime r sp filesystem
 
 wm-restack = bspwm
