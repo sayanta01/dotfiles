@@ -1,14 +1,14 @@
 #!/bin/sh
 
 
-select=$(bluetoothctl devices | awk {'print $3'})
-MAC=$(bluetoothctl devices | grep $select | awk {'print $2'})
+dizo="B4:9A:95:90:03:42"
 
-connect=$(bluetoothctl info $MAC | grep Connected: | awk '{print $2}')
-if [[ $connect = no ]]; then 
-	notify-send "Connecting to $select"
-	bluetoothctl connect $MAC || notify-send "Failed to Connect"
+connect=$(bluetoothctl info $dizo | grep Connected | awk '{print $2}')
+if [ $connect = no ]
+then
+        notify-send "Connecting to Dizo"
+        bluetoothctl connect $dizo || notify-send "Failed to Connect"
 else
-	notify-send "Disconnecting from $select"
-	bluetoothctl disconnect $MAC 
+        notify-send "Disconnecting from Dizo"
+        bluetoothctl disconnect $dizo
 fi
