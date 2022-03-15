@@ -84,7 +84,7 @@ super + e
 
 # chrome
 alt + b
-      cd /opt/google/chrome/; ./chrome 
+      cd /opt/google/chrome/ && ./chrome 
         
 # firefox
 alt + w
@@ -141,7 +141,7 @@ alt + shift + w
               
 # burpsuite
 alt + shift + b
-              cd BurpSuiteCommunity; ./BurpSuiteCommunity     
+              ./BurpSuiteCommunity/BurpSuiteCommunity     
    
 # make sxhkd reload its configuration files
 super + Escape
