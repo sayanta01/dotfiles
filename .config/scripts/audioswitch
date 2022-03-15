@@ -1,14 +1,14 @@
 #!/bin/sh
 
 
-hdmi="alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1"
+speaker="alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1"
 earphn="bluez_sink.B4_9A_95_90_03_42.a2dp_sink"
 
 curr_device="$(pactl get-default-sink)"
 
-if [ "$curr_device" = $hdmi ]
+if [ "$curr_device" = $speaker ]
 then
   pactl set-default-sink $earphn
 else
-  pactl set-default-sink $hdmi
+  pactl set-default-sink $speaker
 fi
