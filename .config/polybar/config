@@ -31,6 +31,7 @@ font-4 = Unifont:fontformat=truetype:size=9;3
 
 modules-left = bspwm l xwindow r sp spotify
 modules-right = l time r sp nettraf sp l pulseaudio r sp l cpu r sp memory sp l uptime r filesystem
+#modules-right = l time r sp nettraf sp l pulseaudio r sp l cpu r sp memory sp l uptime r sp l temp r filesystem sp powermenu
 
 wm-restack = bspwm
 tray-position = right
@@ -146,7 +147,7 @@ ramp-volume-2 = " "
 click-right = pavucontrol &
 
 
-[module/temperature]
+[module/temp]
 type = internal/temperature
 thermal-zone = 0
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
