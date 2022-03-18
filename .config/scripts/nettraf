@@ -2,7 +2,7 @@
 
 
 interface = "eth0"
-interface = "wlan0"
+#interface = "wlan0"
 #interface = "enp0s3"
 
 from os import popen
