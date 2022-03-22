@@ -50,7 +50,7 @@ sudo cp -r ~/.icons/MineKali/cursors /usr/share/icons/Adwaita
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
-# nvim/lua/plugins/configs/bufferline     
+# nvim/lua/plugins/configs/bufferline  
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
