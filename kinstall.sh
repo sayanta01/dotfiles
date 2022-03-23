@@ -88,6 +88,7 @@ chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
 sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl nitrogen lxappearance scrot libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
 
+git clone https://github.com/dracula/xfce4-terminal.git ~/.local/share/xfce4/terminal/colorschemes
 git clone https://github.com/sayanta01/dotfiles ~/Desktop/dotfiles/
 cp -r ~/Desktop/dotfiles/{.zshrc,.vimrc,.fonts,.xinitrc} ~/
 cp -r ~/Desktop/dotfiles/.config/* ~/.config
