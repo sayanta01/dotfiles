@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-cat <<EOF > ~/.config/xresources
-! Dracula Xresources palette:
+cat <<EOF > ~/.config/Xresources
+! Dracula Xresources palette
  *.foreground: #F8F8F2
  *.background: #111217
  *.color0:     #000000
@@ -24,4 +24,4 @@ cat <<EOF > ~/.config/xresources
 EOF
 
 cd ~/.config
-xrdb merge xresources
+xrdb merge Xresources
