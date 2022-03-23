@@ -2,7 +2,7 @@
 
 
 sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
-sudo apt install apt-transport-https
+#sudo apt install apt-transport-https
 
 #
 sudo apt -y full-upgrade
