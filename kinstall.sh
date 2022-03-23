@@ -15,7 +15,7 @@ curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt update && sudo apt install -y cargo && cargo install ttyper
-sudo apt install -y neovim fzf translate-shell xfce4-terminal \
+sudo apt install -y neovim fzf translate-shell \
 ranger zathura \
 tree ncdu slock \
 feh sxiv ffmpeg \
@@ -86,7 +86,7 @@ chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 ########## BSPWM ##########
 
 
-sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl nitrogen lxappearance scrot libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
+sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl nitrogen lxappearance scrot  xfce4-terminal libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
 
 git clone https://github.com/dracula/xfce4-terminal.git ~/.local/share/xfce4/terminal/colorschemes
 git clone https://github.com/sayanta01/dotfiles ~/Desktop/dotfiles/
