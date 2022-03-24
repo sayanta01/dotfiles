@@ -21,6 +21,6 @@ kdeconnect-indicator &
 feh --bg-scale ~/.config/walls/wallpaper.jpg &
 nitrogen --restore &
 dunst &
-xrdb ${XDG_CONFIG_HOME-$HOME/.config}/Xresources & 
+xrdb ~/.config/Xresources & 
 xset s off &
 
