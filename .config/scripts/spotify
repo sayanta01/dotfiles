@@ -21,7 +21,7 @@ try:
         if ('(' in song) and (')' not in song):
             song += ')'
 
-    output = artist + ', ' + song
+    output = artist + '' + song
     print(output)
 except:
     print("")
