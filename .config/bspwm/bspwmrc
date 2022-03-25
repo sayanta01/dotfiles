@@ -19,7 +19,6 @@ xsetroot -cursor_name left_ptr &
 sxhkd &
 kdeconnect-indicator &
 feh --bg-scale ~/.config/walls/wallpaper.jpg &
-nitrogen --restore &
 dunst &
 xrdb ~/.config/Xresources & 
 xset s off &
