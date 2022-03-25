@@ -61,7 +61,7 @@ EOF
 ########## BSPWM ##########
 
 
-sudo pacman -Sy --noconfirm bspwm sxhkd dmenu rofi kitty slock dunst playerctl nitrogen lxappearance scrot xfce4-terminal alsa-utils dbus-python
+sudo pacman -Sy --noconfirm bspwm sxhkd dmenu rofi kitty slock dunst playerctl lxappearance scrot xfce4-terminal alsa-utils dbus-python
 yay -Sy --noconfirm polybar preload
 
 git clone https://github.com/dracula/xfce4-terminal.git ~/.local/share/xfce4/terminal/colorschemes
