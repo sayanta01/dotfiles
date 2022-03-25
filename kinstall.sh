@@ -24,7 +24,7 @@ synaptic stacer stress \
 speedtest-cli trash-cli youtube-dl transmission-cli \
 spotify-client \
 bpytop nvtop neofetch \
-android-tools-fastboot scrcpy android-tools-adb \
+android-tools-fastboot scrcpy android-tools-adb xscreensaver \
 obs-studio audacity gimp blender kdeconnect \
 telegram-desktop deluge virt-manager putty tor torbrowser-launcher snapd
 
