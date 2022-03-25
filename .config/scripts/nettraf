@@ -24,4 +24,4 @@ for item in temp_contf:
 d_diff = int(contf[1]) - int(conti[1])
 u_diff = int(contf[9]) - int(conti[9])
 
-print(" {}kb  {}kb".format(int(d_diff/1024), int(u_diff/1024)))
+print("{}kb  {}kb".format(int(d_diff/1024), int(u_diff/1024)))
