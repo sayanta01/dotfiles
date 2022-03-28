@@ -1,0 +1,12 @@
+UpdateInterval=3
+TimeScale=0
+Size=50
+Frame=0
+Border=0
+Bars=1
+PerCore=0
+TrackedCore=0
+InTerminal=1
+StartupNotification=0
+ColorMode=1
+
