@@ -44,11 +44,7 @@ alt + F7
   
 # spotify play pause
 super + F7
-        dbus-send \
-    --print-reply \
-    --dest=org.mpris.MediaPlayer2.spotify \
-    /org/mpris/MediaPlayer2 \
-    org.mpris.MediaPlayer2.Player.PlayPause
+        dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 # next
 alt + F8
@@ -60,7 +56,7 @@ alt + F9
     
 # ss window
 Print
-     scrot /home/bot/Pictures/'%I:%M:%d %b Full.png'
+    scrot /home/bot/Pictures/'%I:%M:%d %b Full.png'
                  
 # ss select   
 shift + Print
@@ -84,7 +80,7 @@ super + e
 
 # chrome
 alt + b
-      cd /opt/google/chrome/ && ./chrome 
+      google-chrome
         
 # firefox
 alt + w
@@ -132,7 +128,7 @@ alt + shift + c
               code
  
 # obs
-shift + alt + o
+alt + shift + o
               obs
       
 # wireshark
@@ -141,7 +137,7 @@ alt + shift + w
               
 # burpsuite
 alt + shift + b
-              ./BurpSuiteCommunity/BurpSuiteCommunity     
+              burpsuite    
    
 # make sxhkd reload its configuration files
 super + Escape
