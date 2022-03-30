@@ -6,7 +6,7 @@ bspc monitor -d   ﮊ  󰹂  󱞐   
 bspc config border_width             1
 bspc config window_gap               2
 bspc config split_ratio              0.50
-bspc config pointer_motion_interval  9
+bspc config pointer_motion_interval  16
 
 bspc config borderless_monocle       true
 bspc config focus_follows_pointer    true
