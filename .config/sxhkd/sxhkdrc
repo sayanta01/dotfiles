@@ -14,6 +14,10 @@ ctrl + alt + p
 alt + n
       open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
       
+# notion
+super + alt + n
+              open http://notion.new
+	      
 # bluetooth
 alt + F1
        bash ~/.config/scripts/blutoothcd
