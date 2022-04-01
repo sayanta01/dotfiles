@@ -19,7 +19,7 @@ bpytop neofetch htop alacritty \
 tor torbrowser-launcher \
 lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings intel-ucode \
 virtualbox-guest-utils \
-unclutter zsh-syntax-highlighting zsh-completions jq xdg-user-dirs xorg xclip wmctrl
+unclutter zsh-syntax-highlighting zsh-completions jq xdg-user-dirs xorg xclip wmctrl imwheel
 
 sudo systemctl enable NetworkManager
 sudo systemctl enable lightdm 
