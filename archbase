@@ -57,6 +57,8 @@ passwd  #set root pswd
 useradd -m -G wheel,storage,power -s /bin/zsh bot
 
 passwd bot
-
 EDITOR=vim visudo                       #uncmnt %wheel ALL=(ALL:ALL) ALL
+
+
+reboot 
 
