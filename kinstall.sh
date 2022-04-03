@@ -2,8 +2,6 @@
 
 
 sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
-#sudo apt install apt-transport-https
-
 #
 sudo apt -y full-upgrade
 
@@ -26,7 +24,10 @@ spotify-client \
 bpytop nvtop neofetch \
 android-tools-fastboot scrcpy android-tools-adb \
 obs-studio audacity gimp blender kdeconnect \
-telegram-desktop deluge virt-manager qemu qemu-kvm tor torbrowser-launcher snapd
+telegram-desktop deluge tor torbrowser-launcher snapd  virt-manager qemu
+
+sudo usermod -aG libvirt bot
+sudo usermod -aG kvm bot
 
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree
@@ -81,6 +82,8 @@ nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
 
 wget -O PacketTracer.deb https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
+
+
 
 
 ########## BSPWM ##########
