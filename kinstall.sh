@@ -26,7 +26,7 @@ spotify-client \
 bpytop nvtop neofetch \
 android-tools-fastboot scrcpy android-tools-adb xscreensaver \
 obs-studio audacity gimp blender kdeconnect \
-telegram-desktop deluge virt-manager putty tor torbrowser-launcher snapd
+telegram-desktop deluge virt-manager qemu-kvm libvirt-daemon-system libvirt-clients putty tor torbrowser-launcher snapd
 
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree
