@@ -24,9 +24,9 @@ synaptic stacer stress \
 speedtest-cli trash-cli youtube-dl transmission-cli \
 spotify-client \
 bpytop nvtop neofetch \
-android-tools-fastboot scrcpy android-tools-adb xscreensaver \
+android-tools-fastboot scrcpy android-tools-adb \
 obs-studio audacity gimp blender kdeconnect \
-telegram-desktop deluge virt-manager qemu-kvm libvirt-daemon-system libvirt-clients putty tor torbrowser-launcher snapd
+telegram-desktop deluge virt-manager qemu qemu-kvm tor torbrowser-launcher snapd
 
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree
