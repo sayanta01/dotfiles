@@ -24,7 +24,7 @@ spotify-client \
 bpytop nvtop neofetch \
 android-tools-fastboot scrcpy android-tools-adb \
 obs-studio audacity gimp blender kdeconnect \
-telegram-desktop deluge tor torbrowser-launcher snapd  virt-manager qemu
+telegram-desktop deluge tor torbrowser-launcher snapd virt-manager qemu
 
 sudo usermod -aG libvirt bot
 sudo usermod -aG kvm bot
