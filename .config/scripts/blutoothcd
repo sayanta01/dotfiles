@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-dizo="B4:9A:95:90:03:42"
+dizo="B4:9A:95:7D:0C:01"
 
 connect=$(bluetoothctl info $dizo | grep Connected | awk '{print $2}')
 if [ $connect = no ]
@@ -12,3 +12,5 @@ else
         notify-send "Disconnecting from Dizo"
         bluetoothctl disconnect $dizo
 fi
+
+./.config/scripts/audioswitch
