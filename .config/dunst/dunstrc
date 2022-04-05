@@ -2,25 +2,24 @@
 monitor = 0
 follow = mouse
 geometry = "300x50-10+36"
+scale = 0
+notification_limit = 0
 indicate_hidden = yes
-shrink = no
 separator_height = 6
-separator_color = auto
 padding = 20
 horizontal_padding = 9
 frame_width = 0
+separator_color = auto
 sort = no
-idle_threshold = 120
 font = Jetbrains Mono Bold 11
 line_height = 2
 markup = full
-format = %s\n%b
+format = "<b>%s</b>\n%b"
 alignment = center
 show_age_threshold = 60
-word_wrap = yes
 ignore_newline = no
 stack_duplicates = true
-hide_duplicate_count = no
+hide_duplicate_count = false
 show_indicators = no
 icon_position = left
 max_icon_size = 50
@@ -28,9 +27,12 @@ sticky_history = yes
 history_length = 9
 browser = x-www-browser -new-tab
 always_run_script = true
-corner_radius = 2
 title = Dunst
 class = Dunst
+corner_radius = 2
+shrink = no
+idle_threshold = 120
+word_wrap = yes
 icon_path = false
 
 
@@ -38,22 +40,19 @@ icon_path = false
 close = ctrl+shift+space
 close_all = ctrl+shift+space
 history = ctrl+grave
-context = ctrl+shift+period
 
 [urgency_low]
-timeout = 2
+timeout = 1
 background = "#2E3440AA"
 foreground = "#D8DEE9"
-frame_color = "#434C5E"
 
 [urgency_normal]
 timeout = 5
 background = "#2E3440AA"
 foreground = "#D8DEE9"
-frame_color = "#434C5E"
 
 [urgency_critical]
 timeout = 0
 background = "#2F3440AA"
 foreground = "#BF616A"
-frame_color = "#434C5E"
+
