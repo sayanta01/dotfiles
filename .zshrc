@@ -255,9 +255,8 @@ alias zshrc='sudo vim ~/.zshrc'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 #
-alias not='notion-snap'
 alias senable='sudo systemctl enable --now snapd apparmor'
-alias sinstall='sudo snap install lsd discord mari0 notion-snap cointop slack'
+alias sinstall='sudo snap install lsd discord mari0 cointop slack'
 alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
 
 export PATH=$PATH:/snap/bin
