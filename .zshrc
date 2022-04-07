@@ -92,11 +92,6 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 
-autoload -U colors && colors # Load colors
-PS1=" %B%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M %{$fg[magenta]%}%{$fg[white]%} ~%{$fg[red]%})%{$reset_color%}%b "
-
-
-
 # The following block is surrounded by two delimiters.
 # These delimiters must not be modified. Thanks.
 # START KALI CONFIG VARIABLES
@@ -238,6 +233,19 @@ fi
 if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
+
+
+#autoload -U colors && colors
+#PS1=" %B%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M %{$fg[magenta]%}%{$fg[white]%} ~%{$fg[red]%})%{$reset_color%}%b "
+
+
+autoload -U vcs_info colors && colors
+precmd() { vcs_info }
+
+zstyle ':vcs_info:git:*' formats '%b'
+
+setopt PROMPT_SUBST
+PROMPT=' %B%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[white]%}  %{$fg[red]%})%{$fg[white]%} ${vcs_info_msg_0_} ~%  '
 
 
 
