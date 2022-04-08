@@ -189,6 +189,7 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 alias h='history'
 alias free='free -h'
 alias df='df -h'
+alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
 
 
 # Snap alias
