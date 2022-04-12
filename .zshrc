@@ -24,29 +24,31 @@ setopt numericglobsort      # sort filenames numerically when it makes sense
 #bindkey '^[[Z' undo                               # shift + tab undo last action
 
 
-# configure `time` format
-TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
-
-
 WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
 
+# configure time format
+TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
+
+
 # enable Completion features
-autoload -Uz compinit
-compinit -d ~/.cache/zcompdump
+autoload -Uz compinit && compinit
+zmodload zsh/complist
+_comp_options+=(globdots)		# Include hidden files
 zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
-zstyle ':completion:*' select-prompt %Sscrolling active: current selection at %p%s
-zstyle ':completion:*' list-prompt %Sat %p: hit TAB for more, or the character to insert%s
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' completer _expand _complete
-zstyle ':completion:*' rehash true
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' select-prompt %S current selection at %p %S
+zstyle ':completion:*' list-prompt %S TAB for more
+
+#zstyle ':completion:*' use-compctl false
+#zstyle ':completion:*' auto-description 'specify: %d'
+#zstyle ':completion:*' format 'Completing %d'
+#zstyle ':completion:*' completer _expand _complete
+#zstyle ':completion:*' rehash true
+#zstyle ':completion:*' group-name ''
+#zstyle ':completion:*' list-colors ''
+#zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 
 # History configurations
@@ -59,16 +61,15 @@ setopt hist_verify            # show command with history expansion to user befo
 
 
 # Plugins
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /etc/zsh_command_not_found
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
+source /etc/zsh_command_not_found 2>/dev/null
 
 
 # Prompt
 
 autoload -Uz vcs_info colors && colors
 precmd() { vcs_info }
-
 zstyle ':vcs_info:git:*' formats '%b'
 
 setopt PROMPT_SUBST
