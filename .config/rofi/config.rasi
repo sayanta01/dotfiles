@@ -9,9 +9,9 @@ configuration {
   background:           #111;
   foreground:           #fff;
   background-alt:       #617BE3;
-  text-color:           #aaa;
+  text-color:           #555;
   foreground-alt:       #787c99;
-  highlight:	          #5df542;
+  highlight:	        #fff;
   background-color:     @background;
   
   border-radius:    6px;
@@ -26,7 +26,7 @@ window {
 }
 
 element selected {
-  text-color: #ff60c6;
+  text-color: #8be9fd;
 }
 
 element-text {
