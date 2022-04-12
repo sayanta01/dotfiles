@@ -9,7 +9,7 @@ configuration {
   background:           #111;
   foreground:           #fff;
   background-alt:       #617BE3;
-  text-color:           #555;
+  text-color:           #777;
   foreground-alt:       #787c99;
   highlight:	        #fff;
   background-color:     @background;
