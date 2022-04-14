@@ -1,13 +1,10 @@
-"set nocompatible
-"set spell
-"set hidden
-
-
+set hidden
+set nocompatible
 set number relativenumber
+set spell
 set nobackup                  
 set history=100
 syntax enable
-syntax on
 set encoding=utf-8
 set hlsearch
 set ignorecase smartcase
@@ -16,8 +13,6 @@ set showmatch
 set incsearch
 set nohlsearch
 set laststatus=2
-set background=dark
-set t_Co=256
 set nowrap
 set scrolloff=6
 set mouse=a
@@ -30,38 +25,51 @@ set expandtab
 set fileformat=unix
 set clipboard=unnamedplus
 set wildmode=longest,list,full
+syntax on
+set t_Co=256
 set showcmd
+set background=dark
+set cursorline
+hi CursorLine cterm=bold ctermbg=green ctermfg=black  
 
 
-"set cursorline
-"hi CursorLine cterm=bold ctermbg=green ctermfg=black  
+"set showtabline=2
 
 
 
 
 " Plugins
-" PlugInstall PlugUpdate PlugClean
-
 call plug#begin('~/.vim/plugged')
 
-
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'jiangmiao/auto-pairs'
-Plug 'ap/vim-css-color' 
-Plug 'tpope/vim-commentary' "gc for cmnt
-Plug 'tpope/vim-surround'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'joshdick/onedark.vim'
+Plug 'ap/vim-css-color' 
+Plug 'vimwiki/vimwiki'  
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-commentary' "gc for cmnt
+Plug 'mattn/emmet-vim'
+Plug 'luochen1990/rainbow'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'                          
+Plug 'itchyny/lightline.vim' 
+Plug 'Yggdroot/indentLine'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-tsserver',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-json',
+  \ 'coc-prettier',
+  \ ]
 
-Plug 'prettier/vim-prettier'
 
-"Plug 'itchyny/lightline.vim' 
+"Plug 'airblade/vim-gitgutter'
 "Plug 'preservim/tagbar'
-"Plug 'vimwiki/vimwiki'  
-"Plug 'junegunn/fzf.vim'                           
-
-"install coc
 
 
 call plug#end()
@@ -69,21 +77,42 @@ call plug#end()
 
 
 
-" restore last line position when opening file
+" Restore last line position when opening file
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 
+colorscheme onedark
+
+
+" Goyo keys
+map <C-g> :Goyo 200<CR>
+
+
+" Emmet keys
+let g:user_emmet_mode='n'
+let g:user_emmet_leader_key=','
+
+
+" Colored parentheses
+let g:rainbow_active = 1 "set 0 to disable, :RainbowToggle to enable 
+
+
+" Status bar
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
+
+
+" Indentation
+let g:indentLine_char ="."
 
 
 
 
-
-
-
-
-
-
-
+"FZF keys
+nnoremap <C-p> :Files<CR>
+nnoremap <C-f> :BLines<CR>
+nnoremap <C-g> :GFiles<CR>
 
 
 
