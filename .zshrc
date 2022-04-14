@@ -66,6 +66,10 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /etc/zsh_command_not_found 2>/dev/null
 
 
+export PATH=$PATH:/snap/bin
+export TERM=xterm-256color
+
+
 # Prompt
 
 autoload -Uz vcs_info colors && colors
@@ -112,8 +116,6 @@ alias not='notion-snap'
 alias senable='sudo systemctl enable --now snapd apparmor'
 alias sinstall='sudo snap install lsd discord mari0 cointop slack'
 alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
-
-export PATH=$PATH:/snap/bin
 
 
 # Pacman alias
