@@ -99,20 +99,25 @@ let g:rainbow_active = 1 "set 0 to disable, :RainbowToggle to enable
 
 " Status bar
 let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ }
-
-
+   \ 'colorscheme': 'wombat',
+   \ 'separator': {'left': '', 'right': ''},
+   \ 'subseparator': { 'left': '', 'right': ''}
+   \ }
+   
+   
 " Indentation
 let g:indentLine_char ="."
-
-
 
 
 "FZF keys
 nnoremap <C-p> :Files<CR>
 nnoremap <C-f> :BLines<CR>
 nnoremap <C-g> :GFiles<CR>
+
+
+
+
+
 
 
 
