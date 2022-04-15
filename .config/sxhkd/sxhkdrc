@@ -120,8 +120,8 @@ alt + shift + v
               virtualbox
 
 # calc
-ctrl + alt + k
-             mate-calculator
+ctrl + shift + alt + k
+                     mate-calculator
 
 # screenlock
 ctrl + alt + l
