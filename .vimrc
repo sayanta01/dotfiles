@@ -2,6 +2,7 @@ set hidden
 set nocompatible
 set number relativenumber
 set spell
+filetype plugin indent on
 set nobackup                  
 set history=100
 syntax enable
@@ -32,10 +33,15 @@ set background=dark
 set cursorline
 hi CursorLine cterm=bold ctermbg=green ctermfg=black  
 
-
 "set showtabline=2
 
 
+" Install vim-plug 
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 
 " Plugins
@@ -57,24 +63,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                          
 Plug 'itchyny/lightline.vim' 
 Plug 'Yggdroot/indentLine'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-tsserver',
-  \ 'coc-html',
-  \ 'coc-css',
-  \ 'coc-json',
-  \ 'coc-prettier',
-  \ ]
-
-
-"Plug 'airblade/vim-gitgutter'
-"Plug 'preservim/tagbar'
+Plug 'preservim/tagbar'
+Plug 'airblade/vim-gitgutter'
 
 
 call plug#end()
-
-
 
 
 " Restore last line position when opening file
@@ -94,14 +87,14 @@ let g:user_emmet_leader_key=','
 
 
 " Colored parentheses
-let g:rainbow_active = 1 "set 0 to disable, :RainbowToggle to enable 
+let g:rainbow_active = 1  "set 0 to disable, :RainbowToggle to enable 
 
 
 " Status bar
 let g:lightline = {
    \ 'colorscheme': 'wombat',
    \ 'separator': {'left': '', 'right': ''},
-   \ 'subseparator': { 'left': '', 'right': ''}
+   \ 'subseparator': { 'left': '', 'right': '┇'}
    \ }
    
    
@@ -111,11 +104,19 @@ let g:indentLine_char ="."
 
 "FZF keys
 nnoremap <C-p> :Files<CR>
+nnoremap <C-S-g> :GFiles<CR>  "only shows tracked by git
 nnoremap <C-f> :BLines<CR>
-nnoremap <C-g> :GFiles<CR>
+nnoremap <C-o> :Rg!
 
 
+" Move line
+nnoremap <S-j> :m .+1<CR>==
+nnoremap <S-k> :m .-2<CR>==
+nnoremap <C-S-j> yyp
+nnoremap <C-S-k> yyP
 
+
+nnoremap <C-s> :source ~/.vimrc  "source vim
 
 
 
