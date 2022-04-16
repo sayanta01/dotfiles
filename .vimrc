@@ -26,22 +26,15 @@ set expandtab
 set fileformat=unix
 set clipboard=unnamedplus
 set wildmode=longest,list,full
+set wildmenu
 syntax on
 set t_Co=256
 set showcmd
 set background=dark
 set cursorline
-hi CursorLine cterm=bold ctermbg=green ctermfg=black  
+set complete+=kspell
 
 "set showtabline=2
-
-
-" Install vim-plug 
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
 
 
 " Plugins
@@ -54,7 +47,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'ap/vim-css-color' 
 Plug 'vimwiki/vimwiki'  
 Plug 'junegunn/goyo.vim'
-Plug 'tpope/vim-commentary' "gc for cmnt
+Plug 'tpope/vim-commentary'  "gc for cmnt
 Plug 'mattn/emmet-vim'
 Plug 'luochen1990/rainbow'
 Plug 'jiangmiao/auto-pairs'
@@ -65,6 +58,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/tagbar'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-scripts/AutoComplPop'
+
 
 
 call plug#end()
@@ -78,7 +73,7 @@ colorscheme onedark
 
 
 " Goyo keys
-map <C-g> :Goyo 200<CR>
+map <C-z> :Goyo 200<CR>
 
 
 " Emmet keys
@@ -103,10 +98,10 @@ let g:indentLine_char ="."
 
 
 "FZF keys
-nnoremap <C-p> :Files<CR>
-nnoremap <C-S-g> :GFiles<CR>  "only shows tracked by git
-nnoremap <C-f> :BLines<CR>
-nnoremap <C-o> :Rg!
+map <C-p> :Files<CR>
+map <C-g> :GFiles<CR>  "only shows tracked by git
+map <C-b> :BLines<CR>
+map <C-o> :Rg!
 
 
 " Move line
@@ -116,9 +111,14 @@ nnoremap <C-S-j> yyp
 nnoremap <C-S-k> yyP
 
 
-nnoremap <C-s> :source ~/.vimrc  "source vim
+map <C-u> :source ~/.vimrc <Enter>
+map <C-t> :term <Enter>
 
 
+" NerdTree
+map <C-n> :NERDTreeToggle <Enter>
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 
 
