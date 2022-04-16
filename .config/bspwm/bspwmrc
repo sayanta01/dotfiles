@@ -22,4 +22,3 @@ kdeconnect-indicator &
 feh --bg-scale ~/.config/walls/wallpaper.jpg &
 dunst &
 xrdb ~/.config/Xresources & 
-xset s off &
