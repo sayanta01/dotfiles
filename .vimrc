@@ -59,7 +59,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'preservim/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/AutoComplPop'
-
+Plug 'prettier/vim-prettier'
 
 
 call plug#end()
