@@ -9,21 +9,6 @@ setopt numericglobsort      # sort filenames numerically when it makes sense
 #setopt correct             # auto correct mistakes
 
 
-# configure key keybindings
-#bindkey -e                                        # emacs key bindings
-#bindkey ' ' magic-space                           # do history expansion on space
-#bindkey '^[[3~' delete-char                       # delete
-#bindkey '^U' backward-kill-line                   # ctrl + U
-#bindkey '^[[3;5~' kill-word                       # ctrl + Supr
-#bindkey '^[[1;5C' forward-word                    # ctrl + ->
-#bindkey '^[[1;5D' backward-word                   # ctrl + <-
-#bindkey '^[[5~' beginning-of-buffer-or-history    # page up
-#bindkey '^[[6~' end-of-buffer-or-history          # page down
-#bindkey '^[[H' beginning-of-line                  # home
-#bindkey '^[[F' end-of-line                        # end
-#bindkey '^[[Z' undo                               # shift + tab undo last action
-
-
 WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
 
@@ -40,15 +25,6 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' select-prompt %S current selection at %p %S
 zstyle ':completion:*' list-prompt %S TAB for more
-
-#zstyle ':completion:*' use-compctl false
-#zstyle ':completion:*' auto-description 'specify: %d'
-#zstyle ':completion:*' format 'Completing %d'
-#zstyle ':completion:*' completer _expand _complete
-#zstyle ':completion:*' rehash true
-#zstyle ':completion:*' group-name ''
-#zstyle ':completion:*' list-colors ''
-#zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 
 # History configurations
