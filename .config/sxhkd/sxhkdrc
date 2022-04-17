@@ -1,10 +1,6 @@
 #
 # wm independent hotkeys
 #
-
-# wifi off
-super + F1
-         nmcli d connect wlan0 && nmcli d disconnect wlan0 && nmcli d connect eth0
 	 
 # wallch
 ctrl + alt + p
@@ -92,11 +88,7 @@ alt + w
            
 # terminal
 super + Return
-             st 
-
-# kitty
-alt + space
-          kitty
+             kitty 
         
 #
  dmenu
