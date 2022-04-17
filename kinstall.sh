@@ -6,8 +6,7 @@ sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 sudo apt -y full-upgrade
 
 sudo apt install -y font-viewer fonts-jetbrains-mono fonts-symbola fonts-indic \
-fonts-material-design-icons-iconfont fonts-materialdesignicons-webfont
-sudo apt install -y preload htop lolcat
+preload htop lolcat
 
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -89,16 +88,13 @@ chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 ########## BSPWM ##########
 
 
-sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl lxappearance scrot  xfce4-terminal libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
+sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl lxappearance scrot libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
 
 git clone https://github.com/dracula/xfce4-terminal.git ~/.local/share/xfce4/terminal/colorschemes
 git clone https://github.com/sayanta01/dotfiles ~/Desktop/dotfiles/
 cp -r ~/Desktop/dotfiles/{.zshrc,.vimrc,.fonts,.xinitrc,.imwheelrc} ~/
 cp -r ~/Desktop/dotfiles/.config/* ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/dunst/dunstrc ~/.config/polybar/launch.sh ~/.config/scripts/* 
-
-cd ~/Desktop/dotfiles/.config/st
-sudo make clean install && bash STcolor
 
 cd ~/.config/dmenu
 sudo make clean install
