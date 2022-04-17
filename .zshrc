@@ -6,14 +6,25 @@ setopt interactivecomments  # allow comments in interactive mode
 setopt magicequalsubst      # enable filename expansion for arguments of the form ‘anything=expression’
 setopt nonomatch            # hide error message if there is no match for the pattern
 setopt numericglobsort      # sort filenames numerically when it makes sense
-#setopt correct             # auto correct mistakes
+
+
+# Configure key keybindings
+bindkey '^[[1;5C' forward-word                    # ctrl + ->
+bindkey '^[[1;5D' backward-word                   # ctrl + <-
+bindkey '^[[5~' beginning-of-buffer-or-history    # page up
+bindkey '^[[6~' end-of-buffer-or-history          # page down
+#bindkey '^[[H' beginning-of-line                 # home
+#bindkey '^[[F' end-of-line                       # end
 
 
 WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
 
-# configure time format
+# configure Time format
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
+
+
+export TERM=xterm-256color
 
 
 # enable Completion features
@@ -25,6 +36,13 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' select-prompt %S current selection at %p %S
 zstyle ':completion:*' list-prompt %S TAB for more
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' completer _expand _complete
+zstyle ':completion:*' rehash true
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-colors ''
 
 
 # History configurations
@@ -40,10 +58,6 @@ setopt hist_verify            # show command with history expansion to user befo
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
 source /etc/zsh_command_not_found 2>/dev/null
-
-
-export PATH=$PATH:/snap/bin
-export TERM=xterm-256color
 
 
 # Prompt
@@ -93,6 +107,8 @@ alias senable='sudo systemctl enable --now snapd apparmor'
 alias sinstall='sudo snap install lsd discord mari0 cointop slack'
 alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
 
+export PATH=$PATH:/snap/bin
+
 
 # Pacman alias
 
@@ -101,3 +117,9 @@ alias mirrord='sudo reflector --latest 50 --number 20 --sort delay > /etc/pacman
 alias mirrors='sudo reflector --latest 50 --number 20 --sort score > /etc/pacman.d/mirrorlist'
 alias mirrora='sudo reflector --latest 50 --number 20 --sort age > /etc/pacman.d/mirrorlist'
 
+if test -n "$KITTY_INSTALLATION_DIR"; then
+    export KITTY_SHELL_INTEGRATION="enabled"
+    autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
+    kitty-integration
+    unfunction kitty-integration
+fi
