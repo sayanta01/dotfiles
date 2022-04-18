@@ -9,6 +9,7 @@ setopt numericglobsort      # sort filenames numerically when it makes sense
 
 
 # Configure key keybindings
+bindkey -e
 bindkey '^[[1;5C' forward-word                    # ctrl + ->
 bindkey '^[[1;5D' backward-word                   # ctrl + <-
 bindkey '^[[5~' beginning-of-buffer-or-history    # page up
