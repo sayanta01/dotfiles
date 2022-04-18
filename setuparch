@@ -28,9 +28,20 @@ sudo systemctl enable vboxservice
 #
 sudo pacman -Sy --noconfim nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
 scrcpy android-tools nvtop stress \
-obs-studio audacity gimp kdeconnect blender discord docker\
+obs-studio audacity gimp kdeconnect blender discord docker \
 deluge virtualbox telegram-desktop bleachbit \
-bluez bluez-utils blueman ntfs-3g
+bluez bluez-utils blueman ntfs-3g \
+virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
+
+
+sudo systemctl enable --now libvirtd
+#sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104
+#sudo usermod -aG libvirt bot
+#sudo usermod -aG kvm bot
+#sudo systemctl restart libvirtd
+#sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
+#sudo virsh net-autostart default
+
 
 sudo systemctl enable bluetooth
 sudo systemctl enable fstrim.timer
