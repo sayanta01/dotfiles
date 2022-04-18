@@ -37,7 +37,6 @@ virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 sudo systemctl enable --now libvirtd
 #sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104
 #sudo usermod -aG libvirt bot
-#sudo usermod -aG kvm bot
 #sudo systemctl restart libvirtd
 #sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
 #sudo virsh net-autostart default
