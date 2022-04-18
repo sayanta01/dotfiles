@@ -103,6 +103,7 @@ alias h='history'
 alias free='free -h'
 alias df='df -h'
 alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
+alias sysctlist='systemctl list-units --type=service'
 
 
 # Snap alias
