@@ -89,7 +89,11 @@ alt + w
 # terminal
 super + Return
              kitty 
-        
+
+# st
+alt + space
+          st
+	
 #
  dmenu
 ctrl + space 
