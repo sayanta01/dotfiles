@@ -91,8 +91,8 @@ super + Return
              kitty 
 
 # st
-alt + space
-          st
+alt + Return
+           st
 	
 #
  dmenu
