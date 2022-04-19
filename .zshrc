@@ -104,6 +104,10 @@ alias free='free -h'
 alias df='df -h'
 alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
 alias sysctlist='systemctl list-units --type=service'
+alias sysctlfail='systemctl --failed'
+alias logfile='sudo journalctl -p 4 -xb && '
+alias cleancache='rm -rf 
+alias cleanlog='sudo journalctl --vacuum-time=2weeks'
 
 
 # Snap alias
@@ -122,6 +126,11 @@ alias mirror='sudo reflector -f 30 --latest 30 --number 10 --verbose > /etc/pacm
 alias mirrord='sudo reflector --latest 50 --number 20 --sort delay > /etc/pacman.d/mirrorlist'
 alias mirrors='sudo reflector --latest 50 --number 20 --sort score > /etc/pacman.d/mirrorlist'
 alias mirrora='sudo reflector --latest 50 --number 20 --sort age > /etc/pacman.d/mirrorlist'
+alias cleanaur='sudo pacman -Sc --noconfirm'
+alias cleanorphan'sudo pacman -Rns $(pacman -Qdtq)'
+
+
+
 
 
 
