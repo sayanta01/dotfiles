@@ -95,6 +95,9 @@ cp -r ~/Desktop/dotfiles/{.zshrc,.vimrc,.fonts,.xinitrc,.imwheelrc,.vim} ~/
 cp -r ~/Desktop/dotfiles/.config/* ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/dunst/dunstrc ~/.config/polybar/launch.sh ~/.config/scripts/* 
 
+cd ~/Desktop/dotfiles/.config/st
+sudo make clean install && bash STcolor
+
 cd ~/.config/dmenu
 sudo make clean install
 
