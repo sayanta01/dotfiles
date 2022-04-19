@@ -84,3 +84,7 @@ sudo make clean install && bash STcolor
 cd ~/.config/dmenu
 sudo make clean install
 
+
+
+
+# vim /etc/pacman.conf # uncheck ignorepkg and put pkgname
