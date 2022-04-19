@@ -2,13 +2,15 @@ set hidden
 set nocompatible
 set number relativenumber
 set spell
-filetype plugin indent on
 set nobackup                  
 set history=100
 syntax enable
+syntax on
 set encoding=utf-8
 set hlsearch
 set ignorecase smartcase
+filetype plugin indent on
+set autoindent
 set smartindent
 set showmatch
 set incsearch
@@ -17,7 +19,6 @@ set laststatus=2
 set nowrap
 set scrolloff=6
 set mouse=a
-set autoindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -27,12 +28,13 @@ set fileformat=unix
 set clipboard=unnamedplus
 set wildmode=longest,list,full
 set wildmenu
-syntax on
 set t_Co=256
 set showcmd
 set background=dark
 set cursorline
+set showcmd
 set complete+=kspell
+
 
 "set showtabline=2
 
@@ -47,7 +49,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'ap/vim-css-color' 
 Plug 'vimwiki/vimwiki'  
 Plug 'junegunn/goyo.vim'
-Plug 'tpope/vim-commentary'  "gc for cmnt
+Plug 'tpope/vim-commentary'  "gc Enter for cmnt
 Plug 'mattn/emmet-vim'
 Plug 'luochen1990/rainbow'
 Plug 'jiangmiao/auto-pairs'
@@ -107,18 +109,23 @@ map <C-o> :Rg!
 " Move line
 nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
-nnoremap <C-S-j> yyp
-nnoremap <C-S-k> yyP
+nnoremap <C-j> yyp
+nnoremap <C-k> yyP
 
 
 map <C-u> :source ~/.vimrc <Enter>
 map <C-t> :term <Enter>
 
 
+" jk escape
+inoremap jk <esc>
+
+
 " NerdTree
 map <C-n> :NERDTreeToggle <Enter>
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
+
 
 
 
