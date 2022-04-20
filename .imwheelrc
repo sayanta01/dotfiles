@@ -3,14 +3,16 @@
 "google-chrome" 
     None, Up, Button4, 3
     None, Down, Button5, 3
-   
     
 "spotify"
     None, Up, Button4, 3
     None, Down, Button5, 3
     
+"zathura"
+    None, Up, Button4, 3
+    None, Down, Button5, 3    
     
 "code"
-    None, Up, Button4, 2
-    None, Down, Button5, 2
+    None, Up, Button4, 3
+    None, Down, Button5, 3
     
