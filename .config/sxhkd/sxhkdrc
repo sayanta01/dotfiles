@@ -89,10 +89,6 @@ alt + w
 # terminal
 super + Return
              kitty 
-
-# st
-alt + Return
-           st
 	
 #
  dmenu
