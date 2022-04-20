@@ -112,7 +112,6 @@ alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
 alias sysctlist='systemctl list-units --type=service'
 alias sysctlfail='systemctl --failed'
 alias logfile='sudo journalctl -p 4 -xb && '
-alias cleancache='rm -rf 
 alias cleanlog='sudo journalctl --vacuum-time=2weeks'
 
 
