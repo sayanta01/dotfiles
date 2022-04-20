@@ -13,8 +13,8 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 
 sudo apt update && sudo apt install -y cargo && cargo install ttyper
 sudo apt install -y neovim fzf translate-shell \
-ranger zathura ripgrep universal-ctags silversearcher-ag fd-find nodejs yarnpkg \
-tree ncdu slock imwheel \
+ranger zathura ripgrep universal-ctags silversearcher-ag fd-find nodejs yarnpkg mono-complete  \
+tree ncdu slock imwheel golang default-jdk build-essential cmake vim-nox \
 feh sxiv ffmpeg \
 cmatrix fortune \
 synaptic stacer stress \
