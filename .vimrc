@@ -61,7 +61,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'preservim/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/AutoComplPop'
-Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier' # yarnpkg install
+Plug 'ycm-core/YouCompleteMe' # python3 install.py --all
 
 
 call plug#end()
