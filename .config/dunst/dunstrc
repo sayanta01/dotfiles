@@ -1,20 +1,21 @@
 [global]
 monitor = 0
 follow = mouse
-geometry = "300x50-10+36"
+geometry = "300x50-9+38"
 scale = 0
 notification_limit = 0
 indicate_hidden = yes
-separator_height = 6
+separator_height = 2
 padding = 20
 horizontal_padding = 9
-frame_width = 0
+frame_width = 1
+frame_color = "#abb2bf"
 separator_color = auto
-sort = no
-font = Jetbrains Mono Bold 11
+sort = yes
+font = jetbrains mono bold 11
 line_height = 2
 markup = full
-format = "%s\n%b""
+format = "<b>%s</b>\n%b"
 alignment = center
 show_age_threshold = 60
 ignore_newline = no
@@ -47,7 +48,7 @@ background = "#2E3440AA"
 foreground = "#D8DEE9"
 
 [urgency_normal]
-timeout = 5
+timeout = 3
 background = "#2E3440AA"
 foreground = "#D8DEE9"
 
