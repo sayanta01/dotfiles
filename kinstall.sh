@@ -70,7 +70,7 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
 # nvim/lua/plugins/configs/bufferline  
 
-wget -O PacketTracer.deb https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
+axel -n 20 -o PacketTracer.deb https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
 
