@@ -90,6 +90,10 @@ alt + w
 super + Return
              kitty 
 	
+# kill ps
+ctrl + shift + Escape
+                    bash ~/.config/scripts/kill
+		    
 #
  dmenu
 ctrl + space 
