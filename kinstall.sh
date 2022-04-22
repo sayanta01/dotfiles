@@ -28,16 +28,7 @@ telegram-desktop deluge tor torbrowser-launcher snapd virt-manager qemu
 sudo usermod -aG libvirt bot
 sudo usermod -aG kvm bot
 
-
 sudo apt purge -y --auto-remove onboard xterm cherrytree
-
-sudo cp -r ~/.icons/MineKali/cursors /usr/share/icons/Adwaita 
-sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
-sudo rm -rf /usr/share/themes/Kali-Dark/*
-sudo cp -r ~/.themes/* /usr/share/themes
-sudo cp -r ~/.icons/MineKali /usr/share/icons
-sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
-sudo cp -r ~/.icons/MineKali/* /usr/share/icons/Flat-Remix-Blue-Dark
 
 #
 cd ~/Documents && mkdir Python JavaScript C
@@ -98,7 +89,14 @@ chmod +x ~/.config/bspwm/bspwmrc ~/.config/dunst/dunstrc ~/.config/polybar/launc
 cd ~/.config/dmenu
 sudo make clean install
 
+sudo cp -r ~/.icons/MineKali/cursors /usr/share/icons/Adwaita 
+sudo cp -r ~/.icons/MineKali /usr/share/icons
+sudo cp -r ~/.themes/* /usr/share/themes
 
+sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
+sudo cp -r ~/.icons/MineKali/* /usr/share/icons/Flat-Remix-Blue-Dark
+sudo rm -rf /usr/share/themes/Kali-Dark/*
+sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
 
 
 # sudo vim /etc/hosts                       Blk sites
