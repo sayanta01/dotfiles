@@ -94,6 +94,10 @@ super + Return
 ctrl + shift + Escape
                     bash ~/.config/scripts/kill
 		    
+# 0x0
+alt + shift + 0
+	      bash ~/.config/scripts/0x0
+		    
 #
  dmenu
 ctrl + space 
