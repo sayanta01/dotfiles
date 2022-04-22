@@ -54,10 +54,6 @@ yay -Sy --noconfirm spotify-adblock notion-app cointop chrome-google visual-stud
 mkdir ~/{Desktop,Documents,Downloads,Music,Pictures,Videos} 
 mkdir ~/Documents/{Python,JavaScript,C}
 
-sudo cp -r ~/.themes/* /usr/share/themes
-sudo cp -r ~/.icons/MineKali /usr/share/icons
-sudo cp -r ~/.icons/MineKali/cursors /usr/share/icons/Adwaita
-
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
 # nvim/lua/plugins/configs/bufferline  
@@ -87,11 +83,6 @@ sudo make clean install
 sudo cp -r ~/.icons/MineKali/cursors /usr/share/icons/Adwaita 
 sudo cp -r ~/.icons/MineKali /usr/share/icons
 sudo cp -r ~/.themes/* /usr/share/themes
-
-sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
-sudo cp -r ~/.icons/MineKali/* /usr/share/icons/Flat-Remix-Blue-Dark
-sudo rm -rf /usr/share/themes/Kali-Dark/*
-sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
 
 
 # vim /etc/pacman.conf # uncheck ignorepkg and put pkgname
