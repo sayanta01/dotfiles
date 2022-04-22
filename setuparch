@@ -85,5 +85,5 @@ sudo cp -r ~/.icons/MineKali /usr/share/icons
 sudo cp -r ~/.themes/* /usr/share/themes
 
 
-# uncmnt zsh plugins
+# uncmnt zsh plugins of arch
 # vim /etc/pacman.conf # uncheck ignorepkg and put pkgname
