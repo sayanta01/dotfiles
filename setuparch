@@ -14,7 +14,7 @@ tree ncdu rsync unrar unzip zip p7zip tar \
 dhcpcd networkmanager network-manager-applet wireless_tools dialog cmake \
 feh sxiv ffmpeg imagemagick lolcat \
 cmatrix fortune-mod mpv pipewire pulseaudio pavucontrol \
-speedtest-cli trash-cli youtube-dl transmission-cli \
+speedtest-cli trash-cli youtube-dl transmission-cli axel \
 bpytop neofetch htop \
 tor torbrowser-launcher \
 lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings intel-ucode \
