@@ -17,7 +17,7 @@ tree ncdu slock imwheel golang default-jdk cmake vim-nox \
 feh sxiv ffmpeg \
 cmatrix fortune \
 synaptic stacer stress \
-speedtest-cli trash-cli youtube-dl transmission-cli \
+speedtest-cli trash-cli yt-dlp transmission-cli \
 spotify-client \
 bpytop nvtop neofetch \
 android-tools-fastboot scrcpy android-tools-adb \
