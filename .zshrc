@@ -108,7 +108,7 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 alias h='history'
 alias free='free -h'
 alias df='df -h'
-alias ytdl='youtube-dl -f 137+140'
+alias ytdl='yt-dlp -f 137+140'
 alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
 alias sysctlist='systemctl list-units --type=service'
 alias sysctlfail='systemctl --failed'
