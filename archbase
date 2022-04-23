@@ -60,4 +60,3 @@ passwd bot
 EDITOR=vim visudo                       #uncmnt %wheel ALL=(ALL:ALL) ALL
 
 reboot 
-
