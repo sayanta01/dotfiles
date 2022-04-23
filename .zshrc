@@ -31,9 +31,6 @@ WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 
-export TERM=xterm-256color
-
-
 # enable Completion features
 autoload -Uz compinit && compinit
 zmodload zsh/complist
