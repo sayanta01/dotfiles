@@ -41,8 +41,7 @@ sudo apt install -y nvidia-driver nvidia-cuda-toolkit
 wget -O vscode.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
 chmod +x vscode.deb && sudo dpkg -i vscode.deb 
 
-git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock
-make && sudo make install
+git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock && make && sudo make install
 touch ~/.local/share/applications/spotify-adblock.desktop
 chown $USER spotify-adblock.desktop
 cat > spotify-adblock.desktop <<EOF
