@@ -5,8 +5,7 @@ sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 #
 sudo apt -y full-upgrade
 
-sudo apt install -y font-viewer fonts-jetbrains-mono fonts-symbola fonts-indic \
-preload htop lolcat
+sudo apt install -y font-viewer fonts-jetbrains-mono fonts-symbola preload htop lolcat
 
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
