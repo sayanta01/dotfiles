@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 interface = "eth0"
 #interface = "wlan0"
 #interface = "enp0s3"
