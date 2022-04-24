@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 speaker="alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1"
 earphn="bluez_sink.B4_9A_95_7D_0C_01.a2dp_sink"
 
