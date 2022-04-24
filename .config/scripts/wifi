@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 choice=$(echo -e "eth\nup\ndown\nconnect" | dmenu -p ">_ ")
 case $choice in
     "connect")
