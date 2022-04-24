@@ -1,18 +1,6 @@
 #
 # wm independent hotkeys
 #
-	 
-# wallch
-ctrl + alt + p
-             bash ~/.config/scripts/wallch
-             
-# notes
-alt + n
-      open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
-      
-# notion
-super + alt + n
-              open http://notion.new
 	      
 # bluetooth
 alt + F1
@@ -65,6 +53,26 @@ shift + Print
 # ss window
 alt + Print
           scrot --focused /home/bot/Pictures/'%I:%M:%d %b Window.png' 
+	  
+# notes
+alt + n
+      open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
+      
+# notion
+super + alt + n
+              open http://notion.new
+	  
+# wallch
+ctrl + alt + p
+             bash ~/.config/scripts/wallch
+	     
+# kill ps
+ctrl + shift + Escape
+                    bash ~/.config/scripts/kill
+		    
+# 0x0
+alt + shift + 0
+	      bash ~/.config/scripts/0x0
            
 # reboot
 ctrl + shift + F4
@@ -73,10 +81,14 @@ ctrl + shift + F4
 # shutdown
 ctrl + super + F4
                 shutdown now
+		
+# screenlock
+ctrl + alt + l
+             slock
                          
 # thunar
 super + e
-        thunar $HOME
+        thunar
 
 # chrome
 alt + b
@@ -89,17 +101,8 @@ alt + w
 # terminal
 super + Return
              kitty 
-	
-# kill ps
-ctrl + shift + Escape
-                    bash ~/.config/scripts/kill
 		    
-# 0x0
-alt + shift + 0
-	      bash ~/.config/scripts/0x0
-		    
-#
- dmenu
+# dmenu
 ctrl + space 
            dmenu_run
            
@@ -122,10 +125,6 @@ alt + shift + v
 # calc
 ctrl + shift + alt + k
                      mate-calculator
-
-# screenlock
-ctrl + alt + l
-             slock
                     
 # vs-code 
 alt + shift + c
