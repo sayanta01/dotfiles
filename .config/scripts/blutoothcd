@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 dizo="B4:9A:95:7D:0C:01"
 
 connect=$(bluetoothctl info $dizo | grep Connected | awk '{print $2}')
