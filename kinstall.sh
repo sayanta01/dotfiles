@@ -14,7 +14,7 @@ sudo apt update && sudo apt install -y cargo && cargo install ttyper
 sudo apt install -y neovim fzf translate-shell \
 ranger zathura ripgrep universal-ctags silversearcher-ag fd-find nodejs yarnpkg mono-complete \
 tree ncdu slock imwheel golang default-jdk cmake vim-nox \
-feh sxiv ffmpeg \
+feh sxiv ffmpeg aptitude \
 cmatrix fortune \
 synaptic stacer stress \
 speedtest-cli trash-cli yt-dlp transmission-cli \
