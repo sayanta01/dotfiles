@@ -63,7 +63,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'prettier/vim-prettier' "yarnpkg install
 Plug 'ycm-core/YouCompleteMe' "python3 install.py --all
-
+Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 
