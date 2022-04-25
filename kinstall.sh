@@ -96,6 +96,6 @@ sudo rm -rf /usr/share/themes/Kali-Dark/*
 sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
 
 
-# sudo vim /etc/hosts                       Blk sites
+# sudo vim /etc/hosts                       blk sites
 # sudo systemd-analyze                      critical-chain      
 # deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free
