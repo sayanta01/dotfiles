@@ -23,7 +23,7 @@ mount /dev/sda3 /mnt/home
 
 
 pacstrap /mnt linux base base-devel grub efibootmgr /
-dosfstools mtools git networkmanager reflector
+dosfstools mtools git networkmanager vim reflector
 
 genfstab -U /mnt > /mnt/etc/fstab
 
