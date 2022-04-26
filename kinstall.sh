@@ -3,7 +3,8 @@
 
 sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 #
-sudo apt -y full-upgrade
+yes '
+' | sudo apt -y full-upgrade
 
 sudo apt install -y font-viewer fonts-jetbrains-mono fonts-symbola preload htop lolcat
 
