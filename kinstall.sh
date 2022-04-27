@@ -16,7 +16,7 @@ sudo apt install -y neovim fzf translate-shell \
 ranger zathura ripgrep universal-ctags silversearcher-ag fd-find nodejs yarnpkg mono-complete \
 tree ncdu slock imwheel golang default-jdk cmake vim-nox \
 feh sxiv ffmpeg aptitude \
-cmatrix fortune \
+cmatrix fortune xsel \
 synaptic stacer stress \
 speedtest-cli trash-cli yt-dlp transmission-cli \
 spotify-client \
