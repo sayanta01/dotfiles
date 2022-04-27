@@ -105,6 +105,7 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 alias h='history'
 alias free='free -h'
 alias df='df -h'
+alias vim='nvim'
 alias shred='shred -uvzn3'
 alias ytdl='yt-dlp -f 137+140'
 alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
