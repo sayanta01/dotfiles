@@ -2,8 +2,10 @@ set hidden
 set nocompatible
 set number relativenumber
 set spell
-set nobackup                  
-set history=100
+set nobackup
+set nowritebackup
+set noswapfile
+set history=200
 syntax enable
 syntax on
 set encoding=utf-8
@@ -34,6 +36,7 @@ set background=dark
 set cursorline
 set showcmd
 set complete+=kspell
+filetype off
 
 
 "set showtabline=2
@@ -64,6 +67,7 @@ Plug 'vim-scripts/AutoComplPop'
 Plug 'prettier/vim-prettier' "yarnpkg install
 Plug 'ycm-core/YouCompleteMe' "python3 install.py --all
 Plug 'davidhalter/jedi-vim'
+Plug 'python-mode/python-mode'
 
 call plug#end()
 
@@ -132,4 +136,18 @@ let g:prettier#autoformat = 0
 autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
 
 
+" Settings for python-mode
+let g:pymode_syntax = 1
+let g:pymode_syntax_builtin_objs = 0
+let g:pymode_syntax_builtin_funcs = 0
+let g:pymode_python = 'python3'
+
+
+" save sudo file
+cmap w!! w !sudo tee > /dev/null %
+
+
+" set-up pathogen
+call pathogen#infect()
+call pathogen#helptags()
 
