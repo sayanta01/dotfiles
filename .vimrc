@@ -146,8 +146,3 @@ let g:pymode_python = 'python3'
 " save sudo file
 cmap w!! w !sudo tee > /dev/null %
 
-
-" set-up pathogen
-call pathogen#infect()
-call pathogen#helptags()
-
