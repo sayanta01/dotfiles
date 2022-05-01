@@ -1,18 +1,18 @@
 # xprop - wm classname
 
-"google-chrome" 
+"^google-chrome$" 
     None, Up, Button4, 3
     None, Down, Button5, 3
     
-"spotify"
+"^spotify$"
     None, Up, Button4, 3
     None, Down, Button5, 3
     
-"zathura"
+"^zathura$"
     None, Up, Button4, 3
     None, Down, Button5, 3    
     
-"code"
+"^code$"
     None, Up, Button4, 3
     None, Down, Button5, 3
     
