@@ -5,22 +5,20 @@ sudo ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 sudo hwclock --systohc                                          
 
 sudo pacman -Syu && sudo pacman -Sy --noconfirm cargo && cargo install ttyper
-sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-cascadia-code noto-fonts-emoji ttf-joypixels ttf-font-awesome \
+sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-cascadia-code noto-fonts-emoji ttf-joypixels ttf-font-awesome terminux-font \
 linux-firmware linux-headers linux-lts linux-lts-headers linux-firmware \
 thunar thunar-archive-plugin firefox ranger zathura lsd exa \
-neovim fzf translate-shell openssh wget curl mate-calc ripgrep universal-ctags nodejs yarn \
+neovim fzf translate-shell openssh wget curl mate-calc yarn ripgrep universal-ctags nodejs  \
 tree ncdu rsync unrar unzip zip p7zip tar \
-dhcpcd networkmanager network-manager-applet wireless_tools dialog cmake \
+dhcpcd networkmanager wireless_tools dialog cmake \
 feh sxiv ffmpeg imagemagick lolcat \
 cmatrix fortune-mod mpv pipewire pulseaudio pavucontrol \
 speedtest-cli trash-cli yt-dlp transmission-cli axel xsel \
 bpytop neofetch htop \
 tor torbrowser-launcher \
-lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings intel-ucode \
-virtualbox-guest-utils \
+intel-ucode virtualbox-guest-utils \
 unclutter zsh-syntax-highlighting zsh-completions jq xdg-user-dirs xorg xclip wmctrl imwheel
 
-sudo systemctl enable lightdm 
 sudo systemctl enable vboxservice
 
 #
@@ -47,7 +45,8 @@ sudo systemctl disable docker.service
 
 git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si
 yay -Syu
-yay -Sy --noconfirm spotify-adblock notion-app cointop chrome-google visual-studio-code stacer 
+yay -Sy --noconfirm spotify-adblock notion-app cointop chrome-google stacer ly
+sudo systemctl enable ly.service 
 
 mkdir ~/{Desktop,Documents,Downloads,Music,Pictures,Videos} 
 mkdir ~/Documents/{Python,JavaScript,C}
