@@ -30,7 +30,7 @@ bluez bluez-utils blueman ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
 
-sudo systemctl enable --now libvirtd
+#sudo systemctl enable --now libvirtd
 #sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104
 #sudo usermod -aG libvirt bot
 #sudo systemctl restart libvirtd
@@ -59,6 +59,14 @@ sudo cat <<EOF | sudo tee /etc/resolv.conf
 nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
+
+cd /usr/share/kbd/consolefonts
+setfont ter-c20b.psf.gz
+
+sudo cat <<EOF | sudo tee /etc/vconsole.conf
+FONT=ter-c20b.psf.gz
+EOF
+
 
 
 ########## BSPWM ##########
