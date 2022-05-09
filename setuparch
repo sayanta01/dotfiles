@@ -54,7 +54,7 @@ nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
  
-setfont /usr/share/kbd/consolefontster-c20b.psf.gz
+setfont /usr/share/kbd/consolefonts/ter-c20b.psf.gz
 
 sudo cat <<EOF | sudo tee /etc/vconsole.conf
 FONT=ter-c20b.psf.gz
