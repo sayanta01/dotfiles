@@ -8,7 +8,7 @@ sudo pacman -Syu && sudo pacman -Sy --noconfirm cargo && cargo install ttyper
 sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-cascadia-code noto-fonts-emoji ttf-joypixels ttf-font-awesome terminux-font \
 linux-firmware linux-headers linux-lts linux-lts-headers linux-firmware \
 thunar thunar-archive-plugin firefox ranger zathura lsd exa \
-neovim fzf translate-shell openssh wget curl mate-calc yarn ripgrep universal-ctags nodejs  \
+neovim fzf translate-shell openssh wget curl mate-calc yarn ripgrep nodejs  \
 tree ncdu rsync unrar unzip zip p7zip tar \
 dhcpcd networkmanager wireless_tools dialog cmake \
 feh sxiv ffmpeg imagemagick lolcat \
