@@ -15,7 +15,6 @@ feh sxiv ffmpeg imagemagick lolcat \
 cmatrix fortune-mod mpv pipewire pulseaudio pavucontrol \
 speedtest-cli trash-cli yt-dlp transmission-cli axel xsel \
 bpytop neofetch htop \
-tor torbrowser-launcher \
 intel-ucode virtualbox-guest-utils \
 unclutter zsh-syntax-highlighting zsh-completions jq xdg-user-dirs xorg xclip wmctrl imwheel
 
