@@ -53,9 +53,8 @@ sudo cat <<EOF | sudo tee /etc/resolv.conf
 nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
-
-cd /usr/share/kbd/consolefonts
-setfont ter-c20b.psf.gz
+ 
+setfont /usr/share/kbd/consolefontster-c20b.psf.gz
 
 sudo cat <<EOF | sudo tee /etc/vconsole.conf
 FONT=ter-c20b.psf.gz
