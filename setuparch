@@ -44,16 +44,11 @@ sudo systemctl disable docker.service
 
 
 git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si
-yay -Syu
-yay -Sy --noconfirm spotify-adblock notion-app cointop chrome-google stacer ly
+yay -Syu && yay -Sy --noconfirm spotify-adblock notion-app cointop chrome-google ly
 sudo systemctl enable ly.service 
 
 mkdir ~/{Desktop,Documents,Downloads,Music,Pictures,Videos} 
 mkdir ~/Documents/{Python,JavaScript,C}
-
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
-# nvim/lua/plugins/configs/bufferline  
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
@@ -66,6 +61,7 @@ setfont ter-c20b.psf.gz
 sudo cat <<EOF | sudo tee /etc/vconsole.conf
 FONT=ter-c20b.psf.gz
 EOF
+
 
 
 
