@@ -34,6 +34,10 @@ alt + F7
 super + F7
         dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
+# classic music
+ctrl + F7
+        bash ~/.config/scripts/music
+	
 # next
 alt + F8
        playerctl next
