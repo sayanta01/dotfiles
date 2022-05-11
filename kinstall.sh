@@ -1,46 +1,40 @@
 #!/bin/bash
 
-
 sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 #
 yes '
 ' | sudo apt full-upgrade
 
-sudo apt install -y font-viewer fonts-jetbrains-mono fonts-symbola preload htop lolcat
-
-curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt update && sudo apt install -y cargo && cargo install ttyper
 sudo apt install -y neovim fzf translate-shell \
-ranger zathura ripgrep fd-find nodejs yarnpkg mono-complete \
-tree ncdu slock imwheel golang default-jdk cmake vim-nox \
+ranger zathura ripgrep fd-find nodejs yarnpkg \
+tree ncdu slock imwheel fonts-jetbrains-mono \
 feh sxiv ffmpeg aptitude \
-cmatrix fortune xsel \
+cmatrix fortune font-viewer \
 synaptic stacer stress \
 speedtest-cli trash-cli yt-dlp transmission-cli \
 spotify-client \
-bpytop nvtop neofetch \
-android-tools-fastboot scrcpy android-tools-adb \
+bpytop neofetch preload htop lolcat \
+android-tools-fastboot scrcpy android-tools-adb nvtop \
 obs-studio audacity gimp blender kdeconnect \
-telegram-desktop deluge tor torbrowser-launcher snapd virt-manager qemu
-
-sudo usermod -aG libvirt bot
-sudo usermod -aG kvm bot
+telegram-desktop deluge tor torbrowser-launcher snapd docker.io
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree
 
 #
-cd ~/Documents && mkdir Python JavaScript C
+sudo apt install -y virt-manager qemu
+sudo usermod -aG libvirt bot
+sudo usermod -aG kvm bot
 
-sudo apt install -y docker.io
-sudo systemctl disable docker.service
 sudo systemctl enable fstrim.timer
 
 sudo apt install -y nvidia-driver nvidia-cuda-toolkit
 
-wget -O vscode.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
-chmod +x vscode.deb && sudo dpkg -i vscode.deb 
+wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/Documents/vscode.deb
+cd ~/Documents && chmod +x vscode.deb && sudo dpkg -i vscode.deb 
 
 git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock && make && sudo make install
 touch ~/.local/share/applications/spotify-adblock.desktop
