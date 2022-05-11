@@ -31,13 +31,16 @@ TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 
 # enable Completion features
-autoload -Uz compinit && compinit
-zmodload zsh/complist
-_comp_options+=(globdots)		# Include hidden files
+autoload -Uz compinit && 
+
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-prompt %S TAB for more
 zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files
 
 
 # History configurations
@@ -65,7 +68,7 @@ precmd() { vcs_info }
 setopt prompt_subst
 
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-# 
+#
 +vi-git-untracked(){
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
         git status --porcelain | grep '??' &> /dev/null ; then
@@ -176,6 +179,5 @@ alias yaysua='yay -Sua --noconfirm'              # update only yay pkgs
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 alias cleanaur='sudo pacman -Sc --noconfirm'
-
 
 
