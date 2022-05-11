@@ -31,16 +31,17 @@ TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 
 # enable Completion features
-autoload -Uz compinit && 
+autoload -Uz compinit && compinit
+
+zmodload zsh/complist
+_comp_options+=(globdots)		# Include hidden files
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-prompt %S TAB for more
 zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)		# Include hidden files
+
 
 
 # History configurations
