@@ -22,4 +22,4 @@ kdeconnect-indicator &
 feh --bg-scale ~/.config/walls/wallpaper.jpg &
 dunst &
 xrdb ~/.config/Xresources &
-imwheel -b "4 5" &
+imwheel &
