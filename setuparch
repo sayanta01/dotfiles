@@ -5,7 +5,7 @@ sudo ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 sudo hwclock --systohc                                          
 
 sudo pacman -Syu && sudo pacman -Sy --noconfirm cargo && cargo install ttyper
-sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-cascadia-code noto-fonts-emoji ttf-joypixels ttf-font-awesome terminux-font \
+sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-cascadia-code noto-fonts-emoji ttf-joypixels ttf-font-awesome terminus-font \
 linux-firmware linux-headers linux-lts linux-lts-headers linux-firmware \
 thunar thunar-archive-plugin firefox ranger zathura lsd exa \
 neovim fzf translate-shell openssh wget curl mate-calc yarn ripgrep nodejs  \
