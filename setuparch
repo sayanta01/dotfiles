@@ -13,7 +13,7 @@ tree ncdu rsync unrar unzip zip p7zip tar \
 dhcpcd networkmanager wireless_tools dialog cmake \
 feh sxiv ffmpeg imagemagick lolcat \
 cmatrix fortune-mod mpv pipewire pulseaudio pavucontrol \
-speedtest-cli trash-cli yt-dlp transmission-cli axel xsel \
+speedtest-cli trash-cli yt-dlp transmission-cli axel \
 bpytop neofetch htop \
 intel-ucode virtualbox-guest-utils \
 unclutter zsh-syntax-highlighting zsh-completions jq xdg-user-dirs xorg xclip wmctrl imwheel
