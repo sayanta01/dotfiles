@@ -1,6 +1,6 @@
 setopt autocd               # change directory just by typing its name
-setopt promptsubst          # enable command substitution in prompt
 setopt share_history        # Share history among all sessions
+setopt promptsubst          # enable command substitution in prompt
 setopt notify               # report the status of background jobs immediately
 setopt interactivecomments  # allow comments in interactive mode
 setopt magicequalsubst      # enable filename expansion for arguments of the form ‘anything=expression’
@@ -9,10 +9,9 @@ setopt numericglobsort      # sort filenames numerically when it makes sense
 
 
 # Configure key keybindings
-bindkey -e
-bindkey ' ' magic-space                           # do history expansion on space
-bindkey '^U' backward-kill-line                   # ctrl + U
-bindkey '^[[3;5~' kill-word                       # ctrl + Supr
+bindkey -s '^o' 'ranger^M'
+bindkey ' ' magic-space                           # history expansion on space
+bindkey '^U' backward-kill-line                   # ctrl + u
 bindkey '^[[3~' delete-char                       # delete
 bindkey '^[[1;5C' forward-word                    # ctrl + ->
 bindkey '^[[1;5D' backward-word                   # ctrl + <-
@@ -20,8 +19,8 @@ bindkey '^[[5~' beginning-of-buffer-or-history    # page up
 bindkey '^[[6~' end-of-buffer-or-history          # page down
 bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
-bindkey '^[[Z' undo                               # shift + tab undo last action
-
+bindkey '^[[3;5~' kill-word                       # backward del word
+bindkey '^H' backward-kill-word                   # forward del word 
 
 
 WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
@@ -36,26 +35,17 @@ autoload -Uz compinit && compinit
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files
 zstyle ':completion:*' menu select
+zstyle ':completion:*' list-prompt %S TAB for more
 zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*' select-prompt %S current selection at %p %S
-zstyle ':completion:*' list-prompt %S TAB for more
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' completer _expand _complete
-zstyle ':completion:*' rehash true
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' list-colors ''
 
 
 # History configurations
 HISTSIZE=2000
 SAVEHIST=2000
 HISTFILE=~/.zsh_history
-setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_verify            # show command with history expansion to user before running it
+setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups        # ignore duplicated commands history list
 
 
 # Plugins
@@ -69,73 +59,123 @@ source /etc/zsh_command_not_found 2>/dev/null
 
 
 # Prompt
-
 autoload -Uz vcs_info colors && colors
-precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '%b'
 
-setopt PROMPT_SUBST
+precmd() { vcs_info }
+setopt prompt_subst
+
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+# 
++vi-git-untracked(){
+    if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+        git status --porcelain | grep '??' &> /dev/null ; then
+        # This will show the marker if there are any untracked files in repo.
+        # If instead you want to show the marker only if there are untracked
+        # files in $PWD, use:
+        #[[ -n $(git ls-files --others --exclude-standard) ]] ; then
+        hook_com[staged]+='!' # signify new files with a bang
+    fi
+}
+
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})"
+
 PROMPT=' %B%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[white]%}  %{$fg[red]%})%{$fg[white]%} ${vcs_info_msg_0_} ~%  '
 
 
 
 
 # Alias
+ex ()
+{
+  if [ -f "$1" ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *.deb)       ar x $1      ;;
+      *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   unzstd $1    ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
 
 alias l='exa -al' 
 alias ls='ls --color=auto'
+alias la='exa'
 alias lsa='ls -al | lolcat' 
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
-alias typer='~/.cargo/bin/ttyper'
 alias update='sudo apt update'
 alias upgrade='sudo apt -y full-upgrade'
 alias clean='sudo apt -y autoremove; sudo apt clean'
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
+
 alias bashrc='sudo vim ~/.bashrc'
 alias zshrc='sudo vim ~/.zshrc'
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias h='history'
+alias rr='curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
 alias free='free -h'
 alias df='df -h'
-alias vim='nvim'
 alias shred='shred -uvzn3'
+
+alias typer='~/.cargo/bin/ttyper'
+alias vim='nvim'
 alias ytdl='yt-dlp -f 137+140'
 alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
+
 alias sysctlist='systemctl list-units --type=service'
 alias sysctlfail='systemctl --failed'
-alias logfile='sudo journalctl -p 4 -xb && '
-alias cleanlog='sudo journalctl --vacuum-time=2weeks'
+alias jctl='sudo journalctl -p 3 -xb'
+alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
 
 
 # Snap alias
-
-alias not='notion-snap'
 alias senable='sudo systemctl enable --now snapd apparmor'
 alias sinstall='sudo snap install lsd discord mari0 cointop slack'
 alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
-
 export PATH=$PATH:/snap/bin
 
 
-# Pacman alias
+# Arch
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay > /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score > /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age > /etc/pacman.d/mirrorlist"
 
-alias mirror='sudo reflector -f 30 --latest 30 --number 10 --verbose > /etc/pacman.d/mirrorlist'
-alias mirrord='sudo reflector --latest 50 --number 20 --sort delay > /etc/pacman.d/mirrorlist'
-alias mirrors='sudo reflector --latest 50 --number 20 --sort score > /etc/pacman.d/mirrorlist'
-alias mirrora='sudo reflector --latest 50 --number 20 --sort age > /etc/pacman.d/mirrorlist'
+alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
+alias pacsyyu='sudo pacman -Syyu'                # refresh pkglist & update standard pkgs
+alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and yay pkgs
+alias yaysua='yay -Sua --noconfirm'              # update only yay pkgs
+
+alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 alias cleanaur='sudo pacman -Sc --noconfirm'
-alias cleanorphan='sudo pacman -Rns $(pacman -Qdtq)'
-
-
-
 
 
 
