@@ -1,14 +1,13 @@
 #!/bin/sh
 
-
 sudo ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime      
 sudo hwclock --systohc                                          
 
 sudo pacman -Syu && sudo pacman -Sy --noconfirm cargo && cargo install ttyper
 sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-cascadia-code noto-fonts-emoji ttf-joypixels ttf-font-awesome terminus-font \
 linux-firmware linux-headers linux-lts linux-lts-headers linux-firmware \
-thunar thunar-archive-plugin firefox ranger zathura lsd exa \
-neovim fzf translate-shell openssh wget curl mate-calc yarn ripgrep nodejs  \
+thunar thunar-archive-plugin firefox ranger zathura lsd exa bat \
+neovim fzf translate-shell openssh wget curl mate-calc yarn ripgrep nodejs \
 tree ncdu rsync unrar unzip zip p7zip tar \
 dhcpcd networkmanager wireless_tools dialog cmake \
 feh sxiv ffmpeg imagemagick lolcat \
@@ -39,15 +38,12 @@ virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
 sudo systemctl enable bluetooth
 sudo systemctl enable fstrim.timer
-sudo systemctl disable docker.service
-
 
 git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si
 yay -Syu && yay -Sy --noconfirm spotify-adblock notion-app cointop chrome-google ly
 sudo systemctl enable ly.service 
 
 mkdir ~/{Desktop,Documents,Downloads,Music,Pictures,Videos} 
-mkdir ~/Documents/{Python,JavaScript,C}
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
