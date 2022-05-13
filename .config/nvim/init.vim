@@ -93,7 +93,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'preservim/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'https://github.com/terryma/vim-multiple-cursors'  "CTRL + n multiple cursors
-Plug 'neoclide/coc.nvim', {'branch': 'release'}		     "yarnpkg install
+Plug 'neoclide/coc.nvim', {'branch': 'release'}		   "yarnpkg install
 Plug 'prettier/vim-prettier'                            "yarnpkg install
 
 call plug#end()
