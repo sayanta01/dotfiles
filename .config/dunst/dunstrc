@@ -53,7 +53,7 @@ background = "#2E3440AA"
 foreground = "#D8DEE9"
 
 [urgency_critical]
-timeout = 0
+timeout = 2
 background = "#2F3440AA"
 foreground = "#BF616A"
 
