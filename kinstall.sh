@@ -16,8 +16,8 @@ feh sxiv ffmpeg aptitude \
 cmatrix fortune font-viewer \
 synaptic stacer stress \
 speedtest-cli trash-cli yt-dlp transmission-cli \
-spotify-client \
 bpytop neofetch preload htop lolcat \
+spotify-client \
 android-tools-fastboot scrcpy android-tools-adb nvtop \
 obs-studio audacity gimp blender kdeconnect \
 telegram-desktop deluge tor torbrowser-launcher snapd docker.io
