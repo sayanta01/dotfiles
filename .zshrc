@@ -113,6 +113,9 @@ ex ()
 }
 
 
+eval "$(zoxide init zsh)"
+
+
 alias l='exa -al' 
 alias ls='ls --color=auto'
 alias la='exa'
