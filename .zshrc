@@ -139,7 +139,6 @@ alias upgrade='sudo apt -y full-upgrade'
 alias clean='sudo apt -y autoremove; sudo apt clean'
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
 
-alias bashrc='sudo vim ~/.bashrc'
 alias zshrc='sudo vim ~/.zshrc'
 alias h='history'
 alias rr='curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
