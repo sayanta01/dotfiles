@@ -1,4 +1,8 @@
-"set showtabline=2
+":checkhealth
+":PlugInstall 
+"pip install pynvim 
+
+
 set nocompatible
 set fileformat=unix
 set encoding=utf-8
@@ -49,6 +53,7 @@ set softtabstop=4
 set shiftwidth=4
 set textwidth=79
 set expandtab
+set showtabline=2
 
 
 " Numbers lines
@@ -92,8 +97,9 @@ Plug 'Yggdroot/indentLine'
 Plug 'vimwiki/vimwiki'  
 Plug 'preservim/tagbar'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'https://github.com/terryma/vim-multiple-cursors'  "CTRL + n multiple cursors
-Plug 'neoclide/coc.nvim', {'branch': 'release'}		   "yarnpkg install
+Plug 'neoclide/coc.nvim', {'branch': 'release'}		     "yarnpkg install
 Plug 'prettier/vim-prettier'                            "yarnpkg install
 
 call plug#end()
@@ -103,7 +109,7 @@ call plug#end()
 
 " Key Remapping.....
 
-let mapleader = "\<space>"
+let g:mapleader = "\<Space>"
 
 
 " Goyo keys
@@ -119,13 +125,6 @@ let g:user_emmet_mode='n'
 let g:user_emmet_leader_key=','
 
 
-"FZF keys
-map <C-p> :Files<CR>
-map <C-g> :GFiles<CR>  "only shows tracked by git
-map <C-b> :BLines<CR>
-map <C-o> :Rg!
-
-
 " Move line
 nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
@@ -133,11 +132,21 @@ nnoremap <C-j> yyp
 nnoremap <C-k> yyP
 
 
+" Easy CAPS
+inoremap <c-u> <ESC>viwUi
+nnoremap <c-u> viwU<Esc>
+
+
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
+
+
 " jk escape
 inoremap jk <esc>
 
 
-map <C-s> :source ~/.config/nvim/init.vim <Enter>
+map <C-s> :so ~/.config/nvim/init.vim <Enter>
 map <C-t> :term <Enter>
 
 
@@ -159,6 +168,13 @@ nnoremap <M-l>	:vertical resize +2<CR>
 map <C-n> :NERDTreeToggle <Enter>
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
+
+
+"FZF keys
+map <C-p> :Files<CR>
+map <C-g> :GFiles<CR>  "only shows tracked by git
+map <C-b> :BLines<CR>
+map <C-o> :Rg!
 
 
 
@@ -208,6 +224,19 @@ colorscheme onedark
 
 let g:prettier#autoformat = 0
 autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
