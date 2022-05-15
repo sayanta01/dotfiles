@@ -90,7 +90,9 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim' 
+Plug 'tpope/vim-surround'	  		         
 Plug 'jiangmiao/auto-pairs'
+Plug 'luochen1990/rainbow'               		"ysw
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'  
@@ -100,21 +102,18 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/tagbar'
 Plug 'prettier/vim-prettier' , { 'do': 'yarn install' }    
-Plug 'tpope/vim-commentary'         			 "gcc cmnt
+Plug 'tpope/vim-commentary'                             "gcc cmnt
+Plug 'terryma/vim-multiple-cursors'                     "C-n multiple cursors
+Plug 'neoclide/coc.nvim', {'branch': 'release'}         "yarn install 
+Plug 'norcalli/nvim-colorizer.lua'  
 
-
-
-Plug 'tpope/vim-surround'	  		         
-Plug 'luochen1990/rainbow'               		"ysw
-Plug 'ap/vim-css-color' 
-
-Plug 'tpope/vim-commentary'         			"gc cmnt
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                          
-Plug 'https://github.com/terryma/vim-multiple-cursors'  "CTRL + n multiple cursors
-Plug 'neoclide/coc.nvim', {'branch': 'release'}		     "yarnpkg install
 
 call plug#end()
+
+
+luafile ~/.config/nvim/lua/plug-colorizer.lua
 
 
 
@@ -211,6 +210,7 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-html',
   \ 'coc-css',
+  \ 'coc-lua',
   \ 'coc-json',
   \ ]
 
