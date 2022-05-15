@@ -106,7 +106,8 @@ Plug 'terryma/vim-multiple-cursors'                     "C-n multiple cursors
 Plug 'neoclide/coc.nvim', {'branch': 'release'}         "yarn install 
 Plug 'norcalli/nvim-colorizer.lua'  
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'                          
+Plug 'junegunn/fzf.vim'           
+Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
 
@@ -209,7 +210,7 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-css',
   \ 'coc-lua',
-  \ 'rome',
+  \ 'coc-rome',
   \ 'coc-json',
   \ ]
 
