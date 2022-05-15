@@ -9,6 +9,7 @@ setopt numericglobsort      # sort filenames numerically when it makes sense
 
 
 # Configure key keybindings
+bindkey -v
 bindkey -s '^o' 'ranger^M'
 bindkey ' ' magic-space                           # history expansion on space
 bindkey '^U' backward-kill-line                   # ctrl + u
