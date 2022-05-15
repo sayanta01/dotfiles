@@ -1,6 +1,7 @@
 ":checkhealth
 ":PlugInstall 
 "pip install pynvim 
+"Maps  #see shortcuts
 
 
 set nocompatible
@@ -11,6 +12,8 @@ set scrolloff=6
 set laststatus=2
 set showcmd
 set history=200
+set confirm
+set termguicolors
 
 
 " Mouse
@@ -65,7 +68,7 @@ set nowrap
 
 
 " Enable syntax highlighting
-syntax enable
+syntax on
 filetype off
 filetype plugin indent on
 
@@ -73,6 +76,9 @@ filetype plugin indent on
 " Better copy & paste
 set clipboard=unnamedplus
 set pastetoggle=<F2>
+
+
+let mapleader = " "
 
 
 " Plugins.....
@@ -83,24 +89,30 @@ Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'joshdick/onedark.vim'
-Plug 'ap/vim-css-color' 
 Plug 'itchyny/lightline.vim' 
 Plug 'jiangmiao/auto-pairs'
+Plug 'mattn/emmet-vim'
+Plug 'junegunn/goyo.vim'
+Plug 'vimwiki/vimwiki'  
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'Yggdroot/indentLine'
+Plug 'preservim/tagbar'
+Plug 'prettier/vim-prettier' , { 'do': 'yarn install' }    
+Plug 'tpope/vim-commentary'         			 "gcc cmnt
+
+
+
 Plug 'tpope/vim-surround'	  		         
 Plug 'luochen1990/rainbow'               		"ysw
-Plug 'junegunn/goyo.vim'
+Plug 'ap/vim-css-color' 
+
 Plug 'tpope/vim-commentary'         			"gc cmnt
-Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                          
-Plug 'Yggdroot/indentLine'
-Plug 'vimwiki/vimwiki'  
-Plug 'preservim/tagbar'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
 Plug 'https://github.com/terryma/vim-multiple-cursors'  "CTRL + n multiple cursors
 Plug 'neoclide/coc.nvim', {'branch': 'release'}		     "yarnpkg install
-Plug 'prettier/vim-prettier'                            "yarnpkg install
 
 call plug#end()
 
@@ -108,8 +120,6 @@ call plug#end()
 
 
 " Key Remapping.....
-
-let g:mapleader = "\<Space>"
 
 
 " Goyo keys
@@ -165,9 +175,11 @@ nnoremap <M-l>	:vertical resize +2<CR>
 
 
 " NerdTree
-map <C-n> :NERDTreeToggle <Enter>
+map <C-f> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 "FZF keys
