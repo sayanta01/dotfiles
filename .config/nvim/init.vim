@@ -210,8 +210,7 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-css',
   \ 'coc-lua',
-  \ 'javascript,
-  \ 'typescript,
+  \ 'rome',
   \ 'coc-json',
   \ ]
 
@@ -262,15 +261,7 @@ autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.
 { 
   "suggest.noselect": false,
   "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "javascriptreact",
-    "typescript.tsx",
-    "graphql",
-    "html",
-    "css"
+ 
   ],
   "prettier.tabWidth": 4,
   "prettier.singleQuote": true,
