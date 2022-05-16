@@ -68,6 +68,7 @@ set nowrap
 
 
 " Enable syntax highlighting
+syntax enable
 syntax on
 filetype off
 filetype plugin indent on
