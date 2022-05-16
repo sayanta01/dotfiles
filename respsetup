@@ -1,0 +1,20 @@
+#!/bin/sh
+
+sudo apt update && sudo apt install ffmpeg sxiv fonts-jetbrains-mono \
+neovim fzf ranger ripgrep bat fd-find nodejs nginx yarnpkg \
+ncdu neofetch preload docker.io htop kitty aptitude \
+speedtest-cli exa rsync trash-cli jq \
+zsh-syntax-highlighting zsh-autosuggestions
+
+
+git clone https://github.com/sayanta01/dotfiles ~/Desktop/dotfiles
+cp -r ~/Desktop/dotfiles/.zshrc ~/
+cp -r ~/Desktop/dotfiles/.config/{nvim,kitty,walls} ~/.config
+
+
+sudo cat <<EOF | sudo tee /etc/resolv.conf
+nameserver 1.1.1.1
+nameserver 8.8.8.8
+EOF
+
+
