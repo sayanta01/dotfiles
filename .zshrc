@@ -114,14 +114,12 @@ ex ()
 }
 
 
-eval "$(zoxide init zsh)"
 
 
 alias bat='batcat'
 alias l='exa -al' 
 alias ls='ls --color=auto'
 alias la='lsd'
-alias lsa='ls -al | lolcat' 
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
