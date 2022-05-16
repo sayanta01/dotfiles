@@ -8,7 +8,7 @@ speedtest-cli exa rsync trash-cli jq scrot \
 zsh-syntax-highlighting zsh-autosuggestions
 
 
-cp -r ~/Desktop/dotfiles/.zshrc ~/
+cp -r ~/Desktop/dotfiles/{.zshrc,.fonts,.icons,.themes ~/
 cp -r ~/Desktop/dotfiles/.config/{nvim,kitty,walls} ~/.config
 
 
