@@ -26,6 +26,9 @@ bindkey '^H' backward-kill-word                   # forward del word
 
 WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
+# hide EOL sign ('%')
+PROMPT_EOL_MARK="" 
+
 
 # configure Time format
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
