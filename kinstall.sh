@@ -65,7 +65,7 @@ chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 ########## BSPWM ##########
 
 
-sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl lxappearance scrot libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
+sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl lxappearance maim libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
 
 cp -r ~/Desktop/dotfiles/{.zshrc,.fonts,.xinitrc,.imwheelrc,.icons,.themes} ~/
 cp -r ~/Desktop/dotfiles/.config/* ~/.config
