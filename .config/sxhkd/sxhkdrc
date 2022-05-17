@@ -45,18 +45,18 @@ alt + F8
 # wifi
 alt + F9
       bash ~/.config/scripts/wifi             
-    
+        
 # ss window
 Print
-    scrot ~/Pictures/'%I:%M:%d %b Full.png'
+    maim | tee ~/Pictures/$(date +%I:%M:%d,%a)-Full.png | xclip -selection clip -t image/png | notify-send "Screenshot Taken "
                  
 # ss select   
-shift + Print
-            scrot --select --line mode=edge ~/Pictures/'%I:%M:%d %b Selected.png'
-                         
+shift + Print            
+            maim -s | tee ~/Pictures/$(date +%I:%M:%d,%a)-Sel.png | xclip -selection clip -t image/png | notify-send "Selected Screenshot " 
+
 # ss window
-alt + Print
-          scrot --focused ~/Pictures/'%I:%M:%d %b Window.png' 
+alt + Print 
+	  maim -i $(xdotool getactivewindow) ~/Pictures/$(date +%I:%M:%d,%a)-Win.png | notify-send "Window Screenshot Taken"
 	  
 # notes
 alt + n
