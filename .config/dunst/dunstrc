@@ -43,7 +43,7 @@ close_all = ctrl+shift+space
 history = ctrl+grave
 
 [urgency_low]
-timeout = 1
+timeout = 2
 background = "#2E3440AA"
 foreground = "#D8DEE9"
 
