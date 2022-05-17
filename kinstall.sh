@@ -9,17 +9,16 @@ curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt update && sudo apt install -y cargo && cargo install ttyper
-sudo apt install -y neovim fzf translate-shell \
-ranger zathura ripgrep bat fd-find nodejs yarnpkg \
-tree ncdu slock imwheel fonts-jetbrains-mono \
+sudo apt install -y neovim fzf ranger \
+zathura ripgrep bat fd-find nodejs yarnpkg \
+ncdu slock imwheel fonts-jetbrains-mono \
 feh sxiv ffmpeg aptitude \
-cmatrix fortune font-viewer \
+fortune font-viewer \
 synaptic stacer stress \
 speedtest-cli trash-cli yt-dlp transmission-cli \
 bpytop neofetch preload htop \
-spotify-client \
-android-tools-fastboot scrcpy android-tools-adb nvtop \
-obs-studio audacity gimp blender kdeconnect \
+android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
+obs-studio audacity gimp blender kdeconnect translate-shell \
 telegram-desktop deluge tor torbrowser-launcher snapd docker.io
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree
