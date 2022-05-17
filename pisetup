@@ -1,7 +1,6 @@
 #!/bin/sh
 
-sudo apt update && sudo apt install -y cargo && cargo install ttyper
-sudo apt install -y ffmpeg sxiv fonts-jetbrains-mono tree zsh \
+sudo apt update && sudo apt install -y ffmpeg sxiv fonts-jetbrains-mono tree zsh \
 neovim fzf ranger ripgrep bat fd-find nodejs nginx yarnpkg \
 ncdu neofetch preload docker.io htop kitty aptitude \
 speedtest-cli exa rsync trash-cli jq scrot \
