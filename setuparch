@@ -5,17 +5,17 @@ sudo hwclock --systohc
 
 sudo pacman -Syu && sudo pacman -Sy --noconfirm cargo && cargo install ttyper
 sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-cascadia-code noto-fonts-emoji ttf-joypixels ttf-font-awesome terminus-font \
-linux-firmware linux-headers linux-lts linux-lts-headers linux-firmware \
+linux-firmware linux-headers linux-lts linux-lts-headers \
 thunar thunar-archive-plugin firefox ranger zathura lsd exa bat \
 neovim fzf translate-shell openssh wget curl mate-calc yarn ripgrep nodejs \
 tree ncdu rsync unrar unzip zip p7zip tar \
 dhcpcd networkmanager wireless_tools net-tools dialog cmake \
-feh sxiv ffmpeg imagemagick lolcat \
-cmatrix fortune-mod mpv pipewire pulseaudio pavucontrol \
+feh sxiv ffmpeg imagemagick \
+fortune-mod mpv pipewire pulseaudio pavucontrol \
 speedtest-cli trash-cli yt-dlp transmission-cli axel \
 bpytop neofetch htop \
 intel-ucode virtualbox-guest-utils \
-unclutter zsh-syntax-highlighting zsh-completions jq xdg-user-dirs xorg xclip wmctrl imwheel
+unclutter zsh-syntax-highlighting zsh-completions zsh-autosuggestions jq xdg-user-dirs xorg xclip wmctrl imwheel
 
 sudo systemctl enable vboxservice
 
@@ -23,7 +23,7 @@ sudo systemctl enable vboxservice
 sudo pacman -Sy --noconfim nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
 scrcpy android-tools nvtop stress \
 obs-studio audacity gimp kdeconnect blender discord docker \
-deluge virtualbox telegram-desktop bleachbit \
+deluge telegram-desktop \
 bluez bluez-utils blueman ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
