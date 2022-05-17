@@ -3,7 +3,7 @@
 sudo apt update && sudo apt install -y ffmpeg sxiv fonts-jetbrains-mono tree zsh \
 neovim fzf ranger ripgrep bat fd-find nodejs nginx yarnpkg \
 ncdu neofetch preload docker.io htop kitty aptitude \
-speedtest-cli exa rsync trash-cli jq scrot \
+speedtest-cli exa rsync trash-cli jq maim \
 zsh-syntax-highlighting zsh-autosuggestions
 
 
