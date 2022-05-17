@@ -9,7 +9,7 @@ linux-firmware linux-headers linux-lts linux-lts-headers linux-firmware \
 thunar thunar-archive-plugin firefox ranger zathura lsd exa bat \
 neovim fzf translate-shell openssh wget curl mate-calc yarn ripgrep nodejs \
 tree ncdu rsync unrar unzip zip p7zip tar \
-dhcpcd networkmanager wireless_tools dialog cmake \
+dhcpcd networkmanager wireless_tools net-tools dialog cmake \
 feh sxiv ffmpeg imagemagick lolcat \
 cmatrix fortune-mod mpv pipewire pulseaudio pavucontrol \
 speedtest-cli trash-cli yt-dlp transmission-cli axel \
