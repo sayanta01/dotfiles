@@ -69,7 +69,7 @@ sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl lxappear
 
 cp -r ~/Desktop/dotfiles/{.zshrc,.fonts,.xinitrc,.imwheelrc,.icons,.themes} ~/
 cp -r ~/Desktop/dotfiles/.config/* ~/.config
-chmod +x ~/.config/bspwm/bspwmrc ~/.config/dunst/dunstrc ~/.config/polybar/launch.sh ~/.config/scripts/* 
+chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.config/scripts/* ~/.config/sxiv/exec/key-handler
 
 cd ~/.config/dmenu
 sudo make clean install
