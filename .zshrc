@@ -10,7 +10,7 @@ setopt promptsubst          # enable command substitution in prompt
 
 # Configure key keybindings
 bindkey -v
-bindkey -s '^O' 'ranger^M'
+bindkey -s '^J' 'ranger^M'
 bindkey ' ' magic-space                           # history expansion on space
 bindkey '^[[1;5C' forward-word                    # ctrl + ->
 bindkey '^[[1;5D' backward-word                   # ctrl + <-
@@ -29,6 +29,8 @@ bindkey '^B' backward-char
 bindkey '^F' forward-char
 bindkey '^N' down-line-or-history
 bindkey '^P' up-line-or-history
+bindkey '^O' forward-word
+bindkey '^I' backward-word
 bindkey '^T' transpose-chars
 bindkey '^R' history-incremental-search-backward
 bindkey '^D' exit_zsh
