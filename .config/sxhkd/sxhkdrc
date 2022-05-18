@@ -48,11 +48,11 @@ alt + F9
         
 # screenshot
 Print
-    maim | tee ~/Pictures/$(date +%I:%M:%d,%a)-Ful.png | xclip -selection clip -t image/png | notify-send "Screenshot Taken "
+    maim | tee ~/Pictures/$(date +%I:%M:%d,%a)-Ful.png | xclip -sel c -t image/png | notify-send "Screenshot Taken "
                  
 # ss select   
 shift + Print            
-            maim -s | tee ~/Pictures/$(date +%I:%M:%d,%a)-Sel.png | xclip -selection clip -t image/png | notify-send "Selected Screenshot " 
+            maim -s | tee ~/Pictures/$(date +%I:%M:%d,%a)-Sel.png | xclip -sel c -t image/png | notify-send "Selected Screenshot " 
 
 # ss window
 alt + Print 
