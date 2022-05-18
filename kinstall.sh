@@ -12,7 +12,7 @@ sudo apt update && sudo apt install -y cargo && cargo install ttyper
 sudo apt install -y neovim fzf ranger \
 zathura ripgrep bat fd-find nodejs yarnpkg \
 ncdu slock imwheel fonts-jetbrains-mono \
-feh sxiv ffmpeg aptitude \
+xwallpaper sxiv ffmpeg aptitude \
 fortune font-viewer \
 synaptic stacer stress \
 speedtest-cli trash-cli yt-dlp transmission-cli \
