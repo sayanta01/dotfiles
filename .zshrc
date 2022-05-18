@@ -1,27 +1,37 @@
 setopt autocd               # change directory just by typing its name
-setopt share_history        # Share history among all sessions
-setopt promptsubst          # enable command substitution in prompt
-setopt notify               # report the status of background jobs immediately
+#setopt correct             # auto correct mistakes
 setopt interactivecomments  # allow comments in interactive mode
 setopt magicequalsubst      # enable filename expansion for arguments of the form ‘anything=expression’
 setopt nonomatch            # hide error message if there is no match for the pattern
+setopt notify               # report the status of background jobs immediately
 setopt numericglobsort      # sort filenames numerically when it makes sense
+setopt promptsubst          # enable command substitution in prompt
 
 
 # Configure key keybindings
 bindkey -v
-bindkey -s '^o' 'ranger^M'
+bindkey -s '^O' 'ranger^M'
 bindkey ' ' magic-space                           # history expansion on space
-bindkey '^U' backward-kill-line                   # ctrl + u
-bindkey '^[[3~' delete-char                       # delete
 bindkey '^[[1;5C' forward-word                    # ctrl + ->
 bindkey '^[[1;5D' backward-word                   # ctrl + <-
 bindkey '^[[5~' beginning-of-buffer-or-history    # page up
 bindkey '^[[6~' end-of-buffer-or-history          # page down
 bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
-bindkey '^[[3;5~' kill-word                       # backward del word
+bindkey '^[[3~' delete-char                       # delete
+bindkey '^[[3;5~' kill-word                       # backward del
+bindkey "^A" vi-beginning-of-line
+bindkey '^E' end-of-line
 bindkey '^H' backward-kill-word                   # forward del word 
+bindkey '^U' backward-kill-line                   # ctrl + u
+bindkey '^K' kill-line
+bindkey '^B' backward-char
+bindkey '^F' forward-char
+bindkey '^N' down-line-or-history
+bindkey '^P' up-line-or-history
+bindkey '^T' transpose-chars
+bindkey '^R' history-incremental-search-backward
+bindkey '^D' exit_zsh
 
 
 WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
