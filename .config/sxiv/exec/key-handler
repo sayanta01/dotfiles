@@ -1,1 +1,11 @@
+#!/bin/sh
 
+while read file
+do	
+	case "$1" in
+	"d") mv "$file"	~/.trash ;;
+	"r") convert -rotate 90 "$file" "$file" ;;
+	"c") cat "$file" | xclip -sel c -t image/png ;;
+	"w") xwallpaper --zoom	"$file" ;;
+	esac
+done	
