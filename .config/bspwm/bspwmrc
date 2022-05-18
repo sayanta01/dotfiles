@@ -19,7 +19,7 @@ xsetroot -cursor_name left_ptr &
 ~/.config/polybar/launch.sh &
 sxhkd &
 kdeconnect-indicator &
-feh --bg-scale ~/.config/walls/wallpaper.jpg &
+xwallpaper --zoom ~/.config/walls/wallpaper.jpg &
 dunst &
 xrdb ~/.config/Xresources &
 imwheel -b "4 5" &
