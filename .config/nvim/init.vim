@@ -13,7 +13,6 @@ set laststatus=2
 set showcmd
 set history=200
 set confirm
-set termguicolors
 
 
 " Mouse
@@ -22,6 +21,7 @@ set mouse=a
 
 " Colors
 set t_Co=256
+set termguicolors
 set background=dark
 
 
