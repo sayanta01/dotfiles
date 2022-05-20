@@ -88,11 +88,14 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
+
 Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim' 
+
 Plug 'tpope/vim-surround'	  		         
 Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'               		"ysw
+
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'  
@@ -104,7 +107,10 @@ Plug 'preservim/tagbar'
 Plug 'prettier/vim-prettier' , { 'do': 'yarn install' }    
 Plug 'tpope/vim-commentary'                             "gcc cmnt
 Plug 'terryma/vim-multiple-cursors'                     "C-n multiple cursors
-Plug 'neoclide/coc.nvim', {'branch': 'release'}         "yarn install 
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 Plug 'norcalli/nvim-colorizer.lua'  
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'           
@@ -202,18 +208,18 @@ let g:lightline = {
    \ 'separator': {'left': '', 'right': ''},
    \ 'subseparator': { 'left': '', 'right': '┇'}
    \ }
-   
-   
-" CoC
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-tsserver',
-  \ 'coc-html',
-  \ 'coc-css',
-  \ 'coc-lua',
-  \ 'coc-rome',
-  \ 'coc-json',
-  \ ]
+      
+
+" TreeSitter
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = { "javascript", "json" "bash" "typescript", "python", "c", "lua", "rust" },
+  sync_install = false,
+  
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
 
 
 
@@ -257,15 +263,4 @@ autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.
 
 
 
-
-
-{ 
-  "suggest.noselect": false,
-  "coc.preferences.formatOnSaveFiletypes": [
- 
-  ],
-  "prettier.tabWidth": 4,
-  "prettier.singleQuote": true,
-  "prettier.disableSuccessMessage": true
-}
 
