@@ -13,14 +13,18 @@ set laststatus=2
 set showcmd
 set confirm
 set nobackup
+set nowritebackup
+set ignorecase
+set smartindent
+
+
+
+
 
 
 
 set history=200
 set wildmode=longest,list,full
-set nowritebackup
-set ignorecase
-set smartindent
 set autoindent
 set textwidth=79
 set pastetoggle=<F2>
@@ -28,6 +32,40 @@ syntax enable
 syntax on
 filetype off
 filetype plugin indent on
+
+" save sudo file
+cmap w!! w !sudo tee > /dev/null %
+
+" Indentation
+let g:indentLine_char ="."
+
+colorscheme onedark
+
+" Goyo keys
+map <C-z> :Goyo 200<CR>
+
+" Emmet keys
+let g:user_emmet_mode='n'
+let g:user_emmet_leader_key=','
+
+" NerdTree
+map <C-f> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
+
+nnoremap <C-j> yyp
+nnoremap <C-k> yyP
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -136,24 +174,18 @@ luafile ~/.config/nvim/lua/plug-colorizer.lua
 " Key Remapping.....
 
 
-" Goyo keys
-map <C-z> :Goyo 200<CR>
 
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 
 
-" Emmet keys
-let g:user_emmet_mode='n'
-let g:user_emmet_leader_key=','
+
 
 
 " Move line
 nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
-nnoremap <C-j> yyp
-nnoremap <C-k> yyP
 
 
 " Easy CAPS
@@ -188,10 +220,6 @@ nnoremap <M-h>	:vertical resize -2<CR>
 nnoremap <M-l>	:vertical resize +2<CR>
 
 
-" NerdTree
-map <C-f> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -235,19 +263,13 @@ require'nvim-treesitter.configs'.setup {
 
 " General Settings.....
 
-" save sudo file
-cmap w!! w !sudo tee > /dev/null %
 
-
-" Indentation
-let g:indentLine_char ="."
 
 
 " Restore last line position when opening file
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 
-colorscheme onedark
 
 
 let g:prettier#autoformat = 0
