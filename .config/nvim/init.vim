@@ -12,12 +12,12 @@ set scrolloff=6
 set laststatus=2
 set showcmd
 set confirm
+set nobackup
 
 
 
 set history=200
 set wildmode=longest,list,full
-set nobackup
 set nowritebackup
 set ignorecase
 set smartindent
