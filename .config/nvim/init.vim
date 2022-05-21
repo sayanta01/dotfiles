@@ -11,8 +11,25 @@ set hidden
 set scrolloff=6
 set laststatus=2
 set showcmd
-set history=200
 set confirm
+
+
+
+set history=200
+set wildmode=longest,list,full
+set nobackup
+set nowritebackup
+set ignorecase
+set smartindent
+set autoindent
+set textwidth=79
+set pastetoggle=<F2>
+syntax enable
+syntax on
+filetype off
+filetype plugin indent on
+
+
 
 
 " Mouse
@@ -26,35 +43,31 @@ set background=dark
 
 
 " Complition
-set wildmode=longest,list,full
 set wildmenu
 set spell
 
 
 " Disable stupid backup and swap 
-set nobackup
-set nowritebackup
+
 set noswapfile
 
 
 " Make search case insensitive
 set hlsearch
-set ignorecase smartcase
+ smartcase
 set incsearch
 set showmatch
 set nohlsearch
 
 
 " Indentation
-set smartindent
-set autoindent
+
 
 
 " TABs
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=79
 set expandtab
 set showtabline=2
 
@@ -68,15 +81,11 @@ set nowrap
 
 
 " Enable syntax highlighting
-syntax enable
-syntax on
-filetype off
-filetype plugin indent on
+
 
 
 " Better copy & paste
 set clipboard=unnamedplus
-set pastetoggle=<F2>
 
 
 let mapleader = " "
