@@ -5,7 +5,7 @@ configuration {
 @theme "/dev/null"
 
 * {
-  font:                 "jetbrainsmono semibold  12";
+  font:                 "JetbrainsMonoMedium Nerd Font 12";
   background:           #000;
   foreground:           #fff;
   background-alt:       #617BE3;
@@ -14,7 +14,7 @@ configuration {
   highlight:	        #fff;
   background-color:     @background;
   
-  border-radius:    6px;
+  border-radius:    4px;
   padding:          4;
   spacing:          4;
 }
