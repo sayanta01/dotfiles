@@ -21,6 +21,10 @@ android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
 obs-studio audacity gimp blender kdeconnect translate-shell \
 telegram-desktop deluge tor torbrowser-launcher snapd docker.io
 
+#build neovim
+sudo apt install -y ninja-build gettext libtool libtool-bin cmake pkg-config doxygen
+
+
 sudo apt purge -y --auto-remove onboard xterm cherrytree
 
 #
