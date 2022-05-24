@@ -1,46 +1,53 @@
 configuration {
-  display-drun:         " >    ";
+  display-drun: " ";
 }
 
 @theme "/dev/null"
 
 * {
-  font:                 "JetbrainsMonoMedium Nerd Font 12";
+  font:                 "BlexMono Nerd Font Medium 11";
   background:           #000;
-  foreground:           #fff;
-  background-alt:       #617BE3;
+  foreground:           #FFF;
+  background-alt:       #282C34;
   text-color:           #777;
   foreground-alt:       #787c99;
-  highlight:	        #fff;
+  highlight:	        #FFF;
   background-color:     @background;
   
-  border-radius:    4px;
-  padding:          4;
-  spacing:          4;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
 }
 
 
 window {
-  width:    22%;
-  border:   9;
+  width:    26%;
+  border:   0;
+}
+
+element {
+  padding: 8 9;
+  text-color: @fg-alt;
 }
 
 element selected {
-  text-color: #8be9fd;
+  text-color: #F8F8F2;
 }
 
 element-text {
   text-color: inherit;
+  padding: 4;
 }
 
 element-icon {
-  size: 30;
+  size: 26;
 }
 
 entry {
   background-color: @background-alt;
   padding: 12;
-  text-color: #000;
+  text-color: #D6D6D0;
 }
 
 inputbar {
@@ -54,6 +61,7 @@ listview {
 
 prompt {
   background-color: @background-alt;
-  enabled: false;
+  enabled: true;
+  padding: 12 6 0 2;
 }
 
