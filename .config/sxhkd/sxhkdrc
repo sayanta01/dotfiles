@@ -27,11 +27,11 @@ alt + F6
        playerctl previous   
     
 # play, pause   
-alt + F7
+super + F7
        playerctl play-pause
   
 # spotify play pause
-super + F7
+alt + F7
         dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 # classic music
