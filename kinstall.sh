@@ -9,7 +9,7 @@ curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt update && sudo apt install -y cargo && cargo install ttyper
-sudo apt install -y neovim fzf ranger \
+sudo apt install -y fzf ranger \
 zathura ripgrep bat fd-find nodejs yarnpkg \
 ncdu slock imwheel fonts-jetbrains-mono \
 xwallpaper sxiv ffmpeg aptitude \
@@ -21,8 +21,11 @@ android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
 obs-studio audacity gimp blender kdeconnect translate-shell \
 telegram-desktop deluge tor torbrowser-launcher snapd docker.io
 
-#build neovim
+
+# Build Neovim
 sudo apt install -y ninja-build gettext libtool libtool-bin cmake pkg-config doxygen
+git clone https://github.com/neovim/neovim.git ~/.config/neovim && cd ~/.config/neovim
+make -j4 && sudo make install
 
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree
