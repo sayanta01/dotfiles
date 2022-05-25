@@ -22,6 +22,7 @@ bindkey '^[[6~' end-of-buffer-or-history          # page down
 bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
 bindkey '^[[Z' undo                               # shift + Tab undo last action
+bindkey '^K' kill-line
 
 #bindkey "^A" vi-beginning-of-line
 #bindkey '^E' end-of-line
