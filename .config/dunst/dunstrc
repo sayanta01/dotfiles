@@ -1,59 +1,83 @@
 [global]
-monitor = 0
-follow = mouse
-geometry = "300x50-9+38"
-scale = 0
-notification_limit = 0
-indicate_hidden = yes
-separator_height = 2
-padding = 20
-horizontal_padding = 9
-frame_width = 1
-frame_color = "#abb2bf"
-separator_color = auto
-sort = yes
-font = jetbrains mono bold 11
-line_height = 2
-markup = full
-format = "<b>%s</b>\n%b"
-alignment = center
-show_age_threshold = 60
-ignore_newline = no
-stack_duplicates = true
-hide_duplicate_count = false
-show_indicators = no
-icon_position = left
-max_icon_size = 50
-sticky_history = yes
-history_length = 9
-browser = x-www-browser -new-tab
-always_run_script = true
-title = Dunst
-class = Dunst
-corner_radius = 2
-shrink = no
-idle_threshold = 120
-word_wrap = yes
-icon_path = false
+    monitor = 0
+    follow = mouse
+    geometry = "300x50-9+38"
+    #origin = top-left
+    scale = 0
+    notification_limit = 0
+    indicate_hidden = yes
+    #transparency = 0
+    separator_height = 2
+    padding = 9
+    horizontal_padding = 8
+    frame_width = 1
+    frame_color = "#ABB2BF"
+    separator_color = frame
+    sort = yes
+    font = BlexMono Nerd Font Italic 11
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = center
+    show_age_threshold = 60
+    icon_position = left
+    min_icon_size = 40
+    max_icon_size = 50
+    sticky_history = yes
+    history_length = 9
+    browser = x-www-browser
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    corner_radius = 2
+    #shrink = no
+    idle_threshold = 90
+    icon_path = false
+    #text_icon_padding = 0
+    progress_bar = false
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    gap_size = 0
+    ignore_dbusclose = false    
+    vertical_alignment = center
+    ellipsize = middle
+
+
+    ### Wayland ###
+    # Uncomment this if you want to let notications appear under fullscreen
+    # applications (default: overlay)
+    # layer = top
+    # Set this to true to use X11 output on Wayland.
+    # force_xwayland = false
+    # force_xinerama = false
 
 
 [shortcuts]
-close = ctrl+shift+space
-close_all = ctrl+shift+space
-history = ctrl+grave
+   #close = ctrl+shift+space
+   close_all = ctrl+shift+space
+   history = ctrl+grave
+   mouse_left_click = close_current
+   mouse_right_click = close_all
+
+[experimental]
+    per_monitor_dpi = false
 
 [urgency_low]
-timeout = 2
-background = "#2E3440AA"
-foreground = "#D8DEE9"
+    background = "#222222"
+    foreground = "#888888"
+    timeout = 2
 
 [urgency_normal]
-timeout = 3
-background = "#2E3440AA"
-foreground = "#D8DEE9"
+    background = "#282c34"
+    foreground = "#D8DEE9"
+    timeout = 4
 
 [urgency_critical]
-timeout = 2
-background = "#2F3440AA"
-foreground = "#BF616A"
-
+    background = "#900000"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
+    timeout = 6
+    
+    
