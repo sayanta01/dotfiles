@@ -8,36 +8,36 @@ setopt numericglobsort      # sort filenames numerically when it makes sense
 setopt promptsubst          # enable command substitution in prompt
 
 
-# Configure key keybindings
-bindkey -v
-bindkey -s '^G' 'ranger^M'
+# configure key keybindings
+bindkey -v                                        # emacs key bindings
+bindkey -s '^o' 'ranger^M'
 bindkey ' ' magic-space                           # history expansion on space
+bindkey '^U' backward-kill-line                   # ctrl + u
+bindkey '^[[3;5~' kill-word                       # backward del
+bindkey '^[[3~' delete-char                       # delete
 bindkey '^[[1;5C' forward-word                    # ctrl + ->
 bindkey '^[[1;5D' backward-word                   # ctrl + <-
 bindkey '^[[5~' beginning-of-buffer-or-history    # page up
 bindkey '^[[6~' end-of-buffer-or-history          # page down
 bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
-bindkey '^[[3~' delete-char                       # delete
-bindkey '^[[3;5~' kill-word                       # backward del
-bindkey "^A" vi-beginning-of-line
-bindkey '^E' end-of-line
-bindkey '^H' backward-kill-word                   # forward del word 
-bindkey '^U' backward-kill-line                   # ctrl + u
-bindkey '^K' kill-line
-bindkey '^B' backward-char
-bindkey '^F' forward-char
-bindkey '^N' down-line-or-history
-bindkey '^P' up-line-or-history
-bindkey '^O' forward-word
-bindkey '^J' backward-word
-bindkey '^I' expand-or-complete
-bindkey '^T' transpose-chars
-bindkey '^R' history-incremental-search-backward
-bindkey '^D' exit_zsh
+bindkey '^[[Z' undo                               # shift + Tab undo last action
 
+#bindkey "^A" vi-beginning-of-line
+#bindkey '^E' end-of-line
+#bindkey '^H' backward-kill-word                   # forward del word 
+#bindkey '^K' kill-line
+#bindkey '^B' backward-char
+#bindkey '^F' forward-char
+#bindkey '^N' down-line-or-history
+#bindkey '^P' up-line-or-history
+#bindkey '^O' forward-word
+#bindkey '^J' backward-word
+#bindkey '^I' expand-or-complete
+#bindkey '^T' transpose-chars
+#bindkey '^R' history-incremental-search-backward
+#bindkey '^D' exit_zsh
 
-WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
 # hide EOL sign ('%')
 PROMPT_EOL_MARK="" 
@@ -87,10 +87,6 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 +vi-git-untracked(){
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
         git status --porcelain | grep '??' &> /dev/null ; then
-        # This will show the marker if there are any untracked files in repo.
-        # If instead you want to show the marker only if there are untracked
-        # files in $PWD, use:
-        #[[ -n $(git ls-files --others --exclude-standard) ]] ; then
         hook_com[staged]+='!' # signify new files with a bang
     fi
 }
@@ -155,7 +151,6 @@ alias upgrade='sudo apt -y full-upgrade'
 alias clean='sudo apt -y autoremove; sudo apt clean'
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
 
-alias zshrc='vim ~/.zshrc'
 alias h='history'
 alias rr='curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
