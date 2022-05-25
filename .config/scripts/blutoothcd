@@ -10,3 +10,6 @@ else
         notify-send "Disconnecting from Dizo"
         bluetoothctl disconnect $dizo
 fi
+done
+
+bash ~/.config/scripts/audioswitch
