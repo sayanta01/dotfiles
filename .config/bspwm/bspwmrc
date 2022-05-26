@@ -23,4 +23,4 @@ kdeconnect-indicator &
 xwallpaper --zoom ~/.config/walls/wallpaper.jpg &
 dunst &
 xrdb ~/.config/.Xresources &
-imwheel -b "4 5" &
+imwheel &
