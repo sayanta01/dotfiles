@@ -9,7 +9,7 @@ setopt promptsubst          # enable command substitution in prompt
 
 
 # configure key keybindings
-bindkey -v                                        # emacs key bindings
+bindkey -e                                        # emacs key bindings
 bindkey -s '^o' 'ranger^M'
 bindkey ' ' magic-space                           # history expansion on space
 bindkey '^U' backward-kill-line                   # ctrl + u
