@@ -29,6 +29,7 @@ typeset -g ZSH_FZF_HISTORY_SEARCH_DATES_IN_SEARCH=1
 (( ! ${+ZSH_FZF_HISTORY_SEARCH_REMOVE_DUPLICATES} )) &&
 typeset -g ZSH_FZF_HISTORY_SEARCH_REMOVE_DUPLICATES=''
 
+
 fzf_history_search() {
   setopt extendedglob
 
@@ -70,6 +71,7 @@ fzf_history_search() {
   zle reset-prompt
   return $ret
 }
+
 
 autoload fzf_history_search
 zle -N fzf_history_search
