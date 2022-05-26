@@ -12,4 +12,4 @@ else
 fi
 done
 
-bash ~/.config/scripts/audioswitch
+exec ~/.config/scripts/audioswitch
