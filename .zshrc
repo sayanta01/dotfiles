@@ -72,6 +72,7 @@ setopt hist_ignore_all_dups    # ignore duplicated commands history list
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
 source /etc/zsh_command_not_found 2>/dev/null
+source ~/.config/zsh/zsh-fzf-history-search/zsh-fzf-search.zsh
 
 # Arch PATH
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
