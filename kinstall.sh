@@ -13,7 +13,7 @@ sudo apt install -y fzf ranger \
 zathura ripgrep bat fd-find nodejs yarnpkg \
 ncdu slock imwheel fonts-jetbrains-mono \
 xwallpaper sxiv ffmpeg aptitude \
-fortune font-viewer \
+fortune font-viewer exiftool \
 synaptic stacer stress \
 speedtest-cli trash-cli yt-dlp transmission-cli \
 bpytop neofetch preload htop \
