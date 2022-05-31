@@ -41,7 +41,7 @@ bindkey '^K' kill-line
 
 
 # hide EOL sign ('%')
-PROMPT_EOL_MARK="" 
+#PROMPT_EOL_MARK="" 
 
 
 # configure Time format
@@ -72,7 +72,7 @@ setopt hist_ignore_all_dups    # ignore duplicated commands history list
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
 source /etc/zsh_command_not_found 2>/dev/null
-source ~/.config/zsh/zsh-fzf-history-search/zsh-fzf-search.zsh
+source ~/.config/zsh/zsh-fzf-history-search/zsh-fzf-search.zsh 2>/dev/null
 
 # Arch PATH
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
@@ -89,7 +89,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 +vi-git-untracked(){
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
         git status --porcelain | grep '??' &> /dev/null ; then
-        hook_com[staged]+='!' # signify new files with a bang
+        hook_com[staged]+='!' 
     fi
 }
 
@@ -134,7 +134,7 @@ alias bat='batcat'
 alias l='exa -al' 
 alias ls='ls --color=auto'
 alias la='lsd'
-alias l.='exa -a | egrep "^\."
+alias l.='exa -a | egrep "^\."'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -154,7 +154,6 @@ alias upgrade='sudo apt -y full-upgrade'
 alias clean='sudo apt -y autoremove; sudo apt clean'
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
 
-alias h='history'
 alias rr='curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 alias free='free -h'
@@ -180,18 +179,19 @@ export PATH=$PATH:/snap/bin
 
 
 # Arch
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay > /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score > /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age > /etc/pacman.d/mirrorlist"
-
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
 alias pacsyyu='sudo pacman -Syyu'                # refresh pkglist & update standard pkgs
 alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and yay pkgs
 alias yaysua='yay -Sua --noconfirm'              # update only yay pkgs
 
-alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 alias cleanaur='sudo pacman -Sc --noconfirm'
 
+
+alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
+
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay > /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score > /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age > /etc/pacman.d/mirrorlist"
 
