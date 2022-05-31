@@ -131,6 +131,7 @@ ex ()
 
 
 alias bat='batcat'
+
 alias l='exa -al' 
 alias ls='ls --color=auto'
 alias la='lsd'
@@ -186,9 +187,8 @@ alias yaysua='yay -Sua --noconfirm'              # update only yay pkgs
 
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 alias cleanaur='sudo pacman -Sc --noconfirm'
-
-
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
+
 
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 50 --number 20 --sort delay > /etc/pacman.d/mirrorlist"
