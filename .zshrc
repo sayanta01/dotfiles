@@ -50,10 +50,8 @@ TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 # enable Completion features
 autoload -Uz compinit && compinit
-
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files
-
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-prompt %S TAB for more
 zstyle ':completion:*' verbose true
@@ -81,7 +79,6 @@ source ~/.config/zsh/zsh-fzf-history-search/zsh-fzf-search.zsh 2>/dev/null
 
 # Prompt
 autoload -Uz vcs_info colors && colors
-
 precmd() { vcs_info }
 setopt prompt_subst
 
@@ -126,8 +123,6 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
-
 
 
 alias bat='batcat'
