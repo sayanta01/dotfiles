@@ -18,9 +18,9 @@ bspc rule -a Zathura state=tiled
 #Autostart
 xsetroot -cursor_name left_ptr &
 ~/.config/polybar/launch.sh &
+imwheel &
 sxhkd &
 kdeconnect-indicator &
 xwallpaper --zoom ~/.config/walls/wallpaper.jpg &
 dunst &
 xrdb ~/.config/.Xresources &
-imwheel &
