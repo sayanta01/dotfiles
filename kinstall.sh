@@ -96,7 +96,6 @@ sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
 xdg-mime default sxiv.desktop image/jpeg
 xdg-mime default sxiv.desktop image/jpg
 xdg-mime default sxiv.desktop image/png
-xdg-mime default sxiv.desktop image/gif
 xdg-mime default inkscape.desktop image/svg+xml
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
