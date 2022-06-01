@@ -74,16 +74,13 @@ chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
 
 ########## BSPWM ##########
-
-
 sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl lxappearance maim libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
 
 cp -r ~/Desktop/dotfiles/{.zshrc,.fonts,.xinitrc,.imwheelrc,.icons,.themes} ~/
 cp -r ~/Desktop/dotfiles/.config/* ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.config/scripts/* ~/.config/sxiv/exec/key-handler
 
-cd ~/.config/dmenu
-sudo make clean install
+cd ~/.config/dmenu && sudo make clean install
 
 sudo cp -r ~/.icons/MineKali/cursors /usr/share/icons/Adwaita 
 sudo cp -r ~/.icons/MineKali /usr/share/icons
@@ -93,6 +90,15 @@ sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/*
 sudo cp -r ~/.icons/MineKali/* /usr/share/icons/Flat-Remix-Blue-Dark
 sudo rm -rf /usr/share/themes/Kali-Dark/*
 sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
+
+#xdg-mime query filetype (file)  #check filetype
+#xdg-mime query default (file/type)  #check default app of filetype
+xdg-mime default sxiv.desktop image/jpeg
+xdg-mime default sxiv.desktop image/jpg
+xdg-mime default sxiv.desktop image/png
+xdg-mime default sxiv.desktop image/gif
+xdg-mime default inkscape.desktop image/svg+xml
+xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 
 # sudo vim /etc/hosts                       blk sites
