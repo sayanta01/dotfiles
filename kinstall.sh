@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
-#
+
 yes '
 ' | sudo apt full-upgrade
 
