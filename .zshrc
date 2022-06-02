@@ -176,10 +176,10 @@ alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
 
 
 # Snap alias
-alias senable='sudo systemctl enable --now snapd apparmor'
-alias sinstall='sudo snap install lsd discord mari0 cointop slack'
-alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
-export PATH=$PATH:/snap/bin
+#alias senable='sudo systemctl enable --now snapd apparmor'
+#alias sinstall='sudo snap install mari0 cointop'
+#alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
+#export PATH=$PATH:/snap/bin
 
 
 # Arch
