@@ -129,7 +129,7 @@ alias bat='batcat'
 
 alias l='exa -al' 
 alias ls='ls --color=auto'
-alias la='lsd'
+alias la='~/.cargo/bin/lsd'
 alias l.='exa -a | egrep "^\."'
 
 alias grep='grep --color=auto'
