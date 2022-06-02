@@ -61,6 +61,10 @@ alt + Print
 # notes
 alt + n
       open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
+
+# pywal
+alt + o
+      wal -qi ~/.config/walls
       
 # notion
 ctrl + alt + n
@@ -71,7 +75,7 @@ ctrl + alt + p
              bash ~/.config/scripts/wallch
 	     
 # kill ps
-ctrl + shift + Escape
+ctrl + alt + Delete
                     bash ~/.config/scripts/kill
 		    
 # 0x0
