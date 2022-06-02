@@ -21,12 +21,10 @@ android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
 obs-studio audacity gimp blender kdeconnect translate-shell \
 telegram-desktop deluge tor torbrowser-launcher docker.io #snapd
 
-
 # Build Neovim
 sudo apt install -y ninja-build gettext libtool libtool-bin cmake pkg-config doxygen
 git clone https://github.com/neovim/neovim.git ~/.config/neovim && cd ~/.config/neovim
 make -j4 && sudo make install
-
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree
 
