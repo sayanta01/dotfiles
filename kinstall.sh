@@ -39,8 +39,9 @@ sudo systemctl enable fstrim.timer
 
 sudo apt install -y nvidia-driver nvidia-cuda-toolkit
 
-wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/Documents/vscode.deb
-cd ~/Documents && chmod +x vscode.deb && sudo dpkg -i vscode.deb 
+wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/Downloads/vscode.deb
+wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/Downloads/discord.deb
+cd ~/Downloads && chmod +x vscode.deb discord.deb && sudo dpkg -i vscode.deb discord.deb
 
 git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock && make && sudo make install
 touch ~/.local/share/applications/spotify-adblock.desktop
