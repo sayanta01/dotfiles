@@ -125,11 +125,16 @@ ex ()
 }
 
 
+#PATHs
+export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/.local/bin
+
+
 alias bat='batcat'
 
 alias l='exa -al' 
 alias ls='ls --color=auto'
-alias la='~/.cargo/bin/lsd'
+alias la='lsd'
 alias l.='exa -a | egrep "^\."'
 
 alias grep='grep --color=auto'
@@ -164,7 +169,7 @@ alias free='free -h'
 alias df='df -h'
 alias shred='shred -uvzn3'
 
-alias typer='~/.cargo/bin/ttyper'
+alias typer='ttyper'
 alias vim='nvim'
 alias ytdl='yt-dlp -f 137+140'
 alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
