@@ -18,7 +18,7 @@ bspc rule -a Zathura state=tiled
 xsetroot -cursor_name left_ptr &
 ~/.config/polybar/launch.sh &
 killall "imwheel" &
-imwheel &
+imwheel -b "4 5" &
 killall "sxhkd" &
 sxhkd &
 kdeconnect-indicator &
