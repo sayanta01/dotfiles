@@ -1,7 +1,6 @@
 configuration {
     display-drun: "";
 } 
-
 * {
     font:                           "BlexMono Nerd Font Medium Italic 11";
     foreground:                     #A7B5CD;
@@ -44,7 +43,6 @@ listview {
     scrollbar:    false;
     padding:      0px 0px 0px ;
 }
-
 
 element {
     border:       0;
@@ -97,7 +95,6 @@ element-icon {
     cursor:           inherit;
     text-color:       inherit;
 }
-
 
 entry {
     spacing:    0px;
