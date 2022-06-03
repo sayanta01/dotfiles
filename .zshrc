@@ -173,12 +173,6 @@ alias sysctlfail='systemctl --failed'
 alias jctl='sudo journalctl -p 3 -xb'
 alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
 
-# Snap alias
-#alias senable='sudo systemctl enable --now snapd apparmor'
-#alias sinstall='sudo snap install mari0 cointop'
-#alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
-#export PATH=$PATH:/snap/bin
-
 # Arch
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
 alias pacsyyu='sudo pacman -Syyu'                # refresh pkglist & update standard pkgs
@@ -190,8 +184,9 @@ alias cleanaur='sudo pacman -Sc --noconfirm'
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 
 
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay > /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score > /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age > /etc/pacman.d/mirrorlist"
+# Snap alias
+#alias senable='sudo systemctl enable --now snapd apparmor'
+#alias sinstall='sudo snap install mari0 cointop'
+#alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
+#export PATH=$PATH:/snap/bin
 
