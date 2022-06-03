@@ -88,6 +88,15 @@ zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]
 
 PROMPT=' %B%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[white]%}  %{$fg[red]%})%{$fg[white]%} ${vcs_info_msg_0_} ~%  '
 
+#PATHs
+export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.local/bin
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+ --color=fg:#d6d6d6,bg:#030303,hl:#5f87af
+ --color=fg+:#e8e8e8,bg+:#141414,hl+:#3bceff
+ --color=info:#afaf87,prompt:#d7005f,pointer:#b061ff
+ --color=marker:#87ff00,spinner:#972eff,header:#87afaf'
+ 
 
 # Alias
 ex ()
@@ -114,16 +123,6 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
-
-#PATHs
-export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/.local/bin
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
- --color=fg:#d6d6d6,bg:#030303,hl:#5f87af
- --color=fg+:#e8e8e8,bg+:#141414,hl+:#3bceff
- --color=info:#afaf87,prompt:#d7005f,pointer:#b061ff
- --color=marker:#87ff00,spinner:#972eff,header:#87afaf'
 
 alias bat='batcat'
 
