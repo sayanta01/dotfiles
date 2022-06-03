@@ -8,9 +8,9 @@ yes '
 curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
-sudo apt update && sudo apt install -y cargo && cargo install ttyper lsd
+sudo apt update && sudo apt install -y cargo && cargo install ttyper lsd bat
 sudo apt install -y fzf ranger \
-zathura ripgrep bat fd-find nodejs yarnpkg \
+zathura ripgrep fd-find nodejs yarnpkg \
 ncdu slock imwheel fonts-jetbrains-mono \
 xwallpaper sxiv ffmpeg aptitude \
 fortune font-viewer exiftool inkscape \
