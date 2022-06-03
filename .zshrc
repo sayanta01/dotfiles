@@ -7,7 +7,6 @@ setopt notify               # report the status of background jobs immediately
 setopt numericglobsort      # sort filenames numerically when it makes sense
 setopt promptsubst          # enable command substitution in prompt
 
-
 # configure key keybindings
 bindkey -e                                        # emacs key bindings
 bindkey -s '^o' 'ranger^M'
@@ -39,14 +38,11 @@ bindkey '^K' kill-line
 #bindkey '^R' history-incremental-search-backward
 #bindkey '^D' exit_zsh
 
-
 # hide EOL sign ('%')
 #PROMPT_EOL_MARK="" 
 
-
 # configure Time format
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
-
 
 # enable Completion features
 autoload -Uz compinit && compinit
@@ -57,14 +53,12 @@ zstyle ':completion:*' list-prompt %S TAB for more
 zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-
 # History configurations
 HISTSIZE=2000
 SAVEHIST=2000
 HISTFILE=~/.zsh_history
 setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_all_dups    # ignore duplicated commands history list
-
 
 # Plugins
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
@@ -75,7 +69,6 @@ source ~/.config/zsh/zsh-fzf-history-search.zsh 2>/dev/null
 # Arch PATH
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null
-
 
 # Prompt
 autoload -Uz vcs_info colors && colors
@@ -94,8 +87,6 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})"
 
 PROMPT=' %B%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[white]%}  %{$fg[red]%})%{$fg[white]%} ${vcs_info_msg_0_} ~%  '
-
-
 
 
 # Alias
@@ -133,7 +124,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
  --color=fg+:#e8e8e8,bg+:#141414,hl+:#3bceff
  --color=info:#afaf87,prompt:#d7005f,pointer:#b061ff
  --color=marker:#87ff00,spinner:#972eff,header:#87afaf'
-
 
 alias bat='batcat'
 
@@ -185,13 +175,11 @@ alias sysctlfail='systemctl --failed'
 alias jctl='sudo journalctl -p 3 -xb'
 alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
 
-
 # Snap alias
 #alias senable='sudo systemctl enable --now snapd apparmor'
 #alias sinstall='sudo snap install mari0 cointop'
 #alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
 #export PATH=$PATH:/snap/bin
-
 
 # Arch
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
