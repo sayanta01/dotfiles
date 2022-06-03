@@ -124,7 +124,6 @@ ex ()
   fi
 }
 
-alias bat='batcat'
 
 alias l='exa -al' 
 alias ls='ls --color=auto'
