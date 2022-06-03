@@ -1,5 +1,5 @@
-setopt autocd               # change directory just by typing its name
-#setopt correct             # auto correct mistakes
+#setopt autocd               # change directory just by typing its name
+#setopt correct              # auto correct mistakes
 setopt interactivecomments  # allow comments in interactive mode
 setopt magicequalsubst      # enable filename expansion for arguments of the form ‘anything=expression’
 setopt nonomatch            # hide error message if there is no match for the pattern
@@ -128,6 +128,11 @@ ex ()
 #PATHs
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/bin
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+ --color=fg:#d6d6d6,bg:#030303,hl:#5f87af
+ --color=fg+:#e8e8e8,bg+:#141414,hl+:#3bceff
+ --color=info:#afaf87,prompt:#d7005f,pointer:#b061ff
+ --color=marker:#87ff00,spinner:#972eff,header:#87afaf'
 
 
 alias bat='batcat'
