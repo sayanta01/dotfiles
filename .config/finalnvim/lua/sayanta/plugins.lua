@@ -37,7 +37,8 @@ return packer.startup(function(use)
   use "navarasu/onedark.nvim"
   use "lewis6991/impatient.nvim"
   use "goolord/alpha-nvim"
-  
+  use "numToStr/Comment.nvim" -- Easily comment stuff
+
 --  use "nvim-telescope/telescope.nvim"
   
 --  use "folke/which-key.nvim"
@@ -45,7 +46,6 @@ return packer.startup(function(use)
 --  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 --  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 --  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
---  use "numToStr/Comment.nvim" -- Easily comment stuff
 --  use "norcalli/nvim-colorizer.lua"
 --  use "lukas-reineke/indent-blankline.nvim"
 --  use "akinsho/bufferline.nvim"
