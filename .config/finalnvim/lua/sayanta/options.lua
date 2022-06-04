@@ -30,12 +30,10 @@ opt.termguicolors = true
 opt.cul = true -- cursor line
 opt.signcolumn = "yes"
 
-
 -- Tabs
 opt.expandtab = true
 opt.shiftwidth = 2
 opt.tabstop = 4
-
 
 -- Search
 --opt.hlsearch = true
@@ -49,7 +47,6 @@ opt.smartindent = true
 opt.number = true
 opt.scrolloff = 6
 opt.sidescrolloff = 8
-
 
 -- disable some builtin vim plugins
 local default_plugins = {
@@ -88,3 +85,4 @@ vim.schedule(function()
    vim.opt.shadafile = vim.fn.expand "$HOME" .. "/.local/share/nvim/shada/main.shada"
    vim.cmd [[ silent! rsh ]]
 end)
+
