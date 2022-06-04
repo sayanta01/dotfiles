@@ -17,6 +17,7 @@ opt.backup = false
 --opt.guifont = "monospace:h17",               -- font used in graphical neovim applications
 --opt.cmdheight = 2
 --opt.showtabline = 2
+--opt.confirm = true
 --opt.pumheight = 9
 --opt.showmode = false
 --opt.completeopt = { "menuone", "noselect" }
