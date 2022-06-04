@@ -59,8 +59,6 @@ FONT=ter-c20b.psf.gz
 EOF
 
 
-
-
 ########## BSPWM ##########
 sudo pacman -Sy --noconfirm bspwm sxhkd dmenu rofi kitty slock dunst playerctl lxappearance maim alsa-utils dbus-python
 yay -Sy --noconfirm polybar preload
