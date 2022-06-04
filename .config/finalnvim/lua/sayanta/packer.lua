@@ -14,7 +14,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
-
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
   augroup packer_user_config
@@ -23,24 +22,20 @@ vim.cmd [[
   augroup end
 ]]
 
-
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   return
 end
 
-
--- Install your plugins here
+-- Plugins
 return packer.startup(function(use)
-
-  -- My plugins here
   use "wbthomason/packer.nvim" 
---  use "lewis6991/impatient.nvim"
   use 'tamton-aquib/staline.nvim'
   use "kyazdani42/nvim-web-devicons"
---  use "navarasu/onedark.nvim"
   use "kyazdani42/nvim-tree.lua"  
+--  use "navarasu/onedark.nvim"
+--  use "lewis6991/impatient.nvim"
   
 --  use "nvim-telescope/telescope.nvim"
   
@@ -56,7 +51,6 @@ return packer.startup(function(use)
   
 --  use "moll/vim-bbye"
 --  use "akinsho/toggleterm.nvim"
-
 
   -- cmp plugins
 --  use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -89,5 +83,3 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
-
-
