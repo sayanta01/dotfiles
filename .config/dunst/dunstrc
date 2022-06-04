@@ -30,7 +30,7 @@
     title = Dunst
     class = Dunst
     corner_radius = 2
-    #shrink = no
+    shrink = no
     idle_threshold = 90
     icon_path = false
     #text_icon_padding = 0
