@@ -126,9 +126,10 @@ ex ()
 
 
 alias l='exa -al' 
+alias l.='exa -a | egrep "^\."'
 alias ls='ls --color=auto'
 alias la='lsd'
-alias l.='exa -a | egrep "^\."'
+alias lsn='ls | wc -l'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
