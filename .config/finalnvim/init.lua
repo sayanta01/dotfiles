@@ -5,5 +5,6 @@ require "options"
 vim.cmd "colorscheme onedark"
 
 require "plugins"
+require "plugins.cmp"
 require "plugins.staline"
 require "plugins.nvim-tree"
