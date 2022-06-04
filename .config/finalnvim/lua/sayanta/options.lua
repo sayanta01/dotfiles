@@ -6,6 +6,7 @@ local g = vim.g
 --opt.writebackup = false
 --opt.lazyredraw = true
 --opt.swapfile = false
+--opt.conceallevel = 0 
 opt.hidden = true
 opt.undofile = true
 opt.timeoutlen = 99
