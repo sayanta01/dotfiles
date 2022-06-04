@@ -35,7 +35,7 @@ end
 return packer.startup(function(use)
 
   -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
+  use "wbthomason/packer.nvim" 
 --  use "lewis6991/impatient.nvim"
   use 'tamton-aquib/staline.nvim'
   use "kyazdani42/nvim-web-devicons"
