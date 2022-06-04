@@ -19,7 +19,7 @@ speedtest-cli trash-cli yt-dlp transmission-cli \
 bpytop neofetch preload htop \
 android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
 obs-studio audacity gimp blender kdeconnect translate-shell \
-telegram-desktop deluge tor torbrowser-launcher docker.io #snapd
+telegram-desktop deluge tor torbrowser-launcher docker.io  #snapd apt-transport-https
 
 # Build Neovim
 sudo apt install -y ninja-build gettext libtool libtool-bin cmake pkg-config doxygen
