@@ -1,1 +1,2 @@
-require "sayanta.options"
+require "options"
+vim.cmd "colorscheme onedark"
