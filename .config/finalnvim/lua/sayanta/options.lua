@@ -21,6 +21,7 @@ opt.backup = false
 --opt.pumheight = 9
 --opt.showmode = false
 --opt.completeopt = { "menuone", "noselect" }
+opt.whichwrap:append "<>[]hl"
 opt.clipboard = "unnamedplus"
 opt.mouse = "a"
 opt.splitbelow = true
@@ -81,9 +82,4 @@ local default_plugins = {
 for _, plugin in pairs(default_plugins) do
    g["loaded_" .. plugin] = 1
 end
-
-
-vim.opt.shortmess:append "c"
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-
 
