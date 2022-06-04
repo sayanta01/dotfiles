@@ -25,6 +25,7 @@ opt.splitright = true
 opt.termguicolors = true
 opt.cul = true -- cursor line
 opt.signcolumn = "yes"
+opt.guifont = "monospace:h17",               -- the font used in graphical neovim applications
 
 
 -- Tabs
