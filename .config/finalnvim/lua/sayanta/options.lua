@@ -58,6 +58,7 @@ local default_plugins = {
    "tarPlugin",
    "zipPlugin",
    "zip",
+   "shada_plugin,
    "tar",
    "logiPat",
    "spellfile_plugin",
