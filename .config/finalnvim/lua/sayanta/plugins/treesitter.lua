@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = { "c", "css", "python", "bash", "html", "lua", "jsx", "vim", " }
+  ensure_installed = { "c", "lua", "css", "python", "bash", "html", "vim" },
   sync_install = false, 
   ignore_install = { "" }, 
   autopairs = {
@@ -15,9 +15,11 @@ configs.setup {
     disable = { "" }, 
     additional_vim_regex_highlighting = true,
   },
+  
   indent = { enable = true, disable = { "yaml" } },
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
   },
+  
 }
