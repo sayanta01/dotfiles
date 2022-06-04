@@ -19,6 +19,10 @@ unclutter zsh-syntax-highlighting zsh-completions zsh-autosuggestions jq xdg-use
 
 sudo systemctl enable vboxservice
 
+#sudo pacman -Syu lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+##dm-tool switch-to-greeter
+#sudo systemctl enable lightdm.service
+
 #
 sudo pacman -Sy --noconfim nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
 scrcpy android-tools nvtop stress \
@@ -27,14 +31,12 @@ deluge telegram-desktop \
 bluez bluez-utils blueman ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
-
 #sudo systemctl enable --now libvirtd
 #sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104
 #sudo usermod -aG libvirt bot
 #sudo systemctl restart libvirtd
 #sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
 #sudo virsh net-autostart default
-
 
 sudo systemctl enable bluetooth
 sudo systemctl enable fstrim.timer
@@ -60,8 +62,6 @@ EOF
 
 
 ########## BSPWM ##########
-
-
 sudo pacman -Sy --noconfirm bspwm sxhkd dmenu rofi kitty slock dunst playerctl lxappearance maim alsa-utils dbus-python
 yay -Sy --noconfirm polybar preload
 
