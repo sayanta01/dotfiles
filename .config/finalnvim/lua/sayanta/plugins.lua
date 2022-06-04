@@ -36,6 +36,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"  
   use "navarasu/onedark.nvim"
   use "lewis6991/impatient.nvim"
+  use "goolord/alpha-nvim"
   
 --  use "nvim-telescope/telescope.nvim"
   
