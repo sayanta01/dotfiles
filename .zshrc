@@ -165,6 +165,7 @@ alias df='df -h'
 alias shred='shred -uvzn3'
 
 alias typer='ttyper'
+alias mp='mousepad'
 alias vim='nvim'
 alias ytdl='yt-dlp -f 137+140'
 alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
