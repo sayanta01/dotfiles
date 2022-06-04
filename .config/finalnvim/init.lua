@@ -1,4 +1,8 @@
---pip install pynvim
+-- For Null-LS formatting
+--pip3 install pynvim black flake8
+--cargo install stylua
+--sudo apt install -y  eslint 
+--sudo npm install -g prettier
 
 require "options"
 --require "keymaps"
