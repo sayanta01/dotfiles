@@ -37,7 +37,8 @@ return packer.startup(function(use)
   use "navarasu/onedark.nvim"
   use "lewis6991/impatient.nvim"
   use "goolord/alpha-nvim"
-  use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "norcalli/nvim-colorizer.lua"
+  use "numToStr/Comment.nvim" 
 
 --  use "nvim-telescope/telescope.nvim"
   
