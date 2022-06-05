@@ -15,5 +15,6 @@ require "plugins.staline"
 require "plugins.impatient"
 require "plugins.nvim-tree"
 require "plugins.colorizer"
+require "plugins.autopairs"
 
 
