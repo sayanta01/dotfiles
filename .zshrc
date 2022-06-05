@@ -89,6 +89,7 @@ zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]
 PROMPT=' %B%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[white]%}  %{$fg[red]%})%{$fg[white]%} ${vcs_info_msg_0_} ~%  '
 
 #PATHs
+export TERM="xterm-256color"                      
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/bin
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
@@ -153,6 +154,7 @@ alias pull='git pull origin'
 alias push='git push origin'
 
 alias update='sudo apt update'
+alias install='sudo apt install'
 alias upgrade='sudo apt -y full-upgrade'
 alias clean='sudo apt -y autoremove; sudo apt clean'
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
