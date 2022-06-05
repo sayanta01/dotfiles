@@ -1,25 +1,4 @@
-require 'colorizer'.setup()
-require 'colorizer'.setup {
-  'css';
-  'javascript';
-  html = {
-    mode = 'foreground';
-  }
-}
-
-require 'colorizer'.setup({
-  'css';
-  'javascript';
-  html = { mode = 'background' };
-}, { mode = 'foreground' })
-
-require 'colorizer'.setup {
-  '*';
-  css = { rgb_fn = true; }; 
-  html = { names = false; } 
-}
-
-require 'colorizer'.setup {
-  '*';
-  '!vim'; 
-}
+local options = { rgb_fn = true, hsl_fn = true, css = true, css_fn = true, names = true, RGB = true, RRGGBB = true, RRGGBBAA = true}
+require("colorizer").setup({
+  "*",
+}, options)
