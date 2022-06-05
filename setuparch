@@ -42,7 +42,7 @@ sudo systemctl enable bluetooth
 sudo systemctl enable fstrim.timer
 
 git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si
-yay -Syu && yay -Sy --noconfirm spotify-adblock notion-app cointop chrome-google ly
+yay -Sy --noconfirm spotify-adblock notion-app cointop chrome-google ly
 sudo systemctl enable ly.service 
 
 mkdir ~/{Desktop,Documents,Downloads,Music,Pictures,Videos} 
