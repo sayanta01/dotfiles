@@ -33,7 +33,7 @@ set wildmode=longest,list,full
 set wildmenu
 set t_Co=256
 set showcmd
-set background=dark
+"set background=dark
 set cursorline
 set showcmd
 set complete+=kspell
