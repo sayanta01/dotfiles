@@ -5,16 +5,17 @@
 --sudo npm install -g prettier
 
 require "options"
---require "keymaps"
 vim.cmd "colorscheme onedark"
+--require "keymaps"
 
 require "plugins"
-require "plugins.cmp"
 require "plugins.alpha"
 require "plugins.staline"
 require "plugins.impatient"
-require "plugins.nvim-tree"
 require "plugins.colorizer"
 require "plugins.autopairs"
+require "plugins.cmp"
+
+require "plugins.nvim-tree"
 
 
