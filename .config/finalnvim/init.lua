@@ -12,5 +12,8 @@ require "plugins"
 require "plugins.cmp"
 require "plugins.alpha"
 require "plugins.staline"
-require "plugins.colorizer"
+require "plugins.impatient"
 require "plugins.nvim-tree"
+require "plugins.colorizer"
+
+
