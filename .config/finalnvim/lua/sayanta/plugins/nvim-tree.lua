@@ -1,8 +1,8 @@
--- following options are the default
--- each of these are documented in :help nvim-tree.OPTION_NAME
+-- Following options are the default
+-- each of these are documented in `:help nvim-tree.OPTION_NAME`
 vim.g.nvim_tree_icons = {
   default = "",
-  symlink = "",
+  symlink = "",
   git = {
     unstaged = "",
     staged = "S",
@@ -17,7 +17,7 @@ vim.g.nvim_tree_icons = {
     open = "",
     empty = "",
     empty_open = "",
-    symlink = "",
+    symlink = "",
   },
 }
 
@@ -111,8 +111,7 @@ nvim_tree.setup {
 --    enable = true,
 --    auto_open = true,
 --  },
---  auto_resize = true,
 --  git_hl = 1,
+--  auto_resize = true,
 --  root_folder_modifier = ":t",
 }
-
