@@ -8,7 +8,7 @@ set nowritebackup
 set noswapfile
 set history=200
 syntax enable
-syntax on
+#syntax on
 set encoding=utf-8
 set hlsearch
 set ignorecase smartcase
