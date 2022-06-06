@@ -1,52 +1,51 @@
-local opt = vim.opt
-local g = vim.g
+local options = {
+  encoding = "UTF-8",
+  writebackup = false,                     
+  swapfile = false,                        
+  conceallevel = 0,                        
+  hidden = true,
+  undofile = true,                         
+  timeoutlen = 99,                        
+  updatetime = 300,                        
+  backup = false,                          
 
--- Performance
---opt.fileencoding = "utf-8"
---opt.writebackup = false
---opt.lazyredraw = true
---opt.swapfile = false
---opt.conceallevel = 0 
-opt.hidden = true
-opt.undofile = true
-opt.timeoutlen = 99
-opt.updatetime = 300
-opt.backup = false
+  --guifont = "monospace:h17",               
+  --confirm = true,
+  cmdheight = 2,                           
+  showtabline = 2,                         
+  pumheight = 9,                          
+  showmode = false,                        
+  completeopt = { "menuone", "noselect" }, 
+  clipboard = "unnamedplus",               
+  mouse = "a",                             
+  splitbelow = true,                       
+  splitright = true,                       
+  termguicolors = true,                    
+  cursorline = true,                       
+  signcolumn = "yes",                      
 
--- UI
---opt.guifont = "monospace:h17",               -- font used in graphical neovim applications
---opt.cmdheight = 2
---opt.showtabline = 2
---opt.confirm = true
---opt.pumheight = 9
---opt.showmode = false
---opt.completeopt = { "menuone", "noselect" }
-opt.whichwrap:append "<>[]hl"
-opt.clipboard = "unnamedplus"
-opt.mouse = "a"
-opt.splitbelow = true
-opt.splitright = true
-opt.termguicolors = true
-opt.cul = true -- cursor line
-opt.signcolumn = "yes"
+  expandtab = true,                        
+  shiftwidth = 2,                          
+  tabstop = 2,                             
 
--- Tabs
-opt.expandtab = true
-opt.shiftwidth = 2
-opt.tabstop = 4
+  hlsearch = false,                         
+  ignorecase = true,                       
+  smartcase = true,                       
+  smartindent = true,                     
 
--- Search
---opt.hlsearch = true
-opt.ignorecase = true
-opt.smartcase = true
-opt.smartindent = true
+  wrap = false,                           
+  number = true,                          
+  relativenumber = false,                 
+  scrolloff = 6,                          
+  sidescrolloff = 8,
+}
 
--- Numbers
---opt.wrap = false
--- opt.relativenumber = true
-opt.number = true
-opt.scrolloff = 6
-opt.sidescrolloff = 8
+for k,v in pairs(options) do
+  vim.opt[k] = v
+end
+
+--vim.opt.shortmess:append "c"
+
 
 -- disable some builtin vim plugins
 local default_plugins = {
