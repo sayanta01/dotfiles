@@ -17,5 +17,6 @@ require "plugins.autopairs"
 require "plugins.cmp"
 
 require "plugins.nvim-tree"
+require "plugins.treesitter"
 
 
