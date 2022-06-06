@@ -73,8 +73,6 @@ axel -n 20 -o PacketTracer.deb https://archive.org/download/packet-tracer-800-bu
 chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
 
-
-
 ########## BSPWM ##########
 sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl lxappearance maim libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
 pip3 install pywal
