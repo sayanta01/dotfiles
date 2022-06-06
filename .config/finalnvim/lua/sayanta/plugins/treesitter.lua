@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = { "c", "lua", "css", "python", "bash", "html", "vim" },
+  ensure_installed = { "c", "javascript", "typescript", "lua", "css", "python", "bash", "html", "vim" },
   sync_install = false, 
   ignore_install = { "" }, 
   autopairs = {
