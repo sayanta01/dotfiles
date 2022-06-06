@@ -18,7 +18,6 @@
  *.color7:     #BFBFBF
  *.color15:    #E6E6E6
 
-
 ! Sxiv conf
 Sxiv.background: #000000
 Sxiv.foreground: #626294
