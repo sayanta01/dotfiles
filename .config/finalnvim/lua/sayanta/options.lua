@@ -27,7 +27,7 @@ local options = {
   shiftwidth = 2,                          
   tabstop = 2,                             
 
-  hlsearch = false,                         
+  hlsearch = true,                         
   ignorecase = true,                       
   smartcase = true,                       
   smartindent = true,                     
