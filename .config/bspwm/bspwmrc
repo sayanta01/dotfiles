@@ -20,7 +20,7 @@ xsetroot -cursor_name left_ptr &
 ./.config/polybar/launch.sh &
 killall -q "imwheel" &
 imwheel -b "4 5" 
-killall -q "sxhkd" &
+#killall -q "sxhkd" &
 sxhkd &
 kdeconnect-indicator &
 xwallpaper --zoom ~/.config/walls/wallpaper.jpg &
