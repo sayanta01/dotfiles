@@ -9,7 +9,6 @@ local options = {
   updatetime = 300,                        
   backup = false,                          
 
-  --guifont = "monospace:h17",               
   --confirm = true,
   cmdheight = 2,                           
   showtabline = 2,                         
