@@ -20,14 +20,17 @@ bpytop neofetch preload htop \
 android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
 obs-studio audacity gimp blender kdeconnect translate-shell \
 telegram-desktop deluge tor torbrowser-launcher docker.io  #snapd apt-transport-https
-
+ 
+sudo apt purge -y --auto-remove onboard xterm cherrytree
+ 
 # Build Neovim
 sudo apt install -y ninja-build gettext libtool libtool-bin cmake pkg-config doxygen
 git clone https://github.com/neovim/neovim.git ~/.config/neovim && cd ~/.config/neovim
 make -j4 && sudo make install
 
-sudo apt purge -y --auto-remove onboard xterm cherrytree
-
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+ 
 #
 sudo apt install -y virt-manager qemu
 sudo usermod -aG libvirt bot
