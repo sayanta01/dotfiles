@@ -25,7 +25,10 @@ keymap("n", "<leader>rf", ":RustFmt<CR>", opts)
 -- No highlight
 keymap("n", "<ESC>", ":noh<CR>", opts)
 
--- Copy all
+-- Close buffer without saving
+keymap("n", "<leader>d", ":bwipeout!<CR>", opts) 
+
+-- Copy whole file
 keymap("n", "<C-c-a>", ":%y+ <CR>", opts)    
       
 -- Better window navigation
