@@ -1,11 +1,11 @@
 local options = {
+  --timeoutlen = 99,  
   encoding = "UTF-8",
   writebackup = false,                     
   swapfile = false,                        
   conceallevel = 0,                        
   hidden = true,
   undofile = true,                         
-  timeoutlen = 99,                        
   updatetime = 300,                        
   backup = false,                          
 
