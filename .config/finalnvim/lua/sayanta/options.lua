@@ -45,7 +45,6 @@ end
 
 --vim.opt.shortmess:append "c"
 
-
 -- disable builtin vim plugins
 vim.g.loaded_matchparen = 1
 vim.g.loaded_matchit = 1
@@ -71,4 +70,3 @@ vim.g.loaded_vimballPlugin = 1
 vim.g.loaded_zip = 1
 vim.g.loaded_tar = 1
 vim.g.loaded_shada_plugin = 1
-
