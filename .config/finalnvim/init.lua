@@ -19,5 +19,7 @@ require "plugins.telescope"
 require "plugins.nvim-tree"
 require "plugins.impatient"
 require "plugins.treesitter"
+require "plugins.bufferline"
+
 
 
