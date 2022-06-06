@@ -12,12 +12,11 @@ require "plugins"
 require "plugins.cmp"
 require "plugins.alpha"
 require "plugins.staline"
-require "plugins.impatient"
 require "plugins.colorizer"
 require "plugins.autopairs"
 require "plugins.telescope"
 require "plugins.nvim-tree"
-
+require "plugins.impatient"
 require "plugins.treesitter"
 
 
