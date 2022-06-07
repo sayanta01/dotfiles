@@ -44,7 +44,7 @@ for k,v in pairs(options) do
 end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
---vim.opt.shortmess:append "c"
+vim.opt.shortmess:append "c"
 
 -- disable builtin vim plugins
 vim.g.loaded_matchparen = 1
