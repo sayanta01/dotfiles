@@ -67,7 +67,7 @@ local options = {
       },
       icons = {
          padding = " ",
-         symlink_arrow = " ➛ ",
+         symlink_arrow = "  ",
          show = {
             file = true,
             folder = true,
