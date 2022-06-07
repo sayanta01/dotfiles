@@ -3,7 +3,7 @@ require('staline').setup {
 		left_separator  = "",
 		right_separator = "",
 		cool_symbol     = " ",      
-		full_path       = true,
+		full_path       = false,
 		mod_symbol      = "  ",
 		lsp_client_symbol = " ",
 		line_column     = "%l/%c 並%p% ", 
@@ -27,13 +27,12 @@ require('staline').setup {
 		i = " INSERT",
 		c = " COMMAND",
 		v = " VISUAL",   
-		v = " VISUAL",   
+		V = " VISUAL",   
 	},
 	sections = {
-		left = { '- ', '-mode', 'left_sep', ' ', 'branch' },
+		left = { '- ', '-mode', 'left_sep_double', ' ', 'branch' },
 		mid  = { 'file_name' },
-		right = { 'cool_symbol','right_sep', '-line_column' },
-		
+		right = { 'cool_symbol','right_sep_double', '-line_column' },	
 	},
 	special_table = {
 		NvimTree = { 'NvimTree', ' ' },
