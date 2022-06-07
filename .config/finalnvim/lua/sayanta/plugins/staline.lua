@@ -30,9 +30,9 @@ require('staline').setup {
 		V = " VISUAL",   
 	},
 	sections = {
-		left = { '- ', '-mode', 'left_sep_double', ' ', 'branch' },
+		left = { '- ', '-mode', 'left_sep', ' ', 'branch' },
 		mid  = { 'file_name' },
-		right = { 'cool_symbol','right_sep_double', '-line_column' },	
+		right = { 'cool_symbol','right_sep', '-line_column' },	
 	},
 	special_table = {
 		NvimTree = { 'NvimTree', ' ' },
