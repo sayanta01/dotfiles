@@ -90,5 +90,5 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- exit terminal with ESC
-keymap("t", "<C-x>", "<c-\\><c-n>:q!<esc>", opts)
+--keymap("t", "<C-x>", "<c-\\><c-n>:q!<esc>", opts)
 
