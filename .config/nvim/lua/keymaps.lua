@@ -19,18 +19,12 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Rust
-keymap("n", "<leader>rr", ":RustRun<CR>", opts)
-keymap("n", "<leader>rf", ":RustFmt<CR>", opts)
-
--- No highlight
-keymap("n", "<ESC>", ":noh<CR>", opts)
-
--- Close buffer without saving
-keymap("n", "<leader>d", ":bwipeout!<CR>", opts) 
+--keymap("n", "<leader>rr", ":RustRun<CR>", opts)    change shortcut
+--keymap("n", "<leader>rf", ":RustFmt<CR>", opts)
 
 -- Copy whole file
 keymap("n", "<C-c-a>", ":%y+ <CR>", opts)    
-      
+       
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -49,9 +43,6 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- New buffer    
 keymap("n", "<S-b>", ":enew <CR>", opts)
-
-keymap("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>r", ":NvimTreeRefresh<cr>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -88,7 +79,4 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
--- exit terminal with ESC
---keymap("t", "<C-x>", "<c-\\><c-n>:q!<esc>", opts)
 
