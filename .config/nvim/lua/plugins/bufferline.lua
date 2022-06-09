@@ -12,7 +12,7 @@ bufferline.setup {
     right_mouse_command = nil, 
     indicator_icon = "▎",
     buffer_close_icon = "窱",
-    modified_icon = "●",
+    modified_icon = "",
     close_icon = "",
     left_trunc_marker = "",
     right_trunc_marker = "",
