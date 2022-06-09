@@ -23,6 +23,6 @@ require "plugins.bufferline"
 require "plugins.toggleterm"
 require "plugins.indentline"
 require "plugins.treesitter"
-
+require "plugins.rainbow-bracket"
 
 
