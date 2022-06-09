@@ -55,7 +55,7 @@ local setup = {
     spacing = 2, -- spacing between columns
     align = "left", -- align columns left, center or right
   },
-  ignore_missing = false, -- enable this to hide mappings for which you didn't specify a label
+  ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
   hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
   show_help = true, -- show help message on the command line when the popup is visible
   triggers = "auto", -- automatically setup triggers
@@ -99,27 +99,100 @@ local mappings = {
   ["x"] = {":bdelete<cr>", "Close Buffer"},
   ["X"] = {":bdelete!<cr>", "Force Close Buffer"},
 
---  g = {
---    name = "Git",
---    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
---    j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
---    k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
---    l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
---    p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
---    r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
---    R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
---    s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
---    u = {
---      "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
---      "Undo Stage Hunk",
---    },
---    o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
---    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
---    c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
---    d = {
---      "<cmd>Gitsigns diffthis HEAD<cr>",
---      "Diff",
---    },
---  },
+  g = {
+    name = "Git",
+    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+    o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+    c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+    s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+    p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+    r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+    j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
+    k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
+    
+    l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+    R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+    u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk" },
+    d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff", },
+  },
 
+    l = {
+    name = "LSP",
+    a = {'<cmd>lua vim.lsp.buf.code_action()<CR>', "Code actions"},
+    f = {'<cmd>lua vim.lsp.buf.formatting()<CR>', "Format File"},
+    e = {'<cmd>lua vim.diagnostic.show_line_diagnostics()<CR>', "Show line diagnostics"},
+    r = {'<cmd>lua vim.lsp.buf.references()<CR>', "References"},
+    R = {'<cmd>lua vim.lsp.buf.rename()<CR>', "Rename"},
+    i = {":LspInfo<cr>", "Connected Language Servers"},
+    I = {'<cmd>LspInstallInfo<cr>', 'Install language server'},
+    w = {'<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', "Add workspace folder"},
+    W = {'<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', "Remove workspace folder"},
+    n = {'<cmd>lua vim.diagnostic.goto_next()<CR>', "Go to next diagnostic"},
+    N = {'<cmd>lua vim.diagnostic.goto_prev()<CR>', "Go to previous diagnostic"},
+    k = {'<cmd>lua vim.lsp.buf.signature_help()<CR>', "Signature help"},
+    K = {'<cmd>lua vim.lsp.buf.hover()<CR>', "Hover"},
+    t = {'<cmd>lua vim.lsp.buf.type_definition()<CR>', "Type definition"},
+    g = {'<cmd>lua vim.lsp.buf.definition()<CR>', "Go to definition"},
+    G = {'<cmd>lua vim.lsp.buf.delaration()<CR>', "Go to declaration"},
+    
+  --c = { "<cmd>Telescope lsp_code_actions<cr>", "Code Actions" },
+    l = { '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', "List workspace folder"},
+   -- q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+    m = { "<cmd>Telescope marks<CR>", "Marks" },
+    d = { "<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
+    D = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+    S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols"},
+    s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+  },
   
+  s = {
+    name = "Find with Telescope",
+    b = { "<cmd>Telescope builtin<cr>", "Telescope builtin" },
+    c = { "<cmd>Telescope lsp_code_actions<cr>", "Code Actions" },
+    C = { "<cmd>Telescope commands<cr>", "Commands" },
+    d = { "<cmd>Telescope diagnostics<cr>", "Document Diagnostics" },
+    D = { "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", "Line Diagnostics" },
+    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+    s = { "<cmd>lua vim.o.spell = not vim.o.spell<cr>", "Toggle spell check" },
+    t = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+    m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+    k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+    R = { "<cmd>Telescope registers<cr>", "Registers" },
+    h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+    
+    --r = { "<cmd>Telescope lsp_references<cr>", "Find References" },
+  },
+  
+  p = {
+    name = "Packer",
+    r = {":PackerClean<cr>", "Remove Unused Plugins"},
+    c = {":PackerCompile profile=true<cr>", "Recompile Plugins"},
+    i = {":PackerInstall<cr>", "Install Plugins"},
+    s = {":PackerSync<cr>", "Sync Plugins"},
+    S = {":PackerStatus<cr>", "Packer Status"},
+    u = {":PackerUpdate<cr>", "Update Plugins"}
+  },
+  
+  d = {
+    name = "Bufferline",
+    --b = { "<cmd>BufferLinePick<CR>", "Pick" },
+    l = { "<cmd>BufferLineCloseRight<CR>", "Close all to right" },
+    h = { "<cmd>BufferLineCloseLeft<CR>", "Close all to left" },
+    p = { "<cmd>BufferLineTogglePin<CR>", "Toggle pin" },
+  },
+  
+  t = {
+    name = "Terminal",
+    n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+    f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+    h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
+    v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+  },
+}
+
+which_key.setup(setup)
+which_key.register(mappings, opts)
+
