@@ -7,7 +7,7 @@ sudo pacman -Syu && sudo pacman -Sy --noconfirm cargo && cargo install ttyper
 sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-cascadia-code noto-fonts-emoji ttf-joypixels ttf-font-awesome terminus-font \
 linux-firmware linux-headers linux-lts linux-lts-headers \
 thunar thunar-archive-plugin firefox ranger zathura lsd exa bat \
-neovim fzf translate-shell openssh wget curl mate-calc yarn ripgrep nodejs \
+neovim fzf translate-shell openssh wget curl mate-calc ripgrep nodejs \ #yarn
 tree ncdu rsync unrar unzip zip p7zip tar \
 dhcpcd networkmanager wireless_tools net-tools dialog cmake \
 xwallpaper sxiv ffmpeg imagemagick \
@@ -41,7 +41,8 @@ virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 sudo systemctl enable bluetooth
 sudo systemctl enable fstrim.timer
 
-git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si
+git clone https://aur.archlinux.org/yay.git ~/yay 
+cd ~/yay && makepkg -si
 yay -Sy --noconfirm spotify-adblock notion-app cointop chrome-google ly
 sudo systemctl enable ly.service 
 
@@ -73,6 +74,13 @@ sudo cp -r ~/.icons/MineKali/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.icons/MineKali /usr/share/icons
 sudo cp -r ~/.themes/* /usr/share/themes
 
+#xdg-mime query filetype (file)  #check filetype
+#xdg-mime query default (file/type)  #check default app of filetype
+xdg-mime default sxiv.desktop image/jpeg
+xdg-mime default sxiv.desktop image/jpg
+xdg-mime default sxiv.desktop image/png
+xdg-mime default inkscape.desktop image/svg+xml
+xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 # uncmnt zsh plugins of arch
 # vim /etc/pacman.conf # uncheck ignorepkg and put pkgname
