@@ -17,7 +17,7 @@ bpytop neofetch htop \
 intel-ucode virtualbox-guest-utils \
 unclutter zsh-syntax-highlighting zsh-completions zsh-autosuggestions jq xdg-user-dirs xorg xclip wmctrl imwheel
 
-sudo systemctl enable vboxservice
+#sudo systemctl enable vboxservice
 
 #sudo pacman -Syu lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 ##dm-tool switch-to-greeter
@@ -43,7 +43,7 @@ sudo systemctl enable fstrim.timer
 
 git clone https://aur.archlinux.org/yay.git ~/yay 
 cd ~/yay && makepkg -si
-yay -Sy --noconfirm spotify-adblock notion-app cointop chrome-google ly
+yay -Sy --noconfirm spotify-adblock notion-app cointop google-chrome ly
 sudo systemctl enable ly.service 
 
 mkdir ~/{Desktop,Documents,Downloads,Music,Pictures,Videos} 
