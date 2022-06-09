@@ -6,8 +6,7 @@ require('staline').setup {
 		full_path       = false,
 		mod_symbol      = "  ",
 		lsp_client_symbol = " ",
-		line_column     = "%l/%c 並%p% ", 
-
+		line_column     = "%l/%c ", --"%l/%c 並%p% ", 
 		fg              = "#000000",  
 		bg              = "none",    
 		inactive_color  = "#303030",
