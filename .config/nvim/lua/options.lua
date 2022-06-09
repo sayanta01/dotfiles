@@ -1,5 +1,5 @@
 local options = {
-  --timeoutlen = 99,  
+  timeoutlen = 99,  
   encoding = "UTF-8",
   writebackup = false,                     
   swapfile = false,                        
@@ -9,7 +9,7 @@ local options = {
   updatetime = 300,                        
   backup = false,                          
 
-  --confirm = true,
+  confirm = true,
   cmdheight = 2,                           
   showtabline = 2,                         
   pumheight = 9,                          
