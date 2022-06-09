@@ -57,9 +57,9 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
   use "lukas-reineke/indent-blankline.nvim"
+  use "folke/which-key.nvim"
 
 --  use "lewis6991/gitsigns.nvim"
---  use "folke/which-key.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" 
