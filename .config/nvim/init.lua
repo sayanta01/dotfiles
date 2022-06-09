@@ -6,7 +6,7 @@
 
 require "options"
 vim.cmd "colorscheme onedark"
---require "keymaps"
+require "keymaps"
 
 require "plugins"
 require "plugins.cmp"
