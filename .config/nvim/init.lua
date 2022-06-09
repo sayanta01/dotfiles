@@ -5,9 +5,7 @@
 --sudo npm install -g prettier
 
 require "options"
-vim.cmd "colorscheme onedark"
 require "keymaps"
-
 require "plugins"
 require "plugins.cmp"
 require "plugins.alpha"
