@@ -41,24 +41,27 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" 
   use 'tamton-aquib/staline.nvim'
   use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"  
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "navarasu/onedark.nvim"
-  use "lewis6991/impatient.nvim"
-  use "goolord/alpha-nvim"
-  use "norcalli/nvim-colorizer.lua"
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
-  use "nvim-telescope/telescope.nvim"
-  use "nvim-telescope/telescope-media-files.nvim"
-  use "numToStr/Comment.nvim"   
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugin
+  use "navarasu/onedark.nvim"
+  se 'folke/tokyonight.nvim'
+  use "ellisonleao/gruvbox.nvim"
+  use "lewis6991/impatient.nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use "akinsho/bufferline.nvim"  
+  use "goolord/alpha-nvim"
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "norcalli/nvim-colorizer.lua"
   use "moll/vim-bbye"
+  use "p00f/nvim-ts-rainbow"
   use "akinsho/toggleterm.nvim"
+  use "nvim-telescope/telescope-media-files.nvim"
+
+  use "kyazdani42/nvim-tree.lua"  
+  use "nvim-telescope/telescope.nvim"
+  use "numToStr/Comment.nvim"   
+  use "akinsho/bufferline.nvim"  
   use "lukas-reineke/indent-blankline.nvim"
   use "folke/which-key.nvim"
-  use "p00f/nvim-ts-rainbow"
     
 --  use "lewis6991/gitsigns.nvim"
 
