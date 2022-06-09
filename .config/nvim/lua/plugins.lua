@@ -51,19 +51,19 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "norcalli/nvim-colorizer.lua"
-  use "moll/vim-bbye"
   use "p00f/nvim-ts-rainbow"
   use "akinsho/toggleterm.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
+  use "numToStr/Comment.nvim"   
 
   use "kyazdani42/nvim-tree.lua"  
   use "nvim-telescope/telescope.nvim"
-  use "numToStr/Comment.nvim"   
   use "akinsho/bufferline.nvim"  
   use "lukas-reineke/indent-blankline.nvim"
   use "folke/which-key.nvim"
     
---  use "lewis6991/gitsigns.nvim"
+--use "moll/vim-bbye"   
+--use "lewis6991/gitsigns.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" 
