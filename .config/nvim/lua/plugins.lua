@@ -55,11 +55,11 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
   use "numToStr/Comment.nvim"   
+  use "lukas-reineke/indent-blankline.nvim"
+  use "akinsho/bufferline.nvim"  
 
   use "kyazdani42/nvim-tree.lua"  
   use "nvim-telescope/telescope.nvim"
-  use "akinsho/bufferline.nvim"  
-  use "lukas-reineke/indent-blankline.nvim"
   use "folke/which-key.nvim"
     
 --use "moll/vim-bbye"   
