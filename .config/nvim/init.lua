@@ -21,7 +21,6 @@ require "plugins.alpha"
 
 require "plugins.nvim-tree"
 require "plugins.cmp"
-require "plugins.staline"
 require "plugins.whichkey"
 require "plugins.telescope"
 
