@@ -10,16 +10,16 @@ local options = {
   backup = false,                          
 
   confirm = true,
-  cmdheight = 2,                           
-  showtabline = 2,                         
-  pumheight = 9,                          
+  --cmdheight = 2,                           
+  --showtabline = 2,                         
+  --pumheight = 9,
+  --termguicolors = true,                    
   showmode = false,                        
   completeopt = { "menuone", "noselect" }, 
   clipboard = "unnamedplus",               
   mouse = "a",                             
   splitbelow = true,                       
   splitright = true,                       
-  termguicolors = true,                    
   cursorline = true,                       
   signcolumn = "yes",                      
 
@@ -34,7 +34,7 @@ local options = {
 
   wrap = false,                           
   number = true,                          
-  relativenumber = false,                 
+  --relativenumber = false,                 
   scrolloff = 6,                          
   sidescrolloff = 8,
 }
