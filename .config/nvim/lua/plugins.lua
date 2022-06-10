@@ -39,7 +39,6 @@ packer.init {
 -- Plugins
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" 
-  use 'tamton-aquib/staline.nvim'
   use "kyazdani42/nvim-web-devicons"
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugin
@@ -53,11 +52,12 @@ return packer.startup(function(use)
   use "norcalli/nvim-colorizer.lua"
   use "p00f/nvim-ts-rainbow"
   use "akinsho/toggleterm.nvim"
-  use "nvim-telescope/telescope-media-files.nvim"
   use "numToStr/Comment.nvim"   
   use "lukas-reineke/indent-blankline.nvim"
-  use "akinsho/bufferline.nvim"  
 
+  use "akinsho/bufferline.nvim"  
+  use 'tamton-aquib/staline.nvim'
+  use "nvim-telescope/telescope-media-files.nvim"
   use "kyazdani42/nvim-tree.lua"  
   use "nvim-telescope/telescope.nvim"
   use "folke/which-key.nvim"
