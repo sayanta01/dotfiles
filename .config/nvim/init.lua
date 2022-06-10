@@ -17,15 +17,12 @@ require "plugins.treesitter"
 require "plugins.rainbow-bracket"
 require "plugins.bufferline"
 require "plugins.indentline"
-
-
-
-require "plugins.cmp"
 require "plugins.alpha"
+
+require "plugins.nvim-tree"
+require "plugins.cmp"
 require "plugins.staline"
-require "plugins.comment"
 require "plugins.whichkey"
 require "plugins.telescope"
-require "plugins.nvim-tree"
 
 
