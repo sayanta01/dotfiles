@@ -46,7 +46,7 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.opt.shortmess:append "c"
 
--- disable builtin vim plugins
+-- Disable builtin plugins
 vim.g.loaded_zip = 1
 vim.g.loaded_tar = 1
 vim.g.loaded_gzip = 1
