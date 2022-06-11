@@ -6,15 +6,15 @@ end
 toggleterm.setup({
 	size = 20,
 	open_mapping = [[<c-\>]],
-	hide_numbers = true,
 	shade_filetypes = {},
-	shade_terminals = true,
 	shading_factor = 2,
-	start_in_insert = true,
-	insert_mappings = true,
 	persist_size = true,
-	direction = "float",
+	hide_numbers = false,
 	close_on_exit = true,
+	shade_terminals = true,
+	insert_mappings = true,
+	start_in_insert = true,
+	direction = "float",
 	shell = vim.o.shell,
 	float_opts = {
 		border = "curved",
@@ -27,11 +27,11 @@ toggleterm.setup({
 })
 
 local Terminal = require("toggleterm.terminal").Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+--local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
 
-function _LAZYGIT_TOGGLE()
-	lazygit:toggle()
-end
+--function _LAZYGIT_TOGGLE()
+	--lazygit:toggle()
+--end
 
 local node = Terminal:new({ cmd = "node", hidden = true })
 function _NODE_TOGGLE()
