@@ -38,6 +38,7 @@ local options = {
   scrolloff = 6,                          
   sidescrolloff = 8,
 }
+
 for k,v in pairs(options) do
   vim.opt[k] = v
 end
