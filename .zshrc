@@ -129,7 +129,7 @@ ex ()
 alias l='exa -l'
 alias ll='exa -al'
 alias l.='exa -a | egrep "^\."'
-alias ls='exa'
+alias ls='ls --color=auto'
 alias la='lsd'
 alias lsn='exa | wc -l'
 
