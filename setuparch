@@ -11,12 +11,12 @@ thunar thunar-archive-plugin firefox ranger zathura zathura-pdf-mupdf lsd exa ba
 neovim fzf translate-shell openssh wget curl mate-calc ripgrep nodejs \ #yarn
 tree ncdu rsync unrar unzip zip p7zip tar python-pywal xdotool \
 dhcpcd networkmanager wireless_tools net-tools dialog cmake libconfig \
-xwallpaper sxiv ffmpeg imagemagick dash aria2 \
+xwallpaper sxiv ffmpeg imagemagick dash aria2  wmctrl imwheel \
 fortune-mod mpv pipewire pulseaudio pavucontrol \
 speedtest-cli trash-cli yt-dlp transmission-cli \
 bpytop neofetch htop \
 intel-ucode virtualbox-guest-utils \
-unclutter zsh-syntax-highlighting zsh-completions zsh-autosuggestions jq xdg-user-dirs xorg xclip wmctrl imwheel
+unclutter zsh-syntax-highlighting zsh-completions zsh-autosuggestions jq xdg-user-dirs xorg xclip
 
 #sudo systemctl enable vboxservice
 
