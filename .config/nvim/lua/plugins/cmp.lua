@@ -15,7 +15,7 @@ local check_backspace = function()
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
---  פּ ﯟ   some good icons
+--  פּ ﯟ  some good icons
 local kind_icons = {
   Text = "",
   Method = "m",
