@@ -136,7 +136,6 @@ local mappings = {
     g = {'<cmd>lua vim.lsp.buf.definition()<CR>', "Go to definition"},
     G = {'<cmd>lua vim.lsp.buf.delaration()<CR>', "Go to declaration"},
     
-  --c = { "<cmd>Telescope lsp_code_actions<cr>", "Code Actions" },
     l = { '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', "List workspace folder"},
    -- q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
     m = { "<cmd>Telescope marks<CR>", "Marks" },
@@ -153,9 +152,8 @@ local mappings = {
     C = { "<cmd>Telescope commands<cr>", "Commands" },
     d = { "<cmd>Telescope diagnostics<cr>", "Document Diagnostics" },
     D = { "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", "Line Diagnostics" },
-    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     s = { "<cmd>lua vim.o.spell = not vim.o.spell<cr>", "Toggle spell check" },
-    t = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+    --S = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
@@ -177,7 +175,7 @@ local mappings = {
   
   d = {
     name = "Bufferline",
-    --s = { "<cmd>BufferLinePick<CR>", "Pick" },
+    s = { "<cmd>BufferLinePick<CR>", "Pick" },
     l = { "<cmd>BufferLineCloseRight<CR>", "Close all to right" },
     h = { "<cmd>BufferLineCloseLeft<CR>", "Close all to left" },
     p = { "<cmd>BufferLineTogglePin<CR>", "Toggle pin" },
@@ -195,4 +193,3 @@ local mappings = {
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
-
