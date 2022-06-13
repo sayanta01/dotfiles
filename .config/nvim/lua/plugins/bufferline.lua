@@ -10,14 +10,14 @@ bufferline.setup {
     middle_mouse_command = "bdelete! %d", 
     left_mouse_command = "buffer %d", 
     right_mouse_command = nil, 
-    indicator_icon = "▎",
+    indicator_icon = " ", --▎
     buffer_close_icon = "窱",
     modified_icon = "",
     close_icon = "",
-    left_trunc_marker = "",
-    right_trunc_marker = "",
-    max_name_length = 30,
-    max_prefix_length = 30,
+    left_trunc_marker = "",
+    right_trunc_marker = "",
+    max_name_length = 28,
+    max_prefix_length = 28,
     tab_size = 20,
     diagnostics = false, 
     diagnostics_update_in_insert = false,
@@ -125,4 +125,3 @@ bufferline.setup {
     },
   },
 }
-
