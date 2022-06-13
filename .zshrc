@@ -169,6 +169,7 @@ alias up="uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ 
 alias free='free -h'
 alias df='df -h'
 alias shred='shred -uvzn3'
+alias iv='sxiv'
 
 alias typer='ttyper'
 alias mp='mousepad'
