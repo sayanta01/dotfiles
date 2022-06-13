@@ -198,4 +198,4 @@ alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 #alias sinstall='sudo snap install mari0 cointop'
 #alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
 #export PATH=$PATH:/snap/bin
-
+# xprop - wm classname
