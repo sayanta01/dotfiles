@@ -111,7 +111,7 @@ super + Return
              kitty 
 		    
 # dmenu
-ctrl + space 
+alt + space 
            dmenu_run
            
 # launcher
