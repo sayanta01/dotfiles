@@ -88,14 +88,15 @@ chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.config/scripts/*
 
 cd ~/.config/dmenu && sudo make clean install
 
-sudo cp -r ~/.icons/MineKali/cursors /usr/share/icons/Adwaita 
-sudo cp -r ~/.icons/MineKali /usr/share/icons
-sudo cp -r ~/.themes/* /usr/share/themes
+sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
+sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
 
 git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
+sudo cp -r ~/.themes/* /usr/share/themes
 
 sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
-sudo cp -r ~/.icons/MineKali/* /usr/share/icons/Flat-Remix-Blue-Dark
+sudo cp -r ~/.icons/PapirusFlatMix/* /usr/share/icons/Flat-Remix-Blue-Dark
+
 sudo rm -rf /usr/share/themes/Kali-Dark/*
 sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
 
