@@ -92,6 +92,8 @@ sudo cp -r ~/.icons/MineKali/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.icons/MineKali /usr/share/icons
 sudo cp -r ~/.themes/* /usr/share/themes
 
+git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
+
 sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
 sudo cp -r ~/.icons/MineKali/* /usr/share/icons/Flat-Remix-Blue-Dark
 sudo rm -rf /usr/share/themes/Kali-Dark/*
