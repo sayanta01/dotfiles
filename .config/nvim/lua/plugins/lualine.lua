@@ -110,12 +110,14 @@ ins_left {
 ins_left {
   -- filesize component
   'filesize',
-  cond = conditions.buffer_not_empty,
+  cond = nil,
+  --cond = conditions.hide_in_width,
 }
 
 ins_left {
   'filename',
-  cond = conditions.buffer_not_empty,
+  cond = nil,
+  --cond = conditions.hide_in_width,
   color = { fg = colors.magenta, gui = 'bold' },
 }
 
@@ -162,6 +164,12 @@ ins_left {
 }
 
 ins_right {
+  'branch',
+  icon = '',
+  color = { fg = colors.violet, gui = 'bold' },
+}
+
+ins_right {
   'fileformat',
   fmt = string.upper,
   icons = '',
@@ -173,15 +181,9 @@ ins_right {
 ins_right {
   'o:encoding', -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
-  cond = conditions.hide_in_width,
+  cond = nil,
+  --cond = conditions.hide_in_width,
   color = { fg = colors.green, gui = 'bold' },
-}
-
-
-ins_right {
-  'branch',
-  icon = '',
-  color = { fg = colors.violet, gui = 'bold' },
 }
 
 ins_right {
@@ -192,7 +194,8 @@ ins_right {
     modified = { fg = colors.orange },
     removed = { fg = colors.red },
   },
-  cond = conditions.hide_in_width,
+  cond = nil,
+  --cond = conditions.hide_in_width,
 }
 
 -- Now don't forget to initialize lualine
