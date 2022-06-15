@@ -156,9 +156,9 @@ ins_left {
       end
     end
     return msg
-  end,
-  icon = ' LSP:',
-  color = { fg = '#abb2bf', gui = 'italic' },
+  end, 
+  icon = ' LSP ',
+  color = { fg = '#44466a', gui = 'bold' },
 }
 
 ins_right {
