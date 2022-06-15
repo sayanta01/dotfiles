@@ -43,8 +43,10 @@ for k,v in pairs(options) do
   vim.opt[k] = v
 end
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
+-- Settings
 vim.opt.shortmess:append "c"
+vim.opt.shortmess:append "I" 
+vim.opt.whichwrap:append "<,>,[,],h,l"
 
 -- Disable builtin plugins
 vim.g.loaded_zip = 1
