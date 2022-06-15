@@ -1,5 +1,5 @@
 local options = {
-  --timeoutlen = 99,  
+  --timeoutlen = 400,  
   encoding = "UTF-8",
   writebackup = false,                     
   swapfile = false,                        
