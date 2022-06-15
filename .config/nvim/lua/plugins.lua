@@ -1,33 +1,9 @@
-local fn = vim.fn
--- Automatically install packer
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  }
-  vim.cmd [[packadd packer.nvim]]
-end
-
--- Autocommand that reloads neovim whenever you save the plugins.lua file
---vim.cmd [[
---  augroup packer_user_config
---   autocmd!
---    autocmd BufWritePost plugins.lua source <afile> | PackerSync
---  augroup end
---]]
-
--- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   return
 end
 
--- Have packer use a popup window
+-- Popup
 packer.init {
   display = {
     open_fn = function()
@@ -42,31 +18,30 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons"
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugin
-  use "navarasu/onedark.nvim"
+  use "LunarVim/darkplus.nvim"
+  use "LunarVim/onedarker.nvim"
   use 'folke/tokyonight.nvim'
-  use "ellisonleao/gruvbox.nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "p00f/nvim-ts-rainbow"
   use "norcalli/nvim-colorizer.lua"
+  use "numToStr/Comment.nvim"   
+  use "moll/vim-bbye"   
+  use "goolord/alpha-nvim"
+  use "lewis6991/impatient.nvim"
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "lukas-reineke/indent-blankline.nvim"
+  use "nvim-telescope/telescope-media-files.nvim"
   
+  use "akinsho/toggleterm.nvim"
+  use "kyazdani42/nvim-tree.lua"  
+  use "akinsho/bufferline.nvim"  
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   
-  use "lukas-reineke/indent-blankline.nvim"
-  use "numToStr/Comment.nvim"   
-  use "akinsho/toggleterm.nvim"
-  use "moll/vim-bbye"   
-  use "akinsho/bufferline.nvim"  
-  use "kyazdani42/nvim-tree.lua"  
-  use "lewis6991/impatient.nvim"
-  use "nvim-telescope/telescope-media-files.nvim"
-  use "goolord/alpha-nvim"
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-      
-  use "folke/which-key.nvim"
   use "nvim-telescope/telescope.nvim"
+  use "folke/which-key.nvim"
     
   --use "lewis6991/gitsigns.nvim"
 
@@ -83,9 +58,11 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" 
 
   -- LSP
---  use "neovim/nvim-lspconfig" -- enable LSP
---  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-
+    use "neovim/nvim-lspconfig" -- enable LSP
+    use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+    use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+    use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+    
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
