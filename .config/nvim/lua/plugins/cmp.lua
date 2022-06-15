@@ -25,11 +25,12 @@ local kind_icons = {
   Variable = "",
   Class = "",
   Interface = "",
-  Module = "",
+  --Module = "",
+  Module = " ",
   Property = "",
   Unit = "",
   Value = "",
-  Enum = "",
+  Enum = "練",
   Keyword = "",
   Snippet = "",
   Color = "",
@@ -108,6 +109,7 @@ cmp.setup {
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
+        -- calc = "[Calc]",
       })[entry.source.name]
       return vim_item
     end,
@@ -119,6 +121,7 @@ cmp.setup {
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    -- { name = "calc" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
