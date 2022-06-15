@@ -99,4 +99,3 @@ telescope.setup {
     -- Please take a look at the Readme of the extension you want to configure
   },
 }
-
