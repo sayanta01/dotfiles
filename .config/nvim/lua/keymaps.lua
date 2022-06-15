@@ -10,16 +10,16 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
   -- Modes
+--   term_mode = "t",
 --   normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
 --   command_mode = "c",
+--   visual_block_mode = "x",
 
 -- Normal --
 -- Rust
---keymap("n", "<leader>rr", ":RustRun<CR>", opts)    change shortcut
+--keymap("n", "<leader>rr", ":RustRun<CR>", opts)   -- change shortcut
 --keymap("n", "<leader>rf", ":RustFmt<CR>", opts)
 
 -- Copy whole file
@@ -48,10 +48,13 @@ keymap("n", "<S-b>", ":enew <CR>", opts)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
+keymap("n", "<C-v>", "<cmd>vsplit<cr>", opts)
+keymap("n", "<C-s>", "<cmd>split<cr>", opts)
+
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jj", "<ESC>", opts)
+keymap("i", "jk", "<ESC>", opts)
 
 
 -- Visual --
@@ -79,4 +82,3 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
