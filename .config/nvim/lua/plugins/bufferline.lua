@@ -6,7 +6,7 @@ end
 bufferline.setup {
   options = {
     numbers = "none", 
-    close_command = "Bdelete! %d",
+    close_command = "bdelete! %d",
     middle_mouse_command = "bdelete! %d", 
     left_mouse_command = "buffer %d", 
     right_mouse_command = nil, 
