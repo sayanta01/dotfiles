@@ -21,9 +21,9 @@ require "plugins.nvim-tree"
 require "plugins.bufferline"
 require "plugins.lualine"
 require "plugins.toggleterm"
+require "plugins.telescope"
 
 require "plugins.whichkey"
-require "plugins.telescope"
 require "plugins.cmp"
 require "plugins.lsp"
 
