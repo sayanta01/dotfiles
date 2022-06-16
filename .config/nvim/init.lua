@@ -2,7 +2,7 @@
 --pip3 install pynvim black flake8
 --cargo install stylua
 --sudo apt install -y ueberzug eslint golang-go gccgo-go
---sudo npm install -g prettier
+--sudo npm install -g prettier ls_emmet
 
 require "options"
 require "keymaps"
