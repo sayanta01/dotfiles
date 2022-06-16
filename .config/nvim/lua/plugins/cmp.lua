@@ -8,6 +8,15 @@ if not snip_status_ok then
   return
 end
 
+--local cmp_dap_status_ok, cmp_dap = pcall(require, "cmp_dap")
+--if not cmp_dap_status_ok then
+--  return
+--end
+
+enabled = function()
+    return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt" or cmp_dap.is_dap_buffer()
+  end,
+  
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
@@ -50,7 +59,7 @@ cmp.setup {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For Luasnip
     end,
-  },
+  }, 
   
 -- Key mapping
   mapping = {
@@ -121,16 +130,24 @@ cmp.setup {
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    -- { name = "buffer" },
     -- { name = "calc" },
+    -- { name = "dap" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-    window = {
-  documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  },
+  window = {
+    -- documentation = "native",
+    documentation = {
+      -- border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      -- winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+    },
+    completion = {
+      -- border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      -- winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+    },
   },
   experimental = {
     ghost_text = false,
