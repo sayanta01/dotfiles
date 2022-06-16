@@ -44,8 +44,8 @@ for k,v in pairs(options) do
 end
 
 -- Settings
-vim.opt.shortmess:append "c"
-vim.opt.shortmess:append "I" 
+vim.opt.shortmess:append "I"
+vim.opt.shortmess:append "c" 
 vim.opt.whichwrap:append "<,>,[,],h,l"
 
 -- Disable builtin plugins
