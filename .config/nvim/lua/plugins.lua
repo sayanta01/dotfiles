@@ -3,21 +3,21 @@ if not status_ok then
   return
 end
 
--- Popup
-packer.init {
-  display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
-    end,
-  },
-}
+-- Popup window
+--packer.init {
+--  display = {
+--    open_fn = function()
+--      return require("packer.util").float { border = "rounded" }
+--    end,
+--  },
+--}
 
 -- Plugins
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" 
   use "kyazdani42/nvim-web-devicons"
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugin
+  use "nvim-lua/popup.nvim"
+  use "nvim-lua/plenary.nvim"
   use "LunarVim/darkplus.nvim"
   use "LunarVim/onedarker.nvim"
   use 'folke/tokyonight.nvim'
@@ -28,7 +28,7 @@ return packer.startup(function(use)
   use "moll/vim-bbye"   
   use "goolord/alpha-nvim"
   use "lewis6991/impatient.nvim"
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "windwp/nvim-autopairs" -- Autopairs, integrates cmp & treesitter
   use "lukas-reineke/indent-blankline.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
   
@@ -53,15 +53,17 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" 
   use "hrsh7th/cmp-cmdline" 
 
+  use "mfussenegger/nvim-dap"
+
   -- Snippets
   use "L3MON4D3/LuaSnip" 
   use "rafamadriz/friendly-snippets" 
 
   -- LSP
-    use "neovim/nvim-lspconfig" -- enable LSP
-    use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-    use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-    use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+    use "neovim/nvim-lspconfig" 
+    use "williamboman/nvim-lsp-installer" 
+    use "tamago324/nlsp-settings.nvim" 
+    use "jose-elias-alvarez/null-ls.nvim" -- formatters & linters
     
   -- Treesitter
   use {
@@ -74,3 +76,4 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
+
