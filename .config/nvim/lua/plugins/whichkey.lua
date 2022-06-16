@@ -6,10 +6,10 @@ end
 local setup = {
   plugins = {
     marks = true, 
-    registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+    registers = true, 
     spelling = {
       enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-      suggestions = 20, -- how many suggestions should be shown in the list?
+      suggestions = 20,
     },
     -- the presets plugin, adds help for a bunch of default keybindings in Neovim
     -- No actual key bindings are created
@@ -23,8 +23,6 @@ local setup = {
       g = true, -- bindings for prefixed with g
     },
   },
-  -- add operators that will trigger motion and text object completion
-  -- to enable all native operators, set the preset / operators plugin above
   operators = { gc = "Comments" },
   key_labels = {
     -- override the label used to display some keys. It doesn't effect WK in any other way.
@@ -34,26 +32,26 @@ local setup = {
     -- ["<tab>"] = "TAB",
   },
   icons = {
-    breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-    separator = "➜", -- symbol used between a key and it's label
-    group = "+", -- symbol prepended to a group
+    breadcrumb = "»", 
+    separator = "➜", 
+    group = "+", 
   },
   popup_mappings = {
-    scroll_down = "<c-d>", -- binding to scroll down inside the popup
-    scroll_up = "<c-u>", -- binding to scroll up inside the popup
+    scroll_down = "<c-d>", 
+    scroll_up = "<c-u>", 
   },
   window = {
-    border = "rounded", -- none, single, double, shadow
-    position = "bottom", -- bottom, top
-    margin = { 0, 0, 0, 0 }, -- extra window margin [top, right, bottom, left]
-    padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
+    border = "rounded", -- none, shadow
+    position = "bottom", -- top
+    margin = { 0, 0, 0, 0 }, 
+    padding = { 2, 2, 2, 2 }, 
     winblend = 0,
   },
   layout = {
-    height = { min = 4, max = 24 }, -- min and max height of the columns
-    width = { min = 20, max = 50 }, -- min and max width of the columns
-    spacing = 2, -- spacing between columns
-    align = "left", -- align columns left, center or right
+    height = { min = 4, max = 24 }, 
+    width = { min = 20, max = 50 }, 
+    spacing = 2, 
+    align = "left", 
   },
   ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
   hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
@@ -79,12 +77,12 @@ local opts = {
 }
 
 local mappings = {
+   --b = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Buffers"},
+   --f = {"<cmd>Telescope find_files<cr>", "Find Files"},    
    a = { "<cmd>Alpha<cr>", "Alpha" },
-  --b = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Buffers"},
    e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
    E = { ":e ~/.config/nvim/init.lua<cr>", "Edit config" },
    f = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find files"},
-  --f = {"<cmd>Telescope find_files<cr>", "Find Files"},    
    w = { "<cmd>w!<CR>", "Save" },
    h = { "<cmd>nohlsearch<CR>", "No Highlight" },
    q = { "<cmd>q!<CR>", "Quit" },
@@ -95,7 +93,7 @@ local mappings = {
 
   g = {
     name = "Git",
-    --g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
     o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
@@ -110,11 +108,10 @@ local mappings = {
     d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff", },
   },
 
-    l = {
+  l = {
     name = "LSP",
     a = {'<cmd>lua vim.lsp.buf.code_action()<CR>', "Code actions"},
     f = {'<cmd>lua vim.lsp.buf.format()<CR>', "Format File"},
-    d = {'<cmd>lua vim.diagnostic.show_line_diagnostics()<CR>', "Show line diagnostics"},
     r = {'<cmd>lua vim.lsp.buf.rename()<CR>', "Rename"},    
     R = {'<cmd>lua vim.lsp.buf.references()<CR>', "References"},
     i = {'<cmd>LspInstallInfo<cr>', 'Install language server'},
@@ -122,7 +119,7 @@ local mappings = {
     w = {'<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', "Add workspace folder"},
     W = {'<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', "Remove workspace folder"},
     n = {'<cmd>lua vim.diagnostic.goto_next()<CR>', "Go to next diagnostic"},
-    N = {'<cmd>lua vim.diagnostic.goto_prev()<CR>', "Go to previous diagnostic"},   
+    p = {'<cmd>lua vim.diagnostic.goto_prev()<CR>', "Go to previous diagnostic"},   
     k = {'<cmd>lua vim.lsp.buf.signature_help()<CR>', "Signature help"},
     K = {'<cmd>lua vim.lsp.buf.hover()<CR>', "Hover"},
     t = {'<cmd>lua vim.lsp.buf.type_definition()<CR>', "Type definition"},
@@ -134,7 +131,8 @@ local mappings = {
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols"},
     --e = { "<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
-    --D = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+    --N = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+    --d = {'<cmd>lua vim.diagnostic.show_line_diagnostics()<CR>', "Show line diagnostics"},
   },
   
   s = {
@@ -168,6 +166,19 @@ local mappings = {
     s = {":PackerSync<cr>", "Sync Plugins"},
     S = {":PackerStatus<cr>", "Packer Status"},
     u = {":PackerUpdate<cr>", "Update Plugins"}
+  },
+  
+  d = {
+    name = "Debug",
+    b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
+    c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+    i = { "<cmd>lua require'dap'.step_into()<cr>", "Into" },
+    o = { "<cmd>lua require'dap'.step_over()<cr>", "Over" },
+    r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl" },
+    u = { "<cmd>lua require'dap'.step_out()<cr>", "Out" },
+    U = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
+    l = { "<cmd>lua require'dap'.run_last()<cr>", "Last" },
+    x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
   },                             
 
   b = {
@@ -185,7 +196,13 @@ local mappings = {
     p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  
+  T = {
+    name = "Treesitter",
+    i = { ":TSConfigInfo<cr>", "Info" },
+  },
 }
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
+
