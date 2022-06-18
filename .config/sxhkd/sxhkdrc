@@ -34,6 +34,10 @@ super + F7
 alt + F7
         dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
+# weather
+alt + w
+      notify-send -t 2000 "$(curl -s 'wttr.in/{Surat}?format=3')"
+
 # uptime
 alt + u
       notify-send -t 900 "$(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
