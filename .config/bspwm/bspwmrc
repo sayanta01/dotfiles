@@ -22,6 +22,7 @@ xsetroot -cursor_name left_ptr &
 sxhkd &
 killall -q "imwheel" &
 imwheel -b "4 5" 
+xset r rate 200 50 &
 kdeconnect-indicator &
 xwallpaper --zoom ~/.config/walls/wallpaper.jpg &
 dunst &
