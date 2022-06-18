@@ -29,7 +29,8 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
-  use "nvim-telescope/telescope-media-files.nvim"
+  use "akinsho/toggleterm.nvim"
+  --use "nvim-telescope/telescope-media-files.nvim"
   use "windwp/nvim-autopairs" -- Autopairs, integrates cmp & treesitter
   use "RRethy/vim-illuminate"
   use {
@@ -38,12 +39,9 @@ return packer.startup(function(use)
   }
   
   use "nvim-telescope/telescope.nvim"
-  use "akinsho/toggleterm.nvim"
   use "kyazdani42/nvim-tree.lua"  
   use "akinsho/bufferline.nvim"  
-  
   use "folke/which-key.nvim"
-  use "lewis6991/gitsigns.nvim"
     
   -- cmp plugins
   use "hrsh7th/nvim-cmp" 
