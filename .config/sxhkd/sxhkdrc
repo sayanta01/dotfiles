@@ -79,7 +79,7 @@ alt + o
       wal -qi ~/.config/walls
       
 # notion
-ctrl + alt + n
+super + alt + n
               open http://notion.new
 	  
 # wallch
@@ -115,8 +115,8 @@ alt + b
       google-chrome
         
 # firefox
-alt + w
-      firefox
+super + alt + b
+              firefox
            
 # terminal
 super + Return
