@@ -1,0 +1,86 @@
+#!/bin/sh
+
+sudo ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime      
+sudo hwclock --systohc                                          
+
+sudo pacman -Syu && sudo pacman -Sy --noconfirm cargo && cargo install ttyper
+sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-cascadia-code \ 
+noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome terminus-font \
+linux-firmware linux-headers \ #linux-lts linux-lts-headers
+thunar thunar-archive-plugin firefox ranger zathura zathura-pdf-mupdf lsd exa bat \
+neovim fzf translate-shell openssh wget curl mate-calc ripgrep nodejs \ #yarn
+tree ncdu rsync unrar unzip zip p7zip tar python-pywal xdotool \
+dhcpcd networkmanager wireless_tools net-tools dialog cmake libconfig \
+xwallpaper sxiv ffmpeg imagemagick dash aria2  wmctrl imwheel \
+fortune-mod mpv pipewire pulseaudio pavucontrol \
+speedtest-cli trash-cli yt-dlp transmission-cli \
+bpytop neofetch htop \
+intel-ucode virtualbox-guest-utils \
+unclutter zsh-syntax-highlighting zsh-completions zsh-autosuggestions jq xdg-user-dirs xorg xclip
+
+#sudo systemctl enable vboxservice
+
+#sudo pacman -Syu lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+##dm-tool switch-to-greeter
+#sudo systemctl enable lightdm.service
+
+#
+sudo pacman -Sy --noconfim nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
+scrcpy android-tools nvtop stress \
+obs-studio audacity gimp kdeconnect blender discord docker \
+deluge telegram-desktop \
+bluez bluez-utils blueman ntfs-3g \
+virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
+
+#sudo systemctl enable --now libvirtd
+#sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104
+#sudo usermod -aG libvirt bot
+#sudo systemctl restart libvirtd
+#sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
+#sudo virsh net-autostart default
+
+sudo systemctl enable bluetooth
+sudo systemctl enable fstrim.timer
+
+git clone https://aur.archlinux.org/yay.git ~/yay 
+cd ~/yay && makepkg -si
+yay -Sy --noconfirm spotify-adblock notion-app cointop google-chrome ly
+sudo systemctl enable ly.service 
+
+mkdir ~/{Desktop,Documents,Downloads,Music,Pictures,Videos} 
+
+sudo cat <<EOF | sudo tee /etc/resolv.conf 
+nameserver 1.1.1.1
+nameserver 8.8.8.8
+EOF
+ 
+setfont /usr/share/kbd/consolefonts/ter-c18b.psf.gz
+sudo cat <<EOF | sudo tee /etc/vconsole.conf
+FONT=ter-c20b.psf.gz
+EOF
+
+
+########## BSPWM ##########
+sudo pacman -Sy --noconfirm bspwm sxhkd dmenu rofi kitty slock dunst playerctl lxappearance maim alsa-utils dbus-python
+yay -Sy --noconfirm polybar preload
+
+cp -r ~/dotfiles/{.zshrc,.fonts,.xinitrc,.imwheelrc,.icons,.themes} ~/
+cp -r ~/dotfiles/.config/* ~/.config
+chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.config/scripts/* ~/.config/sxiv/exec/key-handler
+
+cd ~/.config/dmenu && sudo make clean install
+
+sudo cp -r ~/.icons/MineKali/cursors /usr/share/icons/Adwaita 
+sudo cp -r ~/.icons/MineKali /usr/share/icons
+sudo cp -r ~/.themes/* /usr/share/themes
+
+#xdg-mime query filetype (file)  #check filetype
+#xdg-mime query default (file/type)  #check default app of filetype
+xdg-mime default sxiv.desktop image/jpeg
+xdg-mime default sxiv.desktop image/jpg
+xdg-mime default sxiv.desktop image/png
+xdg-mime default inkscape.desktop image/svg+xml
+xdg-mime default org.pwmt.zathura.desktop application/pdf
+
+# uncmnt zsh plugins of arch
+# vim /etc/pacman.conf # uncheck ignorepkg and put pkgname
