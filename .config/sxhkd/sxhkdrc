@@ -6,6 +6,22 @@
 alt + F1
        bash ~/.config/scripts/blutoothcd
        
+# switch audio
+alt + F5       
+       bash ~/.config/scripts/audioswitch       
+
+# classic music
+ctrl + F7
+        bash ~/.config/scripts/music
+
+# wallch
+alt + p
+      bash ~/.config/scripts/wallch
+	     		    
+# 0x0
+alt + 0
+      bash ~/.config/scripts/0x0
+	     
 # vol down
 alt + F2
        amixer set Master 5%-
@@ -17,10 +33,6 @@ alt + F3
 # mute
 alt + F4
         amixer set Master toggle         
-
-# switch audio
-alt + F5       
-       bash ~/.config/scripts/audioswitch
 
 # previous
 alt + F6 
@@ -45,10 +57,6 @@ alt + w
 # uptime
 alt + u
       notify-send -t 900 "$(echo  ) $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
-
-# classic music
-ctrl + F7
-        bash ~/.config/scripts/music
 	
 # next
 alt + F8
@@ -81,18 +89,10 @@ alt + o
 # notion
 super + alt + n
               open http://notion.new
-	  
-# wallch
-ctrl + alt + p
-             bash ~/.config/scripts/wallch
 	     
 # kill ps
 ctrl + alt + Delete
-                    bash ~/.config/scripts/kill
-		    
-# 0x0
-alt + 0
-	      bash ~/.config/scripts/0x0
+                  bash ~/.config/scripts/kill
            
 # reboot
 ctrl + shift + F4
@@ -107,7 +107,7 @@ ctrl + alt + l
              slock
                          
 # thunar
-super + e
+alt + e
         thunar
 
 # chrome
@@ -141,10 +141,6 @@ alt + t
 # virtual-box
 alt + shift + v 
               virtualbox
-
-# calc
-ctrl + shift + alt + k
-                     mate-calculator
                     
 # vs-code 
 alt + shift + c
@@ -161,8 +157,12 @@ alt + shift + w
 # burpsuite
 alt + shift + b
               burpsuite    
-   
+
+# calc
+ctrl + shift + alt + k
+                     mate-calculator
       
+
 
 
 #
