@@ -27,7 +27,7 @@ unclutter zsh-syntax-highlighting zsh-completions zsh-autosuggestions jq xdg-use
 sudo pacman -Sy --noconfim nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
 scrcpy android-tools nvtop stress \
 obs-studio audacity gimp kdeconnect blender discord docker \
-deluge telegram-desktop gnome-disk-utility \
+deluge telegram-desktop \
 bluez bluez-utils blueman ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
