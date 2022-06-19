@@ -18,7 +18,7 @@ synaptic stacer stress \
 speedtest-cli trash-cli yt-dlp transmission-cli \
 bpytop neofetch preload htop \
 android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
-obs-studio audacity gimp blender kdeconnect translate-shell gnome-disk-utility \
+obs-studio audacity gimp blender kdeconnect translate-shell \
 telegram-desktop deluge tor torbrowser-launcher docker.io  #snapd apt-transport-https
  
 sudo apt purge -y --auto-remove onboard xterm cherrytree
