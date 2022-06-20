@@ -48,7 +48,7 @@ alt + F7
 
 # temperature
 alt + i
-      notify-send -t 900 "$(echo  Temp) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input) $(echo °C)"
+      notify-send -t 900 "$(echo  Temp) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input| cut -b -2)$(echo °C)"
       
 # weather
 alt + w
