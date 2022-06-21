@@ -11,7 +11,7 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 sudo apt update && sudo apt install -y cargo && cargo install ttyper lsd bat
 sudo apt install -y fzf ranger gpg \
 zathura ripgrep exa fd-find nodejs \ #yarnpkg fonts-jetbrains-mono
-ncdu slock imwheel \
+ncdu slock imwheel npm \
 xwallpaper sxiv ffmpeg aptitude \
 fortune font-viewer exiftool inkscape \
 synaptic stacer stress \
