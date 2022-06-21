@@ -57,9 +57,9 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 HISTSIZE=2000
 SAVEHIST=2000
 HISTFILE=~/.zsh_history
-setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_space       # ignore commands that start with space
-setopt hist_ignore_dups        # ignore duplicated commands history list
+setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_all_ignore_dups    # ignore duplicated commands history list
 setopt hist_verify             # show command with history expansion to user before running it
 
 
