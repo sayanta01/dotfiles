@@ -33,8 +33,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  
 pip3 install pynvim black flake8
 cargo install stylua
-sudo apt install -y ueberzug eslint ccls
-sudo npm i -g prettier shfmt astyle live-server
+sudo apt install -y ueberzug eslint ccls shfmt
+sudo npm i -g prettier astyle live-server
 
 #
 sudo apt install -y virt-manager qemu
