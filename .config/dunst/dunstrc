@@ -1,16 +1,18 @@
 [global]
     monitor = 0
     follow = mouse
-    geometry = "300x50-9+38"
-    #origin = top-left
+    width = 299
+    height = 299
+    origin = top-right
+    offset = 9x38
     scale = 0
     notification_limit = 0
     indicate_hidden = yes
     #transparency = 0
     separator_height = 2
-    padding = 9
+    padding = 8
     horizontal_padding = 8
-    frame_width = 1
+    frame_width = 2
     frame_color = "#ABB2BF"
     separator_color = frame
     sort = yes
@@ -20,64 +22,66 @@
     format = "<b>%s</b>\n%b"
     alignment = center
     show_age_threshold = 60
-    icon_position = left
+    #icon_position = left
     min_icon_size = 40
     max_icon_size = 50
     sticky_history = yes
-    history_length = 9
-    browser = x-www-browser
+    history_length = 20
+    browser = /usr/xdg/bin-open
     always_run_script = true
     title = Dunst
     class = Dunst
     corner_radius = 2
-    shrink = no
-    idle_threshold = 90
-    icon_path = false
     #text_icon_padding = 0
-    progress_bar = false
+    icon_path = false
     ignore_newline = no
     stack_duplicates = true
     hide_duplicate_count = false
     show_indicators = yes
     gap_size = 0
-    ignore_dbusclose = false    
+    ignore_dbusclose = false
     vertical_alignment = center
-    ellipsize = middle
-
-
-    ### Wayland ###
-    # Uncomment this if you want to let notications appear under fullscreen
-    # applications (default: overlay)
+    ellipsize = middle   
+    enable_recursive_icon_lookup = false
+    progress_bar = false
+    
+    #progress_bar_height = 90
+    #progress_bar_frame_width = 2
+    #progress_bar_min_width = 200
+    #progress_bar_max_width = 280
+  
+  
+### Wayland ###
+    #Uncomment for notications appear under fullscreen
+    #applications (default: overlay)
+    #Set this to true to use X11 output on Wayland.
     # layer = top
-    # Set this to true to use X11 output on Wayland.
     # force_xwayland = false
     # force_xinerama = false
 
-
-[shortcuts]
-   #close = ctrl+shift+space
-   close_all = ctrl+shift+space
-   history = ctrl+grave
-   mouse_left_click = close_current
-   mouse_right_click = close_all
+    close = ctrl+shift+space
+    close_all = ctrl+shift+space
+    history = ctrl+grave
+    mouse_left_click = close_current
+    mouse_right_click = close_all
 
 [experimental]
-    per_monitor_dpi = false
+     per_monitor_dpi = false
+
 
 [urgency_low]
-    background = "#222222"
-    foreground = "#888888"
-    timeout = 2
+     background = "#222222"
+     foreground = "#888888"
+     timeout = 2
 
 [urgency_normal]
-    background = "#282c34"
-    foreground = "#D8DEE9"
-    timeout = 4
+     background = "#282c34"
+     foreground = "#D8DEE9"
+     timeout = 4
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
-    frame_color = "#ff0000"
-    timeout = 6
-    
-    
+     background = "#900000"
+     foreground = "#ffffff"
+     frame_color = "#ff0000"
+     timeout = 6
+
