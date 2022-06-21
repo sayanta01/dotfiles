@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="transform-affect-rounded-corners.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="47.25"
+     inkscape:cx="8"
+     inkscape:cy="8.010582"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="m 2,1 v 2 h 7 c 2,0 3,1 3,3 v 2 h 2 V 6 C 14,2.5 12.5,1 9,1 Z M 11.327667,9.2457506 11,9.4862777 V 10.810161 L 10.799753,11 v 0 H 9 v 2 h 1.837253 v 0 L 11,13.190347 v 1.290494 0 l 0.421238,0.20323 3.25072,-2.43804 v 0 l -0.0058,-0.49644 z M 2,11 v 2 h 2 v -2 z m 3,0 v 2 H 8 V 11 Z M 2,5 v 1 h 6 c 1,0 1,1 1,1 v 1 h 1 V 7 C 10,7 10,5 8,5 Z"
+     id="path5"
+     sodipodi:nodetypes="ccssccssccccccccccccccccccccccccccccsccsccccs" />
+</svg>

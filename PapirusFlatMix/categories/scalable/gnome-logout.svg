@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 384 384"
+   id="svg159"
+   sodipodi:docname="xfsm-logout.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs163" />
+  <sodipodi:namedview
+     id="namedview161"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.6425781"
+     inkscape:cx="255.6956"
+     inkscape:cy="256"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg159" />
+  <path
+     d="m360 192c0 92.785-75.215 168-168 168s-168-75.215-168-168 75.215-168 168-168 168 75.215 168 168z"
+     fill="#367bf0"
+     id="path149" />
+  <path
+     d="m192 91.5c59.648 0 108 48.352 108 108s-48.352 108-108 108-108-48.352-108-108 48.352-108 108-108zm0 24c-46.391 0-84 37.609-84 84s37.609 84 84 84 84-37.609 84-84-37.609-84-84-84zm0 48 23.789 18.469 24.215 17.531-24.203 17.531-23.797 18.469 0.28907-24h-36.289c-6.6484 0-12-5.3516-12-12s5.3516-12 12-12h36.281l-0.28125-24z"
+     fill="#000205"
+     opacity=".31"
+     id="path151" />
+  <path
+     d="m 192,84 c 59.648,0 108,48.352 108,108 0,59.648 -48.352,108 -108,108 C 132.352,300 84,251.648 84,192 84,132.352 132.352,84 192,84 Z m 0,24 c -46.391,0 -84,37.609 -84,84 0,46.391 37.609,84 84,84 46.391,0 84,-37.609 84,-84 0,-46.391 -37.609,-84 -84,-84 z m 0.0854,54.96221 6.23304,-2.05678 17.47056,13.56357 20.28407,14.68512 v 0 l 0.71226,5.17726 -20.98433,15.19962 -17.36268,13.47529 v 0 L 192.10159,219.89696 192.29306,204 h -36.289 c -6.6484,0 -12,-5.3516 -12,-12 0,-6.6484 5.3516,-12 12,-12 h 36.281 l -0.19966,-17.03779 z"
+     fill="#ffffff"
+     id="path153"
+     sodipodi:nodetypes="sssssssssscccccccccccssscccc" />
+  <path
+     transform="scale(.75)"
+     d="m32.062 251c-0.036438 1.6631-0.0625 3.3282-0.0625 5 0 123.71 100.29 224 224 224s224-100.29 224-224c0-1.6718-0.02606-3.3369-0.0625-5-2.66 121.4-101.9 219-223.94 219s-221.28-97.597-223.94-219z"
+     fill="#000b1d"
+     opacity=".3"
+     stroke-width="1.3333"
+     id="path155" />
+  <path
+     transform="scale(.75)"
+     d="m256 32c-123.71 0-224 100.29-224 224 0 1.6718 0.026062 3.3369 0.0625 5 2.66-121.4 101.9-219 223.94-219s221.28 97.597 223.94 219c0.03644-1.6631 0.0625-3.3282 0.0625-5 0-123.71-100.29-224-224-224z"
+     fill="#fff"
+     opacity=".1"
+     stroke-width="1.3333"
+     id="path157" />
+</svg>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="code-context.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     showgrid="false"
+     inkscape:zoom="146.19433"
+     inkscape:cx="3.9126005"
+     inkscape:cy="14.566229"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="M 3,1 C 1.892,1 1,1.892 1,3 v 10 c 0,1.108 0.892,2 2,2 h 10 c 1.108,0 2,-0.892 2,-2 V 3 C 15,1.892 14.108,1 13,1 Z M 6.6816,3 H 6.857267 V 3 L 7,3.1204228 V 3.6334536 L 6.9008717,3.7559 v 0 l -0.2543717,0 c -0.472,0 -0.7783,0.0791 -0.9199,0.2343 -0.145,0.1517 -0.2188,0.4777 -0.2188,0.9786 v 1.3124 c 0,0.5539 -0.0747,0.9551 -0.2266,1.2051 -0.1274485,0.211013 -0.3337713,0.3639305 -0.6186118,0.4595842 -0.053977,0.018126 0.043666,0.080017 -0.015948,0.094036 0.053773,0.013652 -0.049187,-0.016894 0,0 C 4.9397396,8.1405913 5.1513851,8.2987689 5.2812,8.5137 5.433,8.7637 5.5078,9.1648 5.5078,9.7148 v 1.3122 c 0,0.505 0.0738,0.831 0.2188,0.983 0.1416,0.151 0.4479,0.228 0.9199,0.228 H 6.8506998 L 7,12.370019 v 0 0.483484 L 6.9082379,13 v 0 H 6.6816 C 5.8422,13 5.2818,12.87 5.002,12.609 4.7188,12.348 4.5781,11.826 4.5781,11.047 V 9.7832 C 4.5781,9.2512 4.4867,8.8817 4.3047,8.6777 4.1226,8.4727 3.7932,8.3711 3.3145,8.3711 H 3 V 7.6133 h 0.3145 c 0.4787,0 0.8081,-0.0988 0.9902,-0.3008 0.182,-0.204 0.2734,-0.5701 0.2734,-1.0957 V 4.9473 C 4.5781,4.1677 4.7188,3.6481 5.002,3.3906 5.2818,3.1296 5.8422,3 6.6816,3 Z M 9,3.1188422 9.136548,3 H 9.3184 c 0.8396,0 1.3996,0.1296 1.6796,0.3906 0.283,0.2575 0.424,0.7771 0.424,1.5567 v 1.2695 c 0,0.5256 0.091,0.8917 0.273,1.0957 0.182,0.202 0.512,0.3008 0.991,0.3008 H 13 v 0.7578 h -0.314 c -0.479,0 -0.809,0.1016 -0.991,0.3066 -0.182,0.204 -0.273,0.5735 -0.273,1.1055 v 1.2638 c 0,0.779 -0.141,1.301 -0.424,1.562 C 10.718,12.87 10.158,13 9.3184,13 H 9.0943559 v 0 L 9,12.903552 v -0.563401 0 l 0.097823,-0.102151 0.2556771,0 c 0.472,0 0.7785,-0.077 0.9195,-0.228 0.145,-0.152 0.219,-0.478 0.219,-0.983 V 9.7148 c 0,-0.55 0.075,-0.9511 0.227,-1.2011 0.132773,-0.2207014 0.352911,-0.3815611 0.658375,-0.4817634 0.04194,-0.013756 -0.03726,-0.05935 0.0079,-0.070817 -0.04232,-0.00996 0.0395,0.01203 0,0 C 11.075698,7.8668441 10.852913,7.7088965 10.719,7.4863 10.567,7.2363 10.492,6.8351 10.492,6.2812 V 4.9688 C 10.492,4.468 10.418,4.1419 10.273,3.9902 10.132,3.835 9.8255,3.7559 9.3535,3.7559 l -0.2290024,0 v 0 L 9,3.6450046 Z"
+     id="path5"
+     sodipodi:nodetypes="ssssssssssccccccscsscscscsscsccccccscsscsccscsscsccscsscsccscsscsccccccscsscscscsscsccccc" />
+</svg>

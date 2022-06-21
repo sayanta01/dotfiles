@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32"
+   height="32"
+   version="1"
+   id="svg995053"
+   sodipodi:docname="museeks.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs995057" />
+  <sodipodi:namedview
+     id="namedview995055"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="25.84375"
+     inkscape:cx="15.980653"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg995053" />
+  <rect
+     fill="#469ed7"
+     width="28"
+     height="28"
+     x="2"
+     y="2"
+     rx="14"
+     ry="14"
+     id="rect995039" />
+  <path
+     opacity=".2"
+     d="m20 10-8 9.5 4 3.5 3-3v4h4v-14z"
+     id="path995041" />
+  <path
+     fill="#abfaff"
+     d="m 20,9 -8,9.5 3.698321,3.236031 v 0 L 16.367176,21.632824 19,19 v 4 h 4 V 9 Z"
+     id="path995043"
+     sodipodi:nodetypes="cccccccccc" />
+  <path
+     opacity="0.2"
+     d="M 17,17 13,20.5 9.953715,23.165499 9,22.743446 v 0 V 10 l 4,3.5 z"
+     id="path995045"
+     sodipodi:nodetypes="cccccccc" />
+  <path
+     fill="#ffffff"
+     d="m 16.516654,16.422928 v 0 L 13,19.5 9.8826343,22.227695 9,21.92909 v 0 -12.1098804 0 L 9.7141565,9.624887 13,12.5 l 3.488211,3.052184 z"
+     id="path995047"
+     sodipodi:nodetypes="cccccccccccc" />
+  <path
+     fill="#fff"
+     opacity=".2"
+     d="m16 2c-7.7552 0-13.998 6.244-13.998 14 0 0.16884 0.019522 0.33264 0.025391 0.5 0.2637-7.5206 6.3862-13.5 13.973-13.5 7.5864 0 13.709 5.9794 13.973 13.5 0.0059-0.16736 0.02539-0.33116 0.02539-0.5 0-7.756-6.243-14-13.998-14z"
+     id="path995049" />
+  <path
+     opacity=".2"
+     d="m2.0254 16.5c-0.0059 0.167-0.0254 0.331-0.0254 0.5 0 7.756 6.244 14 14 14s14-6.244 14-14c0-0.169-0.02-0.333-0.025-0.5-0.264 7.521-6.388 13.5-13.975 13.5-7.5872 0-13.711-5.979-13.975-13.5z"
+     id="path995051" />
+</svg>

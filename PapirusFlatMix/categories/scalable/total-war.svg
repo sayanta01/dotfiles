@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32"
+   height="32"
+   version="1"
+   id="svg2071888"
+   sodipodi:docname="total-war.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2071892" />
+  <sodipodi:namedview
+     id="namedview2071890"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="25.84375"
+     inkscape:cx="15.980653"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2071888" />
+  <g
+     transform="matrix(.875 0 0 1.05 2 -.3)"
+     id="g2071874">
+    <path
+       fill="#fec006"
+       d="m 15.648731,6.4878869 v 0 L 9.4813837,15.053871 v 0 L 8.6945823,15.056995 0.73735271,6.7680875 0.04613036,6.807251 v 0 L 1.1429,26 h 29.714 L 31.950057,6.8721415 v 0 l -0.756589,-0.032105 -7.861556,8.1891573 v 0 L 22.48296,15.00461 16.368486,6.5118148 Z"
+       id="path2071872"
+       sodipodi:nodetypes="cccccccccccccccccc" />
+  </g>
+  <rect
+     fill="#e82d2d"
+     width="2.5"
+     height="2.5"
+     x="7.5"
+     y="32.5"
+     transform="matrix(.6 -.8 .6 .8 0 0)"
+     id="rect2071876" />
+  <rect
+     fill="#e82d2d"
+     width="3.606"
+     height="3.606"
+     x=".72"
+     y="24.52"
+     transform="matrix(.55470 -.83205 .55470 .83205 0 0)"
+     id="rect2071878" />
+  <rect
+     fill="#e82d2d"
+     width="2.5"
+     height="2.5"
+     x="-8.33"
+     y="16.67"
+     transform="matrix(.6 -.8 .6 .8 0 0)"
+     id="rect2071880" />
+  <g
+     fill="#fff"
+     transform="matrix(.875 0 0 1.05 2 -.3)"
+     id="g2071884">
+    <path
+       opacity="0.2"
+       transform="matrix(1.1429,0,0,0.95238,-2.2857,0.28571)"
+       d="m 2.0507306,7.0625116 0.8442323,1.0552982 v 0 L 10,17 16,7 22,17 29.949,7.0625 30,6 22,16 16.447695,6.7461591 16,7 15.613128,6.7193788 10.050731,17.062512 Z"
+       id="path2071882"
+       sodipodi:nodetypes="cccccccccccccc" />
+  </g>
+  <path
+     opacity="0.2"
+     d="m 2.0001,7 1,21 h 26.001 l 1,-21 -0.051,0.0625 -0.94904,19.938 H 3.00006 L 2.1092201,8.2891464 2.05082,7.0625 2.000018,7.0005 Z"
+     id="path2071886"
+     sodipodi:nodetypes="ccccccccccc" />
+</svg>

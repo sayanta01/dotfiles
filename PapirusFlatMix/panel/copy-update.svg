@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   x="0"
+   y="0"
+   version="1.1"
+   xml:space="preserve"
+   id="svg65712"
+   sodipodi:docname="copy-update.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview65714"
+   pagecolor="#000000"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   inkscape:zoom="34.458333"
+   inkscape:cx="12.01451"
+   inkscape:cy="12"
+   inkscape:window-width="1920"
+   inkscape:window-height="1051"
+   inkscape:window-x="0"
+   inkscape:window-y="29"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg65712" />
+ <defs
+   id="defs65706">
+  <style
+   id="current-color-scheme"
+   type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+ </defs>
+ <path
+   style="fill:currentColor"
+   class="ColorScheme-Text"
+   d="m 20.636,3.0255 -0.62102,0.75393 c 0.179742,0.163721 0.338916,0.3486842 0.47402,0.55082 l 0.512,-0.9785 -0.365,-0.3262 z M 6,7.5003 2.4979065,10.564216 2.6533324,10.90664 v 0 L 6.375,10.37498 l 1.5353828,9.093914 0.4514347,0.28608 v 0 L 11.3932,17.69918 l 8.96645,2.614254 0.43074,-0.338431 v 0 l -2.78999,-6.975023 -2.0001,-1.4 -5.2522,4.4922 -3.2488,-8.0917 -1.5,-0.5 z m 10.207,0.90043 -1.189,1.4435 1.9821,1.1562 1.047,-2.0021 c -0.01566,7.895e-4 -0.03133,0.00146 -0.047,0.002 -0.646705,-0.00139 -1.27565,-0.2117091 -1.7931,-0.59962 z m -3.2071,1.6287 -3.0001,0.97103 1,3.0001 4.0001,-3.0001 -2.0001,-0.97103 z"
+   id="path65708"
+   sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccc" />
+ <path
+   style="fill:currentColor"
+   class="ColorScheme-Highlight"
+   d="m20 6a2 2 0 0 1 -4 0 2 2 0 1 1 4 0z"
+   id="path65710" />
+</svg>

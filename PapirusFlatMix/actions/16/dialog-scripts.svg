@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   viewBox="0 0 16 16"
+   id="svg7"
+   sodipodi:docname="akonadiconsole.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="103.375"
+     inkscape:cx="8"
+     inkscape:cy="8.382104"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="M 2,1 C 0.89200005,1 4.9999999e-8,1.892 4.9999999e-8,3 V 13 C 4.9999999e-8,14.108 0.89200005,15 2,15 h 12 c 1.108,0 2,-0.892 2,-2 V 3 C 16,1.892 15.108,1 14,1 Z M 4,3 H 4.9999999 V 3.9131236 L 5.1039301,4 V 4 H 5.4999999 C 6.1093325,4 6.6268236,4.3628521 6.8612777,4.8831263 6.8784645,4.9212652 6.777484,4.9602501 6.7915535,5 V 5 L 5.1111888,5 4.9999999,5.1122182 v 0 l 0,0.7976818 L 5.082565,6 v 0 h 0.4174349 c 0.831,0 1.5,0.669 1.5,1.5 0,0.831 -0.669,1.5 -1.5,1.5 H 5.1232016 V 9 L 4.9999999,9.0858655 V 10 H 4 v -0.9230068 0 L 3.9056929,9 H 3.5 C 2.8866804,9 2.3667028,8.6326086 2.1343671,8.1071228 2.118881,8.0720969 2.2359792,8.0363687 2.2231065,8 V 8 H 3.9149951 V 8 L 4,7.9056454 V 7.1184575 L 3.8908069,7 V 7 H 3.5 C 2.669,7 2,6.331 2,5.5 2,4.669 2.669,4 3.5,4 H 3.8902575 V 4 L 4,3.8965924 Z M 3.5,5 C 3.223,5 3,5.223 3,5.5 3,5.777 3.223,6 3.5,6 H 3.8983026 V 6 L 4,5.925115 v -0.7850273 0 L 3.8960419,5 Z m 1.4999999,2.0957114 v 0 0.801733 L 5.0992799,8 v 0 h 0.40072 c 0.2767,0.0129 0.5,-0.223 0.5,-0.5 0,-0.277 -0.223,-0.5 -0.5,-0.5 H 5.0872961 Z M 7.9999999,9 H 12 v 1 H 7.9999999 Z"
+     id="path5"
+     sodipodi:nodetypes="ssssssssscccccssccccccccsssccccccccssccccccccsssccccsssccccccsccccccssccccccc" />
+</svg>

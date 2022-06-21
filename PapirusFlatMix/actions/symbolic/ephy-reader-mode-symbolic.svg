@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="ephy-reader-mode-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="103.375"
+     inkscape:cx="8"
+     inkscape:cy="14.186215"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <path
+     style="fill:#5c616c"
+     d="m 0,1 v 13 h 6 c 0.765565,0 1.53113,0.58609 1.8480052,0.86089 0.097035,0.08415 0.3209673,-0.01465 0.3209673,-0.01465 0,0 -0.1075775,0.09237 0,0 C 8.4955603,14.565835 9.2477802,14 10,14 h 6 V 1 H 10 C 9.2104544,1 8.4209088,1.6233822 8.1235519,1.8857693 c -0.079261,0.06994 -0.2152054,0.028438 -0.2152054,0.028438 0,0 0.059149,0.053289 0,0 C 7.6394195,1.671924 6.8197097,1 6,1 Z m 2,2 h 4 c 0.7824239,0 1.5648478,0.6121871 1.8682818,0.8785817 0.084379,0.074079 0.2428733,0.01817 0.2428733,0.01817 0,0 -0.071468,0.063562 0,0 C 8.3984326,3.6412545 9.1992163,3 10,3 h 4 v 9 h -4 c -0.7587293,0 -1.5174586,0.57567 -1.8394101,0.853455 -0.1023783,0.08833 -0.3118518,0.0081 -0.3118518,0.0081 0,0 0.096579,0.08379 0,0 C 7.5323118,12.586995 6.7661559,12 6,12 H 2 Z"
+     id="path2"
+     sodipodi:nodetypes="ccsscssccsscssccsscssccsscsscc" />
+  <path
+     style="opacity:.35;fill:#5c616c"
+     d="M 3 5 L 3 6 L 7 6 L 7 5 L 3 5 z M 9 5 L 9 6 L 13 6 L 13 5 L 9 5 z M 3 7 L 3 8 L 7 8 L 7 7 L 3 7 z M 9 7 L 9 8 L 13 8 L 13 7 L 9 7 z M 3 9 L 3 10 L 7 10 L 7 9 L 3 9 z M 9 9 L 9 10 L 13 10 L 13 9 L 9 9 z"
+     id="path4" />
+</svg>

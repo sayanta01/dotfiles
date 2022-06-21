@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="go-jump-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="47.25"
+     inkscape:cx="8"
+     inkscape:cy="8"
+     inkscape:window-width="1854"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     style="fill:#5c616c"
+     d="m 13.401186,9 0.326581,0.4537209 -2.440556,4.0675931 v 0 L 10.71233,13.520551 8.350114,9.5835233 8.5970827,9 V 9 H 10 V 6 C 10,4.321 8.68,3 7,3 5.32,3 4,4.321 4,6 v 5 H 2 V 6 C 2,3.247 4.25,1 7,1 c 2.75,0 5,2.247 5,5 v 3 z"
+     id="path2"
+     sodipodi:nodetypes="cccccccccsssccsssccc" />
+</svg>

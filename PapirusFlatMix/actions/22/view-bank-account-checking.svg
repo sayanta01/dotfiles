@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="22"
+   height="22"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="view-bank-account-checking.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#0e0e0e"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="34.272727"
+     inkscape:cx="10.985411"
+     inkscape:cy="11"
+     inkscape:window-width="1880"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g9" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <g
+     transform="translate(3,3)"
+     id="g9">
+    <path
+       style="fill:currentColor"
+       class="ColorScheme-Text"
+       d="m 6.5673971,1.4326029 v 0 L 0.74642924,7.2535708 0.77004301,8 V 8 H 2 v 7 h 8.342 C 10.118158,14.531554 10.001336,14.019177 10,13.5 c 0.0017,-1.35034 0.779956,-2.579283 2,-3.158 V 8 h 1.083071 V 8 L 13.267564,7.2675637 7.5341437,1.5341437 Z M 7,6 c 1.1045695,0 2,0.8954305 2,2 0,1.1045695 -0.8954305,2 -2,2 3,0 3,2.5 3,2.5 V 13 H 4 V 12.5 C 4,12.5 4,10 7,10 5.8954305,10 5,9.1045695 5,8 5,6.8954305 5.8954305,6 7,6 Z"
+       id="path5"
+       sodipodi:nodetypes="ccccccccccccccccssccccccss" />
+    <path
+       style="fill:currentColor"
+       class="ColorScheme-Text"
+       d="m 13.5,10.340801 v 0 0.516199 c -1.381,0 -2.5,1.151 -2.5,2.571 0,1.42 1.119,2.572 2.5,2.572 1.367,0 2.476,-1.129 2.498,-2.529 C 15.9994,13.45671 16,13.44236 16,13.428 15.999695,13.191783 15.813636,13.000357 15.584,13 c -0.230417,-7.8e-4 -0.417695,0.190979 -0.418,0.428 0,0.947 -0.746,1.715 -1.666,1.715 -0.92,0 -1.666,-0.769 -1.666,-1.715 0,-0.947 0.746,-1.713 1.666,-1.713 v 0.463741 0 l 0.384168,0.09649 1.034694,-0.799311 0.0037,-0.378654 v 0 l -1.118661,-0.862833 z"
+       id="path7"
+       sodipodi:nodetypes="cccssccccssccccccccc" />
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 384 384"
+   id="svg43083"
+   sodipodi:docname="ardour.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs43087" />
+  <sodipodi:namedview
+     id="namedview43085"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.6152344"
+     inkscape:cx="255.69045"
+     inkscape:cy="256"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g43081" />
+  <path
+     d="m192 30.75s-160.66 321.26-168.75 337.5c168.75-151.88 168.58 0 337.5 0-4.3945-8.5547-168.75-337.5-168.75-337.5z"
+     opacity=".3"
+     id="path43073" />
+  <g
+     fill-opacity=".99608"
+     id="g43081">
+    <path
+       d="m 192,30.75 c 0,0 -1.25757,-4.985322 -3.5558,-0.389685 C 166.91771,73.405674 54.09203,299.01913 28.222926,350.79161 c -2.585813,5.17505 4.003818,2.02653 -4.972926,9.95839 3.046645,-2.74207 6.03823,-5.38513 8.976744,-7.93186 C 192.04898,214.30464 194.87971,360.75 360.75,360.75 356.74482,352.95318 219.86591,79.019659 195.64441,30.543838 193.28997,25.831781 192,30.75 192,30.75 Z"
+       fill="#fd4747"
+       id="path43075"
+       sodipodi:nodetypes="csscscsc" />
+    <path
+       transform="scale(0.75)"
+       d="m 200.22,363.1 c -40.155,-0.33874 -89.62,38.124 -160.24,99.925 -1.053,2.1085 18.393254,-6.15422 4.704427,5.90739 4.65814,-4.19233 -4.469077,3.85054 0,0 C 256.08312,286.79186 260.4383,480.994 480.9956,480.994 c -0.19568,-0.38092 -4.372,-8.7336 -5.0273,-10.035 -145.67,-1.9713 -193.98,-107.17 -275.75,-107.86 z"
+       fill="#220202"
+       opacity="0.3"
+       stroke-width="1.3333"
+       id="path43077"
+       sodipodi:nodetypes="cccscccc" />
+    <path
+       transform="scale(0.75)"
+       d="M 215.66,323.5 C 165.011,324.28813 124.51,366.567 39.98,463.025 264.98,260.525 255.78,481 481,481 L 469.697,458.75 C 428.48,460.2796 397.56,441.491 366.647,423.051 335.734,404.611 266.307,322.711 215.657,323.5 Z"
+       fill="#191919"
+       opacity="0.3"
+       stroke-width="1.3333"
+       id="path43079"
+       sodipodi:nodetypes="ccccscc" />
+  </g>
+</svg>

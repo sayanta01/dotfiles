@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="libreoffice-math-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="47.25"
+     inkscape:cx="8"
+     inkscape:cy="8"
+     inkscape:window-width="1854"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <path
+     style="fill:#5c616c"
+     d="M 10.713547,6 V 6 H 9 L 7.1608256,9.6783487 v 0 L 6.8346266,9.6692533 6,8 H 4 v 2 h 1.46 l 1.3298725,2.590661 0.4218186,0.0022 v 0 L 9.6,8 H 11 V 6.2904518 Z"
+     id="path2"
+     sodipodi:nodetypes="ccccccccccccccccc" />
+  <path
+     style="fill:#5c616c"
+     d="M 2,0 C 1.4477,0 1,0.44772 1,1 v 14 c 0,0.552 0.4477,1 1,1 h 12 c 0.556,0 1,-0.452 1,-1 V 7.5 C 15,7.2426 14.879,6.8786 14.69,6.69 L 8.28,0.275 C 8.0925,0.08746 7.7701,0 7.5,0 Z M 3,2.2061822 3.2212056,2 H 7 l 6,6 v 5.718997 0 L 12.787502,14 H 3.1792961 v 0 L 3,13.740203 Z"
+     id="path4"
+     sodipodi:nodetypes="sssssssccsscccccccccccc" />
+  <path
+     style="fill:#5c616c"
+     d="M 11.5,0 C 10.948,0 10.807,0.5146 11.146,0.85352 L 14.146,3.8535 C 14.497,4.2041 15,3.942 15,3.5 V 0.5 C 15,0.21996 14.78,0 14.5,0 Z"
+     id="path6" />
+</svg>

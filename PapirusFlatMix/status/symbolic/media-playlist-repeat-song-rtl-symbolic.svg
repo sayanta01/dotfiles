@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg4404"
+   sodipodi:docname="media-playlist-repeat-song-symbolic-rtl.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4408" />
+  <sodipodi:namedview
+     id="namedview4406"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9903265"
+     inkscape:cy="8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4404" />
+  <path
+     style="fill:#5c616c"
+     d="M 4.5,8 C 2.57,8 1,9.57 1,11.5 1,13.43 2.57,15 4.5,15 6.43,15 8,13.43 8,11.5 8,9.57 6.43,8 4.5,8 Z M 4,9 H 5 V 14 H 4 V 10.5 H 3 V 10 C 4,10 4,9 4,9 Z"
+     id="path4400" />
+  <path
+     style="fill:#5c616c"
+     d="m 9.6536609,1.2597543 v 0 L 6.3192271,3.7605797 6.2912494,4.2184371 v 0 L 9.5488643,6.6616482 10,6.49365 v 0 V 5 h 2 c 0.554,0 1,0.446 1,1 v 4 c 0,0.554 -0.446,1 -1,1 H 8.9668 C 8.987145,11.165921 8.998229,11.332846 9,11.5 8.99796,12.011351 8.908787,12.518614 8.7363,13 H 12 c 1.662,0 3,-1.338 3,-3 V 6 C 15,4.338 13.662,3 12,3 H 10 V 1.4394989 Z M 4,3 C 2.338,3 1,4.338 1,6 V 8.6777 C 1.5231011,8.0305086 2.2154156,7.5410422 3,7.2637 V 6 C 3,5.446 3.446,5 4,5 H 5 V 3 Z"
+     id="path4402"
+     sodipodi:nodetypes="cccccccccsssscccsssscccssccssccs" />
+</svg>

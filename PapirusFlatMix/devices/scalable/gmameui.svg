@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 384 384"
+   id="svg391435"
+   sodipodi:docname="gmameui.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview391437"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.6152344"
+     inkscape:cx="255.69045"
+     inkscape:cy="256"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg391435" />
+  <defs
+     id="defs391425">
+    <clipPath
+       id="clipPath391419">
+      <rect
+         width="384"
+         height="384"
+         id="rect391417" />
+    </clipPath>
+    <clipPath
+       id="clipPath391423">
+      <rect
+         width="384"
+         height="384"
+         id="rect391421" />
+    </clipPath>
+  </defs>
+  <g
+     transform="matrix(1.0547 0 0 1.0547 -10.5 -14.719)"
+     id="g391429">
+    <path
+       d="m 248.00001,93.338309 -4.63629,-0.702028 -3.69795,3.697953 L 39.229662,296.77034 38.965627,304 v 0 h 77.049683 l 3.98327,1.9e-4 2.44728,-2.44605 L 216,208 v 89.82584 0 l 6.88477,-0.7256 80.83023,-81.00624 0.262,80.765 0.0197,0.0323 7.17205,-0.0599 L 352.00016,256 V 95.364484 l -0.004,-0.257819 -5.32645,-1.365822 L 248.00016,200 Z"
+       fill="#357af0"
+       fill-rule="evenodd"
+       id="path391427"
+       sodipodi:nodetypes="ccccccccccccccccccccccc" />
+  </g>
+  <path
+     transform="scale(.75)"
+     d="m289.75 262.88l-135 135h-113.75l-10 10h123.75l135-135v-10zm123.35 11.383l-123.35 123.62v10l123.35-123.62 0.40039 123.62 67.5-67.5v-10l-67.5 67.5-0.40039-123.62z"
+     fill-rule="evenodd"
+     opacity=".3"
+     stroke-width="1.4062"
+     id="path391431" />
+  <path
+     transform="scale(0.75)"
+     d="M 334.75,114.12 31,407.87 h 10 z m 138.78514,12.24705 -7.48987,-1.93398 L 334.75,261.62 v 10 L 481,114.12 Z"
+     fill="#ffffff"
+     fill-rule="evenodd"
+     opacity="0.3"
+     stroke-width="1.4062"
+     id="path391433"
+     sodipodi:nodetypes="ccccccccccc" />
+</svg>

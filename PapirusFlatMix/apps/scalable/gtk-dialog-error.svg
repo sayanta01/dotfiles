@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 384 384"
+   id="svg438174"
+   sodipodi:docname="stock_dialog-error.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview438176"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.6152344"
+     inkscape:cx="255.69045"
+     inkscape:cy="256"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g438168" />
+  <defs
+     id="defs438160">
+    <clipPath
+       id="clipPath438150">
+      <rect
+         width="36"
+         height="36"
+         id="rect438148" />
+    </clipPath>
+    <clipPath
+       id="clipPath438154">
+      <rect
+         width="36"
+         height="36"
+         id="rect438152" />
+    </clipPath>
+    <clipPath
+       id="clipPath438158">
+      <rect
+         width="36"
+         height="36"
+         id="rect438156" />
+    </clipPath>
+  </defs>
+  <g
+     stroke-width="11.25"
+     id="g438168">
+    <path
+       d="m360.75 192c0-93.208-75.542-168.75-168.75-168.75-93.208 0-168.75 75.542-168.75 168.75 0 93.208 75.542 168.75 168.75 168.75 93.208 0 168.75-75.542 168.75-168.75z"
+       fill="#fd4747"
+       id="path438162" />
+    <path
+       d="m175.12 89.812h33.75v151.92h-33.75zm0 185.67h33.75v33.706h-33.75z"
+       opacity=".3"
+       id="path438164" />
+    <path
+       d="m 175.12,89.661545 6.37802,-7.349545 21.32772,0 6.04426,6.351793 v 0 l 0,138.318187 -5.82637,7.25002 v 0 h -20.82568 v 0 L 175.12,227.33156 Z M 180.98466,267.982 v 0 h 21.08085 l 6.80449,6.25109 v 0 20.39887 0 l -6.29478,7.05604 h -21.0095 v 0 L 175.12,294.35114 v -19.20291 z"
+       fill="#ffffff"
+       id="path438166"
+       sodipodi:nodetypes="cccccccccccccccccccccccccc" />
+  </g>
+  <path
+     transform="scale(.75)"
+     d="m31.064 251c-0.036254 1.6628-0.064453 3.3285-0.064453 5 0 124.28 100.72 225 225 225 124.28 0 225-100.72 225-225 0-1.6715-0.0282-3.3372-0.06445-5-2.6592 121.97-102.33 220-224.94 220s-222.28-98.033-224.94-220z"
+     opacity=".3"
+     stroke-width="15"
+     id="path438170" />
+  <path
+     transform="scale(.75)"
+     d="m256 31c-124.28 0-225 100.72-225 225 0 1.6715 0.028199 3.3372 0.064453 5 2.6592-121.97 102.33-220 224.94-220s222.28 98.033 224.94 220c0.03625-1.6628 0.06445-3.3285 0.06445-5 0-124.28-100.72-225-225-225z"
+     fill="#fff"
+     opacity=".3"
+     stroke-width="15"
+     id="path438172" />
+</svg>

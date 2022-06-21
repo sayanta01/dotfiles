@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="org.gnome.clocks-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9613059"
+     inkscape:cy="8.0096735"
+     inkscape:window-width="735"
+     inkscape:window-height="836"
+     inkscape:window-x="740"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <path
+     style="fill:#5c616c"
+     d="M 8,1 A 7,7 0 0 0 1,8 7,7 0 0 0 8,15 7,7 0 0 0 15,8 7,7 0 0 0 8,1 Z M 8,3 A 5,5 0 0 1 13,8 5,5 0 0 1 8,13 5,5 0 0 1 3,8 5,5 0 0 1 8,3 Z"
+     id="path2" />
+  <path
+     style="fill:#5c616c"
+     d="m 10.49,4.9961 c -0.129849,0.00355 -0.25322,0.057489 -0.344,0.1504 L 8.2026277,7.0903251 v 0 L 7.8551157,7.1481157 6.3535,5.6465 C 5.8822879,5.1536851 5.1536851,5.8822879 5.6465,6.3535 l 2,2 c 0.1952614,0.1951634 0.5117386,0.1951634 0.707,0 l 2.5005,-2.5 C 11.179518,5.5352507 10.945052,4.982967 10.49,4.9961 Z"
+     id="path4"
+     sodipodi:nodetypes="ccccccccccc" />
+</svg>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32"
+   height="32"
+   version="1"
+   id="svg1764569"
+   sodipodi:docname="gpk-log.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1764573" />
+  <sodipodi:namedview
+     id="namedview1764571"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="25.84375"
+     inkscape:cx="15.980653"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1764569" />
+  <rect
+     fill="#fabd7f"
+     width="28"
+     height="28"
+     x="2"
+     y="2"
+     rx="1.5"
+     ry="1.5"
+     id="rect1764555" />
+  <path
+     fill="#fff"
+     opacity=".1"
+     d="m3.5 2c-0.831 0-1.5 0.669-1.5 1.5v1c0-0.831 0.669-1.5 1.5-1.5h25c0.831 0 1.5 0.669 1.5 1.5v-1c0-0.831-0.669-1.5-1.5-1.5h-25z"
+     id="path1764557" />
+  <path
+     fill="#3f3f3f"
+     d="m 14.572,6 c -0.39572,0 -0.71484,0.34338 -0.71484,0.76953 v 12.307 h -1.979206 l -0.324132,0.767265 v 0 l 4.445938,6.156735 5,-6.9238 h -2.8574 v -12.307 c 0,-0.4256 -0.32,-0.769 -0.715,-0.769 z"
+     id="path1764559"
+     sodipodi:nodetypes="cscccccccscc" />
+  <path
+     opacity=".2"
+     d="m2 28.5v1c0 0.831 0.669 1.5 1.5 1.5h25c0.831 0 1.5-0.669 1.5-1.5v-1c0 0.831-0.669 1.5-1.5 1.5h-25c-0.831 0-1.5-0.669-1.5-1.5z"
+     id="path1764561" />
+  <rect
+     style="opacity:0.2"
+     width="15"
+     height="15"
+     x="-32"
+     y="-32"
+     rx=".804"
+     ry=".804"
+     transform="matrix(0,-1,-1,0,0,0)"
+     id="rect1764563" />
+  <rect
+     style="fill:#e4e4e4"
+     width="15"
+     height="15"
+     x="-31"
+     y="-32"
+     rx=".804"
+     ry=".804"
+     transform="matrix(0,-1,-1,0,0,0)"
+     id="rect1764565" />
+  <path
+     style="fill:#3f3f3f"
+     d="M 19 18 L 19 21 L 30 21 L 30 18 L 19 18 z M 19 22 L 19 25 L 30 25 L 30 22 L 19 22 z M 19 26 L 19 29 L 30 29 L 30 26 L 19 26 z"
+     id="path1764567" />
+</svg>

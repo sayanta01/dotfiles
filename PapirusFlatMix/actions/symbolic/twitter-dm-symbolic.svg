@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg547442"
+   sodipodi:docname="twitter-dm-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs547446" />
+  <sodipodi:namedview
+     id="namedview547444"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9903265"
+     inkscape:cy="8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg547442" />
+  <path
+     style="fill:#5c616c"
+     d="M 3.5478,1 1,8 v 7 H 15 V 8 L 12.452,1 Z M 5.2,3.04 h 5.6 L 12.869547,8.7267227 12.687146,9 V 9 H 11 l -1,2 H 6 L 5,9 H 3.3373439 V 9 L 3.1447741,8.6865893 Z"
+     id="path547440"
+     sodipodi:nodetypes="cccccccccccccccccccc" />
+</svg>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 384 384"
+   id="svg1959802"
+   sodipodi:docname="qsynth.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1959804"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.6152344"
+     inkscape:cx="237.11729"
+     inkscape:cy="220.711"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1959800" />
+  <defs
+     id="defs1959792">
+    <filter
+       id="alpha"
+       width="1"
+       height="1"
+       x="0"
+       y="0"
+       filterUnits="objectBoundingBox">
+      <feColorMatrix
+         in="SourceGraphic"
+         type="matrix"
+         values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+         id="feColorMatrix1959767" />
+    </filter>
+    <mask
+       id="mask0">
+      <g
+         filter="url(#alpha)"
+         id="g1959772">
+        <rect
+           width="384"
+           height="384"
+           x="0"
+           y="0"
+           style="fill:rgb(0%,0%,0%);fill-opacity:0.2"
+           id="rect1959770" />
+      </g>
+    </mask>
+    <clipPath
+       id="clip1">
+      <rect
+         width="384"
+         height="384"
+         x="0"
+         y="0"
+         id="rect1959775" />
+    </clipPath>
+    <g
+       id="surface5"
+       clip-path="url(#clip1)">
+      <path
+         style="fill:rgb(0%,0%,0%)"
+         d="M 66.210938 261.398438 C 65.210938 281.210938 68.894531 299.847656 79.265625 316.203125 C 121.273438 382.429688 264.066406 382.765625 305.585938 316.203125 C 315.378906 300.472656 318.796875 282.726562 317.742188 263.933594 C 316.960938 278.269531 313.265625 291.867188 305.574219 304.203125 C 264.054688 370.769531 121.269531 370.433594 79.253906 304.203125 C 71.015625 291.195312 67.015625 276.734375 66.203125 261.398438 Z M 66.210938 261.398438"
+         id="path1959778" />
+    </g>
+    <mask
+       id="mask1">
+      <g
+         filter="url(#alpha)"
+         id="g1959783">
+        <rect
+           width="384"
+           height="384"
+           x="0"
+           y="0"
+           style="fill:rgb(0%,0%,0%);fill-opacity:0.2"
+           id="rect1959781" />
+      </g>
+    </mask>
+    <clipPath
+       id="clip2">
+      <rect
+         width="384"
+         height="384"
+         x="0"
+         y="0"
+         id="rect1959786" />
+    </clipPath>
+    <g
+       id="surface8"
+       clip-path="url(#clip2)">
+      <path
+         style="fill:rgb(100.000%,100.000%,100.000%)"
+         d="M 189.9375 24 C 158.554688 67.933594 64.347656 178.734375 66.152344 263.894531 C 68.6875 179.601562 159.289062 72.90625 189.9375 30 C 216.335938 73.414062 314.894531 181.417969 317.800781 266.484375 C 319.566406 180.566406 216.960938 68.441406 189.9375 24 Z M 189.9375 24"
+         id="path1959789" />
+    </g>
+  </defs>
+  <g
+     id="g1959800"
+     transform="matrix(1.1388845,0,0,1,-44.165375,0)"
+     style="stroke-width:0.937044">
+    <use
+       mask="url(#mask0)"
+       xlink:href="#surface5"
+       id="use1959794"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       style="stroke-width:0.937044" />
+    <path
+       style="fill:#ffc72e;stroke-width:0.878052"
+       d="m 182.91639,33.597255 c -2.08156,2.913839 2.58892,-3.47533 0,0 C 138.84568,92.757215 27.9888,229.35834 79.265625,310.19922 c 42.007815,66.23437 184.796875,66.57422 226.316405,0 51.41182,-82.42775 -70.9074,-219.682713 -110.33174,-277.988111 -1.99069,-2.94407 -10.79895,3.910408 -12.3339,1.386146 z"
+       id="path1959796"
+       sodipodi:nodetypes="csccsc" />
+    <use
+       mask="url(#mask1)"
+       xlink:href="#surface8"
+       id="use1959798"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       style="stroke-width:0.937044"
+       transform="matrix(0.89448548,-0.50919185,0.39257449,0.89448548,-36.762224,113.07728)" />
+  </g>
+</svg>

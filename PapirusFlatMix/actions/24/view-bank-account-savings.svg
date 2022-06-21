@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="view-bank-account-savings.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="34.458333"
+     inkscape:cx="11.956469"
+     inkscape:cy="9.6783555"
+     inkscape:window-width="954"
+     inkscape:window-height="519"
+     inkscape:window-x="961"
+     inkscape:window-y="556"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <g
+     transform="translate(4,4)"
+     id="g7">
+    <path
+       style="fill:currentColor"
+       class="ColorScheme-Text"
+       d="m 14,11 v 2 h -0.60127 l -0.181543,0.434375 v 0 l 1.040654,2.081306 0.477626,0.01338 v 0 l 1.059477,-2.118954 v 0 L 15.563713,13 H 15 V 11 Z M 6.6001747,1.3998253 v 0 L 0.80406076,7.1959392 0.90014855,8 V 8 H 2 v 7 H 12 V 8 h 1.159807 V 8 L 13.286193,7.2861933 7.4014183,1.4014183 Z M 7,6 c 1.1045695,0 2,0.8954305 2,2 0,1.1045695 -0.8954305,2 -2,2 3,0 3,2.5 3,2.5 V 13 H 4 V 12.5 C 4,12.5 4,10 7,10 5.8954305,10 5,9.1045695 5,8 5,6.8954305 5.8954305,6 7,6 Z"
+       id="path5"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccssccccccss" />
+  </g>
+</svg>

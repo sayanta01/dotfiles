@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg772876"
+   sodipodi:docname="emoji-people-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs772880" />
+  <sodipodi:namedview
+     id="namedview772878"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9903265"
+     inkscape:cy="8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg772876" />
+  <path
+     style="fill:#5c616c"
+     d="M 8.0009899,1.0000001 C 4.1346673,0.99953799 1.0001563,4.1336801 1.0001563,8 c 0,3.86632 3.134511,7.000462 7.0008336,7 3.8656691,-4.62e-4 6.9991601,-3.134334 6.9991601,-7 0,-3.8656664 -3.133491,-6.9995379 -6.9991601,-6.9999999 z M 6.0009899,5 c 0.558,0 1.031,0.473 1.031,1.031 V 7 c 0,0.558 -0.473,1 -1.031,1 -0.558,0 -1,-0.442 -1,-1 V 6.031 c 0,-0.558 0.442,-1.031 1,-1.031 z M 10.00099,5 c 0.558,0 1,0.473 1,1.031 V 7 c 0,0.558 -0.442,1 -1,1 C 9.4429899,8 9.0009899,7.558 9.0009899,7 V 6.031 C 9.0009899,5.473 9.4429899,5 10.00099,5 Z M 3.2158975,9.1580832 c 0.067231,0.043835 -0.07594,-0.040888 0,0 2.1059665,1.1338868 7.4451095,1.1345558 9.5931005,0.002 0.07872,-0.041507 0.140221,0.1444488 0.210055,0.099897 v 0 L 13.00199,9.562 c -0.037,0.43 -1,3.376 -5.0000001,3.407 -4,0.031 -5,-2.78 -5,-3.313 L 3.0013996,9.2870918 Z"
+     id="path772874"
+     sodipodi:nodetypes="ssssssssssssssssssscsscccsccc" />
+</svg>

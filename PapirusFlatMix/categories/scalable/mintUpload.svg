@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32"
+   height="32"
+   version="1"
+   id="svg381023"
+   sodipodi:docname="mintupload.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs381027" />
+  <sodipodi:namedview
+     id="namedview381025"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="25.84375"
+     inkscape:cx="15.980653"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg381023" />
+  <rect
+     fill="#687df9"
+     width="28"
+     height="28"
+     x="2"
+     y="2"
+     rx="1.5"
+     ry="1.5"
+     id="rect381013" />
+  <path
+     fill="#fff"
+     opacity=".1"
+     d="m3.5 2c-0.831 0-1.5 0.669-1.5 1.5v1c0-0.831 0.669-1.5 1.5-1.5h25c0.831 0 1.5 0.669 1.5 1.5v-1c0-0.831-0.669-1.5-1.5-1.5h-25z"
+     id="path381015" />
+  <path
+     style="opacity:0.2"
+     d="m 14.572,27 c -0.39572,0 -0.71484,-0.34338 -0.71484,-0.76953 v -12.307 h -2.8574 l 5,-6.924 5,6.9238 h -2.8574 v 12.307 c 0,0.4256 -0.32,0.769 -0.715,0.769 z"
+     id="path381017" />
+  <path
+     style="fill:#ffffff"
+     d="m 14.572,26.00053 c -0.39572,0 -0.71484,-0.34338 -0.71484,-0.76953 V 12.924 h -2.219303 v 0 L 11.593943,12.101175 15.99976,6 20.57042,12.329267 20.461585,12.9238 v 0 H 18.14236 v 12.307 c 0,0.4256 -0.32,0.769 -0.715,0.769 z"
+     id="path381019"
+     sodipodi:nodetypes="cscccccccccscc" />
+  <path
+     opacity=".2"
+     d="m2 28.5v1c0 0.831 0.669 1.5 1.5 1.5h25c0.831 0 1.5-0.669 1.5-1.5v-1c0 0.831-0.669 1.5-1.5 1.5h-25c-0.831 0-1.5-0.669-1.5-1.5z"
+     id="path381021" />
+</svg>

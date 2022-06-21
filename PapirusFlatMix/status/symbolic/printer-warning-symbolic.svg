@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg4594758"
+   sodipodi:docname="printer-warning-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4594762" />
+  <sodipodi:namedview
+     id="namedview4594760"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="36.548582"
+     inkscape:cx="4.0494047"
+     inkscape:cy="7.9893661"
+     inkscape:window-width="460"
+     inkscape:window-height="884"
+     inkscape:window-x="465"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4594758" />
+  <path
+     style="fill:#ffcc44"
+     class="warning"
+     d="m 12.48,8.73 c -0.15,0.01 -0.29,0.09 -0.36,0.22 l -3.06,5.4 C 8.89,14.64 9.1,15 9.44,15 h 6.12 c 0.34,0 0.55,-0.36 0.38,-0.65 L 12.88,8.95 C 12.8,8.81 12.64,8.72 12.48,8.73 Z M 12.242665,10 v 0 h 0.562906 L 13,10.197497 v 0 1.592201 L 12.822223,12 v 0 l -0.631757,0 v 0 L 12,11.745667 v -1.49629 z m -0.05286,3 v 0 h 0.626616 v 0 L 13,13.170752 v 0.59382 L 12.796384,14 v 0 H 12.198583 L 12,13.753461 v 0 -0.567632 z"
+     id="path4594754"
+     sodipodi:nodetypes="cccssccccccccccccccccccccccccccccc" />
+  <path
+     style="fill:#5c616c"
+     d="m 4,1 v 2 h 8 V 1 Z m 9.75,7.46 0.652622,1.1442075 v 0 c 0.05211,-0.036669 0.21936,0.1283579 0.26592,0.084142 C 14.863236,9.503459 15,9.2582421 15,9 V 5 C 15,4.5 14.5,4 14,4 H 2 C 1.5,4 1,4.5 1,5 v 4 c 0,0.5 0.5,1 1,1 h 1 v -1.6189909 0 L 3.4218271,8 H 11.67 C 11.9,7.84 12.16,7.74 12.435,7.73 12.97,7.71 13.48,7.99 13.75,8.46 Z M 10.675162,9 V 9 H 4.4042724 L 4,9.4203762 v 0 V 14 h 4.13 l 2.653721,-4.7219241 z"
+     id="path4594756"
+     sodipodi:nodetypes="ccccccccsssssssscccccccccccccccc" />
+</svg>

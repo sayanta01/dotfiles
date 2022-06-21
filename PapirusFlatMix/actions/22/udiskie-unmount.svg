@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="22"
+   height="22"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="udiskie-unmount.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="34.272727"
+     inkscape:cx="10.985411"
+     inkscape:cy="11"
+     inkscape:window-width="1880"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="m 11,4 c -3.8659932,0 -7,3.1340068 -7,7 2.892e-4,0.158437 0.00596,0.316772 0.016985,0.474733 0.011075,0.158632 0.3886943,0.04611 0.4105604,0.203707 v 0 L 6.4003904,10.199219 C 6.7034742,9.972336 7.1086919,9.9360478 7.4472656,10.105469 7.7860465,10.27491 8.0000258,10.621209 8,11 v 1 H 9.2675781 C 9.0921711,11.695926 8.9998872,11.35104 9,11 9,9.8954305 9.8954305,9 11,9 c 1.104569,0 2,0.8954305 2,2 -0.0059,0.431401 -0.151149,0.849327 -0.414062,1.191406 C 12.845473,12.379086 12.999419,12.679716 13,13 v 2 c -5.5e-5,0.552262 -0.447738,0.999945 -1,1 H 8 v 1 c -3.397e-4,0.09934 -0.01548,0.198086 -0.044922,0.292969 C 8.9037815,17.755154 9.9447069,17.996857 11,18 c 3.865993,0 7,-3.134007 7,-7 0,-3.8659932 -3.134007,-7 -7,-7 z m -4,7.619368 -0.5344965,-0.218496 -3.0202983,2.265224 -0.021338,0.651805 v 0 l 3.095293,2.32147 L 7,16.462509 v 0 V 15 h 5 V 13 H 7 Z"
+     id="path5"
+     sodipodi:nodetypes="scsccccccccscccccccccsscccccccccccccc" />
+</svg>

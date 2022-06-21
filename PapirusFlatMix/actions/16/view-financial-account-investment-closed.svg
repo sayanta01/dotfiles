@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="view-financial-account-investment-closed.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9903265"
+     inkscape:cy="12.643289"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="opacity:0.35;fill:currentColor"
+     class="ColorScheme-Text"
+     d="M 0,1 V 5 H 0.70006217 V 5 L 1,4.7383852 v -0.4642002 0 L 1.2990743,4 H 1.7077959 V 4 L 2,3.7681154 v -0.5281863 0 L 2.2511425,3 H 2.7736784 V 3 L 3,2.8098443 V 2.3449114 L 3.3737288,2 V 2 H 12.684628 V 2 L 13,2.3897919 V 2.7906277 L 13.320686,3 V 3 H 13.72285 L 14,3.3561288 v 0 0.3429677 L 14.372016,4 V 4 H 14.77365 L 15,4.2723606 v 0 0.497793 L 15.240351,5 V 5 H 16 V 1 Z M 4.3052071,3 4,3.3705134 V 3.7651656 L 3.7354212,4 V 4 H 3.2694563 L 3,4.252037 v 0 V 5 H 6.2773438 C 6.6237092,4.4043671 7.2613415,4 8,4 8.7386582,4 9.3762907,4.4043671 9.7226562,5 H 13 v -0.6423118 0 L 12.617563,4 H 12.235832 V 4 L 12,3.7333636 V 3.2955341 L 11.72827,3 V 3 Z M 0,6 v 4 h 0.67600266 v 0 C 0.58446021,9.9793435 0.9169809,9.8488125 0.94362843,9.6983808 0.96412834,9.5826539 0.99535452,9.4551493 1,9.3568309 v 0 L 1.2083128,9 H 1.7238607 V 9 L 2,8.7426551 v -0.4379717 0 L 2.2757159,8 H 2.6093526 V 8 L 3,7.7888092 V 7.2883888 L 3.3109218,7 V 7 H 12.651287 V 7 L 13,7.3070173 V 7.6859377 L 13.312306,8 v 0 h 0.422447 V 8 L 14,8.2253427 V 8.3410234 8.7271913 L 14.260767,9 v 0 h 0.476738 V 9 L 15,9.3691211 V 9.7238454 L 15.259033,10 v 0 H 16 V 6 Z M 4.3701343,8 4,8.359561 V 8.7417943 L 3.7367816,9 V 9 H 3.2677104 L 3,9.2892066 v 0 V 10 H 6.2773438 C 6.6237092,9.4043671 7.2613415,9 8,9 8.7386582,9 9.3762907,9.4043671 9.7226562,10 H 13 V 9.3648553 L 12.69348,9 V 9 H 12.382361 L 12,8.6279881 v 0 -0.3757215 L 11.657477,8 V 8 Z M 0,11 v 4 H 1 V 14.312659 L 1.317624,14 v 0 h 0.3019485 v 0 L 2,13.632389 V 13.29925 L 2.3371851,13 v 0 h 0.3959642 v 0 L 3,12.727857 v -0.31331 0 L 3.3829672,12 H 12.641384 L 13,12.365745 v 0 0.381711 L 13.374821,13 v 0 h 0.360392 v 0 L 14,13.29011 v 0.449992 L 14.369104,14 v 0 h 0.437035 v 0 L 15,14.392296 V 15 h 1 v -4 z m 4,2.327896 v 0 0.465007 L 3.7861995,14 v 0 H 3.2644253 L 3,14.253169 v 0 V 15 H 6.2773438 C 6.6237092,14.404367 7.2613415,14 8,14 c 0.7386582,0 1.3762907,0.404367 1.7226562,1 H 13 V 14.33078 L 12.629597,14 v 0 h -0.313923 v 0 L 12,13.74877 V 13.319322 L 11.743057,13 v 0 H 4.3718052 C 4.235268,13 4.1108188,13.327896 4,13.327896 Z"
+     id="path5"
+     sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccscccccccccccccccccscccccccccccccccccccccccccccccccccccccccccccccccsccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccsccccccccccc" />
+</svg>

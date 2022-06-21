@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="18"
+   height="18"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="path-tweak-roughen.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="41.888889"
+     inkscape:cx="8.9880637"
+     inkscape:cy="9"
+     inkscape:window-width="1770"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <g
+     transform="translate(1,1)"
+     id="g7">
+    <path
+       style="fill:currentColor"
+       class="ColorScheme-Text"
+       d="M 0,7 2.7600933,3.3198757 3.2787377,3.2787377 v 0 l 2.5300905,2.5300905 0.3657465,-0.041594 v 0 l 2.5981611,-3.4642148 0.3444885,0.0654 v 0 l 1.4828157,4.6602789 0.402609,0.078293 v 0 l 1.81187,-2.8184645 0.418629,-0.055379 v 0 L 16,7 v 5 l -3.727053,-3.7270526 -0.344104,0.082839 v 0 l -0.828138,4.1406886 -0.315041,0.07485 v 0 L 9.1337366,9.2674733 v 0 L 8.7727855,9.2272145 5.3236919,12.676308 v 0 L 4.7869654,12.467413 3.1373968,8.343492 v 0 L 2.7481002,8.3358664 0,12 Z"
+       id="path5"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccc" />
+  </g>
+</svg>

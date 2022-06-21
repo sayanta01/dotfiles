@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg765433"
+   sodipodi:docname="games-achievements.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview765435"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9903265"
+     inkscape:cy="8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg765433" />
+  <defs
+     id="defs765429">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="M 8,1 C 5.2385763,1 3,3.2385763 3,6 c 0.00231,1.5755129 0.747077,3.057781 2.0098,4 H 5 v 4.678988 0 l 0.2924393,0.126052 2.5756741,-1.717116 v 0 l 0.2802357,0.01098 2.5761439,1.717429 L 11,14.725142 v 0 V 10 H 10.99 C 12.252798,9.0578229 12.997642,7.5755481 13,6 13,3.2385763 10.761424,1 8,1 Z M 7.8747414,3.2666116 8.1513327,3.3221101 8.9277,4.9746 l 1.78409,0.272396 0.07524,0.2622385 v 0 L 9.5,6.8281 9.8051664,8.7030388 v 0 L 9.5124438,8.8113196 8,7.9746 6.3894835,8.8646154 6.1981755,8.6720738 v 0 L 6.5,6.8281 5.257832,5.555209 5.3102761,5.2436269 v 0 L 7.0723,4.9746 Z"
+     id="path765431"
+     sodipodi:nodetypes="scccccccccccccccsccccccccccccccccccccc" />
+</svg>
