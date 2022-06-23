@@ -14,6 +14,10 @@ ctrl + alt + n
 super + alt + p
               bash ~/.config/scripts/walch
       
+# free sp
+super + alt + f
+              bash ~/.config/scripts/fs
+
 # tempe
 alt + i
       notify-send -t 900 "$(echo 🌡Temp) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input| cut -b -2)$(echo °C)"      
