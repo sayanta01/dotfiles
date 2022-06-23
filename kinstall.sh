@@ -14,14 +14,14 @@ zathura ripgrep exa fd-find nodejs \
 #yarnpkg fonts-jetbrains-mono
 ncdu slock imwheel npm \
 xwallpaper sxiv ffmpeg aptitude \
-fortune font-viewer exiftool inkscape \
-synaptic stacer stress \
-speedtest-cli trash-cli yt-dlp transmission-cli \
+fortune exiftool inkscape \
+synaptic stress \
 bpytop neofetch preload htop \
+speedtest-cli trash-cli yt-dlp transmission-cli stacer font-viewer \
 android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
-obs-studio audacity gimp blender kdeconnect translate-shell \
-telegram-desktop deluge docker.io
-#snapd apt-transport-https tor torbrowser-launcher
+obs-studio audacity gimp blender kdeconnect \
+telegram-desktop deluge translate-shell
+#docker.io snapd apt-transport-https tor torbrowser-launcher
 cargo install ttyper lsd bat
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree
