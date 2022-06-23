@@ -12,14 +12,18 @@ bspc config focus_follows_pointer    true
 #bspc config gapless_monocle          true
 bspc config pointer_modifier         mod1
 bspc config focused_border_color     "#5E81AC" #"#81A1C1" 
-bspc rule -a Zathura state=tiled 
+
+#bspc rule -a mpv state=fullscreen
+bspc rule -a Zathura state=tiled
+bspc rule -a Inkscape state=fullscreen
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Screenkey manage=off
 
 
 #Autostart
+pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
 ./.config/polybar/launch.sh &
-#killall -q "sxhkd" &
-sxhkd &
 killall -q "imwheel" &
 imwheel -b "4 5" 
 xset r rate 290 50 &
