@@ -8,9 +8,10 @@ yes '
 curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
-sudo apt update && sudo apt install -y cargo && cargo install ttyper lsd bat
-sudo apt install -y fzf ranger gpg \
-zathura ripgrep exa fd-find nodejs \ #yarnpkg fonts-jetbrains-mono
+sudo apt update
+sudo apt install -y cargo fzf ranger gpg \
+zathura ripgrep exa fd-find nodejs \
+#yarnpkg fonts-jetbrains-mono
 ncdu slock imwheel npm \
 xwallpaper sxiv ffmpeg aptitude \
 fortune font-viewer exiftool inkscape \
@@ -19,8 +20,10 @@ speedtest-cli trash-cli yt-dlp transmission-cli \
 bpytop neofetch preload htop \
 android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
 obs-studio audacity gimp blender kdeconnect translate-shell \
-telegram-desktop deluge tor torbrowser-launcher docker.io  #snapd apt-transport-https
- 
+telegram-desktop deluge docker.io
+#snapd apt-transport-https tor torbrowser-launcher
+cargo install ttyper lsd bat
+
 sudo apt purge -y --auto-remove onboard xterm cherrytree
  
 # Build Neovim
