@@ -10,7 +10,27 @@ alt + n
 super + alt + n
               open http://notion.new	
 	
-	
+# wallch
+alt + p
+      bash ~/.config/scripts/walch
+      
+# tempe
+alt + i
+      notify-send -t 900 "$(echo 🌡Temp) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input| cut -b -2)$(echo °C)"      
+
+# weather
+alt + w
+      notify-send -t 2000 "$(curl -s 'wttr.in/{Surat}?format=3')"
+
+# uptime
+alt + u
+      notify-send -t 900 "$(echo  ) $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
+	      
+# pywal
+alt + o
+      wal -qi ~/.config/walls      
+       
+  
 	
 	
 # bluetooth
@@ -24,10 +44,6 @@ alt + F5
 # classic music
 ctrl + F7
         bash ~/.config/scripts/music
-
-# wallch
-alt + p
-      bash ~/.config/scripts/walch
 	     		    
 # 0x0
 alt + 0
@@ -51,24 +67,12 @@ alt + F6
     
 # play, pause   
 super + F7
-       playerctl play-pause
+        playerctl play-pause
   
 # spotify play pause
 alt + F7
-        dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+       dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
-# tempe
-alt + i
-      notify-send -t 900 "$(echo 🌡Temp) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input| cut -b -2)$(echo °C)"      
-
-# weather
-alt + w
-      notify-send -t 2000 "$(curl -s 'wttr.in/{Surat}?format=3')"
-
-# uptime
-alt + u
-      notify-send -t 900 "$(echo  ) $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
-	
 # next
 alt + F8
        playerctl next
@@ -88,10 +92,6 @@ shift + Print
 # ss window
 alt + Print 
 	  maim -i $(xdotool getactivewindow) ~/Pictures/$(date +%I:%M:%d,%a)-Win.png | notify-send "Window Screenshot Taken"
-	  
-# pywal
-alt + o
-      wal -qi ~/.config/walls
 	     
 # kill ps
 ctrl + alt + Delete
