@@ -97,8 +97,8 @@ sudo cp -r ~/.themes/* /usr/share/themes
 sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
 sudo cp -r ~/.icons/PapirusFlatMix/* /usr/share/icons/Flat-Remix-Blue-Dark
 
-sudo rm -rf /usr/share/themes/Kali-Dark/*
-sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
+#sudo rm -rf /usr/share/themes/Kali-Dark/*
+#sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
 
 #xdg-mime query filetype (file)  #check filetype
 #xdg-mime query default (file/type)  #check default app of filetype
