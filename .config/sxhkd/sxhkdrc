@@ -1,14 +1,25 @@
 #
 # wm independent hotkeys
 #
-	      
+	
+# notes
+alt + n
+      open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
+      
+# notion
+super + alt + n
+              open http://notion.new	
+	
+	
+	
+	
 # bluetooth
 alt + F1
-       bash ~/.config/scripts/blutoothcd
+       bash ~/.config/scripts/btch
        
 # switch audio
 alt + F5       
-       bash ~/.config/scripts/audioswitch       
+       bash ~/.config/scripts/audiosw    
 
 # classic music
 ctrl + F7
@@ -16,7 +27,7 @@ ctrl + F7
 
 # wallch
 alt + p
-      bash ~/.config/scripts/wallch
+      bash ~/.config/scripts/walch
 	     		    
 # 0x0
 alt + 0
@@ -46,7 +57,7 @@ super + F7
 alt + F7
         dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
-# temperature
+# tempe
 alt + i
       notify-send -t 900 "$(echo 🌡Temp) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input| cut -b -2)$(echo °C)"      
 
@@ -78,17 +89,9 @@ shift + Print
 alt + Print 
 	  maim -i $(xdotool getactivewindow) ~/Pictures/$(date +%I:%M:%d,%a)-Win.png | notify-send "Window Screenshot Taken"
 	  
-# notes
-alt + n
-      open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
-
 # pywal
 alt + o
       wal -qi ~/.config/walls
-      
-# notion
-super + alt + n
-              open http://notion.new
 	     
 # kill ps
 ctrl + alt + Delete
@@ -123,11 +126,11 @@ super + Return
              kitty 
 		    
 # dmenu
-alt + space 
+super + space 
            dmenu_run
            
 # launcher
-super + space
+alt + space
 	    rofi -show drun -show-icons
 
 # spotify
