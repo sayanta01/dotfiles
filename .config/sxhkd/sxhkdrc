@@ -12,22 +12,22 @@ ctrl + alt + n
 	
 # wallch
 super + alt + p
-      bash ~/.config/scripts/walch
+              bash ~/.config/scripts/walch
       
 # tempe
-super + alt + i
+alt + i
       notify-send -t 900 "$(echo 🌡Temp) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input| cut -b -2)$(echo °C)"      
 
 # weather
-super + alt + w
+alt + w
       notify-send -t 2000 "$(curl -s 'wttr.in/{Surat}?format=3')"
 
 # uptime
-super + alt + u
+alt + u
       notify-send -t 900 "$(echo  ) $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
 	      
 # pywal
-super + alt + o
+alt + o
       wal -qi ~/.config/walls      
        
   
