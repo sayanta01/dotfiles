@@ -5,9 +5,10 @@ sudo hwclock --systohc
 
 sudo pacman -Syu && sudo pacman -Sy --noconfirm cargo && cargo install ttyper
 sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-cascadia-code noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome terminus-font \
-linux-firmware linux-headers \ #linux-lts linux-lts-headers
+linux-firmware linux-headers \ 
+#linux-lts linux-lts-headers yarn
 thunar thunar-archive-plugin firefox ranger zathura zathura-pdf-mupdf lsd exa bat \
-neovim fzf translate-shell openssh wget curl mate-calc ripgrep nodejs \ #yarn
+neovim fzf translate-shell openssh wget curl mate-calc ripgrep nodejs \
 tree ncdu rsync unrar unzip zip p7zip tar python-pywal xdotool \
 dhcpcd networkmanager wireless_tools net-tools dialog cmake libconfig \
 xwallpaper sxiv ffmpeg imagemagick dash aria2  wmctrl imwheel \
