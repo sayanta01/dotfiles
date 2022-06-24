@@ -7,8 +7,8 @@ super + alt + n
               xdg-open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
       
 # notion
-ctrl + alt + n
-              xdg-open http://notion.new	
+#ctrl + alt + m
+#             xdg-open http://notion.new	
 	
 # wallch
 super + alt + p
@@ -19,35 +19,31 @@ super + alt + o
               wal -qi ~/.local/share/walls  
       
 # free sp
-super + alt + f
+#super + alt + f
               bash ~/.local/bin/scripts/fs
 
 # tempe
 super + alt + i
               notify-send -t 900 "$(echo Temp 🌡) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input| cut -b -2)$(echo °C)"      
 
-# weather
-super + alt + w
-              notify-send -t 2000 "$(curl -s 'wttr.in/{Surat}?format=3')"
-
 # uptime
 super alt + u
             notify-send -t 900 "$(echo  ) $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
-	         
-  
-	
-	
+	          		
+# screenlock
+super + l
+        slock
+
+ # system_action
+super + alt + F4
+               bash ~/.local/bin/scripts/system_action
+
+
+		
+		
 # bluetooth
 alt + F1
        bash ~/.local/bin/scripts/btch
-       
-# switch audio
-alt + F5       
-       bash ~/.local/bin/scripts/audiosw    
-
-# classic music
-ctrl + F7
-        bash ~/.local/bin/scripts/music
 	     		    
 # 0x0
 alt + 0
@@ -65,10 +61,18 @@ alt + F3
 alt + F4
         amixer set Master toggle         
 
+# switch audio
+alt + F5       
+       bash ~/.local/bin/scripts/audiosw    
+
 # previous
 alt + F6 
        playerctl previous   
-    
+
+# classic music
+ctrl + F7
+        bash ~/.local/bin/scripts/music
+	
 # play, pause   
 super + F7
         playerctl play-pause
@@ -100,18 +104,6 @@ alt + Print
 # kill ps
 ctrl + alt + Delete
                   bash ~/.config/scripts/scripts/kill
-           
-# reboot
-ctrl + shift + F4
-                reboot
-       
-# shutdown
-ctrl + super + F4
-                shutdown now
-		
-# screenlock
-ctrl + alt + l
-             slock
                          
 # thunar
 super + e
@@ -131,11 +123,11 @@ super + Return
 		    
 # dmenu
 super + space 
-           dmenu_run
+            dmenu_run
            
 # launcher
 alt + space
-	    rofi -show drun -show-icons
+	  rofi -show drun -show-icons
 
 # spotify
 alt + s
