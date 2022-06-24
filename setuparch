@@ -15,7 +15,7 @@ dhcpcd networkmanager wireless_tools net-tools dialog cmake libconfig \
 xwallpaper sxiv ffmpeg imagemagick dash aria2  wmctrl imwheel \
 fortune-mod mpv pipewire pulseaudio pavucontrol \
 speedtest-cli trash-cli yt-dlp transmission-cli \
-bpytop neofetch htop reflector \
+bpytop neofetch htop reflector inkscape \
 intel-ucode virtualbox-guest-utils \
 unclutter zsh-syntax-highlighting zsh-completions zsh-autosuggestions jq xdg-user-dirs xorg xclip
 cargo install ttyper
