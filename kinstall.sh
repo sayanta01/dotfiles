@@ -21,7 +21,7 @@ speedtest-cli trash-cli yt-dlp transmission-cli stacer font-viewer \
 android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
 obs-studio audacity gimp blender kdeconnect \
 telegram-desktop deluge translate-shell
-#docker.io snapd apt-transport-https tor torbrowser-launcher
+#docker.io apt-transport-https tor torbrowser-launcher
 cargo install ttyper lsd bat
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree
@@ -34,10 +34,11 @@ make -j4 && sudo make install
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
  
-pip3 install pynvim black flake8
+pip3 install pynvim black flake8 
 cargo install stylua
 sudo apt install -y ueberzug eslint ccls shfmt shellcheck
-sudo npm i -g prettier astyle live-server
+sudo npm i -g prettier astyle live-server html emmet tailwindcss
+
 
 #
 sudo apt install -y virt-manager qemu
