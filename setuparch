@@ -24,7 +24,7 @@ unclutter zsh-syntax-highlighting zsh-completions zsh-autosuggestions jq xdg-use
 #sudo systemctl enable lightdm.service
 
 #
-sudo pacman -Sy --noconfim nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
+sudo pacman -Sy --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
 scrcpy android-tools nvtop stress \
 obs-studio audacity gimp kdeconnect blender discord docker \
 deluge telegram-desktop \
