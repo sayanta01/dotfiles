@@ -1,6 +1,0 @@
-#!/bin/sh
-
-dir="${HOME}/.config/walls"
-BG="$(ls $dir/*.jpg | shuf -n1)"
-cat $BG > ~/.config/walls/wallpaper.jpg
-xwallpaper --zoom ~/.config/walls/wallpaper.jpg
