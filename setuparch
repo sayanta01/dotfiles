@@ -29,7 +29,7 @@ cargo install ttyper
 pip3 install pynvim black flake8 sourcery
 cargo install stylua
 sudo pacman -Sy --noconfirm ueberzug eslint ccls shfmt shellcheck
-sudo npm i -g prettier astyle live-server
+sudo npm i -g prettier astyle live-server html emmet tailwindcss
 
 #
 sudo pacman -Sy --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
