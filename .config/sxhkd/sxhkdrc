@@ -4,54 +4,54 @@
 	
 # notes
 super + alt + n
-      open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
+              xdg-open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
       
 # notion
 ctrl + alt + n
-              open http://notion.new	
+              xdg-open http://notion.new	
 	
 # wallch
 super + alt + p
-              bash ~/.local/bin/walch
+              bash ~/.local/bin/scripts/wallch
+
+# pywal
+super + alt + o
+              wal -qi ~/.local/share/walls  
       
 # free sp
 super + alt + f
-              bash ~/.local/bin/fs
+              bash ~/.local/bin/scripts/fs
 
 # tempe
-alt + i
-      notify-send -t 900 "$(echo 🌡Temp) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input| cut -b -2)$(echo °C)"      
+super + alt + i
+              notify-send -t 900 "$(echo Temp 🌡) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input| cut -b -2)$(echo °C)"      
 
 # weather
-alt + w
-      notify-send -t 2000 "$(curl -s 'wttr.in/{Surat}?format=3')"
+super + alt + w
+              notify-send -t 2000 "$(curl -s 'wttr.in/{Surat}?format=3')"
 
 # uptime
-alt + u
-      notify-send -t 900 "$(echo  ) $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
-	      
-# pywal
-alt + o
-      wal -qi ~/.local/share/walls      
-       
+super alt + u
+            notify-send -t 900 "$(echo  ) $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
+	         
   
 	
 	
 # bluetooth
 alt + F1
-       bash ~/.local/bin/btch
+       bash ~/.local/bin/scripts/btch
        
 # switch audio
 alt + F5       
-       bash ~/.local/bin/audiosw    
+       bash ~/.local/bin/scripts/audiosw    
 
 # classic music
 ctrl + F7
-        bash ~/.local/bin/music
+        bash ~/.local/bin/scripts/music
 	     		    
 # 0x0
 alt + 0
-      bash ~/.local/bin/0x0
+      bash ~/.local/bin/scripts/0x0
 	     
 # vol down
 alt + F2
@@ -83,7 +83,7 @@ alt + F8
        
 # wifi
 alt + F9
-      bash ~/.local/bin/wifi             
+      bash ~/.local/bin/scripts/wifi             
         
 # screenshot
 Print
@@ -99,7 +99,7 @@ alt + Print
 	     
 # kill ps
 ctrl + alt + Delete
-                  bash ~/.config/scripts/kill
+                  bash ~/.config/scripts/scripts/kill
            
 # reboot
 ctrl + shift + F4
