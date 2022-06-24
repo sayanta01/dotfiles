@@ -46,6 +46,7 @@ virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 #sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
 #sudo virsh net-autostart default
 
+sudo systemctl enable bluetooth
 sudo systemctl start bluetooth.service
 sudo systemctl enable bluetooth.service
 sudo systemctl enable fstrim.timer
