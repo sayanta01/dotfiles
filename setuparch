@@ -28,7 +28,7 @@ cargo install ttyper
 
 pip3 install pynvim black flake8 sourcery
 cargo install stylua
-sudo pacman -Sy --noconfirm ueberzug eslint ccls shfmt shellcheck
+sudo pacman -Sy --noconfirm ueberzug eslint ccls shfmt shellcheck lazygit
 sudo npm i -g prettier astyle live-server html emmet tailwindcss
 
 #
