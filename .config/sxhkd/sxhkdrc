@@ -12,11 +12,11 @@ ctrl + alt + n
 	
 # wallch
 super + alt + p
-              bash ~/.config/scripts/walch
+              bash ~/.local/bin/walch
       
 # free sp
 super + alt + f
-              bash ~/.config/scripts/fs
+              bash ~/.local/bin/fs
 
 # tempe
 alt + i
@@ -32,7 +32,7 @@ alt + u
 	      
 # pywal
 alt + o
-      wal -qi ~/.config/walls      
+      wal -qi ~/.local/share/walls      
        
   
 	
