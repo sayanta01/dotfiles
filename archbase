@@ -18,16 +18,13 @@ mount /dev/sda1 /mnt/boot
 mount /dev/sda3 /mnt/home
 
 pacstrap /mnt linux base base-devel grub efibootmgr /
-dosfstools mtools git networkmanager vim zsh reflector
+dosfstools mtools git networkmanager vim zsh 
 
 genfstab -U /mnt > /mnt/etc/fstab
 
 arch-chroot /mnt
 
 systemctl enable NetworkManager
-
-cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-refletctor --latest 20 --sort rate > /etc/pacman.d/mirrorlist 
 
 vim /etc/locale.gen                     #uncmnt both US
 locale-gen
