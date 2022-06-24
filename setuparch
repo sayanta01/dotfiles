@@ -4,10 +4,10 @@ sudo ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 sudo hwclock --systohc                                          
 
 sudo pacman -Syu 
-sudo pacman -Sy --noconfirm cargo ttf-cascadia-code \
+sudo pacman -Sy --noconfirm cargo ttf-cascadia-code ttf-jetbrains-mono \
 noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome terminus-font \
 linux-firmware linux-headers \ 
-#linux-lts linux-lts-headers yarn ttf-jetbrains-mono
+#linux-lts linux-lts-headers yarn
 thunar thunar-archive-plugin firefox ranger zathura zathura-pdf-mupdf lsd exa bat \
 neovim fzf translate-shell openssh wget curl mate-calc ripgrep nodejs npm \
 tree ncdu rsync unrar unzip zip p7zip tar python-pywal xdotool \
