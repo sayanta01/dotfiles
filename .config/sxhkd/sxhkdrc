@@ -39,19 +39,19 @@ alt + o
 	
 # bluetooth
 alt + F1
-       bash ~/.config/scripts/btch
+       bash ~/.local/bin/btch
        
 # switch audio
 alt + F5       
-       bash ~/.config/scripts/audiosw    
+       bash ~/.local/bin/audiosw    
 
 # classic music
 ctrl + F7
-        bash ~/.config/scripts/music
+        bash ~/.local/bin/music
 	     		    
 # 0x0
 alt + 0
-      bash ~/.config/scripts/0x0
+      bash ~/.local/bin/0x0
 	     
 # vol down
 alt + F2
@@ -83,7 +83,7 @@ alt + F8
        
 # wifi
 alt + F9
-      bash ~/.config/scripts/wifi             
+      bash ~/.local/bin/wifi             
         
 # screenshot
 Print
