@@ -8,7 +8,7 @@ super + alt + n
       
 # notion
 #super + alt + m
-#             xdg-open http://notion.new	
+#              xdg-open http://notion.new	
 	
 # wallch
 super + alt + p
@@ -20,7 +20,7 @@ super + alt + o
       
 # free sp
 #super + alt + f
-              bash ~/.local/bin/scripts/fs
+               bash ~/.local/bin/scripts/fs
 
 # tempe
 super + alt + i
