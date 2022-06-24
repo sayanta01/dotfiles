@@ -103,7 +103,7 @@ alt + Print
 	     
 # kill ps
 ctrl + alt + Delete
-                  bash ~/.config/scripts/scripts/kill
+                  bash ~/.config/scripts/kill
                          
 # thunar
 super + e
