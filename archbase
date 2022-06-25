@@ -17,14 +17,29 @@ mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 mount /dev/sda3 /mnt/home
 
-pacstrap /mnt linux base base-devel grub efibootmgr /
+basestrap /mnt linux runit elogind-runit linux-firmware ( on artix )
+dosfstools mtools vim zsh base base-devel grub efibootmgr
+
+pacstrap /mnt linux base base-devel grub efibootmgr / ( on arch )
 dosfstools mtools git networkmanager vim zsh 
 
-genfstab -U /mnt > /mnt/etc/fstab
+fstabgen /mnt ( on artix )
+genfstab -U /mnt >> /mnt/etc/fstab 
 
-arch-chroot /mnt
+genfstab /mnt ( on arch )
+genfstab -U /mnt >> /mnt/etc/fstab
 
-systemctl enable NetworkManager
+artools-chroot ( on artix )
+arch-chroot /mnt ( on arch )
+
+ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime      
+hwclock --systohc
+
+pacman -S networkmanager networkmanger-runit git ( on artix )
+ln -s /etc/runit/sv/NetworkManager /etc/runit/runsvdir/current ( on artix before reboot )
+ln -s /etc/runit/sv/NetworkManager /run/runit/service ( after reboot )
+
+systemctl enable NetworkManager ( on arch )
 
 vim /etc/locale.gen                     #uncmnt both US
 locale-gen
