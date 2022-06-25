@@ -3,7 +3,7 @@
 
 fdisk /dev/sda                          #sel drive
 n  1st partition  (Boot)                give +600M 
-n  2nd partition  (Root)                give +20G  
+n  2nd partition  (Root)                give +24G  
 n  3rd partition  (Home)                give rest of space
 w  write partition 
 
