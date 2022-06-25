@@ -34,8 +34,7 @@ curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt install -y cargo fzf ranger gpg \
-zathura ripgrep exa fd-find nodejs \
-#fonts-jetbrains-mono
+zathura ripgrep exa fd-find nodejs fonts-jetbrains-mono \
 ncdu slock imwheel npm \
 xwallpaper sxiv ffmpeg aptitude \
 fortune exiftool inkscape \
@@ -43,9 +42,8 @@ synaptic stress \
 bpytop neofetch preload htop \
 speedtest-cli trash-cli yt-dlp transmission-cli stacer font-viewer \
 android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
-obs-studio audacity gimp blender kdeconnect \
-telegram-desktop deluge translate-shell
-#docker.io apt-transport-https tor torbrowser-launcher
+obs-studio audacity gimp kdeconnect \
+telegram-desktop deluge translate-shell docker.io apt-transport-https
 cargo install ttyper lsd bat
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree
@@ -61,8 +59,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 pip3 install pynvim black flake8 
 cargo install stylua
 sudo apt install -y ueberzug eslint ccls shfmt shellcheck
-sudo npm i -g prettier astyle live-server html emmet tailwindcss
-
+sudo npm i -g prettier astyle 
+sudo npm i emmet html tailwindcss live-server 
 
 #
 sudo apt install -y virt-manager qemu
