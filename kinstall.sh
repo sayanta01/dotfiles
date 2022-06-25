@@ -5,10 +5,34 @@ sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 yes '
 ' | sudo apt full-upgrade
 
+
+########## BSPWM ##########
+sudo apt update
+sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl lxappearance maim libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
+pip3 install pywal
+
+cp -r ~/Desktop/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.zprofile,.icons,.themes} ~/
+cp -r ~/Desktop/dotfiles/.config/* ~/.config
+chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.config/scripts/* ~/.config/sxiv/exec/key-handler
+
+cd ~/.config/dmenu && sudo make clean install
+
+sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
+sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
+
+git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
+sudo cp -r ~/.themes/* /usr/share/themes
+
+sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
+sudo cp -r ~/.icons/PapirusFlatMix/* /usr/share/icons/Flat-Remix-Blue-Dark
+
+#sudo rm -rf /usr/share/themes/Kali-Dark/*
+#sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
+
+
 curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
-sudo apt update
 sudo apt install -y cargo fzf ranger gpg \
 zathura ripgrep exa fd-find nodejs \
 #fonts-jetbrains-mono
@@ -66,29 +90,6 @@ EOF
 
 axel -n 20 -o PacketTracer.deb https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
-
-
-########## BSPWM ##########
-sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl lxappearance maim libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
-pip3 install pywal
-
-cp -r ~/Desktop/dotfiles/{.zshrc,.fonts,.xinitrc,.imwheelrc,.zprofile,.icons,.themes} ~/
-cp -r ~/Desktop/dotfiles/.config/* ~/.config
-chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.config/scripts/* ~/.config/sxiv/exec/key-handler
-
-cd ~/.config/dmenu && sudo make clean install
-
-sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
-sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
-
-git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
-sudo cp -r ~/.themes/* /usr/share/themes
-
-sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
-sudo cp -r ~/.icons/PapirusFlatMix/* /usr/share/icons/Flat-Remix-Blue-Dark
-
-#sudo rm -rf /usr/share/themes/Kali-Dark/*
-#sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
 
 
 #xdg-mime query filetype (file)  #check filetype
