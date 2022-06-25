@@ -12,8 +12,8 @@ sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl lxappear
 pip3 install pywal
 
 cp -r ~/Desktop/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.zprofile,.icons,.themes} ~/
-cp -r ~/Desktop/dotfiles/.config/* ~/.config
-chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.config/scripts/* ~/.config/sxiv/exec/key-handler
+cp -r ~/Desktop/dotfiles/.config/[^.]* ~/.config
+chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/key-handler
 
 cd ~/.config/dmenu && sudo make clean install
 
