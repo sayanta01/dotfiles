@@ -31,7 +31,7 @@ sudo apt install -y ninja-build gettext libtool libtool-bin cmake pkg-config dox
 git clone https://github.com/neovim/neovim.git ~/.config/neovim && cd ~/.config/neovim
 make -j4 && sudo make install
 
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+git clone --depth 1 https://github.com/wbthomason/packer.nvim \
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
  
 pip3 install pynvim black flake8 
