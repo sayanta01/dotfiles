@@ -17,10 +17,6 @@ super + alt + p
 # pywal
 super + alt + o
               wal -qi ~/.local/share/walls  
-      
-# free sp
-#super + alt + f
-#               bash ~/.local/bin/fs
 
 # tempe
 super + alt + i
@@ -38,16 +34,34 @@ ctrl + alt + l
 super + alt + F4
                bash ~/.local/bin/system_action
 
-
-		
-		
-# bluetooth
-alt + F1
-       bash ~/.local/bin/btch
-	     		    
 # 0x0
 alt + 0
       bash ~/.local/bin/0x0
+                    
+# vs-code 
+#alt + shift + c
+#              code
+ 
+# obs
+#alt + shift + o
+#              obs
+      
+# wireshark
+#alt + shift + w
+#              wireshark
+              
+# burpsuite
+#alt + shift + b
+#              burpsuite  
+
+
+
+		
+
+
+# bluetooth
+alt + F1
+       bash ~/.local/bin/btch    		    
 	     
 # vol down
 alt + F2
@@ -139,23 +153,7 @@ alt + t
           
 # virtual-box
 alt + shift + v 
-              virtualbox
-                    
-# vs-code 
-alt + shift + c
-              code
- 
-# obs
-alt + shift + o
-              obs
-      
-# wireshark
-alt + shift + w
-              wireshark
-              
-# burpsuite
-alt + shift + b
-              burpsuite    
+              virtualbox  
 
 # calc
 ctrl + alt + k
