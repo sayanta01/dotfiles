@@ -21,10 +21,10 @@ sudo cp -r ~/.themes/* /usr/share/themes
 
 
 sudo pacman -Syu 
-sudo pacman -Sy --noconfirm cargo ttf-cascadia-code ttf-jetbrains-mono \
-noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome terminus-font \
+sudo pacman -Sy --noconfirm cargo ttf-jetbrains-mono noto-fonts ttf-font-awesome \
+noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome ttf-joypixels terminus-font \
 linux-headers \ 
-#linux-lts linux-lts-headers yarn linux-firmware
+#linux-lts linux-lts-headers linux-firmware
 thunar thunar-archive-plugin firefox ranger zathura zathura-pdf-mupdf lsd exa bat \
 neovim fzf translate-shell openssh wget curl mate-calc ripgrep nodejs npm \
 tree ncdu rsync unrar unzip zip p7zip tar python-pywal xdotool \
