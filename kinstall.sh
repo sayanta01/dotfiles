@@ -8,7 +8,7 @@ yes '
 
 ########## BSPWM ##########
 sudo apt update
-sudo apt install -y bspwm polybar rofi kitty slock alsa-utils playerctl lxappearance maim libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
+sudo apt install -y bspwm polybar rofi kitty slock alsa-utils dunst playerctl lxappearance maim libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
 pip3 install pywal
 
 cp -r ~/Desktop/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.zprofile,.icons,.themes} ~/
