@@ -12,7 +12,7 @@ super + alt + n
 	
 # wallch
 super + alt + p
-              bash ~/.local/bin/scripts/wallch
+              bash ~/.local/bin/wallch
 
 # pywal
 super + alt + o
@@ -20,7 +20,7 @@ super + alt + o
       
 # free sp
 #super + alt + f
-               bash ~/.local/bin/scripts/fs
+#               bash ~/.local/bin/fs
 
 # tempe
 super + alt + i
@@ -32,22 +32,22 @@ super alt + u
 	          		
 # screenlock
 ctrl + alt + l
-        slock
+             slock
 
  # system_action
 super + alt + F4
-               bash ~/.local/bin/scripts/system_action
+               bash ~/.local/bin/system_action
 
 
 		
 		
 # bluetooth
 alt + F1
-       bash ~/.local/bin/scripts/btch
+       bash ~/.local/bin/btch
 	     		    
 # 0x0
 alt + 0
-      bash ~/.local/bin/scripts/0x0
+      bash ~/.local/bin/0x0
 	     
 # vol down
 alt + F2
@@ -63,7 +63,7 @@ alt + F4
 
 # switch audio
 alt + F5       
-       bash ~/.local/bin/scripts/audiosw    
+       bash ~/.local/bin/audiosw    
 
 # previous
 alt + F6 
@@ -71,7 +71,7 @@ alt + F6
 
 # classic music
 ctrl + F7
-        bash ~/.local/bin/scripts/music
+        bash ~/.local/bin/music
 	
 # play, pause   
 super + F7
@@ -87,7 +87,7 @@ alt + F8
        
 # wifi
 alt + F9
-      bash ~/.local/bin/scripts/wifi             
+      bash ~/.local/bin/wifi             
         
 # screenshot
 Print
@@ -103,7 +103,7 @@ alt + Print
 	     
 # kill ps
 ctrl + alt + Delete
-                  bash ~/.config/scripts/kill
+                  bash ~/.local/bin/kill
                          
 # thunar
 super + e
