@@ -46,7 +46,7 @@ obs-studio audacity gimp kdeconnect \
 telegram-desktop deluge translate-shell docker.io apt-transport-https
 cargo install ttyper lsd bat
 
-sudo apt purge -y --auto-remove onboard xterm cherrytree
+sudo apt purge -y --auto-remove onboard xterm cherrytree xfce4-notifyd
  
 # Build Neovim
 sudo apt install -y ninja-build gettext libtool libtool-bin cmake pkg-config doxygen
