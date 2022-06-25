@@ -11,7 +11,7 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 sudo apt update
 sudo apt install -y cargo fzf ranger gpg \
 zathura ripgrep exa fd-find nodejs \
-#yarnpkg fonts-jetbrains-mono
+#fonts-jetbrains-mono
 ncdu slock imwheel npm \
 xwallpaper sxiv ffmpeg aptitude \
 fortune exiftool inkscape \
