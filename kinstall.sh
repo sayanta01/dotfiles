@@ -87,7 +87,6 @@ sudo cp -r ~/.themes/* /usr/share/themes
 sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
 sudo cp -r ~/.icons/PapirusFlatMix/* /usr/share/icons/Flat-Remix-Blue-Dark
 
-sudo cp -r ~/.config/scripts/* /usr/local/bin
 #sudo rm -rf /usr/share/themes/Kali-Dark/*
 #sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
 
