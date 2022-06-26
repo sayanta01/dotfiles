@@ -12,7 +12,7 @@ sudo apt install -y bspwm polybar rofi kitty slock alsa-utils dunst playerctl lx
 pip3 install pywal
 
 cp -r ~/Desktop/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.zprofile,.icons,.themes} ~/
-cp -r ~/Desktop/dotfiles/.config/[^.]* ~/.config
+cp -r ~/Desktop/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/key-handler
 
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/Downloads/dmenu
