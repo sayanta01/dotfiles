@@ -35,7 +35,7 @@ arch-chroot /mnt ( on arch )
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime      
 hwclock --systohc
 
-pacman -S networkmanager networkmanger-runit git ( on artix )
+pacman -S networkmanager networkmanger-runit git fakeroot glibc ( on artix )
 ln -s /etc/runit/sv/NetworkManager /etc/runit/runsvdir/current ( on artix before reboot )
 ln -s /etc/runit/sv/NetworkManager /run/runit/service ( after reboot )
 
