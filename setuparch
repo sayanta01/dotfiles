@@ -5,7 +5,7 @@
 
 ########## BSPWM ##########
 sudo pacman -Syu 
-sudo pacman -Sy --noconfirm bspwm sxhkd dmenu rofi slock dunst playerctl lxappearance maim alsa-utils dbus-python
+sudo pacman -S --noconfirm bspwm sxhkd rofi slock dunst lxappearance maim alsa-utils dbus-python
 
 cp -r ~/Desktop/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.zprofile,.icons,.themes} ~/
 cp -r ~/Desktop/dotfiles/.config/[^.]* ~/.config
@@ -19,11 +19,10 @@ sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.themes/* /usr/share/themes
 
-sudo pacman -Sy --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-font \
+sudo pacman -S --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-font \
 noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome  \
 linux-headers firefox \ 
 #linux-lts linux-lts-headers linux-firmware
-zathura zathura-pdf-mupdf
 lsd exa bat wget curl fzf aria2 \
 neovim ripgrep nodejs npm \
 openssh mate-calc reflector \
@@ -41,17 +40,17 @@ cargo install ttyper stylua
 
 #sudo systemctl enable vboxservice
 
-#sudo pacman -Syu lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+#sudo pacman -Sy lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 ##dm-tool switch-to-greeter
 #sudo systemctl enable lightdm.service
 
 pip3 install pynvim black flake8 sourcery
-sudo pacman -Sy --noconfirm ueberzug eslint ccls shfmt shellcheck lazygit
+sudo pacman -S --noconfirm ueberzug eslint ccls shfmt shellcheck lazygit
 sudo npm i -g prettier astyle 
 sudo npm i emmet html tailwindcss live-server
 
 #
-sudo pacman -Sy --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
+sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
 scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape kdeconnect blender discord docker \
 deluge telegram-desktop \
@@ -71,7 +70,8 @@ sudo systemctl enable fstrim.timer
 
 git clone https://aur.archlinux.org/yay.git ~/yay 
 cd ~/yay && makepkg -si
-yay -Sy --noconfirm spotify-adblock notion-app google-chrome ly polybar preload kitty
+yay -S --noconfirm spotify-adblock notion-app google-chrome ly polybar preload kitty playerctl zathura
+
 sudo systemctl enable ly.service 
 
 mkdir ~/{Desktop,Documents,Downloads,Music,Pictures,Videos} 
