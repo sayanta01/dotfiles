@@ -11,8 +11,8 @@ cp -r ~/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.zprofile,.icons,.the
 cp -r ~/dotfiles/.config/[^.]* ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/key-handler
 
-git clone https://github.com/LukeSmithxyz/dmenu.git ~/Downloads
-cd ~/Donwloads/dmenu && sudo make clean install
+#git clone https://github.com/LukeSmithxyz/dmenu.git ~/Downloads
+#cd ~/Donwloads/dmenu && sudo make clean install
 
 git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
 sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
@@ -22,7 +22,6 @@ sudo cp -r ~/.themes/* /usr/share/themes
 sudo pacman -S --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-font \
 noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome  \
 linux-headers firefox \ 
-#linux-lts linux-lts-headers linux-firmware
 lsd exa bat wget curl fzf aria2 \
 neovim ripgrep nodejs npm \
 openssh mate-calc reflector \
@@ -36,6 +35,7 @@ imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
 intel-ucode virtualbox-guest-utils python-pip xdotool \
 zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 unclutter jq xdg-user-dirs xorg xclip
+#linux-lts linux-lts-headers 
 cargo install ttyper stylua
 
 #sudo systemctl enable vboxservice
