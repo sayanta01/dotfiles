@@ -20,21 +20,22 @@ sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.themes/* /usr/share/themes
 
 sudo pacman -S --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-font \
-noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome  \
-linux-headers firefox \ 
-lsd exa bat wget curl fzf aria2 \
-neovim ripgrep nodejs npm \
-openssh mate-calc reflector \
-dialog cmake libconfig dash wmctrl imwheel \
-pipewire pulseaudio pavucontrol \
-dhcpcd networkmanager wireless_tools net-tools \
-tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar  \
-fortune-mod htop neofetch bpytop \
-speedtest-cli trash-cli yt-dlp transmission-cli \
-imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
-intel-ucode virtualbox-guest-utils python-pip xdotool \
-zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-unclutter jq xdg-user-dirs xorg xclip
+     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome  \
+     linux-headers firefox \ 
+     lsd exa bat wget curl fzf aria2 \
+     neovim ripgrep nodejs npm \
+     openssh mate-calc reflector \
+     dialog cmake libconfig dash wmctrl imwheel \
+     pipewire pulseaudio pavucontrol \
+     dhcpcd networkmanager wireless_tools net-tools \
+     tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar  \
+     fortune-mod htop neofetch bpytop \
+     speedtest-cli trash-cli yt-dlp transmission-cli \
+     imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
+     intel-ucode virtualbox-guest-utils python-pip xdotool \
+     zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
+     unclutter jq xdg-user-dirs xorg xclip
+     
 #linux-lts linux-lts-headers 
 cargo install ttyper stylua
 
