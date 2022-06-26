@@ -5,7 +5,7 @@
 
 ########## BSPWM ##########
 sudo pacman -Syu 
-sudo pacman -Sy --noconfirm bspwm sxhkd dmenu rofi kitty slock dunst playerctl lxappearance maim alsa-utils dbus-python
+sudo pacman -Sy --noconfirm bspwm sxhkd dmenu rofi slock dunst playerctl lxappearance maim alsa-utils dbus-python
 
 cp -r ~/Desktop/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.zprofile,.icons,.themes} ~/
 cp -r ~/Desktop/dotfiles/.config/[^.]* ~/.config
@@ -71,7 +71,7 @@ sudo systemctl enable fstrim.timer
 
 git clone https://aur.archlinux.org/yay.git ~/yay 
 cd ~/yay && makepkg -si
-yay -Sy --noconfirm spotify-adblock notion-app google-chrome ly polybar preload
+yay -Sy --noconfirm spotify-adblock notion-app google-chrome ly polybar preload kitty
 sudo systemctl enable ly.service 
 
 mkdir ~/{Desktop,Documents,Downloads,Music,Pictures,Videos} 
