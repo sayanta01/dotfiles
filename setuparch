@@ -44,6 +44,9 @@ cargo install ttyper stylua
 ##dm-tool switch-to-greeter
 #sudo systemctl enable lightdm.service
 
+git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+ 
 pip3 install pynvim black flake8 sourcery
 sudo pacman -S --noconfirm ueberzug eslint ccls shfmt shellcheck lazygit
 sudo npm i -g prettier astyle 
