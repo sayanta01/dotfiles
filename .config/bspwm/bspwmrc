@@ -1,6 +1,8 @@
 #!/bin/bash
 
-bspc monitor -d   ﮊ  󰹂  󱞐   
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d   ﮊ  󰹂   󱞐   
 
 bspc config border_width             1
 bspc config window_gap               2
@@ -21,10 +23,9 @@ bspc rule -a Screenkey manage=off
 
 
 #Autostart
-pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
 ./.config/polybar/launch.sh &
-killall -q "imwheel" &
+#killall -q "imwheel" &
 imwheel -b "4 5" 
 xset r rate 290 50 &
 kdeconnect-indicator &
