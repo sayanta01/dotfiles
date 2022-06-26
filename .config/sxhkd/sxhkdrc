@@ -31,7 +31,7 @@ ctrl + alt + l
              slock
 
  # system_action
-super + alt + F4
+super + F4
                bash ~/.local/bin/system_action
 
 # 0x0
