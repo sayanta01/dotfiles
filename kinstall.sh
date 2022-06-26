@@ -15,7 +15,9 @@ cp -r ~/Desktop/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.zprofile,.ic
 cp -r ~/Desktop/dotfiles/.config/[^.]* ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/key-handler
 
-cd ~/.config/dmenu && sudo make clean install
+git clone https://github.com/LukeSmithxyz/dmenu.git ~/.Downloads
+cd ~/.Donwloads/dmenu && sudo make clean install
+#cd ~/.config/dmenu && sudo make clean install
 
 sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
 sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
