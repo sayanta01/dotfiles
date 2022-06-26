@@ -11,8 +11,8 @@ cp -r ~/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.zprofile,.icons,.the
 cp -r ~/dotfiles/.config/[^.]* ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/key-handler
 
-git clone https://github.com/LukeSmithxyz/dmenu.git ~/.Downloads
-cd ~/.Donwloads/dmenu && sudo make clean install
+git clone https://github.com/LukeSmithxyz/dmenu.git ~/Downloads
+cd ~/Donwloads/dmenu && sudo make clean install
 
 git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
 sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
