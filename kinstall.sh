@@ -15,7 +15,7 @@ cp -r ~/Desktop/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.zprofile,.ic
 cp -r ~/Desktop/dotfiles/.config/[^.]* ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/key-handler
 
-git clone https://github.com/LukeSmithxyz/dmenu.git ~/.Downloads
+git clone https://github.com/LukeSmithxyz/dmenu.git ~/.Downloads/dmenu
 cd ~/.Donwloads/dmenu && sudo make clean install
 #cd ~/.config/dmenu && sudo make clean install
 
