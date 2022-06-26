@@ -1,7 +1,4 @@
-#!/bin/sh
-
-#sudo ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime      
-#sudo hwclock --systohc                                          
+#!/bin/sh                                         
 
 ########## BSPWM ##########
 sudo pacman -Syu 
