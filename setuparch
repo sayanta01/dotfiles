@@ -71,7 +71,7 @@ sudo systemctl enable fstrim.timer
 
 git clone https://aur.archlinux.org/yay.git ~/yay 
 cd ~/yay && makepkg -si
-yay -S --noconfirm spotify-adblock notion-app google-chrome ly polybar preload kitty playerctl zathura
+yay -S --noconfirm spotify-adblock notion-app google-chrome ly polybar preload kitty playerctl zathura visual-studio-code-bin
 
 sudo systemctl enable ly.service 
 
