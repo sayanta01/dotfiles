@@ -8,7 +8,7 @@ cp -r ~/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.zprofile,.icons,.the
 cp -r ~/dotfiles/.config/[^.]* ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/key-handler
 
-git clone https://github.com/LukeSmithxyz/dmenu.git ~/.Downloads/dmenu
+git clone https://github.com/LukeSmithxyz/dmenu.git ~/Downloads/dmenu
 cd ~/Donwloads/dmenu && sudo make clean install
 
 git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
