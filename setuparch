@@ -20,7 +20,7 @@ sudo pacman -S --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-fo
      noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome  \
      linux-headers firefox \
      lsd exa bat wget curl fzf aria2 \
-     neovim ripgrep nodejs npm qt qt5ct \
+     neovim ripgrep nodejs npm qt5ct \
      openssh mate-calc reflector \
      dialog cmake libconfig dash wmctrl imwheel \
      pipewire pulseaudio pavucontrol \
@@ -98,3 +98,6 @@ xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 # uncmnt zsh plugins of arch
 # vim /etc/pacman.conf # uncheck ignorepkg and put pkgname
+
+
+#QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment
