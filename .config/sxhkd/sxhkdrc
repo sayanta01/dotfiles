@@ -38,26 +38,8 @@ super + F4
 alt + 0
       bash ~/.local/bin/0x0
                     
-# vs-code 
-#alt + shift + c
-#              code
- 
-# obs
-#alt + shift + o
-#              obs
-      
-# wireshark
-#alt + shift + w
-#              wireshark
-              
-# burpsuite
-#alt + shift + b
-#              burpsuite  
-
-
 
 		
-
 
 # bluetooth
 alt + F1
