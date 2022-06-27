@@ -26,7 +26,7 @@ sudo pacman -S --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-fo
      pipewire pulseaudio pavucontrol \
      dhcpcd networkmanager wireless_tools net-tools \
      tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar  \
-     fortune-mod htop neofetch bpytop breeze \
+     fortune-mod htop neofetch bpytop \
      speedtest-cli trash-cli yt-dlp transmission-cli \
      imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
@@ -71,7 +71,7 @@ sudo systemctl enable fstrim.timer
 
 git clone https://aur.archlinux.org/yay.git ~/yay 
 cd ~/yay && makepkg -si
-yay -S --noconfirm spotify-adblock notion-app google-chrome ly polybar preload kitty playerctl zathura visual-studio-code-bin
+yay -S --noconfirm spotify-adblock notion-app google-chrome ly polybar preload kitty playerctl zathura visual-studio-code-bin lightly-git
 
 sudo systemctl enable ly.service 
 
