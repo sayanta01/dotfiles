@@ -5,7 +5,7 @@ configuration {
     font:                           "BlexMono Nerd Font Medium Italic 11";
     foreground:                     #A7B5CD;
     background:                     #101216;
-    highlight:	       		    #FFF;
+    highlight:	             		    #FFF;
     red:                            #973d46;
     darkred:                        #973d46;
     blue:                           #517ba5;
@@ -21,10 +21,10 @@ configuration {
     darkcyan:                       #5f9f9e;
 }
 window {
-    border: 						0px;
-    border-radius: 					0px;
-    padding: 						0;
-    width: 						30%;
+    border: 				0px;
+    border-radius: 			0px;
+    padding: 				0;
+    width: 		  		30%;
 }
 mainbox {
     border:  0;
@@ -97,21 +97,21 @@ element-icon {
 }
 
 entry {
-    spacing:    0px;
-    padding:	0px;
-    text-color: #282C34;
-    placeholder:        "";
-    placeholder-color:  @foreground;
+    spacing:           0px;
+    padding:	       8px;
+    text-color:        #f8f8f2;
+    placeholder:       "";
+    placeholder-color: @foreground;
 }
 prompt {
-    padding: 0 4 0 2;
+    padding: 0 2 0 0 ;
     text-color: @foreground;
 }
 inputbar {
-    background-color: #282C34;
-    margin:   0px 0px 0px;
-    border:         0px;
-    border-radius:  0px;
-    border-color:   @background;
-    children:   [ prompt,entry];
+    background-color:  #44465A;
+    margin:            0px 0px 0px;
+    border:            0px;
+    border-radius:     0px;
+    border-color:      @background;
+    children:          [ prompt,entry];
 }
