@@ -26,7 +26,7 @@ sudo pacman -S --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-fo
      pipewire pulseaudio pavucontrol \
      dhcpcd networkmanager wireless_tools net-tools \
      tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar  \
-     fortune-mod htop neofetch bpytop \
+     fortune-mod htop neofetch bpytop breeze \
      speedtest-cli trash-cli yt-dlp transmission-cli \
      imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
