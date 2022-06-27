@@ -20,7 +20,7 @@ sudo pacman -S --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-fo
      noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome  \
      linux-headers firefox \
      lsd exa bat wget curl fzf aria2 \
-     neovim ripgrep nodejs npm \
+     neovim ripgrep nodejs npm qt qt5ct \
      openssh mate-calc reflector \
      dialog cmake libconfig dash wmctrl imwheel \
      pipewire pulseaudio pavucontrol \
