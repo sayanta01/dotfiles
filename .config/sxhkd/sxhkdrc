@@ -32,7 +32,7 @@ ctrl + alt + l
 
  # system_action
 super + F4
-               bash ~/.local/bin/system_action
+         bash ~/.local/bin/system_action
 
 # 0x0
 alt + 0
@@ -66,11 +66,14 @@ alt + F1
 # vol down
 alt + F2
        amixer set Master 5%-
+       #pactl set-sink-volume @DEFAULT_SINK@ -5%
+
 
 # vol up
 alt + F3
        amixer set Master 5%+
- 
+       #pactl set-sink-volume @DEFAULT_SINK@ +5%
+
 # mute
 alt + F4
         amixer set Master toggle         
