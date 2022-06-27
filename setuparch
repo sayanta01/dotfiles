@@ -19,7 +19,7 @@ sudo cp -r ~/.themes/* /usr/share/themes
 sudo pacman -S --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-font \
      noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-joypixels ttf-font-awesome  \
      linux-headers firefox \
-     lsd exa bat wget curl fzf aria2 \
+     lsd exa bat wget curl fzf aria2 tmux \
      neovim ripgrep nodejs npm qt5ct \
      openssh mate-calc reflector \
      dialog cmake libconfig dash wmctrl imwheel \
