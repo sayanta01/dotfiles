@@ -100,4 +100,5 @@ xdg-mime default org.pwmt.zathura.desktop application/pdf
 # vim /etc/pacman.conf # uncheck ignorepkg and put pkgname
 
 
-#QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment
+#QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment  ( fix qt5ct )
+#ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
