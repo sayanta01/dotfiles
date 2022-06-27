@@ -42,10 +42,12 @@ xwallpaper sxiv ffmpeg aptitude \
 fortune exiftool inkscape \
 synaptic stress \
 bpytop neofetch preload htop \
-speedtest-cli trash-cli yt-dlp transmission-cli stacer font-viewer \
+speedtest-cli trash-cli yt-dlp stacer font-viewer \
 android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
 obs-studio audacity gimp kdeconnect \
-telegram-desktop deluge translate-shell docker.io apt-transport-https
+telegram-desktop deluge docker.io 
+
+#apt-transport-https translate-shell transmission-cli 
 cargo install ttyper lsd bat
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree xfce4-notifyd
