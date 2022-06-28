@@ -3,6 +3,7 @@
 interface = "eth0"
 #interface = "wlan0"
 #interface = "enp0s3"
+#interface = "enp2s0"
 
 from os import popen
 from time import sleep
