@@ -111,6 +111,8 @@ super + e
 # chrome
 alt + b
       google-chrome
+      #google-chrome-stable
+
         
 # firefox
 super + alt + b
