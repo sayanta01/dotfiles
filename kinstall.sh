@@ -35,6 +35,7 @@ sudo cp -r ~/.icons/PapirusFlatMix/* /usr/share/icons/Flat-Remix-Blue-Dark
 curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
+sudo apt update
 sudo apt install -y cargo fzf ranger gpg \
 zathura ripgrep exa fd-find nodejs fonts-jetbrains-mono \
 ncdu slock imwheel npm \
