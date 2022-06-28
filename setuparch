@@ -30,13 +30,13 @@ sudo pacman -S --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-fo
      dhcpcd networkmanager wireless_tools net-tools \
      tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar  \
      fortune-mod htop neofetch bpytop \
-     speedtest-cli trash-cli yt-dlp transmission-cli \
+     speedtest-cli trash-cli yt-dlp \
      imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
      unclutter jq xdg-user-dirs xorg xclip
      
-#linux-lts linux-lts-headers 
+#linux-lts linux-lts-headers transmission-cli
 cargo install ttyper stylua
 
 #sudo systemctl enable vboxservice
@@ -56,7 +56,7 @@ sudo npm i emmet html tailwindcss live-server
 #
 sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
 scrcpy android-tools nvtop stress \
-obs-studio audacity gimp inkscape kdeconnect blender discord docker \
+obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord docker \
 deluge telegram-desktop \
 bluez bluez-utils blueman ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
