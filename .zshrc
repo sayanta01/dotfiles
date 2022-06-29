@@ -179,7 +179,7 @@ alias copy='rsync --progress -auv'
 alias shred='shred -uvzn3'
 alias iv='sxiv'
 
-alias typer='ttyper'
+alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias mp='mousepad'
 alias vim='nvim'
 alias ytdl='yt-dlp -f 137+140'
