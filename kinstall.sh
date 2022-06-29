@@ -16,10 +16,10 @@ cp -r ~/Desktop/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/key-handler
 
 git clone https://github.com/LukeSmithxyz/st.git ~/Downloads/st
-cd ~/Donwloads/st && sudo make clean install
+cd ~/Downloads/st && sudo make clean install
 
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/Downloads/dmenu
-cd ~/Donwloads/dmenu && sudo make clean install
+cd ~/Downloads/dmenu && sudo make clean install
 
 sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
 sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
