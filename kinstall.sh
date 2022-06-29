@@ -89,9 +89,7 @@ nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
 
-sudo cat <<EOF | sudo tee -a /etc/default/console-setup
-FONT='Uni2-TerminusBold20x10.psf.gz'
-EOF
+su root -c "echo -e FONT='Uni2-TerminusBold20x10.psf.gz' >> /etc/default/console-setup"
 
 axel -n 20 -o PacketTracer.deb https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
