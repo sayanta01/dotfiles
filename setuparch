@@ -85,11 +85,7 @@ nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
  
-setfont /usr/share/kbd/consolefonts/ter-c16b.psf.gz
-sudo cat <<EOF | sudo tee /etc/vconsole.conf
-FONT=ter-c16b.psf.gz
-EOF
-
+su root -c "echo -e FONT='Uni2-TerminusBold20x10.psf.gz' >> /etc/default/console-setup"
 
 #xdg-mime query filetype (file)  #check filetype
 #xdg-mime query default (file/type)  #check default app of filetype
