@@ -18,10 +18,6 @@ vim.g.maplocalleader = " "
 --   visual_block_mode = "x",
 
 -- Normal --
--- Rust
---keymap("n", "<leader>rr", ":RustRun<CR>", opts)   -- change shortcut
---keymap("n", "<leader>rf", ":RustFmt<CR>", opts)
-
 -- Copy whole file
 keymap("n", "<C-c-a>", ":%y+ <CR>", opts)
 
