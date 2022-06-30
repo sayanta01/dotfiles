@@ -5,7 +5,6 @@ sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 yes '
 ' | sudo apt full-upgrade
 
-
 ########## BSPWM ##########
 sudo apt update
 sudo apt install -y bspwm polybar rofi kitty slock alsa-utils dunst playerctl lxappearance maim libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
