@@ -65,8 +65,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 pip3 install pynvim black flake8 
 cargo install stylua
 sudo apt install -y ueberzug eslint ccls shfmt shellcheck
-sudo npm i -g prettier astyle 
-sudo npm i emmet html tailwindcss live-server 
+sudo npm i -g prettier astyle truecallerjs emmet html tailwindcss live-server
 
 #
 sudo apt install -y virt-manager qemu
