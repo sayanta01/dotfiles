@@ -50,8 +50,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
  
 pip3 install pynvim black flake8 sourcery
 sudo pacman -S --noconfirm ueberzug eslint ccls shfmt shellcheck lazygit
-sudo npm i -g prettier astyle 
-sudo npm i emmet html tailwindcss live-server
+sudo npm i -g prettier astyle truecallerjs emmet html tailwindcss live-server
 
 #
 sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
