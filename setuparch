@@ -27,7 +27,7 @@ sudo pacman -S --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-fo
      openssh mate-calc reflector \
      dialog cmake libconfig dash wmctrl imwheel \
      pipewire pulseaudio pavucontrol \
-     dhcpcd networkmanager wireless_tools net-tools \
+     dhcpcd networkmanager wireless_tools net-tools nm-connection-editor \
      tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar  \
      fortune-mod htop neofetch bpytop zathura zathura-pdf-mupdf \
      speedtest-cli trash-cli yt-dlp \
