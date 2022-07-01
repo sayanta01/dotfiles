@@ -4,7 +4,6 @@ if not status_ok then
 end
 
 configs.setup {
-  --ensure_installed = "all", -- one of "all" or a list of languages
   ensure_installed = { "c", "javascript", "typescript", "lua", "css", "python", "bash", "html" },
   sync_install = false,
   ignore_install = { "" },
