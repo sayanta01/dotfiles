@@ -39,6 +39,8 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-o>","<cmd>BufferLineMoveNext<cr>", opts)
+keymap("n", "<S-i>","<cmd>BufferLineMovePrev<cr>", opts)
 
 -- New buffer
 keymap("n", "<S-b>", ":enew <CR>", opts)
