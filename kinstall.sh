@@ -87,11 +87,8 @@ nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
 
-su root -c "echo -e FONT='Uni2-TerminusBold20x10.psf.gz' >> /etc/default/console-setup"
-
 axel -n 20 -o PacketTracer.deb https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
-
 
 #xdg-mime query filetype (file)  #check filetype
 #xdg-mime query default (file/type)  #check default app of filetype
@@ -101,6 +98,7 @@ xdg-mime default sxiv.desktop image/png
 xdg-mime default inkscape.desktop image/svg+xml
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
+su root -c "echo -e FONT='Uni2-TerminusBold20x10.psf.gz' >> /etc/default/console-setup"
 
 # sudo vim /etc/hosts                       blk sites
 # sudo systemd-analyze                      critical-chain      
