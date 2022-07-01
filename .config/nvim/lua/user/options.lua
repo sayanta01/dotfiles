@@ -39,11 +39,10 @@ local options = {
   scrolloff = 6,
   sidescrolloff = 8,
   
-  -- new
-  lazyredraw = true,  --lazily redraw screen
-  --copyindent = true,  --Copy the previous indentation on autoindenting
-  --fillchars = { eob = " " },  --Disable `~` on nonexistent lines
-  --preserveindent = true,  --Preserve indent structure as much as possible
+  lazyredraw = true, 
+  copyindent = true,  --Copy the previous indentation on autoindenting
+  fillchars = { eob = " " },  --Disable `~` on nonexistent lines
+  preserveindent = true,  --Preserve indent structure as much as possible
 }
 
 for k, v in pairs(options) do
