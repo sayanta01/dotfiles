@@ -84,8 +84,6 @@ nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
  
-su root -c "echo -e FONT='Uni2-TerminusBold20x10.psf.gz' >> /etc/default/console-setup"
-
 #xdg-mime query filetype (file)  #check filetype
 #xdg-mime query default (file/type)  #check default app of filetype
 xdg-mime default sxiv.desktop image/jpeg
@@ -94,9 +92,9 @@ xdg-mime default sxiv.desktop image/png
 xdg-mime default inkscape.desktop image/svg+xml
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
-# uncmnt zsh plugins of arch
+su root -c "echo -e FONT='Uni2-TerminusBold20x10.psf.gz' >> /etc/default/console-setup"
+
+# uncmnt zsh plugins path for arch
 # vim /etc/pacman.conf # uncheck ignorepkg and put pkgname
-
-
 #QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment  ( fix qt5ct )
 #ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
