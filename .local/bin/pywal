@@ -1,0 +1,4 @@
+#!/bin/sh
+
+wal -qi ~/.local/share/walls
+
