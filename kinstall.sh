@@ -52,8 +52,9 @@ telegram-desktop deluge docker.io
 #apt-transport-https translate-shell transmission-cli 
 cargo install ttyper lsd bat
 
-sudo apt purge -y --auto-remove onboard xterm cherrytree xfce4-power-manager xfce4-notifyd
- 
+sudo apt purge -y --auto-remove onboard xterm cherrytree \
+xfce4-power-manager xfce4-notifyd  xfce4-screensaver xfce4-clipman-plugin
+
 # Build Neovim
 sudo apt install -y ninja-build gettext libtool libtool-bin cmake pkg-config doxygen
 git clone https://github.com/neovim/neovim.git ~/.config/neovim && cd ~/.config/neovim
