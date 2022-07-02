@@ -60,7 +60,7 @@ deluge telegram-desktop xfce4 xfce4-goodies \
 bluez bluez-utils blueman ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
-sudo pacman -Rns xfce4-power-manager xfce4-notifyd  xfce4-screensaver \
+sudo pacman -Rns xfce4-notifyd  xfce4-screensaver \
 xfce4-clipman-plugin xfce4-weather-plugin xfce-note-plugin
 
 #sudo systemctl enable --now libvirtd
