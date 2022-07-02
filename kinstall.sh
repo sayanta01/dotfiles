@@ -52,7 +52,7 @@ telegram-desktop deluge docker.io
 #apt-transport-https translate-shell transmission-cli 
 cargo install ttyper lsd bat
 
-sudo apt purge -y --auto-remove onboard xterm cherrytree xfce4-notifyd
+sudo apt purge -y --auto-remove onboard xterm cherrytree xfce4-power-manager xfce4-notifyd
  
 # Build Neovim
 sudo apt install -y ninja-build gettext libtool libtool-bin cmake pkg-config doxygen
