@@ -99,6 +99,7 @@ xdg-mime default sxiv.desktop image/png
 xdg-mime default inkscape.desktop image/svg+xml
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
+setfont /usr/share/kbd/consolefonts/ter-c16b.psf.gz
 su root -c "echo -e FONT='Uni2-TerminusBold20x10.psf.gz' >> /etc/default/console-setup"
 
 # sudo vim /etc/hosts                       blk sites
