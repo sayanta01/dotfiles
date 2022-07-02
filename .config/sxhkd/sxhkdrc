@@ -26,19 +26,7 @@ ctrl + alt + l
 super + F4
          bash ~/.local/bin/system_action
 
-# 0x0
-#alt + 0
-#      bash ~/.local/bin/0x0
-                    
-# tempe
-#super + alt + i
-#              notify-send -t 900 "$(echo Temp 🌡) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input| cut -b -2)$(echo °C)"      
 
-# uptime
-#super alt + u
-#            notify-send -t 900 "$(echo  ) $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
-	   
-		
 
 
 # bluetooth
@@ -49,7 +37,6 @@ alt + F1
 alt + F2
        amixer set Master 5%-
        #pactl set-sink-volume @DEFAULT_SINK@ -5%
-
 
 # vol up
 alt + F3
@@ -137,10 +124,6 @@ alt + s
 # telegram
 alt + t
       telegram-desktop
-          
-# virtual-box
-alt + shift + v 
-              virtualbox  
 
 # calc
 ctrl + alt + k
