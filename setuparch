@@ -36,7 +36,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
      unclutter jq xdg-user-dirs xorg xclip
      
-#linux-lts linux-lts-headers transmission-cli
+#linux-lts linux-lts-headers
 cargo install ttyper stylua
 
 #sudo systemctl enable vboxservice
