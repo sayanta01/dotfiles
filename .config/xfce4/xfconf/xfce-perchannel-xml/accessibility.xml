@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="accessibility" version="1.0">
+  <property name="StickyKeys" type="bool" value="false"/>
+  <property name="MouseKeys" type="empty">
+    <property name="Delay" type="int" value="140"/>
+    <property name="MaxSpeed" type="int" value="990"/>
+  </property>
+</channel>
