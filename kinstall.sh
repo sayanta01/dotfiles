@@ -44,10 +44,10 @@ xwallpaper sxiv ffmpeg aptitude \
 fortune exiftool inkscape \
 synaptic stress \
 bpytop neofetch preload htop \
-speedtest-cli trash-cli yt-dlp stacer font-viewer \
+speedtest-cli transmission-cli trash-cli yt-dlp stacer font-viewer \
 android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
 obs-studio audacity gimp kdeconnect \
-telegram-desktop deluge docker.io 
+telegram-desktop docker.io 
 
 #apt-transport-https translate-shell transmission-cli 
 cargo install ttyper lsd bat
