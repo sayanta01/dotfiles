@@ -17,7 +17,8 @@ super + alt + p
 # pywal
 super + alt + o
               wal -qi ~/.local/share/walls  
-       		
+
+
 # screenlock
 ctrl + alt + l
              slock
@@ -25,9 +26,6 @@ ctrl + alt + l
  # system_action
 super + F4
          bash ~/.local/bin/system_action
-
-
-
 
 # bluetooth
 alt + F1
