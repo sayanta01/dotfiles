@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+clear
+for (( ; ;))
+  do
+    echo "Torrent Downloads..."
+    transmission-remote -l
+    sleep 1
+    clear
+done
