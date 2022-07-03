@@ -30,7 +30,7 @@ sudo pacman -S --noconfirm cargo ttf-jetbrains-mono ttf-font-awesome terminus-fo
      dhcpcd networkmanager wireless_tools net-tools nm-connection-editor \
      tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar  \
      fortune-mod htop neofetch bpytop zathura zathura-pdf-mupdf \
-     speedtest-cli trash-cli yt-dlp \
+     speedtest-cli trash-cli yt-dlp transmission-cli \
      imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
@@ -56,7 +56,7 @@ sudo npm i -g prettier astyle truecallerjs emmet html tailwindcss live-server
 sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
 scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord docker \
-deluge-gtk telegram-desktop xfce4 xfce4-goodies \
+telegram-desktop xfce4 xfce4-goodies \
 bluez bluez-utils blueman ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
