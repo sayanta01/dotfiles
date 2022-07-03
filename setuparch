@@ -56,7 +56,7 @@ sudo npm i -g prettier astyle truecallerjs emmet html tailwindcss live-server
 sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
 scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord docker \
-deluge telegram-desktop xfce4 xfce4-goodies \
+deluge-gtk telegram-desktop xfce4 xfce4-goodies \
 bluez bluez-utils blueman ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
