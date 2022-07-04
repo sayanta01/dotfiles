@@ -169,9 +169,9 @@ local mappings = {
   d = {
     name = "Buffer",
     h = { "<cmd>BufferLineCloseLeft<CR>", "Close all to left" },
-    j = { "<cmd>BufferLinePick<CR>", "Jump" },
+    --j = { "<cmd>BufferLinePick<CR>", "Jump" },
     l = { "<cmd>BufferLineCloseRight<CR>", "Close all to right" },
-    p = { "<cmd>BufferLineTogglePin<CR>", "Toggle pin" },
+    --p = { "<cmd>BufferLineTogglePin<CR>", "Toggle pin" },
   },
 
   t = {
