@@ -26,7 +26,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf
      neovim ripgrep nodejs npm qt5ct \
      openssh mate-calc reflector \
      dialog cmake libconfig dash wmctrl imwheel \
-     pipewire pulseaudio pavucontrol \
+     pipewire pulseaudio pavucontrol wmname \
      dhcpcd networkmanager wireless_tools net-tools nm-connection-editor \
      tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar  \
      fortune-mod htop neofetch bpytop zathura zathura-pdf-mupdf \
