@@ -1,0 +1,9 @@
+#!/bin/sh
+
+sxhkd &			
+xset r rate 290 50 &
+dunst &
+imwheel -b 45 &
+kdeconnect-indicator &
+xrdb ~/.config/.Xresources &
+
