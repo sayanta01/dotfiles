@@ -42,7 +42,7 @@ zathura ripgrep exa fd-find fonts-jetbrains-mono \
 ncdu slock imwheel npm \
 xwallpaper sxiv inkscape ffmpeg \
 fortune exiftool aptitude \
-synaptic stress stacer font-viewer \
+stress stacer font-viewer \
 bpytop neofetch preload htop \
 speedtest-cli transmission-cli trash-cli yt-dlp \
 android-tools-fastboot scrcpy android-tools-adb nvtop \
@@ -50,7 +50,7 @@ obs-studio audacity gimp \
 nvidia-driver nvidia-cuda-toolkit \
 telegram-desktop kdeconnect spotify-client  
 
-#apt-transport-https translate-shell docker.io
+#apt-transport-https translate-shell docker.io synaptic
 cargo install ttyper lsd bat
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree \
