@@ -38,18 +38,19 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 
 sudo apt update
 sudo apt install -y cargo fzf ranger gpg \
-zathura ripgrep exa fd-find nodejs fonts-jetbrains-mono \
+zathura ripgrep exa fd-find fonts-jetbrains-mono \
 ncdu slock imwheel npm \
-xwallpaper sxiv ffmpeg aptitude \
-fortune exiftool inkscape \
-synaptic stress \
+xwallpaper sxiv inkscape ffmpeg \
+fortune exiftool aptitude \
+synaptic stress stacer font-viewer \
 bpytop neofetch preload htop \
-speedtest-cli transmission-cli trash-cli yt-dlp stacer font-viewer \
-android-tools-fastboot scrcpy android-tools-adb nvtop spotify-client \
-obs-studio audacity gimp kdeconnect \
-telegram-desktop docker.io 
+speedtest-cli transmission-cli trash-cli yt-dlp \
+android-tools-fastboot scrcpy android-tools-adb nvtop \
+obs-studio audacity gimp \
+nvidia-driver nvidia-cuda-toolkit \
+telegram-desktop kdeconnect spotify-client  
 
-#apt-transport-https translate-shell transmission-cli 
+#apt-transport-https translate-shell docker.io
 cargo install ttyper lsd bat
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree \
@@ -69,8 +70,6 @@ sudo usermod -aG libvirt bot
 sudo usermod -aG kvm bot
 
 sudo systemctl enable fstrim.timer
-
-sudo apt install -y nvidia-driver nvidia-cuda-toolkit
 
 wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/Downloads/vscode.deb
 wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/Downloads/discord.deb
