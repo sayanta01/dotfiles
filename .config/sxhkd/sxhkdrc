@@ -54,8 +54,8 @@ alt + F6
        playerctl previous   
 
 # classic music
-ctrl + F7
-        bash ~/.local/bin/music
+#ctrl + F7
+#        bash ~/.local/bin/music
 	
 # play, pause   
 super + F7
