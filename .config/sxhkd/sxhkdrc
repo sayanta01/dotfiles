@@ -11,8 +11,8 @@ super + alt + m
               xdg-open http://notion.new	
 	
 # wallch
-super + alt + p
-              bash ~/.local/bin/wallch
+#super + alt + p
+#              bash ~/.local/bin/wallch
 
 # screenlock
 ctrl + alt + l
