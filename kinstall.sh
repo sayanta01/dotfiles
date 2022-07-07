@@ -40,7 +40,7 @@ sudo apt update
 sudo apt install -y cargo fzf ranger gpg \
 zathura ripgrep exa fd-find fonts-jetbrains-mono \
 ncdu slock imwheel npm \
-xwallpaper sxiv inkscape ffmpeg \
+xwallpaper sxiv inkscape ffmpeg mpv \
 fortune exiftool aptitude \
 stress stacer font-viewer \
 bpytop neofetch preload htop \
