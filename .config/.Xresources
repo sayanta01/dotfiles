@@ -1,4 +1,4 @@
-*.font: JetBrainsMono:size=14
+*.font: JetBrainsMono:size=12
 
 ! Dracula Xresources Palette
  *.foreground: #F8F8F2
