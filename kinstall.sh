@@ -54,7 +54,7 @@ telegram-desktop kdeconnect spotify-client
 cargo install ttyper lsd bat
 
 sudo apt purge -y --auto-remove onboard xterm cherrytree \
-xfce4-notifyd  xfce4-screensaver xfce4-clipman-plugin
+xfce4-notifyd xfce4-clipman-plugin
 
 # Build Neovim
 sudo apt install -y ninja-build gettext libtool libtool-bin cmake pkg-config doxygen
