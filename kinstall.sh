@@ -39,7 +39,7 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 sudo apt update
 sudo apt install -y cargo fzf ranger gpg \
 zathura ripgrep exa fd-find fonts-jetbrains-mono \
-ncdu slock imwheel npm \
+ncdu slock imwheel xclip npm \
 xwallpaper sxiv inkscape ffmpeg mpv \
 fortune exiftool aptitude \
 stress stacer font-viewer \
