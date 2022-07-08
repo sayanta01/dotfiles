@@ -21,6 +21,10 @@ vim.g.maplocalleader = " "
 -- Copy whole file
 keymap("n", "<C-c-a>", ":%y+ <CR>", opts)
 
+-- line numbers
+keymap("n", "<leader>n", "<cmd> set nu! <CR>", opts)
+keymap("n", "<leader>nn", "<cmd> set rnu! <CR>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -71,6 +75,16 @@ keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 
+-- go to  beginning and end
+keymap("i", "<C-b>", "<ESC>^i", opts)
+keymap("i", "<C-e>", "<End>", opts)
+
+-- navigate within insert mode
+keymap("i", "<C-h>", "<Left>", opts)
+keymap("i", "<C-l>", "<Right>", opts)
+keymap("i", "<C-j>", "<Down>", opts)
+keymap("i", "<C-k>", "<Up>", opts)
+
 
 -- Visual --
 -- Stay in indent mode
@@ -80,8 +94,9 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
 
+-- Better paste
+keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
 -- Move text up and down
