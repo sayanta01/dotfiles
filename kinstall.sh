@@ -7,7 +7,7 @@ yes '
 
 ########## BSPWM ##########
 sudo apt update
-sudo apt install -y bspwm polybar rofi kitty slock alsa-utils dunst playerctl lxappearance maim libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
+sudo apt install -y bspwm polybar rofi kitty dunst lxappearance maim slock playerctl libxft-dev alsa-utils libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
 pip install pywal
 
 cp -r ~/Desktop/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.xprofile,.zprofile,.tmux.conf,.icons,.themes} ~/
@@ -37,16 +37,15 @@ curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt update
-sudo apt install -y cargo fzf ranger gpg \
-zathura ripgrep exa fd-find fonts-jetbrains-mono \
-ncdu slock imwheel xclip npm \
-xwallpaper sxiv inkscape ffmpeg mpv \
-fortune exiftool aptitude \
-stress stacer font-viewer \
-bpytop neofetch preload htop \
+sudo apt install -y cargo fonts-jetbrains-mono \
+ffmpeg mpv sxiv ncdu exa fzf stress \
+ranger zathura fd-find htop  ripgrep \
+slock imwheel xclip xwallpaper gpg \
+fortune exiftool preload aptitude \
+bpytop neofetch font-viewer stacer \
 speedtest-cli transmission-cli trash-cli yt-dlp \
 android-tools-fastboot scrcpy android-tools-adb nvtop \
-obs-studio audacity gimp \
+obs-studio audacity gimp inkscape \
 nvidia-driver nvidia-cuda-toolkit \
 telegram-desktop kdeconnect spotify-client  
 
