@@ -99,7 +99,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/bin
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
  --color=fg:#d6d6d6,bg:#030303,hl:#5f87af
- --color=fg+:#e8e8e8,bg+:#141414,hl+:#3bceff
+ --color=fg+:#e8e8e8,bg+:#313244,hl+:#3bceff
  --color=info:#afaf87,prompt:#d7005f,pointer:#b061ff
  --color=marker:#87ff00,spinner:#972eff,header:#87afaf'
  
