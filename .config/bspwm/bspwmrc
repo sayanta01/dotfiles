@@ -17,7 +17,6 @@ bspc config focused_border_color     "#5E81AC" #"#81A1C1"
 bspc rule -a Zathura state=tiled
 bspc rule -a Inkscape state=floating 
 bspc rule -a Gimp state=floating 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Screenkey manage=off
 
 
