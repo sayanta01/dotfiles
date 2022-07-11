@@ -2,17 +2,21 @@
 # wm independent hotkeys
 #
 	
+# notion
+super + alt + m
+              xdg-open http://notion.new
+	      
 # notes
 super + alt + n
               xdg-open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
-      
-# notion
-super + alt + m
-              xdg-open http://notion.new	
+
+# pywal
+super + alt + o
+              wal -qi ~/.local/share/walls
 	
 # wallch
-#super + alt + p
-#              bash ~/.local/bin/wallch
+super + alt + p
+              bash ~/.local/bin/wallch
 
 # screenlock
 ctrl + alt + l
