@@ -1,7 +1,5 @@
 #!/bin/bash
 
-git clone https://github.com/catppuccin/grub.git && cd grub
-
 #ARCH
 sudo cp -r catppuccin-mocha-grub-theme /usr/share/grub/themes/
 /etc/default/grub >> GRUB_THEME="/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt"
