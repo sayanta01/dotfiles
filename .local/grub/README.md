@@ -12,12 +12,11 @@ sudo cp -r catppuccin-mocha-grub-theme /boot/grub/themes
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 
-#Same 4 Both
-# /etc/default/grub (modify 1920x1080 to your screen resolution) 
-#GRUB_GFXMODE=1920x1080
+#/etc/default/grub (modify 1920x1080 to your screen resolution) 
+# GRUB_GFXMODE=1920x1080
 
 #Grub is not detecting all systems (dual-boot)
-#GRUB_DISABLE_OS_PROBER=false
+# GRUB_DISABLE_OS_PROBER=false
 
 #Grub isn't detecting the theme
-#GRUB_TERMINAL_OUTPUT="console"
+# GRUB_TERMINAL_OUTPUT="console"
