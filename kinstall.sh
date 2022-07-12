@@ -44,7 +44,7 @@ ranger zathura fd-find htop  ripgrep \
 slock imwheel xclip xwallpaper gpg \
 fortune exiftool preload aptitude \
 bpytop neofetch font-viewer stacer \
-speedtest-cli transmission-cli trash-cli yt-dlp \
+speedtest-cli transmission-cli trash-cli yt-dlp cava \
 android-tools-fastboot scrcpy android-tools-adb nvtop \
 obs-studio audacity gimp inkscape \
 nvidia-driver nvidia-cuda-toolkit \
