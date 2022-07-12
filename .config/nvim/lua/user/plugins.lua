@@ -70,6 +70,9 @@ return packer.startup(function(use)
   use "rcarriga/nvim-dap-ui"
   use "ravenxrz/DAPInstall.nvim"
 
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+    
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
