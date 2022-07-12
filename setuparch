@@ -23,11 +23,11 @@ sudo cp -r ~/.themes/* /usr/share/themes
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf-font-awesome \
      noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
      cargo linux-headers firefox \
-     lsd exa bat wget curl fzf aria2 tmux \
+     lsd exa bat wget curl fzf aria2 tmux kitty \
      neovim ripgrep qt5ct \
      openssh mate-calc reflector \
      dialog cmake libconfig dash wmctrl imwheel \
-     pipewire pulseaudio pavucontrol wmname \
+     pipewire pulseaudio pavucontrol playerctl wmname \
      dhcpcd networkmanager wireless_tools net-tools nm-connection-editor \
      tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar  \
      fortune-mod htop neofetch bpytop zathura zathura-pdf-mupdf \
@@ -70,7 +70,7 @@ sudo systemctl enable fstrim.timer
 
 git clone https://aur.archlinux.org/yay.git ~/yay 
 cd ~/yay && makepkg -si
-yay -S --noconfirm spotify-adblock notion-app google-chrome ly polybar preload kitty playerctl visual-studio-code-bin lightly-git
+yay -S --noconfirm spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin lightly-git
 
 sudo systemctl enable ly.service 
 
