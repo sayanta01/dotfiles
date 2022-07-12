@@ -116,10 +116,11 @@ cmp.setup {
   },
   sources = {
     { name = "nvim_lsp" },
-    -- { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    { name = "nvim_lua" },
+    { name = "spell"},
     { name = "dap" },
   },
   confirm_opts = {
