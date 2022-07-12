@@ -93,11 +93,11 @@ PROMPT=' %b%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[
 
 #PATHs
 export EDITOR='nvim'
-#export MANPAGER='nvim +Man!'
+export MANPAGER='nvim +Man!'
 export TERMINAL='kitty'
 export TERM='xterm-256color'                      
 export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin/scripts
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
  --color=fg:#d6d6d6,bg:#030303,hl:#5f87af
  --color=fg+:#e8e8e8,bg+:#313244,hl+:#3bceff
