@@ -1,0 +1,6 @@
+#!/bin/sh
+
+dir="${HOME}/.local/share/walls"
+BG="$(ls $dir/*.jpg | shuf -n1)"
+cat $BG > ~/.local/share/walls/wallpaper.jpg
+xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg
