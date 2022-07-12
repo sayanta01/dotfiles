@@ -35,10 +35,9 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "kyazdani42/nvim-tree.lua"
   use "ahmedkhalf/project.nvim"
-
-  use "folke/which-key.nvim"
-  --use "nvim-telescope/telescope-media-files.nvim"
+  use "nvim-telescope/telescope-media-files.nvim"
   use "nvim-telescope/telescope.nvim"
+  use "folke/which-key.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"
