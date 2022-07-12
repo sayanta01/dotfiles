@@ -141,6 +141,7 @@ local mappings = {
     d = { "<cmd>Telescope diagnostics<cr>", "Document Diagnostics" },
     D = { "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", "Line Diagnostics" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+    i = { "<cmd>Telescope media_files<cr>", "Media Files" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     l = { "<cmd>Telescope resume<cr>", "Last Search" },
     m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
