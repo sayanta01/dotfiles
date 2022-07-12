@@ -17,6 +17,7 @@ require "user.project"
 require "user.lualine"
 require "user.toggleterm"
 require "user.bufferline"
+require "user.gitsigns"
 
 -- Dynamic
 require "user.autocommands"
