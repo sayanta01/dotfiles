@@ -24,11 +24,12 @@ bspc rule -a Screenkey manage=off
 pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
 ./.config/polybar/launch.sh &
-#killall -q "imwheel" &
-#imwheel -b "4 5" &
+killall -q "imwheel" &
+imwheel -b "4 5" &
 #imwheel -b 45 &
-#xset r rate 290 50 &
-#kdeconnect-indicator &
+#wmname LG33D &
+xset r rate 290 50 &
+kdeconnect-indicator &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
 dunst &
-#xrdb ~/.config/.Xresources &
+xrdb ~/.config/.Xresources &
