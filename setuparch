@@ -68,9 +68,9 @@ sudo systemctl enable bluetooth
 sudo systemctl enable bluetooth.service
 sudo systemctl enable fstrim.timer
 
-git clone https://aur.archlinux.org/yay.git ~/yay 
-cd ~/yay && makepkg -si
-yay -S --noconfirm spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin lightly-git
+git clone https://aur.archlinux.org/paru.git ~/paru
+cd ~/paru && makepkg -si
+paru -S --noconfirm spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin lightly-git
 
 sudo systemctl enable ly.service 
 
