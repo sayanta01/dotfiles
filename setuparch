@@ -24,7 +24,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf
      noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
      cargo linux-headers firefox \
      lsd exa bat wget curl fzf aria2 tmux kitty \
-     neovim ripgrep qt5ct kvantum \
+     neovim ripgrep qt5ct kvantum qt6ct \
      openssh mate-calc reflector \
      dialog cmake libconfig dash wmctrl imwheel \
      pipewire pulseaudio pavucontrol playerctl wmname \
