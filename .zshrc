@@ -183,7 +183,7 @@ alias shred='shred -uvzn3'
 alias iv='sxiv'
 
 alias typer='xdg-open https://10fastfingers.com/typing-test/english'
-alias mp='mousepad'
+alias mpad='mousepad'
 alias vim='nvim'
 alias ytdl='yt-dlp -f 137+140'
 alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
