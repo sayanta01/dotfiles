@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-keyboard-shortcuts" version="1.0">
+  <property name="commands" type="empty">
+    <property name="default" type="empty">
+      <property name="&lt;Alt&gt;F1" type="empty"/>
+      <property name="&lt;Alt&gt;F2" type="empty"/>
+      <property name="&lt;Alt&gt;F3" type="empty"/>
+      <property name="&lt;Primary&gt;Escape" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;t" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Shift&gt;Escape" type="empty"/>
+      <property name="&lt;Super&gt;l" type="empty"/>
+      <property name="&lt;Super&gt;p" type="empty"/>
+      <property name="override" type="empty"/>
+      <property name="Print" type="empty"/>
+      <property name="&lt;Primary&gt;Print" type="empty"/>
+      <property name="&lt;Shift&gt;Print" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Shift&gt;Print" type="empty"/>
+      <property name="&lt;Alt&gt;Print" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Print" type="empty"/>
+      <property name="XF86Display" type="empty"/>
+      <property name="XF86Mail" type="empty"/>
+      <property name="XF86WWW" type="empty"/>
+    </property>
+    <property name="custom" type="empty">
+      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="exo-open --launch TerminalEmulator"/>
+      <property name="override" type="bool" value="true"/>
+      <property name="&lt;Super&gt;e" type="string" value="thunar"/>
+      <property name="&lt;Alt&gt;b" type="string" value="exo-open --launch WebBrowser"/>
+      <property name="&lt;Alt&gt;t" type="string" value="telegram-desktop"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;k" type="string" value="mate-calculator"/>
+      <property name="&lt;Alt&gt;F2" type="string" value="amixer set Master 5%-"/>
+      <property name="&lt;Alt&gt;F3" type="string" value="amixer set Master 5%+"/>
+      <property name="&lt;Alt&gt;F4" type="string" value="amixer set Master toggle"/>
+      <property name="&lt;Alt&gt;F6" type="string" value="playerctl previous"/>
+      <property name="&lt;Alt&gt;F8" type="string" value="playerctl next"/>
+      <property name="&lt;Alt&gt;s" type="string" value="env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;q" type="string" value="xfce4-session-logout"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="slock"/>
+      <property name="&lt;Primary&gt;Escape" type="string" value="xfce4-popup-whiskermenu"/>
+      <property name="&lt;Super&gt;Return" type="string" value="kitty"/>
+      <property name="&lt;Super&gt;F7" type="string" value="playerctl play-pause"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;b" type="string" value="firefox"/>
+      <property name="&lt;Super&gt;space" type="string" value="dmenu_run"/>
+      <property name="Print" type="string" value="xfce4-screenshooter -f"/>
+      <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r"/>
+      <property name="&lt;Alt&gt;Print" type="string" value="xfce4-screenshooter -w"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;n" type="string" value="open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;x" type="string" value="wmctrl -r :ACTIVE: -b toggle,above"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;m" type="string" value=" xdg-open http://notion.new"/>
+      <property name="&lt;Alt&gt;F7" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"/>
+      <property name="&lt;Alt&gt;F5" type="string" value="./.local/bin/scriptsaudiosw"/>
+      <property name="&lt;Alt&gt;F1" type="string" value="./.local/bin/scripts/btch"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="./.local/bin/scripts/kill"/>
+      <property name="&lt;Super&gt;F4" type="string" value="./.local/bin/scripts/system_action"/>
+    </property>
+  </property>
+  <property name="xfwm4" type="empty">
+    <property name="default" type="empty">
+      <property name="Escape" type="empty"/>
+      <property name="Left" type="empty"/>
+      <property name="Right" type="empty"/>
+      <property name="Up" type="empty"/>
+      <property name="Down" type="empty"/>
+      <property name="&lt;Alt&gt;Delete" type="empty"/>
+      <property name="&lt;Alt&gt;Insert" type="empty"/>
+      <property name="&lt;Alt&gt;F4" type="empty"/>
+      <property name="&lt;Alt&gt;F6" type="empty"/>
+      <property name="&lt;Alt&gt;F7" type="empty"/>
+      <property name="&lt;Alt&gt;F8" type="empty"/>
+      <property name="&lt;Alt&gt;F11" type="empty"/>
+      <property name="&lt;Alt&gt;F12" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Shift&gt;Page_Down" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Shift&gt;Page_Up" type="empty"/>
+      <property name="&lt;Alt&gt;&lt;Shift&gt;Tab" type="empty"/>
+      <property name="&lt;Alt&gt;space" type="empty"/>
+      <property name="&lt;Alt&gt;Tab" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;1" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;2" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;3" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;4" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;5" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;6" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;7" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;8" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;9" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;0" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;d" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Down" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;End" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Home" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Left" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;&lt;Shift&gt;Down" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;&lt;Shift&gt;Left" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;&lt;Shift&gt;Right" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;&lt;Shift&gt;Up" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Right" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Up" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;1" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;2" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;3" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;4" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;5" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;6" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;7" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;8" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;9" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;0" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;Down" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;Up" type="empty"/>
+      <property name="&lt;Super&gt;Down" type="empty"/>
+      <property name="&lt;Super&gt;Left" type="empty"/>
+      <property name="&lt;Super&gt;Right" type="empty"/>
+      <property name="&lt;Super&gt;Tab" type="empty"/>
+      <property name="&lt;Super&gt;Up" type="empty"/>
+    </property>
+    <property name="custom" type="empty">
+      <property name="Right" type="string" value="right_key"/>
+      <property name="Down" type="string" value="down_key"/>
+      <property name="&lt;Alt&gt;Delete" type="string" value="del_workspace_key"/>
+      <property name="Up" type="string" value="up_key"/>
+      <property name="Escape" type="string" value="cancel_key"/>
+      <property name="Left" type="string" value="left_key"/>
+      <property name="&lt;Alt&gt;Insert" type="string" value="add_workspace_key"/>
+      <property name="override" type="bool" value="true"/>
+      <property name="&lt;Super&gt;w" type="string" value="close_window_key"/>
+      <property name="&lt;Alt&gt;q" type="string" value="move_window_left_workspace_key"/>
+      <property name="&lt;Alt&gt;w" type="string" value="move_window_right_workspace_key"/>
+      <property name="&lt;Alt&gt;Page_Down" type="string" value="lower_window_key"/>
+      <property name="&lt;Super&gt;bracketleft" type="string" value="left_workspace_key"/>
+      <property name="&lt;Super&gt;bracketright" type="string" value="right_workspace_key"/>
+      <property name="&lt;Super&gt;d" type="string" value="show_desktop_key"/>
+      <property name="&lt;Alt&gt;space" type="string" value="popup_menu_key"/>
+      <property name="&lt;Super&gt;h" type="string" value="tile_left_key"/>
+      <property name="&lt;Super&gt;l" type="string" value="tile_right_key"/>
+      <property name="&lt;Super&gt;j" type="string" value="tile_up_left_key"/>
+      <property name="&lt;Super&gt;k" type="string" value="tile_up_right_key"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;j" type="string" value="tile_down_left_key"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;k" type="string" value="tile_down_right_key"/>
+      <property name="&lt;Super&gt;Tab" type="string" value="switch_window_key"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Tab" type="string" value="cycle_reverse_windows_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;1" type="string" value="move_window_workspace_1_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;2" type="string" value="move_window_workspace_2_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;3" type="string" value="move_window_workspace_3_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;4" type="string" value="move_window_workspace_4_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;5" type="string" value="move_window_workspace_5_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;6" type="string" value="move_window_workspace_6_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;7" type="string" value="move_window_workspace_7_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;8" type="string" value="move_window_workspace_8_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;9" type="string" value="move_window_workspace_9_key"/>
+      <property name="&lt;Super&gt;1" type="string" value="workspace_1_key"/>
+      <property name="&lt;Super&gt;2" type="string" value="workspace_2_key"/>
+      <property name="&lt;Super&gt;3" type="string" value="workspace_3_key"/>
+      <property name="&lt;Super&gt;4" type="string" value="workspace_4_key"/>
+      <property name="&lt;Super&gt;5" type="string" value="workspace_5_key"/>
+      <property name="&lt;Super&gt;6" type="string" value="workspace_6_key"/>
+      <property name="&lt;Super&gt;7" type="string" value="workspace_7_key"/>
+      <property name="&lt;Super&gt;8" type="string" value="workspace_8_key"/>
+      <property name="&lt;Super&gt;9" type="string" value="workspace_9_key"/>
+      <property name="&lt;Super&gt;i" type="string" value="tile_up_key"/>
+      <property name="&lt;Super&gt;o" type="string" value="tile_down_key"/>
+      <property name="&lt;Super&gt;semicolon" type="string" value="maximize_horiz_key"/>
+      <property name="&lt;Super&gt;slash" type="string" value="maximize_vert_key"/>
+      <property name="&lt;Super&gt;m" type="string" value="maximize_window_key"/>
+      <property name="&lt;Super&gt;n" type="string" value="hide_window_key"/>
+      <property name="&lt;Alt&gt;Tab" type="string" value="cycle_windows_key"/>
+      <property name="&lt;Super&gt;0" type="string" value="workspace_10_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;0" type="string" value="move_window_workspace_10_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;s" type="string" value="stick_window_key"/>
+    </property>
+  </property>
+  <property name="providers" type="array">
+    <value type="string" value="xfwm4"/>
+    <value type="string" value="commands"/>
+  </property>
+</channel>
