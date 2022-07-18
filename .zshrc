@@ -161,7 +161,7 @@ alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
-alias stat='git status'
+alias status='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
 
