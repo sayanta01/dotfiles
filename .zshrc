@@ -93,7 +93,8 @@ PROMPT=' %b%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[
 
 #PATHs
 export EDITOR='nvim'
-export MANPAGER='nvim +Man!'
+#export MANPAGER='nvim +Man!'
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export TERMINAL='kitty'
 export TERM='xterm-256color'                      
 export PATH=$PATH:$HOME/.cargo/bin
