@@ -5,8 +5,8 @@ case "$(readlink -f /sbin/init)" in
 	*) ctl='loginctl' ;;
 esac
 
-case "$(printf "reboot\n shutdown" | dmenu -i -p '>_ ')" in
-	'reboot') $ctl reboot ;;
-	'shutdown') $ctl poweroff ;;
+case "$(printf " reboot\n shutdown" | dmenu -i -p '>_')" in
+	' reboot') $ctl reboot ;;
+	' shutdown') $ctl poweroff ;;
 	*) exit 1 ;;
 esac
