@@ -181,7 +181,7 @@ ins_right {
   fmt = string.upper,
   icons = '',
   icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.green, gui = 'bold' },
+  color = { fg = colors.violet, gui = 'bold' },
 }
 
 -- Add components to right sections
