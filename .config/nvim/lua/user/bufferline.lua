@@ -11,7 +11,7 @@ bufferline.setup {
     left_mouse_command = "buffer %d",
     right_mouse_command = nil,
     indicator_icon = " ", --▎
-    buffer_close_icon = "窱",
+    buffer_close_icon = "", --窱
     modified_icon = "",
     close_icon = "",
     left_trunc_marker = "",
