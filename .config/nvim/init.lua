@@ -6,7 +6,6 @@ require "user.plugins"
 require "user.colorizer"
 require "user.comment"
 require "user.colorscheme"
-require "user.impatient"
 require "user.illuminate"
 require "user.rainbow-bracket"
 require "user.indentline"
@@ -16,7 +15,9 @@ require "user.lualine"
 require "user.toggleterm"
 require "user.bufferline"
 require "user.gitsigns"
+
 require "user.treesitter"
+require "user.impatient"
 require "user.autopairs"
 
 -- Dynamic
