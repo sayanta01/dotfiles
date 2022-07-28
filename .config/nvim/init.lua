@@ -15,7 +15,6 @@ require "user.lualine"
 require "user.toggleterm"
 require "user.bufferline"
 require "user.gitsigns"
-
 require "user.treesitter"
 require "user.impatient"
 require "user.autopairs"
