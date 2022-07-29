@@ -74,7 +74,7 @@ paru -S --noconfirm spotify-adblock notion-app google-chrome cava ly polybar pre
 
 sudo systemctl enable ly.service 
 
-mkdir ~/{Desktop,Documents,Downloads,Music,Pictures,Videos} 
+mkdir ~/{desktop,documents,downloads,music,pictures,videos} 
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
