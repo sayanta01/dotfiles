@@ -10,3 +10,4 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
 export AWT_TOOLKIT="MToolkit wmname LG3D"
 export _JAVA_AWT_WM_NONREPARENTING=1
+export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
