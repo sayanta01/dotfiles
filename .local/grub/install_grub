@@ -7,6 +7,11 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
  
  
 ########## KALI ##########
+sudo rm -rf /boot/grub/themes/kali/*
+sudo cp -r catppuccin-mocha-grub-theme/* /boot/grub/themes/kali
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+########## Another Method ##########
 sudo cp -r catppuccin-mocha-grub-theme /boot/grub/themes
 /etc/default/grub >> GRUB_THEME="/boot/grub/themes/catppuccin-mocha-grub-theme/theme.txt"
 sudo grub-mkconfig -o /boot/grub/grub.cfg
