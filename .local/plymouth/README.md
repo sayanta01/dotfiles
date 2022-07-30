@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ########## KALI ##########
 sudo cp -r lone /usr/share/plymouth/themes/
 sudo plymouth-set-default-theme -R lone
