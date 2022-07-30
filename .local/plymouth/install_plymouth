@@ -9,7 +9,7 @@ sudo plymouth-set-default-theme -R lone
 #sudo vim /etc/mkinitcpio.conf  (in HOOKS add plymouth after udev)
 #sudo mkinitcpio -p linux  (Regenerate image)
 
-#sudo vim /etc/default/grub  (in GRUB_CMDLINE_LINUX_DEFATULT add splash rd.udev.log_priority=3 vt.gloabl cursor_default=0
+#sudo vim /etc/default/grub  (in GRUB_CMDLINE_LINUX_DEFATULT add splash rd.udev.log_priority=3 vt.global_cursor_default=0
 #sudo grub-mkconfig -o /boot/grub/grub.cfg 
 
 sudo plymouth-set-default-theme -l  
