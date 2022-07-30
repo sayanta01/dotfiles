@@ -18,11 +18,11 @@ terminal-border: "0"
 #}
 
 # Show the boot menu
-+ boot_menu {
-  left = 50%-240
-  top = 60%
-  width = 480
-  height = 30%
++ boot_menu {  
+  left = 20%
+  top = 30%
+  width = 60%
+  height = 50%  
   item_font = "Unifont Regular 16"
   item_color = "#CDD6F4"
   selected_item_color = "#CDD6F4"
