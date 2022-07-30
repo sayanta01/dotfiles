@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg6959"
+   sodipodi:docname="process-error-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6963" />
+  <sodipodi:namedview
+     id="namedview6961"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9903265"
+     inkscape:cy="8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6959" />
+  <path
+     style="fill:#dd4747"
+     class="error"
+     d="M 15,8 C 15,4.13 11.87,1 8,1 4.13,1 1,4.13 1,8 c 0,3.86 3.13,7 7,7 3.87,0 7,-3.14 7,-7 z M 13,7.3131695 v 0 1.329039 0 L 12.712234,9 H 3.2675651 V 9 L 3,8.6989153 3,7.2812358 v 0 L 3.3261731,7 h 9.3803459 z"
+     id="path6957"
+     sodipodi:nodetypes="sssssccccccccccccc" />
+</svg>

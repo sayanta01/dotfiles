@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="close-inactive.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     id="namedview14"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="48.5625"
+     inkscape:cx="16.010296"
+     inkscape:cy="19.305019"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g10" />
+  <rect
+     width="32"
+     height="32"
+     fill="#1a1c1e"
+     id="rect2" />
+  <rect
+     width="32"
+     height="1"
+     fill="#cccccc"
+     fill-opacity=".1"
+     id="rect4" />
+  <g
+     fill="#cccccc"
+     id="g10">
+    <circle
+       cx="16"
+       cy="16"
+       r="12"
+       opacity="0"
+       id="circle6" />
+    <path
+       d="m 20.585794,12.41 0.01655,-0.397661 -0.56775,-0.56775 -0.444589,0.118215 -0.440668,-0.122136 -2.821761,2.821761 v 0 l -0.597895,0.05725 -2.807925,-2.807925 -0.511751,-0.153315 -0.482574,0.124138 -0.555709,0.555709 0.07954,0.822973 v 0 l 2.853354,2.853354 -0.02628,0.597056 v 0 l -2.839176,2.839176 -0.03052,0.847785 v 0 l 0.551831,0.551831 0.550668,0.06492 0.40315,-0.119657 2.760683,-2.760683 v 0 l 0.67439,0.02431 2.831266,2.831269 0.823962,-0.0052 v 0 l 0.605295,-0.605295 v 0 l -0.04789,-0.828139 -2.887984,-2.887984 v 0 l 0.0023,-0.530335 2.903986,-2.903959 z"
+       opacity="0.38"
+       id="path8"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccc" />
+  </g>
+</svg>

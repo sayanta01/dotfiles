@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg2887247"
+   sodipodi:docname="format-text-direction-horizontal.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2887249"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="73.097163"
+     inkscape:cx="8.0030465"
+     inkscape:cy="7.9962063"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2887247" />
+  <defs
+     id="defs2887243">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="M 3.547,3 1,10 H 2 L 2.728,8 H 5.271 L 6,10 H 7 L 4.453,3 Z M 3.887289,4.8103276 4.1156305,4.8183658 4.8345419,6.7977475 4.6947906,7 V 7 H 3.3744994 V 7 L 3.1739369,6.7744028 Z M 7,3 v 1 h 4 V 3 Z M 13.448109,3.2987391 13,3.4811578 v 3.0085127 0 l 0.436592,0.2192679 2.239859,-1.493239 v 0 L 15.625896,4.7505975 Z M 8,6 v 1 h 3 V 6 Z m 1,3 v 1 h 2 V 9 Z m 4,0.5458984 v 0 3.0049116 l 0.378674,0.19674 v 0 l 2.247018,-1.498011 v 0 L 15.59587,10.73058 13.448023,9.2986819 Z M 1,12 v 1 h 10 v -1 z"
+     id="path2887245"
+     sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+</svg>

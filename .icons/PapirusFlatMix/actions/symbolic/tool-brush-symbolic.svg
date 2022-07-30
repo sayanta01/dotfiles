@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg2222245"
+   sodipodi:docname="tool-brush-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2222249" />
+  <sodipodi:namedview
+     id="namedview2222247"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9903265"
+     inkscape:cy="8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2222245" />
+  <path
+     style="fill:#5c616c"
+     d="M 8,1 C 7,1 7,2 7,2 V 6 C 7,6 5,6 5,7 v 2 h 7 V 7 C 12,6 10,6 10,6 V 2 C 10,2 10,1 9,1 Z M 5,10 C 5,12.202476 4.4302205,14.072783 3.6389871,14.739344 3.4383391,14.908377 3.9077368,15 3.6842869,15 v 0 H 10 c 1.105,0 2,-2.239 2,-5 z"
+     id="path2222243"
+     sodipodi:nodetypes="sccsccsccsscsccscc" />
+</svg>

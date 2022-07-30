@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg412998"
+   sodipodi:docname="org.rnd2.cpupower_gui-panel.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview413000"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="34.458333"
+     inkscape:cx="12.01451"
+     inkscape:cy="12"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg412998" />
+  <defs
+     id="defs412994">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="M 8,4 V 6 H 6.8007812 C 6.3575812,6 6,6.3575812 6,6.8007812 V 8 H 4 v 2 h 2 v 1 H 4 v 2 h 2 v 1 H 4 v 2 h 2 v 1.199219 C 6,17.642419 6.3575812,18 6.8007812,18 H 8 v 2 h 2 v -2 h 1 v 2 h 2 v -2 h 1 v 2 h 2 v -2 h 1.199219 C 17.642419,18 18,17.642419 18,17.199219 V 16 h 2 v -2 h -2 v -1 h 2 v -2 h -2 v -1 h 2 V 8 H 18 V 6.8007812 C 18,6.3575812 17.642419,6 17.199219,6 H 16 V 4 H 14 V 6 H 13 V 4 H 11 V 6 H 10 V 4 Z m 5.49658,3.8870117 v 0 L 12.689453,11 h 1.448039 v 0 l 0.105754,0.364486 -3.372165,4.787104 -0.325627,-0.200722 v 0 L 11.310547,13 H 9.8394281 v 0 L 9.7892229,12.589421 13.182536,7.7722952 Z"
+     id="path412996"
+     sodipodi:nodetypes="ccssccccccccccccssccccccccccccssccccccccccccsscccccccccccccccccccccccccc" />
+</svg>

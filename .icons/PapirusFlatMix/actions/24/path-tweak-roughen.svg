@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="path-tweak-roughen.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="34.625"
+     inkscape:cx="11.98556"
+     inkscape:cy="12"
+     inkscape:window-width="1502"
+     inkscape:window-height="1039"
+     inkscape:window-x="208"
+     inkscape:window-y="19"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <g
+     transform="translate(4,4)"
+     id="g7">
+    <path
+       style="fill:currentColor"
+       class="ColorScheme-Text"
+       d="M 0,7 2.6060878,3.5252163 3.3936618,3.3936618 v 0 l 2.3166341,2.3166341 v 0 L 6.2630276,5.6492966 8.5335673,2.6219103 9.2344028,2.7366944 v 0 l 1.3739852,4.3182407 0.423571,0.00646 v 0 l 1.680604,-2.6142722 v 0 L 13.317441,4.317441 16,7 v 4.319309 0 l -0.468082,0.212609 -3.058483,-3.0584826 -0.587528,0.097032 v 0 l -0.726645,3.633223 v 0 L 10.616929,12.233859 9.2396167,9.4792334 8.6944505,9.3055495 v 0 L 5.5424584,12.457542 v 0 L 4.7620216,12.405054 3.155541,8.3888525 v 0 L 2.7253191,8.3662413 0.48064199,11.359144 v 0 L 0,11.229818 Z"
+       id="path5"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccc" />
+  </g>
+</svg>

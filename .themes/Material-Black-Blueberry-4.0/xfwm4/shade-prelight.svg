@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="shade-prelight.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     id="namedview14"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="24.28125"
+     inkscape:cx="16.020592"
+     inkscape:cy="15.917632"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g10" />
+  <rect
+     width="32"
+     height="32"
+     fill="#09090a"
+     id="rect2" />
+  <rect
+     width="32"
+     height="1"
+     fill="#cccccc"
+     fill-opacity=".1"
+     id="rect4" />
+  <g
+     fill="#cccccc"
+     id="g10">
+    <circle
+       cx="16"
+       cy="16"
+       r="12"
+       opacity=".08"
+       id="circle6" />
+    <path
+       d="m 10.305722,18.305722 v 0 l 0.741409,0.741409 0.762504,-0.03677 v 0 l 3.586643,-3.586643 v 0 l 1.363452,0.156008 3.443824,3.443824 0.773564,-6.72e-4 v 0 l 0.66637,-0.66637 v 0 l -0.04999,-0.763018 -4.854723,-4.854723 v 0 l -1.433653,-0.04389 -4.869394,4.869395 z"
+       opacity="0.6"
+       id="path8"
+       sodipodi:nodetypes="ccccccccccccccccccc" />
+  </g>
+</svg>

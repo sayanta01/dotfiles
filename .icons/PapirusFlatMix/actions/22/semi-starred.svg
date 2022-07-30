@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="22"
+   height="22"
+   version="1.1"
+   viewBox="0 0 22 22"
+   id="svg9"
+   sodipodi:docname="semi-starred.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="33"
+     inkscape:cx="10.984848"
+     inkscape:cy="13.424242"
+     inkscape:window-width="1872"
+     inkscape:window-height="895"
+     inkscape:window-x="0"
+     inkscape:window-y="35"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="m 11,4.2496477 v 0 l 0,11.1575793 4.142848,2.682784 v 0 l 0.576725,-0.321963 -1.19388,-4.483205 0.187114,-0.599465 v 0 l 3.566327,-2.8975451 v 0 L 18.002165,9.1484622 13.461224,8.9041471 v 0 L 13.008995,8.6001737 11.332115,4.2526528 Z"
+     id="path5"
+     sodipodi:nodetypes="ccccccccccccccccc" />
+  <path
+     style="opacity:0.35;fill:currentColor"
+     class="ColorScheme-Text"
+     d="m 10.673431,4.2382735 v 0 L 8.9933523,8.5940901 8.5863565,8.9015872 v 0 L 3.9166833,9.1528283 3.7141704,9.7823928 v 0 l 3.5146366,2.8555482 0.2327885,0.694634 v 0 l -1.1898464,4.468057 0.650862,0.24699 v 0 L 10.696916,15.603495 11,15.407227 V 4.2496477 Z"
+     id="path7"
+     sodipodi:nodetypes="cccccccccccccccccc" />
+</svg>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 24 24"
+   id="svg10"
+   sodipodi:docname="checkbox-focused.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="32.375"
+     inkscape:cx="12"
+     inkscape:cy="11.969112"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8" />
+  <g
+     transform="translate(-342.5 -521.36)"
+     id="g8">
+    <rect
+       x="345.5"
+       y="524.36"
+       width="18"
+       height="18"
+       rx="3"
+       ry="3"
+       style="fill:none;stroke-linejoin:round;stroke-opacity:.35;stroke-width:6;stroke:#2777ff"
+       id="rect2" />
+    <rect
+       x="345.5"
+       y="524.36"
+       width="18"
+       height="18"
+       rx="3"
+       ry="3"
+       style="fill:#2777ff;stroke-linejoin:round;stroke-width:2;stroke:#2777ff"
+       id="rect4" />
+    <path
+       d="m 361.998,527.733 c -0.61973,-0.54932 -1.56738,-0.49247 -2.117,0.127 l -6.57153,7.42143 v 0 l -0.63961,0.12388 -2.64486,-2.60331 c -0.58977,-0.58078 -1.53851,-0.57407 -2.12,0.015 -0.58145,0.58988 -0.57474,1.5394 0.015,2.121 l 4.055,3.993 c 0.61263,0.60266 1.60534,0.56842 2.175,-0.075 l 7.975,-9.006 c 0.54932,-0.61973 0.49247,-1.56738 -0.127,-2.117 z"
+       style="fill:#ffffff;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
+       id="path6"
+       sodipodi:nodetypes="cccccccccccc" />
+  </g>
+</svg>

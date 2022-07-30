@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="22"
+   height="22"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="favicon-download.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="37.772727"
+     inkscape:cx="10.986763"
+     inkscape:cy="10.973526"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <g
+     transform="translate(3,3)"
+     id="g7">
+    <path
+       style="fill:currentColor"
+       class="ColorScheme-Text"
+       d="M 3,0 C 2,0 2,1 2,1 v 8 c 0,1 1,1 1,1 h 10 c 0,0 1,0 1,-1 V 1 C 14,0 13,0 13,0 Z m 3.0134552,3.9356435 0.5419197,0.1197314 2.1700333,2.1700333 0.5859226,-0.036739 v 0 L 10.184008,5.3159917 v 0 l 0.63599,0.00401 0.961049,0.9610489 L 12,6.7713995 v 0 0.8078196 L 11.607504,8 V 8 H 4.4597609 V 8 L 4,7.6160363 v -1.664442 0 L 4.2393599,5.2606401 5.467771,4.032229 Z M 6.0442416,12 5.5767503,12.769 7.442897,15.257196 8.5948706,15.206839 v 0 l 1.8407304,-2.454306 v 0 L 9.9628261,12 Z"
+       id="path5"
+       sodipodi:nodetypes="scsccsscscccccccccccccccccccccccccccccccc" />
+  </g>
+</svg>

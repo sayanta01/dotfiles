@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="bluetooth-disabled-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="32.375"
+     inkscape:cx="12"
+     inkscape:cy="12"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     style="opacity:0.35;fill:#eeeeec"
+     d="m 12.5,4 c -1.006125,0 -1.947293,0.2926055 -2.7569175,0.8033096 -0.093222,0.058804 0.089633,-0.064473 0,0 L 9.6981861,5.2177173 11.649285,7.1688161 12,7.0373988 v 0 V 6 h 0.5 c 0.20775,0 0.39305,0.13292 0.46875,0.3125 l 2.875,2.84375 L 15.8125,9.875 v 0 l -0.796875,0.660156 2.566437,2.566437 L 18,13.007007 v 0 V 10 C 18,6.676 15.547,4 12.5,4 Z M 7,4.5 5.5,6 7.0829753,7.5829753 7.2756448,8.1399717 c -0.031748,0.090573 0.02795,-0.09257 0,0 C 7.0990792,8.7247524 7,9.3484821 7,10 v 4 c 0,3.324 2.453,6 5.5,6 1.761355,0 3.310631,-0.905786 4.313446,-2.304052 0.05333,-0.07436 -0.05019,0.07708 0,0 l 0.419641,0.03714 L 18,18.5 19.5,17 17.855469,15.355469 13.933594,11.433594 13.240234,10.740234 13,10.5 12,9.5 8.4472656,5.9472656 Z m 6,3.5251795 v 0 0.4943517 l 1.326172,1.3261719 0.259199,-0.2147016 v 0 L 14.622086,9.3095859 13.307263,7.9947632 Z M 11.613281,12.113281 13,13.5 v 2.251007 l 0.425189,0.136304 v 0 L 14.40625,14.90625 15.089844,15.589844 12.96875,17.6875 c -0.0252,0.0599 -0.0798,0.11106 -0.125,0.15625 C 12.75335,17.93415 12.6385,18 12.5,18 H 12 v -4.432612 0 L 11.659151,13.344071 9.84375,14.84375 C 9.75325,14.93425 9.63807,15 9.5,15 H 9 v -0.5 c 0,-0.15322 0.079,-0.28328 0.1875,-0.375 z"
+     id="path2"
+     sodipodi:nodetypes="ssccccccsccccccccssccccssssscccccccccccccccccccccccccccccscccccscscc" />
+</svg>

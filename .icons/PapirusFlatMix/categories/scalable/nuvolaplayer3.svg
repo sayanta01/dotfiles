@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32"
+   height="32"
+   version="1"
+   id="svg687184"
+   sodipodi:docname="nuvolaplayer.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs687188" />
+  <sodipodi:namedview
+     id="namedview687186"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="25.84375"
+     inkscape:cx="15.980653"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg687184" />
+  <path
+     fill="#f98e3c"
+     d="m16 6c-3.883 0-7.1901 2.3053-8.6133 5.568-3.6147 0.521-6.3867 3.509-6.3867 7.159 0 4.017 3.3579 7.273 7.5 7.273h15.938c3.624 0 6.562-2.849 6.562-6.364 0-3.266-2.533-5.943-5.801-6.306-0.852-4.1703-4.649-7.33-9.199-7.33z"
+     id="path687174" />
+  <path
+     opacity=".2"
+     d="m1.0254 19.195c-0.0132 0.176-0.0254 0.352-0.0254 0.532 0 4.016 3.3579 7.273 7.5 7.273h15.938c3.624 0 6.562-2.849 6.562-6.363 0-0.173-0.011-0.344-0.025-0.514-0.258 3.286-3.083 5.877-6.537 5.877h-15.938c-3.9791 0-7.2244-3.007-7.4746-6.805z"
+     id="path687176" />
+  <path
+     opacity="0.2"
+     d="m 20.520266,17.700166 -0.190627,0.718809 -6.600358,4.125225 v 0 L 13,22.014817 V 13 Z"
+     id="path687178"
+     sodipodi:nodetypes="cccccccc" />
+  <path
+     fill="#ffffff"
+     d="m 20.373271,16.608294 -0.04935,0.814257 -6.599993,4.124995 v 0 L 13,21.094581 v -8.297942 0 l 0.758485,-0.322586 z"
+     id="path687180"
+     sodipodi:nodetypes="cccccccccc" />
+  <path
+     fill="#fff"
+     opacity=".2"
+     d="m16 6c-3.883 0-7.1901 2.3057-8.6133 5.568-3.6147 0.521-6.3867 3.509-6.3867 7.159 0 0.158 0.0151 0.313 0.0254 0.468 0.2546-3.404 2.9242-6.131 6.3613-6.627 1.4232-3.2623 4.7303-5.568 8.6133-5.568 4.55 0 8.3472 3.1598 9.1992 7.3301 3.0947 0.34375 5.5258 2.7639 5.7754 5.793 0.012-0.161 0.025-0.322 0.025-0.486 0-3.266-2.533-5.944-5.801-6.307-0.852-4.1702-4.649-7.33-9.199-7.33z"
+     id="path687182" />
+</svg>

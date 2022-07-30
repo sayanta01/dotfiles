@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg162659"
+   sodipodi:docname="xfce-wm-unshade.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview162661"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9903265"
+     inkscape:cy="7.9613059"
+     inkscape:window-width="1574"
+     inkscape:window-height="1080"
+     inkscape:window-x="172"
+     inkscape:window-y="-1"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg162659"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#000000" />
+  <defs
+     id="defs162655">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="M 8.1042583,11.906557 7.8839503,11.895989 4.1945614,8.5893241 4.1417655,8.3137387 v 0 L 5.2316454,7.1162944 v 0 l 0.3179235,0.00506 1.2586975,1.1438583 0.2380146,-0.061704 0.00453,-0.067105 L 7,4.182185 v 0 L 7.1821874,4 H 8.8418961 L 9,4.1672177 v 0 4.0109748 l 0.167774,0.1087937 v 0 l 1.291629,-1.1737851 v 0 l 0.307488,0.00149 1.045472,1.1486535 0.01809,0.303563 v 0 z"
+     id="path162657"
+     sodipodi:nodetypes="ccccccccccccccccccccccccccc" />
+</svg>

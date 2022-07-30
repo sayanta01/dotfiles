@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg790388"
+   sodipodi:docname="folder-documents-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs790392" />
+  <sodipodi:namedview
+     id="namedview790390"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9903265"
+     inkscape:cy="8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg790388" />
+  <path
+     style="fill:#5c616c"
+     d="M 3,1 C 2.446,1 2,1.446 2,2 v 13 c 0,0.554 0.446,1 1,1 h 10 c 0.554,0 1,-0.446 1,-1 V 5.207846 L 13.872435,4.8724352 v 0 L 10.139198,1.1391984 9.7752277,1 v 0 z"
+     id="path790386"
+     sodipodi:nodetypes="ssssssccccccs" />
+</svg>

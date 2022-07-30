@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="22"
+   height="22"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="account-types-closed.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="34.272727"
+     inkscape:cx="10.985411"
+     inkscape:cy="11"
+     inkscape:window-width="1770"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="m 3,3.508334 v 0 1.8671763 l 0.1880824,0.6699345 v 0 l 4.7848078,4.7848072 -0.035736,0.433706 v 0 L 3.2105187,15.990593 3,16.491746 v 0 1.984124 l 0.4201508,0.553367 v 0 h 2.0717089 l 0.5903404,-0.254075 v 0 l 4.6683609,-4.668361 0.504776,0.0059 v 0 l 4.726634,4.726634 0.567405,0.189904 v 0 h 1.809297 v 0 L 19,18.446634 v -1.983683 0 l -0.175504,-0.437343 -4.784808,-4.784808 -0.0213,-0.401827 v 0 l 4.784949,-4.7849484 v 0 L 19,5.521252 v -1.9836811 0 L 18.533614,3.0292374 h -2.100867 l -0.471813,0.2109412 v 0 l -4.697398,4.6973977 v 0 L 10.742623,7.943735 6.0306469,3.2317593 5.4627015,3.0292374 v 0 H 3.5076216 Z"
+     id="path5"
+     sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccc" />
+</svg>

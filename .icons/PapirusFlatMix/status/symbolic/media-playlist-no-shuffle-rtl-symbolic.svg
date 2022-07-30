@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg13643"
+   sodipodi:docname="media-playlist-no-shuffle-rtl-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13647" />
+  <sodipodi:namedview
+     id="namedview13645"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9903265"
+     inkscape:cy="8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13643" />
+  <path
+     style="fill:#5c616c"
+     d="m 4,5.4130487 v 0 1.4129708 L 4.158444,7 V 7 H 15 V 9 H 4.1839492 V 9 L 4,9.1382102 v 1.3856428 0 L 3.599006,10.699255 0.29934118,8.2245059 v 0 L 0.31049213,8.0049374 0.32304754,7.7577143 3.681001,5.2392493 Z"
+     id="path13641"
+     sodipodi:nodetypes="ccccccccccccccccccc" />
+</svg>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg275813"
+   sodipodi:docname="emblem-rabbitvcs-added.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs275817" />
+  <sodipodi:namedview
+     id="namedview275815"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="34.458333"
+     inkscape:cx="12.01451"
+     inkscape:cy="12"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg275813" />
+  <circle
+     style="fill:#916137"
+     cx="12"
+     cy="12"
+     r="10"
+     id="circle275809" />
+  <path
+     style="fill:#ffffff"
+     d="m 10,5.4480391 v 0 V 10 H 5.5021143 v 0 L 5,10.408298 v 3.020196 L 5.5570167,14 v 0 H 10 v 4.422236 L 10.590992,19 v 0 h 2.974483 v 0 L 14,18.442278 V 14 h 4.55341 v 0 L 19,13.449552 V 10.509 v 0 L 18.420214,10 H 14 V 5.4174784 L 13.596437,5 v 0 h -3.1179 z"
+     id="path275811"
+     sodipodi:nodetypes="ccccccccccccccccccccccccccccc" />
+</svg>

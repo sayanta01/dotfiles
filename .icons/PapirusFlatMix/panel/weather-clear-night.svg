@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="weather-clear-night.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="34.458333"
+     inkscape:cx="12.01451"
+     inkscape:cy="12"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <g
+     transform="translate(-80.000012,-680.28997)"
+     id="g7">
+    <path
+       style="fill:currentColor"
+       class="ColorScheme-Text"
+       d="m 92.117087,685.32959 c -0.175891,0.007 0.173755,-0.0198 0,0 -2.51571,0.2867 -4.770618,1.94563 -5.695888,4.52862 -1.302985,3.63742 0.515776,7.68743 4.095697,9.01134 2.493753,0.92223 5.173641,0.27421 7.009596,-1.42557 0.164897,-0.15267 -0.191145,-0.1681 -0.04061,-0.33736 -0.169053,0.0554 0.173547,-0.0416 0,0 -1.169665,0.2804 -2.430945,0.23998 -3.643155,-0.20832 -3.324214,-1.22935 -5.028457,-4.97666 -3.818545,-8.35426 0.430914,-1.20295 1.179818,-2.17636 2.11056,-2.89736 0.163624,-0.12675 -0.174124,0.11102 0,0 z"
+       id="path5"
+       sodipodi:nodetypes="csssscsccscc" />
+  </g>
+</svg>

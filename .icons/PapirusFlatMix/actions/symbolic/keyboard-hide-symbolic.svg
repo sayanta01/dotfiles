@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg585123"
+   sodipodi:docname="keyboard-hide-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs585127" />
+  <sodipodi:namedview
+     id="namedview585125"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="8"
+     inkscape:cy="7.980653"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg585123" />
+  <path
+     style="fill:#5c616c"
+     d="m 7.550057,11.485779 v 0 0 L 1.7874811,4.8999784 1.3614343,4.4130678 1.7874811,4.8999784 2.2680287,4.1994473 2.4048448,4 V 4 H 5 h 6 2 0.824327 0.541897 -0.541897 l 0.352287,0.9410125 v 0 L 8.4866035,11.443882 v 0 z"
+     id="path585121"
+     sodipodi:nodetypes="cccccccccccccccccccc" />
+</svg>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 384 384"
+   id="svg1054358"
+   sodipodi:docname="fr.free.Homebank.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1054360"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.6152344"
+     inkscape:cx="255.69045"
+     inkscape:cy="256"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1054356" />
+  <defs
+     id="defs1054340">
+    <filter
+       id="alpha"
+       width="1"
+       height="1"
+       x="0"
+       y="0"
+       filterUnits="objectBoundingBox">
+      <feColorMatrix
+         in="SourceGraphic"
+         type="matrix"
+         values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+         id="feColorMatrix1054304" />
+    </filter>
+    <mask
+       id="mask0">
+      <g
+         filter="url(#alpha)"
+         id="g1054309">
+        <rect
+           width="384"
+           height="384"
+           x="0"
+           y="0"
+           style="fill:rgb(0%,0%,0%);fill-opacity:0.2"
+           id="rect1054307" />
+      </g>
+    </mask>
+    <clipPath
+       id="clip1">
+      <rect
+         width="384"
+         height="384"
+         x="0"
+         y="0"
+         id="rect1054312" />
+    </clipPath>
+    <g
+       id="surface5"
+       clip-path="url(#clip1)">
+      <path
+         style="fill:rgb(0%,0%,0%)"
+         d="M 24.304688 192.003906 C 24.234375 194.007812 24 195.972656 24 198.003906 C 24 291.074219 98.925781 366 191.996094 366 C 285.066406 366 359.996094 291.074219 359.996094 198.003906 C 359.996094 195.976562 359.761719 194.011719 359.691406 192.003906 C 356.523438 282.253906 283.035156 354 191.992188 354 C 100.949219 354 27.464844 282.253906 24.296875 192.003906 Z M 24.304688 192.003906"
+         id="path1054315" />
+    </g>
+    <mask
+       id="mask1">
+      <g
+         filter="url(#alpha)"
+         id="g1054320">
+        <rect
+           width="384"
+           height="384"
+           x="0"
+           y="0"
+           style="fill:rgb(0%,0%,0%);fill-opacity:0.2"
+           id="rect1054318" />
+      </g>
+    </mask>
+    <clipPath
+       id="clip2">
+      <rect
+         width="384"
+         height="384"
+         x="0"
+         y="0"
+         id="rect1054323" />
+    </clipPath>
+    <g
+       id="surface8"
+       clip-path="url(#clip2)">
+      <path
+         style="fill:rgb(0%,0%,0%)"
+         d="M 324 198 C 324 270.902344 264.902344 330 192 330 C 119.097656 330 60 270.902344 60 198 C 60 125.097656 119.097656 66 192 66 C 264.902344 66 324 125.097656 324 198 Z M 324 198"
+         id="path1054326" />
+    </g>
+    <mask
+       id="mask2">
+      <g
+         filter="url(#alpha)"
+         id="g1054331">
+        <rect
+           width="384"
+           height="384"
+           x="0"
+           y="0"
+           style="fill:rgb(0%,0%,0%);fill-opacity:0.2"
+           id="rect1054329" />
+      </g>
+    </mask>
+    <clipPath
+       id="clip3">
+      <rect
+         width="384"
+         height="384"
+         x="0"
+         y="0"
+         id="rect1054334" />
+    </clipPath>
+    <g
+       id="surface11"
+       clip-path="url(#clip3)">
+      <path
+         style="fill:rgb(100.000%,100.000%,100.000%)"
+         d="M 192 24 C 98.929688 24 24 98.929688 24 192 C 24 192.679688 24.066406 193.34375 24.105469 194.015625 C 26.214844 102.804688 100.265625 30 192 30 C 283.734375 30 357.785156 102.804688 359.894531 194.015625 C 359.933594 193.34375 360 192.679688 360 192 C 360 98.929688 285.070312 24 192 24 Z M 192 24"
+         id="path1054337" />
+    </g>
+  </defs>
+  <g
+     id="g1054356">
+    <use
+       mask="url(#mask0)"
+       xlink:href="#surface5"
+       id="use1054342" />
+    <path
+       style="fill:rgb(100.000%,78.039%,18.823%)"
+       d="M 191.996094 24.003906 C 98.925781 24.003906 24 98.933594 24 192.003906 C 24 285.074219 98.925781 360 191.996094 360 C 285.066406 360 359.996094 285.074219 359.996094 192.003906 C 359.996094 98.933594 285.066406 24.003906 191.996094 24.003906 Z M 191.996094 24.003906"
+       id="path1054344" />
+    <use
+       mask="url(#mask1)"
+       xlink:href="#surface8"
+       id="use1054346" />
+    <path
+       style="fill:rgb(100.000%,100.000%,100.000%)"
+       d="M 324 192 C 324 264.902344 264.902344 324 192 324 C 119.097656 324 60 264.902344 60 192 C 60 119.097656 119.097656 60 192 60 C 264.902344 60 324 119.097656 324 192 Z M 324 192"
+       id="path1054348" />
+    <path
+       style="fill:#4a4a4a"
+       d="m 117.98792,192.00391 v 0 h 9.78976 v 0 L 132,196.84105 v 72.7515 0 0 L 137.10833,276 h 109.34279 v 0 l 5.54497,-6.53855 v -73.66877 0 l 4.12426,-3.78877 h 11.80547 v 0 l 1.57869,-6.4928 -43.96805,-43.97622 -30.03585,-30.04144 -6.50353,-0.50546 v 0 l -72.0373,72.05405 z"
+       id="path1054350"
+       sodipodi:nodetypes="cccccccccccccccccccccccc" />
+    <path
+       style="fill:#4a4a4a"
+       d="M 228,123.39587 232.23524,120 h 15.65977 v 0 L 252,124.56958 V 204 h -24 v -59.98489 -3.4127 z"
+       id="path1054352"
+       sodipodi:nodetypes="ccccccccccc" />
+    <use
+       mask="url(#mask2)"
+       xlink:href="#surface11"
+       id="use1054354" />
+  </g>
+</svg>

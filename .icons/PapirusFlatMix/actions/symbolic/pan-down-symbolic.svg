@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg983517"
+   sodipodi:docname="pan-down-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs983521" />
+  <sodipodi:namedview
+     id="namedview983519"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="8"
+     inkscape:cy="7.980653"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg983517" />
+  <path
+     style="fill:#5c616c"
+     d="m 11.928681,6 0.240485,0.8308335 v 0 L 8.3580628,10.641937 v 0 l -0.7760174,-0.05989 v 0 0 L 3.7614783,6.7614786 v 0 L 4.1673264,6 v 0 0 z"
+     id="path983515"
+     sodipodi:nodetypes="cccccccccccccc" />
+</svg>

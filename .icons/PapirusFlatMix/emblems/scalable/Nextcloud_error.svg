@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="Nextcloud_error.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="126"
+     inkscape:cx="16.519841"
+     inkscape:cy="18.984127"
+     inkscape:window-width="1872"
+     inkscape:window-height="925"
+     inkscape:window-x="0"
+     inkscape:window-y="35"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <circle
+     style="fill:#fd3535"
+     cx="19"
+     cy="19"
+     r="5"
+     id="circle2" />
+  <path
+     style="fill:#ffffff"
+     d="m 16.686083,16.273917 0.594253,0.04642 1.633962,1.633961 0.169082,0.0023 v 0 l 1.706278,-1.706278 v 0 l 0.530507,0.02982 0.428491,0.428491 6.97e-4,0.501991 v 0 l -1.682166,1.682169 v 0 l 0.0058,0.220139 1.636058,1.636058 0.03291,0.549074 v 0 l -0.476084,0.476084 -0.485037,-0.03337 v 0 l -1.675844,-1.675843 -0.204475,-0.0054 v 0 l -1.722288,1.722288 v 0 l -0.469132,-0.03275 -0.49211,-0.49211 0.01712,-0.451023 v 0 l 1.70648,-1.706475 v 0 l -0.0062,-0.205076 -1.677778,-1.677778 0.0011,-0.514283 v 0 z"
+     id="path4"
+     sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc" />
+</svg>

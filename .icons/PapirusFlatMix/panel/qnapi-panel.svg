@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="qnapi-panel.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="63"
+     inkscape:cx="17.174603"
+     inkscape:cy="17.055556"
+     inkscape:window-width="650"
+     inkscape:window-height="817"
+     inkscape:window-x="655"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="m 12,3.999797 c -4.418278,0 -8,3.581722 -8,8 0,4.418278 3.581722,8 8,8 1.324146,-0.0025 2.624944,-0.333475 3.786608,-0.9608 0.110842,-0.05986 0.436024,0.122895 0.544232,0.05767 0.07286,0.08138 -0.07083,-0.08213 0,0 0.429238,0.497673 0.818857,1.007128 1.140291,1.50447 0.03931,0.06082 0.33412,-0.03627 0.371334,0.02414 v 0 l 1.468156,-0.902688 v 0 c -0.03841,-0.06236 0.145002,-0.261522 0.10511,-0.323777 -0.37565,-0.586233 -0.815578,-1.167263 -1.29562,-1.73015 -0.07617,-0.08931 0.04092,-0.397338 -0.03717,-0.485687 0.0662,-0.07199 -0.06331,0.07411 0,0 C 19.315293,15.74033 19.996956,13.903492 20,11.999797 c 0,-4.418278 -3.581722,-8 -8,-8 z m 0,2.8574219 c 2.52496,-5.203e-4 4.572129,2.3019976 4.572266,5.1425781 -0.0017,1.055756 -0.292177,2.08251 -0.828177,2.942634 -0.05652,0.09069 0.06192,-0.08682 0,0 -0.06557,-0.05126 -0.304942,0.156247 -0.371042,0.106194 -1.557415,-1.179317 -3.252943,-2.072772 -4.995043,-2.051513 -0.106953,0.0013 0.107282,-0.0083 0,0 l -0.298665,0.305487 0.131386,1.684918 0.309096,0.302942 c 0.08924,-0.0069 -0.100827,-0.0066 0,0 0.756356,0.04978 1.819268,0.475638 2.896975,1.188156 0.121438,0.08029 -0.121394,-0.08744 0,0 -0.09982,0.04789 0.163471,0.343341 0.06118,0.383009 C 13.003103,17.04578 12.503771,17.140908 12,17.142375 9.4750397,17.142895 7.4278714,14.840377 7.4277344,11.999797 7.4278713,9.1592166 9.4750397,6.8566988 12,6.8572189 Z"
+     id="path5"
+     sodipodi:nodetypes="sscscssccccsscscsccsccsccccsscsccc" />
+</svg>

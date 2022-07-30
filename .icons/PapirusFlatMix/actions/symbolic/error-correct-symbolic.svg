@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="error-correct-symbolic.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="47.25"
+     inkscape:cx="8"
+     inkscape:cy="8"
+     inkscape:window-width="1854"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <path
+     style="fill:#5c616c"
+     d="m 2,11.475556 v 0 2.137406 L 2.3327107,14 v 0 h 2.1374176 l 0.3252072,-0.125336 v 0 L 11.42,7.25 8.75,4.57 2.1307787,11.189221 Z M 13.79,4.89 c 0.28,-0.28 0.28,-0.73 0,-1.01 L 12.12,2.21 c -0.29,-0.28 -0.73,-0.28 -1.01,0 l -1.4,1.4 2.67,2.68 z"
+     id="path2"
+     sodipodi:nodetypes="cccccccccccccscsccc" />
+  <path
+     style="fill:#dd4747"
+     class="error"
+     d="m 12.529297,8 c -0.02085,-5.267e-4 -0.04171,1.252e-4 -0.0625,0.00195 -0.210079,0.012314 -0.40039,0.1431071 -0.505859,0.3476563 L 9.0839844,13.951172 C 8.8447379,14.416573 9.1428237,14.998653 9.6210938,15 h 5.7558592 c 0.479138,3.4e-4 0.778742,-0.582583 0.539063,-1.048828 L 13.039062,8.3496094 C 12.933276,8.1430425 12.741138,8.0112694 12.529297,8 Z m -0.31357,2 v 0 h 0.613685 v 0 L 13,10.184502 v 1.629724 0 L 12.829412,12 H 12.215727 L 12,11.771811 v 0 -1.587309 z m 0,3 v 0 h 0.529266 v 0 L 13,13.316707 v 0.423496 L 12.808457,14 v 0 H 12.237281 L 12,13.824711 v 0 -0.613718 z"
+     id="path4"
+     sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccc" />
+</svg>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg464374"
+   sodipodi:docname="videoclip-amarok.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview464376"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="51.6875"
+     inkscape:cx="7.9516324"
+     inkscape:cy="8"
+     inkscape:window-width="1130"
+     inkscape:window-height="677"
+     inkscape:window-x="3"
+     inkscape:window-y="398"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg464374" />
+  <defs
+     id="defs464370">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="M 2,3 C 1,3 1,4 1,4 v 8 c 0,1 1,1 1,1 h 9 c 0,0 1,0 1,-1 V 8 4 c 0,0 0,-1 -1,-1 z m 10.319494,4.720443 0.04129,0.6403379 v 0 L 15.706525,11.706525 16,11.636741 v 0 -6.7529189 L 15.701787,4.7609362 v 0 z"
+     id="path464372"
+     sodipodi:nodetypes="scsccsccssccccccccccc" />
+</svg>

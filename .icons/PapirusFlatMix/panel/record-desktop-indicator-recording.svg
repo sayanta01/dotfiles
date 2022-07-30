@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1"
+   id="svg439040"
+   sodipodi:docname="kazam-recording.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview439042"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="34.458333"
+     inkscape:cx="12.01451"
+     inkscape:cy="12"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg439040" />
+  <defs
+     id="defs439034">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <path
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     d="M 4.1816406,6 C 3.5269406,6 3,6.5344188 3,7.1992188 V 16.800781 C 3,17.465781 3.5269406,18 4.1816406,18 H 15.818179 c 0.655,0 1.181641,-0.534219 1.181641,-1.199219 v -2.510848 0 l 0.270429,-0.181761 4.365664,1.746265 v 0 l 0.363907,-0.384692 v -6.9828123 0 L 21.600072,8.1598992 17.236947,9.9051492 16.99982,9.7056526 v 0 -2.5064338 C 16.99982,6.5344188 16.473179,6 15.818179,6 Z m 5.8181797,2 c 2.2091387,0 3.9999997,1.790861 3.9999997,4 0,2.209139 -1.790861,4 -3.9999997,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 z"
+     id="path439036"
+     sodipodi:nodetypes="ssssssccccccccccccssssssss" />
+  <circle
+     style="fill:currentColor"
+     class="ColorScheme-Highlight"
+     cx="10"
+     cy="12"
+     r="3"
+     id="circle439038" />
+</svg>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="noisereduction.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="34.625"
+     inkscape:cx="11.98556"
+     inkscape:cy="12"
+     inkscape:window-width="1502"
+     inkscape:window-height="1039"
+     inkscape:window-x="208"
+     inkscape:window-y="19"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g7" />
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#eeeeec; } .ColorScheme-Highlight { color:#367bf0; } .ColorScheme-NeutralText { color:#ffcc44; } .ColorScheme-PositiveText { color:#3db47e; } .ColorScheme-NegativeText { color:#dd4747; }
+  </style>
+  </defs>
+  <g
+     transform="matrix(1,0,0,1,4,4)"
+     id="g7">
+    <path
+       class="ColorScheme-Text"
+       d="M 8,1.8950363 7.3959058,1.6040942 4,5 H 1 v 6 h 2.6478681 v 0 L 4.1580718,11.158072 7.2959214,14.295921 8,14.096821 c 0,-0.935481 0,-0.0084 0,0 z M 10,1 v 1.5 c 2.32,0.74 4,2.93 4,5.5 0,2.57 -1.68,4.76 -4,5.5 V 15 C 13.15,14.22 15.5,11.4 15.5,8 15.5,4.6 13.15,1.78 10,1 Z M 10.057762,5.6893042 10,5.5864117 v 4.7513613 0 c 0.246632,-0.13495 0.475346,0.363094 0.681127,0.174211 C 11.359771,9.88907 11.789,8.9975263 11.789,8 11.789,6.9087802 11.282398,5.9443869 10.486843,5.3197367 10.334631,5.200224 10.103359,5.7705286 10.057762,5.6893042 Z"
+       style="fill:currentColor"
+       id="path5"
+       sodipodi:nodetypes="ccccccccccccsccsccsscccscss" />
+  </g>
+</svg>

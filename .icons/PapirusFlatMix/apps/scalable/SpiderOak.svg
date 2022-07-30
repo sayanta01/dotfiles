@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 384 384"
+   id="svg108499"
+   sodipodi:docname="spideroak.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview108501"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.6152344"
+     inkscape:cx="255.69045"
+     inkscape:cy="256"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g108497" />
+  <defs
+     id="defs108485">
+    <filter
+       id="alpha"
+       width="1"
+       height="1"
+       x="0"
+       y="0"
+       filterUnits="objectBoundingBox">
+      <feColorMatrix
+         in="SourceGraphic"
+         type="matrix"
+         values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+         id="feColorMatrix108449" />
+    </filter>
+    <mask
+       id="mask0">
+      <g
+         filter="url(#alpha)"
+         id="g108454">
+        <rect
+           width="384"
+           height="384"
+           x="0"
+           y="0"
+           style="fill:rgb(0%,0%,0%);fill-opacity:0.2"
+           id="rect108452" />
+      </g>
+    </mask>
+    <clipPath
+       id="clip1">
+      <rect
+         width="384"
+         height="384"
+         x="0"
+         y="0"
+         id="rect108457" />
+    </clipPath>
+    <g
+       id="surface5"
+       clip-path="url(#clip1)">
+      <path
+         style="fill:rgb(0%,0%,0%)"
+         d="M 24 337.199219 L 24 349.199219 C 24 358.5 31.496094 366 40.804688 366 L 343.199219 366 C 352.5 366 360 358.5 360 349.199219 L 360 337.199219 C 360 346.5 352.5 354 343.199219 354 L 40.804688 354 C 31.503906 354 24.003906 346.5 24.003906 337.199219 Z M 24 337.199219"
+         id="path108460" />
+    </g>
+    <mask
+       id="mask1">
+      <g
+         filter="url(#alpha)"
+         id="g108465">
+        <rect
+           width="384"
+           height="384"
+           x="0"
+           y="0"
+           style="fill:rgb(0%,0%,0%);fill-opacity:0.2"
+           id="rect108463" />
+      </g>
+    </mask>
+    <clipPath
+       id="clip2">
+      <rect
+         width="384"
+         height="384"
+         x="0"
+         y="0"
+         id="rect108468" />
+    </clipPath>
+    <g
+       id="surface8"
+       clip-path="url(#clip2)">
+      <path
+         style="fill:rgb(0%,0%,0%)"
+         d="M 204.417969 126.003906 C 179.269531 126.035156 156.292969 139.777344 145.144531 161.464844 C 140.441406 159.105469 135.234375 157.867188 129.933594 157.855469 C 111.652344 157.855469 96.816406 172.117188 96.816406 189.707031 C 96.828125 190.816406 96.894531 191.929688 97.027344 193.035156 C 82.40625 198.699219 72 213.085938 72 230.183594 C 72 252.242188 89.226562 270 110.625 270 L 265.097656 270 C 268.546875 270 271.835938 269.390625 275.011719 268.523438 C 296.460938 264.585938 311.980469 246.550781 311.996094 225.539062 C 311.976562 202.640625 293.613281 183.617188 269.878906 181.902344 C 269.878906 181.898438 270.019531 181.761719 270.019531 181.761719 C 265.855469 149.925781 237.761719 126.035156 204.414062 125.996094 Z M 191.996094 162.003906 L 239.996094 210.003906 L 203.996094 210.003906 L 203.996094 258 L 179.996094 258 L 179.996094 210.003906 L 144 210.003906 L 167.996094 186.003906 Z M 191.996094 162.003906"
+         id="path108471" />
+    </g>
+    <mask
+       id="mask2">
+      <g
+         filter="url(#alpha)"
+         id="g108476">
+        <rect
+           width="384"
+           height="384"
+           x="0"
+           y="0"
+           style="fill:rgb(0%,0%,0%);fill-opacity:0.2"
+           id="rect108474" />
+      </g>
+    </mask>
+    <clipPath
+       id="clip3">
+      <rect
+         width="384"
+         height="384"
+         x="0"
+         y="0"
+         id="rect108479" />
+    </clipPath>
+    <g
+       id="surface11"
+       clip-path="url(#clip3)">
+      <path
+         style="fill:rgb(100.000%,100.000%,100.000%)"
+         d="M 40.804688 24 C 31.496094 24 24 31.496094 24 40.804688 L 24 46.804688 C 24 37.496094 31.496094 30 40.804688 30 L 343.195312 30 C 352.496094 30 360 37.496094 360 46.804688 L 360 40.804688 C 360 31.496094 352.496094 24 343.195312 24 Z M 40.804688 24"
+         id="path108482" />
+    </g>
+  </defs>
+  <g
+     id="g108497">
+    <use
+       mask="url(#mask0)"
+       xlink:href="#surface5"
+       id="use108487" />
+    <path
+       style="fill:rgb(99.215%,28.627%,28.627%)"
+       d="M 360 343.199219 L 360 40.804688 C 360 31.527344 352.476562 24.007812 343.199219 24.007812 L 40.804688 24.007812 C 31.527344 24.007812 24.007812 31.527344 24.007812 40.804688 L 24.007812 343.199219 C 24.007812 352.476562 31.527344 360 40.804688 360 L 343.199219 360 C 352.476562 360 360 352.476562 360 343.199219 Z M 360 343.199219"
+       id="path108489" />
+    <use
+       mask="url(#mask1)"
+       xlink:href="#surface8"
+       id="use108491" />
+    <path
+       style="fill:#ffffff"
+       d="m 204.41797,120 c -25.15235,0.0391 -48.1211,13.77734 -59.26953,35.46094 -4.70313,-2.35157 -9.91016,-3.60157 -15.21485,-3.61328 -18.28125,0 -33.113278,14.26953 -33.113278,31.85937 0.0078,1.10547 0.07813,2.22266 0.210938,3.32422 C 82.40625,192.69531 72,207.08203 72,224.18359 72,246.23828 89.230469,264 110.625,264 h 154.47266 c 3.44531,0 6.73046,-0.61328 9.91406,-1.47656 21.4414,-3.9375 36.96875,-21.97266 36.98047,-42.98438 -0.0117,-22.90625 -18.38282,-41.92578 -42.11719,-43.64453 l 0.14453,-0.14062 C 265.85547,143.92969 237.76172,120.03906 204.41406,120 Z m -12.42188,36 40.67228,40.67228 L 231.2683,204 v 0 h -27.27221 v 48 h -24 v -48 h -25.61413 v 0 L 152.58457,195.41403 167.99609,180 Z"
+       id="path108493"
+       sodipodi:nodetypes="cccccsssccccccccccccccccccc" />
+    <use
+       mask="url(#mask2)"
+       xlink:href="#surface11"
+       id="use108495" />
+  </g>
+</svg>

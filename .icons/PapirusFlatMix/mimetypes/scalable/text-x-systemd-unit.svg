@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="64"
+   height="64"
+   version="1.1"
+   id="svg1805602"
+   sodipodi:docname="text-x-systemd-unit.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1805606" />
+  <sodipodi:namedview
+     id="namedview1805604"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="12.921875"
+     inkscape:cx="31.961306"
+     inkscape:cy="32"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1805602" />
+  <path
+     style="opacity:0.2"
+     d="M 12.75,5 C 11.2265,5 10,6.2488 10,7.8 v 50.4 c 0,1.55008 1.2265,2.8 2.75,2.8 h 38.5 C 52.7724,61 54,59.75008 54,58.2 V 23 L 40,19 36,5 Z"
+     id="path1805584" />
+  <path
+     style="fill:#e4e4e4"
+     d="M 12.75,4 C 11.2265,4 10,5.2488 10,6.8 v 50.4 c 0,1.55008 1.2265,2.8 2.75,2.8 h 38.5 C 52.7724,60 54,58.75008 54,57.2 V 22 L 40,18 36,4 Z"
+     id="path1805586" />
+  <path
+     style="opacity:0.2"
+     d="M 54,23 36,5 V 20.1875 C 36,21.74675 37.2555,23 38.8125,23 Z"
+     id="path1805588" />
+  <path
+     style="fill:#fafafa"
+     d="M 54,22 36,4 V 19.1875 C 36,20.74675 37.2555,22 38.8125,22 Z"
+     id="path1805590" />
+  <path
+     style="opacity:0.2;fill:#ffffff"
+     d="M 12.75 4 C 11.2265 4 10 5.2495812 10 6.8007812 L 10 7.8007812 C 10 6.2495813 11.2265 5 12.75 5 L 36 5 L 36 4 L 12.75 4 z"
+     id="path1805592" />
+  <path
+     style="fill:#4f4f4f"
+     d="m 20,31 h -6 v 20 h 6 V 48 H 17 V 34 h 3 z"
+     id="path1805594" />
+  <circle
+     style="fill:#05a087"
+     cx="26"
+     cy="41"
+     r="6"
+     id="circle1805596" />
+  <path
+     style="fill:#05a087"
+     d="M 43.110248,35.533851 44,36.289421 44,45.5549 42.974868,46.384921 v 0 l -7.873531,-4.724119 v 0 l -0.05874,-1.286361 z"
+     id="path1805598"
+     sodipodi:nodetypes="cccccccccc" />
+  <path
+     style="fill:#4f4f4f"
+     d="m 44,31 h 6 v 20 h -6 v -3 h 3 V 34 h -3 z"
+     id="path1805600" />
+</svg>
