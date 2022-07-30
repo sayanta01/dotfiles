@@ -16,7 +16,7 @@ sudo plymouth-set-default-theme -l
 sudo plymouth-set-default-theme -R lone
 
 sudo systemctl disable lightdm
-sudo systemctl enable lightdm-plymouth.service
+sudo systemctl enable lightdm-plymouth
 
 #sudo vim /etc/plymouth/plymouthd.conf  (ShowDelay=0)
 #sudo mkinitcpio -p linux  (Regenerate config file for theme)
