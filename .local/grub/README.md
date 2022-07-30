@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #ARCH
 sudo cp -r catppuccin-mocha-grub-theme /usr/share/grub/themes/
 /etc/default/grub >> GRUB_THEME="/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt"
