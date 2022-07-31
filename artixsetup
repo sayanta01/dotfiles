@@ -71,7 +71,7 @@ kitty scrcpy android-tools nvtop telegram-desktop-bin libxft-bgra
 
 sudo systemctl enable ly.service 
 
-mkdir ~/{desk,dox,dl,music,templates,pix,vids} 
+mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids} 
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
