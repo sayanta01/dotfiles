@@ -13,7 +13,7 @@ pip install pywal
 cp -r ~/Desktop/dotfiles/{.zshrc,.fonts,.xinitrc,.imwheelrc,.xprofile,.zprofile,.tmux.conf,.icons,.themes} ~/
 cp -r ~/Desktop/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/Desktop/dotfiles/.local/share/* ~/.local/share
 cp -r ~/Desktop/dotfiles/.config/. ~/.config
-chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/key-handler
+chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/key-handler
 
 git clone https://github.com/LukeSmithxyz/st.git ~/Downloads/st
 cd ~/Downloads/st && sudo make clean install
