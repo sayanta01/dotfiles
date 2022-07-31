@@ -20,7 +20,6 @@ sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.themes/* /usr/share/themes
 
-########## ARCH ##########
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf-font-awesome \
      noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
      cargo linux-headers firefox \
