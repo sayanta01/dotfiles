@@ -29,7 +29,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf
      dialog cmake libconfig dash wmctrl imwheel \
      pipewire pulseaudio pavucontrol playerctl wmname \
      dhcpcd networkmanager wireless_tools net-tools nm-connection-editor \
-     tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar  \
+     tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar \
      fortune-mod htop neofetch bpytop zathura zathura-pdf-mupdf \
      speedtest-cli trash-cli yt-dlp transmission-cli \
      imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
