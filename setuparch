@@ -37,26 +37,9 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf
      intel-ucode virtualbox-guest-utils python-pip xdotool \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
      unclutter jq xdg-user-dirs xorg xclip
-     
-########## ARTIX ##########
-sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf-font-awesome \/
-     noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
-     cargo linux-headers firefox \
-     wget curl fzf aria2 tmux \
-     neovim ripgrep qt5ct kvantum qt6ct \
-     openssh mate-calc \
-     dialog cmake libconfig dash wmctrl imwheel \
-     pipewire pulseaudio pavucontrol \
-     dhcpcd networkmanager wireless_tools net-tools nm-connection-editor \
-     tree ncdu thunar thunar-archive-plugin ranger rsync unrar unzip zip p7zip tar \
-     htop neofetch \
-     yt-dlp transmission-cli \
-     imagemagick xwallpaper ffmpeg python-pywal mpv \
-     intel-ucode virtualbox-guest-utils python-pip xdotool \
-     unclutter jq xdg-user-dirs xorg xclip
-     
+
 #linux-lts linux-lts-headers
-cargo install ttyper stylua
+cargo install ttyper
 
 #sudo pacman -Sy lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 ##dm-tool switch-to-greeter
