@@ -54,7 +54,7 @@ virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
 #sudo systemctl enable vboxservice
 
-sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce-note-plugin
+sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
 #sudo systemctl enable --now libvirtd
 #sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104
