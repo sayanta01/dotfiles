@@ -67,7 +67,7 @@ sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfc
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si
 paru -S --noconfirm spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin plymouth-nosystemd \
-kitty scrcpy android-tools nvtop telegram-desktop-bin libxft-bgra
+kitty scrcpy android-tools nvtop telegram-desktop-bin libxft-bgra bpytop
 
 sudo systemctl enable ly.service 
 
