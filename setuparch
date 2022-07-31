@@ -7,7 +7,7 @@ sudo pacman -S --noconfirm bspwm sxhkd rofi slock dunst lxappearance maim alsa-u
 cp -r ~/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.xprofile,.zprofile,.tmux.conf,.icons,.themes} ~/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
 cp -r ~/dotfiles/.config/. ~/.config
-chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/key-handler
+chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/key-handler
 
 git clone https://github.com/LukeSmithxyz/st.git ~/Downloads/st
 cd ~/Downloads/st && sudo make clean install
