@@ -1,3 +1,5 @@
+# xdg-user-dirs-update
+
 XDG_DESKTOP_DIR="$HOME/desk"
 XDG_DOWNLOAD_DIR="$HOME/dl"
 XDG_TEMPLATES_DIR="$HOME/templates"
