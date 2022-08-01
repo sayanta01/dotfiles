@@ -9,10 +9,12 @@ cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/
 cp -r ~/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/key-handler
 
-git clone https://github.com/LukeSmithxyz/st.git ~/Downloads/st
+mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids} 
+
+git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/Downloads/st && sudo make clean install
 
-git clone https://github.com/LukeSmithxyz/dmenu.git ~/Downloads/dmenu
+git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/Downloads/dmenu && sudo make clean install
 
 git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
@@ -70,8 +72,6 @@ paru -S --noconfirm spotify-adblock notion-app google-chrome cava ly polybar pre
 kitty scrcpy android-tools nvtop telegram-desktop-bin libxft-bgra bpytop speedtest-cli 
 
 sudo systemctl enable ly.service 
-
-mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids} 
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
