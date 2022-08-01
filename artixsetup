@@ -22,7 +22,7 @@ sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.themes/* /usr/share/themes
 
-sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf-font-awesome \/
+sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf-font-awesome \
      noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
      cargo linux-headers firefox \
      wget curl fzf aria2 tmux \
@@ -36,8 +36,8 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf
      yt-dlp transmission-cli \
      imagemagick xwallpaper ffmpeg python-pywal mpv \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
-     unclutter jq xdg-user-dirs xorg xclip
-# reflector wmctrl imwheel playerctl wmname trash-cli blueman stress blender discord
+     unclutter jq xdg-user-dirs xorg xclip \
+     reflector wmctrl imwheel playerctl wmname trash-cli blueman stress blender discord
 
 #linux-lts linux-lts-headers
 cargo install ttyper lsd exa bat
