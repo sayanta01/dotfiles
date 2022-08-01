@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
+export PATH="$PATH:$(du "$HOME/.local/bin/scripts" | cut -f2 | paste -sd ':')"
 export LESSHISTFILE="-"
 
 export XDG_CONFIG_HOME="$HOME/.config"
