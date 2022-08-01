@@ -37,6 +37,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf
      imagemagick xwallpaper ffmpeg python-pywal mpv \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
      unclutter jq xdg-user-dirs xorg xclip
+# reflector wmctrl imwheel playerctl wmname trash-cli blueman stress blender discord
 
 #linux-lts linux-lts-headers
 cargo install ttyper lsd exa bat
