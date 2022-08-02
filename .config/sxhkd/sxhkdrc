@@ -82,7 +82,7 @@ alt + Print
 	     
 # kill ps
 ctrl + alt + Delete
-                  bash ~/.local/bin/scripts/kill
+                  bash ~/.local/bin/scripts/kil
                          
 # thunar
 super + e
