@@ -70,15 +70,15 @@ alt + F9
         
 # screenshot
 Print
-    maim | tee ~/pix/$(date +%I:%M:%d,%a)-Ful.png | xclip -sel c -t image/png | notify-send "Screenshot Taken "
+    maim | tee ~/pix/$(date +%I:%M:%d,%a)-Ful.png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken "
                  
 # ss select   
 shift + Print            
-            maim -s | tee ~/pix/$(date +%I:%M:%d,%a)-Sel.png | xclip -sel c -t image/png | notify-send "Selected Screenshot " 
+            maim -s | tee ~/pix/$(date +%I:%M:%d,%a)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot " 
 
 # ss window
 alt + Print 
-	  maim -i $(xdotool getactivewindow) ~/pix/$(date +%I:%M:%d,%a)-Win.png | notify-send "Window Screenshot Taken"
+	  maim -i $(xdotool getactivewindow) ~/pix/$(date +%I:%M:%d,%a)-Win.png | notify-send -t 800 "Window Screenshot Taken"
 	     
 # kill ps
 ctrl + alt + Delete
