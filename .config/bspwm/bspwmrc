@@ -27,7 +27,7 @@ xsetroot -cursor_name left_ptr &
 killall -q "imwheel" &
 imwheel -b "4 5" &
 #imwheel -b 45 &
-#wmname LG33D &
+wmname LG33D &
 xset r rate 290 50 &
 kdeconnect-indicator &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
