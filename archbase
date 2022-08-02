@@ -21,7 +21,7 @@ basestrap /mnt linux runit elogind-runit linux-firmware ( on artix )
 dosfstools mtools vim zsh base base-devel grub efibootmgr
 
 pacstrap /mnt linux base base-devel grub zsh vim / ( on arch )
-dosfstools mtools git networkmanager efibootmgr
+dosfstools mtools efibootmgr # git networkmanager
 
 fstabgen /mnt ( on artix )
 genfstab -U /mnt >> /mnt/etc/fstab 
