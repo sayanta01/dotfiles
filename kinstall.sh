@@ -57,8 +57,6 @@ sudo apt install -y virt-manager qemu
 sudo usermod -aG libvirt bot
 sudo usermod -aG kvm bot
 
-sudo systemctl enable fstrim.timer
-
 wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/Downloads/vscode.deb
 wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/Downloads/discord.deb
 cd ~/Downloads && chmod +x vscode.deb discord.deb && sudo dpkg -i vscode.deb discord.deb
@@ -80,6 +78,7 @@ xdg-mime default sxiv.desktop image/png
 xdg-mime default inkscape.desktop image/svg+xml
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
+sudo systemctl enable fstrim.timer
 GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 
 sudo setfont /usr/share/kbd/consolefonts/ter-c16b.psf.gz
