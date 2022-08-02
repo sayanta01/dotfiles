@@ -38,7 +38,7 @@ timedatectl set-ntp true
 
 pacman -S networkmanager networkmanger-runit git fakeroot glibc ( on artix )
 ln -s /etc/runit/sv/NetworkManager /etc/runit/runsvdir/current ( on artix before reboot )
-ln -s /etc/runit/sv/NetworkManager /run/runit/service ( after reboot )
+ln -s /etc/runit/sv/NetworkManager /run/runit/service ( on artix after reboot )
 
 systemctl enable NetworkManager ( on arch )
 
