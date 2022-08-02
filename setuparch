@@ -67,7 +67,6 @@ sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfc
 
 sudo systemctl enable bluetooth
 sudo systemctl enable bluetooth.service
-sudo systemctl enable fstrim.timer
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si
@@ -88,6 +87,8 @@ xdg-mime default sxiv.desktop image/png
 xdg-mime default inkscape.desktop image/svg+xml
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
+#Boost linux
+sudo systemctl enable fstrim.timer
 GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 
 sudo setfont /usr/share/kbd/consolefonts/ter-c16b.psf.gz
