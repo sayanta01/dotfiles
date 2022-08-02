@@ -30,10 +30,6 @@ sudo cp -r ~/.themes/* /usr/share/themes
 sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
 sudo cp -r ~/.icons/PapirusFlatMix/* /usr/share/icons/Flat-Remix-Blue-Dark
 
-#sudo rm -rf /usr/share/themes/Kali-Dark/*
-#sudo cp -r ~/.themes/Fluent-round-dark/* /usr/share/themes/Kali-Dark
-
-
 curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
@@ -56,11 +52,6 @@ cargo install ttyper lsd bat
 sudo apt purge -y --auto-remove onboard xterm cherrytree \
 xfce4-notifyd xfce4-clipman-plugin
 
-# Build Neovim
-sudo apt install -y ninja-build gettext libtool libtool-bin cmake pkg-config doxygen
-git clone https://github.com/neovim/neovim.git ~/.config/neovim && cd ~/.config/neovim
-make -j4 && sudo make install
-
 #
 sudo apt install -y virt-manager qemu
 sudo usermod -aG libvirt bot
@@ -73,14 +64,13 @@ wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/Downloads
 cd ~/Downloads && chmod +x vscode.deb discord.deb && sudo dpkg -i vscode.deb discord.deb
 
 git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock && make && sudo make install
-   
+axel -n 20 -o PacketTracer.deb https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
+chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
+
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
-
-axel -n 20 -o PacketTracer.deb https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
-chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
 #xdg-mime query filetype (file)  #check filetype
 #xdg-mime query default (file/type)  #check default app of filetype
