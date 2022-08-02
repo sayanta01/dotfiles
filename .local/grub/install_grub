@@ -22,10 +22,11 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 menuentry "Reboot" --class restart {
   reboot
 }
-
 menuentry "ShutDown" --class shutdown {
   halt
 }
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 #/etc/default/grub (modify 1920x1080 to your screen resolution) 
 # GRUB_GFXMODE=1920x1080
