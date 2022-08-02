@@ -20,8 +20,8 @@ mount /dev/sda3 /mnt/home
 basestrap /mnt linux runit elogind-runit linux-firmware ( on artix )
 dosfstools mtools vim zsh base base-devel grub efibootmgr
 
-pacstrap /mnt linux base base-devel grub efibootmgr / ( on arch )
-dosfstools mtools git networkmanager vim zsh 
+pacstrap /mnt linux base base-devel grub zsh vim / ( on arch )
+dosfstools mtools git networkmanager efibootmgr
 
 fstabgen /mnt ( on artix )
 genfstab -U /mnt >> /mnt/etc/fstab 
