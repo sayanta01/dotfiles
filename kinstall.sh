@@ -78,6 +78,7 @@ xdg-mime default sxiv.desktop image/png
 xdg-mime default inkscape.desktop image/svg+xml
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
+#Boost linux
 sudo systemctl enable fstrim.timer
 GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 
