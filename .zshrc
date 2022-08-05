@@ -180,6 +180,7 @@ alias vm-off="sudo systemctl stop libvirtd.service"
 
 alias free='free -h'
 alias df='df -h'
+alias cat='bat'
 alias tsm='transmission-remote'
 alias copy='rsync --progress -auv'
 alias shred='shred -uvzn3'
