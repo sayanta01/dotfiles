@@ -21,7 +21,11 @@ vim.g.maplocalleader = " "
 -- Copy whole file
 keymap("n", "<C-c-a>", ":%y+ <CR>", opts)
 
--- line numbers
+-- Beginning & End
+keymap("n", "<C-b>", "<ESC>^i", opts)
+keymap("n", "<C-e>", "<End>", opts)
+
+-- Line num
 keymap("n", "<leader>n", "<cmd> set nu! <CR>", opts)
 keymap("n", "<leader>nn", "<cmd> set rnu! <CR>", opts)
 
