@@ -9,7 +9,7 @@ cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/
 cp -r ~/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/key-handler
 
-mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids} 
+mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
 
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/Downloads/st && sudo make clean install
@@ -37,8 +37,10 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-     unclutter jq xdg-user-dirs xorg xclip \
-        
+     unclutter jq xdg-user-dirs xorg xclip
+#xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop
+#brightnessctl dash cowsay libnotify connman libconfig
+
 #linux-lts linux-lts-headers
 cargo install ttyper lsd exa bat
 
