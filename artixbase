@@ -34,7 +34,7 @@ mkdir -p /mnt/home
 mount /dev/sda1 /mnt/boot/efi
 mount /dev/sda4 /mnt/home
 
-basestrap /mnt base base-devel runit elogind-runit linux linux-firmware 
+basestrap /mnt base base-devel runit elogind-runit linux linux-firmware vim zsh
 
 fstabgen -U /mnt >> /mnt/etc/fstab
 
@@ -52,7 +52,7 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C"
 echo LilWarmachine > /etc/hostname
 
-pacman -S vim zsh git networkmanager networkmanger-runit fakeroot glibc dhcpcd dosfstools mtools  
+pacman -S git networkmanager networkmanger-runit fakeroot glibc dhcpcd dosfstools mtools  
 ln -s /etc/runit/sv/NetworkManager /etc/runit/runsvdir/current ( on artix before reboot )
 ln -s /etc/runit/sv/NetworkManager /run/runit/service ( after reboot )
 
