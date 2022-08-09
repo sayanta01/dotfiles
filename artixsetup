@@ -64,9 +64,9 @@ sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfc
 #####sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
 #####sudo virsh net-autostart default
 
-#sudo systemctl enable bluetooth
-#sudo systemctl enable bluetooth.service
-#sudo systemctl enable fstrim.timer
+#####sudo systemctl enable bluetooth
+#####sudo systemctl enable bluetooth.service
+#####sudo systemctl enable fstrim.timer
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si
