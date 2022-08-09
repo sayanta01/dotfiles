@@ -1,0 +1,123 @@
+# enable efi                        #VM settings
+# ls /sys/firmware/efi/efivars      #check uefi
+
+##### partition using fdisk #####
+fdisk /dev/sda                          #sel drive
+n  1st partition  (Boot)                give +700M 
+n  2nd partition  (Root)                give +24G  
+n  3rd partition  (Swap)                give +2-4G
+n  4th partition  (Home)                give rest of space
+w  write partition 
+
+##### partition using cfdisk #####
+cfdisk /dev/sda
+sda1 boot 700M  partition type EFI system
+sda2 root 26G
+sda3 swap 4G
+sda4 home rest of space
+write type yes & quit
+
+##### make swap #####
+mkswap /dev/sda3
+swapon /dev/sda3
+
+##### format ######
+mkfs.ext4 -L root /dev/sda2
+mkfs.ext4 -L home /dev/sda4
+mkfs.fat -F32 /dev/sda1
+
+##### mounting #####
+mount /dev/sda2 /mnt
+mkdir -p /mnt/boot/efi
+mkdir -p /mnt/home
+
+mount /dev/sda1 /mnt/boot/efi
+mount /dev/sda4 /mnt/home
+
+basestrap /mnt base base-devel runit elogind-runit linux linux-firmware 
+
+fstabgen -U /mnt >> /mnt/etc/fstab
+
+artix-chroot /mnt
+
+vim /etc/pacman.conf                    #uncmnt colors and paraller downloads
+
+ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+hwclock --systohc
+
+vim /etc/locale.gen                     #uncmnt both US
+locale-gen
+
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+export LC_COLLATE="C"
+echo LilWarmachine > /etc/hostname
+
+pacman -S vim zsh git networkmanager networkmanger-runit fakeroot glibc dhcpcd dosfstools mtools  
+ln -s /etc/runit/sv/NetworkManager /etc/runit/runsvdir/current ( on artix before reboot )
+ln -s /etc/runit/sv/NetworkManager /run/runit/service ( after reboot )
+
+vim /etc/hosts
+127.0.0.1   localhost
+::1         localhost
+127.0.1.1   LilWarmachine.localdomain LilWarmachine
+
+pacman -S grub os-prober efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
+grub-mkconfig -o /boot/grub/grub.cfg
+
+passwd  #set root pswd
+useradd -m -G wheel,storage,power -s /bin/zsh bot
+passwd bot
+
+EDITOR=vim visudo                       #uncmnt %wheel ALL=(ALL:ALL) ALL
+
+exit & sudo reboot
+
+
+######### Add Arch Repo #########
+
+/etc/pacman.conf >> after [galaxy]
+[universe]
+Server = https://universe.artixlinux.org/$arch
+Server = https://mirror1.artixlinux.org/universe/$arch
+Server = https://mirror.pascalpuffke.de/artix-universe/$arch
+Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch
+Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
+Server = https://ftp.crifo.org/artix-universe/
+
+sudo pacman -Sy artix-archlinux-support
+
+
+/etc/pacman.conf >> in End
+##### ARCH REPO #####
+#[testing]
+#Include = /etc/pacman.d/mirrorlist-arch
+
+
+[extra]
+Include = /etc/pacman.d/mirrorlist-arch
+
+
+#[community-testing]
+#Include = /etc/pacman.d/mirrorlist-arch
+
+
+[community]
+Include = /etc/pacman.d/mirrorlist-arch
+
+
+#[multilib-testing]
+#Include = /etc/pacman.d/mirrorlist-arch
+
+
+[multilib]
+Include = /etc/pacman.d/mirrorlist-arch
+
+
+[core]
+Include = /etc/pacman.d/mirrorlist-arch
+
+
+sudo pacman-key --populate archlinux
+sudo pacman -Syyu
+
