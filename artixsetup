@@ -42,9 +42,9 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome ttf-joypixels ttf
 #linux-lts linux-lts-headers
 cargo install ttyper lsd exa bat
 
-#####sudo pacman -Sy lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
-##dm-tool switch-to-greeter
-#####sudo systemctl enable lightdm.service
+#sudo pacman -Sy lightdm-runit lightdm-gtk-greeter lightdm-gtk-greeter-settings
+#dm-tool switch-to-greeter
+#sudo ln -s /etc/runit/sv/lightdm /run/runit/service
 
 sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia os-prober \
 obs-studio audacity gimp inkscape virtualbox kdeconnect docker \
