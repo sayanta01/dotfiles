@@ -28,10 +28,10 @@ mkfs.fat -F32 /dev/sda1
 
 ##### mounting #####
 mount /dev/sda2 /mnt
-mkdir -p /mnt/boot/efi
+mkdir -p /mnt/boot
 mkdir -p /mnt/home
 
-mount /dev/sda1 /mnt/boot/efi
+mount /dev/sda1 /mnt/boot
 mount /dev/sda4 /mnt/home
 
 basestrap /mnt base base-devel runit elogind-runit linux linux-firmware vim zsh
