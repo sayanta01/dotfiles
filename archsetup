@@ -47,7 +47,8 @@ cargo install ttyper lsd exa bat
 
 #sudo pacman -Sy lightdm-runit lightdm-gtk-greeter lightdm-gtk-greeter-settings
 #dm-tool switch-to-greeter
-#sudo ln -s /etc/runit/sv/lightdm /run/runit/service
+#sudo ln -s /etc/runit/sv/lightdm /run/runit/service  ( artix )
+#sudo systemctl enable lightdm.service  ( arch )
 
 sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia \
 scrcpy android-tools nvtop stress
@@ -56,26 +57,27 @@ telegram-desktop xfce4 xfce4-goodies \
 blueman bluez bluez-utils ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
-#####sudo systemctl enable vboxservice
+#####sudo systemctl enable vboxservice  ( arch )
 
 sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
-#####sudo systemctl enable --now libvirtd
-#####sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104
-#####sudo usermod -aG libvirt bot
-#####sudo systemctl restart libvirtd
-#####sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
-#####sudo virsh net-autostart default
+##### Setup Virtmanager #####
+#sudo systemctl enable --now libvirtd
+#sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104
+#sudo usermod -aG libvirt bot
+#sudo systemctl restart libvirtd
+#sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
+#sudo virsh net-autostart default
 
-#####sudo systemctl enable bluetooth
-#####sudo systemctl enable bluetooth.service
-#####sudo systemctl enable fstrim.timer
+#sudo systemctl enable bluetooth  ( arch )
+#sudo systemctl enable bluetooth.service  ( arch )
+#sudo systemctl enable fstrim.timer  ( arch )
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si
 paru -S --noconfirm spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin plymouth-nosystemd libxft-bgra  
 
-#####sudo systemctl enable ly.service 
+#sudo systemctl enable ly.service  ( arch )
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
@@ -96,7 +98,7 @@ sudo setfont /usr/share/kbd/consolefonts/ter-c16b.psf.gz
 sudo su root -c "echo -e FONT='Uni2-TerminusBold20x10.psf.gz' >> /etc/default/console-setup"
 
 # uncmnt zsh plugins path for arch
-# vim /etc/pacman.conf # uncheck ignorepkg and put pkgname
+# vim /etc/pacman.conf  # uncheck ignorepkg and put pkgname
 # export LC_CTYPE="en_GB.utf8"  ( fix suckless utilities give XOpenIM failed error )
 #QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment  ( fix qt5ct )
 #ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
