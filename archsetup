@@ -57,7 +57,7 @@ telegram-desktop xfce4 xfce4-goodies \
 blueman bluez bluez-utils ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
-#####sudo systemctl enable vboxservice  ( arch )
+#sudo systemctl enable vboxservice  ( arch )
 
 sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
