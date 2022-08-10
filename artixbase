@@ -34,27 +34,33 @@ mkdir -p /mnt/home
 mount /dev/sda1 /mnt/boot
 mount /dev/sda4 /mnt/home
 
-basestrap /mnt base base-devel runit elogind-runit linux linux-firmware vim zsh
+basestrap /mnt base base-devel linux linux-firmware vim zsh runit elogind-runit  ( artix )
+pacstrap /mnt base base-devel linux linux-firmware vim zsh /  ( arch )
 
-fstabgen -U /mnt >> /mnt/etc/fstab
+fstabgen -U /mnt >> /mnt/etc/fstab  ( artix )
+genfstab -U /mnt >> /mnt/etc/fstab  ( arch )
 
-artix-chroot /mnt
+artix-chroot /mnt  ( artix )
+arch-chroot /mnt  ( arch )
 
 vim /etc/pacman.conf                    #uncmnt colors and paraller downloads
 
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
+timedatectl set-ntp true  ( arch )
 
 vim /etc/locale.gen                     #uncmnt both US
 locale-gen
 
 echo LANG=en_US.UTF-8 > /etc/locale.conf
-export LC_COLLATE="C"
+export LC_COLLATE="C"  
 echo LilWarmachine > /etc/hostname
 
-pacman -S git networkmanager networkmanger-runit fakeroot glibc dhcpcd dosfstools mtools  
-ln -s /etc/runit/sv/NetworkManager /etc/runit/runsvdir/current ( on artix before reboot )
-ln -s /etc/runit/sv/NetworkManager /run/runit/service ( after reboot )
+pacman -S git networkmanager dosfstools mtools glibc dhcpcd networkmanger-runit fakeroot  ( artix )
+ln -s /etc/runit/sv/NetworkManager /etc/runit/runsvdir/current  ( artix before reboot )
+ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix after reboot )
+
+pacman -S git networkmanager dosfstools mtools glibc dhcpcd fakeroot  ( arch )
 
 vim /etc/hosts
 127.0.0.1   localhost
@@ -74,7 +80,7 @@ EDITOR=vim visudo                       #uncmnt %wheel ALL=(ALL:ALL) ALL
 exit & sudo reboot
 
 
-######### Add Arch Repo #########
+######### Add Arch Repo for Artix #########
 
 /etc/pacman.conf >> after [galaxy]
 [universe]
