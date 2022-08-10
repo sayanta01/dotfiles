@@ -45,7 +45,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 #linux-lts linux-lts-headers
 cargo install ttyper lsd exa bat
 
-#sudo pacman -Sy lightdm-runit lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sudo pacman -S lightdm-runit lightdm-gtk-greeter lightdm-gtk-greeter-settings
 #dm-tool switch-to-greeter
 #sudo ln -s /etc/runit/sv/lightdm /run/runit/service  ( artix )
 #sudo systemctl enable lightdm.service  ( arch )
