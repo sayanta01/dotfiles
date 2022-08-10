@@ -57,8 +57,6 @@ telegram-desktop xfce4 xfce4-goodies \
 blueman bluez bluez-utils ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
-#sudo systemctl enable vboxservice  ( arch )
-
 sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
 ##### Setup Virtmanager in Arch #####
@@ -92,6 +90,8 @@ xdg-mime default sxiv.desktop image/png
 xdg-mime default inkscape.desktop image/svg+xml
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
+#Boost Linux
+#sudo systemctl enable vboxservice  ( arch )
 GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 
 sudo setfont /usr/share/kbd/consolefonts/ter-c16b.psf.gz
