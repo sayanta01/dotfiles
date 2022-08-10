@@ -55,7 +55,8 @@ scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord docker \
 telegram-desktop xfce4 xfce4-goodies \
 blueman bluez bluez-utils ntfs-3g \
-virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
+virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
+#qemu qemu-arch-extra
 
 #sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
@@ -73,7 +74,8 @@ virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
-paru -S spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin libxft-bgra plymouth-nosystemd  
+paru -S spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin plymouth-nosystemd
+#libxft-bgra
 
 #sudo systemctl enable ly.service  ( arch )
 
