@@ -12,10 +12,10 @@ chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/script
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
 
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
-cd ~/Downloads/st && sudo make clean install
+cd ~/dl/st && sudo make clean install
 
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
-cd ~/Downloads/dmenu && sudo make clean install
+cd ~/dl/dmenu && sudo make clean install
 
 git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
 sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
