@@ -25,8 +25,8 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
 ./.config/polybar/launch.sh &
 killall -q "imwheel" &
-imwheel -b "4 5" &
-#imwheel -b 45 &
+#imwheel -b "4 5" &
+imwheel -b 45 &
 wmname LG33D &
 xset r rate 290 50 &
 kdeconnect-indicator &
