@@ -27,7 +27,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      cargo linux-headers firefox \
      wget curl fzf aria2 tmux kitty \
      neovim ripgrep qt5ct kvantum qt6ct \
-     openssh-runit mate-calc reflector \
+     mate-calc reflector \
      dialog cmake libconfig dash wmctrl imwheel \
      pipewire pulseaudio pavucontrol playerctl wmname \
      wireless_tools net-tools nm-connection-editor \
@@ -37,9 +37,10 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-     unclutter jq xdg-user-dirs xorg xclip
+     unclutter jq xdg-user-dirs xorg xclip openssh-runit
+     
 #xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop
-#brightnessctl dash cowsay libnotify connman libconfig
+#brightnessctl dash cowsay libnotify connman libconfig pipewire pipewire-pulse
 
 #linux-lts linux-lts-headers
 cargo install ttyper lsd exa bat
