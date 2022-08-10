@@ -51,13 +51,13 @@ sudo pacman -S lightdm-runit lightdm-gtk-greeter lightdm-gtk-greeter-settings
 #sudo systemctl enable lightdm.service  ( arch )
 
 sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia \
-scrcpy android-tools nvtop stress
+scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord docker \
 telegram-desktop xfce4 xfce4-goodies \
 blueman bluez bluez-utils ntfs-3g \
 virt-manager qemu bridge-utils dnsmasq openbsd-netcat ovmf qemu-arch-extra
 
-sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
+#sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
 ##### Setup Virtmanager in Arch #####
 #sudo systemctl enable --now libvirtd
