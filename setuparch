@@ -77,8 +77,9 @@ virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
-paru -S spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin plymouth
-#libxft-bgra plymouth-nosystemd
+paru -S spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin
+#libxft-bgra plymouth-nosystemd  ( artix )
+#plymouth  ( arch )
 
 #sudo systemctl enable ly.service  ( arch )
 
