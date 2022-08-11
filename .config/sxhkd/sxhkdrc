@@ -90,9 +90,8 @@ super + e
 
 # chrome
 alt + b
-      google-chrome
-      #google-chrome-stable
-
+      google-chrome-stable
+      #google-chrome
         
 # firefox
 super + alt + b
