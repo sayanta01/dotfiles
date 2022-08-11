@@ -18,6 +18,10 @@ bspc rule -a Zathura state=tiled
 bspc rule -a Inkscape state=floating 
 bspc rule -a Gimp state=floating 
 bspc rule -a Screenkey manage=off
+bspc rule -a TelegramDesktop desktop='^6'
+bspc rule -a Lxappearance state=floating center=on
+bspc rule -a qt5ct state=floating center=on
+bspc rule -a Pavucontrol state=floating center=on
 
 
 #Autostart
