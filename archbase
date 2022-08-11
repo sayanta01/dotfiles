@@ -61,6 +61,7 @@ ln -s /etc/runit/sv/NetworkManager /etc/runit/runsvdir/current  ( artix before r
 ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix after reboot )
 
 pacman -S git networkmanager dosfstools mtools glibc dhcpcd fakeroot  ( arch )
+systemctl enable NetworkManager  ( arch )
 
 vim /etc/hosts
 127.0.0.1   localhost
