@@ -45,8 +45,9 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 #linux-lts linux-lts-headers
 cargo install ttyper lsd exa bat
 
-sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
-#lightdm-runit
+sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings
+#lightdm-runit  ( artix )
+#lightdm  ( arch )
 #dm-tool switch-to-greeter 
 #sudo ln -s /etc/runit/sv/lightdm /run/runit/service  ( artix )
 #sudo systemctl enable lightdm.service  ( arch )
@@ -55,9 +56,10 @@ sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia \
 scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord docker \
 telegram-desktop xfce4 xfce4-goodies \
-blueman bluez-runit bluez-utils ntfs-3g \
+blueman bluez-utils ntfs-3g \
 virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
-#qemu qemu-arch-extra
+#bluez-runit  ( artix )
+#qemu qemu-arch-extra bluez  ( arch )
 
 #sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
