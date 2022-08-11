@@ -1,7 +1,7 @@
 #!/bin/sh                                         
 
 ########## BSPWM ##########
-sudo pacman -Syu 
+sudo pacman -Syyu 
 sudo pacman -S --noconfirm bspwm sxhkd rofi slock dunst lxappearance maim alsa-utils dbus-python
 
 cp -r ~/dotfiles/{.zshrc,.local,.fonts,.xinitrc,.imwheelrc,.xprofile,.zprofile,.tmux.conf,.icons,.themes} ~/
