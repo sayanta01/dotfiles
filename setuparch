@@ -37,16 +37,17 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-     unclutter jq xdg-user-dirs xorg xclip openssh-runit
+     unclutter jq xdg-user-dirs xorg xclip openssh
      
-#xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop
-#brightnessctl dash cowsay libnotify connman libconfig pipewire pipewire-pulse
+#xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop 
+#brightnessctl dash cowsay libnotify connman libconfig pipewire pipewire-pulse openssh-runit
 
 #linux-lts linux-lts-headers
 cargo install ttyper lsd exa bat
 
-sudo pacman -S lightdm-runit lightdm-gtk-greeter lightdm-gtk-greeter-settings
-#dm-tool switch-to-greeter
+sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+#lightdm-runit
+#dm-tool switch-to-greeter 
 #sudo ln -s /etc/runit/sv/lightdm /run/runit/service  ( artix )
 #sudo systemctl enable lightdm.service  ( arch )
 
@@ -74,8 +75,8 @@ virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
-paru -S spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin plymouth-nosystemd
-#libxft-bgra
+paru -S spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin plymouth
+#libxft-bgra plymouth-nosystemd
 
 #sudo systemctl enable ly.service  ( arch )
 
