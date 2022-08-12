@@ -58,7 +58,7 @@ obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord docker \
 telegram-desktop xfce4 xfce4-goodies \
 blueman bluez-utils ntfs-3g \
 virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
-#bluez-runit  ( artix )
+#bluez-runit libvirt-runit  ( artix )
 #qemu qemu-arch-extra bluez  ( arch )
 
 #sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
