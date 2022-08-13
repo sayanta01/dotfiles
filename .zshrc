@@ -64,14 +64,16 @@ setopt hist_verify             # show command with history expansion to user bef
 
 
 # Plugins
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
-source /etc/zsh_command_not_found 2>/dev/null
+# Kali PATH
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+#source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
+#source /etc/zsh_command_not_found 2>/dev/null
+
 source ~/.config/zsh/zsh-fzf-history-search.zsh 2>/dev/null
 
 # Arch PATH
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null
 
 # Prompt
 autoload -Uz vcs_info colors && colors
