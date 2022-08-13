@@ -32,13 +32,13 @@ alt + F1
 	     
 # vol down
 alt + F2
-       amixer set Master 5%-
-       #pactl set-sink-volume @DEFAULT_SINK@ -5%
+       pactl set-sink-volume @DEFAULT_SINK@ -5%
+       #amixer set Master 5%-
 
 # vol up
 alt + F3
-       amixer set Master 5%+
-       #pactl set-sink-volume @DEFAULT_SINK@ +5%
+       pactl set-sink-volume @DEFAULT_SINK@ +5%
+       #amixer set Master 5%+
 
 # mute
 alt + F4
