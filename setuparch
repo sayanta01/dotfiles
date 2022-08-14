@@ -38,14 +38,14 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
      unclutter jq xdg-user-dirs xorg xclip openssh
-     
+#openssh-runit     
 #xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop 
-#brightnessctl dash cowsay libnotify connman libconfig pipewire pipewire-pulse openssh-runit
+#brightnessctl dash cowsay libnotify connman libconfig pipewire pipewire-pulse 
 
 #linux-lts linux-lts-headers
 cargo install ttyper lsd exa bat
 
-sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
 #lightdm-runit  ( artix )
 #lightdm  ( arch )
 #dm-tool switch-to-greeter 
