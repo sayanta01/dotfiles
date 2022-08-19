@@ -187,7 +187,8 @@ alias tsm='transmission-remote'
 alias copy='rsync --progress -auv'
 alias shred='shred -uvzn3'
 alias iv='sxiv'
-alias rm="trash"
+alias z='zathura'
+alias rm='trash'
 alias wget="wget --hsts-file=/dev/null"
 
 alias typer='xdg-open https://10fastfingers.com/typing-test/english'
