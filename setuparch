@@ -63,7 +63,7 @@ virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
 
 #sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
-##### Setup Virtmanager in Arch #####
+##### Setup VirtManager in Arch #####
 #sudo systemctl enable --now libvirtd
 #sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104
 #sudo usermod -aG libvirt bot
