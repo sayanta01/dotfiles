@@ -24,7 +24,7 @@ case $action in
     ;;
   "Update System")
     sudo pacman -Syyu --noconfirm
-    notify-send "✨🎉🥳 System Update Complete"
+    notify-send "🥳 System Update Complete 🎉"
     ;;
   *)
     notify-send "😕 No Option Selected"
