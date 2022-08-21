@@ -34,8 +34,8 @@ mkdir -p /mnt/home
 mount /dev/sda1 /mnt/boot
 mount /dev/sda4 /mnt/home
 
-basestrap /mnt base base-devel linux linux-firmware vim zsh runit elogind-runit  ( artix )
-pacstrap /mnt base base-devel linux linux-firmware vim zsh /  ( arch )
+basestrap /mnt base base-devel linux linux-firmware vim zsh tmux runit elogind-runit  ( artix )
+pacstrap /mnt base base-devel linux linux-firmware vim zsh tmux  ( arch )
 
 fstabgen -U /mnt >> /mnt/etc/fstab  ( artix )
 genfstab -U /mnt >> /mnt/etc/fstab  ( arch )
