@@ -71,10 +71,6 @@ virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
 #sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
 #sudo virsh net-autostart default
 
-#sudo systemctl enable bluetooth  ( arch )
-#sudo systemctl enable bluetooth.service  ( arch )
-#sudo systemctl enable fstrim.timer  ( arch )
-
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
 paru -S spotify-adblock notion-app google-chrome cava ly polybar preload visual-studio-code-bin
@@ -82,6 +78,7 @@ paru -S spotify-adblock notion-app google-chrome cava ly polybar preload visual-
 #plymouth  ( arch )
 
 #sudo systemctl enable ly.service  ( arch )
+#sudo systemctl enable fstrim.timer  ( arch )
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
