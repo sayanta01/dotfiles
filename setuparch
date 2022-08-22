@@ -57,17 +57,18 @@ scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord docker \
 telegram-desktop xfce4 xfce4-goodies \
 blueman bluez-utils ntfs-3g \
-virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
+qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
 #bluez-runit libvirt-runit  ( artix )
-#qemu qemu-arch-extra bluez  ( arch )
+#qemu-arch-extra bluez  ( arch )
 
 #sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
 ##### Setup VirtManager in Arch #####
-#sudo systemctl enable --now libvirtd
-#sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104
+#sudo ln -s /etc/runit/sv/libvirtd /run/runit/service  ( artix )
+#sudo systemctl enable --now libvirtd  ( arch )
+#sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104  ( arch )
 #sudo usermod -aG libvirt bot
-#sudo systemctl restart libvirtd
+#sudo systemctl restart libvirtd  ( arch )
 #sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
 #sudo virsh net-autostart default
 
