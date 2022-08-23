@@ -27,7 +27,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      cargo linux-headers firefox \
      lsd exa bat wget curl fzf aria2 kitty \
      neovim ripgrep qt5ct kvantum \
-     mate-calc reflector \
+     mate-calc reflector mpc mpd ncmpcpp \
      dialog cmake libconfig dash wmctrl imwheel \
      pipewire pulseaudio pavucontrol playerctl wmname \
      wireless_tools net-tools nm-connection-editor \
