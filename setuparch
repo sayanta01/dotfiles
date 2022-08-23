@@ -54,12 +54,12 @@ sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
 
 sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia \
 scrcpy android-tools nvtop stress \
-obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord docker \
+obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord \
 telegram-desktop xfce4 xfce4-goodies \
 blueman bluez-utils ntfs-3g \
 qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
-#bluez-runit libvirt-runit  ( artix )
-#qemu-arch-extra bluez  ( arch )
+#bluez-runit libvirt-runit docker-runit ( artix )
+#qemu-arch-extra bluez docker ( arch )
 
 #sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
