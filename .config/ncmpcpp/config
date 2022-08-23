@@ -52,9 +52,8 @@ alternative_header_second_line_format = "{{$4%b$9}{ [$8%y$9]}}|{$4%D$9}"
 song_status_format = " $6%a $7⟫⟫ $3%t $7⟫⟫ $4%b "
 
 ## Visualizer ##
-visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_data_source = "/tmp/mpd.fifo"
 visualizer_output_name = "my_fifo"
-visualizer_sync_interval = "40"
 visualizer_type = "spectrum"
 visualizer_in_stereo = "yes"
 visualizer_look = "◆▋"
