@@ -134,6 +134,7 @@ ex ()
   fi
 }
 
+cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
 alias l='exa -l'
 alias ll='exa -al'
