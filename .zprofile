@@ -3,6 +3,8 @@
 export PATH="$PATH:$(du "$HOME/.local/bin/scripts" | cut -f2 | paste -sd ':')"
 export LESSHISTFILE="-"
 
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
