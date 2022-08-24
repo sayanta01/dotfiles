@@ -194,8 +194,11 @@ alias wget="wget --hsts-file=/dev/null"
 alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias mpad='mousepad'
 alias vim='nvim'
-alias ytdl='yt-dlp -f 137+140'
 alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
+
+alias ytdl-best="yt-dlp -f bestvideo+bestaudio "
+alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a "
+alias ytdl='yt-dlp -f 137+140'
 
 alias sysctlist='systemctl list-units --type=service'
 alias sysctlfail='systemctl --failed'
