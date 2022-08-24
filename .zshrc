@@ -136,6 +136,25 @@ ex ()
 
 cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
+# Kali
+alias update='sudo apt update'
+alias install='sudo apt install'
+alias upgrade='sudo apt -y full-upgrade'
+alias clean='sudo apt -y autoremove; sudo apt clean'
+alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
+
+# runit
+alias vm-on="sudo sv start libvirtd"
+alias vm-off="sudo sv stop libvirtd"
+
+# systemd
+#alias vm-on="sudo systemctl start libvirtd.service"
+#alias vm-off="sudo systemctl stop libvirtd.service"
+alias sysctlist='systemctl list-units --type=service'
+alias sysctlfail='systemctl --failed'
+alias jctl='sudo journalctl -p 3 -xb'
+alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
+
 alias l='exa -l'
 alias ll='exa -al'
 alias l.='exa -a | egrep "^\."'
@@ -169,17 +188,9 @@ alias status='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
 
-alias update='sudo apt update'
-alias install='sudo apt install'
-alias upgrade='sudo apt -y full-upgrade'
-alias clean='sudo apt -y autoremove; sudo apt clean'
-alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
-
 alias rr='curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias up="uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g'"
 alias hst="history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -sel c"
-alias vm-on="sudo systemctl start libvirtd.service"
-alias vm-off="sudo systemctl stop libvirtd.service"
 
 alias free='free -h'
 alias df='df -h'
@@ -200,11 +211,6 @@ alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
 alias ytdl-best="yt-dlp -f bestvideo+bestaudio "
 alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a "
 alias ytdl='yt-dlp -f 137+140'
-
-alias sysctlist='systemctl list-units --type=service'
-alias sysctlfail='systemctl --failed'
-alias jctl='sudo journalctl -p 3 -xb'
-alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
 
 # Arch
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
