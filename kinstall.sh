@@ -15,11 +15,13 @@ cp -r ~/Desktop/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/Desktop/dotfiles/.
 cp -r ~/Desktop/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/key-handler
 
-git clone https://github.com/LukeSmithxyz/st.git ~/Downloads/st
-cd ~/Downloads/st && sudo make clean install
+mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
 
-git clone https://github.com/LukeSmithxyz/dmenu.git ~/Downloads/dmenu
-cd ~/Downloads/dmenu && sudo make clean install
+git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
+cd ~/dl/st && sudo make clean install
+
+git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
+cd ~/dl/dmenu && sudo make clean install
 
 sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
 sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
@@ -34,9 +36,9 @@ curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt update
-sudo apt install -y cargo fonts-jetbrains-mono \
+sudo apt install -y cargo fonts-jetbrains-mono fonts-terminus \
 ffmpeg mpv sxiv ncdu exa fzf stress nala \
-ranger zathura fd-find htop ripgrep \
+ranger zathura fd-find htop ripgrep qt5-style-kvantum \
 slock imwheel xclip xwallpaper mpd ncmpcpp gpg \
 fortune exiftool preload aptitude \
 bpytop neofetch font-viewer stacer \
@@ -44,18 +46,17 @@ speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp cava \
 android-tools-fastboot scrcpy android-tools-adb nvtop \
 obs-studio audacity gimp inkscape \
 nvidia-driver nvidia-cuda-toolkit \
-telegram-desktop kdeconnect spotify-client  
+telegram-desktop kdeconnect spotify-client \
+aria2 wmname wmctrl
 
 #apt-transport-https translate-shell docker.io synaptic
 cargo install ttyper lsd bat
 
-sudo apt purge -y --auto-remove onboard xterm cherrytree \
-xfce4-notifyd xfce4-clipman-plugin
+#sudo apt purge -y --auto-remove onboard xterm cherrytree xfce4-notifyd xfce4-clipman-plugin
 
-#
-sudo apt install -y virt-manager qemu
-sudo usermod -aG libvirt bot
-sudo usermod -aG kvm bot
+#sudo apt install -y virt-manager 
+#sudo usermod -aG libvirt bot
+#sudo usermod -aG kvm bot
 
 wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/Downloads/vscode.deb
 wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/Downloads/discord.deb
