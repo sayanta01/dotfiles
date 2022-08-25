@@ -35,9 +35,9 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 
 sudo apt update
 sudo apt install -y cargo fonts-jetbrains-mono \
-ffmpeg mpv sxiv ncdu exa fzf stress \
-ranger zathura fd-find htop  ripgrep \
-slock imwheel xclip xwallpaper gpg \
+ffmpeg mpv sxiv ncdu exa fzf stress nala \
+ranger zathura fd-find htop ripgrep \
+slock imwheel xclip xwallpaper mpd ncmpcpp gpg \
 fortune exiftool preload aptitude \
 bpytop neofetch font-viewer stacer \
 speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp cava \
