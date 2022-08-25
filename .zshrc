@@ -137,9 +137,9 @@ ex ()
 cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
 # Kali
-alias update='sudo apt update'
-alias install='sudo apt install'
-alias upgrade='sudo apt -y full-upgrade'
+alias install='sudo nala install'
+alias update='sudo nala update'
+alias upgrade='sudo nala upgrade'
 alias clean='sudo apt -y autoremove; sudo apt clean'
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
 
