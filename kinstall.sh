@@ -10,9 +10,9 @@ sudo apt update
 sudo apt install -y bspwm polybar rofi kitty dunst lxappearance maim slock playerctl libxft-dev alsa-utils libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
 pip install pywal
 
-cp -r ~/Desktop/dotfiles/{.zshrc,.fonts,.xinitrc,.imwheelrc,.xprofile,.zprofile,.tmux.conf,.icons,.themes} ~/
-cp -r ~/Desktop/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/Desktop/dotfiles/.local/share/* ~/.local/share
-cp -r ~/Desktop/dotfiles/.config/. ~/.config
+cp -r ~/dotfiles/{.zshrc,.fonts,.xinitrc,.imwheelrc,.xprofile,.zprofile,.tmux.conf,.icons,.themes} ~/
+cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/Desktop/dotfiles/.local/share/* ~/.local/share
+cp -r ~/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/key-handler
 
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
