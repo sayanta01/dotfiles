@@ -86,6 +86,9 @@ GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 #Console Font
 sudo dpkg-reconfigure console-setup
 
+#Display asterisks while entering passwd
+# /etc/sudoers add Defaults    pwfeedback
+
 # sudo vim /etc/hosts                       blk sites
 # sudo systemd-analyze                      critical-chain      
 # deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free
