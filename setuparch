@@ -101,8 +101,11 @@ GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 sudo setfont /usr/share/kbd/consolefonts/ter-c16b.psf.gz
 sudo su root -c "echo -e FONT='Uni2-TerminusBold20x10.psf.gz' >> /etc/default/console-setup"
 
+#Display asterisks while entering passwd
+# /etc/sudoers add Defaults    pwfeedback
+
 # uncmnt zsh plugins path for arch
-# vim /etc/pacman.conf  # uncheck ignorepkg and put pkgname
+# /etc/pacman.conf  # uncheck ignorepkg and put pkgname
 # export LC_CTYPE="en_GB.utf8"  ( fix suckless utilities give XOpenIM failed error )
 #QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment  ( fix qt5ct )
 #ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
