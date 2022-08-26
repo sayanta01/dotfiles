@@ -83,8 +83,8 @@ xdg-mime default org.pwmt.zathura.desktop application/pdf
 sudo systemctl enable fstrim.timer
 GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 
-sudo setfont /usr/share/kbd/consolefonts/ter-c16b.psf.gz
-sudo su root -c "echo -e FONT='Uni2-TerminusBold20x10.psf.gz' >> /etc/default/console-setup"
+#Console Font
+sudo dpkg-reconfigure console-setup
 
 # sudo vim /etc/hosts                       blk sites
 # sudo systemd-analyze                      critical-chain      
