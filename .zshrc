@@ -146,10 +146,14 @@ alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt 
 # runit
 alias vm-on="sudo sv start libvirtd"
 alias vm-off="sudo sv stop libvirtd"
+alias doc-on="sudo sv start docker"
+alias doc-off="sudo sv stop docker"
 
 # systemd
 #alias vm-on="sudo systemctl start libvirtd.service"
 #alias vm-off="sudo systemctl stop libvirtd.service"
+#alias doc-on="sudo systemctl start docker.socket"
+#alias doc-on="sudo systemctl stop docker.socket"
 alias sysctlist='systemctl list-units --type=service'
 alias sysctlfail='systemctl --failed'
 alias jctl='sudo journalctl -p 3 -xb'
