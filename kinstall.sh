@@ -58,9 +58,9 @@ cargo install ttyper lsd bat
 #sudo usermod -aG libvirt bot
 #sudo usermod -aG kvm bot
 
-wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/Downloads/vscode.deb
-wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/Downloads/discord.deb
-cd ~/Downloads && chmod +x vscode.deb discord.deb && sudo dpkg -i vscode.deb discord.deb
+wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/dl/vscode.deb
+wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
+cd ~/dl && chmod +x vscode.deb discord.deb && sudo dpkg -i vscode.deb discord.deb
 
 git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock && make && sudo make install
 axel -n 20 -o PacketTracer.deb https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
