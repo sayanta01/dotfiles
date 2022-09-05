@@ -22,9 +22,9 @@ mkswap /dev/sda3
 swapon /dev/sda3
 
 ##### format ######
+mkfs.fat -F32 /dev/sda1
 mkfs.ext4 -L root /dev/sda2
 mkfs.ext4 -L home /dev/sda4
-mkfs.fat -F32 /dev/sda1
 
 ##### mounting #####
 mount /dev/sda2 /mnt
