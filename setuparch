@@ -37,9 +37,9 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-     unclutter jq xdg-utils xdg-user-dirs xorg xclip openssh
+     unclutter jq xdg-utils xdg-user-dirs xorg xclip openssh cowsay
 #xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop 
-#brightnessctl dash cowsay libnotify connman libconfig pipewire pipewire-pulse 
+#brightnessctl dash libnotify connman libconfig pipewire pipewire-pulse 
 
 #linux-lts linux-lts-headers
 cargo install ttyper
