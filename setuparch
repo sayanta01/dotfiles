@@ -37,8 +37,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      imagemagick sxiv xwallpaper ffmpeg python-pywal mpv \
      intel-ucode virtualbox-guest-utils python-pip xdotool \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-     unclutter jq xdg-user-dirs xorg xclip openssh
-#openssh-runit     
+     unclutter jq xdg-user-dirs xorg xclip 
 #xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop 
 #brightnessctl dash cowsay libnotify connman libconfig pipewire pipewire-pulse 
 
@@ -58,8 +57,8 @@ obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord \
 telegram-desktop xfce4 xfce4-goodies \
 blueman bluez-utils ntfs-3g \
 qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
-#bluez-runit libvirt-runit docker-runit ( artix )
-#qemu-arch-extra bluez docker ( arch )
+#bluez-runit libvirt-runit docker-runit openssh-runit ( artix )
+#qemu-arch-extra bluez docker openssh ( arch )
 
 #sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
