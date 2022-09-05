@@ -142,17 +142,18 @@ alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt 
 #alias install='sudo nala install'
 #alias update='sudo nala update'
 
-#arch
+# Arch
 alias install='sudo pacman -Sy'
 alias update='sudo pacman -Syyu'
+alias parupdate='paru -Sua --noconfirm'
 
-# runit
+# Runit
 alias vm-on="sudo sv start libvirtd"
 alias vm-off="sudo sv stop libvirtd"
 alias doc-on="sudo sv start docker"
 alias doc-off="sudo sv stop docker"
 
-# systemd
+# Systemd
 #alias vm-on="sudo systemctl start libvirtd.service"
 #alias vm-off="sudo systemctl stop libvirtd.service"
 #alias doc-on="sudo systemctl start docker.socket"
@@ -218,12 +219,6 @@ alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
 alias ytdl-best="yt-dlp -f bestvideo+bestaudio "
 alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a "
 alias ytdl='yt-dlp -f 137+140'
-
-# Arch
-alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
-alias pacsyyu='sudo pacman -Syyu'                # refresh pkglist & update standard pkgs
-alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and yay pkgs
-alias yaysua='yay -Sua --noconfirm'              # update only yay pkgs
 
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 alias cleanaur='sudo pacman -Sc --noconfirm'
