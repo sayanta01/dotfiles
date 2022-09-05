@@ -69,7 +69,7 @@ vim /etc/hosts
 127.0.1.1   LilWarmachine.localdomain   LilWarmachine
 
 pacman -S grub os-prober efibootmgr
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 passwd  #set root pswd
