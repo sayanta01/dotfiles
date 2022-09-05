@@ -66,7 +66,7 @@ systemctl enable NetworkManager  ( arch )
 vim /etc/hosts
 127.0.0.1   localhost
 ::1         localhost
-127.0.1.1   LilWarmachine.localdomain LilWarmachine
+127.0.1.1   LilWarmachine.localdomain   LilWarmachine
 
 pacman -S grub os-prober efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
