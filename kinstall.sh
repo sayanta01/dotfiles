@@ -11,7 +11,7 @@ sudo apt install -y bspwm polybar rofi kitty dunst lxappearance maim slock playe
 pip install pywal
 
 cp -r ~/dotfiles/{.zshrc,.fonts,.xinitrc,.imwheelrc,.xprofile,.zprofile,.tmux.conf,.icons,.themes} ~/
-cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
+cp -r ~/dotfiles/.local/bin/scripts ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
 cp -r ~/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/key-handler
 
