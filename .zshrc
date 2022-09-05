@@ -137,11 +137,14 @@ ex ()
 cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
 # Kali
-alias install='sudo nala install'
-alias update='sudo nala update'
-alias upgrade='sudo nala upgrade'
 alias clean='sudo apt -y autoremove; sudo apt clean'
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
+#alias install='sudo nala install'
+#alias update='sudo nala update'
+
+#arch
+alias install='sudo pacman -Sy'
+alias update='sudo pacman -Syyu'
 
 # runit
 alias vm-on="sudo sv start libvirtd"
