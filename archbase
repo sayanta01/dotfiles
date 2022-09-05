@@ -3,7 +3,7 @@
 
 ##### partition using fdisk #####
 fdisk /dev/sda                          #sel drive
-n  1st partition  (Boot)                give +700M 
+n  1st partition  (Boot)                give +400M 
 n  2nd partition  (Root)                give +24G  
 n  3rd partition  (Swap)                give +4G
 n  4th partition  (Home)                give rest of space
@@ -11,7 +11,7 @@ w  write partition
 
 ##### partition using cfdisk #####
 cfdisk /dev/sda
-sda1 boot 700M  partition type EFI system
+sda1 boot 400M  partition type EFI system
 sda2 root 26G
 sda3 swap 4G
 sda4 home rest of space
@@ -28,10 +28,10 @@ mkfs.fat -F32 /dev/sda1
 
 ##### mounting #####
 mount /dev/sda2 /mnt
-mkdir -p /mnt/boot
+mkdir -p /mnt/boot/efi
 mkdir -p /mnt/home
 
-mount /dev/sda1 /mnt/boot
+mount /dev/sda1 /mnt/boot/efi
 mount /dev/sda4 /mnt/home
 
 basestrap /mnt base base-devel linux linux-firmware vim zsh tmux runit elogind-runit  ( artix )
