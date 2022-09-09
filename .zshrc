@@ -158,7 +158,7 @@ alias doc-off="sudo sv stop docker"
 #alias vm-off="sudo systemctl stop libvirtd.service"
 #alias doc-on="sudo systemctl start docker.socket"
 #alias doc-on="sudo systemctl stop docker.socket"
-alias sysctlist='systemctl list-units --type=service'
+alias sysctlist='systemctl list-unit-files --type=service'
 alias sysctlfail='systemctl --failed'
 alias jctl='sudo journalctl -p 3 -xb'
 alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
