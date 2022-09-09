@@ -57,12 +57,14 @@ obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord telegram
 blueman bluez-utils ntfs-3g \
 qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf bluez bluez-utils
 #bluez-runit libvirt-runit docker-runit openssh-runit ( artix )
+#sudo touch /run/runit/service/docker/down
 #qemu-arch-extra docker ( arch )
 
 #sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
 
 ##### Setup VirtManager in Arch #####
 #sudo ln -s /etc/runit/sv/libvirtd /run/runit/service  ( artix )
+#sudo touch /run/runit/service/libvirtd/down  ( artix )
 #sudo systemctl enable --now libvirtd  ( arch )
 #sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104  ( arch )
 #sudo usermod -aG libvirt bot
