@@ -42,7 +42,8 @@ alt + F3
 
 # mute
 alt + F4
-        amixer set Master toggle         
+       pactl set-sink-mute @DEFAULT_SINK@ toggle
+       #amixer set Master toggle         
 
 # switch audio
 alt + F5       
