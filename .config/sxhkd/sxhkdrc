@@ -1,7 +1,20 @@
 #
 # wm independent hotkeys
 #
-	
+
+# volume control for Laptop
+XF86AudioLowerVolume
+              pactl set-sink-volume @DEFAULT_SINK@ -5%
+              #amixer set Master 5%-
+
+XF86AudioRaiseVolume
+              pactl set-sink-volume @DEFAULT_SINK@ +5%
+              #amixer set Master 5%+
+
+XF86AudioMute
+              pactl set-sink-mute @DEFAULT_SINK@ toggle
+              #amixer set Master toggle
+
 # notion
 super + alt + m
               xdg-open http://notion.new
