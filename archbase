@@ -39,10 +39,10 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C"  
 echo LilWarmachine > /etc/hostname
 
-pacman -S git networkmanager dosfstools mtools glibc dhcpcd networkmanger-runit fakeroot  ( artix )
-ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix after reboot )
+pacman -S git dosfstools mtools glibc dhcpcd networkmanager networkmanger-runit  ( artix )
+ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix )
 
-pacman -S git networkmanager dosfstools mtools glibc dhcpcd fakeroot  ( arch )
+pacman -S git dosfstools mtools glibc dhcpcd networkmanager  ( arch )
 systemctl enable NetworkManager  ( arch )
 
 vim /etc/hosts
