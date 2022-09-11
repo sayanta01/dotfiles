@@ -75,7 +75,7 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf bluez bluez-utils
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
 paru -S spotify-adblock notion-app google-chrome cava polybar preload visual-studio-code-bin
-#libxft-bgra-git plymouth-nosystemd bluedevil pulseaudio-bluetooth  ( artix )
+#plymouth-nosystemd libxft-bgra-git bluedevil pulseaudio-bluetooth  ( artix )
 #plymouth ly  ( arch )
 
 #sudo systemctl enable ly.service  ( arch )
