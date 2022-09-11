@@ -26,7 +26,7 @@ genfstab -U /mnt >> /mnt/etc/fstab  ( arch )
 artix-chroot /mnt  ( artix )
 arch-chroot /mnt  ( arch )
 
-vim /etc/pacman.conf                    #uncmnt colors and paraller downloads
+vim /etc/pacman.conf                    #uncmnt colors and paraller downloads, add ILoveCandy
 
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
