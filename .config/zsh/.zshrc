@@ -134,7 +134,7 @@ ex ()
   fi
 }
 
-cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
+#cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
 # Kali
 alias clean='sudo apt -y autoremove; sudo apt clean'
