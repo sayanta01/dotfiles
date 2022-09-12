@@ -69,7 +69,6 @@ setopt hist_verify             # show command with history expansion to user bef
 #source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
 #source /etc/zsh_command_not_found 2>/dev/null
 
-source ~/.zprofile
 source ~/.config/zsh/zsh-fzf-history-search.zsh 2>/dev/null
 
 # Arch PATH
