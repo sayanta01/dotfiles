@@ -1,0 +1,88 @@
+
+# Kali
+alias clean='sudo apt -y autoremove; sudo apt clean'
+alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
+#alias install='sudo nala install'
+#alias update='sudo nala update'
+
+# Arch
+alias install='sudo pacman -Sy'
+alias update='sudo pacman -Syyu'
+alias parupdate='paru -Sua --noconfirm'
+
+# Runit
+alias vm-on="sudo sv start libvirtd"
+alias vm-off="sudo sv stop libvirtd"
+alias doc-on="sudo sv start docker"
+alias doc-off="sudo sv stop docker"
+
+# Systemd
+#alias vm-on="sudo systemctl start libvirtd.service"
+#alias vm-off="sudo systemctl stop libvirtd.service"
+#alias doc-on="sudo systemctl start docker.socket"
+#alias doc-on="sudo systemctl stop docker.socket"
+alias sysctlist='systemctl list-unit-files --type=service'
+alias sysctlfail='systemctl --failed'
+alias jctl='sudo journalctl -p 3 -xb'
+alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
+
+alias l='exa -l'
+alias ll='exa -al'
+alias l.='exa -a | egrep "^\."'
+alias ls='ls --color=auto'
+alias la='lsd'
+alias lsn='exa | wc -l'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias cp="cp -iv"
+alias mv='mv -iv'
+alias rm='rm -iv'
+
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+
+alias addup='git add -u'
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias status='git status'
+alias tag='git tag'
+alias newtag='git tag -a'
+
+alias rr='curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias up="uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g'"
+alias hst="history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -sel c"
+
+alias free='free -h'
+alias df='df -h'
+alias cat='bat'
+alias tsm='transmission-remote'
+alias copy='rsync --progress -auv'
+alias shred='shred -uvzn3'
+alias iv='sxiv'
+alias z='zathura'
+alias rm='trash'
+alias wget="wget --hsts-file=/dev/null"
+
+alias typer='xdg-open https://10fastfingers.com/typing-test/english'
+alias mpad='mousepad'
+alias vim='nvim'
+alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
+
+alias ytdl-best="yt-dlp -f bestvideo+bestaudio "
+alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a "
+alias ytdl='yt-dlp -f 137+140'
+
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+alias cleanaur='sudo pacman -Sc --noconfirm'
+alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
