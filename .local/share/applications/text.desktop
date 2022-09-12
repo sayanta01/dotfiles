@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Text editor
+Exec=/usr/local/bin/st -e nvim %u
+Icon=nvim
