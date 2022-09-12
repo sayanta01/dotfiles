@@ -36,4 +36,4 @@ xset r rate 290 50 &
 kdeconnect-indicator &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
 dunst &
-xrdb ~/.config/.Xresources &
+xrdb ~/.config/x11/xresources &
