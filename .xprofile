@@ -1,7 +1,0 @@
-#!/bin/sh
-
-xset r rate 290 50 &
-imwheel -b "4 5" &
-kdeconnect-indicator &
-xrdb ~/.config/.Xresources &
-
