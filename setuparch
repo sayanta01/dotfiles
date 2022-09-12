@@ -54,8 +54,8 @@ sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
 sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia \
 scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord telegram-desktop \
-blueman bluez-utils ntfs-3g \
-qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf bluez bluez-utils
+bluez blueman bluez-utils ntfs-3g \
+qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf 
 #bluez-runit libvirt-runit docker-runit openssh-runit ( artix )
 #sudo touch /run/runit/service/docker/down
 #qemu-arch-extra docker ( arch )
