@@ -18,7 +18,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 
 ########## For ALL distro ##########
-/etc/grub.d/40_custom...
+/etc/grub.d/40_custom
 menuentry "Reboot" --class restart {
   reboot
 }
