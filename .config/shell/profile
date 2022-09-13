@@ -1,4 +1,4 @@
-##!/bin/zsh
+#!/bin/zsh
 
 export PATH="$PATH:$(du "$HOME/.local/bin/scripts" | cut -f2 | paste -sd ':')"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
