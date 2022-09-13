@@ -94,9 +94,7 @@ zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]
 PROMPT=' %b%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[white]%}  %{$fg[red]%})%{$fg[white]%} ${vcs_info_msg_0_} ~%  '
 
 #PATHs
-export EDITOR='nvim'
 #export MANPAGER='nvim +Man!'
-export TERMINAL='kitty'
 export TERM='xterm-256color'                      
 export PATH=$PATH:$HOME/.local/share/cargo/bin
 export PATH=$PATH:$HOME/.local/bin/scripts
