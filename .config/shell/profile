@@ -29,6 +29,7 @@ export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"
 
 export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
 export INPUTRC="$XDG_CONFIG_HOME/inputrc"
+export KODI_DATA="$XDG_DATA_HOME/kodi"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 
 export GOPATH="$XDG_DATA_HOME/go"
