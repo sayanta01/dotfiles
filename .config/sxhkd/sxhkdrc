@@ -2,6 +2,17 @@
 # wm independent hotkeys
 #
 
+# brightness control
+XF86MonBrightness{Up,Down}
+	      brightness{ --inc, --dec}
+	      
+# mute
+XF86AudioMute
+	volume --toggle
+
+Xf86AudioMicMute
+	volume --toggle-mic
+
 # volume control for Laptop
 XF86AudioLowerVolume
               pactl set-sink-volume @DEFAULT_SINK@ -5%
