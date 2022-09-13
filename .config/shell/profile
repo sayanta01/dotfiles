@@ -15,30 +15,32 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
-export LESSHISTFILE="${XDG_CONFIG_HOME}/less/history"
-export LESSKEY="${XDG_CONFIG_HOME}/less/keys"
+export HISTFILE="$XDG_DATA_HOME/.local/share}/history"
+export LESSHISTFILE="$XDG_CONFIG_HOME/less/history"
+export LESSKEY="$XDG_CONFIG_HOME/less/keys"
 export LESSHISTFILE="-"
 export LESS="-R"
 
 export XAUTHORITY=/tmp/Xauthority
-export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
-export XSERVERRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xserverrc"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
+export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
+export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"
 
-export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
-export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
+export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
+export INPUTRC="$XDG_CONFIG_HOME/inputrc"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 
-export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
-export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
-export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
+export GOPATH="$XDG_DATA_HOME/go"
+export CARGO_HOME="$XDG_DATA_HOME/.local/share}/cargo"
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/.config}/android"
 
-export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
-export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
-export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
+export HISTFILE="$XDG_STATE_HOME/zsh/history"
+export WGETRC="$XDG_CONFIG_HOME/.config}/wget/wgetrc"
 
-export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
-export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export INPUTRC="$XDG_CONFIG_HOME/.config}/shell/inputrc"
+export ZDOTDIR="$XDG_CONFIG_HOME/.config}/zsh"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
 export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
