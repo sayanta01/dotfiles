@@ -39,7 +39,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
      jq xdg-utils xdg-user-dirs xorg xclip openssh cowsay
 #xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop 
-# dash libnotify connman libconfig unclutter  pipewire pipewire-pulse brightnessctl
+# dash libnotify connman libconfig unclutter perl-image-exiftool  pipewire pipewire-pulse brightnessctl
 
 #linux-lts linux-lts-headers
 cargo install ttyper
