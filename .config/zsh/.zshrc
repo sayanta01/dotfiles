@@ -56,7 +56,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # History configurations
 HISTSIZE=2000
 SAVEHIST=2000
-HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
+HISTFILE="$XDG_CACHE_HOME/zsh/history"
 setopt hist_ignore_space       # ignore commands that start with space
 setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_all_dups    # ignore duplicated commands history list
@@ -136,15 +136,19 @@ ex ()
 cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
 # Kali
-alias clean='sudo apt -y autoremove; sudo apt clean'
+#alias clean='sudo apt -y autoremove; sudo apt clean'
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
+alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
 #alias install='sudo nala install'
 #alias update='sudo nala update'
 
 # Arch
+alias clean='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+alias cleanaur='sudo pacman -Sc --noconfirm'
+alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias install='sudo pacman -Sy'
 alias update='sudo pacman -Syyu'
-alias parupdate='paru -Sua --noconfirm'
+alias upaur='paru -Sua --noconfirm'
 
 # Runit
 alias vm-on="sudo sv start libvirtd"
@@ -213,15 +217,10 @@ alias wget="wget --hsts-file=/dev/null"
 alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias mpad='mousepad'
 alias vim='nvim'
-alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
 
 alias ytdl-best="yt-dlp -f bestvideo+bestaudio "
 alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a "
 alias ytdl='yt-dlp -f 137+140'
-
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
-alias cleanaur='sudo pacman -Sc --noconfirm'
-alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 
 
 # Snap alias
