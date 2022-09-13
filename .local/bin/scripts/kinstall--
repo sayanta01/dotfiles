@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+#sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 
 yes '
 ' | sudo apt full-upgrade
@@ -8,9 +8,9 @@ yes '
 ########## BSPWM ##########
 sudo apt update
 sudo apt install -y bspwm polybar rofi kitty dunst lxappearance maim slock playerctl libxft-dev alsa-utils libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
-pip install pywal
+#pip install pywal
 
-cp -r ~/dotfiles/{.zshrc,.fonts,.xinitrc,.imwheelrc,.xprofile,.zprofile,.tmux.conf,.icons,.themes} ~/
+cp -r ~/dotfiles/{.imwheelrc,.icons,.themes} ~/
 cp -r ~/dotfiles/.local/bin/scripts ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
 cp -r ~/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/key-handler
@@ -26,7 +26,7 @@ cd ~/dl/dmenu && sudo make clean install
 sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
 sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
 
-git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
+#git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
 sudo cp -r ~/.themes/* /usr/share/themes
 
 sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
