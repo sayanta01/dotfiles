@@ -10,8 +10,8 @@ XF86MonBrightness{Up,Down}
 XF86AudioMute
 	volume --toggle
 
-Xf86AudioMicMute
-	volume --toggle-mic
+#Xf86AudioMicMute
+#	volume --toggle-mic
 
 # volume control for Laptop
 XF86AudioLowerVolume
@@ -25,6 +25,11 @@ XF86AudioRaiseVolume
 XF86AudioMute
               pactl set-sink-mute @DEFAULT_SINK@ toggle
               #amixer set Master toggle
+
+
+# hide all windows
+super + d
+        bspc query -N -n .window | while IFS= read -r wid; do bspc node "$wid" -g hidden; done
 
 # notion
 super + alt + m
