@@ -219,7 +219,7 @@ alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias mpad='mousepad'
 alias vim='nvim'
 
-alias ytdl-best="yt-dlp -f bestvideo+bestaudio "
+alias ytdl-video="yt-dlp -f bestvideo+bestaudio "
 alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a "
 
 
