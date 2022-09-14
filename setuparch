@@ -104,8 +104,9 @@ sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 #Display asterisks while entering passwd
 # /etc/sudoers add Defaults    pwfeedback
 
+# sudo vim /etc/hosts                     # blk sites
 # /etc/pacman.conf  # uncheck ignorepkg and put pkgname
 # export LC_CTYPE="en_GB.utf8"  ( fix suckless utilities give XOpenIM failed error )
-#QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment  ( fix qt5ct )
-#ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
+# QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment  ( fix qt5ct )
+# ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
 
