@@ -29,7 +29,7 @@ XF86AudioMute
 
 # hide all windows
 super + d
-        bspc query -N -n .window | while IFS= read -r wid; do bspc node "$wid" -g hidden; done
+        while bspc node any.hidden.window -g hidden=off; do false; done && while bspc node 'any.!hidden.window' -g hidden=on; do :; done
 
 # notion
 super + alt + m
