@@ -221,7 +221,6 @@ alias vim='nvim'
 
 alias ytdl-best="yt-dlp -f bestvideo+bestaudio "
 alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a "
-alias ytdl='yt-dlp -f 137+140'
 
 
 # Snap alias
