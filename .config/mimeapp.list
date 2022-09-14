@@ -1,0 +1,13 @@
+
+[Default Applications]
+text/x-shellscript=text.desktop;
+text/plain=text.desktop;
+image/png=img.desktop;
+image/jpeg=img.desktop;
+image/gif=img.desktop;
+video/x-matroska=video.desktop;
+application/postscript=pdf.desktop;
+application/pdf=org.pwmt.zathura.desktop;
+
+[Added Associations]
+image/svg+xml=gimp.desktop;org.inkscape.Inkscape.desktop;
