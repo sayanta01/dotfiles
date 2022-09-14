@@ -1,2 +1,2 @@
 [General]
-commands="@ByteArray({\"_0f3b422c_05d7_475f_831b_f728d912ec04_\":{\"command\":\"slock\",\"name\":\"lock\"},\"_415cce50_c2ec_4ee6_a399_e297e45ea1ef_\":{\"command\":\"loginctl poweroff\",\"name\":\"shutdown\"},\"_bb08d811_f288_4f48_9afe_780ff320050f_\":{\"command\":\"sudo sv start sshd\",\"name\":\"ssh\"},\"_bf39cbe7_5136_457b_a7b3_1d61d0e4a16c_\":{\"command\":\"loginctl reboot\",\"name\":\"reboot\"}})"
+commands="@ByteArray({\"_0f3b422c_05d7_475f_831b_f728d912ec04_\":{\"command\":\"slock\",\"name\":\"lock\"},\"_415cce50_c2ec_4ee6_a399_e297e45ea1ef_\":{\"command\":\"loginctl poweroff\",\"name\":\"shutdown\"},\"_bf39cbe7_5136_457b_a7b3_1d61d0e4a16c_\":{\"command\":\"loginctl reboot\",\"name\":\"reboot\"}})"
