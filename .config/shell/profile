@@ -21,12 +21,15 @@ export LESSKEY="$XDG_CONFIG_HOME/less/keys"
 export LESSHISTFILE="-"
 export LESS="-R"
 
+#export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+#export HISTFILE="$XDG_STATE_HOME/zsh/history"
+
 export XAUTHORITY=/tmp/Xauthority
-export INPUTRC="$XDG_CONFIG_HOME/inputrc"
-export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
-export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
-export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"
-export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
+#export INPUTRC="$XDG_CONFIG_HOME/inputrc"
+#export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
+#export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
+#export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"
+#export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 
 export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
 export KODI_DATA="$XDG_DATA_HOME/kodi"
@@ -37,10 +40,7 @@ export CARGO_HOME="$XDG_DATA_HOME/.local/share/cargo"
 export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
 
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
-export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
-
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
 export QT_QPA_PLATFORMTHEME="gtk2"  # have QT use gtk2 theme.
