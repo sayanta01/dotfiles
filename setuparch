@@ -42,7 +42,6 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 #sudo touch /run/runit/service/sshd/down  ( artix )
 #dash libnotify connman libconfig unclutter perl-image-exiftool  pipewire pipewire-pulse brightnessctl
 
-#linux-lts linux-lts-headers
 cargo install ttyper
 
 sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
