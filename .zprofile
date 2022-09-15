@@ -42,6 +42,7 @@ export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+export ELECTRUMDIR="$XDG_DATA_HOME/.local/share/electrum"
 
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
 export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
