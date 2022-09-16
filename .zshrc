@@ -133,12 +133,12 @@ alias doc-on="sudo sv start docker"
 alias doc-off="sudo sv stop docker"
 
 # Systemd
-#alias ssh-on="sudo systemctl start sshd"
-#alias ssh-off="sudo systemctl stop sshd"
+#alias ssh-on="sudo systemctl start sshd.service"
+#alias ssh-off="sudo systemctl stop sshd.service"
 #alias vm-on="sudo systemctl start libvirtd.service"
 #alias vm-off="sudo systemctl stop libvirtd.service"
 #alias doc-on="sudo systemctl start docker.socket"
-#alias doc-on="sudo systemctl stop docker.socket"
+#alias doc-off="sudo systemctl stop docker.socket"
 alias sysctlist='systemctl list-unit-files --type=service'
 alias sysctlfail='systemctl --failed'
 alias jctl='sudo journalctl -p 3 -xb'
