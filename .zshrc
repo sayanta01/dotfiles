@@ -62,7 +62,6 @@ setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exce
 setopt hist_ignore_all_dups    # ignore duplicated commands history list
 setopt hist_verify             # show command with history expansion to user before running it
 
-
 # Plugins
 source ~/.zprofile
 source ~/.config/zsh/zsh-fzf-history-search.zsh 2>/dev/null
