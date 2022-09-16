@@ -44,7 +44,7 @@ bindkey '^K' kill-line
 # Time format
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
-# enable Completion features
+# Enable completion 
 autoload -Uz compinit && compinit
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files
