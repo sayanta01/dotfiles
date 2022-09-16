@@ -1,4 +1,4 @@
 #!/bin/sh
 
-. ~/.zprofile
-exec bspwm
+#. ~/.zprofile
+#exec bspwm
