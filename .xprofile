@@ -2,6 +2,6 @@
 
 #dunst &
 #xset r rate 290 50 &
-#imwheel -b "4 5" &
+#imwheel -b 45 &
 #kdeconnect-indicator &
-#xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!	# Uncmt to use Xresources colors/settings on startup
+#xrdb ~/.config/x11/xresources &
