@@ -1,5 +1,5 @@
-setopt autocd               # change directory just by typing its name
 #setopt correct              # auto correct mistakes
+setopt autocd               # change directory just by typing its name
 setopt interactivecomments  # allow comments in interactive mode
 setopt magicequalsubst      # enable filename expansion for arguments of the form ‘anything=expression’
 setopt nonomatch            # hide error message if there is no match for the pattern
@@ -7,7 +7,7 @@ setopt notify               # report the status of background jobs immediately
 setopt numericglobsort      # sort filenames numerically when it makes sense
 setopt promptsubst          # enable command substitution in prompt
 
-# configure key keybindings
+# Configure keybindings
 bindkey -e                                        # emacs key bindings
 bindkey -s '^o' 'ranger^M'
 bindkey ' ' magic-space                           # history expansion on space
@@ -38,10 +38,10 @@ bindkey '^K' kill-line
 #bindkey '^R' history-incremental-search-backward
 #bindkey '^D' exit_zsh
 
-# hide EOL sign ('%')
+# Hide EOL sign ('%')
 #PROMPT_EOL_MARK="" 
 
-# configure Time format
+# Time format
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 # enable Completion features
@@ -64,13 +64,13 @@ setopt hist_verify             # show command with history expansion to user bef
 
 
 # Plugins
+source ~/.zprofile
+source ~/.config/zsh/zsh-fzf-history-search.zsh 2>/dev/null
+
 # Kali PATH
 #source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 #source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
 #source /etc/zsh_command_not_found 2>/dev/null
-
-source ~/.zprofile
-source ~/.config/zsh/zsh-fzf-history-search.zsh 2>/dev/null
 
 # Arch PATH
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
@@ -98,9 +98,9 @@ PROMPT=' %b%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[
 
 #PATHs
 #export MANPAGER='nvim +Man!'
-export TERM='xterm-256color'                      
-export PATH=$PATH:$HOME/.local/share/cargo/bin
+export TERM='xterm-256color'
 export PATH=$PATH:$HOME/.local/bin/scripts
+export PATH=$PATH:$HOME/.local/share/cargo/bin
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
  --color=fg:#d6d6d6,bg:#030303,hl:#5f87af
  --color=fg+:#e8e8e8,bg+:#313244,hl+:#3bceff
@@ -110,11 +110,10 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
 ##########  ALIAS ########## 
-
 # Kali
-#alias clean='sudo apt -y autoremove; sudo apt clean'
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
-alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
+alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'\
+#alias clean='sudo apt -y autoremove; sudo apt clean'
 #alias install='sudo nala install'
 #alias update='sudo nala update'
 
@@ -180,6 +179,7 @@ alias newtag='git tag -a'
 alias rr='curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias up="uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g'"
 alias hst="history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -sel c"
+alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 
 alias free='free -h'
 alias df='df -h'
@@ -191,8 +191,6 @@ alias iv='sxiv'
 alias z='zathura'
 alias rm='trash'
 alias wget="wget --hsts-file=/dev/null"
-
-alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias mpad='mousepad'
 alias vim='nvim'
 
@@ -202,7 +200,6 @@ alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a "
 
 # Snap alias
 #alias senable='sudo systemctl enable --now snapd apparmor'
-#alias sinstall='sudo snap install mari0 cointop'
 #alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
 #export PATH=$PATH:/snap/bin
 # xprop - wm classname
