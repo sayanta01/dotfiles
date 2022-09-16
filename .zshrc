@@ -117,9 +117,9 @@ alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'\
 #alias update='sudo nala update'
 
 # Arch
-alias clean='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+alias clean='sudo pacman -Rns $(pacman -Qtdq)'  # remove orphaned packages
 alias cleanaur='sudo pacman -Sc --noconfirm'
-alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
+alias unlock='sudo rm /var/lib/pacman/db.lck'   # remove pacman lock
 alias install='sudo pacman -Sy'
 alias update='sudo pacman -Syyu'
 alias upaur='paru -Sua --noconfirm'
