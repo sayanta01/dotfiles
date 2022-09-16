@@ -133,6 +133,8 @@ alias doc-on="sudo sv start docker"
 alias doc-off="sudo sv stop docker"
 
 # Systemd
+#alias ssh-on="sudo systemctl start sshd"
+#alias ssh-off="sudo systemctl stop sshd"
 #alias vm-on="sudo systemctl start libvirtd.service"
 #alias vm-off="sudo systemctl stop libvirtd.service"
 #alias doc-on="sudo systemctl start docker.socket"
