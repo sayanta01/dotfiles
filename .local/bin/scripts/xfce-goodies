@@ -2,9 +2,9 @@
 
 sudo pacman -Sy mousepad xfce4-taskmanager thunar-media-tags-plugin thunar-archive-plugin \
      xfce4-pulseaudio-plugin xfce4-screenshooter xfce4-cpufreq-plugin xfce4-cpugraph-plugin \
-     xfce4-whiskermenu-plugin xfce4-datetime-plugin 
+     xfce4-whiskermenu-plugin xfce4-datetime-plugin ristretto
 
-# sudo pacman -Sy parole ristretto xfce4-screensaver xfce4-mount-plugin xfce4-mpc-plugin xfce4-battery-plugin xfce4-power-manager 
+# sudo pacman -Sy parole xfce4-screensaver xfce4-mount-plugin xfce4-mpc-plugin xfce4-battery-plugin xfce4-power-manager 
 
 #sudo pacman -Rns xfce4-notifyd xfburn xfce4-artwork xfce4-dict \
 #     xfce4-battery-plugin xfce4-clipman-plugin xfce4-eyes-plugin xfce4-notes-plugin \
@@ -20,6 +20,7 @@ sudo pacman -Sy mousepad xfce4-taskmanager thunar-media-tags-plugin thunar-archi
 # xfce4-screenshooter 
 # xfce4-pulseaudio-plugin 
 # thunar-archive-plugin
+# ristretto                 # A fast and lightweight picture viewer for Xfce
 # thunar-media-tags-plugin  # Adds special features for media files to the Thunar File Manager
 # xfce4-cpufreq-plugin      # CPU frequency plugin 
 # xfce4-cpugraph-plugin     # Graphical representation of the CPU load
@@ -28,7 +29,6 @@ sudo pacman -Sy mousepad xfce4-taskmanager thunar-media-tags-plugin thunar-archi
 
 ##### Install When Needed #####
 # parole                # Modern media player based on the GStreamer framework
-# ristretto             # A fast and lightweight picture viewer for Xfce
 # xfce4-screensaver 
 # xfce4-power-manager 
 # xfce4-battery-plugin  # A battery monitor plugin 
