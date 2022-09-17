@@ -159,6 +159,7 @@ alias egrep='egrep --color=auto'
 alias cp="cp -iv"
 alias mv='mv -iv'
 alias rm='rm -iv'
+alias mkdir='mkdir -pv'
 
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
@@ -184,6 +185,8 @@ alias hst="history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -se
 alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias myip='curl ifconfig.me; echo'
 alias ports='netstat -tulanp'
+alias ffmpeg='ffmpeg -hide_banner'
+
 
 alias free='free -h'
 alias df='df -h'
