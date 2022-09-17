@@ -146,6 +146,7 @@ alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
 
 alias l='exa -l'
 alias ll='exa -al'
+alias lm='ls -t -1'
 alias l.='exa -a | egrep "^\."'
 alias ls='ls --color=auto'
 alias la='lsd'
