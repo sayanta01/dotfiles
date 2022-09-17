@@ -1,9 +1,8 @@
 #!/bin/sh
 
 ##===== Xfce4 Base =====##
-sudo pacman -Sy exo garcon libxfce4ui libxfce4util thunar-volman tumbler \
-     xfce4-dev-tools xfce4-panel xfce4-session xfce4-settings xconf \
-     xfce4-termial xfdesktop xfwm4
+sudo pacman -Sy exo garcon libxfce4ui libxfce4util thunar-volman tumbler xfce4-dev-tools \
+     xfce4-panel xfce4-session xfce4-settings xconf xfce4-termial xfdesktop xfwm4
 
 
 ##### Install #####
