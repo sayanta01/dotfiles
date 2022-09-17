@@ -1,8 +1,7 @@
 #!/bin/sh
 
-sudo pacman -Sy mousepad xfce4-taskmanager thunar-media-tags-plugin thunar-archive-plugin \
-     xfce4-pulseaudio-plugin xfce4-screenshooter xfce4-cpufreq-plugin xfce4-cpugraph-plugin \
-     xfce4-whiskermenu-plugin xfce4-datetime-plugin ristretto
+sudo pacman -Sy mousepad xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4-whiskermenu-plugin \
+     xfce4-pulseaudio-plugin xfce4-screenshooter xfce4-cpufreq-plugin xfce4-cpugraph-plugin 
 
 # sudo pacman -Sy parole xfce4-screensaver xfce4-mount-plugin xfce4-mpc-plugin xfce4-battery-plugin xfce4-power-manager 
 
@@ -19,9 +18,7 @@ sudo pacman -Sy mousepad xfce4-taskmanager thunar-media-tags-plugin thunar-archi
 # xfce4-taskmanager
 # xfce4-screenshooter 
 # xfce4-pulseaudio-plugin 
-# thunar-archive-plugin
 # ristretto                 # A fast and lightweight picture viewer for Xfce
-# thunar-media-tags-plugin  # Adds special features for media files to the Thunar File Manager
 # xfce4-cpufreq-plugin      # CPU frequency plugin 
 # xfce4-cpugraph-plugin     # Graphical representation of the CPU load
 # xfce4-whiskermenu-plugin  # Menu for the Xfce4 panel
