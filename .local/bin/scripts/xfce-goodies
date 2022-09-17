@@ -1,5 +1,35 @@
 #!/bin/sh
 
+##===== Xfce4 Base =====##
+sudo pacman -Sy exo garcon libxfce4ui libxfce4util thunar-volman tumbler \
+     xfce4-dev-tools xfce4-panel xfce4-session xfce4-settings xconf \
+     xfce4-termial xfdesktop xfwm4
+
+
+##### Install #####
+#exo              # Application library for Xfce
+#garcon           # Implementation of the freedesktop.org menu specification
+#libxfce4ui       # Commonly used Xfce widgets among Xfce applications
+#libxfce4util     # Basic utility non-GUI functions for Xfce
+#thunar-volman    # Automatic management of removeable devices in Thunar
+#tumbler          # D-Bus service for applications to request thumbnails
+#xfce4-dev-tools  # Xfce developer tools
+#xfce4-panel      # Panel for the Xfce desktop environment
+#xfce4-session    # Session manager for Xfce
+#xfce4-settings   # Settings manager of the Xfce desktop
+#xfconf           # Flexible, easy-to-use configuration management system
+#xfce4-terminal   # A modern terminal emulator primarily for the Xfce desktop environment
+#xfdesktop        # A desktop manager for Xfce
+#xfwm4            # Xfce's window manager
+
+##### Remove #####
+#xfwm4-themes     # A set of additional themes for the Xfce window manager
+#xfce4-appfinder  # An application finder
+
+
+
+
+##===== Xfce4 Goodies =====##
 sudo pacman -Sy mousepad xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4-whiskermenu-plugin \
      xfce4-pulseaudio-plugin xfce4-screenshooter xfce4-cpufreq-plugin xfce4-cpugraph-plugin 
 
@@ -54,3 +84,5 @@ sudo pacman -Sy mousepad xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4
 # xfce4-time-out-plugin       # Pomodoro take a break from your computer with this plugin
 # xfce4-fsguard-plugin        # File system usage monitor plugin 
 # xfce4-systemload-plugin     # A system load plugin
+
+
