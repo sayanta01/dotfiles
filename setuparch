@@ -60,9 +60,7 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
 #sudo touch /run/runit/service/docker/down
 #qemu-arch-extra docker ( arch )
 
-#sudo pacman -Rns xfce4-screensaver xfce4-clipman-plugin xfce4-weather-plugin xfce4-notes-plugin
-
-##### Setup VirtManager in Arch #####
+##### Setup Virt-Manager #####
 #sudo ln -s /etc/runit/sv/libvirtd /run/runit/service  ( artix )
 #sudo touch /run/runit/service/libvirtd/down  ( artix )
 #sudo systemctl enable --now libvirtd  ( arch )
