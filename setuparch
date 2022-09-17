@@ -44,7 +44,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 
 cargo install ttyper
 
-sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
+sudo pacman -S --noconfirm lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
 #lightdm-runit  ( artix )
 #lightdm  ( arch )
 #dm-tool switch-to-greeter 
@@ -72,7 +72,7 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
-paru -S spotify-adblock notion-app google-chrome cava polybar preload visual-studio-code-bin
+paru -S --noconfirm spotify-adblock notion-app google-chrome cava polybar preload visual-studio-code-bin
 #plymouth-nosystemd libxft-bgra-git bluedevil pulseaudio-bluetooth  ( artix )
 #plymouth ly  ( arch )
 
