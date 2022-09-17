@@ -39,7 +39,7 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C"  
 echo LilWarmachine > /etc/hostname
 
-pacman -S git dosfstools mtools dhcpcd networkmanager networkmanger-runit  ( artix )
+pacman -S git dosfstools mtools dhcpcd networkmanager networkmanger-runit xorg  ( artix )
 ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix )
 
 pacman -S git dosfstools mtools dhcpcd networkmanager  ( arch )
