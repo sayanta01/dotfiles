@@ -1,9 +1,13 @@
 #!/bin/zsh
 
+# export PATH=$PATH:$HOME/.local/bin/scripts
 export PATH="$PATH:$(du "$HOME/.local/bin/scripts" | cut -f2 | paste -sd ':')"
+export PATH=$PATH:$HOME/.local/share/cargo/bin
+# export MANPAGER='nvim +Man!'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export EDITOR="nvim"
+export TERM="xterm-256color"
 export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
