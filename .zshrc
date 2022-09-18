@@ -194,6 +194,8 @@ alias shred='shred -uvzn3'
 alias iv='sxiv'
 alias z='zathura'
 alias rm='trash'
+alias pu='pushd'
+alias po='popd'
 alias wget="wget --hsts-file=/dev/null"
 alias mpad='mousepad'
 alias vim='nvim'
