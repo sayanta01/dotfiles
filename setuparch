@@ -4,7 +4,7 @@
 sudo pacman -Syyu 
 sudo pacman -S --noconfirm bspwm sxhkd rofi slock dunst lxappearance maim alsa-utils dbus-python
 
-cp -r ~/dotfiles/{.icons,.themes,.imwheelrc} ~/
+cp -r ~/dotfiles/{.zshrc,.zprofile,.xinitrc,.xprofile,.imwheelrc,.icons,.themes} ~/
 cp -r ~/dotfiles/.local/bin/scripts ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
 cp -r ~/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/key-handler
