@@ -1,4 +1,4 @@
 #!/bin/sh
 
-emoji="$(cat $HOME/.local/share/emoji | dmenu -p "Select Emoji " -l 14 | cut -d' ' -f1)"
+emoji="$(cat $HOME/.local/share/emoji | dmenu -p "Select Emoji " -l 16 | cut -d' ' -f1)"
 echo "$emoji" | tr "\n" " " | xclip -sel c
