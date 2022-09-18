@@ -10,7 +10,7 @@ sudo apt update
 sudo apt install -y bspwm polybar rofi kitty dunst lxappearance maim slock playerctl libxft-dev alsa-utils libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
 #pip install pywal
 
-cp -r ~/dotfiles/{.imwheelrc,.icons,.themes} ~/
+cp -r ~/dotfiles/{.zshrc,.zprofile,.xinitrc,.xprofile,.imwheelrc,.icons,.themes} ~/
 cp -r ~/dotfiles/.local/bin/scripts ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
 cp -r ~/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/key-handler
@@ -32,37 +32,36 @@ sudo cp -r ~/.themes/* /usr/share/themes
 sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
 sudo cp -r ~/.icons/PapirusFlatMix/* /usr/share/icons/Flat-Remix-Blue-Dark
 
-curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+#curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+#echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt update
 sudo apt install -y cargo fonts-jetbrains-mono fonts-terminus \
-ffmpeg mpv sxiv ncdu exa fzf stress nala \
+ffmpeg mpv sxiv ncdu exa fzf nala \
 ranger zathura fd-find htop ripgrep qt5-style-kvantum \
-slock imwheel xclip xwallpaper mpd ncmpcpp gpg \
-fortune exiftool preload aptitude aria2 wmname wmctrl \
-bpytop neofetch font-viewer stacer \
+slock imwheel xclip xwallpaper gpg stacer\
+fortune exiftool preload aptitude axel wmname wmctrl \
+bpytop neofetch font-viewer \
 speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp cava \
-nvidia-driver nvidia-cuda-toolkit \
+mpd ncmpcpp stress nvidia-driver nvidia-cuda-toolkit \
 android-tools-fastboot scrcpy android-tools-adb nvtop \
 telegram-desktop kdeconnect spotify-client \
 obs-studio audacity gimp inkscape
 
-
 #apt-transport-https translate-shell docker.io synaptic
 cargo install ttyper lsd bat
 
-#sudo apt purge -y --auto-remove onboard xterm cherrytree xfce4-notifyd xfce4-clipman-plugin
+sudo apt purge -y --auto-remove onboard xterm cherrytree 
 
 #sudo apt install -y virt-manager 
 #sudo usermod -aG libvirt bot
 #sudo usermod -aG kvm bot
 
 wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/dl/vscode.deb
-wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
+#wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
 cd ~/dl && chmod +x vscode.deb discord.deb && sudo dpkg -i vscode.deb discord.deb
 
-git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock && make && sudo make install
+#git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock && make && sudo make install
 axel -n 20 -o PacketTracer.deb https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
@@ -84,7 +83,7 @@ sudo systemctl enable fstrim.timer
 GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 
 #Console Font
-sudo dpkg-reconfigure console-setup
+#sudo dpkg-reconfigure console-setup
 
 #Display asterisks while entering passwd
 # /etc/sudoers add Defaults    pwfeedback
