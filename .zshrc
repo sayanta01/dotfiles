@@ -117,8 +117,8 @@ alias upaur='paru -Sua --noconfirm'
 # Runit
 alias ssh-on="sudo sv start sshd"
 alias ssh-off="sudo sv stop sshd"
-alias vm-on="sudo sv start libvirtd"
-alias vm-off="sudo sv stop libvirtd"
+alias vm-on="sudo sv start libvirtd && sudo sv start virtlogd"
+alias vm-off="sudo sv stop libvirtd && sudo sv stop virtlogd"
 alias doc-on="sudo sv start docker"
 alias doc-off="sudo sv stop docker"
 
