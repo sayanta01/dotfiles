@@ -62,6 +62,7 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
 
 ##### Setup Virt-Manager #####
 #sudo ln -s /etc/runit/sv/virtlogd /run/runit/service  ( artix )
+#sudo touch /run/runit/service/virtlogd/down  ( artix )
 #sudo ln -s /etc/runit/sv/libvirtd /run/runit/service  ( artix )
 #sudo touch /run/runit/service/libvirtd/down  ( artix )
 #sudo systemctl enable --now libvirtd  ( arch )
