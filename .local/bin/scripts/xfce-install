@@ -4,7 +4,7 @@
 sudo pacman -Sy exo garcon libxfce4ui libxfce4util thunar-volman tumbler xfce4-dev-tools \
      xfce4-panel xfce4-session xfce4-settings xfconf xfce4-terminal xfdesktop xfwm4
 
-#sudo pacman -Rns xfwm4-themes xfce4-appfinder
+#sudo pacman -Rns xfce4-appfinder xfwm4-themes
 
 
 ##### Install #####
