@@ -185,6 +185,7 @@ alias mirrors='sudo reflector --latest 50 --number 20 --sort score --save /etc/p
 alias mirrora='sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist'
 
 alias free='free -h'
+alias ping='ping -c 7'
 alias df='df -h'
 alias cat='bat'
 alias tsm='transmission-remote'
