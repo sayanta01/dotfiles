@@ -24,7 +24,7 @@ export LESS="-R"
 #export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 #export HISTFILE="$XDG_STATE_HOME/zsh/history"
 
-export XAUTHORITY=/tmp/Xauthority
+#export XAUTHORITY=/tmp/Xauthority  # This line will break some DMs.
 #export INPUTRC="$XDG_CONFIG_HOME/inputrc"
 #export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 #export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
