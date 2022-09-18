@@ -177,7 +177,6 @@ alias myip='curl ifconfig.me; echo'
 alias ports='netstat -tulanp'
 alias ffmpeg='ffmpeg -hide_banner'
 
-
 alias free='free -h'
 alias df='df -h'
 alias cat='bat'
