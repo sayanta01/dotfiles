@@ -51,7 +51,7 @@ obs-studio audacity gimp inkscape
 #apt-transport-https translate-shell docker.io synaptic
 cargo install ttyper lsd bat
 
-sudo apt purge -y --auto-remove onboard xterm cherrytree 
+#sudo apt purge -y --auto-remove onboard xterm cherrytree plymouth
 
 #sudo apt install -y virt-manager 
 #sudo usermod -aG libvirt bot
