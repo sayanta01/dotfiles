@@ -1,3 +1,5 @@
+cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
+
 #setopt correct              # auto correct mistakes
 setopt autocd               # change directory just by typing its name
 setopt interactivecomments  # allow comments in interactive mode
@@ -94,19 +96,7 @@ zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]
 PROMPT=' %b%{$fg[green]%}%{$fg[red]%}${vcs_info_msg_0_}%  '
 #PROMPT=' %b%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[white]%}  %{$fg[red]%})%{$fg[white]%} ${vcs_info_msg_0_} ~%  '
 # %b  %{$fg[red]%}(  %{$fg[yellow]%}%n  %{$fg[green]%}@  %{$fg[magenta]%}%M   %{$fg[white]%}   %{$fg[red]%})  %{$fg[white]%}
-
-#PATHs
-#export MANPAGER='nvim +Man!'
-export TERM='xterm-256color'
-export PATH=$PATH:$HOME/.local/bin/scripts
-export PATH=$PATH:$HOME/.local/share/cargo/bin
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
- --color=fg:#d6d6d6,bg:#030303,hl:#5f87af
- --color=fg+:#e8e8e8,bg+:#313244,hl+:#3bceff
- --color=info:#afaf87,prompt:#d7005f,pointer:#b061ff
- --color=marker:#87ff00,spinner:#972eff,header:#87afaf'
  
-cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
 ##########  ALIAS ########## 
 # Kali
