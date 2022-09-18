@@ -22,6 +22,7 @@ export READER="zathura"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 export HISTFILE="$XDG_DATA_HOME/.local/share/history"
@@ -50,6 +51,7 @@ export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
 
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 export ELECTRUMDIR="$XDG_DATA_HOME/.local/share/electrum"
 
