@@ -112,7 +112,7 @@ alias cleanaur='sudo pacman -Sc --noconfirm'
 alias unlock='sudo rm /var/lib/pacman/db.lck'   # remove pacman lock
 alias install='sudo pacman -Sy'
 alias update='sudo pacman -Syyu'
-alias upaur='paru -Sua --noconfirm'
+alias aurup='paru -Sua --noconfirm'
 
 # Runit
 alias ssh-on="sudo sv start sshd"
@@ -175,7 +175,14 @@ alias hst="history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -se
 alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias myip='curl ifconfig.me; echo'
 alias ports='netstat -tulanp'
+alias wget='wget -c'
 alias ffmpeg='ffmpeg -hide_banner'
+alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+alias mirror='sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
+alias mirrord='sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist'
+alias mirrors='sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist'
+alias mirrora='sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist'
 
 alias free='free -h'
 alias df='df -h'
@@ -190,8 +197,8 @@ alias wget="wget --hsts-file=/dev/null"
 alias mpad='mousepad'
 alias vim='nvim'
 
-alias ytdl-video="yt-dlp -f bestvideo+bestaudio "
-alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a "
+alias ytdl-video="yt-dlp -f bestvideo+bestaudio"
+alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a"
 
 
 # Snap alias
