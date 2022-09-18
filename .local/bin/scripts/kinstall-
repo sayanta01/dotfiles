@@ -39,7 +39,7 @@ sudo apt update
 sudo apt install -y cargo fonts-jetbrains-mono fonts-terminus \
 ffmpeg mpv sxiv ncdu exa fzf nala \
 ranger zathura fd-find htop ripgrep qt5-style-kvantum \
-slock imwheel xclip xwallpaper gpg stacer\
+slock imwheel xclip xwallpaper gpg stacer cowsay \
 fortune exiftool preload aptitude axel wmname wmctrl \
 bpytop neofetch font-viewer \
 speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp cava \
