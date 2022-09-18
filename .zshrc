@@ -102,17 +102,17 @@ PROMPT=' %b%{$fg[green]%}%{$fg[red]%}${vcs_info_msg_0_}%  '
 # Kali
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
 alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
-#alias clean='sudo apt -y autoremove; sudo apt clean'
 #alias install='sudo nala install'
 #alias update='sudo nala update'
+#alias clean='sudo apt -y autoremove; sudo apt clean'
 
 # Arch
-alias clean='sudo pacman -Rns $(pacman -Qtdq)'  # remove orphaned packages
-alias cleanaur='sudo pacman -Sc --noconfirm'
-alias unlock='sudo rm /var/lib/pacman/db.lck'   # remove pacman lock
 alias install='sudo pacman -Sy'
 alias update='sudo pacman -Syyu'
+alias clean='sudo pacman -Rns $(pacman -Qtdq)'  # remove orphaned packages
 alias aurup='paru -Sua --noconfirm'
+alias cleanaur='sudo pacman -Sc --noconfirm'
+alias unlock='sudo rm /var/lib/pacman/db.lck'   # remove pacman lock
 
 # Runit
 alias ssh-on="sudo sv start sshd"
