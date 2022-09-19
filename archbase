@@ -36,7 +36,7 @@ vim /etc/locale.gen                     #uncmnt US.UTF-8
 locale-gen
 
 echo LANG=en_US.UTF-8 > /etc/locale.conf
-export LC_COLLATE="C"  
+#export LC_COLLATE="C"  
 echo LilWarmachine > /etc/hostname
 
 pacman -S git dosfstools mtools dhcpcd xorg networkmanager networkmanger-runit  ( artix )
