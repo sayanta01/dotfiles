@@ -195,6 +195,7 @@ alias z='zathura'
 alias rm='trash'
 alias pu='pushd'
 alias po='popd'
+alias mpc='mpd && ncmpcpp'
 alias wget="wget --hsts-file=/dev/null"
 alias mpad='mousepad'
 alias vim='nvim'
