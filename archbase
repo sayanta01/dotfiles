@@ -42,7 +42,7 @@ echo LilWarmachine > /etc/hostname
 pacman -S git dosfstools mtools dhcpcd xorg networkmanager networkmanger-runit  ( artix )
 ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix )
 
-pacman -S git dosfstools mtools dhcpcd xorg networkmanager  ( arch )
+pacman -S git dosfstools mtools dhcpcd xorg networkmanager reflector  ( arch )
 systemctl enable NetworkManager  ( arch )
 
 vim /etc/hosts
