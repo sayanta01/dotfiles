@@ -18,6 +18,7 @@ bspc rule -a Zathura state=tiled
 bspc rule -a Inkscape state=floating 
 bspc rule -a Gimp state=floating 
 bspc rule -a Onboard state=floating 
+bspc rule -a Yad state=floating 
 bspc rule -a Screenkey manage=off
 bspc rule -a TelegramDesktop desktop='^6'
 bspc rule -a Lxappearance state=floating center=on
