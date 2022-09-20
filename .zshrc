@@ -174,6 +174,8 @@ alias hst="history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -se
 alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias myip='curl ifconfig.me; echo'
 alias ports='netstat -tulanp'
+alias psmem='ps axch -o cmd,%mem --sort=-%mem | head'
+alias pscpu='ps axch -o cmd,%cpu --sort=-%cpu | head'
 alias wget='wget -c'
 alias ffmpeg='ffmpeg -hide_banner'
 alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
