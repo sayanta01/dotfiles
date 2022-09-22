@@ -171,6 +171,7 @@ alias newtag='git tag -a'
 
 alias rr='curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias hst="history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -sel c"
+alias fonts="magick convert -list font | grep -iE 'font:.*'"
 alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias myip='curl ifconfig.me; echo'
 alias ports='netstat -tulanp'
