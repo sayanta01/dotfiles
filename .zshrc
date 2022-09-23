@@ -134,12 +134,12 @@ alias sysctlfail='systemctl --failed'
 alias jctl='sudo journalctl -p 3 -xb'
 alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
 
-alias l='exa -l'
-alias ll='exa -al'
+alias ll="exa --icons -lgha --group-directories-first"
 alias lm='ls -t -1'
 alias l.='exa -a | egrep "^\."'
 alias ls='ls --color=auto'
-alias la='lsd'
+alias la='exa --icons'
+alias lt="exa --icons --tree"
 alias lsn='exa | wc -l'
 
 alias grep='grep --color=auto'
