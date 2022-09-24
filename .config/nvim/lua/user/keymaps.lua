@@ -17,6 +17,17 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 --   visual_block_mode = "x",
 
+-- Wrap Text 
+keymap("n", "<C-w>", "<ESC>:set wrap <CR>", opts)
+keymap("i", "<C-w>", "<ECS>:set wrap <CR>", opts)
+keymap("v", "<C-w>", "<ESC>:set wrap <CR>", opts)
+
+-- No Wrap Text 
+keymap("n", "<C-M-w>", "<ESC>:set nowrap <CR>", opts)
+keymap("i", "<C-M-w>", "<ESC>:set nowrap <CR>", opts)
+keymap("v", "<C-M-w>", "<ESC>:set nowrap <CR>", opts)
+
+
 -- Normal --
 -- Copy whole file
 keymap("n", "<C-c-a>", ":%y+ <CR>", opts)
