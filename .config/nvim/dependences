@@ -9,8 +9,8 @@
 git clone --depth 1 https://github.com/wbthomason/packer.nvim \
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
  
-#sudo apt install -y nodejs npm ccls shfmt shellcheck flake8 ueberzug lua-check 
-#sudo pacman -S --noconfirm nodejs npm ccls shfmt shellcheck flake8 ueberzug python-pynvim lazygit 
+#sudo apt install -y nodejs npm ccls shfmt shellcheck ueberzug 
+#sudo pacman -S --noconfirm nodejs npm ccls shfmt shellcheck ueberzug lazygit 
 sudo npm i -g prettier astyle truecallerjs luacheck emmet eslint html tailwindcss live-server
 pip install pynvim black flake8 sourcery 
 cargo install stylua
