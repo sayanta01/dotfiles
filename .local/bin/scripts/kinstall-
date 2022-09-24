@@ -47,7 +47,7 @@ telegram-desktop kdeconnect spotify-client \
 obs-studio audacity gimp inkscape
 
 #apt-transport-https translate-shell docker.io synaptic
-cargo install ttyper lsd bat
+cargo install ttyper bat
 
 #sudo apt purge -y --auto-remove onboard xterm cherrytree plymouth
 
