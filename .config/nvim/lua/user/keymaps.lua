@@ -19,7 +19,7 @@ vim.g.maplocalleader = " "
 
 -- Wrap Text 
 keymap("n", "<C-w>", "<ESC>:set wrap <CR>", opts)
-keymap("i", "<C-w>", "<ECS>:set wrap <CR>", opts)
+-- keymap("i", "<C-w>", "<ECS>:set wrap <CR>", opts)
 keymap("v", "<C-w>", "<ESC>:set wrap <CR>", opts)
 
 -- No Wrap Text 
