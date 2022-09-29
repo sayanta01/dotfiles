@@ -1,7 +1,4 @@
 #!/bin/sh
 
-#dunst &
-#xset r rate 290 50 &
-#imwheel -b 45 &
 #kdeconnect-indicator &
 #xrdb ~/.config/x11/xresources &
