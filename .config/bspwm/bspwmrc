@@ -30,12 +30,13 @@ bspc rule -a Pavucontrol state=floating center=on
 pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
 ./.config/polybar/launch.sh &
-killall -q "imwheel" &
-imwheel -b 45 &
-#imwheel -b "4 5" &
-#wmname LG33D &
 xset r rate 290 50 &
 kdeconnect-indicator &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
-dunst &
-xrdb ~/.config/x11/xresources &
+
+# killall -q "imwheel" &
+# imwheel -b 45 &
+#imwheel -b "4 5" &
+# xrdb ~/.config/x11/xresources &
+#wmname LG33D &
+
