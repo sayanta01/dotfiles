@@ -1,3 +1,0 @@
-#!/bin/sh
-
-xset r rate 290 50 &
