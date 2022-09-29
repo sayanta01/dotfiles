@@ -182,11 +182,6 @@ alias pscpu='ps axch -o cmd,%cpu --sort=-%cpu | head'
 alias ffmpeg='ffmpeg -hide_banner'
 alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
-#alias mirror='sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
-#alias mirrord='sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist'
-#alias mirrors='sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist'
-#alias mirrora='sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist'
-
 alias free='free -h'
 alias ping='ping -c 7'
 alias df='df -h'
@@ -207,6 +202,12 @@ alias vim='nvim'
 
 alias ytdl-video="yt-dlp -f bestvideo+bestaudio"
 alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a"
+
+# for arch linux
+#alias mirror='sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
+#alias mirrord='sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist'
+#alias mirrors='sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist'
+#alias mirrora='sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist'
 
 
 # Snap alias
