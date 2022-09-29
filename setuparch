@@ -29,7 +29,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      neovim kitty qt5ct kvantum \
      mate-calc rsync wget curl fzf axel \
      dialog cmake wmctrl wmname xdotool imwheel \
-     pulseaudio pavucontrol pamixer playerctl mpd ncmpcpp \
+     pipewire pipewire-pulse pavucontrol pamixer playerctl mpd ncmpcpp \
      wireless_tools net-tools nm-connection-editor network-manager-applet \
      tree ncdu thunar thunar-archive-plugin thunar-media-tags-plugin ranger unrar unzip zip p7zip tar engrampa \
      htop neofetch bpytop zathura zathura-pdf-mupdf \
@@ -40,7 +40,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      jq xdg-utils xdg-user-dirs xclip openssh cowsay
 #sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
 #sudo touch /run/runit/service/sshd/down  ( artix )
-#aria2 dash libnotify connman libconfig unclutter perl-image-exiftool  pipewire pipewire-pulse brightnessctl
+# dash libnotify connman libconfig unclutter perl-image-exiftool  brightnessctl
 
 cargo install ttyper
 
@@ -75,7 +75,7 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
 paru -S --noconfirm spotify-adblock notion-app google-chrome cava polybar preload visual-studio-code-bin
-#plymouth-nosystemd libxft-bgra-git bluedevil pulseaudio-bluetooth  ( artix )
+#plymouth-nosystemd libxft-bgra-git bluedevil  pulseaudio-bluetooth  ( artix )
 #plymouth ly  ( arch )
 
 #sudo systemctl enable ly.service  ( arch )
