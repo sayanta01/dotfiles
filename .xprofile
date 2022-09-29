@@ -1,4 +1,9 @@
 #!/bin/sh
 
-#kdeconnect-indicator &
-#xrdb ~/.config/x11/xresources &
+pipewire &
+pipewire-pulse &
+wireplumber &
+
+#imwheel -b "4 5" &
+imwheel -b 45 &
+xrdb ~/.config/x11/xresources &
