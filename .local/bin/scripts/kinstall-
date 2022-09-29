@@ -24,7 +24,7 @@ git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
 #git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
-sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
+#sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
 sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.themes/* /usr/share/themes
 #sudo rm -rf /usr/share/icons/Flat-Remix-Blue-Dark/* 
@@ -44,9 +44,10 @@ speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp cava \
 mpd ncmpcpp stress nvidia-driver nvidia-cuda-toolkit \
 android-tools-fastboot scrcpy android-tools-adb nvtop \
 telegram-desktop kdeconnect spotify-client \
-obs-studio audacity gimp inkscape
+obs-studio audacity gimp inkscape docker.io 
+#sudo systemctl disable docker.socket
 
-#apt-transport-https translate-shell docker.io synaptic
+#apt-transport-https translate-shell synaptic
 cargo install ttyper bat
 
 #sudo apt purge -y --auto-remove onboard xterm cherrytree plymouth
@@ -55,12 +56,11 @@ cargo install ttyper bat
 #sudo usermod -aG libvirt bot
 #sudo usermod -aG kvm bot
 
+#git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock && make && sudo make install
 #wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
 wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/dl/vscode.deb
 axel -n 20 -o PacketTracer.deb https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 cd ~/dl && chmod +x vscode.deb PacketTracer.deb && sudo dpkg -i vscode.deb PacketTracer.deb
-
-#git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock && make && sudo make install
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
