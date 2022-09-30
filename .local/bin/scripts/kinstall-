@@ -13,7 +13,7 @@ sudo apt install -y bspwm polybar rofi kitty dunst lxappearance maim slock playe
 cp -r ~/dotfiles/{.zshrc,.zprofile,.xinitrc,.xprofile,.imwheelrc,.icons,.themes} ~/
 cp -r ~/dotfiles/.local/bin/scripts ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
 cp -r ~/dotfiles/.config/. ~/.config
-chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/key-handler
+chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/scripts/* ~/.config/sxiv/exec/*
 
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
 
