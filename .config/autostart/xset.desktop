@@ -5,7 +5,6 @@ Type=Application
 Name=xset
 Comment=move faster
 Exec=xset r rate 290 50
-#Exec=./.local/bin/scripts/xset
 OnlyShowIn=XFCE;
 RunHook=0
 StartupNotify=false
