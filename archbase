@@ -30,6 +30,7 @@ vim /etc/pacman.conf                    #uncmnt colors and paraller downloads, a
 
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
+#date -s "1 OCT 2022 00:00:00"
 timedatectl set-ntp true  ( arch )
 
 vim /etc/locale.gen                     #uncmnt US.UTF-8
