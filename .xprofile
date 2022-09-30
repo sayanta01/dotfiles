@@ -3,7 +3,4 @@
 pipewire &
 pipewire-pulse &
 wireplumber &
-
-#imwheel -b "4 5" &
-imwheel -b 45 &
 xrdb merge ~/.config/x11/xresources &
