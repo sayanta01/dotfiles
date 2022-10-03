@@ -96,7 +96,6 @@ xdg-mime default inkscape.desktop image/svg+xml
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 #Boost Linux
-#sudo systemctl enable vboxservice  ( arch )
 GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
