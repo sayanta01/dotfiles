@@ -12,6 +12,7 @@ setopt promptsubst          # enable command substitution in prompt
 # Configure keybindings
 bindkey -e                                        # emacs key bindings
 bindkey -s '^o' 'lf^M'
+bindkey -s '^t' 'tmux^M'
 bindkey ' ' magic-space                           # history expansion on space
 bindkey '^U' backward-kill-line                   # ctrl + u
 bindkey '^[[3;5~' kill-word                       # backward del
