@@ -7,7 +7,7 @@ yes '
 
 ########## BSPWM ##########
 sudo apt update
-sudo apt install -y bspwm polybar rofi kitty dunst lxappearance maim slock playerctl libxft-dev alsa-utils libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
+sudo apt install -y bspwm polybar rofi kitty dunst lxappearance maim slock playerctl libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
 #pip install pywal
 
 cp -r ~/dotfiles/{.zshrc,.zprofile,.xinitrc,.xprofile,.imwheelrc,.icons,.themes} ~/
