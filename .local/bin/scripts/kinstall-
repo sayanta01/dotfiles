@@ -77,7 +77,7 @@ xdg-mime default inkscape.desktop image/svg+xml
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 #Boost linux
-sudo systemctl enable fstrim.timer
+#sudo systemctl enable fstrim.timer  # not for vm
 GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 
 #Console Font
