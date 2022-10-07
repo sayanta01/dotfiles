@@ -35,7 +35,7 @@ sudo cp -r ~/.themes/* /usr/share/themes
 
 sudo apt update
 sudo apt install -y cargo fonts-jetbrains-mono fonts-terminus \
-ffmpeg mpv sxiv ncdu exa fzf nala meld \
+ffmpeg mpv sxiv ncdu exa fzf nala \
 ranger zathura fd-find htop ripgrep qt5-style-kvantum \
 slock imwheel xclip xwallpaper gpg cowsay \
 fortune exiftool preload aptitude axel wmname wmctrl \
