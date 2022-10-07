@@ -79,7 +79,6 @@ paru -S --noconfirm spotify-adblock notion-app google-chrome \
 cava polybar preload visual-studio-code-bin ttf-comic-mono-git
 # plymouth-nosystemd pulseaudio-bluetooth  ( artix )
 #plymouth ly  ( arch )
-
 #sudo systemctl enable ly.service  ( arch )
 #sudo systemctl enable fstrim.timer  ( arch )
 
