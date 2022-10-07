@@ -42,11 +42,11 @@ fortune exiftool preload aptitude axel wmname wmctrl \
 bpytop neofetch font-viewer \
 speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp \
 mpd ncmpcpp cava stress \
-telegram-desktop docker.io inkscape
+docker.io inkscape
 
 #nvidia-driver nvidia-cuda-toolkit nvtop \
 #android-tools-fastboot scrcpy android-tools-adb \
-#spotify-client obs-studio audacity gimp stacer kdeconnect
+#spotify-client obs-studio audacity gimp stacer kdeconnect telegram-desktop
 #sudo systemctl disable docker.socket
 
 #apt-transport-https translate-shell synaptic
