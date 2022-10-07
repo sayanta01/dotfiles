@@ -35,16 +35,18 @@ sudo cp -r ~/.themes/* /usr/share/themes
 
 sudo apt update
 sudo apt install -y cargo fonts-jetbrains-mono fonts-terminus \
-ffmpeg mpv sxiv ncdu exa fzf nala \
+ffmpeg mpv sxiv ncdu exa fzf nala meld \
 ranger zathura fd-find htop ripgrep qt5-style-kvantum \
-slock imwheel xclip xwallpaper gpg stacer cowsay \
+slock imwheel xclip xwallpaper gpg cowsay \
 fortune exiftool preload aptitude axel wmname wmctrl \
 bpytop neofetch font-viewer \
-speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp cava \
-mpd ncmpcpp stress nvidia-driver nvidia-cuda-toolkit \
-android-tools-fastboot scrcpy android-tools-adb nvtop \
-telegram-desktop kdeconnect spotify-client \
-obs-studio audacity gimp inkscape docker.io 
+speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp \
+mpd ncmpcpp cava stress \
+telegram-desktop docker.io inkscape
+
+#nvidia-driver nvidia-cuda-toolkit nvtop \
+#android-tools-fastboot scrcpy android-tools-adb \
+#spotify-client obs-studio audacity gimp stacer kdeconnect
 #sudo systemctl disable docker.socket
 
 #apt-transport-https translate-shell synaptic
