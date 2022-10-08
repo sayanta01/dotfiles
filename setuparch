@@ -33,7 +33,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      wireless_tools net-tools nm-connection-editor network-manager-applet \
      tree ncdu thunar thunar-archive-plugin thunar-media-tags-plugin \
      unrar unzip zip p7zip tar engrampa ranger lf \
-     htop neofetch bpytop zathura zathura-pdf-mupdf \
+     htop neofetch bpytop zathura zathura-pdf-mupdf ghostscript \
      speedtest-cli trash-cli yt-dlp transmission-cli \
      mpv imagemagick sxiv xwallpaper ffmpeg python-pip python-pywal \
      intel-ucode virtualbox-guest-utils \
