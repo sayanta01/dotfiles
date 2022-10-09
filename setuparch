@@ -25,7 +25,7 @@ sudo cp -r ~/.themes/* /usr/share/themes
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
      cargo linux-headers firefox meld \
-     exa bat tldr fd ripgrep procs \
+     exa bat tldr fd ripgrep procs duf dust \
      neovim kitty qt5ct kvantum \
      mate-calc rsync wget curl fzf axel \
      dialog cmake wmctrl wmname xdotool imwheel \
