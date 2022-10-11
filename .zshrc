@@ -201,7 +201,6 @@ alias po='popd'
 alias mpc='mpd ; ncmpcpp'
 alias wget="wget --hsts-file=/dev/null"
 alias mpad='mousepad'
-alias vim='nvim'
 
 alias ytdl-video="yt-dlp -f bestvideo+bestaudio"
 alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a"
