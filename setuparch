@@ -49,6 +49,7 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter lightdm-gtk-greeter-settings grub
 #lightdm-runit  ( artix )
 #lightdm  ( arch )
 #dm-tool switch-to-greeter 
+# /etc/lightdm/lightdm-gtk-greeter.conf >> background = /etc/lightdm/bg.png  ( move any bg to /etc/lightdm )
 #sudo ln -s /etc/runit/sv/lightdm /run/runit/service  ( artix )
 #sudo systemctl enable lightdm.service  ( arch )
 
