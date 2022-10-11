@@ -30,7 +30,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      mate-calc rsync wget curl fzf axel \
      dialog cmake wmctrl wmname xdotool imwheel \
      pipewire pipewire-pulse wireplumber pavucontrol playerctl mpd ncmpcpp \
-     wireless_tools net-tools nm-connection-editor network-manager-applet \
+     wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils \
      tree ncdu thunar thunar-archive-plugin thunar-media-tags-plugin \
      unrar unzip zip p7zip tar engrampa ranger lf \
      htop neofetch bpytop zathura zathura-pdf-mupdf ghostscript \
