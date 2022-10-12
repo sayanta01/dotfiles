@@ -35,14 +35,14 @@ sudo cp -r ~/.themes/* /usr/share/themes
 
 sudo apt update
 sudo apt install -y cargo fonts-jetbrains-mono fonts-terminus \
-ffmpeg mpv sxiv ncdu exa fzf nala meld \
-ranger zathura fd-find htop ripgrep qt5-style-kvantum \
+ffmpeg mpv sxiv exa fzf nala ripgrep fd-find \
+ranger zathura htop qt5-style-kvantum meld font-viewer \
 slock imwheel xclip xwallpaper gpg cowsay \
-fortune exiftool preload aptitude axel wmname wmctrl \
-bpytop neofetch font-viewer \
+exiftool preload aptitude axel wmname wmctrl neofetch \
 speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp \
 mpd ncmpcpp cava stress docker.io inkscape
 
+#bpytop ncdu fortune \
 #nvidia-driver nvidia-cuda-toolkit nvtop \
 #android-tools-fastboot scrcpy android-tools-adb \
 #spotify-client obs-studio audacity gimp stacer kdeconnect telegram-desktop
@@ -78,6 +78,6 @@ GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 #Display asterisks while entering passwd
 # /etc/sudoers add Defaults    pwfeedback
 
-# sudo vim /etc/hosts                       blk sites
-# sudo systemd-analyze                      critical-chain      
+# sudo vim /etc/hosts   ( blk sites )
+# sudo systemd-analyze  ( critical-chain )      
 # deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free
