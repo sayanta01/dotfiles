@@ -16,8 +16,9 @@ bspc config focused_border_color     "#434C5E"
 #bspc rule -a mpv state=fullscreen
 bspc rule -a Zathura state=tiled
 bspc rule -a Inkscape state=floating 
-bspc rule -a Gimp state=floating 
 bspc rule -a Onboard state=floating 
+bspc rule -a Gimp state=floating 
+bspc rule -a Anki state=floating 
 bspc rule -a Yad state=floating 
 bspc rule -a Screenkey manage=off
 bspc rule -a TelegramDesktop desktop='^6'
