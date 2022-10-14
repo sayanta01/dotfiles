@@ -135,15 +135,15 @@ alias sysctlfail='systemctl --failed'
 alias jctl='sudo journalctl -p 3 -xb'
 alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
 
+alias la='exa --icons'
+alias ls='ls --color=auto'
+alias lt="exa --icons --tree"
 alias ll="exa --icons -lgha --group-directories-first"
 alias lm='ls -t -1'
-alias l.='exa -a | egrep "^\."'
 alias ld='ls -d */'
-alias l-='ls -p | grep -v /'
-alias ls='ls --color=auto'
-alias la='exa --icons'
-alias lt="exa --icons --tree"
 alias lsn='exa | wc -l'
+alias l-='ls -p | grep -v /'
+alias l.='exa -a | egrep "^\."'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -151,7 +151,8 @@ alias egrep='egrep --color=auto'
 
 alias cp="cp -iv"
 alias mv='mv -iv'
-alias rm='rm -iv'
+#alias rm='rm -iv'
+alias rm='trash'
 alias mkdir='mkdir -pv'
 
 alias diff='diff --color=auto'
@@ -173,34 +174,36 @@ alias tag='git tag'
 alias newtag='git tag -a'
 
 alias rr='curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-alias hst="history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -sel c"
-alias bigfile="du -h -x -s -- * | sort -r -h | head -20"
-alias fonts="magick convert -list font | grep -iE 'font:.*'"
 alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias myip='curl ifconfig.me; echo'
-alias ports='netstat -tulanp'
+
+alias hst="history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -sel c"
+alias fonts="magick convert -list font | grep -iE 'font:.*'"
+alias bigfile="du -h -x -s -- * | sort -r -h | head -20"
 alias psmem='ps axch -o cmd,%mem --sort=-%mem | head'
 alias pscpu='ps axch -o cmd,%cpu --sort=-%cpu | head'
-#alias wget='wget -c'
-alias ffmpeg='ffmpeg -hide_banner'
 alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
-alias free='free -h'
 alias ping='ping -c 7'
+alias ports='netstat -tulanp'
+alias copy='rsync --progress -auv'
+
 alias df='df -h'
+alias free='free -h'
 alias bat='bat --theme OneHalfDark'
 alias cat='bat --theme OneHalfDark -p'
-alias tsm='transmission-remote'
-alias copy='rsync --progress -auv'
-alias shred='shred -uvzn3'
-alias iv='sxiv'
-alias z='zathura'
-alias rm='trash'
 alias pu='pushd'
 alias po='popd'
-alias mpc='mpd ; ncmpcpp'
+alias shred='shred -uvzn3'
+alias ffmpeg='ffmpeg -hide_banner'
+alias tsm='transmission-remote'
 alias wget="wget --hsts-file=/dev/null"
+#alias wget='wget -c'
+
+alias iv='sxiv'
+alias z='zathura'
 alias mpad='mousepad'
+alias mpc='mpd ; ncmpcpp'
 
 alias ytdl-video="yt-dlp -f bestvideo+bestaudio"
 alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a"
