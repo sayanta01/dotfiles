@@ -37,7 +37,7 @@ sudo apt update
 sudo apt install -y cargo fonts-jetbrains-mono fonts-terminus \
 ffmpeg mpv sxiv exa fzf nala ripgrep fd-find \
 ranger zathura htop qt5-style-kvantum meld font-viewer \
-slock imwheel xclip xwallpaper gpg cowsay \
+slock imwheel xclip xwallpaper gpg cowsay xcape \
 exiftool preload aptitude axel wmname wmctrl neofetch \
 speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp \
 mpd ncmpcpp cava stress docker.io inkscape
