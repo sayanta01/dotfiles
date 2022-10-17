@@ -201,6 +201,7 @@ alias wget="wget --hsts-file=/dev/null"
 #alias wget='wget -c'
 
 alias iv='sxiv'
+alias vim='nvim'
 alias z='zathura'
 alias mpad='mousepad'
 alias mpc='mpd ; ncmpcpp'
