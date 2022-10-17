@@ -136,8 +136,8 @@ super + space
             dmenu_run
            
 # launcher
-alt + space
-	  rofi -show drun -show-icons
+alt + 0
+      rofi -show drun -show-icons
 
 # spotify
 alt + s
