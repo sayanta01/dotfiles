@@ -31,6 +31,7 @@ bspc rule -a Pavucontrol state=floating center=on
 pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
 ./.config/polybar/launch.sh &
+xcape -e 'Super_L=Alt_L|0' & 
 xset r rate 290 50 &
 kdeconnect-indicator &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
