@@ -4,7 +4,7 @@ Version=0.9.4
 Type=Application
 Name=menu
 Comment=toggle whiskermenu
-Exec=xcape -e 'Super_L=Alt_L|1'
+Exec=xcape -e 'Super_L=Alt_L|0'
 OnlyShowIn=XFCE;
 RunHook=0
 StartupNotify=false
