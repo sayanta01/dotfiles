@@ -41,7 +41,7 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 echo LilWarmachine > /etc/hostname
 
 pacman -S git dosfstools mtools dhcpcd xorg networkmanager networkmanger-runit  ( artix )
-ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix )
+ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix after reboot )
 
 pacman -S git dosfstools mtools dhcpcd xorg networkmanager reflector  ( arch )
 systemctl enable NetworkManager  ( arch )
