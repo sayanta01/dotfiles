@@ -28,8 +28,6 @@ sudo pacman -Sy exo garcon libxfce4ui libxfce4util thunar-volman tumbler xfce4-d
 #xfce4-appfinder  # An application finder
 
 
-
-
 ##===== Xfce4 Goodies =====##
 sudo pacman -Sy mousepad xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4-whiskermenu-plugin \
      xfce4-pulseaudio-plugin xfce4-screenshooter xfce4-cpufreq-plugin xfce4-cpugraph-plugin 
