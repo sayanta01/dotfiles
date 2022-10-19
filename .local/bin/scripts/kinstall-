@@ -29,7 +29,7 @@ sudo cp -r ~/.themes/* /usr/share/themes
 #echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt update
-sudo apt install -y fonts-jetbrains-mono fonts-terminus \
+sudo apt install -y fonts-jetbrains-mono fonts-terminus fonts-roboto \
 bspwm polybar rofi kitty dunst lxappearance maim slock playerctl \
 libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev \
 cargo ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf \
