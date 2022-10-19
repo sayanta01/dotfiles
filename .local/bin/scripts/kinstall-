@@ -5,11 +5,6 @@
 yes '
 ' | sudo apt full-upgrade
 
-########## BSPWM ##########
-sudo apt update
-sudo apt install -y bspwm polybar rofi kitty dunst lxappearance maim slock playerctl libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev
-#pip install pywal
-
 cp -r ~/dotfiles/{.zshrc,.zprofile,.xinitrc,.xprofile,.imwheelrc,.icons,.themes} ~/
 cp -r ~/dotfiles/.local/bin/scripts ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
 cp -r ~/dotfiles/.config/. ~/.config
@@ -34,21 +29,22 @@ sudo cp -r ~/.themes/* /usr/share/themes
 #echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt update
-sudo apt install -y cargo fonts-jetbrains-mono fonts-terminus \
-ffmpeg mpv sxiv exa fzf nala ripgrep fd-find \
-ranger zathura htop qt5-style-kvantum meld font-viewer \
+sudo apt install -y fonts-jetbrains-mono fonts-terminus \
+bspwm polybar rofi kitty dunst lxappearance maim slock playerctl \
+libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev \
+cargo ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf \
+lf zathura htop qt5-style-kvantum meld font-viewer \
 slock imwheel xclip xwallpaper gpg cowsay xcape \
 exiftool preload aptitude axel wmname wmctrl neofetch \
 speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp \
 mpd ncmpcpp cava stress docker.io inkscape
-
-#bpytop ncdu fortune \
+#bpytop ncdu fortune apt-transport-https translate-shell
 #nvidia-driver nvidia-cuda-toolkit nvtop \
 #android-tools-fastboot scrcpy android-tools-adb \
-#spotify-client obs-studio audacity gimp stacer kdeconnect telegram-desktop
+#spotify-client obs-studio audacity gimp stacer kdeconnect telegram-desktop synaptic
 #sudo systemctl disable docker.socket
 
-#apt-transport-https translate-shell synaptic
+#pip install pywal
 cargo install ttyper bat
 
 #sudo apt purge -y --auto-remove onboard xterm cherrytree plymouth
