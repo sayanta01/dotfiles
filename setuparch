@@ -20,7 +20,7 @@ sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.themes/* /usr/share/themes
 
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
-     noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
+     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \
      cargo linux-headers firefox meld \
      mate-calc rsync wget curl fzf axel \
      bspwm polybar sxhkd rofi slock dunst xcape \
