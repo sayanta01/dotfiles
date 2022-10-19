@@ -74,10 +74,11 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
-paru -S --noconfirm spotify-adblock notion-app google-chrome \
+paru -S --noconfirm spotify-adblock google-chrome \
 cava preload visual-studio-code-bin ttf-comic-mono-git 
-# plymouth-nosystemd pulseaudio-bluetooth anki  ( artix )
-#plymouth ly  ( arch )
+#anki notion-app pulseaudio-bluetooth
+# plymouth-nosystemd  ( artix )
+# plymouth ly  ( arch )
 #sudo systemctl enable ly.service  ( arch )
 #sudo systemctl enable fstrim.timer  ( arch )
 
