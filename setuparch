@@ -21,22 +21,22 @@ sudo cp -r ~/.themes/* /usr/share/themes
 
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \
-     cargo linux-headers firefox meld \
-     mate-calc rsync wget curl fzf axel \
-     bspwm polybar sxhkd rofi slock dunst xcape \
      exa bat tldr fd ripgrep procs duf dust \
-     neovim kitty qt5ct kvantum lxappearance \
+     cargo linux-headers firefox meld \
+     mate-calc rsync wget curl fzf axel neovim \
+     bspwm polybar sxhkd rofi slock dunst  \
+     kitty qt5ct kvantum lxappearance xcape \
      dialog cmake wmctrl wmname xdotool imwheel \
-     unrar unzip zip p7zip tar engrampa ranger lf \
      pipewire pipewire-pulse wireplumber pavucontrol playerctl mpd ncmpcpp dbus-python \
      wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils \
      mpv imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
+     unrar unzip zip p7zip tar engrampa lf \
      tree ncdu thunar thunar-archive-plugin thunar-media-tags-plugin \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
      htop neofetch bpytop zathura zathura-pdf-mupdf ghostscript \
      speedtest-cli trash-cli yt-dlp transmission-cli \
      intel-ucode virtualbox-guest-utils \
-     jq xdg-utils xdg-user-dirs xclip openssh cowsay
+     xdg-utils xdg-user-dirs xclip jq openssh cowsay
 #sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
 #sudo touch /run/runit/service/sshd/down  ( artix )
 # dash libnotify connman libconfig perl-image-exiftool  # brightnessctl
