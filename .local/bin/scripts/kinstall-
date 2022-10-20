@@ -12,6 +12,7 @@ chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/script
 
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
 
+sudo apt install -y libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev 
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
 
@@ -31,7 +32,6 @@ sudo cp -r ~/.themes/* /usr/share/themes
 sudo apt update
 sudo apt install -y fonts-jetbrains-mono fonts-terminus fonts-roboto \
 bspwm polybar rofi kitty dunst lxappearance maim slock playerctl \
-libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev \
 cargo ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf \
 lf zathura htop qt5-style-kvantum meld font-viewer \
 slock imwheel xclip xwallpaper gpg cowsay xcape \
