@@ -39,7 +39,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      xdg-utils xdg-user-dirs xclip jq openssh cowsay
 #sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
 #sudo touch /run/runit/service/sshd/down  ( artix )
-# dash libnotify connman libconfig perl-image-exiftool  # brightnessctl
+# dash libnotify connman libconfig perl-image-exiftool pulseaudio-bluetooth # brightnessctl
 
 cargo install ttyper
 
@@ -76,7 +76,7 @@ git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
 paru -S --noconfirm spotify-adblock google-chrome \
 cava preload visual-studio-code-bin ttf-comic-mono-git 
-#anki notion-app pulseaudio-bluetooth
+#anki notion-app 
 # plymouth-nosystemd  ( artix )
 # plymouth ly  ( arch )
 #sudo systemctl enable ly.service  ( arch )
