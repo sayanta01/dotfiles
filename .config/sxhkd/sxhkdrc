@@ -1,14 +1,13 @@
 #
 # wm independent hotkeys
 #
-
 # brightness control
 XF86MonBrightness{Up,Down}
-	      brightness{ --inc, --dec}
+	               brightness{ --inc, --dec}
 	      
 # mute
 XF86AudioMute
-	volume --toggle
+	    volume --toggle
 
 #Xf86AudioMicMute
 #	volume --toggle-mic
@@ -26,6 +25,9 @@ XF86AudioMute
               pactl set-sink-mute @DEFAULT_SINK@ toggle
               #amixer set Master toggle
 
+# show bar on key press
+super + h
+        polybar-msg cmd toggle
 
 # hide all windows
 super + d
@@ -47,13 +49,14 @@ super + alt + o
 super + alt + p
               bash ~/.local/bin/scripts/wallch
 
+# kill ps
+ctrl + alt + Delete
+                  bash ~/.local/bin/scripts/kil
+
 # screenlock
 ctrl + alt + l
-             slock
-
- # system_action
-super + F4
-         bash ~/.local/bin/scripts/system_action
+             betterlockscreen -l blur
+             # slock
 
 # bluetooth
 alt + F1
@@ -68,6 +71,10 @@ alt + F2
 alt + F3
        pactl set-sink-volume @DEFAULT_SINK@ +5%
        #amixer set Master 5%+
+
+ # system_action
+super + F4
+         bash ~/.local/bin/scripts/system_action
 
 # mute
 alt + F4
@@ -96,7 +103,7 @@ alt + F8
        
 # wifi
 alt + F9
-      bash ~/.local/bin/scripts/wifi             
+       bash ~/.local/bin/scripts/wifi             
         
 # screenshot
 Print
@@ -109,11 +116,7 @@ shift + Print
 # ss window
 alt + Print 
 	  maim -i $(xdotool getactivewindow) ~/pix/$(date +%I:%M:%d,%a)-Win.png | notify-send -t 800 "Window Screenshot Taken"
-	     
-# kill ps
-ctrl + alt + Delete
-                  bash ~/.local/bin/scripts/kil
-                         
+	                            
 # thunar
 super + e
         thunar
