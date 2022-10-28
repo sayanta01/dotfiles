@@ -25,7 +25,7 @@ XF86AudioMute
               pactl set-sink-mute @DEFAULT_SINK@ toggle
               #amixer set Master toggle
 
-# show bar on key press
+# hide unhide polybar
 super + u
         bash ~/.local/bin/scripts/bar
 
@@ -52,11 +52,6 @@ super + alt + p
 # kill ps
 ctrl + alt + Delete
                   bash ~/.local/bin/scripts/kil
-
-# screenlock
-ctrl + alt + l
-             betterlockscreen -l blur
-             # slock
 
 # bluetooth
 alt + F1
@@ -116,11 +111,7 @@ shift + Print
 # ss window
 alt + Print 
 	  maim -i $(xdotool getactivewindow) ~/pix/$(date +%I:%M:%d,%a)-Win.png | notify-send -t 800 "Window Screenshot Taken"
-	                            
-# thunar
-super + e
-        thunar
-
+	                           
 # chrome
 alt + b
       google-chrome-stable
@@ -142,6 +133,10 @@ super + space
 alt + 0
       rofi -show drun -show-icons
 
+# thunar
+super + e
+        thunar
+	
 # spotify
 alt + s
       LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U                 
@@ -153,7 +148,12 @@ alt + t
 # calc
 ctrl + alt + k
              mate-calculator
-      
+
+# screenlock
+ctrl + alt + l
+             betterlockscreen -l blur
+             #slock
+
 
 
 
