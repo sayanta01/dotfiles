@@ -183,6 +183,7 @@ alias bigfile="du -h -x -s -- * | sort -r -h | head -20"
 alias psmem='ps axch -o cmd,%mem --sort=-%mem | head'
 alias pscpu='ps axch -o cmd,%cpu --sort=-%cpu | head'
 alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias chls='betterlockscreen -u  ~/.local/share/walls --fx blur'
 
 alias ping='ping -c 7'
 alias ports='netstat -tulanp'
