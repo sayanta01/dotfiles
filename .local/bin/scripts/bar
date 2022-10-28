@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+WINDOW_STATE=`xwininfo -name 'polybar-example_HDMI-0' | grep 'Map State:' | sed -e 's/.*:\s//g'`
+
+if [[ "IsViewable" == "$WINDOW_STATE" ]]; then
+    # echo "Hiding polybar"
+    xdo hide -N Polybar
+    bspc config -m HDMI-0 top_padding 0
+else
+    xdo show -N Polybar
+    # echo "Showing polybar"
+    bspc config -m HDMI-0 top_padding 24
+fi
+
+#run "xwininfo" tap cursor in polybar
+#change window id
