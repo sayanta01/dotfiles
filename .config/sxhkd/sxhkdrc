@@ -10,7 +10,7 @@ XF86AudioMute
 	    volume --toggle
 
 #Xf86AudioMicMute
-#	volume --toggle-mic
+#	        volume --toggle-mic
 
 # volume control for Laptop
 XF86AudioLowerVolume
