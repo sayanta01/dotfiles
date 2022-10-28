@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-taskmanager" version="1.0">
+  <property name="window-width" type="int" value="1228"/>
+  <property name="window-height" type="int" value="600"/>
+  <property name="interface" type="empty">
+    <property name="show-all-processes" type="bool" value="false"/>
+    <property name="full-command-line" type="bool" value="false"/>
+    <property name="process-tree" type="bool" value="false"/>
+    <property name="refresh-rate" type="uint" value="750"/>
+  </property>
+</channel>
