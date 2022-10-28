@@ -27,7 +27,8 @@ XF86AudioMute
 
 # hide unhide polybar
 super + u
-        bash ~/.local/bin/scripts/bar
+        polybar-msg cmd toggle | bspc config top_padding 0
+        #bash ~/.local/bin/scripts/bar
 
 # hide all windows
 super + d
