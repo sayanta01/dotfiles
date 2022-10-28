@@ -26,8 +26,8 @@ XF86AudioMute
               #amixer set Master toggle
 
 # show bar on key press
-super + h
-        polybar-msg cmd toggle
+super + u
+        bash ~/.local/bin/scripts/bar
 
 # hide all windows
 super + d
