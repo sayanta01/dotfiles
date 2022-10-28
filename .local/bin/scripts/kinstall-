@@ -31,14 +31,14 @@ sudo cp -r ~/.themes/* /usr/share/themes
 
 sudo apt update
 sudo apt install -y fonts-jetbrains-mono fonts-terminus fonts-roboto \
-bspwm polybar rofi kitty dunst lxappearance maim slock playerctl \
+bspwm polybar rofi kitty dunst lxappearance maim playerctl \
 cargo ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf \
-lf zathura htop qt5-style-kvantum meld font-viewer \
-slock imwheel xclip xwallpaper gpg cowsay xcape \
-exiftool preload aptitude axel wmname wmctrl neofetch \
+lf zathura htop qt5-style-kvantum meld \
+imwheel xclip xwallpaper gpg cowsay xcape xdo betterlockscreen \
+exiftool preload axel wmname wmctrl neofetch \
 speedtest-cli transmission-cli transmission-daemon trash-cli yt-dlp \
 mpd ncmpcpp cava stress docker.io inkscape
-#bpytop ncdu fortune apt-transport-https translate-shell
+#bpytop ncdu fortune apt-transport-https translate-shell font-viewer aptitude
 #nvidia-driver nvidia-cuda-toolkit nvtop \
 #android-tools-fastboot scrcpy android-tools-adb \
 #spotify-client obs-studio audacity gimp stacer kdeconnect telegram-desktop synaptic
