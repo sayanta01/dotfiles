@@ -26,8 +26,8 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      mate-calc rsync wget curl fzf axel neovim \
      bspwm polybar sxhkd rofi dunst \
      kitty qt5ct qt6ct kvantum lxappearance xcape \
-     dialog cmake wmctrl wmname xdotool imwheel \
      pipewire pipewire-pulse wireplumber pavucontrol playerctl mpd ncmpcpp dbus-python \
+     dialog cmake wmctrl wmname xdotool imwheel \
      wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils \
      mpv imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
      unrar unzip zip p7zip tar engrampa lf \
@@ -39,7 +39,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      xdg-utils xdg-user-dirs xclip jq openssh cowsay
 #sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
 #sudo touch /run/runit/service/sshd/down  ( artix )
-# dash libnotify connman libconfig perl-image-exiftool pulseaudio-bluetooth slock # brightnessctl
+# dash libnotify libconfig connman perl-image-exiftool pulseaudio-bluetooth # brightnessctl
 
 cargo install ttyper
 
