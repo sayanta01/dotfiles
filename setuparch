@@ -39,7 +39,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      xdg-utils xdg-user-dirs xclip jq openssh cowsay
 #sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
 #sudo touch /run/runit/service/sshd/down  ( artix )
-# dash libnotify libconfig connman perl-image-exiftool pulseaudio-bluetooth # brightnessctl
+# libnotify libconfig dash connman mediainfo perl-image-exiftool pulseaudio-bluetooth brightnessctl
 
 cargo install ttyper
 
