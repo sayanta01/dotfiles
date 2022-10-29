@@ -190,6 +190,7 @@ alias ports='netstat -tulanp'
 alias copy='rsync --progress -auv'
 
 alias df='df -h'
+alias du='du -h'
 alias free='free -h'
 alias bat='bat --theme OneHalfDark'
 alias cat='bat --theme OneHalfDark -p'
