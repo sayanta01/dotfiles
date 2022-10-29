@@ -50,10 +50,6 @@ super + alt + o
 super + alt + p
               bash ~/.local/bin/scripts/wallch
 
-# kill ps
-ctrl + alt + Delete
-                  bash ~/.local/bin/scripts/kil
-
 # bluetooth
 alt + F1
        bash ~/.local/bin/scripts/btch    		    
@@ -154,6 +150,10 @@ ctrl + alt + k
 ctrl + alt + l
              betterlockscreen -l blur
              #slock
+	     
+# kill ps
+ctrl + alt + Delete
+                  bash ~/.local/bin/scripts/kil	     
 
 
 
