@@ -64,15 +64,15 @@ alt + F3
        pactl set-sink-volume @DEFAULT_SINK@ +5%
        #amixer set Master 5%+
 
- # system_action
-super + F4
-         bash ~/.local/bin/scripts/system_action
-
 # mute
 alt + F4
        pactl set-sink-mute @DEFAULT_SINK@ toggle
        #amixer set Master toggle         
 
+ # system_action
+super + F4
+         bash ~/.local/bin/scripts/system_action
+	 
 # switch audio
 alt + F5       
        bash ~/.local/bin/scripts/audiosw    
