@@ -118,18 +118,18 @@ alias unlock='sudo rm /var/lib/pacman/db.lck'   # remove pacman lock
 # Runit
 alias ssh-on="sudo sv start sshd"
 alias ssh-off="sudo sv stop sshd"
-alias vm-on="sudo sv start libvirtd && sudo sv start virtlogd"
-alias vm-off="sudo sv stop libvirtd && sudo sv stop virtlogd"
 alias doc-on="sudo sv start docker"
 alias doc-off="sudo sv stop docker"
+alias vm-on="sudo sv start libvirtd && sudo sv start virtlogd"
+alias vm-off="sudo sv stop libvirtd && sudo sv stop virtlogd"
 
 # Systemd
 #alias ssh-on="sudo systemctl start sshd.service"
 #alias ssh-off="sudo systemctl stop sshd.service"
-#alias vm-on="sudo systemctl start libvirtd.service"
-#alias vm-off="sudo systemctl stop libvirtd.service"
 #alias doc-on="sudo systemctl start docker.socket"
 #alias doc-off="sudo systemctl stop docker.socket"
+#alias vm-on="sudo systemctl start libvirtd.service"
+#alias vm-off="sudo systemctl stop libvirtd.service"
 alias sysctlist='systemctl list-unit-files --type=service'
 alias sysctlfail='systemctl --failed'
 alias jctl='sudo journalctl -p 3 -xb'
