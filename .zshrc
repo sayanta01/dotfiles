@@ -208,8 +208,8 @@ alias z='zathura'
 alias mpad='mousepad'
 alias mpc='mpd ; ncmpcpp'
 
-alias ytdl-video="yt-dlp -f bestvideo+bestaudio"
-alias ytdl-audio="yt-dlp --extract-audio --audio-format m4a"
+alias ytdl-vid="yt-dlp -f bestvideo+bestaudio"
+alias ytdl-aud="yt-dlp --extract-audio --audio-format m4a"
 
 # for arch linux
 #alias mirror='sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'

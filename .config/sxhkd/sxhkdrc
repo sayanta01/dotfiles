@@ -48,11 +48,11 @@ super + alt + o
 	
 # wallch
 super + alt + p
-              bash ~/.local/bin/scripts/wallch
+              bash ~/.local/bin/wallch
 
 # bluetooth
 alt + F1
-       bash ~/.local/bin/scripts/btch    		    
+       bash ~/.local/bin/btch    		    
 	     
 # vol down
 alt + F2
@@ -71,11 +71,11 @@ alt + F4
 
  # system_action
 super + F4
-         bash ~/.local/bin/scripts/system_action
+         bash ~/.local/bin/system_action
 	 
 # switch audio
 alt + F5       
-       bash ~/.local/bin/scripts/audiosw    
+       bash ~/.local/bin/audiosw    
 
 # previous
 alt + F6 
@@ -95,7 +95,7 @@ alt + F8
        
 # wifi
 alt + F9
-       bash ~/.local/bin/scripts/wifi             
+       bash ~/.local/bin/wifi             
         
 # screenshot
 Print
@@ -153,7 +153,7 @@ ctrl + alt + l
 	     
 # kill ps
 ctrl + alt + Delete
-                  bash ~/.local/bin/scripts/kil	     
+                  bash ~/.local/bin/kil	     
 
 
 
