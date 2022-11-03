@@ -14,17 +14,17 @@ bspc config pointer_modifier         mod1
 bspc config focused_border_color     "#434C5E" 
 
 #bspc rule -a mpv state=fullscreen
-bspc rule -a Zathura state=tiled
-bspc rule -a Inkscape state=floating 
+#bspc rule -a Yad state=floating 
 bspc rule -a Onboard state=floating 
+bspc rule -a Screenkey manage=off
+bspc rule -a Zathura state=tiled
 bspc rule -a Gimp state=floating 
 bspc rule -a Anki state=floating 
-bspc rule -a Yad state=floating 
-bspc rule -a Screenkey manage=off
+bspc rule -a Inkscape state=floating 
 bspc rule -a TelegramDesktop desktop='^6'
-bspc rule -a Lxappearance state=floating center=on
 bspc rule -a qt5ct state=floating center=on
 bspc rule -a Pavucontrol state=floating center=on
+bspc rule -a Lxappearance state=floating center=on
 
 #Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
