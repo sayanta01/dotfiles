@@ -1,5 +1,5 @@
 favorites=xfce4-terminal-emulator.desktop,xfce4-file-manager.desktop,xfce4-web-browser.desktop
-recent=xfce-wm-settings.desktop,xfce-ui-settings.desktop,xfce4-terminal-settings.desktop,xfce4-terminal.desktop,firefox.desktop,xfce-keyboard-settings.desktop,xfce-backdrop-settings.desktop,qt5ct.desktop,virtualbox.desktop,xfce-session-settings.desktop
+recent=img.desktop,xfce4-accessibility-settings.desktop,blueman-manager.desktop,blueman-adapters.desktop,xfce-session-settings.desktop,xfce-mouse-settings.desktop,xfce-ui-settings.desktop,nvtop.desktop,google-chrome.desktop,virtualbox.desktop
 button-icon=kali-panel-menu
 button-single-row=false
 show-button-title=false

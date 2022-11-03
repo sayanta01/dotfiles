@@ -56,17 +56,17 @@
       <property name="&lt;Alt&gt;Print" type="string" value="xfce4-screenshooter -w"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;x" type="string" value="wmctrl -r :ACTIVE: -b toggle,above"/>
       <property name="&lt;Alt&gt;F7" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"/>
-      <property name="&lt;Alt&gt;F1" type="string" value="./.local/bin/scripts/btch"/>
-      <property name="&lt;Alt&gt;F5" type="string" value="./.local/bin/scripts/audiosw"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="./.local/bin/scripts/kil"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;n" type="string" value="xdg-open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;m" type="string" value="xdg-open http://notion.new"/>
-      <property name="&lt;Super&gt;F4" type="string" value="./.local/bin/scripts/system_action"/>
       <property name="&lt;Alt&gt;F2" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ -5% "/>
       <property name="&lt;Alt&gt;F3" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ +5%"/>
       <property name="&lt;Alt&gt;F4" type="string" value="pactl set-sink-mute @DEFAULT_SINK@ toggle"/>
       <property name="&lt;Alt&gt;0" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="betterlockscreen -l blur"/>
+      <property name="&lt;Alt&gt;F5" type="string" value="./.local/bin/audiosw"/>
+      <property name="&lt;Alt&gt;F1" type="string" value="./.local/bin/btch"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="./.local/bin/kil"/>
+      <property name="&lt;Super&gt;F4" type="string" value="./.local/bin/system_action"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
