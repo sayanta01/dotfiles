@@ -1,6 +1,7 @@
 configuration {
     display-drun: "";
 } 
+
 * {
     font:                           "BlexMono Nerd Font Medium Italic 11";
     foreground:                     #A7B5CD;
@@ -20,22 +21,25 @@ configuration {
     cyan:                           #5f9f9e;
     darkcyan:                       #5f9f9e;
 }
+
 window {
     border: 				0px;
-    border-radius: 			0px;
+    border-radius:	0px;
     padding: 				0;
     width: 		  		30%;
 }
+
 mainbox {
     border:  0;
     padding: 0;
 }
+
 textbox {
     text-color: @foreground;
 }
 
 listview {
-    lines:	  8;
+    lines:	      8;
     columns:      1;
     border:       0px 0px 0px ;
     border-color: @separatorcolor;
@@ -48,48 +52,59 @@ element {
     border:       0;
     padding:      9px; 
 }
+
 element normal.normal {
     background-color: @background;
     text-color:       @foreground;
 }
+
 element normal.urgent {
     background-color: @red;
     text-color:       @background;
 }
+
 element normal.active {
     background-color: @border;
     text-color:       @background;
 }
+
 element selected.normal {
     background-color: @blue;
     border-radius:    0px;
     text-color:       @background;
 }
+
 element selected.urgent {
     background-color: @red;
     text-color:       @background;
 }
+
 element selected.active {
     background-color: @yellow;
     text-color:       @background;
 }
+
 element alternate.normal {
     background-color: @background;
     text-color:       @foreground;
 }
+
 element alternate.urgent {
     background-color: @border;
     text-color:       @background;
 }
+
 element alternate.active {
     background-color: @border;
     text-color:       @background;
 }
+
 element-text {
     cursor:           inherit;
     highlight:        inherit;
     text-color:       inherit;
 }
+
 element-icon {
     size:             1.0000em;
     cursor:           inherit;
@@ -98,20 +113,22 @@ element-icon {
 
 entry {
     spacing:           0px;
-    padding:	       8px;
+    padding:	         8px;
     text-color:        #f8f8f2;
     placeholder:       "";
     placeholder-color: @foreground;
 }
+
 prompt {
     padding: 0 2 0 0 ;
     text-color: @foreground;
 }
+
 inputbar {
-    background-color:  #44465A;
-    margin:            0px 0px 0px;
-    border:            0px;
-    border-radius:     0px;
-    border-color:      @background;
-    children:          [ prompt,entry];
+    background-color: #44465A;
+    margin:           0px 0px 0px;
+    border:           0px;
+    border-radius:    0px;
+    border-color:     @background;
+    children:         [ prompt,entry];
 }

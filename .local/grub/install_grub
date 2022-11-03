@@ -1,23 +1,23 @@
 #!/bin/bash
 
-########## ARCH ##########
+#### ARCH ####
 sudo cp -r catppuccin-mocha-grub-theme /usr/share/grub/themes/
 /etc/default/grub >> GRUB_THEME="/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt"
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 
-########## KALI ##########
+#### KALI ####
 sudo cp -r catppuccin-mocha-grub-theme /boot/grub/themes
 /etc/default/grub >> GRUB_THEME="/boot/grub/themes/catppuccin-mocha-grub-theme/theme.txt"
 sudo rm -rf /usr/share/images/desktop-base/desktop-grub.png
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-########## Another Method for Kali if 1st not works ##########
+#### Another Method For Kali ####
 #sudo rm -rf /boot/grub/themes/kali/* && sudo cp -r catppuccin-mocha-grub-theme/* /boot/grub/themes/kali
 #sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 
-########## For ALL distro ##########
+#### For ALL distro ####
 /etc/grub.d/40_custom
 menuentry "Reboot" --class restart {
   reboot

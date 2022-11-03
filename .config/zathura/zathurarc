@@ -53,7 +53,6 @@ set selection-clipboard clipboard
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 
-
 map F11 toggle_fullscreen
 map u scroll half-up
 map d scroll half-down
@@ -68,4 +67,3 @@ map g goto top
 
 # Tab = Structure
 # f = highlight links
-

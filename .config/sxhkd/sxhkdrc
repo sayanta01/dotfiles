@@ -25,7 +25,7 @@ XF86AudioMute
               pactl set-sink-mute @DEFAULT_SINK@ toggle
               #amixer set Master toggle
 
-# hide unhide polybar
+# hide unhide bar
 super + u
         polybar-msg cmd toggle | bspc config top_padding 0
         #bash ~/.local/bin/bar
@@ -107,7 +107,7 @@ shift + Print
 
 # ss window
 alt + Print 
-	  maim -i $(xdotool getactivewindow) ~/pix/$(date +%I:%M:%d,%a)-Win.png | notify-send -t 800 "Window Screenshot Taken"
+	        maim -i $(xdotool getactivewindow) ~/pix/$(date +%I:%M:%d,%a)-Win.png | notify-send -t 800 "Window Screenshot Taken"
 	                           
 # chrome
 alt + b
