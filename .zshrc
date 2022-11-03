@@ -99,7 +99,7 @@ PROMPT=' %b%{$fg[red]%}❯${vcs_info_msg_0_}%  '
 # %b  %{$fg[red]%}(  %{$fg[yellow]%}%n  %{$fg[green]%}@  %{$fg[magenta]%}%M   %{$fg[white]%}   %{$fg[red]%})  %{$fg[white]%}
  
 
-##########  ALIAS ########## 
+#### ALIAS #### 
 # Kali
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
 alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
