@@ -1,7 +1,7 @@
 # enable efi                        #VM settings
 # ls /sys/firmware/efi/efivars      #check uefi
 
-##### partition using cfdisk #####
+#### partition using cfdisk ####
 cfdisk /dev/sda
 sda1 boot 400M      partition type EFI system
 sda2 root           give rest of space
@@ -18,13 +18,13 @@ mount /dev/sda1 /mnt/boot/efi
 
 ##### system install #####
 basestrap /mnt base base-devel linux linux-firmware vim zsh tmux runit elogind-runit  ( artix )
-pacstrap /mnt base base-devel linux linux-firmware vim zsh tmux  ( arch )
+ pacstrap /mnt base base-devel linux linux-firmware vim zsh tmux  ( arch )
 
 fstabgen -U /mnt >> /mnt/etc/fstab  ( artix )
 genfstab -U /mnt >> /mnt/etc/fstab  ( arch )
 
 artix-chroot /mnt  ( artix )
-arch-chroot /mnt  ( arch )
+ arch-chroot /mnt  ( arch )
 
 vim /etc/pacman.conf                    #uncmnt colors and paraller downloads, add ILoveCandy
 
@@ -64,8 +64,7 @@ EDITOR=vim visudo                       #uncmnt %wheel ALL=(ALL:ALL) ALL
 exit & sudo reboot
 
 
-######### Add Arch Repo for Artix #########
-
+#### Add Arch Repo for Artix ####
 /etc/pacman.conf >> after [galaxy]
 [universe]
 Server = https://universe.artixlinux.org/$arch
@@ -79,34 +78,27 @@ sudo pacman -Sy artix-archlinux-support
 
 
 /etc/pacman.conf >> in End
-##### ARCH REPO #####
+#### ARCH REPO ####
 #[testing]
 #Include = /etc/pacman.d/mirrorlist-arch
-
 
 [extra]
 Include = /etc/pacman.d/mirrorlist-arch
 
-
 #[community-testing]
 #Include = /etc/pacman.d/mirrorlist-arch
-
 
 [community]
 Include = /etc/pacman.d/mirrorlist-arch
 
-
 #[multilib-testing]
 #Include = /etc/pacman.d/mirrorlist-arch
-
 
 [multilib]
 Include = /etc/pacman.d/mirrorlist-arch
 
-
 [core]
 Include = /etc/pacman.d/mirrorlist-arch
-
 
 sudo pacman-key --populate archlinux
 sudo pacman -Syyu
