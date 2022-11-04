@@ -149,7 +149,6 @@ ctrl + alt + k
 # screenlock
 ctrl + alt + l
              betterlockscreen -l blur
-             #slock
 	     
 # kill ps
 ctrl + alt + Delete
