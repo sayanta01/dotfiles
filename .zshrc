@@ -202,9 +202,9 @@ alias tsm='transmission-remote'
 alias wget="wget --hsts-file=/dev/null"
 #alias wget='wget -c'
 
-# alias mpv='devour mpv'
-alias iv='devour sxiv'
+alias mpv='bspwm-swallow mpv'
 alias z='devour zathura'
+alias iv='devour sxiv'
 alias vim='nvim'
 alias mpad='mousepad'
 alias mpc='mpd ; ncmpcpp'
