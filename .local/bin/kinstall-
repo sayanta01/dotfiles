@@ -35,7 +35,7 @@ sudo apt install -y fonts-jetbrains-mono fonts-terminus fonts-roboto \
 bspwm polybar rofi kitty dunst lxappearance maim playerctl \
 cargo ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf \
 lf zathura htop qt5-style-kvantum meld \
-imwheel xclip xwallpaper gpg cowsay xcape betterlockscreen \
+imwheel xclip xdo xwallpaper gpg cowsay xcape betterlockscreen \
 exiftool preload axel wmname wmctrl neofetch \
 transmission-cli transmission-daemon trash-cli yt-dlp \
 mpd ncmpcpp cava docker.io inkscape
