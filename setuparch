@@ -14,7 +14,6 @@ cd ~/dl/st && sudo make clean install
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
-#git clone https://github.com/dracula/gtk.git ~/.themes/Dracula
 git clone https://github.com/sayanta01/PapirusFlatMix ~/.icons/PapirusFlatMix
 sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
 sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
