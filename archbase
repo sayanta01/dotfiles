@@ -102,4 +102,3 @@ Include = /etc/pacman.d/mirrorlist-arch
 
 sudo pacman-key --populate archlinux
 sudo pacman -Syyu
-

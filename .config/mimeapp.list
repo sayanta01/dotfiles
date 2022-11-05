@@ -12,8 +12,9 @@ application/pdf=org.pwmt.zathura.desktop;
 image/svg+xml=gimp.desktop;org.inkscape.Inkscape.desktop;
 
 # set mime manually
-#####xdg-mime query filetype (file)  #check filetype
-#####xdg-mime query default (file/type)  #check default app of filetype
+#### xdg-mime query filetype (file)  #check filetype
+#### xdg-mime query default (file/type)  #check default app of filetype
+
 #xdg-mime default sxiv.desktop image/jpeg
 #xdg-mime default sxiv.desktop image/jpg
 #xdg-mime default sxiv.desktop image/png
