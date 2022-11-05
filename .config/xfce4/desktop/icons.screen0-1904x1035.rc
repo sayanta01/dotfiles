@@ -2,26 +2,26 @@
 4.10.3+=true
 
 [/home/bot/desk/html-notes]
-row=1
-col=0
-
-[/home/bot/desk/webdevlearn]
-row=5
-col=0
-
-[/home/bot/desk/chrome-pjibgclleladliembfgfagdaldikeohf-Default.desktop]
-row=6
-col=0
-
-[/home/bot/desk/mysite]
-row=3
-col=0
-
-[/home/bot/desk/repos]
 row=0
 col=0
 
-[/home/bot/desk/scratch]
+[/home/bot/desk/webdevlearn]
 row=4
+col=0
+
+[/home/bot/desk/chrome-pjibgclleladliembfgfagdaldikeohf-Default.desktop]
+row=5
+col=0
+
+[/home/bot/desk/mysite]
+row=1
+col=0
+
+[/home/bot/desk/repos]
+row=2
+col=0
+
+[/home/bot/desk/scratch]
+row=3
 col=0
 
