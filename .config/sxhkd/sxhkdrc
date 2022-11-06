@@ -202,8 +202,7 @@ super + ctrl + {m,x,s,p}
 #
 
 # focus the next/previous window in the current desktop
-# super + {_,shift + }c
-alt + {grave,Tab}
+alt + {_,shift + }Tab
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the node in the given direction
