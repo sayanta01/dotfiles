@@ -76,7 +76,6 @@ Server = https://ftp.crifo.org/artix-universe/
 
 sudo pacman -Sy artix-archlinux-support
 
-
 /etc/pacman.conf >> in End
 #### ARCH REPO ####
 #[testing]
