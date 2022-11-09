@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+DMENU="dmenu -i -l 20 -p"
+DMEDITOR="nvim"
+
+set -euo pipefail
+declare -A confedit_list
+# confedit_list[picom]="$HOME/.config/picom/picom.conf"
+confedit_list[dunst]="$HOME/.config/dunst/dunstrc"
+confedit_list[polybar]="$HOME/.config/polybar/config.ini"
+confedit_list[sxhkd]="$HOME/.config/sxhkd/sxhkdrc"
+confedit_list[bspwm]="$HOME/.config/bspwm/bspwmrc"
+confedit_list[kitty]="$HOME/.config/kitty/kitty.conf"
+confedit_list[rofi]="$HOME/.config/rofi/config.rasi"
+confedit_list[nvim]="$HOME/.config/nvim/init.lua"
+confedit_list[tmux]="$HOME/.config/tmux/tmux.conf"
+confedit_list[ncmpcpp]="$HOME/.config/ncmpcpp/config"
+confedit_list[mpd]="$HOME/.config/mpd/mpd.conf"
+confedit_list[lf]="$HOME/.config/lf/lfrc"
+confedit_list[zathura]="$HOME/.config/zathura/zathurarc"
+confedit_list[xresources]="$HOME/.config/x11/xresources"
+confedit_list[xinitrc]="$HOME/.xinitrc"
+confedit_list[xprofile]="$HOME/.xprofile"
+confedit_list[bash]="$HOME/.bashrc"
+confedit_list[zsh]="$HOME/.zshrc"
+confedit_list[zprofile]="$HOME/.zprofile"
+
+main() {
+  declare -A _clean_list
+  # As this is loaded from other file it is technically not defined
+  for i in "${!confedit_list[@]}"; do
+    [[ -f ${confedit_list["${i}"]} ]] && _clean_list["${i}"]=${confedit_list["${i}"]}
+  done
+
+  # Piping the above array (cleaned) into dmenu.
+  # We use "printf '%s\n'" to format the array one item to a line.
+  choice=$(printf '%s\n' "${!_clean_list[@]}" | sort | ${DMENU} 'Edit Config' "$@")
+
+  # What to do when/if we choose a file to edit.
+  if [ "$choice" ]; then
+    cfg=$(printf '%s\n' "${_clean_list["${choice}"]}")
+    # shellcheck disable=SC2154
+    $DMEDITOR "$cfg"
+  # What to do if we just escape without choosing anything.
+  else
+      echo "Program terminated." && exit 0
+  fi
+}
+
+[[ "${BASH_SOURCE[0]}" == "${0}" ]] && main "$@"
