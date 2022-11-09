@@ -39,6 +39,7 @@ keymap("n", "<C-e>", "<End>", opts)
 -- Line num
 keymap("n", "<leader>n", "<cmd> set nu! <CR>", opts)
 keymap("n", "<leader>nn", "<cmd> set rnu! <CR>", opts)
+keymap("n", "<leader>m", "<cmd> set cursorcolumn! <CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
