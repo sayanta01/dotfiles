@@ -23,6 +23,7 @@
       <property name="icon-size" type="uint" value="0"/>
       <property name="length-adjust" type="bool" value="true"/>
       <property name="disable-struts" type="bool" value="false"/>
+      <property name="autohide-behavior" type="int" value="0"/>
     </property>
     <property name="dark-mode" type="bool" value="false"/>
   </property>
