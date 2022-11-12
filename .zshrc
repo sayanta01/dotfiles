@@ -1,6 +1,7 @@
 cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
 #setopt correct              # auto correct mistakes
+setopt extendedglob
 setopt autocd               # change directory just by typing its name
 setopt interactivecomments  # allow comments in interactive mode
 setopt magicequalsubst      # enable filename expansion for arguments of the form ‘anything=expression’
