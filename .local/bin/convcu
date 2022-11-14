@@ -35,7 +35,7 @@ main() {
   converted=$(curl -Ss "https://${to_code}.rate.sx/${amount}${from_code}")
 
   # Copy amount to clipboard and send notification
-  echo "$converted" | xclip -sel c 
+  echo "$converted" 
   notify-send "Converted amount (in clipboard)" "$converted $to_code"
 }
 
