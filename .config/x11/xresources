@@ -1,4 +1,5 @@
-*.font: JetBrainsMono:size=12
+/* *.font: JetBrainsMono:size=12 */
+*.font: Blex Mono Nerd Font:size=12
 
 ! Dracula Xresources Palette
  *.foreground: #F8F8F2
