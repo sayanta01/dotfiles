@@ -75,8 +75,8 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
-paru -S spotify-adblock google-chrome betterlockscreen \
-cava preload visual-studio-code-bin ttf-comic-mono-git 
+paru -S google-chrome betterlockscreen cava preload \
+visual-studio-code-bin ttf-comic-mono-git xwinwrap-git 
 #anki notion-app 
 # plymouth-nosystemd  ( artix )
 # plymouth ly  ( arch )
