@@ -46,7 +46,7 @@ bindkey '^K' kill-line
 #PROMPT_EOL_MARK="" 
 
 # Time format
-TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
+# TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 # Enable completion 
 autoload -Uz compinit && compinit
