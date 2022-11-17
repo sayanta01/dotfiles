@@ -53,7 +53,7 @@ sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia \
 scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord telegram-desktop \
 bluez blueman bluez-utils ntfs-3g \
-qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf 
+qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
 #bluez-runit libvirt-runit docker-runit openssh-runit ( artix )
 #sudo ln -s /etc/runit/sv/sshd /run/runit/service ( artix )
 #sudo touch /run/runit/service/sshd/down          ( artix )
