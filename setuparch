@@ -54,12 +54,12 @@ scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord telegram-desktop \
 bluez blueman bluez-utils ntfs-3g \
 qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
-#bluez-runit libvirt-runit docker-runit openssh-runit ( artix )
-#sudo ln -s /etc/runit/sv/sshd /run/runit/service ( artix )
-#sudo touch /run/runit/service/sshd/down          ( artix )
-#sudo ln -s /run/runit/sv/docker /run/runit/service ( artix )
-#sudo touch /run/runit/service/docker/down          ( artix )
-#qemu-arch-extra docker openssh ( arch )
+#bluez-runit libvirt-runit docker-runit openssh-runit  ( artix )
+#sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
+#sudo touch /run/runit/service/sshd/down           ( artix )
+#sudo ln -s /run/runit/sv/docker /run/runit/service  ( artix )
+#sudo touch /run/runit/service/docker/down           ( artix )
+#qemu-arch-extra docker openssh  ( arch )
 
 #### Setup Virt-Manager ####
 #sudo ln -s /etc/runit/sv/virtlogd /run/runit/service  ( artix )
@@ -102,4 +102,3 @@ sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 # export LC_CTYPE="en_GB.utf8"  ( fix suckless utilities give XOpenIM failed error )
 # QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment    ( fix qt5ct )
 # ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
-
