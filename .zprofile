@@ -15,8 +15,8 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 export EDITOR="nvim"
 export TERMINAL="st"
 export READER="zathura"
-export BROWSER="firefox"
 export TERM="xterm-256color"
+#export BROWSER="google-chrome"
 #export VIDEO="mpv"
 #export IMAGE="sxiv"
 #export OPENER="xdg-open"
@@ -26,10 +26,23 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
 
-# export HISTFILE="$XDG_DATA_HOME/.local/share/history"
-# export LESSHISTFILE="$XDG_CONFIG_HOME/less/history"
-export HISTFILE="$XDG_DATA_HOME/history"
+export GOPATH="$XDG_DATA_HOME/go"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
 
+export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
+# export KODI_DATA="$XDG_DATA_HOME/kodi"
+# export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
+
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+
+#export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export HISTFILE="$XDG_STATE_HOME/zsh/history"
+
+# export LESSHISTFILE="$XDG_CONFIG_HOME/less/history"
 # export LESSKEY="$XDG_CONFIG_HOME/less/keys"
 export LESSHISTFILE="-"
 export LESS="-R"
@@ -41,32 +54,14 @@ export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
-#export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-#export HISTFILE="$XDG_STATE_HOME/zsh/history"
-
-#export XAUTHORITY=/tmp/Xauthority  # This line will break some DMs.
-#export INPUTRC="$XDG_CONFIG_HOME/inputrc"
+#export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
+#export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"
 #export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 #export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
-#export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"
 #export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
-
-# export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
-# export KODI_DATA="$XDG_DATA_HOME/kodi"
-export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
-
-export GOPATH="$XDG_DATA_HOME/go"
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
-
-export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
-export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
-export ELECTRUMDIR="$XDG_DATA_HOME/.local/share/electrum"
 
 # export QT_QPA_PLATFORMTHEME="gtk2"  # have QT use gtk2 theme.
 export QT_QPA_PLATFORMTHEME="qt5ct"
-#export QT_QPA_PLATFORM=wayland    # needed for wayland
+#export QT_QPA_PLATFORM=wayland       # needed for wayland
 export AWT_TOOLKIT="MToolkit wmname LG3D"  # May have to install wmname
-export _JAVA_AWT_WM_NONREPARENTING=1	  # Fix for Java applications in WM
+export _JAVA_AWT_WM_NONREPARENTING=1	     # Fix for Java applications in WM

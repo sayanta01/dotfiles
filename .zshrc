@@ -3,12 +3,12 @@ cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 #setopt correct              # auto correct mistakes
 # setopt autocd               # change directory just by typing its name
 # setopt interactivecomments  # allow comments in interactive mode
-setopt notify               # report the status of background jobs immediately
-setopt nonomatch            # hide error message if there is no match for the pattern
-setopt promptsubst          # enable command substitution in prompt
 setopt extendedglob
 setopt magicequalsubst      # enable filename expansion for arguments of the form ‘anything=expression’
+setopt nonomatch            # hide error message if there is no match for the pattern
+setopt notify               # report the status of background jobs immediately
 setopt numericglobsort      # sort filenames numerically when it makes sense
+setopt promptsubst          # enable command substitution in prompt
 
 # Configure keybindings
 bindkey -e                                        # emacs key bindings
@@ -51,21 +51,21 @@ TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 # Enable completion 
 autoload -Uz compinit && compinit
-zstyle ':completion:*' menu select
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files
-zstyle ':completion:*' verbose true
+zstyle ':completion:*' menu select
 zstyle ':completion:*' list-prompt %S TAB for more
+zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # History configurations
 HISTSIZE=2000
 SAVEHIST=2000
 HISTFILE=~/.zsh_history
-setopt hist_verify             # show command with history expansion to user before running it
 setopt hist_ignore_space       # ignore commands that start with space
-setopt hist_ignore_all_dups    # ignore duplicated commands history list
 setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_all_dups    # ignore duplicated commands history list
+setopt hist_verify             # show command with history expansion to user before running it
 
 # Plugins
 source ~/.zprofile

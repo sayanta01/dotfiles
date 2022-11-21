@@ -1,18 +1,19 @@
 [Default Applications]
-text/x-shellscript=text.desktop;
-text/plain=text.desktop;
 image/png=img.desktop;
 image/jpeg=img.desktop;
 image/gif=img.desktop;
+text/x-shellscript=text.desktop;
+text/plain=text.desktop;
 video/x-matroska=video.desktop;
 application/postscript=pdf.desktop;
 application/pdf=org.pwmt.zathura.desktop;
 
 [Added Associations]
-image/svg+xml=gimp.desktop;org.inkscape.Inkscape.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop;
+application/x-shellscript=nvim.desktop;
 
-# set mime manually
-#### xdg-mime query filetype (file)  #check filetype
+# Set mime manually
+#### xdg-mime query filetype (file)      #check filetype
 #### xdg-mime query default (file/type)  #check default app of filetype
 
 #xdg-mime default sxiv.desktop image/jpeg
