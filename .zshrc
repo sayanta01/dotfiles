@@ -147,7 +147,7 @@ alias lm='ls -t -1'
 alias ld='ls -d */'
 alias lsn='exa | wc -l'
 alias l-='ls -p | grep -v /'
-alias l.='exa -a | egrep "^\."'
+alias l.='exa -a | grep "^\."'
 
 alias grep='grep --color=auto'
 # alias fgrep='fgrep --color=auto'
