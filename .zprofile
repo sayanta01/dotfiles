@@ -3,6 +3,7 @@
 # export PATH=$PATH:$HOME/.local/bin
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
 export PATH=$PATH:$HOME/.local/share/cargo/bin
+
 # export MANPAGER='nvim +Man!'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
@@ -40,7 +41,7 @@ export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
 #export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export HISTFILE="$XDG_STATE_HOME/zsh/history"
+export HISTFILE="$XDG_DATA_HOME/history"
 
 # export LESSHISTFILE="$XDG_CONFIG_HOME/less/history"
 # export LESSKEY="$XDG_CONFIG_HOME/less/keys"
@@ -54,13 +55,16 @@ export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
+# mkdir -p "$XDG_DATA_HOME"/wineprefixes
+# export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
+
 #export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
 #export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"
 #export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 #export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 #export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 
-# export QT_QPA_PLATFORMTHEME="gtk2"  # have QT use gtk2 theme.
+export QT_QPA_PLATFORMTHEME="gtk2"  # have QT use gtk2 theme.
 export QT_QPA_PLATFORMTHEME="qt5ct"
 #export QT_QPA_PLATFORM=wayland       # needed for wayland
 export AWT_TOOLKIT="MToolkit wmname LG3D"  # May have to install wmname

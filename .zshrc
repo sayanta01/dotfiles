@@ -50,7 +50,9 @@ bindkey '^K' kill-line
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 # Enable completion 
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit  #( default path )
+# Enable completion  (+ separate path for .zcompdump file)
+autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME/zcompdump"
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files
 zstyle ':completion:*' menu select
@@ -155,6 +157,7 @@ alias cp="cp -iv"
 alias mv='mv -iv'
 #alias rm='rm -iv'
 alias rm='trash'
+alias del='gio trash'
 alias mkdir='mkdir -pv'
 
 alias diff='diff --color=auto'
@@ -176,11 +179,16 @@ alias pull='git pull origin'
 alias push='git push origin'
 
 alias rr='curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias cht='sh -c '\''curl cheat.sh/$1'\'' _'
+alias wttr_='sh -c '\''curl wttr.in/$1'\'' _'
 alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias myip='curl ifconfig.me; echo'
+alias php-server='php -S 0.0.0.0:8000'
+alias python-server='python -m http.server 8000'
 
 alias hst="history -i 99 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c"
 alias fonts="magick convert -list font | grep -iE 'font:.*'"
+alias find_='sh -c '\''find $@ 2>&1 | grep -v "Permission denied" >&2'\'' _'
 alias bigfile="du -h -x -s -- * | sort -r -h | head -20"
 alias psmem='ps axch -o cmd,%mem --sort=-%mem | head'
 alias pscpu='ps axch -o cmd,%cpu --sort=-%cpu | head'
@@ -206,8 +214,9 @@ alias wget="wget --hsts-file=/dev/null"
 #alias wget='wget -c'
 
 alias mpv='bspwm-swallow mpv'
-alias z='devour zathura'
 alias iv='devour sxiv'
+alias z='devour zathura'
+
 alias vim='nvim'
 alias mpad='mousepad'
 alias mpc='mpd ; ncmpcpp'
