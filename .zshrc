@@ -63,7 +63,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # History configurations
 HISTSIZE=2000
 SAVEHIST=2000
-HISTFILE=~/.zsh_history
+# HISTFILE="$XDG_DATA_HOME/history"
 setopt hist_ignore_space       # ignore commands that start with space
 setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_all_dups    # ignore duplicated commands history list
