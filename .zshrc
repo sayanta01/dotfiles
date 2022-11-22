@@ -211,7 +211,6 @@ alias shred='shred -uvzn3'
 alias ffmpeg='ffmpeg -hide_banner'
 alias tsm='transmission-remote'
 alias wget="wget --hsts-file=/dev/null"
-#alias wget='wget -c'
 
 alias mpv='bspwm-swallow mpv'
 alias iv='devour sxiv'
