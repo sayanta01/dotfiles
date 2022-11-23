@@ -147,11 +147,13 @@ alias lm='ls -t -1'
 alias ld='ls -d */'
 alias lsn='exa | wc -l'
 alias l-='ls -p | grep -v /'
-alias l.='exa -a | grep "^\."'
+alias l.='exa -a | grep -E "^\."'
 
 alias grep='grep --color=auto'
-# alias fgrep='fgrep --color=auto'
-# alias egrep='egrep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+# alias dir='dir --color=auto'
+# alias vdir='vdir --color=auto'
 
 alias cp="cp -iv"
 alias mv='mv -iv'
@@ -159,11 +161,6 @@ alias mv='mv -iv'
 alias rm='trash'
 alias del='gio trash'
 alias mkdir='mkdir -pv'
-
-alias diff='diff --color=auto'
-alias ip='ip --color=auto'
-# alias dir='dir --color=auto'
-# alias vdir='vdir --color=auto'
 
 alias add.='git add .'
 alias addup='git add -u'
