@@ -10,7 +10,7 @@ lspci | grep "VGA compatible controller: NVIDIA" | cut -c 1-7
 sudo cp 90-nvidia.conf /etc/X11/xorg.conf.d
 
 # then after this
-sudo su root -c "echo -e options nvidia-drm modeset=1 >> /etc/modprobe.d/nvidia.conff"
+sudo su root -c "echo -e options nvidia-drm modeset=1 >> /etc/modprobe.d/nvidia.conf"
 
 # set display manager & xinitrc  -- todo: add #!/bin/sh
 sudo su root -c "echo -e 'xrandr --setprovideroutputsource modesetting NVIDIA-0 \nxrandr --auto' >> /etc/lightdm/display_setup.sh"
