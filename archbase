@@ -75,6 +75,7 @@ Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch
 Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
 Server = https://ftp.crifo.org/artix-universe/
 
+#sudo pacman -S artix-keyring  ( fix corrupted pkg "PGP signature" )
 sudo pacman -Sy artix-archlinux-support
 
 /etc/pacman.conf >> in End
