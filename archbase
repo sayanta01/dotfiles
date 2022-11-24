@@ -26,7 +26,8 @@ genfstab -U /mnt >> /mnt/etc/fstab  ( arch )
 artix-chroot /mnt  ( artix )
  arch-chroot /mnt  ( arch )
 
-vim /etc/pacman.conf                    #uncmnt colors and paraller downloads, add ILoveCandy
+vim /etc/pacman.conf                    #uncmnt colors and ParallerDownloads, add ILoveCandy
+vim /etc/makepkg.conf                   #uncmnt MAKEFLAGS - more cores faster compile
 
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
