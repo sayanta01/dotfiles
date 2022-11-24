@@ -5,7 +5,7 @@
 yes '
 ' | sudo apt full-upgrade
 
-cp -r ~/dotfiles/{.zshrc,.zprofile,.xinitrc,.xprofile,.imwheelrc,.icons,.themes} ~/
+cp -r ~/dotfiles/{.zshrc,.zprofile,.xinitrc,.xprofile,.imwheelrc} ~/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
 cp -r ~/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/*
@@ -19,10 +19,10 @@ cd ~/dl/st && sudo make clean install
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
-git clone https://github.com/sayanta01/PapirusFlatMix ~/.icons/PapirusFlatMix
-sudo cp -r ~/.icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
-sudo cp -r ~/.icons/PapirusFlatMix /usr/share/icons
-sudo cp -r ~/.themes/* /usr/share/themes
+git clone https://github.com/sayanta01/PapirusFlatMix ~/.local/share/icons/PapirusFlatMix
+sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
+sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
+sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
 #curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 #echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list

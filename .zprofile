@@ -43,11 +43,12 @@ export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 # export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"    # to use this comment .zshrc wget alias
-# export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"  # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
 # export GNUPGHOME="$XDG_DATA_HOME/gnupg"                  # run this - gpg2 --homedir "$XDG_DATA_HOME/gnupg"
+# export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"  # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
 
 export HISTFILE="$XDG_DATA_HOME/history"
-#export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+# export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+# export HISTFILE="$XDG_STATE_HOME/bash/history"           # run this - mkdir -p "$XDG_STATE_HOME"/bash 
 
 export LESSHISTFILE="-"  # Disable files
 # export LESS="-R"
