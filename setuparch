@@ -49,7 +49,7 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter lightdm-gtk-greeter-settings grub
 #sudo ln -s /etc/runit/sv/lightdm /run/runit/service  ( artix )
 #sudo systemctl enable lightdm.service  ( arch )
 
-sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia \
+sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia \
 scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord telegram-desktop \
 bluez blueman bluez-utils ntfs-3g \
