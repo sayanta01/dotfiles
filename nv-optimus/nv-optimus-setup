@@ -27,6 +27,6 @@ sudo rm -rf /etc/X11/xorg.conf.d/90-nvidia.conf /etc/modprobe.d/nvidia.conf
 # then remove display manager configuration  -- lightdm & .xinitrc
 sudo rm -rf /etc/lightdm/display_setup.sh
 
-sudo cp blacklist-nvidia.conf /etc/modprobe.d/nvidia.conf
+sudo cp blacklist-nvidia.conf /etc/modprobe.d
 
-
+sudo cp 50-remove-nvidia.rules /lib/udev/rules.d
