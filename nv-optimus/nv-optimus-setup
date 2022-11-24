@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# dependences - nvidia-driver , xorg-xrandr , glxinfo
+glxinfo | grep "renderer"  # check which gpu is running 
+
+# check PCI Bus
+lspci | grep "VGA compatible controller: NVIDIA" | cut -c 1-7
+
+# before running this change PCI Bus according to yours
+sudo cp 90-nvidia.conf /etc/X11/xorg.conf.d
+
+# then after this
+sudo su root -c "echo -e options nvidia-drm modeset=1 >> /etc/modprobe.d/nvidia.conff"
+
+# set display manager & xinitrc  -- todo: add #!/bin/sh
+sudo su root -c "echo -e 'xrandr --setprovideroutputsource modesetting NVIDIA-0 \nxrandr --auto' >> /etc/lightdm/display_setup.sh"
+# for .xinitrc
+echo 'xrandr --setprovideroutputsource modesetting NVIDIA-0 \nxrandr --auto' >> ~/.xinitrc
+
+# reboot the system and this done for the nvidia-driver 
+
+
+### Only use iGPU ####
+# firstly remove any custom NVIDIA Xorg configuration
+sudo rm -rf /etc/X11/xorg.conf.d/90-nvidia.conf /etc/modprobe.d/nvidia.conf
+
+# then remove display manager configuration  -- lightdm & .xinitrc
+sudo rm -rf /etc/lightdm/display_setup.sh
+
+sudo cp blacklist-nvidia.conf /etc/modprobe.d/nvidia.conf
+
+
