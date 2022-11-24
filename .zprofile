@@ -19,10 +19,10 @@ export EDITOR="nvim"
 export TERMINAL="st"
 export READER="zathura"
 export TERM="xterm-256color"
-#export BROWSER="google-chrome"
-#export VIDEO="mpv"
-#export IMAGE="sxiv"
-#export OPENER="xdg-open"
+# export BROWSER="google-chrome"
+# export VIDEO="mpv"
+# export IMAGE="sxiv"
+# export OPENER="xdg-open"
 # export PAGER="less"
 
 # XDG paths
@@ -62,14 +62,14 @@ export LESSHISTFILE="-"  # Disable files
 # export LESSHISTFILE="$XDG_CONFIG_HOME/less/history"
 # export LESSKEY="$XDG_CONFIG_HOME/less/keys"
 
-#export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
-#export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
-#export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
-#export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"
-#export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
+# export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
+# export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
+# export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
+# export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"
+# export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 
-export QT_QPA_PLATFORMTHEME="gtk2"  # have QT use gtk2 theme.
+export QT_QPA_PLATFORMTHEME="gtk2"    # have QT use gtk2 theme.
 export QT_QPA_PLATFORMTHEME="qt5ct"
-#export QT_QPA_PLATFORM=wayland       # needed for wayland
+# export QT_QPA_PLATFORM=wayland      # needed for wayland
 export AWT_TOOLKIT="MToolkit wmname LG3D"  # May have to install wmname
 export _JAVA_AWT_WM_NONREPARENTING=1	     # Fix for Java applications in WM
