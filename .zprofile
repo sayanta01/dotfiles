@@ -41,7 +41,7 @@ export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 # export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
 
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+# export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 # export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"    # to use this comment .zshrc wget alias
 # export GNUPGHOME="$XDG_DATA_HOME/gnupg"                  # run this - gpg2 --homedir "$XDG_DATA_HOME/gnupg"
 # export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"  # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
