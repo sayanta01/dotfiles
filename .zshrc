@@ -176,6 +176,7 @@ alias pull='git pull origin'
 alias push='git push origin'
 
 alias rr='curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
 alias cht='sh -c '\''curl cheat.sh/$1'\'' _'
 alias wttr_='sh -c '\''curl wttr.in/$1'\'' _'
 alias typer='xdg-open https://10fastfingers.com/typing-test/english'

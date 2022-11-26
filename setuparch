@@ -34,7 +34,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      tree ncdu thunar thunar-archive-plugin thunar-media-tags-plugin \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
      htop neofetch bpytop zathura zathura-pdf-mupdf ghostscript \
-     speedtest-cli trash-cli yt-dlp transmission-cli \
+     trash-cli yt-dlp transmission-cli \
      intel-ucode virtualbox-guest-utils \
      xdg-utils xdg-user-dirs xdo xclip jq cowsay
 # libnotify libconfig dash connman mediainfo perl-image-exiftool pulseaudio-bluetooth brightnessctl
