@@ -100,8 +100,11 @@ sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 
 # sudo vim /etc/hosts           ( blk sites )
 # /etc/pacman.conf              ( uncheck ignorepkg and put pkgname )
+
 # QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment    ( fix qt5ct )
 # ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
+
+# install - gnome-keyring  ( fix - GDBus.Error:org.freedesktop.DBus.Error in VS-Code ) 
 
 # /etc/locale.conf >>  ( fix suckless utilities give XOpenIM failed error )
 # LANG=en_US.UTF-8
@@ -115,4 +118,3 @@ sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 # LC_PAPER=en_US.UTF-8
 # LC_TELEPHONE=en_US.UTF-8
 # LC_TIME=en_US.UTF-8
-# export LC_CTYPE="en_GB.utf8"  ( run this command ) 
