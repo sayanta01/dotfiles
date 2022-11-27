@@ -1,25 +1,29 @@
 # enable efi                        #VM settings
 # ls /sys/firmware/efi/efivars      #check uefi
 
-#### partition using cfdisk ####
+#### partition disk ####
 cfdisk /dev/sda
 sda1 boot 400M      partition type EFI system
 sda2 root           give rest of space
+# sda3 swap           - optional
 write & quit
 
-##### format ######
+##### formating ######
 mkfs.fat -F32 /dev/sda1
 mkfs.ext4 /dev/sda2
+# mkswap /dev/sda3
 
 ##### mounting #####
 mount /dev/sda2 /mnt
 mkdir -p /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
+# swapon /dev/sda3
 
-##### system install #####
+##### install base system #####
 basestrap /mnt base base-devel linux linux-firmware vim zsh tmux runit elogind-runit  ( artix )
  pacstrap /mnt base base-devel linux linux-firmware vim zsh tmux  ( arch )
 
+#### generate fstab ####
 fstabgen -U /mnt >> /mnt/etc/fstab  ( artix )
 genfstab -U /mnt >> /mnt/etc/fstab  ( arch )
 
@@ -29,16 +33,18 @@ artix-chroot /mnt  ( artix )
 vim /etc/pacman.conf                    #uncmnt colors and ParallerDownloads, add ILoveCandy
 vim /etc/makepkg.conf                   #uncmnt MAKEFLAGS - more cores faster compile
 
+#### configure system clock ####
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
-#date -s "1 OCT 2022 00:00:00"
+# date -s "1 JAN 2022 00:00:00"
 timedatectl set-ntp true  ( arch )
 
+#### set localization ####
 vim /etc/locale.gen                     #uncmnt US.UTF-8
 locale-gen
-
 echo LANG=en_US.UTF-8 > /etc/locale.conf
-#export LC_COLLATE="C"  
+export LC_COLLATE="C" ( artix ) 
+
 echo LilWarmachine > /etc/hostname
 
 pacman -S git dosfstools mtools dhcpcd xorg networkmanager networkmanager-runit  ( artix )
@@ -52,6 +58,7 @@ vim /etc/hosts
 ::1         localhost
 127.0.1.1   LilWarmachine.localdomain   LilWarmachine
 
+#### install bootloader ####
 pacman -S grub os-prober efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -61,8 +68,7 @@ useradd -m -G wheel,storage,power -s /bin/zsh bot
 passwd bot
 
 EDITOR=vim visudo                       #uncmnt %wheel ALL=(ALL:ALL) ALL
-
-exit & sudo reboot
+exit - chroot environment & sudo reboot
 
 
 #### Add Arch Repo for Artix ####
@@ -76,7 +82,7 @@ Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
 Server = https://ftp.crifo.org/artix-universe/
 
 sudo pacman -Sy artix-archlinux-support
-#sudo pacman -S artix-keyring  ( fix corrupted pkg "PGP signature" )
+# sudo pacman -S artix-keyring  ( fix corrupted pkg "PGP signature" )
 
 /etc/pacman.conf >> in End
 #### ARCH REPO ####
