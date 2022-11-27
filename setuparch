@@ -22,7 +22,7 @@ sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \
      exa bat tldr fd ripgrep procs duf dust \
-     cargo linux-headers firefox meld \
+     cargo linux-headers firefox meld man \
      mate-calc rsync wget curl fzf aria2 neovim \
      bspwm polybar sxhkd rofi dunst \
      kitty qt5ct qt6ct kvantum lxappearance xcape \
