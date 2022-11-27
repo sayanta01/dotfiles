@@ -1,6 +1,10 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
+[/home/bot/desk/bash]
+row=5
+col=0
+
 [/home/bot/desk/repo]
 row=2
 col=0
@@ -13,11 +17,15 @@ col=0
 row=1
 col=0
 
-[/home/bot/desk/scratch]
-row=3
+[/home/bot/desk/monitor]
+row=6
 col=0
 
 [/home/bot/desk/html-notes]
 row=0
+col=0
+
+[/home/bot/desk/scratch]
+row=3
 col=0
 

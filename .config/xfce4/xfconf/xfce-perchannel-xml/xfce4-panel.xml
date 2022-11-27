@@ -23,7 +23,7 @@
       <property name="icon-size" type="uint" value="0"/>
       <property name="length-adjust" type="bool" value="true"/>
       <property name="disable-struts" type="bool" value="false"/>
-      <property name="autohide-behavior" type="int" value="0"/>
+      <property name="autohide-behavior" type="int" value="2"/>
     </property>
     <property name="dark-mode" type="bool" value="false"/>
   </property>
@@ -35,9 +35,14 @@
     </property>
     <property name="plugin-11" type="string" value="tasklist">
       <property name="show-handle" type="bool" value="false"/>
-      <property name="show-labels" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="true"/>
       <property name="middle-click" type="uint" value="1"/>
       <property name="grouping" type="uint" value="1"/>
+      <property name="flat-buttons" type="bool" value="false"/>
+      <property name="sort-order" type="uint" value="0"/>
+      <property name="show-wireframes" type="bool" value="false"/>
+      <property name="window-scrolling" type="bool" value="false"/>
+      <property name="include-all-monitors" type="bool" value="true"/>
     </property>
     <property name="plugin-12" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
