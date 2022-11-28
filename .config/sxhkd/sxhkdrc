@@ -1,18 +1,12 @@
 #
 # wm independent hotkeys
 #
+
 # brightness control
 XF86MonBrightness{Up,Down}
 	               brightness{ --inc, --dec}
 	      
-# mute
-XF86AudioMute
-	    volume --toggle
-
-#Xf86AudioMicMute
-#	        volume --toggle-mic
-
-# volume control for Laptop
+# volume control 
 XF86AudioLowerVolume
               pactl set-sink-volume @DEFAULT_SINK@ -5%
               #amixer set Master 5%-
@@ -22,8 +16,16 @@ XF86AudioRaiseVolume
               #amixer set Master 5%+
 
 XF86AudioMute
-              pactl set-sink-mute @DEFAULT_SINK@ toggle
-              #amixer set Master toggle
+         pactl set-sink-mute @DEFAULT_SINK@ toggle
+         #amixer set Master toggle
+
+# media player control 
+XF86Audio{Prev,Next}
+         playerctl {previous,next}
+
+XF86AudioPlay 
+         playerctl play-pause
+
 
 # hide unhide bar
 super + u
