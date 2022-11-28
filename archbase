@@ -1,6 +1,10 @@
 # enable efi                        #VM settings
 # ls /sys/firmware/efi/efivars      #check uefi
 
+#### change tty font ####
+pacman -S terminus-font
+setfont /usr/share/kbd/consolefonts/ter-d18b.psf.gz
+
 #### partition disk ####
 cfdisk /dev/sda
 sda1 boot 400M      partition type EFI system
@@ -43,7 +47,7 @@ timedatectl set-ntp true  ( arch )
 vim /etc/locale.gen                     #uncmnt US.UTF-8
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
-export LC_COLLATE="C" ( artix ) 
+export LC_COLLATE="C"  ( artix ) 
 
 echo LilWarmachine > /etc/hostname
 
