@@ -144,7 +144,8 @@ super + e
 	
 # spotify
 alt + s
-      LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U                 
+      spotify-launcher
+      # LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U                 
                         
 # telegram
 alt + t
