@@ -1,7 +1,6 @@
 #!/bin/bash
 
-##### EDIT these values to suit
-# the panel to affect
+##### EDIT these values to suit the panel to affect
 PANEL=1
 
 # the hide behaviour setting (1=intelligently, 2=always)
