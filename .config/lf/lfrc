@@ -6,7 +6,7 @@ set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 
 # Custom Functions
-# set wallpaper
+# Set wallpaper
 cmd setwallpaper %cp "$f" ~/.config/wallpaper.jpg && xwallpaper --zoom "$f"
 
 # Cmds/Functions
