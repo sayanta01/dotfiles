@@ -10,7 +10,6 @@ cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/
 cp -r ~/dotfiles/.config/. ~/.config
 chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/* ~/.config/sxiv/exec/* ~/.config/lf/{scope,cleaner}
 
-
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
 
 sudo apt install -y libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev 
@@ -49,8 +48,7 @@ cargo install ttyper bat
 #sudo apt purge -y --auto-remove onboard xterm cherrytree plymouth
 
 #sudo apt install -y virt-manager 
-#sudo usermod -aG libvirt bot
-#sudo usermod -aG kvm bot
+#sudo usermod -aG libvirt,kvm $USER
 
 #git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock && make && sudo make install
 #wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
