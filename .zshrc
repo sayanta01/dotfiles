@@ -155,11 +155,12 @@ alias ip='ip --color=auto'
 # alias dir='dir --color=auto'
 # alias vdir='vdir --color=auto'
 
-alias cp="cp -iv"
+alias cp='cp -iv'
 alias mv='mv -iv'
 #alias rm='rm -iv'
 alias rm='trash'
 alias del='gio trash'
+alias tre='trash-restore'
 alias mkdir='mkdir -pv'
 
 alias add.='git add .'
