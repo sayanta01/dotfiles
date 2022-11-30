@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xdg-open https://10fastfingers.com/typing-test/english

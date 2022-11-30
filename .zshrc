@@ -181,7 +181,6 @@ alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 alias cht='sh -c '\''curl cheat.sh/$1'\'' _'
 alias rate='sh -c '\''curl rate.sx/$1'\'' _'
 alias wttr_='sh -c '\''curl wttr.in/$1'\'' _'
-alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias myip='curl ifconfig.me; echo'
 alias php-server='php -S 0.0.0.0:8000'
 alias python-server='python -m http.server 8000'
@@ -193,7 +192,6 @@ alias bigfile="du -h -x -s -- * | sort -r -h | head -20"
 alias psmem='ps axch -o cmd,%mem --sort=-%mem | head'
 alias pscpu='ps axch -o cmd,%cpu --sort=-%cpu | head'
 alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias chls='betterlockscreen -u  ~/.local/share/walls --fx blur'
 
 alias ping='ping -c 7'
 alias ports='netstat -tulanp'
