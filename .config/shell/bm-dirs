@@ -5,7 +5,7 @@ l   ~/.local/share
 cac ~/.cache
 src ~/.local/src
 
-h   ~/
+h   $HOME
 d   ~/dl
 vd  ~/vids
 m   ~/music

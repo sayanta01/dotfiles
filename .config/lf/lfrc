@@ -145,6 +145,7 @@ map md mkdir
 map x cut
 map y copy
 map p paste
+map r rename
 map M moveto
 map C copyto
 map L clear
