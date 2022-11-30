@@ -2,24 +2,44 @@
 set hidden true
 set ignorecase true
 set icons true
+set cleaner '~/.config/lf/cleaner'
+set previewer '~/.config/lf/scope'
 
 # Custom Functions
-cmd mkdir ${{
-  printf "Directory Name: "
-  read ans
-  mkdir $ans
-}}
-
-cmd mkfile ${{
-  printf "File Name: "
-  read ans
-  touch $ans
-}}
-
+# set wallpaper
 cmd setwallpaper %cp "$f" ~/.config/wallpaper.jpg && xwallpaper --zoom "$f"
 
+# Cmds/Functions
+cmd open ${{
+    case $(file --mime-type "$(readlink -f $f)" -b) in
+   	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
+	  image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
+    text/*|application/json|inode/x-empty) $EDITOR $fx;;
+   	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
+  	image/svg+xml) display -- $f ;;
+  	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" |
+		setsid -f sxiv -aio 2>/dev/null | while read -r file; do
+			[ -z "$file" ] && continue
+			lf -remote "send select \"$file\""
+			lf -remote "send toggle"
+		done &
+		;;
+	audio/*) mpv --audio-display=no $f ;;
+	video/*|application/vnd.rn-realmedia) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+	application/pdf|application/vnd.djvu|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+	application/pgp-encrypted) $EDITOR $fx ;;
+	application/vnd.openxmlformats-officedocument.wordprocessingml.document|application/vnd.oasis.opendocument.text) setsid -f lowriter $fx >/dev/null 2>&1 ;;
+	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|application/octet-stream|application/vnd.oasis.opendocument.spreadsheet|application/vnd.oasis.opendocument.spreadsheet-template) setsid -f localc $fx >/dev/null 2>&1 ;;
+	application/vnd.openxmlformats-officedocument.presentationml.presentation|application/vnd.oasis.opendocument.presentation-template|application/vnd.oasis.opendocument.presentation|application/vnd.ms-powerpoint) setsid -f loimpress $fx >/dev/null 2>&1 ;;
+	application/vnd.oasis.opendocument.graphics|application/vnd.oasis.opendocument.graphics-template) setsid -f lodraw $fx >/dev/null 2>&1 ;;
+	application/vnd.oasis.opendocument.formula) setsid -f lomath $fx >/dev/null 2>&1 ;;
+	application/vnd.oasis.opendocument.database) setsid -f lobase $fx >/dev/null 2>&1 ;;
+        *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+    esac
+}}
+
 # Archive bindings
-cmd unarchive ${{
+cmd extract ${{
   case "$f" in
       *.zip) unzip "$f" ;;
       *.tar.gz) tar -xzvf "$f" ;;
@@ -34,7 +54,7 @@ cmd execute ${{
 	wine "$f"
 }}
 
-# Trash bindings
+# Move to Trash
 cmd trash ${{
   files=$(printf "$fx" | tr '\n' ';')
   while [ "$files" ]; do
@@ -49,36 +69,92 @@ cmd trash ${{
   done
 }}
 
+# Restore from Trash
 cmd restore_trash ${{
   trash-restore
 }}
 
+# Create file
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  touch $ans
+}}
+
+# Create directory
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd moveto ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	clear; echo "Move to where?"
+	dest="$(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|')" &&
+	for x in $fx; do
+		eval mv -iv \"$x\" \"$dest\"
+	done &&
+	notify-send "🚚 File(s) moved." "File(s) moved to $dest."
+}}
+
+cmd copyto ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	clear; echo "Copy to where?"
+	dest="$(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|')" &&
+	for x in $fx; do
+		eval cp -ivr \"$x\" \"$dest\"
+	done &&
+	notify-send "📋 File(s) copied." "File(s) copies to $dest."
+}}
+
+# give permission
+cmd chmod ${{
+  printf "Mode Bits: "
+  read ans
+
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+
+  lf -remote 'send reload'
+}}
+
+
 # Bindings
 # Remove some defaults
 map m
-map o
 map n
-map "'"
-map '"'
 map d
-
-map au unarchive
-map ae execute
+map o
+map '"'
+map "'"
 
 # Basic Functions
 map . set hidden!
-map c $code "$f"
-map C clear
+map E extract
+map ae execute
 map dd trash
 map DD delete
 map dr restore_trash
+map mf mkfile
+map md mkdir
 map x cut
 map y copy
 map p paste
-map md mkdir
-map mf mkfile
-map <enter> open
+map M moveto
+map C copyto
+map L clear
 map R reload
+map U unselect
+map sp chmod
+
+map c $code "$f"
+map nv $nvim "$f"
+map <enter> open
 map bg setwallpaper
 
 # Movement
@@ -88,6 +164,6 @@ map gp cd ~/pix
 map gv cd ~/vids
 map gh cd ~/desk
 map gm cd ~/music 
+map gl cd ~/.local
 map gc cd ~/.config
-map gs cd ~/.local/bin
 

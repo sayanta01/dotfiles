@@ -12,7 +12,7 @@ setopt promptsubst          # enable command substitution in prompt
 
 # Configure keybindings
 bindkey -e                                        # emacs key bindings
-bindkey -s '^o' 'lf^M'
+bindkey -s '^o' 'lfub^M'
 bindkey -s '^r' 'hst^M'
 bindkey -s '^t' 'tmux^M'
 bindkey ' ' magic-space                           # history expansion on space
