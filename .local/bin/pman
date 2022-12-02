@@ -1,6 +1,6 @@
 #!/bin/bash
 
-action=$(echo -e "install Program\nRemove Program\nRemove Waste\nUpdate System" | dmenu -p "Software Manager " -i)
+action=$(echo -e "install Program\nRemove Program\nRemove Waste\nUpdate System\nUpdate AUR" | dmenu -p "Software Manager " -i)
 
 case $action in 
   "install Program")
@@ -25,6 +25,10 @@ case $action in
   "Update System")
     sudo pacman -Syyu --noconfirm
     notify-send "🥳 System Update Complete 🎉"
+    ;;
+  "Update AUR")
+    paru -Sua --noconfirm
+    notify-send "🎉 AUR Update Complete 🥳"
     ;;
   *)
     notify-send "😕 No Option Selected"

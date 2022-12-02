@@ -13,6 +13,6 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 #cargo install stylua
 
 #sudo pacman -S --noconfirm nodejs npm ccls shfmt shellcheck ueberzug stylua lazygit 
-sudo npm i -g prettier astyle truecallerjs luacheck emmet eslint html tailwindcss live-server
+sudo npm i -g prettier astyle luacheck emmet eslint html tailwindcss live-server
 pip install pynvim black flake8 sourcery 
 

@@ -115,7 +115,7 @@ alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
 alias install='sudo pacman -Sy'
 alias update='sudo pacman -Syyu'
 alias clean='sudo pacman -Rns $(pacman -Qtdq)'  # remove orphaned packages
-alias aurup='paru -Sua --noconfirm'
+alias upaur='paru -Sua --noconfirm'
 alias cleanaur='sudo pacman -Sc --noconfirm'
 alias unlock='sudo rm /var/lib/pacman/db.lck'   # remove pacman lock
 
@@ -124,8 +124,8 @@ alias ssh-on="sudo sv start sshd"
 alias ssh-off="sudo sv stop sshd"
 alias doc-on="sudo sv start docker"
 alias doc-off="sudo sv stop docker"
-alias vm-on="sudo sv start libvirtd && sudo sv start virtlogd"
-alias vm-off="sudo sv stop libvirtd && sudo sv stop virtlogd"
+alias vm-on="sudo sv start libvirtd virtlogd"
+alias vm-off="sudo sv stop libvirtd virtlogd"
 
 # Systemd
 #alias ssh-on="sudo systemctl start sshd.service"
@@ -152,8 +152,6 @@ alias l.='exa -a | grep -E "^\."'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
 
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -180,6 +178,7 @@ alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 alias cht='sh -c '\''curl cheat.sh/$1'\'' _'
 alias rate='sh -c '\''curl rate.sx/$1'\'' _'
 alias wttr_='sh -c '\''curl wttr.in/$1'\'' _'
+alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias myip='curl ifconfig.me; echo'
 alias php-server='php -S 0.0.0.0:8000'
 alias python-server='python -m http.server 8000'
@@ -199,7 +198,7 @@ alias copy='rsync --progress -auv'
 alias df='df -h'
 alias du='du -h'
 alias free='free -h'
-alias bc='bc -q'
+alias bc='bc -ql'
 alias shred='shred -uvzn3'
 alias bat='bat --theme OneHalfDark'
 alias cat='bat --theme OneHalfDark -p'

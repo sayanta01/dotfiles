@@ -17,7 +17,7 @@ locktext="Type password..."
 font="Comic Mono"
 
 ringwrongcolor=#282a36     #show ring before entering pswd 
-insidewrongcolor=d23c3dff  #show indide before entering pswd
+insidewrongcolor=d23c3dff  #show inside before entering pswd
 
 ringcolor=#282a36   #show ring while entering pswd
 insidecolor=50fa7b  #show inside while entering pswd
