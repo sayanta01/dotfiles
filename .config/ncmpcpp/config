@@ -1,6 +1,6 @@
 ncmpcpp_directory = "~/.config/ncmpcpp"
-mpd_music_dir = "~/music"
 lyrics_directory = "~/.local/share/lyrics"
+mpd_music_dir = "~/music"
 message_delay_time = "2"
 
 ## Seeking ##
@@ -16,14 +16,13 @@ default_place_to_search_in = "database"
 playlist_editor_display_mode = "columns"
 search_engine_display_mode = "columns"
 
-
 autocenter_mode = "yes"
 follow_now_playing_lyrics = "yes"
 ignore_leading_the = "yes"
 
 ## Display Modes ##
-browser_display_mode = "columns"
 playlist_display_mode = "columns"
+browser_display_mode = "columns"
 
 ## General Colors ##
 colors_enabled = "yes"
