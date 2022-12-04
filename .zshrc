@@ -214,7 +214,7 @@ alias z='devour zathura'
 
 alias vim='nvim'
 alias mpad='mousepad'
-alias mpc='mpd ; ncmpcpp'
+alias mpc='mpd 2>/dev/null ; ncmpcpp'
 alias ytdl-vid="yt-dlp -f bestvideo+bestaudio"
 alias ytdl-aud="yt-dlp --extract-audio --audio-format m4a"
 
