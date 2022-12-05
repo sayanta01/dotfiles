@@ -7,8 +7,8 @@
     <property name="DoubleClickTime" type="int" value="260"/>
     <property name="DoubleClickDistance" type="int" value="4"/>
     <property name="DndDragThreshold" type="int" value="8"/>
-    <property name="CursorBlink" type="empty"/>
-    <property name="CursorBlinkTime" type="empty"/>
+    <property name="CursorBlink" type="bool" value="true"/>
+    <property name="CursorBlinkTime" type="int" value="2000"/>
     <property name="SoundThemeName" type="empty"/>
     <property name="EnableEventSounds" type="empty"/>
     <property name="EnableInputFeedbackSounds" type="empty"/>

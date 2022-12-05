@@ -1,5 +1,5 @@
 favorites=xfce4-terminal-emulator.desktop,xfce4-file-manager.desktop,xfce4-web-browser.desktop
-recent=img.desktop,xfce4-accessibility-settings.desktop,blueman-manager.desktop,blueman-adapters.desktop,xfce-session-settings.desktop,xfce-mouse-settings.desktop,xfce-ui-settings.desktop,nvtop.desktop,google-chrome.desktop,virtualbox.desktop
+recent=xfce4-notifyd-config.desktop,xfce4-terminal.desktop,org.xfce.mousepad.desktop,xfce-mouse-settings.desktop,lf.desktop,xfce-keyboard-settings.desktop,thunar-settings.desktop,xfce4-file-manager.desktop,xfce-display-settings.desktop,xfce-backdrop-settings.desktop
 button-icon=kali-panel-menu
 button-single-row=false
 show-button-title=false
@@ -23,7 +23,7 @@ position-categories-horizontal=false
 stay-on-focus-out=false
 profile-shape=0
 confirm-session-command=true
-menu-width=605
+menu-width=601
 menu-height=665
 menu-opacity=100
 command-settings=xfce4-settings-manager
