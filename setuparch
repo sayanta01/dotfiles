@@ -22,22 +22,32 @@ sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \
      exa bat tldr fd ripgrep procs duf dust \
-     cargo linux-headers firefox meld man \
-     mate-calc rsync wget curl fzf aria2 neovim \
+     mate-calc rsync wget curl man fzf aria2 \
+     cargo linux-headers firefox meld neovim kitty \
+     neofetch htop bpytop cowsay \
      bspwm polybar sxhkd rofi dunst \
-     kitty qt5ct qt6ct kvantum lxappearance xcape \
-     pipewire pipewire-pulse wireplumber pavucontrol playerctl mpd ncmpcpp dbus-python \
-     dialog cmake wmctrl wmname xdotool imwheel \
+     qt5ct qt6ct kvantum lxappearance xcape \
+     pavucontrol playerctl mpd ncmpcpp dbus-python \
+     dialog cmake jq wmname imwheel \
      wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils \
      mpv imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
      unrar unzip zip p7zip tar engrampa lf \
      tree ncdu thunar thunar-archive-plugin thunar-media-tags-plugin \
+     zathura zathura-pdf-mupdf ghostscript \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-     htop neofetch bpytop zathura zathura-pdf-mupdf ghostscript \
      trash-cli yt-dlp transmission-cli \
      intel-ucode virtualbox-guest-utils \
-     xdg-utils xdg-user-dirs xdo xclip jq cowsay
-# libnotify libconfig dash connman mediainfo perl-image-exiftool pulseaudio-bluetooth brightnessctl
+     xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
+# libnotify libconfig mediainfo perl-image-exiftool 
+
+# use PipeWire
+# sudo pacman -S pipewire pipewire-pulse wireplumber 
+# use PulseAudio
+# sudo pacman -S pulseaudio pulseaudio-bluetooth 
+
+
+# For Laptops
+# sudo pacman -S brightnessctl
 
 cargo install ttyper
 
@@ -62,6 +72,16 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
 #sudo touch /run/runit/service/docker/down           ( artix )
 #qemu-arch-extra docker openssh  ( arch )
 
+git clone https://aur.archlinux.org/paru.git ~/paru
+cd ~/paru && makepkg -si 
+paru -S google-chrome betterlockscreen cava preload \
+visual-studio-code-bin ttf-comic-mono-git xwinwrap-git 
+#anki notion-app 
+# plymouth-nosystemd  ( artix )
+# plymouth ly  ( arch )
+#sudo systemctl enable ly.service  ( arch )
+#sudo systemctl enable fstrim.timer  ( arch )
+
 #### Setup Virt-Manager ####
 #sudo ln -s /etc/runit/sv/virtlogd /run/runit/service  ( artix )
 #sudo touch /run/runit/service/virtlogd/down  ( artix )
@@ -74,26 +94,23 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
 #sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
 #sudo virsh net-autostart default
 
-git clone https://aur.archlinux.org/paru.git ~/paru
-cd ~/paru && makepkg -si 
-paru -S google-chrome betterlockscreen cava preload \
-visual-studio-code-bin ttf-comic-mono-git xwinwrap-git 
-#anki notion-app 
-# plymouth-nosystemd  ( artix )
-# plymouth ly  ( arch )
-#sudo systemctl enable ly.service  ( arch )
-#sudo systemctl enable fstrim.timer  ( arch )
+# use dash symlink for /bin/sh  - do this carefully it can break whole system 
+# readlink /bin/sh  - check system shell
+# sudo pacman -S checkbashisms dash
+# find /usr/bin/ -type f -perm -o=r -print0 | xargs -0r gawk '/^#!.*( |[/])sh/{printf "%s\0", FILENAME} {nextfile}' | xargs -0r checkbashisms  - check if all your /usr/bin script is compatible with dash or not
+# sudo ln -sfT dash /usr/bin/sh  - change dash as system shell, only run this, after you've corrected all your script for dash
+# sudo vim /usr/share/libalpm/hooks/bash-update.hook >> http://0x0.st/okdY.sh || install dashbinsh from AUR  - fix overwriting symlink after update bash  
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
  
-#Boost Linux
-# GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
-
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
 sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
+
+#Boost Linux
+# GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 
 #Display asterisks while entering passwd
 # /etc/sudoers add Defaults    pwfeedback
