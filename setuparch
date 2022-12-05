@@ -39,24 +39,21 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      intel-ucode virtualbox-guest-utils \
      xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
 # libnotify libconfig mediainfo perl-image-exiftool 
+# sudo pacman -S brightnessctl  - for Laptops
 
 # use PipeWire
 # sudo pacman -S pipewire pipewire-pulse wireplumber 
 # use PulseAudio
 # sudo pacman -S pulseaudio pulseaudio-bluetooth 
 
-
-# For Laptops
-# sudo pacman -S brightnessctl
-
 cargo install ttyper
 
 sudo pacman -S --noconfirm lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
-#lightdm-runit  ( artix )
+# lightdm-runit  ( artix )
 #lightdm  ( arch )
-#dm-tool switch-to-greeter 
+# dm-tool switch-to-greeter 
 # /etc/lightdm/lightdm-gtk-greeter.conf >> background = /etc/lightdm/bg.png  ( move any bg to /etc/lightdm )
-#sudo ln -s /etc/runit/sv/lightdm /run/runit/service  ( artix )
+# sudo ln -s /etc/runit/sv/lightdm /run/runit/service  ( artix )
 #sudo systemctl enable lightdm.service  ( arch )
 
 sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia \
@@ -65,11 +62,11 @@ obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord telegram
 bluez blueman bluez-utils ntfs-3g \
 qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
 # sudo usermod -aG vboxusers $USER  # enable USB usage in Virtual-Box
-#bluez-runit libvirt-runit docker-runit openssh-runit  ( artix )
-#sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
-#sudo touch /run/runit/service/sshd/down           ( artix )
-#sudo ln -s /run/runit/sv/docker /run/runit/service  ( artix )
-#sudo touch /run/runit/service/docker/down           ( artix )
+# bluez-runit libvirt-runit docker-runit openssh-runit  ( artix )
+# sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
+# sudo touch /run/runit/service/sshd/down           ( artix )
+# sudo ln -s /run/runit/sv/docker /run/runit/service  ( artix )
+# sudo touch /run/runit/service/docker/down           ( artix )
 #qemu-arch-extra docker openssh  ( arch )
 
 git clone https://aur.archlinux.org/paru.git ~/paru
@@ -83,18 +80,18 @@ visual-studio-code-bin ttf-comic-mono-git xwinwrap-git
 #sudo systemctl enable fstrim.timer  ( arch )
 
 #### Setup Virt-Manager ####
-#sudo ln -s /etc/runit/sv/virtlogd /run/runit/service  ( artix )
-#sudo touch /run/runit/service/virtlogd/down  ( artix )
-#sudo ln -s /etc/runit/sv/libvirtd /run/runit/service  ( artix )
-#sudo touch /run/runit/service/libvirtd/down  ( artix )
+# sudo ln -s /etc/runit/sv/virtlogd /run/runit/service  ( artix )
+# sudo touch /run/runit/service/virtlogd/down  ( artix )
+# sudo ln -s /etc/runit/sv/libvirtd /run/runit/service  ( artix )
+# sudo touch /run/runit/service/libvirtd/down  ( artix )
 #sudo systemctl enable --now libvirtd  ( arch )
 #sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104  ( arch )
-#sudo usermod -aG libvirt $USER
+# sudo usermod -aG libvirt $USER
 #sudo systemctl restart libvirtd  ( arch )
-#sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
-#sudo virsh net-autostart default
+# sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
+# sudo virsh net-autostart default
 
-# use dash symlink for /bin/sh  - do this carefully it can break whole system 
+#use dash symlink for /bin/sh  - do this carefully it can break whole system 
 # readlink /bin/sh  - check system shell
 # sudo pacman -S checkbashisms dash
 # find /usr/bin/ -type f -perm -o=r -print0 | xargs -0r gawk '/^#!.*( |[/])sh/{printf "%s\0", FILENAME} {nextfile}' | xargs -0r checkbashisms  - check if all your /usr/bin script is compatible with dash or not
@@ -123,7 +120,7 @@ sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 
 # install - gnome-keyring  ( fix - GDBus.Error:org.freedesktop.DBus.Error in VS-Code ) 
 
-# /etc/locale.conf >>  ( fix suckless utilities give XOpenIM failed error )
+#/etc/locale.conf >>  ( fix suckless utilities give XOpenIM failed error )
 # LANG=en_US.UTF-8
 # LC_CTYPE=en_US.UTF-8
 # LC_ADDRESS=en_US.UTF-8
