@@ -59,24 +59,23 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter lightdm-gtk-greeter-settings grub
 sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia \
 scrcpy android-tools nvtop stress \
 obs-studio audacity gimp inkscape virtualbox kdeconnect blender discord telegram-desktop \
-bluez blueman bluez-utils ntfs-3g \
+blueman bluez-utils ntfs-3g \
 qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
 # sudo usermod -aG vboxusers $USER  # enable USB usage in Virtual-Box
-# bluez-runit libvirt-runit docker-runit openssh-runit  ( artix )
-# sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
-# sudo touch /run/runit/service/sshd/down           ( artix )
+# bluez-runit docker-runit openssh-runit libvirt-runit   ( artix )
 # sudo ln -s /run/runit/sv/docker /run/runit/service  ( artix )
 # sudo touch /run/runit/service/docker/down           ( artix )
-#qemu-arch-extra docker openssh  ( arch )
+# sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
+# sudo touch /run/runit/service/sshd/down           ( artix )
+#bluez docker openssh qemu-arch-extra  ( arch )
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
 paru -S google-chrome betterlockscreen cava preload \
 visual-studio-code-bin ttf-comic-mono-git xwinwrap-git 
 #anki notion-app 
-# plymouth-nosystemd  ( artix ) or plymouth ly  ( arch )
+#plymouth-nosystemd  ( artix ) or plymouth ly  ( arch )
 #sudo systemctl enable ly.service  ( arch )
-#sudo systemctl enable fstrim.timer  ( arch )
 
 #### Setup Virt-Manager ####
 # sudo ln -s /etc/runit/sv/virtlogd /run/runit/service  ( artix )
@@ -103,6 +102,9 @@ nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
  
+# sudo vim /etc/hosts           ( blk sites )
+# /etc/pacman.conf              ( uncheck ignorepkg and put pkgname )
+
 # Change Teletype font 
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
 sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
@@ -110,15 +112,11 @@ sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 # Display Asterisks while entering pswd
 sudo su root -c "echo -e Defaults pwfeedback >> /etc/sudoers"
 
-# Fix qt5ct
-sudo su root -c "echo -e QT_QPA_PLATFORMTHEME="qt5ct" >> /etc/environment"
-
 # Boost Linux
-# GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
+# /etc/default/grub >> GRUB_CMDLINE_LINUX*="rhgb quiet mitigations=off"
+#sudo systemctl enable fstrim.timer  ( arch )
 
-# sudo vim /etc/hosts           ( blk sites )
-# /etc/pacman.conf              ( uncheck ignorepkg and put pkgname )
-
+# QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment    ( fix qt5ct )
 # ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
 
 # install - gnome-keyring  ( fix - GDBus.Error:org.freedesktop.DBus.Error in VS-Code ) 
