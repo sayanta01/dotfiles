@@ -74,8 +74,7 @@ cd ~/paru && makepkg -si
 paru -S google-chrome betterlockscreen cava preload \
 visual-studio-code-bin ttf-comic-mono-git xwinwrap-git 
 #anki notion-app 
-# plymouth-nosystemd  ( artix )
-# plymouth ly  ( arch )
+# plymouth-nosystemd  ( artix ) or plymouth ly  ( arch )
 #sudo systemctl enable ly.service  ( arch )
 #sudo systemctl enable fstrim.timer  ( arch )
 
@@ -91,36 +90,40 @@ visual-studio-code-bin ttf-comic-mono-git xwinwrap-git
 # sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
 # sudo virsh net-autostart default
 
-#use dash symlink for /bin/sh  - do this carefully it can break whole system 
+# Use dash symlink for /bin/sh  - do this carefully it can break whole system 
 # readlink /bin/sh  - check system shell
 # sudo pacman -S checkbashisms dash
 # find /usr/bin/ -type f -perm -o=r -print0 | xargs -0r gawk '/^#!.*( |[/])sh/{printf "%s\0", FILENAME} {nextfile}' | xargs -0r checkbashisms  - check if all your /usr/bin script is compatible with dash or not
 # sudo ln -sfT dash /usr/bin/sh  - change dash as system shell, only run this, after you've corrected all your script for dash
 # sudo vim /usr/share/libalpm/hooks/bash-update.hook >> http://0x0.st/okdY.sh || install dashbinsh from AUR  - fix overwriting symlink after update bash  
 
+# Change DNS server to cloudflare 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
  
+# Change Teletype font 
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
 sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 
-#Boost Linux
-# GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
+# Display Asterisks while entering pswd
+sudo su root -c "echo -e Defaults pwfeedback >> /etc/sudoers"
 
-#Display asterisks while entering passwd
-# /etc/sudoers add Defaults    pwfeedback
+# Fix qt5ct
+sudo su root -c "echo -e QT_QPA_PLATFORMTHEME="qt5ct" >> /etc/environment"
+
+# Boost Linux
+# GRUB_CMDLINE_LINUX="rhgb quiet mitigations=off"
 
 # sudo vim /etc/hosts           ( blk sites )
 # /etc/pacman.conf              ( uncheck ignorepkg and put pkgname )
 
-# QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment    ( fix qt5ct )
 # ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
 
 # install - gnome-keyring  ( fix - GDBus.Error:org.freedesktop.DBus.Error in VS-Code ) 
 
-#/etc/locale.conf >>  ( fix suckless utilities give XOpenIM failed error )
+# /etc/locale.conf >>  ( fix suckless utilities give XOpenIM failed error )
 # LANG=en_US.UTF-8
 # LC_CTYPE=en_US.UTF-8
 # LC_ADDRESS=en_US.UTF-8
