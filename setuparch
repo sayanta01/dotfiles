@@ -39,7 +39,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      intel-ucode virtualbox-guest-utils \
      xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
 # libnotify libconfig mediainfo perl-image-exiftool 
-# sudo pacman -S brightnessctl  - for Laptops
+# sudo pacman -S brightnessctl  - for Laptop
 
 # use PipeWire
 # sudo pacman -S pipewire pipewire-pulse wireplumber 
