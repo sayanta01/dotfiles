@@ -55,6 +55,7 @@ export LESSHISTFILE="-"  # Disable files
 # export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 
 export QT_QPA_PLATFORMTHEME="gtk2"    # have QT use gtk2 theme.
+export QT_QPA_PLATFORMTHEME="qt5ct"   
 # export AWT_TOOLKIT="MToolkit wmname LG3D"  # fix Java applications do not work in DWM
 export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D
 # export QT_QPA_PLATFORM=wayland      # needed for wayland
