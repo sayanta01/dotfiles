@@ -63,14 +63,13 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # History configurations
 HISTSIZE=2000
 SAVEHIST=2000
-# HISTFILE="$XDG_DATA_HOME/history"
+HISTFILE="$XDG_DATA_HOME/history"
 setopt hist_ignore_space       # ignore commands that start with space
 setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_all_dups    # ignore duplicated commands history list
 setopt hist_verify             # show command with history expansion to user before running it
 
 # Plugins
-source ~/.zprofile
 # source ~/.config/zsh/zsh-fzf-history-search.zsh 2>/dev/null
 
 # Kali PATH
@@ -106,7 +105,6 @@ PROMPT=' %b%{$fg[red]%}❯${vcs_info_msg_0_}%  '
 #### ALIAS #### 
 # Kali
 alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
-alias fixburp='export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D'
 #alias install='sudo nala install'
 #alias update='sudo nala update'
 #alias clean='sudo apt -y autoremove; sudo apt clean'
