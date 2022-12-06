@@ -114,7 +114,7 @@ sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 
 # Boost Linux
 # /etc/default/grub >> GRUB_CMDLINE_LINUX*="rhgb quiet mitigations=off"
-#sudo systemctl enable fstrim.timer  ( arch )
+#sudo systemctl enable fstrim.timer  ( arch )  running fstrim frequently, or even using mount -o discard, might negatively affect the lifetime of poor-quality SSD
 
 # QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment    ( fix qt5ct )
 # ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
