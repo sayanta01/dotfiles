@@ -1,0 +1,12 @@
+#!/bin/sh
+
+null=" "
+catch=$(pgrep -l picom)
+if [ $catch = $null ]
+then
+  notify-send -t 990 "Picom 🚀"
+  picom
+else 
+  notify-send -t 990 "Picom ☠️"
+  killall picom
+fi

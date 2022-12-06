@@ -2,7 +2,7 @@
 
 dizo="B4:9A:95:94:9B:CC"
 connect=$(bluetoothctl info $dizo | grep Connected | awk '{print $2}')
-if [ $connect = no ]
+if [ "$connect" = "no" ]
 then
         notify-send "Connecting to Dizo"
         bluetoothctl connect $dizo || notify-send "Failed to Connect"
