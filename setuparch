@@ -71,9 +71,8 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
-paru -S google-chrome betterlockscreen cava preload \
-visual-studio-code-bin ttf-comic-mono-git xwinwrap-git 
-#anki notion-app 
+paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava \
+visual-studio-code-bin google-chrome anki notion-app picom preload
 #plymouth-nosystemd  ( artix ) or plymouth ly  ( arch )
 #sudo systemctl enable ly.service  ( arch )
 
