@@ -50,7 +50,7 @@ bindkey '^K' kill-line
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 # Enable completion 
-# autoload -Uz compinit && compinit  #( default path )
+# autoload -Uz compinit && compinit  # ( default path )
 # Enable completion  (+ separate path for .zcompdump file)
 autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME/zcompdump"
 zmodload zsh/complist
@@ -70,8 +70,6 @@ setopt hist_ignore_all_dups    # ignore duplicated commands history list
 setopt hist_verify             # show command with history expansion to user before running it
 
 # Plugins
-# source ~/.config/zsh/zsh-fzf-history-search.zsh 2>/dev/null
-
 # Kali PATH
 #source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 #source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
@@ -222,9 +220,4 @@ alias ytdl-aud="yt-dlp --extract-audio --audio-format m4a"
 #alias mirrors='sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist'
 #alias mirrora='sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist'
 
-
-# Snap alias
-#alias senable='sudo systemctl enable --now snapd apparmor'
-#alias sfix='sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*'
-#export PATH=$PATH:/snap/bin
 # xprop - wm classname
