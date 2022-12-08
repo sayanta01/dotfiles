@@ -3,10 +3,10 @@
 
 #### connect wifi ####
 iwctl
-device list  # show adpater  -example: wlan0
+device list  #show adpater  - example: wlan0
 station <adpater-name> scan 
-station <adpater-name> get-networks  # show available networks
-station <adpater-name> connect <network-name>  # example: NullByte 
+station <adpater-name> get-networks            #show available networks
+station <adpater-name> connect <network-name>  #example: NullByte 
 
 #### change tty font ####
 pacman -S terminus-font
@@ -14,8 +14,8 @@ setfont /usr/share/kbd/consolefonts/ter-d18b.psf.gz
 
 #### partition disk ####
 cfdisk /dev/sda
-sda1 boot 400M      # partition type EFI system
-sda2 root           # give rest of space
+sda1 boot 400M      #partition type EFI system
+sda2 root           #give rest of space
 # sda3 swap           - optional
 write & quit
 
