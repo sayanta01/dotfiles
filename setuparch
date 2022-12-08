@@ -24,8 +24,8 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      exa bat tldr fd ripgrep procs duf dust \
      mate-calc rsync wget curl man fzf aria2 \
      cargo linux-headers firefox meld neovim kitty \
-     neofetch htop bpytop cowsay \
-     bspwm polybar sxhkd rofi dunst \
+     neofetch htop bpytop cowsay libconfig \
+     bspwm polybar sxhkd rofi dunst libnotify \
      qt5ct qt6ct kvantum lxappearance xcape \
      pavucontrol playerctl mpd ncmpcpp dbus-python \
      dialog cmake jq wmname imwheel \
@@ -38,7 +38,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      trash-cli yt-dlp transmission-cli \
      intel-ucode virtualbox-guest-utils \
      xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
-# libnotify libconfig mediainfo perl-image-exiftool 
+# mediainfo perl-image-exiftool - additional tools 
 # sudo pacman -S brightnessctl  - for Laptop
 
 # use PipeWire
