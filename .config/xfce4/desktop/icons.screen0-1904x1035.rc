@@ -13,23 +13,31 @@ col=0
 row=3
 col=0
 
+[/home/bot/desk/kinstall]
+row=0
+col=1
+
 [/home/bot/desk/picom.conf.example]
 row=7
 col=0
 
-[/home/bot/desk/html-notes]
-row=0
+[/home/bot/desk/dwm.desktop]
+row=8
 col=0
 
 [/home/bot/desk/repo]
 row=2
 col=0
 
+[/home/bot/desk/mysite]
+row=1
+col=0
+
 [/home/bot/desk/obs-studio]
 row=5
 col=0
 
-[/home/bot/desk/mysite]
-row=1
+[/home/bot/desk/html-notes]
+row=0
 col=0
 

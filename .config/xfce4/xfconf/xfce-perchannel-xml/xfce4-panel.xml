@@ -65,6 +65,7 @@
         <value type="string" value="networkmanager applet"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="KDE Connect Indicator"/>
         <value type="string" value="discord1"/>
         <value type="string" value="Slack1"/>
         <value type="string" value="obs"/>
