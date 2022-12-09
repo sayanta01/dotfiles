@@ -1,4 +1,0 @@
-#!/bin/bash
-
-notify-send -t 900 "$(echo 🌡) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input| cut -b -2)$(echo °C)"
-notify-send -t 900 "$(echo 菉)  $(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits)$(echo °C)"
