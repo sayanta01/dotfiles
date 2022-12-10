@@ -30,14 +30,16 @@ bspc rule -a Pavucontrol state=floating center=on
 bspc rule -a Lxappearance state=floating center=on
 
 #Autostart
-pgrep -x sxhkd > /dev/null || sxhkd &
+# pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
 ./.config/polybar/launch.sh &
-xcape -e 'Super_L=Alt_L|0' & 
+./.config/bspwm/sxhkd.sh &
 xset r rate 290 50 &
-kdeconnect-indicator &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
-xrdb ~/.config/x11/xresources &
+# xcape -e 'super_l=alt_l|0' & 
+# kdeconnect-indicator &
+# xrdb ~/.config/x11/xresources &
+
 
 #killall -q "imwheel" &
 #imwheel -b 45 &

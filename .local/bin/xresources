@@ -1,4 +1,4 @@
 #!/bin/bash
 
-xrdb merge ~/.config/x11/xresources &
+xrdb merge ~/.config/x11/xresources
 

@@ -1,12 +1,28 @@
 #!/bin/sh
 
-null=" "
-catch=$(pgrep -l picom)
-if [ $catch = $null ]
+# null=" "
+# catch=$(pgrep -l picom)
+# if [ $catch = $null ]
+# then
+#   notify-send -t 990 "Picom 🚀"
+#   picom
+# else 
+#   notify-send -t 990 "Picom ☠️"
+#   killall picom
+# fi
+
+
+# Name of the program to check
+PROGRAM="picom"
+
+# Check if the program is running
+if pgrep "$PROGRAM" > /dev/null
 then
-  notify-send -t 990 "Picom 🚀"
-  picom
-else 
-  notify-send -t 990 "Picom ☠️"
-  killall picom
+    # If the program is running, kill it
+    notify-send -t 990 "Picom ☠️"
+    pkill "$PROGRAM"
+else
+    # If the program is not running, start it
+    notify-send -t 990 "Picom 🚀"
+    "$PROGRAM" &
 fi

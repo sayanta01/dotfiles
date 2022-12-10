@@ -35,7 +35,7 @@ XF86AudioMicMute
 
 # hide unhide bar
 super + u
-        bash ~/.local/bin/toggle-polybar
+        bash ~/.local/bin/statusbar/toggle-polybar
         # polybar-msg cmd toggle | bspc config top_padding 0
 
 # hide all windows
@@ -79,7 +79,7 @@ alt + F4
 
  # system_action
 super + F4
-        bash ~/.local/bin/system_action
+        bash ~/.local/bin/dm-script/system_action
 	 
 # switch audio
 alt + F5       
@@ -103,7 +103,7 @@ alt + F8
        
 # wifi
 alt + F9
-      bash ~/.local/bin/wifi             
+      bash ~/.local/bin/dm-script/wifi             
         
 # screenshot
 Print
@@ -161,7 +161,7 @@ ctrl + alt + l
 	     
 # kill ps
 ctrl + alt + Delete
-                  bash ~/.local/bin/kil	     
+                  bash ~/.local/bin/dm-script/kil	     
 
 
 

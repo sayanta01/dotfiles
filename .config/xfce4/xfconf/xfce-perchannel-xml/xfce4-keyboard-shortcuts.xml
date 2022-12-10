@@ -63,11 +63,11 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="betterlockscreen -l blur"/>
       <property name="&lt;Alt&gt;F5" type="string" value="./.local/bin/audiosw"/>
       <property name="&lt;Alt&gt;F1" type="string" value="./.local/bin/btch"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="./.local/bin/kil"/>
-      <property name="&lt;Super&gt;F4" type="string" value="./.local/bin/system_action"/>
-      <property name="&lt;Super&gt;u" type="string" value="./.local/bin/hide-xfce-panel"/>
-      <property name="&lt;Alt&gt;F9" type="string" value="./.local/bin/wifi"/>
       <property name="&lt;Alt&gt;s" type="string" value="spotify-launcher"/>
+      <property name="&lt;Super&gt;u" type="string" value="./.local/bin/statusbar/toggle-xfce-panel"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="./.local/bin/dm-script/kil"/>
+      <property name="&lt;Alt&gt;F9" type="string" value="./.local/bin/dm-script/wifi"/>
+      <property name="&lt;Super&gt;F4" type="string" value="./.local/bin/dm-script/system_action"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
