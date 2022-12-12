@@ -6,7 +6,7 @@ cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/
 cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config/sxiv/exec/* ~/.config/lf/{scope,cleaner}
 
-mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
+mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp} 
 
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
@@ -24,13 +24,13 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      exa bat tldr fd ripgrep procs duf dust \
      mate-calc rsync wget curl man fzf aria2 \
      cargo linux-headers firefox meld neovim kitty \
-     neofetch htop bpytop cowsay libconfig \
+     neofetch htop bpytop cowsay libconfig gnome-keyring \
      bspwm polybar sxhkd rofi dunst libnotify \
      qt5ct qt6ct kvantum lxappearance xcape \
      pavucontrol playerctl mpd ncmpcpp dbus-python \
      dialog cmake jq wmname imwheel \
      wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils \
-     mpv imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
+     mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
      unrar unzip zip p7zip tar engrampa lf \
      tree ncdu thunar thunar-archive-plugin thunar-media-tags-plugin \
      zathura zathura-pdf-mupdf ghostscript \
@@ -38,15 +38,13 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      trash-cli yt-dlp transmission-cli \
      intel-ucode virtualbox-guest-utils \
      xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
-# mediainfo perl-image-exiftool - additional tools 
+# socat exfat-utils  - additional tools 
 # sudo pacman -S brightnessctl  - for Laptop
 
 # use PipeWire
 # sudo pacman -S pipewire pipewire-pulse wireplumber 
 # use PulseAudio
 # sudo pacman -S pulseaudio pulseaudio-bluetooth 
-
-cargo install ttyper
 
 sudo pacman -S --noconfirm lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
 # lightdm-runit  ( artix )
@@ -71,8 +69,8 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
-paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava \
-visual-studio-code-bin google-chrome anki notion-app picom preload
+paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava simple-mtpfs \
+visual-studio-code-bin google-chrome anki notion-app ttyper picom-ibhagwan-git
 #plymouth-nosystemd  ( artix ) or plymouth ly  ( arch )
 #sudo systemctl enable ly.service  ( arch )
 
@@ -117,8 +115,6 @@ sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 
 # QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment    ( fix qt5ct )
 # ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
-
-# install - gnome-keyring  ( fix - GDBus.Error:org.freedesktop.DBus.Error in VS-Code ) 
 
 # /etc/locale.conf >>  ( fix suckless utilities give XOpenIM failed error )
 # LANG=en_US.UTF-8
