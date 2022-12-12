@@ -1,12 +1,14 @@
 #!/bin/sh
+
 # A dmenu wrapper script for system functions.
 case "$(readlink -f /sbin/init)" in
 	*systemd*) ctl='systemctl' ;;
 	*) ctl='loginctl' ;;
 esac
 
-case "$(printf " reboot\n shutdown" | dmenu -p '>_')" in
-	' reboot') $ctl reboot ;;
-	' shutdown') $ctl poweroff ;;
+case "$(printf " reboot\n shutdown\n logout" | dmenu -i -p 'Action ')" in
+	' reboot') $ctl reboot ;;
+	' shutdown') $ctl poweroff ;;
+	' logout') kill -9 -1 ;;
 	*) exit 1 ;;
 esac

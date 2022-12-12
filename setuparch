@@ -69,8 +69,8 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
 
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
-paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava simple-mtpfs \
-visual-studio-code-bin google-chrome anki notion-app ttyper picom-ibhagwan-git
+paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava picom-ibhagwan-git \
+visual-studio-code-bin google-chrome anki notion-app ttyper browsh simple-mtpfs  
 #plymouth-nosystemd  ( artix ) or plymouth ly  ( arch )
 #sudo systemctl enable ly.service  ( arch )
 
