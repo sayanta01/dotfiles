@@ -36,7 +36,7 @@ main() {
 
   # Copy amount to clipboard and send notification
   echo "$converted" 
-  notify-send "Converted amount (in clipboard)" "$converted $to_code"
+  notify-send "Converted amount" "$converted $to_code"
 }
 
 [[ "${BASH_SOURCE[0]}" == "${0}" ]] && main "$@"

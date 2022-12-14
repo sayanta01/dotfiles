@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Install xdo , xorg-xwininfo
 
+# Install xdo , xorg-xwininfo
 WINDOW_STATE=`xwininfo -name 'polybar-example_HDMI-0' | grep 'Map State:' | sed -e 's/.*:\s//g'`
 
 if [[ "IsViewable" == "$WINDOW_STATE" ]]; then
