@@ -1,6 +1,6 @@
 #!/bin/sh   
 
-file=$(find $HOME -type f | dmenu -i -l 20)
+file=$(find "$HOME" -type f | dmenu -i -l 20)
 curl -F "file=@$file" 0x0.st | xclip -sel c
 # curl -F "file=@$file" ix.io | xclip -sel c
 notify-send "0x0 "

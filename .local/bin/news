@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [[ -z $1 ]]
+if [ -z "$1" ]
 then
   date=$(date "+%Y/%m/%d");
 else
@@ -8,16 +8,16 @@ else
 fi
 
 cachedir="$HOME/.cache/epaper"
-datedir=$(sed 's/\//-/g' <<<$date)
+datedir=$(sed 's/\//-/g' <<<"$date")
 
-mkdir -p $cachedir/$datedir
+mkdir -p "$cachedir"/"$datedir"
 
 for i in 0{1..9} {10..50} ;
 do
-  wget -nc -O $cachedir/$datedir/$i.jpg https://epaperwmimg.amarujala.com/$date/dl/$i/hdimage.jpg || break
+  wget -nc -O "$cachedir"/"$datedir"/$i.jpg https://epaperwmimg.amarujala.com/"$date"/dl/$i/hdimage.jpg || break
 done
 
 notify-send -t 990 "Here is your 🗞️"
-sxiv -z 110 $cachedir/$datedir/*
+sxiv -z 110 "$cachedir"/"$datedir"/*
 
 

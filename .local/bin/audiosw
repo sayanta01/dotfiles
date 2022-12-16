@@ -6,7 +6,7 @@ earphn="bluez_output.B4_9A_95_94_9B_CC.1"
 
 curr_device=$(pactl get-default-sink)
 
-if [ $curr_device = $speaker ]
+if [ "$curr_device" = "$speaker" ]
 then
   pactl set-default-sink $earphn
 else

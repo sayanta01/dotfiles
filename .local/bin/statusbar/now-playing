@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-connect=`playerctl --list-all | grep spotify`
-music_info=`playerctl --player spotify metadata --format "{{artist}} - {{title}}" 2>/dev/null`
- [ -z "$connect" ] && echo " " || echo $music_info
+connect=$(playerctl --list-all | grep spotify)
+music_info=$(playerctl --player spotify metadata --format "{{artist}} - {{title}}" 2>/dev/null)
+ [ -z "$connect" ] && echo " " || echo "$music_info"

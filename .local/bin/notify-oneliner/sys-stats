@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # notify-send -t 990 "$(echo 🌡) $(cat /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input| cut -b -2)$(echo °C)"
-notify-send "$(cpu_usage=$(top -bn1 | awk '/^%Cpu/ {print $2}' | cut -b 1,2); echo "⚙️ CPU $cpu_usage ")"
-notify-send "$(echo "菉 GPU") $(nvidia-smi | grep % | cut -c 62-63)$(echo  )"
+notify-send "$(cpu_usage=$(top -bn1 | awk '/^%Cpu/ {print $2}'); echo "⚙️ CPU $cpu_usage ")"
+notify-send "$(echo "菉 GPU") $(nvidia-smi | grep % | cut -c 61-63)$(echo  )"
 notify-send "$(echo 🌡CPU-Temp) $(sensors | awk '/Core 0/ {print $3}' | cut -c 2- | cut -c 1,2,5,6,7)"
 notify-send "$(echo 🌡️GPU-Temp) $(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)$(echo °C)"
 notify-send "$(echo 🧠 RAM) $(free -h | awk '/Mem:/ { print $3 }' | cut -f1 -d 'i')"

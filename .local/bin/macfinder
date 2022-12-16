@@ -16,6 +16,6 @@ function banner() {
 }
 
 banner
-read -p "Mac Address: " MAC
-VENDOR=`curl ${API}/${MAC} 2> /dev/null`
+read -pr "Mac Address: " MAC
+VENDOR=`curl "${API}"/"${MAC}" 2> /dev/null`
 echo -e "Vendor: ${VENDOR}"

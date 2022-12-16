@@ -1,100 +1,85 @@
 #!/bin/sh
 
-# Usage:
-# `$0`: Ask for recording type via dmenu
-# `$0 screencast`: Record both audio and screen
-# `$0 video`: Record only screen
-# `$0 audio`: Record only audio
-# `$0 kill`: Kill existing recording
-#
-# If there is already a running instance, user will be prompted to end it.
-
-updateicon() { \
-	echo "$1" > /tmp/recordingicon
-	pkill -RTMIN+9 "${STATUSBAR:-dwmblocks}"
-	}
-
 killrecording() {
 	recpid="$(cat /tmp/recordingpid)"
 	# kill with SIGTERM, allowing finishing touches.
 	kill -15 "$recpid"
 	rm -f /tmp/recordingpid
-	updateicon ""
-	pkill -RTMIN+9 "${STATUSBAR:-dwmblocks}"
 	# even after SIGTERM, ffmpeg may still run, so SIGKILL it.
-	sleep 3
+	sleep 2
 	kill -9 "$recpid"
 	exit
 	}
 
-screencast() { \
-	ffmpeg -y \
-	-f x11grab \
-	-framerate 60 \
-	-s "$(xdpyinfo | awk '/dimensions/ {print $2;}')" \
-	-i "$DISPLAY" \
-	-f alsa -i default \
-	-r 30 \
- 	-c:v h264 -crf 0 -preset ultrafast -c:a aac \
-	"$HOME/vids/screencast-$(date '+%y%m%d-%H%M-%S').mp4" &
-	echo $! > /tmp/recordingpid
-	updateicon "⏺️🎙️"
-       	}
 
-video() { ffmpeg \
-	-f x11grab \
-	-s "$(xdpyinfo | awk '/dimensions/ {print $2;}')" \
-	-i "$DISPLAY" \
- 	-c:v libx264 -qp 0 -r 30 \
-	"$HOME/vids/video-$(date '+%y%m%d-%H%M-%S').mkv" &
-	echo $! > /tmp/recordingpid
-	updateicon "⏺️"
-	}
+video() { \
+speaker="alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1"
+earphn="bluez_output.B4_9A_95_94_9B_CC.1.monitor"
 
-webcamhidef() { ffmpeg \
-	-f v4l2 \
-	-i /dev/video0 \
-	-video_size 1920x1080 \
-	"$HOME/vids/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
-	echo $! > /tmp/recordingpid
-	updateicon "🎥"
-	}
+curr_device=$(pactl get-default-sink)
 
-webcam() { ffmpeg \
-	-f v4l2 \
-	-i /dev/video0 \
-	-video_size 640x480 \
-	"$HOME/vids/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
-	echo $! > /tmp/recordingpid
-	updateicon "🎥"
-	}
-
+if [ "$curr_device" = "$speaker" ]
+then
+  ffmpeg -thread_queue_size 4096 \
+  -f x11grab \
+  -s "$(xdpyinfo | awk '/dimensions/ {print $2;}')" \
+  -r 60 -probesize 42M -i :0.0 \
+  -f pulse -ac 2 \
+  -thread_queue_size 4096 \
+  -i alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1 \
+  -vcodec libx264 -s "1920x1080" \
+  -acodec libmp3lame -ab 128k -ar 44100 \
+  "$HOME/vids/$(date '+%I:%M:%S %d-%b').mkv" &
+  echo $! > /tmp/recordingpid
+else
+  ffmpeg -thread_queue_size 4096 \
+  -f x11grab \
+  -s "$(xdpyinfo | awk '/dimensions/ {print $2;}')" \
+  -r 60 -probesize 42M -i :0.0 \
+  -f pulse -ac 2 \
+  -thread_queue_size 4096 \
+  -i $earphn \
+  -vcodec libx264 -s "1920x1080" \
+  -acodec libmp3lame -ab 128k -ar 44100 \
+  "$HOME/vids/$(date '+%I:%M:%S %d-%b').mkv" &
+  echo $! > /tmp/recordingpid
+fi
+}
 
 audio() { \
-	ffmpeg \
-	-f alsa -i default \
-	-c:a flac \
-	"$HOME/vids/audio-$(date '+%y%m%d-%H%M-%S').flac" &
-	echo $! > /tmp/recordingpid
-	updateicon "🎙️"
-	}
+speaker="alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1"
+earphn="bluez_output.B4_9A_95_94_9B_CC.1.monitor"
+curr_device=$(pactl get-default-sink)
+
+if [ "$curr_device" = "$speaker" ]
+then
+  ffmpeg \
+  -f pulse -i alsa_input.pci-0000_00_1b.0.analog-stereo -ac 2 \
+  "$HOME/music/$(date '+%I:%M:%S %d-%b').mp4" &
+  echo $! > /tmp/recordingpid
+else
+  ffmpeg \
+  -f pulse -i $earphn -ac 2 \
+  "$HOME/music/$(date '+%I:%M:%S %d-%b').mp4" &
+  echo $! > /tmp/recordingpid
+fi
+}
+
 
 askrecording() { \
-	choice=$(printf "screencast\\nvideo\\nvideo selected\\naudio\\nwebcam\\nwebcam (hi-def)" | dmenu -i -p "Select recording style")
+	choice=$(printf "video\\naudio\\nvideo selected" | dmenu -p "Record")
 	case "$choice" in
-		screencast) screencast;;
-		audio) audio;;
 		video) video;;
+		audio) audio;;
 		*selected) videoselected;;
-		webcam) webcam;;
-		"webcam (hi-def)") webcamhidef;;
 	esac
 	}
 
 asktoend() { \
-	response=$(printf "No\\nYes" | dmenu -i -p "Recording still active. End recording?") &&
+	response=$(printf "No\\nYes" | dmenu -p "Recording still active. End recording?") &&
 	[ "$response" = "Yes" ] &&  killrecording
 	}
+
 
 videoselected()
 {
@@ -102,22 +87,24 @@ videoselected()
 	read -r X Y W H < /tmp/slop
 	rm /tmp/slop
 
-	ffmpeg \
+  ffmpeg -thread_queue_size 4096 \
 	-f x11grab \
-	-framerate 60 \
+	-r 60 -probesize 42M \
+  -thread_queue_size 4096 \
 	-video_size "$W"x"$H" \
 	-i :0.0+"$X,$Y" \
-	-c:v libx264 -qp 0 -r 30 \
-	"$HOME/vis/box-$(date '+%y%m%d-%H%M-%S').mkv" &
+	-c:v libx264 -qp 0 \
+	"$HOME/vids/$(date '+%I:%M:%S %d-%b')-box.mkv" &
 	echo $! > /tmp/recordingpid
-	updateicon "⏺️"
 }
 
+  
 case "$1" in
-	screencast) screencast;;
-	audio) audio;;
 	video) video;;
+	audio) audio;;
 	*selected) videoselected;;
 	kill) killrecording;;
 	*) ([ -f /tmp/recordingpid ] && asktoend && exit) || askrecording;;
 esac
+
+

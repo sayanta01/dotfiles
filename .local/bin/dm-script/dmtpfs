@@ -1,6 +1,6 @@
 #!/bin/sh
 
-Dir=$HOME/Cell/
+Dir=$HOME/phone/
 
 # Make the cell directory if it doesn't exist
 if [ ! -d "$Dir" ]; then
@@ -23,7 +23,7 @@ else
 fi
 
 if [ ! -n "$(find "$Dir$Name" -maxdepth 0 -empty)" ]; then
-  fusermount -u "$Dir$Name" && rm -rf $Dir && notify-send "Device Unmounted 📵"
+  fusermount -u "$Dir$Name" && rm -rf "$Dir" && notify-send "Device Unmounted 📵"
 else
   simple-mtpfs --device "$Id" "$Dir$Name" && notify-send "📲 Device Mounted in $Dir$Name"
 fi

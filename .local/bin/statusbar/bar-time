@@ -1,6 +1,6 @@
 #!/bin/sh
 
-time="$(date "+ %a, %b %d 󱑁 %I:%M:%S")" 
+time="$(date "+ %a, %d %b 󱑁 %I:%M:%S")" 
 
 echo "$time"
 
