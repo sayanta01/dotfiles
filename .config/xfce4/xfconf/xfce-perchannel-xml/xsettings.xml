@@ -23,6 +23,7 @@
   <property name="Gtk" type="empty">
     <property name="CanChangeAccels" type="bool" value="false"/>
     <property name="ColorPalette" type="empty"/>
+    <property name="DialogsUseHeader" type="bool" value="true"/>
     <property name="FontName" type="string" value="SF Pro Text Semi-Bold 11"/>
     <property name="MonospaceFontName" type="string" value="SF Mono Bold 10"/>
     <property name="IconSizes" type="empty"/>
@@ -35,7 +36,6 @@
     <property name="CursorThemeName" type="string" value="Pokemon"/>
     <property name="CursorThemeSize" type="int" value="30"/>
     <property name="DecorationLayout" type="string" value="menu:minimize,maximize,close"/>
-    <property name="DialogsUseHeader" type="empty"/>
     <property name="TitlebarMiddleClick" type="empty"/>
   </property>
   <property name="Gdk" type="empty">

@@ -94,7 +94,7 @@ videoselected()
 	-video_size "$W"x"$H" \
 	-i :0.0+"$X,$Y" \
 	-c:v libx264 -qp 0 \
-	"$HOME/vids/$(date '+%I:%M:%S %d-%b')-box.mkv" &
+	"$HOME/vids/$(date '+%I:%M:%S %d-%b')-Box.mkv" &
 	echo $! > /tmp/recordingpid
 }
 
