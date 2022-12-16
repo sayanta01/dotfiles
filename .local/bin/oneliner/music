@@ -1,4 +1,25 @@
 #!/bin/sh
 
-url="https://live.musopen.org:8085/streamvbr0"
-pkill -f $url || mpv "$url"
+# Display a dmenu prompt to choose from a list of options
+options=(lofi white-noise classic)
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -p "Choose music  ")
+
+# Execute the chosen option
+case "$choice" in
+    lofi)
+        url="https://youtu.be/jfKfPfyJRdk"; pkill -f $url || mpv "$url" --no-video
+        ;;
+    white-noise)
+        url="https://youtu.be/ArwcHjmsw3A"; pkill -f $url || mpv "$url" --no-video
+        ;;
+    classic)
+        url="https://live.musopen.org:8085/streamvbr0"; pkill -f "$url" || mpv "$url"
+        ;;
+    yt-playlist)
+        url="https://youtube.com/playlist?list=PLfl-IU7vdGi4jo_zwNjIRaeF36Fn0lh1T"; pkill -f "$url" || mpv "$url" --no-video
+        ;;
+    *)
+        # If no option is chosen, do nothing
+        :
+        ;;
+esac

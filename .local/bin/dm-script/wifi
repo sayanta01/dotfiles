@@ -1,6 +1,6 @@
 #!/bin/sh
 
-choice=$(echo -e "eth\nup\ndown\nconnect" | dmenu -p ">_ ")
+choice=$(printf "eth\nup\ndown\nconnect" | dmenu -p ">_ ")
 case $choice in
     "connect")
         bssid=$(nmcli device wifi list | sed -n '1!p' | cut -b 9- | dmenu -p "Select Wifi  " -l 20 | cut -d' ' -f1)
