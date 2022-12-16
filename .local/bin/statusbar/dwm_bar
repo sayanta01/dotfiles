@@ -9,7 +9,7 @@ update_memory () {
 }
 
 update_time () { 
-	time="$(date "+[  %a, %b %d ] [  %I:%M:%S ]")" 
+	time="$(date "+[  %a, %d %b ] [  %I:%M:%S ]")" 
 }
 
 # update_bat () { 
@@ -17,7 +17,7 @@ update_time () {
 # 	read -r bat_status </sys/class/power_supply/BAT0/status
 # 	read -r bat_capacity </sys/class/power_supply/BAT0/capacity
 # 	if [ "$bat_status" = "Charging" ]; then
-# 		bat_status=""
+# 		bat_status=""
 # 	elif [ "$bat_capacity" -gt 80 ]; then
 # 		bat_status=""
 # 	elif [ "$bat_capacity" -gt 60 ]; then
