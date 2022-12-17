@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xfce4-taskmanager" version="1.0">
-  <property name="window-width" type="int" value="1228"/>
+  <property name="window-width" type="int" value="954"/>
   <property name="window-height" type="int" value="600"/>
   <property name="interface" type="empty">
     <property name="show-all-processes" type="bool" value="false"/>

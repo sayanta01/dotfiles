@@ -2,19 +2,19 @@
 4.10.3+=true
 
 [/home/bot/desk/dotfiles]
-row=5
+row=0
 col=0
 
 [/home/bot/desk/repo]
-row=2
+row=3
 col=0
 
 [/home/bot/desk/webdevlearn]
-row=4
+row=5
 col=0
 
 [/home/bot/desk/mysite]
-row=1
+row=2
 col=0
 
 [/home/bot/desk/monitor]
@@ -22,10 +22,10 @@ row=6
 col=0
 
 [/home/bot/desk/html-notes]
-row=0
+row=1
 col=0
 
 [/home/bot/desk/scratch]
-row=3
+row=4
 col=0
 

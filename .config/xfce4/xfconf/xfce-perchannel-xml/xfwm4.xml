@@ -9,7 +9,7 @@
     <property name="workspace_count" type="int" value="10"/>
     <property name="cycle_workspaces" type="bool" value="false"/>
     <property name="scroll_workspaces" type="bool" value="true"/>
-    <property name="wrap_windows" type="bool" value="true"/>
+    <property name="wrap_windows" type="bool" value="false"/>
     <property name="box_resize" type="bool" value="false"/>
     <property name="cycle_raise" type="bool" value="false"/>
     <property name="borderless_maximize" type="bool" value="true"/>

@@ -1,5 +1,5 @@
 favorites=xfce4-terminal-emulator.desktop,xfce4-file-manager.desktop,xfce4-web-browser.desktop
-recent=xfce-session-settings.desktop,org.kde.kdeconnect.app.desktop,install4j_a177y-BurpSuiteCommunity.desktop,pavucontrol.desktop,xfce4-web-browser.desktop,xfce4-notifyd-config.desktop,xfce4-terminal.desktop,org.xfce.mousepad.desktop,xfce-mouse-settings.desktop,lf.desktop
+recent=xfce-settings-manager.desktop,xfce4-settings-editor.desktop,install4j_a177y-BurpSuiteCommunity.desktop,xfce-ui-settings.desktop,xfce-wm-settings.desktop,xfce-display-settings.desktop,xfce-keyboard-settings.desktop,xfce-session-settings.desktop,org.kde.kdeconnect.app.desktop,pavucontrol.desktop
 button-icon=kali-panel-menu
 button-single-row=false
 show-button-title=false
