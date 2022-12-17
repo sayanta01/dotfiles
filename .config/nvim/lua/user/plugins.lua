@@ -47,7 +47,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-nvim-lua"
-  use "f3fora/cmp-spell"  
+  use "f3fora/cmp-spell"
 
   -- snippets
   use "L3MON4D3/LuaSnip"
@@ -73,8 +73,4 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
-    
-  if PACKER_BOOTSTRAP then
-    require("packer").sync()
-  end
 end)
