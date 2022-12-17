@@ -40,7 +40,6 @@ local options = {
   --relativenumber = false,
   scrolloff = 6,
   sidescrolloff = 8,
-  
   lazyredraw = true,
   copyindent = true,  --Copy the previous indentation on autoindenting
   fillchars = { eob = " " },  --Disable `~` on nonexistent lines

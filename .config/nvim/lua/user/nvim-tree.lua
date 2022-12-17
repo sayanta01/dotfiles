@@ -89,7 +89,7 @@ local options = {
         },
         git = {
           unstaged = "",
-          staged = "",          
+          staged = "",
           unmerged = "",
           renamed = "➜",
           untracked = "U",

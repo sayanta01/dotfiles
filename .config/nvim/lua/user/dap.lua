@@ -30,9 +30,6 @@ dapui.setup {
     size = 40,
     position = "right", -- Can be "left", "right", "top", "bottom"
   },
-  layouts = {
-    elements = {},
-  },
 }
 
 vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
