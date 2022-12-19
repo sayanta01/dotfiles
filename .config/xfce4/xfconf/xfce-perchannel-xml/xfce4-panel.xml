@@ -16,6 +16,7 @@
         <value type="int" value="11"/>
         <value type="int" value="12"/>
         <value type="int" value="2"/>
+        <value type="int" value="4"/>
         <value type="int" value="5"/>
         <value type="int" value="14"/>
         <value type="int" value="16"/>
@@ -110,6 +111,9 @@
     </property>
     <property name="plugin-2" type="string" value="cpugraph"/>
     <property name="plugin-3" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-4" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
   </property>
