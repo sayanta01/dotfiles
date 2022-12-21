@@ -2,26 +2,26 @@
 4.10.3+=true
 
 [/home/bot/desk/repo]
-row=3
-col=0
-
-[/home/bot/desk/webdevlearn]
-row=5
-col=0
-
-[/home/bot/desk/mysite]
 row=2
 col=0
 
-[/home/bot/desk/monitor]
-row=6
+[/home/bot/desk/webdevlearn]
+row=4
 col=0
 
-[/home/bot/desk/html-notes]
+[/home/bot/desk/mysite]
 row=1
 col=0
 
+[/home/bot/desk/monitor]
+row=5
+col=0
+
+[/home/bot/desk/html-notes]
+row=0
+col=0
+
 [/home/bot/desk/scratch]
-row=4
+row=3
 col=0
 

@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xfce4-taskmanager" version="1.0">
-  <property name="window-width" type="int" value="954"/>
-  <property name="window-height" type="int" value="600"/>
+  <property name="window-width" type="int" value="870"/>
+  <property name="window-height" type="int" value="962"/>
   <property name="interface" type="empty">
     <property name="show-all-processes" type="bool" value="false"/>
     <property name="full-command-line" type="bool" value="false"/>
-    <property name="process-tree" type="bool" value="false"/>
-    <property name="refresh-rate" type="uint" value="750"/>
+    <property name="process-tree" type="bool" value="true"/>
+    <property name="refresh-rate" type="uint" value="1000"/>
+    <property name="more-precision" type="bool" value="false"/>
+    <property name="show-application-icons" type="bool" value="true"/>
+  </property>
+  <property name="prompt-terminate-task" type="bool" value="true"/>
+  <property name="show-status-icon" type="bool" value="false"/>
+  <property name="columns" type="empty">
+    <property name="column-pid" type="bool" value="true"/>
+    <property name="column-rss" type="bool" value="true"/>
+    <property name="column-uid" type="bool" value="false"/>
+    <property name="column-cpu" type="bool" value="true"/>
+    <property name="column-priority" type="bool" value="false"/>
   </property>
 </channel>
