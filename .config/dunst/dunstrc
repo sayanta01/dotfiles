@@ -16,7 +16,7 @@
     frame_color = "#ABB2BF"
     separator_color = frame
     sort = yes
-    font = BlexMono Nerd Font Italic 11
+    font = BlexMono Nerd Font Medium Italic 11
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
