@@ -26,31 +26,20 @@ sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
-#curl https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
-#echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-
 sudo apt update
 sudo apt install -y fonts-jetbrains-mono fonts-terminus fonts-roboto \
 bspwm polybar rofi kitty dunst lxappearance maim playerctl \
 cargo ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf \
 lf zathura htop qt5-style-kvantum meld \
 imwheel xclip xdo xwallpaper gpg cowsay xcape betterlockscreen \
-exiftool preload aria2 wmname wmctrl neofetch \
+exiftool aria2 wmname wmctrl neofetch \
 transmission-cli transmission-daemon trash-cli yt-dlp \
-mpd ncmpcpp cava docker.io inkscape
-#bpytop ncdu apt-transport-https translate-shell aptitude \
-#nvidia-driver nvidia-cuda-toolkit nvtop \
-#android-tools-fastboot scrcpy android-tools-adb \
-#spotify-client obs-studio audacity gimp stacer kdeconnect telegram-desktop synaptic
+mpd ncmpcpp cava docker.io 
+#ncdu apt-transport-https translate-shell aptitude synaptic stacer 
 #sudo systemctl disable docker.socket
 
-#pip install pywal
 cargo install ttyper bat
 
-#sudo apt install -y virt-manager 
-#sudo usermod -aG libvirt,kvm $USER
-
-#git clone https://github.com/abba23/spotify-adblock.git && cd spotify-adblock && make && sudo make install
 #wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
 aria2c -x9 -o vscode.deb -d ~/dl 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
 aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
