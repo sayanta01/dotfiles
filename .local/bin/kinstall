@@ -5,7 +5,7 @@
 yes '
 ' | sudo apt full-upgrade
 
-cp -r ~/dotfiles/{.zshrc,.zprofile,.profile,.xinitrc,.xprofile,.imwheelrc} ~/
+cp -r ~/dotfiles/{.zshrc,.zprofile,.profile,.xprofile,.imwheelrc} ~/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
 cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
