@@ -1,15 +1,15 @@
 #!/bin/sh
 
 if [ -f "$HOME/.xprofile" ]; then
-	. "$HOME/.xprofile"
+	."$HOME/.xprofile"
 else
-	. "$HOME/.xprofile"
+	."$HOME/.xprofile"
 fi
 
 if [ -f "$HOME/.profile" ]; then
-	. "$HOME/.profile"
+	."$HOME/.profile"
 else
-	. "$HOME/.profile"
+	."$HOME/.profile"
 fi
 
 
