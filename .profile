@@ -47,11 +47,10 @@ export LESSHISTFILE="-"  # Disable files
 # export LESS="-R"
 
 # Xorg files
+# export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 # export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
 # export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 # export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
-# export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
-# export XSERVERRC="$XDG_CONFIG_HOME/x11/xserverrc"
 
 export QT_QPA_PLATFORMTHEME="gtk2"    # have QT use gtk2 theme.
 export QT_QPA_PLATFORMTHEME="qt5ct"   
