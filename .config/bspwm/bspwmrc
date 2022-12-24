@@ -33,7 +33,7 @@ bspc rule -a Lxappearance state=floating center=on
 # pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
 ./.config/polybar/launch.sh &
-./.config/bspwm/sxhkd.sh &
+./.config/sxhkd/sxhkd.sh &
 xset r rate 290 50 &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
 # xcape -e 'super_l=alt_l|0' & 

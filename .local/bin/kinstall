@@ -8,7 +8,7 @@ yes '
 cp -r ~/dotfiles/{.zshrc,.zprofile,.profile,.xprofile,.imwheelrc} ~/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
 cp -r ~/dotfiles/.config/. ~/.config
-chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
+chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
 
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
 
