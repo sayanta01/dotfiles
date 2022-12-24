@@ -38,7 +38,7 @@ xset r rate 290 50 &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
 # xcape -e 'super_l=alt_l|0' & 
 # kdeconnect-indicator &
-# xrdb ~/.config/x11/xresources &
+# xrdb ~/.config/x11/xresources
 
 
 #killall -q "imwheel" &
