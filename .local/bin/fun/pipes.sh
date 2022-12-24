@@ -89,7 +89,7 @@ CN=${#C[@]}
 
 cleanup() {
     # clear up standard input
-    read -tr 0.001 && cat </dev/stdin>/dev/null
+    read -t 0.001 && cat </dev/stdin>/dev/null
 
     # terminal has no smcup and rmcup capabilities
     ((FORCE_RESET)) && reset && exit 0
