@@ -41,7 +41,7 @@ export HISTFILE="$XDG_DATA_HOME/bash/history"    # run this - mkdir -p "$XDG_DAT
 # export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 # export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"  # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
 # export GNUPGHOME="$XDG_DATA_HOME/gnupg"                  # run this - gpg2 --homedir "$XDG_DATA_HOME/gnupg"
-# export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"    # to use this comment .zshrc wget alias
+# export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"             # to use this comment .zshrc wget alias
 
 export LESSHISTFILE="-"  # Disable files
 # export LESS="-R"
