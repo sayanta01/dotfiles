@@ -32,6 +32,7 @@ export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export HISTFILE="$XDG_DATA_HOME/bash/history"    # run this - mkdir -p "$XDG_DATA_HOME"/bash 
+export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 # export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 # Uncmnt when needed
@@ -45,12 +46,6 @@ export HISTFILE="$XDG_DATA_HOME/bash/history"    # run this - mkdir -p "$XDG_DAT
 
 export LESSHISTFILE="-"  # Disable files
 # export LESS="-R"
-
-# Xorg files
-# export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
-# export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
-# export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
-# export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 
 export QT_QPA_PLATFORMTHEME="gtk2"    # have QT use gtk2 theme.
 export QT_QPA_PLATFORMTHEME="qt5ct"   
