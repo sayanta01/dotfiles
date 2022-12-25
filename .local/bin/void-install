@@ -2,7 +2,7 @@
 
 sudo xbps-install -Su
 sudo xbps-install -Sy void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
-sudo xbps-install -Sy base-devel linux-firmware vim zsh tmux git xorg xfce4-plugins
+sudo xbps-install -Sy base-devel linux-firmware vim zsh tmux xorg xfce4-plugins
 
 cp -r ~/dotfiles/{.zshrc,.zprofile,.profile,.xprofile,.imwheelrc} ~/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
@@ -24,44 +24,45 @@ sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
-sudo xbps-install -Sy font-awesome \ # ttf-jetbrains-mono ttf-joypixels
-     noto-fonts-emoji noto-fonts-cjk \ #noto-fonts ttf-roboto
+sudo xbps-install -Sy font-awesome \
+     noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk fonts-roboto-ttf \
      exa bat tldr fd ripgrep procs duf dust \
      mate-calc rsync wget curl man fzf aria2 \
      cargo linux-headers firefox meld neovim kitty \
      neofetch htop bpytop cowsay libconfig gnome-keyring \
      bspwm polybar sxhkd rofi dunst libnotify \
      qt5ct qt6ct kvantum lxappearance xcape \
-     pavucontrol playerctl mpd ncmpcpp \      # dbus-python 
+     pavucontrol playerctl mpd ncmpcpp python-dbus \
      dialog cmake jq wmname imwheel \
-     wireless_tools net-tools nm-connection-editor network-manager-applet \      # nm-connection-editor dnsutils
+     wireless_tools net-tools network-manager-applet bind-utils \
      mpv mediainfo exiftool ffmpegthumbnailer ImageMagick maim sxiv xwallpaper ffmpeg python3-pip pywal \
      unrar unzip zip p7zip tar engrampa lf \
      tree ncdu thunar-archive-plugin thunar-media-tags-plugin \
      zathura zathura-pdf-mupdf ghostscript \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
      trash-cli yt-dlp transmission \
-     intel-ucode \ # virtualbox-guest-utils 
+     intel-ucode virtualbox-ose-guest \
      xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
-
 # socat exfat-utils brightnessctl  - additional tools 
-#
+
 # # use PipeWire
 # sudo pacman -S pipewire wireplumber      # pipewire-pulse 
 # use PulseAudio
 # sudo pacman -S pulseaudio      # pulseaudio-bluetooth
 
-# sudo xbps-install -Sy lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
+# sudo xbps-install -Sy lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
 # dm-tool switch-to-greeter 
 # /etc/lightdm/lightdm-gtk-greeter.conf >> background = /etc/lightdm/bg.png  ( move any bg to /etc/lightdm )
 
-sudo xbps-install -Sy nvidia \ # nvidia-settings opencl-nvidia 
+sudo xbps-install -Sy nvidia nvidia-libs-32bit \
 scrcpy android-tools nvtop stress \
-obs audacity gimp inkscape virtualbox-ose kdeconnect blender telegram-desktop \ # discord
-blueman ntfs-3g \ # bluez-utils
-qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm # ovmf
+obs audacity gimp inkscape virtualbox-ose kdeconnect blender telegram-desktop \
+blueman bluez ntfs-3g \
+qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm docker libvirt 
+# ovmf
 
-sudo xbps-install -Sy betterlockscreen xwinwrap cava \ # ttf-comic-mono-git picom-ibhagwan-git
-vscode anki browsh simple-mtpfs # chrome
+sudo xbps-install -Sy betterlockscreen xwinwrap cava \
+vscode anki browsh simple-mtpfs 
+# google-chrome
 
 
