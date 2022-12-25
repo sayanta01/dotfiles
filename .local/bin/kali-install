@@ -25,7 +25,6 @@ sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
-sudo apt update
 sudo apt install -y fonts-jetbrains-mono fonts-terminus fonts-roboto \
 bspwm polybar rofi kitty dunst lxappearance maim playerctl \
 cargo ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf \
@@ -38,9 +37,9 @@ mpd ncmpcpp cava docker.io
 #sudo systemctl disable docker.socket
 
 #wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
-aria2c -x9 -o vscode.deb -d ~/dl 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
+#aria2c -x9 -o vscode.deb -d ~/dl 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
 aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
-cd ~/dl && chmod +x vscode.deb PacketTracer.deb && sudo dpkg -i vscode.deb PacketTracer.deb
+cd ~/dl && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
