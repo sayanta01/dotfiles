@@ -6,7 +6,7 @@ yes '
 ' | sudo apt full-upgrade
 
 cp -r ~/dotfiles/{.zshrc,.zprofile,.profile,.xprofile,.imwheelrc} ~/
-cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share ~/dotfiles/.config/. ~/.config
+cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
 
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
@@ -36,8 +36,6 @@ transmission-cli transmission-daemon trash-cli yt-dlp \
 mpd ncmpcpp cava docker.io 
 #ncdu apt-transport-https translate-shell aptitude synaptic stacer 
 #sudo systemctl disable docker.socket
-
-cargo install ttyper bat
 
 #wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
 aria2c -x9 -o vscode.deb -d ~/dl 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'

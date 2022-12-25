@@ -2,7 +2,7 @@
 
 sudo pacman -Syyu 
 cp -r ~/dotfiles/{.zshrc,.zprofile,.profile,.xprofile,.imwheelrc} ~/
-cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share ~/dotfiles/.config/. ~/.config
+cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
 
 mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp} 
@@ -39,8 +39,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      trash-cli yt-dlp transmission-cli \
      intel-ucode virtualbox-guest-utils \
      xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
-# socat exfat-utils  - additional tools 
-# sudo pacman -S brightnessctl  - for Laptop
+# socat exfat-utils brightnessctl  - additional tools 
 
 # use PipeWire
 # sudo pacman -S pipewire pipewire-pulse wireplumber 
@@ -71,7 +70,7 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
 git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
 paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava picom-ibhagwan-git \
-visual-studio-code-bin google-chrome anki notion-app ttyper browsh simple-mtpfs  
+visual-studio-code-bin google-chrome anki ttyper browsh simple-mtpfs  
 #plymouth-nosystemd  ( artix ) or plymouth ly  ( arch )
 #sudo systemctl enable ly.service  ( arch )
 
