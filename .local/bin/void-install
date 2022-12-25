@@ -61,7 +61,6 @@ obs audacity gimp inkscape virtualbox-ose kdeconnect blender telegram-desktop \ 
 blueman ntfs-3g \ # bluez-utils
 qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm # ovmf
 
-
 sudo xbps-install -Sy betterlockscreen xwinwrap cava \ # ttf-comic-mono-git picom-ibhagwan-git
 vscode anki browsh simple-mtpfs # chrome
 
