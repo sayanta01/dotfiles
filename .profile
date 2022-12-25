@@ -33,6 +33,7 @@ export HISTFILE="$XDG_DATA_HOME/bash/history"    # run this - mkdir -p "$XDG_DAT
 export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"     # to use this comment .zshrc wget alias
+export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 
 # Uncmnt when needed
 # export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"  # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
