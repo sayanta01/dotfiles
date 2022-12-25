@@ -48,11 +48,11 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 
 sudo pacman -S --noconfirm lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
 # lightdm-runit  ( artix )
-#lightdm  ( arch )
+# lightdm  ( arch )
 # dm-tool switch-to-greeter 
-# /etc/lightdm/lightdm-gtk-greeter.conf >> background = /etc/lightdm/bg.png  ( move any bg to /etc/lightdm )
 # sudo ln -s /etc/runit/sv/lightdm /run/runit/service  ( artix )
-#sudo systemctl enable lightdm.service  ( arch )
+# sudo systemctl enable lightdm.service  ( arch )
+# /etc/lightdm/lightdm-gtk-greeter.conf >> background = /etc/lightdm/bg.png  ( move any bg to /etc/lightdm )
 
 sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia \
 scrcpy android-tools nvtop stress \
@@ -71,7 +71,7 @@ git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
 paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava picom-ibhagwan-git \
 visual-studio-code-bin google-chrome anki ttyper browsh simple-mtpfs  
-#plymouth-nosystemd  ( artix ) or plymouth ly  ( arch )
+#plymouth-nosystemd  ( artix ) && plymouth ly  ( arch )
 #sudo systemctl enable ly.service  ( arch )
 
 #### Setup Virt-Manager ####

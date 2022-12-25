@@ -2,7 +2,7 @@
 
 sudo xbps-install -Su
 sudo xbps-install -Sy void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
-sudo xbps-install -Sy base-devel linux-firmware vim zsh tmux xorg xfce4-plugins
+sudo xbps-install -Sy base-devel linux-firmware vim zsh tmux xorg NetworkManager xfce4-plugins
 
 cp -r ~/dotfiles/{.zshrc,.zprofile,.profile,.xprofile,.imwheelrc} ~/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
@@ -25,7 +25,7 @@ sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
 sudo xbps-install -Sy font-awesome \
-     noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk fonts-roboto-ttf \
+     noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk fonts-roboto-ttf terminus-font \
      exa bat tldr fd ripgrep procs duf dust \
      mate-calc rsync wget curl man fzf aria2 \
      cargo linux-headers firefox meld neovim kitty \
@@ -37,7 +37,7 @@ sudo xbps-install -Sy font-awesome \
      wireless_tools net-tools network-manager-applet bind-utils \
      mpv mediainfo exiftool ffmpegthumbnailer ImageMagick maim sxiv xwallpaper ffmpeg python3-pip pywal \
      unrar unzip zip p7zip tar engrampa lf \
-     tree ncdu thunar-archive-plugin thunar-media-tags-plugin \
+     tree ncdu Thunar thunar-archive-plugin thunar-media-tags-plugin \
      zathura zathura-pdf-mupdf ghostscript \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
      trash-cli yt-dlp transmission \
@@ -46,12 +46,11 @@ sudo xbps-install -Sy font-awesome \
 # socat exfat-utils brightnessctl  - additional tools 
 
 # # use PipeWire
-# sudo pacman -S pipewire wireplumber      # pipewire-pulse 
+# sudo pacman -S pipewire wireplumber libspa-bluetooth  
 # use PulseAudio
-# sudo pacman -S pulseaudio      # pulseaudio-bluetooth
+# sudo pacman -S pulseaudio 
 
-# sudo xbps-install -Sy lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
-# dm-tool switch-to-greeter 
+# sudo xbps-install -Sy lightdm-gtk-greeter-settings grub-customizer
 # /etc/lightdm/lightdm-gtk-greeter.conf >> background = /etc/lightdm/bg.png  ( move any bg to /etc/lightdm )
 
 sudo xbps-install -Sy nvidia nvidia-libs-32bit \
@@ -63,6 +62,16 @@ qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm docker libvirt
 
 sudo xbps-install -Sy betterlockscreen xwinwrap cava \
 vscode anki browsh simple-mtpfs 
-# google-chrome
+# picom google-chrome
+
+# Change DNS server to cloudflare 
+sudo cat <<EOF | sudo tee /etc/resolv.conf 
+nameserver 1.1.1.1
+nameserver 8.8.8.8
+EOF
+
+# Change Teletype font 
+sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
+# /etc/rc.conf >> FONT="ter-d16b"
 
 
