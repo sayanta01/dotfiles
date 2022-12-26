@@ -102,18 +102,27 @@ PROMPT=' %b%{$fg[red]%}❯${vcs_info_msg_0_}%  '
 
 #### ALIAS #### 
 # Kali
-alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
+# alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
 #alias install='sudo nala install'
 #alias update='sudo nala update'
+#alias remove='sudo nala purge'
 #alias clean='sudo apt -y autoremove; sudo apt clean'
 
 # Arch
 alias install='sudo pacman -Sy'
 alias update='sudo pacman -Syyu'
+alias remove='sudo pacman -Rns'
 alias clean='sudo pacman -Rns $(pacman -Qtdq)'  # remove orphaned packages
 alias upaur='paru -Sua --noconfirm'
 alias cleanaur='sudo pacman -Sc --noconfirm'
 alias unlock='sudo rm /var/lib/pacman/db.lck'   # remove pacman lock
+
+# XBPS
+# alias install='sudo xbps-install -Sv'
+# alias dry-i='sudo xbps-install -Sn'
+# alias update='sudo xbps-install -Suv'
+# alias remove='sudo xbps-remove -Rv'
+# alias clean='sudo xbps-remove -o; sudo xbps-remove -O'
 
 # Runit
 alias ssh-on="sudo sv start sshd"
@@ -124,16 +133,16 @@ alias vm-on="sudo sv start libvirtd virtlogd"
 alias vm-off="sudo sv stop libvirtd virtlogd"
 
 # Systemd
-#alias ssh-on="sudo systemctl start sshd.service"
-#alias ssh-off="sudo systemctl stop sshd.service"
-#alias doc-on="sudo systemctl start docker.socket"
-#alias doc-off="sudo systemctl stop docker.socket"
-#alias vm-on="sudo systemctl start libvirtd.service"
-#alias vm-off="sudo systemctl stop libvirtd.service"
-alias sysctlist='systemctl list-unit-files --type=service'
-alias sysctlfail='systemctl --failed'
-alias jctl='sudo journalctl -p 3 -xb'
-alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
+# alias ssh-on="sudo systemctl start sshd.service"
+# alias ssh-off="sudo systemctl stop sshd.service"
+# alias doc-on="sudo systemctl start docker.socket"
+# alias doc-off="sudo systemctl stop docker.socket"
+# alias vm-on="sudo systemctl start libvirtd.service"
+# alias vm-off="sudo systemctl stop libvirtd.service"
+# alias sysctlist='systemctl list-unit-files --type=service'
+# alias sysctlfail='systemctl --failed'
+# alias jctl='sudo journalctl -p 3 -xb'
+# alias cleanjctl='sudo journalctl --vacuum-time=2weeks'
 
 alias la='exa --icons'
 alias ls='ls --color=auto'
