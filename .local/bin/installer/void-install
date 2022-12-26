@@ -32,7 +32,7 @@ sudo xbps-install -Sy font-awesome \
      neofetch htop bpytop cowsay libconfig gnome-keyring \
      bspwm polybar sxhkd rofi dunst libnotify \
      qt5ct qt6ct kvantum lxappearance xcape \
-     pavucontrol playerctl mpd ncmpcpp python-dbus \
+     pavucontrol playerctl mpd ncmpcpp python3-dbus \
      dialog cmake jq wmname imwheel \
      wireless_tools net-tools network-manager-applet bind-utils \
      mpv mediainfo exiftool ffmpegthumbnailer ImageMagick maim sxiv xwallpaper ffmpeg python3-pip pywal \
@@ -57,7 +57,7 @@ sudo xbps-install -Sy nvidia nvidia-libs-32bit \
 scrcpy android-tools nvtop stress \
 obs audacity gimp inkscape virtualbox-ose kdeconnect blender telegram-desktop \
 blueman bluez ntfs-3g \
-qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm docker libvirt 
+qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm docker openssh libvirt 
 # ovmf
 
 sudo xbps-install -Sy betterlockscreen xwinwrap cava \
