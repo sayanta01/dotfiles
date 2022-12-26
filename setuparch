@@ -46,9 +46,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 # use PulseAudio
 # sudo pacman -S pulseaudio pulseaudio-bluetooth 
 
-sudo pacman -S --noconfirm lightdm-gtk-greeter lightdm-gtk-greeter-settings grub-customizer
-# lightdm-runit  ( artix )
-# lightdm  ( arch )
+sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # dm-tool switch-to-greeter 
 # sudo ln -s /etc/runit/sv/lightdm /run/runit/service  ( artix )
 # sudo systemctl enable lightdm.service  ( arch )
