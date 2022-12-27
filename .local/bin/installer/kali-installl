@@ -11,7 +11,7 @@ chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.s
 
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
 
-sudo apt install -y libxft-dev libharfbuzz-bin librust-harfbuzz-rs-dev libxinerama-dev 
+sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev  
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
 
@@ -31,8 +31,7 @@ cargo ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf \
 lf zathura htop qt5-style-kvantum meld \
 imwheel xclip xdo xwallpaper gpg cowsay xcape betterlockscreen \
 exiftool aria2 wmname wmctrl neofetch \
-transmission-cli transmission-daemon trash-cli yt-dlp \
-mpd ncmpcpp cava docker.io 
+transmission-daemon trash-cli docker.io 
 #ncdu apt-transport-https translate-shell aptitude synaptic stacer 
 #sudo systemctl disable docker.socket
 
