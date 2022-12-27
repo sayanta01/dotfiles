@@ -5,7 +5,7 @@
 yes '
 ' | sudo apt full-upgrade
 
-cp -r ~/dotfiles/{.zshrc,.zprofile,.profile,.xprofile,.imwheelrc} ~/
+cp -r ~/dotfiles/{.zprofile,.profile,.xprofile,.imwheelrc} ~/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
 
@@ -37,8 +37,8 @@ transmission-daemon trash-cli docker.io
 
 #wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
 #aria2c -x9 -o vscode.deb -d ~/dl 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
-aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
-cd ~/dl && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
+# aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
+# cd ~/dl && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1
