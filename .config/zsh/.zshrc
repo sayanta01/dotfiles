@@ -223,7 +223,7 @@ alias mpc='mpd 2>/dev/null ; ncmpcpp'
 alias ytdl-vid="yt-dlp -f bestvideo+bestaudio"
 alias ytdl-aud="yt-dlp --extract-audio --audio-format m4a"
 
-# For arch linux
+# for Arch Linux only
 #alias mirror='sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
 #alias mirrord='sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist'
 #alias mirrors='sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist'

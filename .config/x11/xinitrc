@@ -7,7 +7,7 @@ else
 fi
 
 
-fav=startxfce4
+fav=bspwm
 
 case "$1" in
 	bspwm) bspwm ;;
