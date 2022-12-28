@@ -218,6 +218,7 @@ alias iv='devour sxiv'
 alias z='devour zathura'
 
 alias vim='nvim'
+alias se='sudoedit'
 alias mpad='mousepad'
 alias mpc='mpd 2>/dev/null ; ncmpcpp'
 alias ytdl-vid="yt-dlp -f bestvideo+bestaudio"
