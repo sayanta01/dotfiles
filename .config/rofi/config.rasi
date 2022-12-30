@@ -3,7 +3,7 @@ configuration {
 } 
 
 * {
-    font:                           "BlexMono Nerd Font Medium Italic 11";
+    font:                           "Comic Mono 12";
     foreground:                     #A7B5CD;
     background:                     #101216;
     highlight:	             		    #FFF;
