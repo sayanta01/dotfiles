@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Feed this script a link and it will give dmenu
+# some choice programs to use to open it.
+feed="${1:-$(printf "%s" | dmenu -p 'Paste URL or file path')}"
+
+case "$(printf "copy url\\nmpv\\nfirefox\\nvim\\nsxiv" | dmenu -i -p "Open it with?")" in
+	"copy url") echo "$feed" | xclip -selection clipboard ;;
+	vim) curl -sL "$feed" > "/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" && setsid -f "$TERMINAL" -e "$EDITOR" "/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")"  >/dev/null 2>&1 ;;
+	firefox) firefox "$feed" >/dev/null 2>&1 ;;
+	mpv) setsid -f mpv -quiet "$feed" >/dev/null 2>&1 ;;
+	sxiv) curl -sL "$feed" > "/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" && sxiv -a "/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")"  >/dev/null 2>&1 ;;
+esac
+
