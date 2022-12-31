@@ -41,11 +41,6 @@ transmission-daemon trash-cli docker.io
 # aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 # cd ~/dl && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
-sudo cat <<EOF | sudo tee /etc/resolv.conf 
-nameserver 1.1.1.1
-nameserver 8.8.8.8
-EOF
-
 #Console Font
 #sudo dpkg-reconfigure console-setup
 

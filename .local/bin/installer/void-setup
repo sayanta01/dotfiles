@@ -65,12 +65,6 @@ sudo xbps-install -Sy betterlockscreen xwinwrap cava \
 vscode anki browsh simple-mtpfs 
 # picom google-chrome
 
-# Change DNS server to cloudflare 
-sudo cat <<EOF | sudo tee /etc/resolv.conf 
-nameserver 1.1.1.1
-nameserver 8.8.8.8
-EOF
-
 # Change Teletype font 
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
 # /etc/rc.conf >> FONT="ter-d16b"

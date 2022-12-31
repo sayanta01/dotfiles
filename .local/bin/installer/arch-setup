@@ -71,47 +71,25 @@ git clone https://aur.archlinux.org/paru.git ~/paru
 cd ~/paru && makepkg -si 
 paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava picom-ibhagwan-git \
 visual-studio-code-bin google-chrome anki ttyper browsh simple-mtpfs  
-#plymouth-nosystemd  ( artix ) && plymouth ly  ( arch )
-#sudo systemctl enable ly.service  ( arch )
+#plymouth-nosystemd  ( artix ) && plymouth ( arch )
 
 #### Setup Virt-Manager ####
 # sudo ln -s /etc/runit/sv/virtlogd /run/runit/service  ( artix )
 # sudo touch /run/runit/service/virtlogd/down  ( artix )
 # sudo ln -s /etc/runit/sv/libvirtd /run/runit/service  ( artix )
 # sudo touch /run/runit/service/libvirtd/down  ( artix )
-#sudo systemctl enable --now libvirtd  ( arch )
-#sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104  ( arch )
+# sudo systemctl enable --now libvirtd  ( arch )
+# sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104  ( arch )
 # sudo usermod -aG libvirt $USER
-#sudo systemctl restart libvirtd  ( arch )
+# sudo systemctl restart libvirtd  ( arch )
 # sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
 # sudo virsh net-autostart default
 
-# Use dash symlink for /bin/sh  - do this carefully it can break whole system 
-# readlink /bin/sh  - check system shell
-# sudo pacman -S checkbashisms dash
-# find /usr/bin/ -type f -perm -o=r -print0 | xargs -0r gawk '/^#!.*( |[/])sh/{printf "%s\0", FILENAME} {nextfile}' | xargs -0r checkbashisms  - check if all your /usr/bin script is compatible with dash or not
-# sudo ln -sfT dash /usr/bin/sh  - change dash as system shell, only run this, after you've corrected all your script for dash
-# sudo vim /usr/share/libalpm/hooks/bash-update.hook >> http://0x0.st/okdY.sh || install dashbinsh from AUR  - fix overwriting symlink after update bash  
-
-# Change DNS server to cloudflare 
-sudo cat <<EOF | sudo tee /etc/resolv.conf 
-nameserver 1.1.1.1
-nameserver 8.8.8.8
-EOF
- 
-# sudo vim /etc/hosts           ( blk sites )
 # /etc/pacman.conf              ( uncheck ignorepkg and put pkgname )
 
 # Change Teletype font 
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
 sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
-
-# Display Asterisks while entering pswd
-# sudo su root -c "echo -e Defaults pwfeedback >> /etc/sudoers"
-
-# Boost Linux
-# /etc/default/grub >> GRUB_CMDLINE_LINUX*="rhgb quiet mitigations=off"
-#sudo systemctl enable fstrim.timer  ( arch )  # not for VM's - running fstrim frequently, or even using mount -o discard, might negatively affect the lifetime of poor-quality SSD
 
 # QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment    ( fix qt5ct )
 # ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
@@ -128,15 +106,5 @@ sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 # LC_PAPER=en_US.UTF-8
 # LC_TELEPHONE=en_US.UTF-8
 # LC_TIME=en_US.UTF-8
-
-# Enable tap to click for Laptop
-# [ ! -f /etc/X11/xorg.conf.d/40-libinput.conf ] && printf 'Section "InputClass"
-#         Identifier "libinput touchpad catchall"
-#         MatchIsTouchpad "on"
-#         MatchDevicePath "/dev/input/event*"
-#         Driver "libinput"
-# 	# Enable left mouse button by tapping
-# 	Option "Tapping" "on"
-# EndSection' >/etc/X11/xorg.conf.d/40-libinput.conf
 
 

@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# Change DNS server to cloudflare 
+sudo cat <<EOF | sudo tee /etc/resolv.conf 
+nameserver 1.1.1.1
+nameserver 8.8.8.8
+EOF
+ 
+# Display Asterisks while entering pswd
+sudo su root -c "echo Defaults pwfeedback >> /etc/sudoers"
+
+# Enable TouchPad Tapping for Laptop
+sudo mkdir /etc/X11/xorg.conf.d && sudo touch /etc/X11/xorg.conf.d/30-touchpad.conf
+sudo cat <<EOF | sudo tee /etc/X11/xorg.conf.d/30-touchpad.conf 
+Section "InputClass"
+       Identifier "devname"
+       Driver "libinput"
+               Option "Tapping" "on"
+               Option "NaturalScrolling" "true"
+EndSection
+EOF
+
+# Use dash symlink for /bin/sh  - do this carefully it can break whole system 
+# readlink /bin/sh  - check system shell
+# Install checkbashisms dash
+# find /usr/bin/ -type f -perm -o=r -print0 | xargs -0r gawk '/^#!.*( |[/])sh/{printf "%s\0", FILENAME} {nextfile}' | xargs -0r checkbashisms  - check if all your /usr/bin script is compatible with dash or not
+# sudo ln -sfT dash /usr/bin/sh  - change dash as system shell, only run this, after you've corrected all your script for dash
+# sudo vim /usr/share/libalpm/hooks/bash-update.hook >> http://0x0.st/okdY.sh || install dashbinsh from AUR  - fix overwriting symlink after update bash  
+
+# Turn off mitigations 
+# /etc/default/grub >> GRUB_CMDLINE_LINUX*="rhgb quiet mitigations=off"
+
+# sudo vim /etc/hosts           ( blk sites )
