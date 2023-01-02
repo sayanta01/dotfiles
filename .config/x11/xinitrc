@@ -6,6 +6,12 @@ else
 	. "$HOME/.xprofile"
 fi
 
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc" ]; then
+	. "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
+else
+	. "$HOME/.xinitrc"
+fi
+
 
 fav=bspwm
 
