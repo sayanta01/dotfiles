@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo figlet lolcat toilet cowsay espeak cool-retro-term mapscii \
+     nyancat fortune sl cmatrix asciiquarium hollywood oneko tty-clock
