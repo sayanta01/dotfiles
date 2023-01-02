@@ -4,7 +4,7 @@ sudo xbps-install -Su
 sudo xbps-install -Sy void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 sudo xbps-install -Sy base-devel linux-firmware vim zsh tmux xorg NetworkManager xfce4-plugins
 
-cp -r ~/dotfiles/{.zprofile,.profile,.xprofile,.imwheelrc,.vimrc} ~/
+cp -r ~/dotfiles/{.zprofile,.profile,.xprofile,.xinitrc,.imwheelrc,.vimrc} ~/
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
