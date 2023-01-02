@@ -1,1 +1,1 @@
-/home/bot/.profile
+.profile
