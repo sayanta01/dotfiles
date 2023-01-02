@@ -2,10 +2,9 @@
 
 #sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 
-yes '
-' | sudo apt full-upgrade
+yes | sudo apt full-upgrade
 
-cp -r ~/dotfiles/{.zprofile,.profile,.xprofile,.imwheelrc} ~/
+cp -r ~/dotfiles/{.zprofile,.profile,.xprofile,.imwheelrc,.vimrc} ~/
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}

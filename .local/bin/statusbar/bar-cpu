@@ -5,5 +5,3 @@ cpu_usage=$(top -bn1 | awk '/^%Cpu/ {print $2}')
 
 # Print the CPU usage in percent
 echo " $cpu_usage "
-
-

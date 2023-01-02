@@ -21,4 +21,3 @@ case $CURR in
 		# otherwise ignore
 	*) ;;
 esac
-
