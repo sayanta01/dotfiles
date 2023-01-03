@@ -6,18 +6,18 @@ sudo plymouth-set-default-theme -R lone
 
 
 #### ARCH ####
-/etc/mkinitcpio.conf  ( in HOOKS add plymouth after udev )
-sudo mkinitcpio -p linux  ( Regenerate image )
+# /etc/mkinitcpio.conf    ( in HOOKS add - plymouth after udev )
+sudo mkinitcpio -p linux  # Regenerate image 
 
-#/etc/default/grub  (in GRUB_CMDLINE_LINUX_DEFATULT add splash rd.udev.log_priority=3 vt.global_cursor_default=0
+# /etc/default/grub  (in GRUB_CMDLINE_LINUX_DEFATULT add splash rd.udev.log_priority=3 vt.global_cursor_default=0
 sudo grub-mkconfig -o /boot/grub/grub.cfg 
 
-sudo cp -r lone /usr/share/plymouth/themes/
+sudo cp -r lone /usr/share/plymouth/themes
 #sudo plymouth-set-default-theme -l  
 sudo plymouth-set-default-theme -R lone
  
-sudo systemctl disable lightdm  ( arch ) 
-sudo systemctl enable lightdm-plymouth  ( arch )
+sudo systemctl disable lightdm  # arch 
+sudo systemctl enable lightdm-plymouth  # arch 
 
 #sudo vim /etc/plymouth/plymouthd.conf  (ShowDelay=0 and DeviceTimeout=5)
 #sudo mkinitcpio -p linux  (Regenerate config file for theme)

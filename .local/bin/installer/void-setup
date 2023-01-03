@@ -51,9 +51,6 @@ sudo xbps-install -Sy font-awesome \
 # use PulseAudio
 # sudo pacman -S pulseaudio 
 
-# sudo xbps-install -Sy lightdm-gtk-greeter-settings grub-customizer
-# /etc/lightdm/lightdm-gtk-greeter.conf >> background = /etc/lightdm/bg.png  ( move any bg to /etc/lightdm )
-
 sudo xbps-install -Sy nvidia nvidia-libs-32bit \
 scrcpy android-tools nvtop stress \
 obs audacity gimp inkscape virtualbox-ose kdeconnect blender telegram-desktop \
@@ -66,7 +63,4 @@ vscode anki browsh simple-mtpfs
 # picom google-chrome
 
 # Change Teletype font 
-sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
-# /etc/rc.conf >> FONT="ter-d16b"
-
-
+echo 'FONT="ter-d16b"' | sudo tee -a /etc/rc.conf
