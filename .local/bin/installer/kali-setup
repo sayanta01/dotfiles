@@ -31,8 +31,8 @@ cargo ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf \
 lf zathura htop qt5-style-kvantum meld \
 imwheel xclip xdo xwallpaper gpg cowsay xcape betterlockscreen \
 exiftool aria2 wmname wmctrl neofetch \
-transmission-daemon trash-cli docker.io 
-#ncdu apt-transport-https translate-shell aptitude synaptic stacer 
+transmission-daemon trash-cli docker.io aptitude synaptic  
+#ncdu apt-transport-https translate-shell stacer 
 #sudo systemctl disable docker.socket
 
 #wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
@@ -44,4 +44,4 @@ transmission-daemon trash-cli docker.io
 #sudo dpkg-reconfigure console-setup
 
 # sudo systemd-analyze  ( critical-chain )      
-# /etc/apt/sources.list >> deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free
+# sudo su root -c "echo deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free >> /etc/apt/sources.list"

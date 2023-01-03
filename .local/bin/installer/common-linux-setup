@@ -1,5 +1,14 @@
 #!/bin/sh
 
+# TODO
+# chnage audiosw sink-name
+# change btch mac-add
+# change checkup script according to ur distro
+# chnage record script
+# change sys-status df /path/name
+# change wttr location
+# change git config username 
+
 # Change DNS server to cloudflare 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
 nameserver 1.1.1.1

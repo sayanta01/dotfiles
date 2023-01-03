@@ -11,10 +11,10 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 
 #### KALI ####
-sudo cp -r catppuccin-mocha-grub-theme /boot/grub/themes
-echo 'GRUB_THEME="/boot/grub/themes/catppuccin-mocha-grub-theme/theme.txt"' | sudo tee -a /etc/default/grub
-sudo rm -rf /usr/share/images/desktop-base/desktop-grub.png
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+# sudo cp -r catppuccin-mocha-grub-theme /boot/grub/themes
+# echo 'GRUB_THEME="/boot/grub/themes/catppuccin-mocha-grub-theme/theme.txt"' | sudo tee -a /etc/default/grub
+# sudo rm -rf /usr/share/images/desktop-base/desktop-grub.png
+# sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 #### Another Method For Kali ####
 #sudo rm -rf /boot/grub/themes/kali/* && sudo cp -r catppuccin-mocha-grub-theme/* /boot/grub/themes/kali

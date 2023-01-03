@@ -16,3 +16,7 @@ if [ "$updates" -gt 0 ]; then
 else
     echo "Updated!"
 fi
+
+# updates=$(sudo xbps-install -un | wc -l) # void
+# updates=$(checkupdates 2>/dev/null | wc -l) # arch
+# updates=$(aptitude search '~U' | wc -l)  # debian
