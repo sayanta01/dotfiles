@@ -52,7 +52,10 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # dm-tool switch-to-greeter 
 # sudo ln -s /etc/runit/sv/lightdm /run/runit/service  ( artix )
 # sudo systemctl enable lightdm.service  ( arch )
-# /etc/lightdm/lightdm-gtk-greeter.conf >> background = /etc/lightdm/bg.png  ( move any bg to /etc/lightdm )
+# move a img to /etc/lightdm for lightdm wallpaper 
+# echo 'background = /etc/lightdm/bg.jpg' | sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf
+
+# /etc/lightdm/lightdm-gtk-greeter.conf >> background = /etc/lightdm/bg.png 
 
 sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia \
 scrcpy android-tools nvtop stress \
@@ -91,7 +94,8 @@ visual-studio-code-bin google-chrome anki ttyper browsh simple-mtpfs
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
 sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 
-# QT_QPA_PLATFORMTHEME="qt5ct" > /etc/environment    ( fix qt5ct )
+# Fix qt5ct
+echo 'QT_QPA_PLATFORMTHEME="qt5ct"' | sudo tee -a /etc/environment
 # ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
 
 # /etc/locale.conf >>  ( fix suckless utilities give XOpenIM failed error )
@@ -106,5 +110,3 @@ sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 # LC_PAPER=en_US.UTF-8
 # LC_TELEPHONE=en_US.UTF-8
 # LC_TIME=en_US.UTF-8
-
-
