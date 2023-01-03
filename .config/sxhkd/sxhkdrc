@@ -52,8 +52,8 @@ super + alt + n
 
 # pywal
 super + alt + o
-              wal -qi ~/.local/share/walls
-	
+              bash ~/.local/bin/pywal
+
 # wallch
 super + alt + p
               bash ~/.local/bin/wallch
