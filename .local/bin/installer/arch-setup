@@ -101,8 +101,8 @@ sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 echo 'QT_QPA_PLATFORMTHEME="qt5ct"' | sudo tee -a /etc/environment
 # ControllerMode = bredr > /etc/bluetooth/main.conf  ( fix bluetooth )
 
-# /etc/locale.conf >>  ( fix suckless utilities give XOpenIM failed error )
-# LANG=en_US.UTF-8
+# Fix suckless utilities give XOpenIM failed error 
+# echo 'LANG=en_US.UTF-8
 # LC_CTYPE=en_US.UTF-8
 # LC_ADDRESS=en_US.UTF-8
 # LC_IDENTIFICATION=en_US.UTF-8
@@ -112,4 +112,4 @@ echo 'QT_QPA_PLATFORMTHEME="qt5ct"' | sudo tee -a /etc/environment
 # LC_NUMERIC=en_US.UTF-8
 # LC_PAPER=en_US.UTF-8
 # LC_TELEPHONE=en_US.UTF-8
-# LC_TIME=en_US.UTF-8
+# LC_TIME=en_US.UTF-8' | sudo tee -a /etc/locale.conf
