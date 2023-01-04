@@ -24,7 +24,7 @@
     <property name="CanChangeAccels" type="bool" value="false"/>
     <property name="ColorPalette" type="empty"/>
     <property name="DialogsUseHeader" type="bool" value="true"/>
-    <property name="FontName" type="string" value="SF Pro Text Semi-Bold 11"/>
+    <property name="FontName" type="string" value="SF Pro Text Bold 11"/>
     <property name="MonospaceFontName" type="string" value="SF Mono Bold 10"/>
     <property name="IconSizes" type="empty"/>
     <property name="KeyThemeName" type="empty"/>
