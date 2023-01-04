@@ -27,21 +27,21 @@ sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
 sudo xbps-install -Sy font-awesome \
      noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk fonts-roboto-ttf terminus-font \
-     exa bat tldr fd ripgrep procs duf dust \
-     mate-calc rsync wget curl man fzf aria2 newsboat \
-     cargo linux-headers firefox qutebrowser meld neovim kitty \
-     neofetch htop bpytop cowsay libconfig gnome-keyring \
+     exa bat tldr fd ripgrep procs duf dust man fzf \
+     mate-calc firefox qutebrowser meld \
+     cargo linux-headers neovim kitty newsboat trash-cli \
+     neofetch htop cowsay libconfig gnome-keyring \
      bspwm polybar sxhkd rofi dunst libnotify \
      qt5ct qt6ct kvantum lxappearance xcape \
      pavucontrol playerctl mpd ncmpcpp python3-dbus \
-     dialog cmake jq wmname imwheel \
+     dialog cmake wmname imwheel \
      wireless_tools net-tools network-manager-applet bind-utils \
      mpv mediainfo exiftool ffmpegthumbnailer ImageMagick maim sxiv xwallpaper ffmpeg python3-pip pywal \
-     unrar unzip zip p7zip tar engrampa lf \
-     tree ncdu Thunar thunar-archive-plugin thunar-media-tags-plugin \
+     unrar unzip zip p7zip tar engrampa \
+     tree ncdu lf Thunar thunar-archive-plugin thunar-media-tags-plugin \
      zathura zathura-pdf-mupdf ghostscript \
      zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-     trash-cli yt-dlp transmission \
+     rsync wget curl aria2 yt-dlp transmission jq \
      intel-ucode virtualbox-ose-guest \
      xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
 # socat exfat-utils brightnessctl  - additional tools 
@@ -51,11 +51,15 @@ sudo xbps-install -Sy font-awesome \
 # use PulseAudio
 # sudo pacman -S pulseaudio 
 
-sudo xbps-install -Sy nvidia nvidia-libs-32bit \
-scrcpy android-tools nvtop stress \
-obs audacity gimp inkscape virtualbox-ose kdeconnect blender telegram-desktop \
-blueman bluez ntfs-3g \
-qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm docker openssh libvirt 
+# Nvidia
+sudo xbps-install -Sy nvidia nvidia-libs-32bit nvtop glmark2 
+
+# GUI apps
+sudo xbps-install -Sy scrcpy android-tools stress bpytop blueman bluez ntfs-3g \
+obs audacity gimp inkscape virtualbox-ose kdeconnect blender telegram-desktop
+
+# VM
+sudo xbps-install -Sy qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm libvirt docker openssh
 # ovmf
 
 sudo xbps-install -Sy betterlockscreen xwinwrap cava \

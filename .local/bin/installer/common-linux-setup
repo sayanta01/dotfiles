@@ -51,4 +51,7 @@ EOF
 # Turn off mitigations 
 # /etc/default/grub >> GRUB_CMDLINE_LINUX*="rhgb quiet mitigations=off"
 
+# Fix screen tearing for nvidia-settings
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+
 # sudo vim /etc/hosts           ( blk sites )
