@@ -84,3 +84,7 @@
      foreground = "#ffffff"
      frame_color = "#ff0000"
      timeout = 6
+
+/* [play_sound] */
+     /* summary = "*" */
+     /* script = "~/.local/bin/notify-sound"     */
