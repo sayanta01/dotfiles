@@ -8,6 +8,7 @@
 # change wttr location
 # change git config username 
 # ucmnt alias for ur pkg-manager 
+# add notify-sound if want
 
 # Change DNS server to cloudflare 
 sudo cat <<EOF | sudo tee /etc/resolv.conf 
