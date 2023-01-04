@@ -9,4 +9,9 @@ notify-send "$(echo 🧠 RAM) $(free -h | awk '/Mem:/ { print $3 }' | cut -f1 -d
 notify-send "$(echo 💾 Dsk) $(df -h | grep /dev/nvme0n1p2 | awk '{print $4}')"
 notify-send "$(echo 💻 Upt) $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
 
+# notify-send "$(echo ⬆️  AUR) $(paru -Qum 2>/dev/null | wc -l)"
+# notify-send "$(echo ⬆️  PAC) $(checkupdates 2>/dev/null | wc -l)"
+# notify-send "$(echo ⬆️  XBPS) $(sudo xbps-install -un | wc -l)"
+# notify-send "$(echo ⬆️  APT) $(aptitude search '~U' | wc -l)"
+
 

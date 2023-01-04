@@ -3,9 +3,8 @@
 # TODO
 # chnage audiosw sink-name
 # change btch mac-add
-# change checkup script according to ur distro
 # chnage record script
-# change sys-status df /path/name
+# change sys-status df /path/name & update according to ur pkg-manager
 # change wttr location
 # change git config username 
 # ucmnt alias for ur pkg-manager 
@@ -42,7 +41,7 @@ EOF
 
 # Replace sudo with doas
 # install opendoas
-# echo 'permit :wheel' | sudo tee -a /etc/doas.conf
+# echo 'permit persist keepenv :wheel' | sudo tee -a /etc/doas.conf
 # alias sudo='doas'
 # -- Disable sudo --
 # cmnt in - EDITOR=vim visudo
