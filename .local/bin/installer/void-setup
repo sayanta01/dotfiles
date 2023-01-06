@@ -72,13 +72,13 @@ echo XBPS_ALLOW_RESTRICTED=yes > ~/void-packages/etc/conf
 
 # google-chrome
 cd ~/void-packages && ./xbps-src pkg google-chrome
-sudo xbps-install --repository=~/void-packages/hostdir/binpkgs/nonfree google-chrome
+sudo xbps-install -y --repository=hostdir/binpkgs/nonfree google-chrome
 
 # picom 
 git clone https://github.com/ibhagwan/picom-ibhagwan-template ~/picom-ibhagwan
-mv ~/picom-ibhagwan ~/srcpkgs/picom-ibhagwan
+mv ~/picom-ibhagwan ~/void-packages/srcpkgs/picom-ibhagwan
 cd ~/void-packages && ./xbps-src pkg picom-ibhagwan
-sudo xbps-install --repository=hostdir/binpkgs picom-ibhagwan
+sudo xbps-install -y --repository=hostdir/binpkgs picom-ibhagwan
 
 # Change Teletype font 
 echo 'FONT="ter-d16b"' | sudo tee -a /etc/rc.conf
