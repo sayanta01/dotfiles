@@ -33,7 +33,7 @@ sudo xbps-install -Sy font-awesome \
      neofetch htop cowsay libconfig gnome-keyring \
      bspwm polybar sxhkd rofi dunst libnotify \
      qt5ct qt6ct kvantum lxappearance xcape \
-     pavucontrol playerctl mpd ncmpcpp python3-dbus \
+     playerctl mpd ncmpcpp python3-dbus \
      dialog cmake wmname imwheel \
      wireless_tools net-tools network-manager-applet bind-utils \
      mpv mediainfo exiftool ffmpegthumbnailer ImageMagick maim sxiv xwallpaper ffmpeg python3-pip pywal \
@@ -46,10 +46,10 @@ sudo xbps-install -Sy font-awesome \
      xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
 # socat exfat-utils brightnessctl  - additional tools 
 
-# # use PipeWire
-# sudo pacman -S pipewire wireplumber libspa-bluetooth  
 # use PulseAudio
-# sudo pacman -S pulseaudio 
+# sudo pacman -S pulseaudio pavucontrol pulsemixer
+# use PipeWire
+# sudo pacman -S pipewire wireplumber libspa-bluetooth 
 
 # Nvidia
 sudo xbps-install -Sy nvidia nvidia-libs-32bit nvtop glmark2 

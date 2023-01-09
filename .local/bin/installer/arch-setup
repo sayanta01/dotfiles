@@ -29,7 +29,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      neofetch htop cowsay libconfig gnome-keyring \
      bspwm polybar sxhkd rofi dunst libnotify \
      qt5ct qt6ct kvantum lxappearance xcape \
-     pavucontrol playerctl mpd ncmpcpp dbus-python \
+     playerctl mpd ncmpcpp dbus-python \
      dialog cmake wmname imwheel \
      wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils \
      mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
@@ -42,10 +42,10 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
      xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
 # socat exfat-utils brightnessctl  - additional tools 
 
+# use PulseAudio
+# sudo pacman -S pulseaudio pulseaudio-bluetooth pavucontrol pulsemixer
 # use PipeWire
 # sudo pacman -S pipewire pipewire-pulse wireplumber 
-# use PulseAudio
-# sudo pacman -S pulseaudio pulseaudio-bluetooth 
 
 # Display Manager
 sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer

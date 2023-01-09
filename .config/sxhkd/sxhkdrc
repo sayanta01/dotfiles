@@ -4,20 +4,25 @@
 
 # brightness control
 XF86MonBrightness{Up,Down}
-	               brightness{ --inc, --dec}
+	               brightnessctl{ --inc, --dec}
+	               # xbacklight -inc 10
+	               # xbacklight -dec 10
 	      
 # volume control 
 XF86AudioLowerVolume
-              pactl set-sink-volume @DEFAULT_SINK@ -5%
-              #amixer set Master 5%-
+              pamixer -d 5 
+              # amixer set Master 5%-
+              # pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 XF86AudioRaiseVolume
-              pactl set-sink-volume @DEFAULT_SINK@ +5%
-              #amixer set Master 5%+
+              pamixer -i 5
+              # amixer set Master 5%+
+              # pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 XF86AudioMute
-         pactl set-sink-mute @DEFAULT_SINK@ toggle
-         #amixer set Master toggle
+         pamixer -t
+         # amixer set Master toggle
+         # pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # media player control 
 XF86Audio{Prev,Next}
@@ -29,8 +34,6 @@ XF86AudioPlay
 # mic control
 XF86AudioMicMute         
             pactl set-source-mute @DEFAULT_SOURCE@ toggle
-
-
 
 
 # hide unhide bar
@@ -64,18 +67,21 @@ alt + F1
 	     
 # vol down
 alt + F2
-      pactl set-sink-volume @DEFAULT_SINK@ -5%
-       #amixer set Master 5%-
+      pamixer -d 5 
+      # amixer set Master 5%-
+      # pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 # vol up
 alt + F3
-      pactl set-sink-volume @DEFAULT_SINK@ +5%
-      #amixer set Master 5%+
+      pamixer -i 5 
+      # amixer set Master 5%+
+      # pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 # mute
 alt + F4
-      pactl set-sink-mute @DEFAULT_SINK@ toggle
-      #amixer set Master toggle         
+      pamixer -t
+      # amixer set Master toggle         
+      # pactl set-sink-mute @DEFAULT_SINK@ toggle
 
  # system_action
 super + F4
@@ -120,7 +126,7 @@ alt + Print
 # chrome
 alt + b
       google-chrome-stable
-      #google-chrome
+      # google-chrome
         
 # firefox
 super + alt + b
