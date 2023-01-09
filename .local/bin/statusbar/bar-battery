@@ -19,4 +19,4 @@ read -r bat_status </sys/class/power_supply/BAT0/status
 
 
 # get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
-  # printf "^c$blue^  ﮣ $get_capacity"
+# printf "^c$blue^  ﮣ $get_capacity"
