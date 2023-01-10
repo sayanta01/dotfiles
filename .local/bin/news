@@ -19,5 +19,3 @@ done
 
 notify-send -t 990 "Here is your 🗞️"
 sxiv -z 110 "$cachedir"/"$datedir"/*
-
-

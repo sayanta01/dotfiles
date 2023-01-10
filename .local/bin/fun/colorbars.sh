@@ -36,5 +36,3 @@ for y in $(seq 0 4); do
 done
 
 echo
-
-

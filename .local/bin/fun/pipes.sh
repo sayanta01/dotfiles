@@ -150,4 +150,3 @@ while REPLY=; read -t 0.0$((1000/f)) -n 1 2>/dev/null; [[ -z $REPLY ]] ; do
 done
 
 cleanup
-

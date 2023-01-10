@@ -1,10 +1,9 @@
 #!/bin/bash
-#
+
 # ANSI color scheme script featuring PACMAN
 # by pfh
 #
 # Initializing procedure by lolilolicon
-#
 
 f=3 b=4
 for j in f b; do
@@ -29,5 +28,3 @@ $rst
 $bld
 $rst
 EOF
-
-

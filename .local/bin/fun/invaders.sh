@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-#
+
 # ANSI color scheme script featuring Space Invaders
 #
 # Original: http://crunchbang.org/forums/viewtopic.php?pid=126921%23p126921#p126921
 # Modified by lolilolicon
-#
 
 f=3 b=4
 for j in f b; do
@@ -37,4 +36,3 @@ cat << EOF
                               $f7▀▀▀▀▀▀▀▀▀▀▀$rst
 
 EOF
-

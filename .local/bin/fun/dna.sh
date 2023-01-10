@@ -1,9 +1,8 @@
 #!/bin/bash
-#
+
 # ANSI color scheme script by pfh
 #
 # Initializing mod by lolilolicon from Archlinux
-#
 
 f=3 b=4
 for j in f b; do
@@ -44,4 +43,3 @@ cat << EOF
  ${f1} █-----${bld}█  ${rst}${f2} █-----${bld}█${rst}  ${f3} █-----${bld}█${rst}  ${f4} █-----${bld}█${rst}  ${f5} █-----${bld}█${rst}  ${f6} █-----${bld}█${rst}
 
 EOF
-

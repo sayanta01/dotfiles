@@ -15,4 +15,3 @@ echo -e "             \e[33m{{}             \e[32m&&"
 echo -e "       \e[33m, -=-~{ .-^- _"
 echo -e "             \`}"
 echo -e "              {"
-
