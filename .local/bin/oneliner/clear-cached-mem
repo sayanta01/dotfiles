@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# use once in a week
+sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"

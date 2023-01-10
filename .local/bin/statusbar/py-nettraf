@@ -4,9 +4,10 @@ from os import popen
 from time import sleep
 
 interface = "eth0"
-#interface = "wlan0"
-#interface = "enp0s3"
-#interface = "enp2s0"
+# interface = "wlan0"
+# interface = "enp0s3"
+# interface = "enp2s0"
+
 
 temp_conti = str(popen("grep {} /proc/net/dev".format(interface)).read().rstrip()).split(" ")
 conti = []
