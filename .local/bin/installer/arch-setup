@@ -98,8 +98,10 @@ sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
 sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 
 # Fix qt5ct
-echo 'QT_QPA_PLATFORMTHEME="qt5ct"' | sudo tee -a /etc/environment
-# ControllerMode = bredr & Experimental=true > /etc/bluetooth/main.conf  ( fix bluetooth & get percentage of connected device )
+# echo 'QT_QPA_PLATFORMTHEME="qt5ct"' | sudo tee -a /etc/environment
+
+# Fix bluetooth          & Get percentage of connected device 
+# ControllerMode = bredr & Experimental = true > /etc/bluetooth/main.conf  
 
 # Fix suckless utilities give XOpenIM failed error 
 # echo 'LANG=en_US.UTF-8

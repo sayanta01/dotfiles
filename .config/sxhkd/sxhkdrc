@@ -4,7 +4,7 @@
 
 # brightness control
 XF86MonBrightness{Up,Down}
-	               brightnessctl{ --inc, --dec}
+	             brightnessctl{ --inc, --dec}
 	               # xbacklight -inc 10
 	               # xbacklight -dec 10
 	      
@@ -117,21 +117,17 @@ Print
                  
 # ss select   
 shift + Print            
-            maim -s | tee ~/pix/$(date +%I:%M:%d,%a)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot " 
+        maim -s | tee ~/pix/$(date +%I:%M:%d,%a)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot " 
 
 # ss window
 alt + Print 
-	        maim -i $(xdotool getactivewindow) ~/pix/$(date +%I:%M:%d,%a)-Win.png | notify-send -t 800 "Window Screenshot Taken"
+	  maim -i $(xdotool getactivewindow) ~/pix/$(date +%I:%M:%d,%a)-Win.png | notify-send -t 800 "Window Screenshot Taken"
 	                           
 # chrome
 alt + b
       google-chrome-stable
-      # google-chrome
+      # $BROWSER
         
-# firefox
-super + alt + b
-              firefox
-           
 # terminal
 super + Return
              kitty 
@@ -178,15 +174,15 @@ ctrl + alt + Delete
 
 # make sxhkd reload its configuration files
 super + Escape
-	      pkill -USR1 -x sxhkd 
+	       notify-send -t 500 "reloading sxhkd!"; pkill -USR1 -x sxhkd
 	
 # quit/restart bspwm
 super + alt + {q,r}
-      	bspc {quit,wm -r}
+      	  bspc {quit,wm -r}
 
 # close and kill
 super + {_,shift + }q
-      	bspc node -{c,k}
+          bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
 super + m
@@ -205,8 +201,16 @@ super + y
 #
 
 # set the window state
-super + {t,shift + t,s,f}
-       	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+# super + {t,shift + t,s,f}
+#        	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + {s,f}
+        {bspc config pointer_follows_focus true; \
+        bspc node -t $(bspc query -N -n -n .tiled >/dev/null && echo floating || echo tiled); \
+        bspc node -f; \
+        bspc config pointer_follows_focus false,bspc config pointer_follows_focus true; \
+        bspc node -t $(bspc query -N -n -n .tiled >/dev/null && echo fullscreen || echo tiled); \
+        bspc node -f; \
+        bspc config pointer_follows_focus false}
 
 # set the node flags
 super + ctrl + {m,x,s,p}
@@ -244,7 +248,7 @@ super + {_,shift + }{1-9,0}
 	
 # focus the node for the given path jump
 super + {p,b,comma,period}
-       	bspc node -f @{parent,brother,first,second}
+       	  bspc node -f @{parent,brother,first,second}
 
 #
 # preselect
@@ -256,7 +260,7 @@ super + ctrl + {h,j,k,l}
 
 # preselect the ratio
 super + ctrl + {1-9}
-       	bspc node -o 0.{1-9}
+       	  bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
 super + ctrl + space
@@ -264,7 +268,7 @@ super + ctrl + space
 
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
-      	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+          bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize
@@ -280,4 +284,4 @@ super + alt + shift + {h,j,k,l}
 
 # move a floating window
 super + {Left,Down,Up,Right}
-	      bspc node -v {-160 0,0 160,0 -160,160 0}
+	    bspc node -v {-160 0,0 160,0 -160,160 0}

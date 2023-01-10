@@ -37,12 +37,12 @@ export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"     # to use this comment .zshrc wget alias
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
 # Uncmnt when needed
 # export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"  # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
 # export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
 # export KODI_DATA="$XDG_DATA_HOME/kodi"
-# export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 # export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
 # export GNUPGHOME="$XDG_DATA_HOME/gnupg"                  # run this - gpg2 --homedir "$XDG_DATA_HOME/gnupg"
 

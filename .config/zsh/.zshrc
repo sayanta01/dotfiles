@@ -75,6 +75,8 @@ setopt hist_verify             # show command with history expansion to user bef
 #source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
 #source /etc/zsh_command_not_found 2>/dev/null
 
+# source ~/.config/zsh/tty-colors
+
 # Arch PATH
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null
@@ -149,8 +151,8 @@ alias vm-off="sudo sv stop libvirtd virtlogd"
 
 alias la='exa --icons'
 alias ls='ls --color=auto'
-alias lt="exa --icons --tree"
-alias ll="exa --icons -lgha --group-directories-first"
+alias lt='exa --icons --tree'
+alias ll='exa --icons -lgha --group-directories-first'
 alias lm='ls -t -1'
 alias ld='ls -d */'
 alias lsn='exa | wc -l'
@@ -225,13 +227,11 @@ alias vim='nvim'
 alias se='sudoedit'
 alias mpad='mousepad'
 alias mpc='mpd 2>/dev/null ; ncmpcpp'
-alias ytdl-vid="yt-dlp -f bestvideo+bestaudio"
-alias ytdl-aud="yt-dlp --extract-audio --audio-format m4a"
+alias ytdl-vid='yt-dlp -f bestvideo+bestaudio'
+alias ytdl-aud='yt-dlp --extract-audio --audio-format m4a'
 
 # for Arch Linux only
 #alias mirror='sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
 #alias mirrord='sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist'
 #alias mirrors='sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist'
 #alias mirrora='sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist'
-
-# xprop - wm classname
