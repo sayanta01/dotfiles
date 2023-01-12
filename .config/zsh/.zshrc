@@ -194,6 +194,7 @@ alias php-server='php -S 0.0.0.0:8000'
 alias python-server='python -m http.server 8000'
 
 alias hst="history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c"
+alias ff="fd --type f --hidden --exclude .git | fzf | xargs -r $EDITOR"
 alias fonts="magick convert -list font | grep -iE 'font:.*'"
 alias find_='sh -c '\''find $@ 2>&1 | grep -v "Permission denied" >&2'\'' _'
 alias bigfile="du -h -x -s -- * | sort -r -h | head -20"
