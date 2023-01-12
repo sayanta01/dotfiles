@@ -85,5 +85,3 @@ sudo pacman -Sy mousepad xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4
 # xfce4-time-out-plugin       # Pomodoro take a break from your computer with this plugin
 # xfce4-fsguard-plugin        # File system usage monitor plugin 
 # xfce4-systemload-plugin     # A system load plugin
-
-

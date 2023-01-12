@@ -1,12 +1,12 @@
-#!/bin/sh                                         
+#!/bin/sh
 
-sudo pacman -Syyu 
+sudo pacman -Syyu
 cp -r ~/dotfiles/{.zprofile,.profile,.xprofile,.xinitrc,.imwheelrc,.vimrc} ~/
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
 
-mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp} 
+mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp}
 
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
@@ -17,41 +17,41 @@ cd ~/dl/dmenu && sudo make clean install
 git clone https://github.com/sayanta01/nvim ~/.config/nvim
 
 git clone https://github.com/sayanta01/PapirusFlatMix ~/.local/share/icons/PapirusFlatMix
-sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
+sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
-     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \
-     exa bat tldr fd ripgrep procs duf dust man fzf \
-     mate-calc firefox qutebrowser meld \
-     cargo linux-headers neovim kitty newsboat trash-cli \
-     neofetch htop cowsay libconfig gnome-keyring \
-     bspwm polybar sxhkd rofi dunst libnotify \
-     qt5ct qt6ct kvantum lxappearance xcape \
-     playerctl mpd ncmpcpp dbus-python \
-     dialog cmake wmname imwheel pass \
-     wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils \
-     mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
-     unrar unzip zip p7zip tar engrampa \
-     tree ncdu lf thunar thunar-archive-plugin thunar-media-tags-plugin \
-     zathura zathura-pdf-mupdf ghostscript \
-     zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-     rsync wget curl aria2 yt-dlp transmission-cli jq \
-     intel-ucode virtualbox-guest-utils \
-     xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
-# socat exfat-utils brightnessctl  - additional tools 
+	noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \
+	exa bat tldr fd ripgrep procs duf dust man fzf \
+	mate-calc firefox qutebrowser meld \
+	cargo linux-headers neovim kitty newsboat trash-cli \
+	neofetch htop cowsay libconfig gnome-keyring \
+	bspwm polybar sxhkd rofi dunst libnotify \
+	qt5ct qt6ct kvantum lxappearance xcape \
+	playerctl mpd ncmpcpp dbus-python \
+	dialog cmake wmname imwheel pass \
+	wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils \
+	mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
+	unrar unzip zip p7zip tar engrampa \
+	tree ncdu lf thunar thunar-archive-plugin thunar-media-tags-plugin \
+	zathura zathura-pdf-mupdf ghostscript \
+	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
+	rsync wget curl aria2 yt-dlp transmission-cli jq \
+	intel-ucode virtualbox-guest-utils \
+	xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
+# socat exfat-utils brightnessctl  - additional tools
 
 # use PulseAudio
 # sudo pacman -S pulseaudio pulseaudio-bluetooth pavucontrol pulsemixer
 # use PipeWire
-# sudo pacman -S pipewire pipewire-pulse wireplumber 
+# sudo pacman -S pipewire pipewire-pulse wireplumber
 
 # Display Manager
 sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # lightdm-runit  ( artix )
-# dm-tool switch-to-greeter 
-# move a img to /etc/lightdm for lightdm wallpaper 
+# dm-tool switch-to-greeter
+# move a img to /etc/lightdm for lightdm wallpaper
 # echo 'background = /etc/lightdm/bg.jpg' | sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf
 
 # Nvidia
@@ -59,7 +59,7 @@ sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia nvtop glmark2
 
 # GUI apps
 sudo pacman -S --noconfirm scrcpy android-tools stress bpytop blueman bluez-utils ntfs-3g \
-obs-studio audacity gimp inkscape virtualbox kdeconnect blender telegram-desktop 
+	obs-studio audacity gimp inkscape virtualbox kdeconnect blender telegram-desktop
 # sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 
 sudo pacman -S --noconfirm bluez-runit docker-runit openssh-runit libvirt-runit
@@ -86,24 +86,23 @@ sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat
 
 # AUR
 git clone https://aur.archlinux.org/paru.git ~/.config/paru
-cd ~/.config/paru && makepkg -si 
+cd ~/.config/paru && makepkg -si
 paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava picom-ibhagwan-git \
-visual-studio-code-bin google-chrome anki ttyper browsh simple-mtpfs  
-#plymouth-nosystemd  ( artix ) && plymouth ( arch )
+	visual-studio-code-bin google-chrome anki ttyper browsh simple-mtpfs
 
 # /etc/pacman.conf              ( uncheck ignorepkg and put pkgname )
 
-# Change Teletype font 
+# Change Teletype font
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
 sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
 
 # Fix qt5ct
 # echo 'QT_QPA_PLATFORMTHEME="qt5ct"' | sudo tee -a /etc/environment
 
-# Fix bluetooth          & Get percentage of connected device 
-# ControllerMode = bredr & Experimental = true > /etc/bluetooth/main.conf  
+# Fix bluetooth          & Get percentage of connected device
+# ControllerMode = bredr & Experimental = true > /etc/bluetooth/main.conf
 
-# Fix suckless utilities give XOpenIM failed error 
+# Fix suckless utilities give XOpenIM failed error
 # echo 'LANG=en_US.UTF-8
 # LC_CTYPE=en_US.UTF-8
 # LC_ADDRESS=en_US.UTF-8

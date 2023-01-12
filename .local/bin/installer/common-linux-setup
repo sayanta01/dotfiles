@@ -4,28 +4,28 @@
 # change audiosw sink-name
 # change btch mac-add
 # change sys-status check-updates according to ur pkg-manager
-# change git config username 
-# ucmnt alias for ur pkg-manager 
+# change git config username
+# ucmnt alias for ur pkg-manager
 # chnage record script
 # change wttr location
 # add notify-sound if want
 # uncmt source for tty-colors in zshrc if want
 
-# Change DNS server to cloudflare 
-sudo cat <<EOF | sudo tee /etc/resolv.conf 
+# Change DNS server to cloudflare
+sudo cat <<EOF | sudo tee /etc/resolv.conf
 nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
- 
+
 # Display Asterisks while entering pswd
-sudo su root -c "echo Defaults pwfeedback >> /etc/sudoers"
+# sudo su root -c "echo Defaults pwfeedback >> /etc/sudoers"
 
 # Remove Firefox ~/.pulse-cookie
 sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
 
 # Enable TouchPad Tapping for Laptop
 sudo mkdir /etc/X11/xorg.conf.d && sudo touch /etc/X11/xorg.conf.d/30-touchpad.conf
-sudo cat <<EOF | sudo tee /etc/X11/xorg.conf.d/30-touchpad.conf 
+sudo cat <<EOF | sudo tee /etc/X11/xorg.conf.d/30-touchpad.conf
 Section "InputClass"
        Identifier "devname"
        Driver "libinput"
@@ -34,12 +34,12 @@ Section "InputClass"
 EndSection
 EOF
 
-# Use dash symlink for /bin/sh  - do this carefully it can break whole system 
+# Use dash symlink for /bin/sh  - do this carefully it can break whole system
 # readlink /bin/sh  - check system shell
 # install checkbashisms dash
 # find /usr/bin/ -type f -perm -o=r -print0 | xargs -0r gawk '/^#!.*( |[/])sh/{printf "%s\0", FILENAME} {nextfile}' | xargs -0r checkbashisms  - check if all your /usr/bin script is compatible with dash or not
 # sudo ln -sfT dash /usr/bin/sh  - change dash as system shell, only run this, after you've corrected all your script for dash
-# sudo vim /usr/share/libalpm/hooks/bash-update.hook >> http://0x0.st/okdY.sh || install dashbinsh from AUR  - fix overwriting symlink after update bash  
+# sudo vim /usr/share/libalpm/hooks/bash-update.hook >> http://0x0.st/okdY.sh || install dashbinsh from AUR  - fix overwriting symlink after update bash
 
 # Replace sudo with doas
 # install opendoas
@@ -50,10 +50,10 @@ EOF
 # User privilege specification
 # allow memebers of group wheel to exec any command
 
-# Turn off mitigations 
+# Turn off mitigations
 # /etc/default/grub >> GRUB_CMDLINE_LINUX*="rhgb quiet mitigations=off"
 
 # Fix screen tearing for nvidia-settings
-nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+# nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
 # sudo vim /etc/hosts           ( blk sites )

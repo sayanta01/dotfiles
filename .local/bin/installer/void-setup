@@ -9,9 +9,9 @@ mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
 
-mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
+mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp}
 
-sudo xbps-install -Sy libXft-devel harfbuzz-devel libXinerama-devel  
+sudo xbps-install -Sy libXft-devel harfbuzz-devel libXinerama-devel
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
 
@@ -21,64 +21,64 @@ cd ~/dl/dmenu && sudo make clean install
 git clone https://github.com/sayanta01/nvim ~/.config/nvim
 
 git clone https://github.com/sayanta01/PapirusFlatMix ~/.local/share/icons/PapirusFlatMix
-sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
+sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
 sudo xbps-install -Sy font-awesome \
-     noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk fonts-roboto-ttf terminus-font \
-     exa bat tldr fd ripgrep procs duf dust man fzf \
-     mate-calc firefox qutebrowser meld \
-     cargo linux-headers neovim kitty newsboat trash-cli \
-     neofetch htop cowsay libconfig gnome-keyring \
-     bspwm polybar sxhkd rofi dunst libnotify \
-     qt5ct qt6ct kvantum lxappearance xcape \
-     playerctl mpd ncmpcpp python3-dbus \
-     dialog cmake wmname imwheel pass \
-     wireless_tools net-tools network-manager-applet bind-utils \
-     mpv mediainfo exiftool ffmpegthumbnailer ImageMagick maim sxiv xwallpaper ffmpeg python3-pip pywal \
-     unrar unzip zip p7zip tar engrampa \
-     tree ncdu lf Thunar thunar-archive-plugin thunar-media-tags-plugin \
-     zathura zathura-pdf-mupdf ghostscript \
-     zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-     rsync wget curl aria2 yt-dlp transmission jq \
-     intel-ucode virtualbox-ose-guest \
-     xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
-# socat exfat-utils brightnessctl  - additional tools 
+	noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk fonts-roboto-ttf terminus-font \
+	exa bat tldr fd ripgrep procs duf dust man fzf \
+	mate-calc firefox qutebrowser meld \
+	cargo linux-headers neovim kitty newsboat trash-cli \
+	neofetch htop cowsay libconfig gnome-keyring \
+	bspwm polybar sxhkd rofi dunst libnotify \
+	qt5ct qt6ct kvantum lxappearance xcape \
+	playerctl mpd ncmpcpp python3-dbus \
+	dialog cmake wmname imwheel pass \
+	wireless_tools net-tools network-manager-applet bind-utils \
+	mpv mediainfo exiftool ffmpegthumbnailer ImageMagick maim sxiv xwallpaper ffmpeg python3-pip pywal \
+	unrar unzip zip p7zip tar engrampa \
+	tree ncdu lf Thunar thunar-archive-plugin thunar-media-tags-plugin \
+	zathura zathura-pdf-mupdf ghostscript \
+	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
+	rsync wget curl aria2 yt-dlp transmission jq \
+	intel-ucode virtualbox-ose-guest \
+	xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
+# socat exfat-utils brightnessctl  - additional tools
 
 # use PulseAudio
 # sudo pacman -S pulseaudio pavucontrol pulsemixer
 # use PipeWire
-# sudo pacman -S pipewire wireplumber libspa-bluetooth 
+# sudo pacman -S pipewire wireplumber libspa-bluetooth
 
 # Nvidia
-sudo xbps-install -Sy nvidia nvidia-libs-32bit nvtop glmark2 
+sudo xbps-install -Sy nvidia nvidia-libs-32bit nvtop glmark2
 
 # GUI apps
 sudo xbps-install -Sy scrcpy android-tools stress bpytop blueman bluez ntfs-3g \
-obs audacity gimp inkscape virtualbox-ose kdeconnect blender telegram-desktop
+	obs audacity gimp inkscape virtualbox-ose kdeconnect blender telegram-desktop
 
 # VM
 sudo xbps-install -Sy qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm libvirt docker openssh
 # ovmf
 
 sudo xbps-install -Sy betterlockscreen xwinwrap cava \
-vscode anki browsh simple-mtpfs 
+	vscode anki browsh simple-mtpfs
 
 # xbps-src
 git clone https://github.com/void-linux/void-packages ~/void-packages
 cd ~/void-packages && ./xbps-src binary-bootstrap
-echo XBPS_ALLOW_RESTRICTED=yes > ~/void-packages/etc/conf
+echo XBPS_ALLOW_RESTRICTED=yes >~/void-packages/etc/conf
 
 # google-chrome
 cd ~/void-packages && ./xbps-src pkg google-chrome
 sudo xbps-install -y --repository=hostdir/binpkgs/nonfree google-chrome
 
-# picom 
+# picom
 git clone https://github.com/ibhagwan/picom-ibhagwan-template ~/picom-ibhagwan
 mv ~/picom-ibhagwan ~/void-packages/srcpkgs/picom-ibhagwan
 cd ~/void-packages && ./xbps-src pkg picom-ibhagwan
 sudo xbps-install -y --repository=hostdir/binpkgs picom-ibhagwan
 
-# Change Teletype font 
+# Change Teletype font
 echo 'FONT="ter-d16b"' | sudo tee -a /etc/rc.conf

@@ -9,9 +9,9 @@ mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
 
-mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp} 
+mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp}
 
-sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev  
+sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
 
@@ -21,18 +21,18 @@ cd ~/dl/dmenu && sudo make clean install
 git clone https://github.com/sayanta01/nvim ~/.config/nvim
 
 git clone https://github.com/sayanta01/PapirusFlatMix ~/.local/share/icons/PapirusFlatMix
-sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita 
+sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
 sudo apt install -y fonts-jetbrains-mono fonts-roboto fonts-terminus \
-bspwm polybar rofi kitty dunst lxappearance maim playerctl \
-cargo ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf \
-lf zathura htop qt5-style-kvantum meld \
-imwheel xclip xdo xwallpaper gpg cowsay xcape betterlockscreen \
-exiftool aria2 wmname wmctrl neofetch \
-transmission-daemon trash-cli docker.io aptitude synaptic  
-#ncdu apt-transport-https translate-shell stacer 
+	bspwm polybar rofi kitty dunst lxappearance maim playerctl \
+	cargo ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf \
+	lf zathura htop qt5-style-kvantum meld \
+	imwheel xclip xdo xwallpaper gpg cowsay xcape betterlockscreen \
+	exiftool aria2 wmname wmctrl neofetch \
+	transmission-daemon trash-cli docker.io aptitude synaptic
+#ncdu apt-transport-https translate-shell stacer
 #sudo systemctl disable docker.socket
 
 #wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
@@ -43,5 +43,5 @@ transmission-daemon trash-cli docker.io aptitude synaptic
 #Console Font
 #sudo dpkg-reconfigure console-setup
 
-# sudo systemd-analyze  ( critical-chain )      
+# sudo systemd-analyze  ( critical-chain )
 # sudo su root -c "echo deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free >> /etc/apt/sources.list"
