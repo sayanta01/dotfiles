@@ -163,6 +163,8 @@ alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 
+alias ..='cd ..'
+alias ...='cd ../..'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
