@@ -115,11 +115,9 @@ PROMPT=' %b%{$fg[red]%}❯${vcs_info_msg_0_}%  '
 
 # Arch
 alias install='sudo pacman -Sy'
-alias update='sudo pacman -Syyu'
+alias update='sudo pacman -Syyu; echo "############### ⬆️AUR ###############"; paru -Sua'
 alias remove='sudo pacman -Rns'
-alias clean='sudo pacman -Rns $(pacman -Qtdq)'  # remove orphaned packages
-alias upaur='paru -Sua --noconfirm'
-alias cleanaur='sudo pacman -Sc --noconfirm'
+alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm'  # remove orphaned packages
 alias unlock='sudo rm /var/lib/pacman/db.lck'   # remove pacman lock
 
 # XBPS
