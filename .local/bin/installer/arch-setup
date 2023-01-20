@@ -62,8 +62,9 @@ sudo pacman -S --noconfirm scrcpy android-tools stress bpytop blueman bluez-util
 	obs-studio audacity gimp inkscape virtualbox kdeconnect blender telegram-desktop
 # sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 
-sudo pacman -S --noconfirm bluez-runit docker-runit openssh-runit libvirt-runit
-# bluez docker openssh libvirt  ( arch )
+sudo pacman -S --noconfirm cronie-runit bluez-runit docker-runit openssh-runit libvirt-runit
+# cronie bluez docker openssh libvirt  ( arch )
+# sudo ln -s /etc/runit/sv/cronie /run/runit/service  ( artix )
 # sudo ln -s /run/runit/sv/docker /run/runit/service  ( artix )
 # sudo touch /run/runit/service/docker/down           ( artix )
 # sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
