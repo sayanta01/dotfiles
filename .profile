@@ -16,6 +16,7 @@ export PATH="$PATH:$HOME/.local/share/cargo/bin"
 # Default programs
 export EDITOR="nvim"
 export TERMINAL="st"
+export READER="zathura"
 # export BROWSER="google-chrome-stable"
 
 # XDG paths
