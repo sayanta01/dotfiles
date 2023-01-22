@@ -6,23 +6,21 @@
 # then
 #   notify-send -t 990 "Picom 🚀"
 #   picom
-# else 
+# else
 #   notify-send -t 990 "Picom ☠️"
 #   killall picom
 # fi
-
 
 # Name of the program to check
 PROGRAM="picom"
 
 # Check if the program is running
-if pgrep "$PROGRAM" > /dev/null
-then
-    # If the program is running, kill it
-    notify-send -t 990 "Picom ☠️"
-    pkill "$PROGRAM"
+if pgrep "$PROGRAM" >/dev/null; then
+	# If the program is running, kill it
+	notify-send -t 990 "Picom ☠️"
+	pkill "$PROGRAM"
 else
-    # If the program is not running, start it
-    notify-send -t 990 "Picom 🚀"
-    "$PROGRAM" &
+	# If the program is not running, start it
+	notify-send -t 990 "Picom 🚀"
+	"$PROGRAM" &
 fi

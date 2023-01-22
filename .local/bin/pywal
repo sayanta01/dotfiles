@@ -4,9 +4,8 @@
 PROGRAM="bspwm"
 
 # Check if the program is running
-if pgrep "$PROGRAM" > /dev/null
-then
-    wal -qi ~/.local/share/walls && bspc wm -r
+if pgrep "$PROGRAM" >/dev/null; then
+	wal -qi ~/.local/share/walls && bspc wm -r
 else
-    wal -qi ~/.local/share/walls
+	wal -qi ~/.local/share/walls
 fi

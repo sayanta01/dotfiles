@@ -6,15 +6,15 @@
 
 f=3 b=4
 for j in f b; do
-  for i in {0..7}; do
-    printf -v "$j$i" %b "\e[${!j}${i}m"
-  done
+	for i in {0..7}; do
+		printf -v "$j$i" %b "\e[${!j}${i}m"
+	done
 done
 bld=$'\e[1m'
 rst=$'\e[0m'
 inv=$'\e[7m'
 
-cat << EOF
+cat <<EOF
 
  ${f1} █-----${bld}█  ${rst}${f2} █-----${bld}█${rst}  ${f3} █-----${bld}█${rst}  ${f4} █-----${bld}█${rst}  ${f5} █-----${bld}█${rst}  ${f6} █-----${bld}█${rst}
   ${f1} █---${bld}█${rst}    ${f2} █---${bld}█${rst}    ${f3} █---${bld}█${rst}    ${f4} █---${bld}█${rst}    ${f5} █---${bld}█${rst}    ${f6} █---${bld}█${rst}

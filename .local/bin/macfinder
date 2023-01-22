@@ -2,19 +2,17 @@
 
 color=$(seq 2 255 | sort -R | head -n 1)
 
-if [ $# != 1 ];
-then
-    echo -e " usage: $0 <MAC addres> \n format: \n 00-11-22-33-44-55 \n 00-11-22-33-44-55 \n 00:11:22:33:44:55 \n 00.11.22.33.44.55 \n 001122334455 \n 0011.2233.4455"
-    exit 0
+if [ $# != 1 ]; then
+	echo -e " usage: $0 <MAC addres> \n format: \n 00-11-22-33-44-55 \n 00-11-22-33-44-55 \n 00:11:22:33:44:55 \n 00.11.22.33.44.55 \n 001122334455 \n 0011.2233.4455"
+	exit 0
 fi
 
-GET_VDR=$(curl -s http://api.macvendors.com/"$1") 
+GET_VDR=$(curl -s http://api.macvendors.com/"$1")
 
-if [[ "$GET_VDR" =~ [0-9A-Z] ]];
-then
-    echo -e "\n\t\e[01;04;38;5;${color};48;05;232m${GET_VDR}\e[0m\n" 
- 
+if [[ "$GET_VDR" =~ [0-9A-Z] ]]; then
+	echo -e "\n\t\e[01;04;38;5;${color};48;05;232m${GET_VDR}\e[0m\n"
+
 else
-    echo -e "\n\tVendor Not Found\n"
-   
+	echo -e "\n\tVendor Not Found\n"
+
 fi

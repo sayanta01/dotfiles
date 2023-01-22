@@ -1,4 +1,4 @@
 #!/bin/sh
 
-notify-send -t 4990 "Wait for 5sec" 
-betterlockscreen -u  ~/.local/share/walls --fx blur
+notify-send -t 4990 "Wait for 5sec"
+betterlockscreen -u ~/.local/share/walls --fx blur
