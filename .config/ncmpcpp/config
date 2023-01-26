@@ -39,5 +39,3 @@ playlist_display_mode = "columns"
 [ Song list ]
 song_columns_list_format = "(10)[blue]{l} (30)[green]{t} (30)[magenta]{a} (30)[yellow]{b}"
 song_list_format = "{$7%a - $9}{$5%t$9}|{$5%f$9}$R{$6%b $9}{$3%l$9}"
-
-

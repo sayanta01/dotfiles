@@ -4,6 +4,7 @@ from ranger.api.commands import *
 
 import os
 
+
 class emptytrash(Command):
     """:empty
 
@@ -13,4 +14,3 @@ class emptytrash(Command):
     def execute(self):
         HOME = os.environ['HOME']
         self.fm.run(f'trash-empty')
-
