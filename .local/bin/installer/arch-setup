@@ -89,7 +89,7 @@ sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat
 git clone https://aur.archlinux.org/paru.git ~/.config/paru
 cd ~/.config/paru && makepkg -si
 paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava picom-ibhagwan-git \
-	visual-studio-code-bin google-chrome anki ttyper browsh simple-mtpfs
+	visual-studio-code-bin google-chrome anki ttyper browsh simple-mtpfs ttf-maple-latest
 
 # /etc/pacman.conf              ( uncheck ignorepkg and put pkgname )
 
