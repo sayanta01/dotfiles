@@ -13,7 +13,6 @@ set notification-warning-fg     "#22292b" # Selection
 set notification-bg             "#181f21" 
 set notification-fg             "#dadada" 
 
-
 # Define color index mode
 set index-bg                    "#181f21" 
 set index-fg                    "#dadada" 
@@ -35,16 +34,14 @@ set render-loading              true  --
 set render-loading-fg           "#181f21" # Background --
 set render-loading-bg           "#dadada" # Foreground --
 
-
 # Recolor mode settings
 set recolor-lightcolor          "#181f21" # Background
 set recolor-darkcolor           "#dadada" # Foreground
 
-
 # Startup options
 set sandbox none
 set recolor true
-set font "JetBrainsMonoMedium Nerd Font 10"
+set font "JetBrainsMono Nerd Font 10"
 set page-padding 2
 set window-height 800
 set window-width 800

@@ -7,7 +7,7 @@
 set -e
 
 cleanup() {
-    exec 3>&-
+	exec 3>&-
 	rm "$FIFO_UEBERZUG"
 }
 
@@ -17,7 +17,7 @@ else
 	[ ! -d "$HOME/.cache/lf" ] && mkdir -p "$HOME/.cache/lf"
 	export FIFO_UEBERZUG="$HOME/.cache/lf/ueberzug-$$"
 	mkfifo "$FIFO_UEBERZUG"
-	ueberzug layer -s <"$FIFO_UEBERZUG" -p json &
+	ueberzug layer -s -p json <"$FIFO_UEBERZUG" &
 	exec 3>"$FIFO_UEBERZUG"
 	trap cleanup HUP INT QUIT TERM PWR EXIT
 	lf "$@" 3>&-

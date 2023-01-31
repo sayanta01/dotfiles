@@ -33,5 +33,4 @@
     (dash-info 0)
     (emulate-brush-dynamics no))
 
-
 # end of gimprc

@@ -1,4 +1,4 @@
-#!/bin/sh
+j!/bin/sh
 
 if [ -z "$1" ]
 then
@@ -17,5 +17,5 @@ do
   wget -nc -O "$cachedir"/"$datedir"/$i.jpg https://epaperwmimg.amarujala.com/"$date"/dl/$i/hdimage.jpg || break
 done
 
-notify-send -t 990 "Here is your 🗞️"
+notify-send -t 2000 "Here is your 🗞️"
 sxiv -z 110 "$cachedir"/"$datedir"/*

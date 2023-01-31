@@ -4,10 +4,8 @@
 
 # brightness control
 XF86MonBrightness{Up,Down}
-	             brightnessctl{ --inc, --dec}
-	               # xbacklight -inc 10
-	               # xbacklight -dec 10
-	      
+	             xbacklight{ --inc 10, --dec 10}
+	
 # volume control 
 XF86AudioLowerVolume
               pamixer -d 5 

@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=Application
-Name=Video Player
+Name=Video player
 Exec=/usr/local/bin/mpv %u
 Icon=mpv
