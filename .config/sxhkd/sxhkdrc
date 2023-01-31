@@ -59,6 +59,14 @@ super + alt + o
 super + alt + p
               bash ~/.local/bin/wallch
 
+# temp clip
+super + alt + t
+              bash ~/.local/bin/dm-script/tclip
+
+# display temp clip
+super + alt + d
+              bash ~/.local/bin/dm-script/dclip
+
 # bluetooth
 alt + F1
       bash ~/.local/bin/btch    		    
