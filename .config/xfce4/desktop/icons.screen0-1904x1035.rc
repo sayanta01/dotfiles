@@ -1,8 +1,12 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
-[/home/bot/desk/linux-questions]
-row=7
+[/home/bot/desk/sayanta01.github.io-bak]
+row=6
+col=0
+
+[/home/bot/desk/Old-JetBrainsMono]
+row=1
 col=0
 
 [/home/bot/desk/monitor]
@@ -13,16 +17,12 @@ col=0
 row=4
 col=0
 
-[/home/bot/desk/client.conf]
-row=6
-col=0
-
 [/home/bot/desk/scratch]
 row=3
 col=0
 
-[/home/bot/desk/mysite]
-row=1
+[/home/bot/desk/linux-questions]
+row=7
 col=0
 
 [/home/bot/desk/repo]
@@ -31,5 +31,9 @@ col=0
 
 [/home/bot/desk/html-notes]
 row=0
+col=0
+
+[/home/bot/desk/sayanta01.github.io]
+row=8
 col=0
 

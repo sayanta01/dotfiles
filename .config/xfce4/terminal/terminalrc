@@ -28,7 +28,7 @@ MiscNewTabAdjacent=FALSE
 MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=FALSE
 FontName=JetBrainsMono Nerd Font 13
-/* FontName=JetBrains Mono NL Ultra-Light 13 */
+// FontName=JetBrains Mono NL Ultra-Light 13
 BackgroundMode=TERMINAL_BACKGROUND_IMAGE
 CellHeightScale=1.050000
 ColorForeground=#F8F8F2
@@ -38,4 +38,3 @@ ColorCursor=#F8F8F2
 ScrollingLines=999
 MiscRightClickAction=TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
 BackgroundImageShading=0.900000
-

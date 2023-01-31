@@ -106,7 +106,7 @@
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="digital-format" type="string" value="%a, %b %d 󱑅 %I:%M:%S "/>
-      <property name="digital-time-format" type="string" value="%a, %d %b 󱑁 %I:%M:%S "/>
+      <property name="digital-time-format" type="string" value="%a, %d %b 🕖 %I:%M:%S "/>
       <property name="digital-layout" type="uint" value="3"/>
       <property name="digital-time-font" type="string" value="SF Pro Text Semi-Bold 11"/>
     </property>
