@@ -1,3 +1,3 @@
 #!/bin/sh
 
-notify-send "󰃭 " "$(cal --color=always | sed "s/..7m/<b><span color=\"mediumturquoise\">/;s|..27m|</span></b>|")" 
+notify-send "📆 " "$(cal --color=always | sed "s/..7m/<b><span color=\"mediumturquoise\">/;s|..27m|</span></b>|")" 
