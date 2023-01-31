@@ -3,4 +3,4 @@
 mem_usage=$(free -h | awk '/Mem:/ { print $3 }' | cut -f1 -d 'i')
 
 echo "﬙ $mem_usage"
-
+# echo "🧠 $mem_usage"
