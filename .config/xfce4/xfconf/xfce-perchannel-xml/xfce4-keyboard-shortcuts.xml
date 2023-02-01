@@ -29,6 +29,7 @@
       <property name="&lt;Super&gt;r" type="empty">
         <property name="startup-notify" type="empty"/>
       </property>
+      <property name="&lt;Alt&gt;&lt;Super&gt;s" type="empty"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;t" type="empty"/>
       <property name="&lt;Super&gt;l" type="empty"/>
       <property name="override" type="empty"/>
@@ -48,7 +49,6 @@
       <property name="&lt;Alt&gt;&lt;Super&gt;q" type="string" value="xfce4-session-logout"/>
       <property name="&lt;Super&gt;Return" type="string" value="kitty"/>
       <property name="&lt;Super&gt;F7" type="string" value="playerctl play-pause"/>
-      <property name="&lt;Alt&gt;&lt;Super&gt;b" type="string" value="firefox"/>
       <property name="&lt;Super&gt;space" type="string" value="dmenu_run"/>
       <property name="Print" type="string" value="xfce4-screenshooter -f"/>
       <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r"/>
@@ -56,9 +56,6 @@
       <property name="&lt;Alt&gt;F7" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;n" type="string" value="xdg-open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;m" type="string" value="xdg-open http://notion.new"/>
-      <property name="&lt;Alt&gt;F2" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ -5% "/>
-      <property name="&lt;Alt&gt;F3" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ +5%"/>
-      <property name="&lt;Alt&gt;F4" type="string" value="pactl set-sink-mute @DEFAULT_SINK@ toggle"/>
       <property name="&lt;Alt&gt;0" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="betterlockscreen -l blur"/>
       <property name="&lt;Alt&gt;F5" type="string" value="./.local/bin/audiosw"/>
@@ -67,7 +64,12 @@
       <property name="&lt;Super&gt;u" type="string" value="./.local/bin/statusbar/toggle-xfce-panel"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="./.local/bin/dm-script/kil"/>
       <property name="&lt;Alt&gt;F9" type="string" value="./.local/bin/dm-script/wifi"/>
-      <property name="&lt;Super&gt;F4" type="string" value="./.local/bin/dm-script/system_action"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;t" type="string" value="./.local/bin/dm-script/tclip"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;d" type="string" value="./.local/bin/dm-script/dclip"/>
+      <property name="&lt;Alt&gt;F2" type="string" value="pamixer -i 5"/>
+      <property name="&lt;Alt&gt;F3" type="string" value="pamixer -d 5"/>
+      <property name="&lt;Alt&gt;F4" type="string" value="pamixer -t"/>
+      <property name="&lt;Super&gt;F4" type="string" value="./.local/bin/dm-script/sys-action"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -126,8 +128,8 @@
       <property name="&lt;Primary&gt;F12" type="empty"/>
       <property name="&lt;Super&gt;KP_Left" type="empty"/>
       <property name="&lt;Super&gt;KP_Right" type="empty"/>
-      <property name="&lt;Super&gt;KP_Up" type="empty"/>
       <property name="&lt;Super&gt;KP_Down" type="empty"/>
+      <property name="&lt;Super&gt;KP_Up" type="empty"/>
       <property name="&lt;Super&gt;KP_Page_Up" type="empty"/>
       <property name="&lt;Super&gt;KP_Home" type="empty"/>
       <property name="&lt;Super&gt;KP_End" type="empty"/>

@@ -91,7 +91,7 @@ alt + F4
 
  # system_action
 super + F4
-        bash ~/.local/bin/dm-script/system_action
+        bash ~/.local/bin/dm-script/sys-action
 	 
 # switch audio
 alt + F5       
