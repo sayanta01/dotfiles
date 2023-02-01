@@ -3,8 +3,8 @@ title-text: ""
 desktop-image: "background.png"
 desktop-image-scale-method: "stretch"
 desktop-color: "#1E1E2E"
-# terminal-font: "Unifont Regular 16"
-terminal-font: "Terminus Regular 14"
+terminal-font: "Unifont Regular 16"
+# terminal-font: "Terminus Regular 14"
 terminal-left: "0"
 terminal-top: "0"
 terminal-width: "100%"
@@ -24,8 +24,8 @@ terminal-border: "0"
   top = 30%
   width = 50%
   height = 50%  
-# item_font = "Unifont Regular 16"
-  item_font = "ChalkDust Regular 14"
+  item_font = "Unifont Regular 16"
+  # item_font = "ChalkDust Regular 14"
   item_color = "#CDD6F4"
   selected_item_color = "#CDD6F4"
   icon_width = 30
