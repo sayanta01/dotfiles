@@ -1,4 +1,7 @@
 #!/bin/sh
 
-sudo figlet lolcat toilet cowsay espeak cool-retro-term mapscii jp2a \
+sudo figlet lolcat toilet espeak cool-retro-term mapscii jp2a \
 	nyancat fortune sl cmatrix asciiquarium hollywood oneko tty-clock
+
+# Games
+sudo bastet mari0 pacman4console nsnake
