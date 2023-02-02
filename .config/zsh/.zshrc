@@ -218,7 +218,8 @@ alias pu='pushd'
 alias po='popd'
 alias ffmpeg='ffmpeg -hide_banner'
 alias tsm='transmission-remote'
-alias wget='wget --hsts-file=/dev/null'
+# alias wget='wget --hsts-file=/dev/null'
+alias wget="wget --hsts-file='$HOME/.cache/wget-hsts'"
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
 alias mpv='bsp-swallow mpv'
