@@ -1,18 +1,25 @@
 #!/bin/sh
 
-update() {
-	sum=0
-	for arg; do
-		read -r i <"$arg"
-		sum=$((sum + i))
-	done
-	cache=${XDG_CACHE_HOME:-$HOME/.cache}/${1##*/}
-	[ -f "$cache" ] && read -r old <"$cache" || old=0
-	printf %d\\n "$sum" >"$cache"
-	printf %d\\n $((sum - old))
-}
+# Defining the interval
+INT=1
 
-rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
-tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
+# Saving the RX and TX bytes to $RXSTART and $TXSTART variables
+RXSTART=$(cat /sys/class/net/[ew]*/statistics/rx_bytes)
+TXSTART=$(cat /sys/class/net/[ew]*/statistics/tx_bytes)
 
-printf "%4sB  %4sB\\n" "$(numfmt --to=iec "$rx")" "$(numfmt --to=iec "$tx")"
+# Waiting for $INT seconds
+sleep $INT
+
+# Saving the RX and TX bytes to $RXEND and $TXEND variables
+RXEND=$(cat /sys/class/net/[ew]*/statistics/rx_bytes)
+TXEND=$(cat /sys/class/net/[ew]*/statistics/tx_bytes)
+
+# Calculation of the RX and TX speed in bytes per second
+RXBPS="$(((RXEND - RXSTART) / INT))"
+TXBPS="$(((TXEND - TXSTART) / INT))"
+
+# Returning the results
+printf "%4sB  %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 📡 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 🌐 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 📶 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"

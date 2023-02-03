@@ -1,4 +1,18 @@
 #!/bin/sh
 
 # use once in a week
-sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
+# sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
+echo "Memory Status before the RAM free-up"
+
+free -h
+sudo sync
+sudo sh -c 'echo 1 >/proc/sys/vm/drop_caches'
+sudo sh -c 'echo 2 >/proc/sys/vm/drop_caches'
+sudo sh -c 'echo 3 >/proc/sys/vm/drop_caches'
+
+echo "Freeing up the swap partition"
+sudo swapoff -a
+sudo swapon -a
+
+echo "Memory Status after the RAM free-up"
+free -h

@@ -9,14 +9,16 @@ interface = "eth0"
 # interface = "enp2s0"
 
 
-temp_conti = str(popen("grep {} /proc/net/dev".format(interface)).read().rstrip()).split(" ")
+temp_conti = str(
+    popen("grep {} /proc/net/dev".format(interface)).read().rstrip()).split(" ")
 conti = []
 for item in temp_conti:
     if str(item) != "":
         conti.append(item)
 sleep(0.9999)
 
-temp_contf = str(popen("grep {} /proc/net/dev".format(interface)).read().rstrip()).split(" ")
+temp_contf = str(
+    popen("grep {} /proc/net/dev".format(interface)).read().rstrip()).split(" ")
 contf = []
 for item in temp_contf:
     if str(item) != "":

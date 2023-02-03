@@ -5,7 +5,26 @@ id="$(xinput list | grep -Eo 'Touchpad.*id=[0-9]*' | grep -Eo '[0-9]*')"
 mode="$(echo "$id" | xargs -I % xinput --list-props % | grep 'Device Enabled' | grep -Eo ':.*[0|1]' | grep -Eo '[0|1]')"
 
 if [ "$mode" -eq "1" ]; then
-  xinput set-prop "$id" "Device Enabled" 0 && notify-send "Touchpad" "Touchpad has been Disabled"
+	xinput set-prop "$id" "Device Enabled" 0 && notify-send "Touchpad" "Touchpad has been Disabled"
 else
-  xinput set-prop "$id" "Device Enabled" 1 && notify-send "Touchpad" "Touchpad has been Enabled"
+	xinput set-prop "$id" "Device Enabled" 1 && notify-send "Touchpad" "Touchpad has been Enabled"
 fi
+
+# Another
+# Please define the device type
+device_type="Touchpad"
+# Finding the numeric ID of the device type
+device_id=$(xinput | sed "/$device_type/s/.*id=\([0-9]*\).*/\1/;t;d")
+# Findng whether the device_id is enabled or disabled 1 - means enabled, 0 means disabled
+device_state=$(xinput list-props "$device_id" | awk '/^\tDevice Enabled \([0-9]+\):\t[01]/ {print $NF}')
+
+case "$device_state" in
+0)
+	xinput enable "$device_id"
+	echo "$device_type is enabled"
+	;;
+1)
+	xinput disable "$device_id"
+	echo "$device_type is disabled"
+	;;
+esac
