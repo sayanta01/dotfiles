@@ -29,7 +29,7 @@ sudo xbps-install -Sy font-awesome \
 	noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk fonts-roboto-ttf terminus-font \
 	exa bat tldr fd ripgrep procs duf dust man fzf \
 	mate-calc firefox qutebrowser meld \
-	cargo linux-headers neovim kitty newsboat trash-cli \
+  linux-headers neovim kitty newsboat trash-cli \
 	neofetch htop cowsay libconfig gnome-keyring \
 	bspwm polybar sxhkd rofi dunst libnotify \
 	qt5ct qt6ct kvantum lxappearance xcape \

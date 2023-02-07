@@ -152,9 +152,10 @@ alias ls='ls --color=auto'
 alias lt='exa --icons --tree'
 alias ll='exa --icons -lgha --group-directories-first'
 alias lm='ls -t -1'
-alias ld='ls -d */'
+# alias ld='ls -d */'
 alias lsn='exa | wc -l'
-alias l-='ls -p | grep -v /'
+alias l-="ls -l | grep -v 'd'"
+alias ld="ls -l | grep -E 'd'"
 alias l.='exa -a | grep -E "^\."'
 
 alias grep='grep --color=auto'
@@ -168,6 +169,7 @@ alias mv='mv -iv'
 alias rm='rm -iv'
 alias del='gio trash'
 alias tre='trash-restore'
+alias less='less -R'
 alias mkdir='mkdir -pv'
 
 alias add.='git add .'
@@ -193,6 +195,7 @@ alias typer='xdg-open https://10fastfingers.com/typing-test/english'
 alias myip='curl ifconfig.me; echo'
 alias php-server='php -S 0.0.0.0:8000'
 alias python-server='python -m http.server 8000'
+alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 
 alias hst="history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c"
 alias ff="fd --type f --hidden --exclude .git | fzf | xargs -r $EDITOR"

@@ -49,7 +49,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 # export GNUPGHOME="$XDG_DATA_HOME/gnupg"                  # run this - gpg2 --homedir "$XDG_DATA_HOME/gnupg"
 
 export LESSHISTFILE="-"  # Disable files
-export LESS="-R"
+# export LESS="-R"
 
 export QT_QPA_PLATFORMTHEME="gtk2"    # have QT use gtk2 theme.
 export QT_QPA_PLATFORMTHEME="qt5ct"   
