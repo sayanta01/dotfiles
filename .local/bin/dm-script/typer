@@ -1,0 +1,13 @@
+#!/bin/sh
+
+choice=$(printf "10fast\nmonkey-type\nadvance-10fast" | dmenu -i -p " ")
+
+if [ "$choice" = "10fast" ]; then
+	xdg-open https://10fastfingers.com/typing-test/english
+elif [ "$choice" = "monkey-type" ]; then
+	xdg-open https://monkeytype.com
+elif [ "$choice" = "advance-10fast" ]; then
+	xdg-open https://10fastfingers.com/advanced-typing-test/english
+else
+	:
+fi
