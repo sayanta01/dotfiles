@@ -225,8 +225,8 @@ alias wget="wget --hsts-file='$HOME/.cache/wget-hsts'"
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
 # alias mpv='bsp-swallow mpv'
-# alias iv='devour sxiv'
-# alias z='devour zathura'
+alias iv='sxiv'
+alias z='zathura'
 
 alias vim='nvim'
 alias se='sudoedit'
