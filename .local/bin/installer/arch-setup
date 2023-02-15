@@ -95,7 +95,7 @@ paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava picom-ibhagwan-git
 
 # Change Teletype font
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
-sudo su root -c "echo -e FONT='ter-d16b.psf.gz' >> /etc/vconsole.conf"
+sudo su root -c "echo -e FONT='ter-d18b.psf.gz' >> /etc/vconsole.conf"
 
 # Fix qt5ct
 # echo 'QT_QPA_PLATFORMTHEME="qt5ct"' | sudo tee -a /etc/environment
