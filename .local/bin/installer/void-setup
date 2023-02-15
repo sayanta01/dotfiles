@@ -33,7 +33,7 @@ sudo xbps-install -Sy font-awesome \
 	neofetch htop cowsay libconfig gnome-keyring \
 	bspwm polybar sxhkd rofi dunst libnotify \
 	qt5ct qt6ct kvantum lxappearance xcape \
-	playerctl mpd ncmpcpp python3-dbus \
+	playerctl pamixer pavucontrol mpd ncmpcpp python3-dbus \
 	dialog cmake wmname imwheel pass \
 	wireless_tools net-tools network-manager-applet bind-utils \
 	mpv mediainfo exiftool ffmpegthumbnailer ImageMagick maim sxiv xwallpaper ffmpeg python3-pip pywal \
