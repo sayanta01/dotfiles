@@ -2,10 +2,9 @@
 
 ##===== Xfce4 Base =====##
 sudo pacman -Sy exo garcon libxfce4ui libxfce4util thunar-volman tumbler xfce4-dev-tools \
-     xfce4-panel xfce4-session xfce4-settings xfconf xfce4-terminal xfdesktop xfwm4
+	xfce4-panel xfce4-session xfce4-settings xfconf xfce4-terminal xfdesktop xfwm4
 
 #sudo pacman -Rns xfce4-appfinder xfwm4-themes
-
 
 ##### Install #####
 #exo              # Application library for Xfce
@@ -27,12 +26,11 @@ sudo pacman -Sy exo garcon libxfce4ui libxfce4util thunar-volman tumbler xfce4-d
 #xfwm4-themes     # A set of additional themes for the Xfce window manager
 #xfce4-appfinder  # An application finder
 
-
 ##===== Xfce4 Goodies =====##
 sudo pacman -Sy mousepad xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4-whiskermenu-plugin \
-     xfce4-pulseaudio-plugin xfce4-screenshooter xfce4-cpufreq-plugin xfce4-cpugraph-plugin 
+	xfce4-pulseaudio-plugin xfce4-screenshooter xfce4-cpufreq-plugin xfce4-cpugraph-plugin
 
-# sudo pacman -Sy parole xfce4-screensaver xfce4-mount-plugin xfce4-mpc-plugin xfce4-battery-plugin xfce4-power-manager 
+# sudo pacman -Sy parole xfce4-screensaver xfce4-mount-plugin xfce4-mpc-plugin xfce4-battery-plugin xfce4-power-manager
 
 #sudo pacman -Rns xfce4-notifyd xfburn xfce4-dict \
 #     xfce4-battery-plugin xfce4-clipman-plugin xfce4-eyes-plugin xfce4-notes-plugin \
@@ -43,45 +41,44 @@ sudo pacman -Sy mousepad xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4
 
 #sudo apt remove --purge xfce4-clipman catfish kali-hidpi-mode onboard xterm cherrytree plymouth
 
-
 ##### Install #####
-# mousepad 
+# mousepad
 # xfce4-taskmanager
-# xfce4-screenshooter 
-# xfce4-pulseaudio-plugin 
+# xfce4-screenshooter
+# xfce4-pulseaudio-plugin
 # ristretto                 # A fast and lightweight picture viewer for Xfce
-# xfce4-cpufreq-plugin      # CPU frequency plugin 
+# xfce4-cpufreq-plugin      # CPU frequency plugin
 # xfce4-cpugraph-plugin     # Graphical representation of the CPU load
 # xfce4-whiskermenu-plugin  # Menu for the Xfce4 panel
-# xfce4-datetime-plugin     # A date and time display plugin 
+# xfce4-datetime-plugin     # A date and time display plugin
 
 ##### Install When Needed #####
 # parole                # Modern media player based on the GStreamer framework
-# xfce4-screensaver 
-# xfce4-power-manager 
-# xfce4-battery-plugin  # A battery monitor plugin 
+# xfce4-screensaver
+# xfce4-power-manager
+# xfce4-battery-plugin  # A battery monitor plugin
 # xfce4-mount-plugin    # Mount/Umount utility for the Xfce4 panel
 # xfce4-mpc-plugin      # Control the Music Player Daemon
 
 ##### Remove #####
-# xfce4-notifyd          
+# xfce4-notifyd
 # xfburn                      # A simple CD/DVD burning tool based on libburnia libraries
 # xfce4-artwork               # Backdrops
-# xfce4-clipman-plugin    
-# xfce4-sensors-plugin     
-# xfce4-eyes-plugin           
-# xfce4-notes-plugin         
-# xfce4-netload-plugin        
-# xfce4-weather-plugin      
-# xfce4-mailwatch-plugin   
+# xfce4-clipman-plugin
+# xfce4-sensors-plugin
+# xfce4-eyes-plugin
+# xfce4-notes-plugin
+# xfce4-netload-plugin
+# xfce4-weather-plugin
+# xfce4-mailwatch-plugin
 # xfce4-dict                  # A dictionary plugin for the Xfce panel
-# xfce4-xkb-plugin            # Plugin to switch keyboard layouts 
-# xfce4-wavelan-plugin        # Plugin to monitor wifi connectivity 
-# xfce4-genmon-plugin         # Plugin that monitors customizable programs stdout 
+# xfce4-xkb-plugin            # Plugin to switch keyboard layouts
+# xfce4-wavelan-plugin        # Plugin to monitor wifi connectivity
+# xfce4-genmon-plugin         # Plugin that monitors customizable programs stdout
 # xfce4-verve-plugin          # Command line plugin
-# xfce4-timer-plugin          # Plugin to track time 
-# xfce4-diskperf-plugin       # Displays instant disk/partition performance 
+# xfce4-timer-plugin          # Plugin to track time
+# xfce4-diskperf-plugin       # Displays instant disk/partition performance
 # xfce4-smartbookmark-plugin  # Allows you to send requests directly to your browser and perform a custom search
 # xfce4-time-out-plugin       # Pomodoro take a break from your computer with this plugin
-# xfce4-fsguard-plugin        # File system usage monitor plugin 
+# xfce4-fsguard-plugin        # File system usage monitor plugin
 # xfce4-systemload-plugin     # A system load plugin

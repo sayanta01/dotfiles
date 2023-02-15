@@ -29,7 +29,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 	neofetch htop cowsay libconfig gnome-keyring \
 	bspwm polybar sxhkd rofi dunst libnotify \
 	qt5ct qt6ct kvantum lxappearance xcape \
-	playerctl mpd ncmpcpp dbus-python \
+	playerctl pamixer mpd ncmpcpp dbus-python \
 	dialog cmake wmname imwheel pass \
 	wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils \
 	mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
@@ -55,15 +55,15 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # echo 'background = /etc/lightdm/bg.jpg' | sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf
 
 # Nvidia
-sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia nvtop glmark2
+# sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia nvtop glmark2
 
 # GUI apps
 sudo pacman -S --noconfirm scrcpy android-tools stress bpytop blueman bluez-utils ntfs-3g \
 	obs-studio audacity gimp inkscape virtualbox kdeconnect blender telegram-desktop
 # sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 
-sudo pacman -S --noconfirm cronie-runit bluez-runit docker-runit openssh-runit libvirt-runit
-# cronie bluez docker openssh libvirt  ( arch )
+sudo pacman -S --noconfirm cronie-runit docker-runit openssh-runit libvirt-runit bluez-runit
+# sudo pacman -S --noconfirm cronie docker openssh libvirt bluez ( arch )
 # sudo ln -s /etc/runit/sv/cronie /run/runit/service  ( artix )
 # sudo ln -s /run/runit/sv/docker /run/runit/service  ( artix )
 # sudo touch /run/runit/service/docker/down           ( artix )
@@ -71,7 +71,7 @@ sudo pacman -S --noconfirm cronie-runit bluez-runit docker-runit openssh-runit l
 # sudo touch /run/runit/service/sshd/down           ( artix )
 
 # VM
-# sudo usermod -aG vboxusers $USER  # enable USB usage in Virtual-Box
+# sudo usermod -aG vboxusers $USER  # enable USB usage for Virtual-Box
 sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
 # qemu-arch-extra  ( arch )
 # sudo ln -s /etc/runit/sv/virtlogd /run/runit/service  ( artix )
@@ -89,7 +89,7 @@ sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat
 git clone https://aur.archlinux.org/paru.git ~/.config/paru
 cd ~/.config/paru && makepkg -si
 paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava picom-ibhagwan-git \
-	visual-studio-code-bin google-chrome anki ttyper browsh simple-mtpfs ttf-maple-latest
+	visual-studio-code-bin google-chrome anki ttyper simple-mtpfs ttf-maple-latest
 
 # /etc/pacman.conf              ( uncheck ignorepkg and put pkgname )
 

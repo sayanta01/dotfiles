@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo figlet lolcat toilet espeak cool-retro-term mapscii jp2a \
+sudo figlet lolcat toilet espeak cool-retro-term mapscii jp2a browsh \
 	nyancat fortune sl cmatrix asciiquarium hollywood oneko tty-clock
 
 # Games

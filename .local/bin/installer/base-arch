@@ -9,7 +9,7 @@ station <adpater-name> get-networks            #show available networks
 station <adpater-name> connect <network-name>  #example: NullByte 
 
 #### change tty font ####
-pacman -S terminus-font
+pacman -Sy terminus-font
 setfont /usr/share/kbd/consolefonts/ter-d18b.psf.gz
 
 #### partition disk ####
@@ -58,16 +58,16 @@ export LC_COLLATE="C"  ( artix )
 
 echo LilWarmachine > /etc/hostname
 
-pacman -S git dosfstools mtools dhcpcd xorg networkmanager networkmanager-runit  ( artix )
-ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix after reboot )
-
-pacman -S git dosfstools mtools dhcpcd xorg networkmanager reflector  ( arch )
-systemctl enable NetworkManager  ( arch )
-
 vim /etc/hosts
 127.0.0.1   localhost
 ::1         localhost
 127.0.1.1   LilWarmachine.localdomain   LilWarmachine
+
+pacman -S git dosfstools mtools dhcpcd xorg networkmanager-runit  ( artix )
+ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix after reboot )
+
+pacman -S git dosfstools mtools dhcpcd xorg networkmanager reflector  ( arch )
+systemctl enable NetworkManager  ( arch )
 
 #### install bootloader ####
 pacman -S grub os-prober efibootmgr

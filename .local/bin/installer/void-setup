@@ -29,7 +29,7 @@ sudo xbps-install -Sy font-awesome \
 	noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk fonts-roboto-ttf terminus-font \
 	exa bat tldr fd ripgrep procs duf dust man fzf \
 	mate-calc firefox qutebrowser meld \
-  linux-headers neovim kitty newsboat trash-cli \
+	linux-headers neovim kitty newsboat trash-cli \
 	neofetch htop cowsay libconfig gnome-keyring \
 	bspwm polybar sxhkd rofi dunst libnotify \
 	qt5ct qt6ct kvantum lxappearance xcape \
@@ -52,7 +52,7 @@ sudo xbps-install -Sy font-awesome \
 # sudo pacman -S pipewire wireplumber libspa-bluetooth
 
 # Nvidia
-sudo xbps-install -Sy nvidia nvidia-libs-32bit nvtop glmark2
+# sudo xbps-install -Sy nvidia nvidia-libs-32bit nvtop glmark2
 
 # GUI apps
 sudo xbps-install -Sy scrcpy android-tools stress bpytop blueman bluez ntfs-3g \
@@ -63,7 +63,7 @@ sudo xbps-install -Sy qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtp
 # ovmf
 
 sudo xbps-install -Sy betterlockscreen xwinwrap cava \
-	vscode anki browsh simple-mtpfs
+	vscode anki simple-mtpfs
 
 # xbps-src
 git clone https://github.com/void-linux/void-packages ~/void-packages
