@@ -54,6 +54,10 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
       "before": ["<leader>", "w"],
       "commands": ["workbench.action.splitEditor"]
     },
@@ -75,7 +79,6 @@
     }
   ],
   "vim.leader": "<space>",
-
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false,

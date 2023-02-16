@@ -1,93 +1,43 @@
-{
-  "editor.fontFamily": "JetBrainsMono Nerd Font, Material Design Icons",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 16,
-  "terminal.integrated.fontSize": 16,
-  "editor.fontWeight": "bold",
-  "files.autoSave": "afterDelay",
-  "workbench.editor.highlightModifiedTabs": true,
-  "breadcrumbs.enabled": false,
-  "editor.minimap.enabled": false,
-  "search.sortOrder": "type",
-  "editor.rename.enablePreview": false,
-  "search.searchOnType": false,
-  "terminal.integrated.gpuAcceleration": "on",
-  "editor.bracketPairColorization.enabled": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "One Dark Pro Darker",
-  "editor.linkedEditing": true,
-  "[python]": {
-    "editor.formatOnType": true
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
   },
-  "vim.easymotion": true,
-  "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
-  "vim.sneak": true,
-  // "vim.easymotionMarkerooundColor": "#020202",
-  "vim.normalModeKeyBindings": [
-    {
-      "before": ["<tab>"],
-      "commands": ["workbench.action.nextEditor"]
-    },
-    {
-      "before": ["<S-tab>"],
-      "commands": ["workbench.action.previousEditor"]
-    }
-  ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.visualModeKeyBindings": [
-    {
-      "before": [">"],
-      "after": [">", "g", "v"]
-    },
-    {
-      "before": ["<"],
-      "after": ["<", "g", "v"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    {
-      "before": ["<leader>", "f"],
-      "commands": ["workbench.view.explorer"]
-    },
-    {
-      "before": ["<leader>", "h"],
-      "after": ["_"]
-    },
-    {
-      "before": ["<leader>", "l"],
-      "after": ["$"]
-    }
-  ],
-  "vim.leader": "<space>",
-
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false,
-    // VS Code new marker @ next occurence
-    "<C-d>": false,
-    // Copy
-    "<C-c>": false,
-    // Cut
-    "<C-x>": false,
-    // Paste
-    "<C-v>": false,
-    "<C-z>": false,
-    "<C-y>": false
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "tab",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+tab",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+alt+v",
+    "command": "toggleVim"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "editor.action.moveLinesDownAction"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.terminal.toggleTerminal"
   }
-}
+]
