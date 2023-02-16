@@ -2,7 +2,7 @@
 
 #sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 
-yes | sudo apt full-upgrade
+# yes | sudo apt full-upgrade
 
 cp -r ~/dotfiles/{.zprofile,.profile,.xprofile,.xinitrc,.imwheelrc,.vimrc} ~/
 mkdir "$HOME/.local/bin"
