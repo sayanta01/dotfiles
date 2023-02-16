@@ -152,7 +152,6 @@ alias ls='ls --color=auto'
 alias lt='exa --icons --tree'
 alias ll='exa --icons -lgha --group-directories-first'
 alias lm='ls -t -1'
-# alias ld='ls -d */'
 alias lsn='exa | wc -l'
 alias l-="ls -l | grep -v 'd'"
 alias ld="ls -l | grep -E 'd'"
@@ -231,7 +230,7 @@ alias z='zathura'
 alias vim='nvim'
 alias se='sudoedit'
 alias mpad='mousepad'
-alias mpc='mpd 2>/dev/null ; ncmpcpp'
+alias mpc='mpd 2>/dev/null; ncmpcpp'
 alias ytdl-vid='yt-dlp -f bestvideo+bestaudio'
 alias ytdl-aud='yt-dlp --extract-audio --audio-format m4a'
 
