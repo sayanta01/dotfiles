@@ -31,8 +31,11 @@ menuentry "ShutDown" --class shutdown {
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-# GRUB_DISABLE_OS_PROBER=false
+#Remove Grub menu showing 'Get by holding ESC'
+# GRUB_TIMEOUT_STYLE=hidden
+
 #Grub is not detecting all systems (dual-boot)
+# GRUB_DISABLE_OS_PROBER=false
 
 #/etc/default/grub (modify 1920x1080 to your screen resolution) 
 # GRUB_GFXMODE=1920x1080
