@@ -206,7 +206,7 @@ alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 alias ping='ping -c 7'
 alias ports='netstat -tulanp'
-alias copy='rsync --progress -auv'
+alias copy='rsync --progress -aluvr'
 
 alias df='df -h'
 alias du='du -h'

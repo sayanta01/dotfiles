@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pacman -Syyu
+# sudo pacman -Syyu
 cp -r ~/dotfiles/{.zprofile,.profile,.xprofile,.xinitrc,.imwheelrc,.vimrc} ~/
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config

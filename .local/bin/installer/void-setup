@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo xbps-install -Su
+# sudo xbps-install -Su
 sudo xbps-install -Sy void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 sudo xbps-install -Sy base-devel linux-firmware vim zsh tmux xorg NetworkManager xfce4-plugins
 
