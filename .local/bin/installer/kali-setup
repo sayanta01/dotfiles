@@ -31,7 +31,7 @@ sudo apt install -y fonts-jetbrains-mono fonts-roboto fonts-terminus \
 	lf zathura htop qt5-style-kvantum meld \
 	imwheel xclip xdo xwallpaper gpg cowsay xcape betterlockscreen \
 	exiftool aria2 wmname wmctrl neofetch \
-	transmission-daemon trash-cli docker.io aptitude synaptic
+	transmission-daemon trash-cli docker.io iftop aptitude synaptic
 #ncdu apt-transport-https translate-shell stacer
 #sudo systemctl disable docker.socket
 
