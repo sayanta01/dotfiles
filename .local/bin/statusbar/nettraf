@@ -19,7 +19,7 @@ RXBPS="$(((RXEND - RXSTART) / INT))"
 TXBPS="$(((TXEND - TXSTART) / INT))"
 
 # Returning the results
-printf "%4sB  %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
-# printf "%4sB 📡 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB  %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+printf "%4sB 📡 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
 # printf "%4sB 🌐 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
 # printf "%4sB 📶 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
