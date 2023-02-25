@@ -12,6 +12,10 @@ notify-send "💾 Dsk $(df -h / | awk 'NR==2{print $4}')"
 
 notify-send "🚀 Upt $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
 
+notify-send " OS - $(awk -F '"' '/PRETTY_NAME/ { print $2 }' /etc/os-release)"
+notify-send " Kernel - $(uname -r)"
+notify-send " Init - $(ps -p1 | awk '/1/ {print $4}')"
+
 notify-send "📦 PAC $({ checkupdates 2>/dev/null | wc -l;echo "| AUR";paru -Qum 2>/dev/null | wc -l; } | sed ':a;N;s/\n/ /;ba')"
 # notify-send "📦 XBPS $(sudo xbps-install -un | wc -l)"
 # notify-send "📦 APT $(aptitude search '~U' | wc -l)"
