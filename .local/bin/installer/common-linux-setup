@@ -2,13 +2,13 @@
 
 # TODO
 # change audiosw sink-name
+# chnage record audio-output
 # change btch mac-add
 # change sys-status check-updates according to ur pkg-manager
 # change git config username
 # ucmnt alias for ur pkg-manager
-# chnage record script
 # change wttr location
-# add notify-sound if want
+# add notify-sound if u want
 # uncmt source for tty-colors in zshrc if want
 # https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/
 
@@ -56,5 +56,9 @@ EOF
 
 # Fix screen tearing for nvidia-settings
 # nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+
+# Encrypt home dir
+# -i ecryptfs-utils cryptsetup
+# use this when u get laptop
 
 # sudo vim /etc/hosts           ( blk sites )
