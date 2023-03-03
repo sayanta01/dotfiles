@@ -11,4 +11,3 @@ case "$(printf "copy url\\nmpv\\nfirefox\\nvim\\nsxiv" | dmenu -i -p "Open it wi
 	mpv) setsid -f mpv -quiet "$feed" >/dev/null 2>&1 ;;
 	sxiv) curl -sL "$feed" > "/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" && sxiv -a "/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")"  >/dev/null 2>&1 ;;
 esac
-
