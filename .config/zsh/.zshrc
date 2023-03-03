@@ -1,4 +1,5 @@
 cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
+eval "$(zoxide init zsh)" 
 
 # setopt correct              # auto correct mistakes
 # setopt autocd               # change directory just by typing its name
@@ -225,7 +226,7 @@ alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
 # alias mpv='bsp-swallow mpv'
 alias iv='sxiv'
-alias z='zathura'
+alias za='zathura'
 
 alias vim='nvim'
 alias se='sudoedit'

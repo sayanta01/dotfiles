@@ -27,7 +27,7 @@ sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
 sudo xbps-install -Sy font-awesome \
 	noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk fonts-roboto-ttf terminus-font \
-	exa bat tldr fd ripgrep procs duf dust man fzf \
+	exa bat tldr fd ripgrep procs duf dust man fzf zoxide \
 	mate-calc firefox qutebrowser meld \
 	linux-headers neovim kitty newsboat trash-cli \
 	neofetch htop cowsay libconfig gnome-keyring \
