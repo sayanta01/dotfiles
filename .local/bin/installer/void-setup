@@ -42,7 +42,7 @@ sudo xbps-install -Sy font-awesome \
 	zathura zathura-pdf-mupdf ghostscript \
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 	rsync wget curl aria2 yt-dlp transmission jq \
-	intel-ucode virtualbox-ose-guest \
+	intel-ucode virtualbox-ose-guest powershell \
 	xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl
 # socat exfat-utils brightnessctl  - additional tools
 
