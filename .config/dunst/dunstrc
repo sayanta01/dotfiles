@@ -70,12 +70,12 @@
 
 
 [urgency_low]
-     background = "#222222"
+     background = "#000000"
      foreground = "#888888"
      timeout = 2
 
 [urgency_normal]
-     background = "#282c34"
+     background = "#282a36"
      foreground = "#D8DEE9"
      timeout = 4
 

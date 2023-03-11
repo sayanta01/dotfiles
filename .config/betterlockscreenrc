@@ -6,37 +6,37 @@ fx_list=(dim blur dimblur pixel dimpixel color)
 dim_level=40
 blur_level=1
 pixel_scale=10,1000
-solid_color=333333
+solid_color=#333333
 wallpaper_cmd="feh --bg-fill"
 quiet=false
 
 # default theme
-loginbox=00000066
-loginshadow=00000000
+loginbox=#00000066
+loginshadow=#00000000
 locktext="Type password..."
 font="Comic Mono"
 
 ringwrongcolor=#282a36     #show ring before entering pswd 
-insidewrongcolor=d23c3dff  #show inside before entering pswd
+insidewrongcolor=#d23c3dff  #show inside before entering pswd
 
 ringcolor=#282a36   #show ring while entering pswd
-insidecolor=50fa7b  #show inside while entering pswd
+insidecolor=#50fa7b  #show inside while entering pswd
 keyhlcolor=#282a36  #blink while entering pswd
 
 separatorcolor=#f8f8f2
 
-ringvercolor=ffffffff    #show ring while verifying pswd
-insidevercolor=00000000  #show inside while verifying pswd
+ringvercolor=#ffffffff    #show ring while verifying pswd
+insidevercolor=#00000000  #show inside while verifying pswd
 
 timecolor=#f8f8f2
 time_format="%a,%I:%M:%S"
 
 greetercolor=#f1fa8c  #type pswd text
-verifcolor=ffffffff   #verification text
-wrongcolor=d23c3dff   #wrong text
-layoutcolor=ffffffff  #english (US) 
+verifcolor=#ffffffff   #verification text
+wrongcolor=#d23c3dff   #wrong text
+layoutcolor=#ffffffff  #english (US) 
 
 bshlcolor=#282a36  #blink backspace
 
-modifcolor=d23c3dff
+modifcolor=#d23c3dff
 bgcolor=#8be9fd
