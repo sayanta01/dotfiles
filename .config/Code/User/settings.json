@@ -1,10 +1,10 @@
 {
   "editor.fontFamily": "JetBrainsMono Nerd Font, Material Design Icons",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
-  "terminal.integrated.fontSize": 16,
-  "editor.fontWeight": "bold",
-  "files.autoSave": "afterDelay",
+  "editor.fontSize": 20,
+  // "editor.fontWeight": "bold",
+  "terminal.integrated.fontSize": 20,
+  // "terminal.integrated.fontWeight": "bold"
   "workbench.editor.highlightModifiedTabs": true,
   "breadcrumbs.enabled": false,
   "editor.minimap.enabled": false,
@@ -27,13 +27,94 @@
   "vim.sneak": true,
   // "vim.easymotionMarkerooundColor": "#020202",
   "vim.normalModeKeyBindings": [
+    // buffer
+    // {
+    //   "before": ["<S-l>"],
+    //   "commands": ["workbench.action.nextEditor"]
+    // },
+    // {
+    //   "before": ["<S-h>"],
+    //   "commands": ["workbench.action.previousEditor"]
+    // },
     {
-      "before": ["<tab>"],
-      "commands": ["workbench.action.nextEditor"]
+      "before": ["<S-b>"],
+      "commands": [":enew"]
+    },
+    // basic
+    {
+      "before": ["<leader>", "/"],
+      "commands": ["editor.action.commentLine"]
     },
     {
-      "before": ["<S-tab>"],
-      "commands": ["workbench.action.previousEditor"]
+      "before": ["<leader>", "w"],
+      "commands": [":w!"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": [":q!"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "z"],
+      "commands": ["workbench.action.toggleZenMode"]
+    },
+    // LSP
+    {
+      "before": ["<leader>", "l", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "l", "a"],
+      "commands": ["editor.action.codeAction"]
+    },
+    {
+      "before": ["<leader>", "l", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["g", "t"],
+      "commands": ["editor.action.goToTypeDefinition"]
+      // "commands": ["editor.action.peekTypeDefinition"]
+    },
+    {
+      "before": ["<S-k>"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["<leader>", "l", "q"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["l", "d"],
+      "commands": ["editor.action.revealDefinition"]
+      // "commands": ["editor.action.peekDefinition"]
+    },
+    {
+      "before": ["g", "l"],
+      "commands": ["errorLens.toggle"]
+    },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "l", "i"],
+      "commands": ["editor.showIncomingCalls"]
+    },
+    {
+      "before": ["<leader>", "l", "o"],
+      "commands": ["editor.showOutgoingCalls"]
     }
   ],
   "vim.insertModeKeyBindings": [
@@ -54,27 +135,27 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<C-n>"],
-      "commands": [":nohl"]
-    },
-    {
-      "before": ["<leader>", "w"],
+      "before": ["<leader>", "v"],
       "commands": ["workbench.action.splitEditor"]
     },
     {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.splitEditorDown"]
     },
     {
       "before": ["<leader>", "f"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "e"],
       "commands": ["workbench.view.explorer"]
     },
     {
-      "before": ["<leader>", "h"],
+      "before": ["C-e"],
       "after": ["_"]
     },
     {
-      "before": ["<leader>", "l"],
+      "before": ["C-b"],
       "after": ["$"]
     }
   ],
@@ -84,13 +165,18 @@
     "<C-f>": false,
     // VS Code new marker @ next occurence
     "<C-d>": false,
-    // Copy
-    "<C-c>": false,
     // Cut
     "<C-x>": false,
+    // Copy
+    "<C-c>": false,
     // Paste
     "<C-v>": false,
     "<C-z>": false,
     "<C-y>": false
-  }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.renderWhitespace": "none",
+  "errorLens.enabled": true
 }
