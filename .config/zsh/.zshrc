@@ -120,6 +120,7 @@ alias update='sudo pacman -Syyu; echo "############### ⬆️AUR ###############
 alias remove='sudo pacman -Rns'
 alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm'  # remove orphaned packages
 alias unlock='sudo rm /var/lib/pacman/db.lck'   # remove pacman lock
+alias installed="grep -i installed /var/log/pacman.log"
 
 # XBPS
 # alias install='sudo xbps-install -Sv'
@@ -171,6 +172,7 @@ alias del='gio trash'
 alias tre='trash-restore'
 alias less='less -R'
 alias mkdir='mkdir -pv'
+alias trim="sudo fstrim -va"
 
 alias add.='git add .'
 alias addup='git add -u'
@@ -203,7 +205,7 @@ alias find_='sh -c '\''find $@ 2>&1 | grep -v "Permission denied" >&2'\'' _'
 alias bigfile="du -h -x -s -- * | sort -r -h | head -20"
 alias psmem='ps axch -o cmd,%mem --sort=-%mem | head'
 alias pscpu='ps axch -o cmd,%cpu --sort=-%cpu | head'
-alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias mkgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 alias ping='ping -c 7'
 alias ports='netstat -tulanp'
