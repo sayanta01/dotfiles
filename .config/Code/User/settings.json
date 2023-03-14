@@ -8,13 +8,14 @@
   "workbench.editor.highlightModifiedTabs": true,
   "breadcrumbs.enabled": false,
   "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
   "search.sortOrder": "type",
   "editor.rename.enablePreview": false,
   "search.searchOnType": false,
   "terminal.integrated.gpuAcceleration": "on",
   "editor.bracketPairColorization.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.colorTheme": "GitHub Dark Default",
   "editor.linkedEditing": true,
   "[python]": {
     "editor.formatOnType": true
@@ -63,21 +64,9 @@
     },
     // LSP
     {
-      "before": ["<leader>", "l", "f"],
-      "commands": ["editor.action.formatDocument"]
-    },
-    {
-      "before": ["<leader>", "l", "a"],
-      "commands": ["editor.action.codeAction"]
-    },
-    {
-      "before": ["<leader>", "l", "r"],
-      "commands": ["editor.action.rename"]
-    },
-    {
-      "before": ["g", "t"],
-      "commands": ["editor.action.goToTypeDefinition"]
-      // "commands": ["editor.action.peekTypeDefinition"]
+      "before": ["l", "d"],
+      "commands": ["editor.action.revealDefinition"]
+      // "commands": ["editor.action.peekDefinition"]
     },
     {
       "before": ["<S-k>"],
@@ -88,13 +77,8 @@
       "commands": ["editor.action.goToReferences"]
     },
     {
-      "before": ["<leader>", "l", "q"],
-      "commands": ["editor.action.quickFix"]
-    },
-    {
-      "before": ["l", "d"],
-      "commands": ["editor.action.revealDefinition"]
-      // "commands": ["editor.action.peekDefinition"]
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
     },
     {
       "before": ["g", "l"],
@@ -102,11 +86,32 @@
     },
     {
       "before": ["[", "d"],
-      "commands": ["editor.action.marker.prev"]
+      "commands": ["editor.action.marker.prevInFiles"]
     },
     {
       "before": ["]", "d"],
-      "commands": ["editor.action.marker.next"]
+      "commands": ["editor.action.marker.nextInFiles"]
+    },
+    {
+      "before": ["l", "t"],
+      "commands": ["editor.action.goToTypeDefinition"]
+      // "commands": ["editor.action.peekTypeDefinition"]
+    },
+    {
+      "before": ["<leader>", "l", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "l", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "l", "a"],
+      "commands": ["editor.action.codeAction"]
+    },
+    {
+      "before": ["<leader>", "l", "q"],
+      "commands": ["editor.action.quickFix"]
     },
     {
       "before": ["<leader>", "l", "i"],
@@ -178,5 +183,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.renderWhitespace": "none",
-  "errorLens.enabled": true
+  "errorLens.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "editor.scrollbar.vertical": "hidden",
+  "window.menuBarVisibility": "toggle"
 }
