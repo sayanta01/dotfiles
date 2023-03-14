@@ -1,11 +1,11 @@
 // Place your key bindings in this file to override the defaults
 [
   {
-    "key": "shift+l",
+    "key": "ctrl+tab",
     "command": "workbench.action.nextEditor"
   },
   {
-    "key": "shift+h",
+    "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditor"
   },
   {
@@ -23,10 +23,12 @@
     "command": "toggleVim"
   },
   {
+    // "key": "shift+alt+j",
     "key": "alt+j",
     "command": "editor.action.moveLinesDownAction"
   },
   {
+    // "key": "shift+alt+k",
     "key": "alt+k",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"

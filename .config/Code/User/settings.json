@@ -28,14 +28,14 @@
   // "vim.easymotionMarkerooundColor": "#020202",
   "vim.normalModeKeyBindings": [
     // buffer
-    // {
-    //   "before": ["<S-l>"],
-    //   "commands": ["workbench.action.nextEditor"]
-    // },
-    // {
-    //   "before": ["<S-h>"],
-    //   "commands": ["workbench.action.previousEditor"]
-    // },
+    {
+      "before": ["<S-l>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-h>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
     {
       "before": ["<S-b>"],
       "commands": [":enew"]
