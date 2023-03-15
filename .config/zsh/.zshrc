@@ -108,10 +108,11 @@ PROMPT=' %b%{$fg[red]%}❯${vcs_info_msg_0_}%  '
 # alias sudo='doas'
 
 # Kali
-# alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
+#alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
 #alias install='sudo nala install'
 #alias update='sudo nala update'
 #alias remove='sudo nala purge'
+#alias uplist='apt list --upgradable'
 #alias clean='sudo apt -y autoremove; sudo apt clean'
 
 # Arch

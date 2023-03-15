@@ -9,6 +9,7 @@ notify-send "🌡️GPU-Temp $(nvidia-smi --query-gpu=temperature.gpu --format=c
 
 notify-send "🧠 RAM $(free -h | awk '/Mem:/ {print $3}' | cut -f1 -d 'i')"
 notify-send "💾 Dsk $(df -h / | awk 'NR==2{print $4}')"
+notify-send "⌨️ Layout $(setxkbmap -query | grep layout | awk '{print $2}' | tr "[:lower:]" "[:upper:]")"
 
 notify-send "🚀 Upt $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
 
