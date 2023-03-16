@@ -186,5 +186,6 @@
   "errorLens.enabled": false,
   "git.openRepositoryInParentFolders": "never",
   "editor.scrollbar.vertical": "hidden",
-  "window.menuBarVisibility": "toggle"
+  "window.menuBarVisibility": "toggle",
+  "editor.cursorBlinking": "solid"
 }
