@@ -222,6 +222,8 @@ alias cat='bat --theme OneHalfDark -p'
 alias pu='pushd'
 alias po='popd'
 alias ffmpeg='ffmpeg -hide_banner'
+alias ffplay='ffplay -hide_banner'
+alias ffprobe='ffprobe -hide_banner'
 alias tsm='transmission-remote'
 # alias wget='wget --hsts-file=/dev/null'
 alias wget="wget --hsts-file='$HOME/.cache/wget-hsts'"
