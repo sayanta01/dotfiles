@@ -214,6 +214,7 @@ alias copy='rsync --progress -aluvr'
 
 alias df='df -h'
 alias du='du -h'
+alias dmesg='sudo dmesg -T'
 alias free='free -h'
 alias bc='bc -ql'
 alias shred='shred -uvzn3'
