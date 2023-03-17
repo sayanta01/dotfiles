@@ -1,6 +1,7 @@
 #!/bin/sh
 
 monitor=$(pactl info | grep "Default Source" | awk '{print $3}' | sed 's/\.monitor//g')
+# monitor="alsa_output.pci-0000_01_00.1.hdmi-stereo"
 earphn="bluez_output.B4_9A_95_94_9B_CC.1"
 
 curr_device=$(pactl get-default-sink)
@@ -8,5 +9,5 @@ curr_device=$(pactl get-default-sink)
 if [ "$curr_device" = "$monitor" ]; then
 	pactl set-default-sink $earphn
 else
-	pactl set-default-sink $monitor
+	pactl set-default-sink "$monitor"
 fi
