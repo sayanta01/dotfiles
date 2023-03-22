@@ -175,6 +175,7 @@ alias less='less -R'
 alias mkdir='mkdir -pv'
 alias trim="sudo fstrim -va"
 
+alias lg="lazygit"
 alias add.='git add .'
 alias addup='git add -u'
 alias branch='git branch'
