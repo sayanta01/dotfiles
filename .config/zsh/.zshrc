@@ -200,7 +200,7 @@ alias python-server='python -m http.server 8000'
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 
 alias hst="history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c"
-alias ff="fd --type f --hidden --exclude .git | fzf --preview 'bat --style numbers --color=always --line-range=:500 {}' | xargs -r $EDITOR"
+alias ff="fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs -r $EDITOR"
 alias fonts="magick convert -list font | grep -iE 'font:.*' | fzf"
 alias find_='sh -c '\''find $@ 2>&1 | grep -v "Permission denied" >&2'\'' _'
 alias bigfile="du -h -x -s -- * | sort -r -h | head -20"
