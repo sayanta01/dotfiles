@@ -16,7 +16,7 @@ setfont /usr/share/kbd/consolefonts/ter-d18b.psf.gz
 cfdisk /dev/sda
 sda1 boot 400M      #partition type EFI system
 sda2 root           #give rest of space
-# sda3 swap           - optional
+# sda3 swap         - optional
 write & quit
 
 ##### formating ######

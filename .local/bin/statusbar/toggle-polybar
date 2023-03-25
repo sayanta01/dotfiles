@@ -9,11 +9,11 @@ WINDOW_STATE=$(xwininfo -name "$monitor" | grep 'Map State:' | sed -e 's/.*:\s//
 if [[ "IsViewable" == "$WINDOW_STATE" ]]; then
 	# echo "Hiding polybar"
 	xdo hide -N Polybar
-	bspc config -m $toggle top_padding 0
+	bspc config -m "$toggle" top_padding 0
 else
 	xdo show -N Polybar
 	# echo "Showing polybar"
-	bspc config -m $toggle top_padding 24
+	bspc config -m "$toggle" top_padding 24
 fi
 
 #run "xwininfo" tap cursor in polybar

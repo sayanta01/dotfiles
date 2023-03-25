@@ -8,7 +8,6 @@ fi
 
 . "$HOME/.profile"
 
-
 fav=bspwm
 
 case "$1" in

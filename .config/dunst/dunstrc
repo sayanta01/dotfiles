@@ -87,4 +87,4 @@
 
 // [play_sound]
      // summary = "*"
-      // script = "~/.local/bin/notify-sound"  
+      // script = "~/.local/bin/oneliner/notify-sound"  

@@ -127,7 +127,7 @@ shift + Print
 
 # ss window
 alt + Print 
-	  maim -i $(xdotool getactivewindow) ~/pix/$(date +%s)-Win.png | notify-send -t 800 "Window Screenshot Taken"
+	    maim -i $(xdotool getactivewindow) ~/pix/$(date +%s)-Win.png | notify-send -t 800 "Window Screenshot Taken"
 	                           
 # chrome
 alt + b
@@ -136,11 +136,11 @@ alt + b
         
 # terminal
 super + Return
-             kitty 
+        kitty 
 		    
 # dmenu
 super + space 
-            dmenu_run
+        dmenu_run
            
 # launcher
 alt + 0
@@ -169,7 +169,7 @@ ctrl + alt + l
 	     
 # kill ps
 ctrl + alt + Delete
-                  bash ~/.local/bin/dm-script/kil	     
+             bash ~/.local/bin/dm-script/kil	     
 
 
 
@@ -180,15 +180,15 @@ ctrl + alt + Delete
 
 # make sxhkd reload its configuration files
 super + Escape
-	       notify-send -t 500 "reloading sxhkd!"; pkill -USR1 -x sxhkd
+	      notify-send -t 500 "reloading sxhkd!"; pkill -USR1 -x sxhkd
 	
 # quit/restart bspwm
 super + alt + {q,r}
-      	  bspc {quit,wm -r}
+      	bspc {quit,wm -r}
 
 # close and kill
 super + {_,shift + }q
-          bspc node -{c,k}
+        bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
 super + m
@@ -254,7 +254,7 @@ super + {_,shift + }{1-9,0}
 	
 # focus the node for the given path jump
 super + {p,b,comma,period}
-       	  bspc node -f @{parent,brother,first,second}
+       	bspc node -f @{parent,brother,first,second}
 
 #
 # preselect
@@ -266,7 +266,7 @@ super + ctrl + {h,j,k,l}
 
 # preselect the ratio
 super + ctrl + {1-9}
-       	  bspc node -o 0.{1-9}
+       	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
 super + ctrl + space
@@ -274,7 +274,7 @@ super + ctrl + space
 
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
-          bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+        bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize
@@ -290,4 +290,4 @@ super + alt + shift + {h,j,k,l}
 
 # move a floating window
 super + {Left,Down,Up,Right}
-	    bspc node -v {-160 0,0 160,0 -160,160 0}
+	      bspc node -v {-160 0,0 160,0 -160,160 0}

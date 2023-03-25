@@ -88,10 +88,11 @@ sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat
 # AUR
 git clone https://aur.archlinux.org/paru.git ~/.config/paru
 cd ~/.config/paru && makepkg -si
-paru -S betterlockscreen xwinwrap-git ttf-comic-mono-git cava picom-ibhagwan-git powershell-bin \
-	visual-studio-code-bin google-chrome anki ttyper simple-mtpfs ttf-maple-latest
+paru -S betterlockscreen xwinwrap-git google-chrome simple-mtpfs \
+	visual-studio-code-bin picom-ibhagwan-git powershell-bin \
+	anki ttyper cava ttf-comic-mono-git ttf-maple-latest
 
-# /etc/pacman.conf              ( uncheck ignorepkg and put pkgname )
+# /etc/pacman.conf              ( uncheck 'ignorepkg' and put pkgname )
 
 # Change Teletype font
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz

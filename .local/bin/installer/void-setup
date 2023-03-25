@@ -62,8 +62,8 @@ sudo xbps-install -Sy scrcpy android-tools stress bpytop blueman bluez ntfs-3g \
 sudo xbps-install -Sy qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm libvirt cronie docker openssh
 # ovmf
 
-sudo xbps-install -Sy betterlockscreen xwinwrap cava \
-	vscode anki simple-mtpfs
+sudo xbps-install -Sy betterlockscreen xwinwrap \
+	vscode anki simple-mtpfs cava
 
 # xbps-src
 git clone https://github.com/void-linux/void-packages ~/void-packages

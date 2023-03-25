@@ -12,12 +12,12 @@ CURR=$(xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior)
 
 # show hidden or hide displayed
 case $CURR in
-		#currently visible, so hide it
-	0) xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior -s $HIDE ;;
-		# currently intelligent, set to visible
-	1) xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior -s 0 ;;	
-		# currently always hidden, set to visible
-	2) xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior -s 0 ;;	
-		# otherwise ignore
-	*) ;;
+#currently visible, so hide it
+0) xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior -s $HIDE ;;
+	# currently intelligent, set to visible
+1) xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior -s 0 ;;
+	# currently always hidden, set to visible
+2) xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior -s 0 ;;
+	# otherwise ignore
+*) ;;
 esac

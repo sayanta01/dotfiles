@@ -42,8 +42,8 @@ export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"     # to use this comment .zshrc wget alias
-export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 
 # Uncmnt when needed
 # export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"  # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes

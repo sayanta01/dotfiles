@@ -5,12 +5,11 @@
 # chnage record audio-output
 # change btch mac-add
 # change sys-status check-updates according to ur pkg-manager
-# change git config username
 # ucmnt alias for ur pkg-manager
+# change git config username
 # change wttr location
 # add notify-sound if u want
 # uncmt source for tty-colors in zshrc if want
-# https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/
 
 # Change DNS server to cloudflare
 sudo cat <<EOF | sudo tee /etc/resolv.conf
@@ -23,6 +22,12 @@ EOF
 
 # Remove Firefox ~/.pulse-cookie
 sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
+
+# Turn off mitigations
+# /etc/default/grub >> GRUB_CMDLINE_LINUX*="rhgb quiet mitigations=off"
+
+# Fix screen tearing for nvidia-settings
+# nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
 # Enable TouchPad Tapping for Laptop
 sudo mkdir /etc/X11/xorg.conf.d && sudo touch /etc/X11/xorg.conf.d/30-touchpad.conf
@@ -50,12 +55,6 @@ EOF
 # cmnt in - EDITOR=vim visudo
 # User privilege specification
 # allow memebers of group wheel to exec any command
-
-# Turn off mitigations
-# /etc/default/grub >> GRUB_CMDLINE_LINUX*="rhgb quiet mitigations=off"
-
-# Fix screen tearing for nvidia-settings
-# nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
 # Encrypt home dir
 # -i ecryptfs-utils cryptsetup
