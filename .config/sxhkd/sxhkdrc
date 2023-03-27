@@ -116,7 +116,11 @@ alt + F8
 # wifi
 alt + F9
       bash ~/.local/bin/dm-script/wifi             
-        
+
+# mouse
+alt + F12
+      bash ~/.local/bin/mouse             
+
 # screenshot +%I:%M:%d,%a
 Print
     maim | tee ~/pix/$(date +%s)-Ful.png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
@@ -134,22 +138,10 @@ alt + b
       google-chrome-stable
       # $BROWSER
         
-# terminal
-super + Return
-        kitty 
-		    
-# dmenu
-super + space 
-        dmenu_run
-           
 # launcher
 alt + 0
       rofi -show drun -show-icons
 
-# thunar
-super + e
-        thunar
-	
 # spotify
 alt + s
       spotify-launcher
@@ -158,6 +150,18 @@ alt + s
 # telegram
 alt + t
       telegram-desktop
+
+# terminal
+super + Return
+        kitty 
+		    
+# dmenu
+super + space 
+        dmenu_run
+           
+# thunar
+super + e
+        thunar
 
 # calc
 ctrl + alt + k
