@@ -37,3 +37,6 @@ ColorCursor=#F8F8F2
 ScrollingLines=999
 MiscRightClickAction=TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
 BackgroundImageShading=0.900000
+DropdownAlwaysShowTabs=FALSE
+DropdownPositionVertical=6
+DropdownStatusIcon=FALSE

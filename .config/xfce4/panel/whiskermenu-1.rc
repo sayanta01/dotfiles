@@ -1,5 +1,5 @@
 favorites=xfce4-terminal-emulator.desktop,xfce4-file-manager.desktop,xfce4-web-browser.desktop
-recent=firefox.desktop,xfce-keyboard-settings.desktop,xfce-settings-manager.desktop,xfce4-settings-editor.desktop,xfce-ui-settings.desktop,xfce-wm-settings.desktop,xfce-display-settings.desktop,xfce-session-settings.desktop,org.kde.kdeconnect.app.desktop,pavucontrol.desktop
+recent=xfce-keyboard-settings.desktop,firefox.desktop,xfce-settings-manager.desktop,xfce4-settings-editor.desktop,xfce-ui-settings.desktop,xfce-wm-settings.desktop,xfce-display-settings.desktop,xfce-session-settings.desktop,org.kde.kdeconnect.app.desktop,pavucontrol.desktop
 button-icon=kali-panel-menu
 button-single-row=false
 show-button-title=false

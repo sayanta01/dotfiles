@@ -56,6 +56,7 @@
       <property name="square-icons" type="bool" value="true"/>
       <property name="symbolic-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="xfce terminal"/>
         <value type="string" value="task manager"/>
         <value type="string" value="connman-gtk"/>
         <value type="string" value="onboard"/>
@@ -79,7 +80,7 @@
     </property>
     <property name="plugin-16" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value=""/>
+      <property name="mpris-players" type="string" value="chromium.instance1518"/>
       <property name="show-notifications" type="bool" value="false"/>
       <property name="enable-wnck" type="bool" value="false"/>
       <property name="enable-multimedia-keys" type="bool" value="false"/>

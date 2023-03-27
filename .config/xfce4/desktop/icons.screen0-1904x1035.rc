@@ -5,8 +5,8 @@
 row=6
 col=0
 
-[/home/bot/desk/Old-JetBrainsMono]
-row=1
+[/home/bot/desk/linux-questions]
+row=7
 col=0
 
 [/home/bot/desk/monitor]
@@ -21,9 +21,13 @@ col=0
 row=3
 col=0
 
-[/home/bot/desk/linux-questions]
-row=7
+[/home/bot/desk/steam.desktop]
+row=1
 col=0
+
+[/home/bot/desk/htoprc]
+row=0
+col=1
 
 [/home/bot/desk/repo]
 row=2
