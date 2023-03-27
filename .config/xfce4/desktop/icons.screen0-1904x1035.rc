@@ -29,15 +29,23 @@ col=0
 row=0
 col=1
 
+[/home/bot/desk/Adwaita]
+row=1
+col=1
+
 [/home/bot/desk/repo]
 row=2
 col=0
 
-[/home/bot/desk/html-notes]
-row=0
-col=0
-
 [/home/bot/desk/sayanta01.github.io]
 row=8
+col=0
+
+[/home/bot/desk/PapirusFlatMix]
+row=2
+col=1
+
+[/home/bot/desk/html-notes]
+row=0
 col=0
 
