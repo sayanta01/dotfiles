@@ -32,8 +32,8 @@
     <property name="MenuImages" type="bool" value="true"/>
     <property name="ButtonImages" type="bool" value="false"/>
     <property name="MenuBarAccel" type="empty"/>
-    <property name="CursorThemeName" type="string" value="Adwaita"/>
-    <property name="CursorThemeSize" type="int" value="28"/>
+    <property name="CursorThemeName" type="string" value="Pokemon"/>
+    <property name="CursorThemeSize" type="int" value="27"/>
     <property name="DecorationLayout" type="string" value="menu:minimize,maximize,close"/>
     <property name="DialogsUseHeader" type="bool" value="true"/>
     <property name="TitlebarMiddleClick" type="empty"/>

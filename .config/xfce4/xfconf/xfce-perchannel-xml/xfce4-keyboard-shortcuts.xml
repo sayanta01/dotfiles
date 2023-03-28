@@ -66,11 +66,11 @@
       <property name="&lt;Alt&gt;F9" type="string" value="./.local/bin/dm-script/wifi"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;t" type="string" value="./.local/bin/dm-script/tclip"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;d" type="string" value="./.local/bin/dm-script/dclip"/>
-      <property name="&lt;Alt&gt;F2" type="string" value="pamixer -i 5"/>
-      <property name="&lt;Alt&gt;F3" type="string" value="pamixer -d 5"/>
       <property name="&lt;Alt&gt;F4" type="string" value="pamixer -t"/>
       <property name="&lt;Super&gt;F4" type="string" value="./.local/bin/dm-script/sys-action"/>
       <property name="&lt;Alt&gt;Return" type="string" value="xfce4-terminal --drop-down"/>
+      <property name="&lt;Alt&gt;F3" type="string" value="pamixer -i 5"/>
+      <property name="&lt;Alt&gt;F2" type="string" value="pamixer -d 5"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
