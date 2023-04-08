@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# mv ~/.config/zsh/.zshrc ~/
+#sudo apt remove --purge xfce4-clipman catfish kali-hidpi-mode onboard xterm cherrytree plymouth
 #sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 
 # yes | sudo apt full-upgrade

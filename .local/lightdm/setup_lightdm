@@ -4,7 +4,7 @@ sudo cp ~/.local/share/walls/cyberpunk-girl.jpg /etc/lightdm
 
 echo '[greeter]
 background = /etc/lightdm/cyberpunk-girl.jpg
-font-name = Maple Mono NF Bold 12
+font-name = JetBrains Mono Bold 12
 hide-user-image = true
 theme-name = Sweet-Dark-v40
 icon-theme-name = elementary
