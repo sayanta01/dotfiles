@@ -9,4 +9,4 @@ hide-user-image = true
 theme-name = Sweet-Dark-v40
 icon-theme-name = elementary
 clock-format = %a, %d %b  %I:%M
-indicators = ~host;~spacer;~clock;~spacer;~session;~power' | sudo tee -a /etc/grub.d/40_custom
+indicators = ~host;~spacer;~clock;~spacer;~session;~power' | sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf
