@@ -2,7 +2,7 @@
 4.10.3+=true
 
 [/home/bot/desk/sayanta01.github.io-bak]
-row=6
+row=4
 col=0
 
 [/home/bot/desk/linux-questions]
@@ -10,20 +10,20 @@ row=7
 col=0
 
 [/home/bot/desk/monitor]
-row=5
+row=8
 col=0
 
 [/home/bot/desk/webdevlearn]
-row=4
+row=6
 col=0
 
 [/home/bot/desk/scratch]
-row=3
+row=5
 col=0
 
 [/home/bot/desk/steam.desktop]
-row=1
-col=0
+row=0
+col=1
 
 [/home/bot/desk/repo]
 row=2
@@ -34,10 +34,10 @@ row=0
 col=0
 
 [/home/bot/desk/sayanta01.github.io]
-row=8
+row=3
 col=0
 
 [/home/bot/desk/PapirusFlatMix]
-row=2
-col=1
+row=1
+col=0
 

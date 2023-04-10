@@ -24,9 +24,9 @@
       </property>
       <property name="icon-size" type="uint" value="0"/>
       <property name="length-adjust" type="bool" value="true"/>
-      <property name="disable-struts" type="bool" value="false"/>
       <property name="autohide-behavior" type="int" value="0"/>
       <property name="enter-opacity" type="uint" value="100"/>
+      <property name="enable-struts" type="bool" value="true"/>
     </property>
     <property name="dark-mode" type="bool" value="false"/>
   </property>
@@ -80,7 +80,7 @@
     </property>
     <property name="plugin-16" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance1518;spotify"/>
+      <property name="mpris-players" type="string" value="chromium.instance1518;chromium.instance1909;spotify"/>
       <property name="show-notifications" type="bool" value="false"/>
       <property name="enable-wnck" type="bool" value="false"/>
       <property name="enable-multimedia-keys" type="bool" value="false"/>
@@ -113,7 +113,7 @@
     </property>
     <property name="plugin-2" type="string" value="cpugraph"/>
     <property name="plugin-3" type="string" value="separator">
-      <property name="style" type="uint" value="0"/>
+      <property name="style" type="uint" value="2"/>
     </property>
     <property name="plugin-4" type="string" value="separator">
       <property name="style" type="uint" value="0"/>

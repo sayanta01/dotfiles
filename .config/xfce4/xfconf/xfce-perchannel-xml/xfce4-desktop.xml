@@ -277,9 +277,11 @@
     <property name="use-custom-font-size" type="bool" value="false"/>
     <property name="font-size" type="double" value="12"/>
     <property name="single-click" type="bool" value="false"/>
+    <property name="primary" type="bool" value="false"/>
   </property>
   <property name="desktop-menu" type="empty">
     <property name="show" type="bool" value="false"/>
+    <property name="show-icons" type="bool" value="true"/>
   </property>
   <property name="windowlist-menu" type="empty">
     <property name="show" type="bool" value="false"/>

@@ -27,12 +27,12 @@ sudo pacman -Sy exo garcon libxfce4ui libxfce4util thunar-volman tumbler xfce4-d
 #xfce4-appfinder  # An application finder
 
 ##===== Xfce4 Goodies =====##
-sudo pacman -Sy mousepad xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4-whiskermenu-plugin \
+sudo pacman -Sy xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4-whiskermenu-plugin \
 	xfce4-pulseaudio-plugin xfce4-screenshooter xfce4-cpufreq-plugin xfce4-cpugraph-plugin
 
 # sudo pacman -Sy xfce4-screensaver xfce4-mount-plugin xfce4-mpc-plugin xfce4-battery-plugin xfce4-power-manager
 
-#sudo pacman -Rns parole xfce4-notifyd xfburn xfce4-dict \
+#sudo pacman -Rns mousepad parole xfce4-notifyd xfburn xfce4-dict \
 #     xfce4-battery-plugin xfce4-clipman-plugin xfce4-eyes-plugin xfce4-notes-plugin \
 #     xfce4-xkb-plugin xfce4-weather-plugin xfce4-wavelan-plugin xfce4-mailwatch-plugin \
 #     xfce4-genmon-plugin xfce4-sensors-plugin xfce4-verve-plugin xfce4-timer-plugin \
@@ -40,7 +40,6 @@ sudo pacman -Sy mousepad xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4
 #     xfce4-systemload-plugin xfce4-battery-plugin xfce4-power-manager xfce4-artwork xfce4-time-out-plugin
 
 ##### Install #####
-# mousepad
 # xfce4-taskmanager
 # xfce4-screenshooter
 # xfce4-pulseaudio-plugin
@@ -58,6 +57,7 @@ sudo pacman -Sy mousepad xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4
 # xfce4-mpc-plugin      # Control the Music Player Daemon
 
 ##### Remove #####
+# mousepad
 # parole                      # Modern media player based on the GStreamer framework
 # xfce4-notifyd
 # xfburn                      # A simple CD/DVD burning tool based on libburnia libraries
