@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# mv ~/.config/zsh/.zshrc ~/
-#sudo apt remove --purge xfce4-clipman catfish kali-hidpi-mode onboard xterm cherrytree plymouth
-#sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
-
 # yes | sudo apt full-upgrade
 
 cp -r ~/dotfiles/{.zprofile,.profile,.xprofile,.xinitrc,.imwheelrc,.vimrc} ~/
@@ -42,8 +38,14 @@ sudo apt install -y fonts-jetbrains-mono fonts-roboto fonts-terminus \
 # aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 # cd ~/dl && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
-#Console Font
-#sudo dpkg-reconfigure console-setup
+# Console Font
+# sudo dpkg-reconfigure console-setup
 
+# Fix Kali
 # sudo systemd-analyze  ( critical-chain )
 # sudo su root -c "echo deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free >> /etc/apt/sources.list"
+# sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+
+# cp ~/.config/zsh/.zshrc ~/
+# mv ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
+# sudo apt remove --purge xfce4-clipman catfish kali-hidpi-mode onboard xterm cherrytree plymouth

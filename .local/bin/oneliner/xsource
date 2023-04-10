@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Exec xresources in Kali 
+xrdb merge ~/.config/x11/xresources
