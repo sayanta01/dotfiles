@@ -120,7 +120,7 @@ PROMPT=' %b%{$fg[red]%}❯${vcs_info_msg_0_}%  '
 alias install="sudo pacman -Sy"
 alias update="sudo pacman -Syyu; echo '############### ⬆️AUR ###############'; paru -Sua"
 alias remove="sudo pacman -Rns"
-alias clean="sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo '############### 🚮Cleaning Paru ###############'; rm -rf ~/.cache/paru"  # remove orphaned packages
+alias clean="sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo '############### 🚮cleaning Paru cache ###############'; rm -rf ~/.cache/paru"  # remove orphaned packages
 alias unlock="sudo rm /var/lib/pacman/db.lck"   # remove pacman lock
 alias installed="grep -i installed /var/log/pacman.log"
 
