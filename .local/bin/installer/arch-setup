@@ -24,8 +24,8 @@ sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 	noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \
 	exa bat tldr fd ripgrep procs duf dust man fzf zoxide \
-	mate-calc firefox qutebrowser meld \
-	linux-headers neovim kitty newsboat trash-cli \
+	mate-calc firefox qutebrowser meld linux-headers \
+	linux-lts linux-lts-headers neovim kitty newsboat trash-cli \
 	neofetch htop cowsay libconfig gnome-keyring \
 	bspwm polybar sxhkd rofi dunst libnotify \
 	qt5ct qt6ct kvantum lxappearance xcape \
