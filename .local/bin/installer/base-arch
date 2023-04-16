@@ -118,5 +118,6 @@ Include = /etc/pacman.d/mirrorlist-arch
 [core]
 Include = /etc/pacman.d/mirrorlist-arch
 
+sudo pacman-key --init
 sudo pacman-key --populate archlinux
 sudo pacman -Syyu
