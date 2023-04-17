@@ -34,6 +34,10 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 # export DENO_DIR="$XDG_CONFIG_HOME/deno"
 export SOLARGRAPH_CACHE="$XDG_CACHE_HOME/solargraph"
+
+export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
+export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
+
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
