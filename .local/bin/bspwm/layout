@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# - Dependency
-# curl https://raw.githubusercontent.com/phenax/bsp-layout/master/install.sh | bash -;
-
 master="tall"
 default="tiled"
 
