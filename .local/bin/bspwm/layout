@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# - Dependency
+# curl https://raw.githubusercontent.com/phenax/bsp-layout/master/install.sh | bash -;
+
+master="tall"
+default="tiled"
+
+curr_layout=$(bsp-layout get)
+
+if [ "$curr_layout" = $default ]; then
+	bsp-layout set $master && notify-send -t 490 "tiled 󰯋"
+else
+	bsp-layout set $default && notify-send -t 490 "normal "
+fi

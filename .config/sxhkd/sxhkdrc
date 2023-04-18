@@ -33,6 +33,10 @@ XF86AudioPlay
 XF86AudioMicMute         
             pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+# switch layout
+super + n
+        bash ~/.local/bin/bspwm/layout
+        # bsp-layout next --layouts tall,tiled
 
 # hide unhide bar
 super + u

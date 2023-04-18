@@ -14,6 +14,8 @@ cd ~/dl/st && sudo make clean install
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
+curl https://raw.githubusercontent.com/phenax/bsp-layout/master/install.sh | bash -;
+
 git clone https://github.com/sayanta01/nvim ~/.config/nvim
 
 git clone https://github.com/sayanta01/PapirusFlatMix ~/.local/share/icons/PapirusFlatMix

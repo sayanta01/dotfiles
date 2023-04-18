@@ -16,7 +16,7 @@
     frame_color = "#ABB2BF"
     separator_color = frame
     sort = yes
-    font = JetBrainsMono 11
+    font = JetBrainsMono Bold 12
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
