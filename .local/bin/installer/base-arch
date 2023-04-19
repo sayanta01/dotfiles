@@ -42,7 +42,7 @@ artix-chroot /mnt  ( artix )
  arch-chroot /mnt  ( arch )
 
 vim /etc/pacman.conf                    #uncmnt colors and ParallerDownloads, add ILoveCandy
-vim /etc/makepkg.conf                   #uncmnt MAKEFLAGS - more cores faster compile
+vim /etc/makepkg.conf                   #uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
 
 #### configure system clock ####
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
