@@ -3,7 +3,7 @@ configuration {
 } 
 
 * {
-    font:                           "JetBrains Mono 12";
+    font:                           "JetBrainsMono Nerd Font 12";
     foreground:                     #A7B5CD;
     background:                     #101216;
     highlight:	             		    #FFF;

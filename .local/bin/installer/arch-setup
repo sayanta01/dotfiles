@@ -8,20 +8,28 @@ chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.s
 
 mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp}
 
+# Maple
+mver="v6.3"
+wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
+sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
+
+# Suckless
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
 
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
+# My nvim config
 git clone https://github.com/sayanta01/nvim ~/.config/nvim
 
+# Themes
 git clone https://github.com/sayanta01/PapirusFlatMix ~/.local/share/icons/PapirusFlatMix
 sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
-sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
+sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-joypixels ttf-font-awesome \
 	noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \
 	exa bat tldr fd ripgrep procs duf dust man fzf zoxide \
 	mate-calc firefox qutebrowser meld linux-headers \
@@ -62,6 +70,7 @@ sudo pacman -S --noconfirm scrcpy android-tools stress bpytop blueman bluez-util
 	obs-studio audacity gimp inkscape virtualbox kdeconnect blender telegram-desktop
 # sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 
+# Services
 sudo pacman -S --noconfirm cronie-runit docker-runit openssh-runit libvirt-runit bluez-runit
 # sudo pacman -S --noconfirm cronie docker openssh libvirt bluez ( arch )
 # sudo ln -s /etc/runit/sv/cronie /run/runit/service  ( artix )
@@ -88,9 +97,8 @@ sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat
 # AUR
 git clone https://aur.archlinux.org/paru.git ~/.config/paru
 cd ~/.config/paru && makepkg -si
-paru -S betterlockscreen xwinwrap-git google-chrome simple-mtpfs \
-	visual-studio-code-bin picom-ibhagwan-git powershell-bin \
-	anki ttyper cava ttf-comic-mono-git ttf-maple-latest
+paru -S betterlockscreen xwinwrap-git google-chrome simple-mtpfs cava \
+	visual-studio-code-bin picom-ibhagwan-git powershell-bin ttyper anki
 
 # /etc/pacman.conf              ( uncheck 'ignorepkg' and put pkgname )
 

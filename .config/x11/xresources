@@ -1,4 +1,4 @@
-*.font: JetBrainsMono NerdFont:size=13
+*.font: JetBrainsMono Nerd Font:size=14
 
 ! Dracula Xresources Palette
  *.foreground: #F8F8F2
@@ -23,4 +23,4 @@
 ! Sxiv conf
 Sxiv.background: #000000
 Sxiv.foreground: #626294
-Sxiv.font: JetBrainsMonoNerdFont-12
+Sxiv.font: JetBrainsMono Nerd Font-12

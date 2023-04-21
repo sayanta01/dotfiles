@@ -1,9 +1,10 @@
 {
-  "editor.fontFamily": "JetBrainsMono Nerd Font, Material Design Icons",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  // Material Design Icons
   "editor.fontLigatures": true,
-  "editor.fontSize": 20,
+  "editor.fontSize": 18,
   // "editor.fontWeight": "bold",
-  "terminal.integrated.fontSize": 20,
+  "terminal.integrated.fontSize": 17,
   // "terminal.integrated.fontWeight": "bold"
   "workbench.editor.highlightModifiedTabs": true,
   "breadcrumbs.enabled": false,

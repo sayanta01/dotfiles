@@ -11,6 +11,7 @@ chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.s
 
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp}
 
+# Suckless
 sudo xbps-install -Sy libXft-devel harfbuzz-devel libXinerama-devel
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
@@ -18,8 +19,10 @@ cd ~/dl/st && sudo make clean install
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
+# My nvim config
 git clone https://github.com/sayanta01/nvim ~/.config/nvim
 
+# Themes
 git clone https://github.com/sayanta01/PapirusFlatMix ~/.local/share/icons/PapirusFlatMix
 sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
@@ -51,6 +54,16 @@ sudo xbps-install -Sy font-awesome \
 # use PipeWire
 # sudo pacman -S pipewire wireplumber libspa-bluetooth
 
+# Maple
+mver="v6.3"
+wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
+sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
+
+# JetBrainsMono
+jver="v2.3.3" # https://github.com/ryanoasis/nerd-fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$jver/JetBrainsMono.zip
+sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+
 # Nvidia
 # sudo xbps-install -Sy nvidia nvidia-libs-32bit nvtop glmark2
 
@@ -70,11 +83,11 @@ git clone https://github.com/void-linux/void-packages ~/void-packages
 cd ~/void-packages && ./xbps-src binary-bootstrap
 echo XBPS_ALLOW_RESTRICTED=yes >~/void-packages/etc/conf
 
-# google-chrome
+# Google-chrome
 cd ~/void-packages && ./xbps-src pkg google-chrome
 sudo xbps-install -y --repository=hostdir/binpkgs/nonfree google-chrome
 
-# picom
+# Picom
 git clone https://github.com/ibhagwan/picom-ibhagwan-template ~/picom-ibhagwan
 mv ~/picom-ibhagwan ~/void-packages/srcpkgs/picom-ibhagwan
 cd ~/void-packages && ./xbps-src pkg picom-ibhagwan

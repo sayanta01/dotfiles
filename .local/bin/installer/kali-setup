@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # yes | sudo apt full-upgrade
-
 cp -r ~/dotfiles/{.zprofile,.profile,.xprofile,.xinitrc,.imwheelrc,.vimrc} ~/
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
@@ -9,6 +8,17 @@ chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.s
 
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp}
 
+# Maple
+mver="v6.3"
+wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
+sudo unzip MapleMono-NF.zip -d /usr/share/fonts/truetype
+
+# JetBrainsMono
+jver="v2.3.3" # https://github.com/ryanoasis/nerd-fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$jver/JetBrainsMono.zip
+sudo unzip JetBrainsMono.zip -d /usr/share/fonts/truetype
+
+# Suckless
 sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
@@ -16,8 +26,10 @@ cd ~/dl/st && sudo make clean install
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
+# My nvim config
 git clone https://github.com/sayanta01/nvim ~/.config/nvim
 
+# Themes
 git clone https://github.com/sayanta01/PapirusFlatMix ~/.local/share/icons/PapirusFlatMix
 sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
