@@ -40,3 +40,5 @@ BackgroundImageShading=0.900000
 DropdownAlwaysShowTabs=FALSE
 DropdownPositionVertical=6
 DropdownStatusIcon=FALSE
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
+
