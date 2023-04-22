@@ -11,7 +11,7 @@ mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp}
 # Maple
 mver="v6.3"
 wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
-sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
+yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
 
 # Suckless
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
@@ -97,8 +97,8 @@ sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat
 # AUR
 git clone https://aur.archlinux.org/paru.git ~/.config/paru
 cd ~/.config/paru && makepkg -si
-paru -S betterlockscreen xwinwrap-git google-chrome simple-mtpfs cava \
-	visual-studio-code-bin picom-ibhagwan-git powershell-bin ttyper anki
+yes | paru -S betterlockscreen xwinwrap-git google-chrome simple-mtpfs ttyper \
+	visual-studio-code-bin picom-ibhagwan-git powershell-bin cava anki-bin
 
 # /etc/pacman.conf              ( uncheck 'ignorepkg' and put pkgname )
 

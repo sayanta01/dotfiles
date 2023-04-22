@@ -57,12 +57,12 @@ sudo xbps-install -Sy font-awesome \
 # Maple
 mver="v6.3"
 wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
-sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
+yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
 
 # JetBrainsMono
 jver="v2.3.3" # https://github.com/ryanoasis/nerd-fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/$jver/JetBrainsMono.zip
-sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
 
 # Nvidia
 # sudo xbps-install -Sy nvidia nvidia-libs-32bit nvtop glmark2
