@@ -39,7 +39,7 @@ cat <"$NF_DL_DIR/nf-dl_url" |
 	fzf --ansi +x \
 		--tiebreak=begin \
 		--layout=reverse \
-		--prompt="  NF-DL  " \
+		--prompt="  NFDL  " \
 		--preview-window=hidden \
 		--header='<M-i>:nstall | <M-u>:ninstall | <Del>:ete cache ' \
 		--bind="alt-u:reload($ls_installed_font)+execute-silent(echo 'remove' > $tmp_file)" \
