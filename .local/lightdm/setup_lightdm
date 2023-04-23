@@ -4,9 +4,9 @@ sudo cp ~/.local/share/walls/cyberpunk-girl.jpg /etc/lightdm
 
 echo '[greeter]
 background = /etc/lightdm/cyberpunk-girl.jpg
-font-name = JetBrainsMono Nerd Font Bold 12
+font-name = MapleMono NF 12
 hide-user-image = true
 theme-name = Sweet-Dark-v40
 icon-theme-name = elementary
-clock-format = %a, %d %b  %I:%M
+clock-format = %a, %d %b 🕗 %I:%M
 indicators = ~host;~spacer;~clock;~spacer;~session;~power' | sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf
