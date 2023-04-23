@@ -1,9 +1,9 @@
 #!/bin/sh
 
 sudo pacman -S --noconfirm hyprland waybar nemo file-roller \
-	qt5-wayland xdg-desktop-portal-hyprlan wl-clipboard wf-recorder \
+	qt5-wayland qt6-wayland xdg-desktop-portal-hyprlan wl-clipboard wf-recorder \
 	swaylock wlogout wofi wlr-randr \
-	slurp grim ydotool
+	slurp grim ydotool tumbler
 
 # https://github.com/lbonn/rofi
 # https://github.com/nyyManni/dmenu-wayland
