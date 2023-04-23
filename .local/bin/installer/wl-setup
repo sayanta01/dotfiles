@@ -18,4 +18,5 @@ Image viewer: imv, nomacs, swayimg
 Keyboard remapper: Hawck, input-remapper, Interception Tools, kbct, keyd, KMonad, xremap, swhkd
 
 # AUR
-paru -S swww nwg-look-bin wlogout wlr-randr
+paru -S swww wlogout wlr-randr
+# nwg-look-bin
