@@ -8,6 +8,7 @@ sudo pacman -S --noconfirm hyprland waybar nemo file-roller \
 # https://github.com/lbonn/rofi
 # https://github.com/nyyManni/dmenu-wayland
 
+# hyprprop - xprop For Hyprland/Wayland
 # noise-suppression-for-voice
 # hyprland-nvidia-git - hyprland compositor
 # viewnior - photo viewing
