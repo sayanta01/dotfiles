@@ -1,20 +1,22 @@
 #!/bin/sh
 
 # AUR
-paru -S hyprland-git hyprland-nvidia-git hyprprop-git swww wlogout swaylock-effects wlr-randr
+paru -S hyprland-git waybar-hyprland-git hyprland-nvidia-git xdg-desktop-portal-hyprland-git \
+	hyprprop-git hyprpicker-git swaylock-effects wlogout wlr-randr swww
+# sddm-git
 
-sudo pacman -S --noconfirm waybar nemo file-roller \
+sudo pacman -S --noconfirm file-roller tumbler wofi \
 	qt5-wayland qt6-wayland xdg-desktop-portal-hyprland wl-clipboard wf-recorder \
-	wofi gvfs \
-	slurp grim ydotool wtype tumbler
+	slurp grim \
+	gvfs ydotool wtype
 
 # https://github.com/lbonn/rofi
 # https://github.com/nyyManni/dmenu-wayland
 
+# nemo - file-manager
+# libsixel - img2sixel
 # noise-suppression-for-voice
-# viewnior - photo viewing
-# gvfs - virtual filesystem implementation for GIO
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
 
-# Image viewer: imv, nomacs, swayimg
+# Image viewer: viewnior, nomacs, swayimg
 # Keyboard remapper: Hawck, input-remapper, Interception Tools, kbct, keyd, KMonad, xremap, swhkd
