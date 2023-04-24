@@ -46,7 +46,7 @@ sudo xbps-install -Sy font-awesome \
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 	rsync wget curl aria2 yt-dlp transmission jq \
 	intel-ucode virtualbox-ose-guest powershell \
-	xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl unclutter
+	xdg-utils xdg-user-dirs xdo xclip xdotool colorpicker wmctrl unclutter
 # socat exfat-utils brightnessctl  - additional tools
 
 # use PulseAudio
@@ -81,7 +81,7 @@ sudo xbps-install -Sy betterlockscreen xwinwrap \
 # xbps-src
 git clone https://github.com/void-linux/void-packages ~/void-packages
 cd ~/void-packages && ./xbps-src binary-bootstrap
-echo XBPS_ALLOW_RESTRICTED=yes > ~/void-packages/etc/conf
+echo XBPS_ALLOW_RESTRICTED=yes >~/void-packages/etc/conf
 
 # Google-chrome
 cd ~/void-packages && ./xbps-src pkg google-chrome
