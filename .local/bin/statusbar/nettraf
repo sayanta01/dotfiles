@@ -3,23 +3,49 @@
 # Defining the interval
 INT=1
 
-# Saving the RX and TX bytes to $RXSTART and $TXSTART variables
-RXSTART=$(cat /sys/class/net/[ew]*/statistics/rx_bytes)
-TXSTART=$(cat /sys/class/net/[ew]*/statistics/tx_bytes)
+# Get the current total number of bytes received and transmitted
+rx_bytes=$(cat /sys/class/net/*/statistics/rx_bytes | awk '{sum+=$1} END {print sum}')
+tx_bytes=$(cat /sys/class/net/*/statistics/tx_bytes | awk '{sum+=$1} END {print sum}')
 
-# Waiting for $INT seconds
+# Wait for the interval to elapse
 sleep $INT
 
-# Saving the RX and TX bytes to $RXEND and $TXEND variables
-RXEND=$(cat /sys/class/net/[ew]*/statistics/rx_bytes)
-TXEND=$(cat /sys/class/net/[ew]*/statistics/tx_bytes)
+# Get the new total number of bytes received and transmitted
+new_rx_bytes=$(cat /sys/class/net/*/statistics/rx_bytes | awk '{sum+=$1} END {print sum}')
+new_tx_bytes=$(cat /sys/class/net/*/statistics/tx_bytes | awk '{sum+=$1} END {print sum}')
 
-# Calculation of the RX and TX speed in bytes per second
-RXBPS="$(((RXEND - RXSTART) / INT))"
-TXBPS="$(((TXEND - TXSTART) / INT))"
+# Calculate the number of bytes received and transmitted during the interval
+rx_speed=$(echo "scale=2; ($new_rx_bytes - $rx_bytes) / $INT" | bc)
+tx_speed=$(echo "scale=2; ($new_tx_bytes - $tx_bytes) / $INT" | bc)
 
-# Returning the results
-# printf "%4sB  %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
-printf "%4sB 📡 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
-# printf "%4sB 🌐 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
-# printf "%4sB 📶 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# Print the results
+printf "%4sB 📡%4sB\n" "$(numfmt --to=iec "$rx_speed")" "$(numfmt --to=iec "$tx_speed")"
+# printf "%4sB %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 🌐%4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 📶%4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+
+# --------------------------------------------------------------------------------------
+
+# Defining the interval
+# INT=1
+#
+# # Saving curren the RX and TX bytes to $RXSTART and $TXSTART variables
+# RXSTART=$(cat /sys/class/net/[ew]*/statistics/rx_bytes)
+# TXSTART=$(cat /sys/class/net/[ew]*/statistics/tx_bytes)
+#
+# # Waiting for $INT seconds
+# sleep $INT
+#
+# # Saving the new RX and TX bytes to $RXEND and $TXEND variables
+# RXEND=$(cat /sys/class/net/[ew]*/statistics/rx_bytes)
+# TXEND=$(cat /sys/class/net/[ew]*/statistics/tx_bytes)
+#
+# # Calculation of the RX and TX speed in bytes per second
+# RXBPS="$(((RXEND - RXSTART) / INT))"
+# TXBPS="$(((TXEND - TXSTART) / INT))"
+#
+# # Returning the results
+# printf "%4sB 📡%4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 🌐%4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 📶%4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"

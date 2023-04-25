@@ -13,6 +13,7 @@ sudo pacman -S --noconfirm file-roller tumbler wlroots wofi \
 # wtype
 
 # nemo - file-manager
+# swappy - screenshot editor
 # libsixel - img2sixel
 # noise-suppression-for-voice
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
