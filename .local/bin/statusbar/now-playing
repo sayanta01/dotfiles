@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if ! pgrep "playerctl --list-all | grep spotify"; then
-	playerctl --player spotify metadata --format "{{artist}} - {{title}}" 2>/dev/null
+	playerctl --player spotify metadata --format "{{artist}} - {{title}}" | sed -r "s/^(.{32}).*$/\1/" | sed "s/$/../" 2>/dev/null
 else
 	:
 fi
