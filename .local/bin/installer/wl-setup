@@ -1,17 +1,16 @@
 #!/bin/sh
 
 # AUR
-paru -S hyprland-git waybar-hyprland-git hyprland-nvidia-git xdg-desktop-portal-hyprland-git \
+paru -S hyprland-git waybar-hyprland-git xdg-desktop-portal-hyprland-git \
 	hyprprop-git hyprpicker-git swaylock-effects wlogout wlr-randr swww
-# sddm-git
+# sddm-git rofi-lbonn-wayland-git hyprland-nvidia-git
+# https://github.com/nyyManni/dmenu-wayland
 
-sudo pacman -S --noconfirm file-roller tumbler wofi \
+sudo pacman -S --noconfirm file-roller tumbler wlroots wofi \
 	qt5-wayland qt6-wayland xdg-desktop-portal-hyprland wl-clipboard wf-recorder \
 	slurp grim \
-	gvfs ydotool wtype
-
-# https://github.com/lbonn/rofi
-# https://github.com/nyyManni/dmenu-wayland
+	gvfs ydotool
+# wtype
 
 # nemo - file-manager
 # libsixel - img2sixel
