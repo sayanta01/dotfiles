@@ -1,8 +1,19 @@
 #!/usr/bin/env bash
 
 if ! pgrep "playerctl --list-all | grep spotify"; then
-  # playerctl --player spotify metadata --format "{{artist}} - {{title}}" | sed -r "s/^(.{32}).*$/\1/" | sed "s/$/../" 2>/dev/null
-	playerctl --player spotify metadata --format "{{artist}} - {{title}}" 2>/dev/null
+	metadata=$(playerctl --player spotify metadata --format "{{artist}} - {{title}}" 2>/dev/null)
+	shortened_metadata=$(echo "$metadata" | cut -c 1-32)
+	if [[ "${#metadata}" -gt 32 ]]; then
+		shortened_metadata="${shortened_metadata}.."
+	fi
+	echo "$shortened_metadata"
 else
 	:
 fi
+
+# if ! pgrep "playerctl --list-all | grep spotify"; then
+#   # playerctl --player spotify metadata --format "{{artist}} - {{title}}" | sed -r "s/^(.{32}).*$/\1/" | sed "s/$/../" 2>/dev/null
+# 	playerctl --player spotify metadata --format "{{artist}} - {{title}}" 2>/dev/null
+# else
+# 	:
+# fi

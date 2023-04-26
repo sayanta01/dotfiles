@@ -6,4 +6,3 @@ then
 else
 	[ "$(printf "No\\nYes" | dmenu -i -p "Turn on transmission daemon?")" = "Yes" ] && transmission-daemon && notify-send "transmission-daemon Enabled."
 fi
-

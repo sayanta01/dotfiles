@@ -237,7 +237,7 @@ alias tsm="transmission-remote"
 alias wget="wget --hsts-file='$HOME/.cache/wget-hsts'"
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
-# alias mpv="bsp-swallow mpv"
+# alias mpv="bsp_swallow mpv"
 alias iv="sxiv"
 alias za="zathura"
 

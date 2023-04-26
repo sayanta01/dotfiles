@@ -1,4 +1,3 @@
 #!/bin/sh
 
-echo "$(xclip -o)" >> /tmp/tmpclip.txt
-# xclip -o >> /tmp/tmpclip.txt
+printf '%s\n' "$(xclip -o)" >> /tmp/tmpclip.txt

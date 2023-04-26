@@ -57,7 +57,6 @@ sudo apt install -y fonts-jetbrains-mono fonts-roboto fonts-terminus \
 # sudo systemd-analyze  ( critical-chain )
 # sudo su root -c "echo deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free >> /etc/apt/sources.list"
 # sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
-
-# cp ~/.config/zsh/.zshrc ~/
-# mv ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
-# sudo apt remove --purge xfce4-clipman catfish kali-hidpi-mode onboard xterm cherrytree plymouth
+cp ~/.config/zsh/.zshrc ~/
+mv ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
+sudo apt remove --purge xfce4-clipman catfish kali-hidpi-mode onboard xterm cherrytree plymouth

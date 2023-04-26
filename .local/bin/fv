@@ -50,9 +50,9 @@ pre_exit() {
 
 generate_preview() {
 	# Credits: https://bit.ly/2UvLVhM
-	convert -size $SIZE xc:"$BG_COLOR" \
+	convert -size "$SIZE" xc:"$BG_COLOR" \
 		-gravity center \
-		-pointsize $FONT_SIZE \
+		-pointsize "$FONT_SIZE" \
 		-font "$1" \
 		-fill "$FG_COLOR" \
 		-annotate +0+0 "$PREVIEW_TEXT" \
