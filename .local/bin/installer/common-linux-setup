@@ -18,6 +18,12 @@ nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
 
+# Better for laptops [ Todo: find for debian ]
+sudo cat <<EOF | sudo tee /etc/NetworkManager/conf.d/wifi-powersave.conf
+[connection]
+wifi.powersave = 2
+EOF
+
 # Display Asterisks while entering pswd
 # sudo su root -c "echo Defaults pwfeedback >> /etc/sudoers"
 
