@@ -17,4 +17,4 @@ case "$1" in
 	*) exec $fav ;;
 esac
 
-#/usr/share/xsession    -- session path
+#/usr/share/xsession
