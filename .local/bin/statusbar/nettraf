@@ -19,10 +19,10 @@ rx_speed=$(echo "scale=2; ($new_rx_bytes - $rx_bytes) / $INT" | bc)
 tx_speed=$(echo "scale=2; ($new_tx_bytes - $tx_bytes) / $INT" | bc)
 
 # Print the results
-printf "%4sB 📡%4sB\n" "$(numfmt --to=iec "$rx_speed")" "$(numfmt --to=iec "$tx_speed")"
-# printf "%4sB %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
-# printf "%4sB 🌐%4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
-# printf "%4sB 📶%4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+printf "%4sB 📡 %4sB\n" "$(numfmt --to=iec "$rx_speed")" "$(numfmt --to=iec "$tx_speed")"
+# printf "%4sB  %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 🌐 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 📶 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
 
 # --------------------------------------------------------------------------------------
 
@@ -45,7 +45,7 @@ printf "%4sB 📡%4sB\n" "$(numfmt --to=iec "$rx_speed")" "$(numfmt --to=iec "$t
 # TXBPS="$(((TXEND - TXSTART) / INT))"
 #
 # # Returning the results
-# printf "%4sB 📡%4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
-# printf "%4sB %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
-# printf "%4sB 🌐%4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
-# printf "%4sB 📶%4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 📡 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB  %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 🌐 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
+# printf "%4sB 📶 %4sB\\n" "$(numfmt --to=iec "$RXBPS")" "$(numfmt --to=iec "$TXBPS")"
