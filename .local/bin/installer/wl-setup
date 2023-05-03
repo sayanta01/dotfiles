@@ -8,8 +8,7 @@ paru -S hyprland-git waybar-hyprland-git xdg-desktop-portal-hyprland-git \
 
 sudo pacman -S --noconfirm file-roller tumbler wlroots wofi \
 	qt5-wayland qt6-wayland xdg-desktop-portal-hyprland wl-clipboard wf-recorder \
-	slurp grim \
-	gvfs ydotool
+	slurp grim ydotool
 # wtype
 
 # nemo - file-manager
