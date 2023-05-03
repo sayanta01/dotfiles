@@ -1,4 +1,3 @@
 #!/bin/sh
 
-notify-send -t 4999 "Wait for 5sec"
-betterlockscreen -u ~/.local/share/walls --fx blur
+betterlockscreen -u ~/.local/share/walls --fx blur && notify-send "Lockscreen changed 🖼️"

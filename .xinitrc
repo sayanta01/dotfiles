@@ -11,10 +11,10 @@ fi
 fav=bspwm
 
 case "$1" in
-	bspwm) bspwm ;;
-	xfce) startxfce4 ;;
-	dwm) ssh-agent dwm ;;
-	*) exec $fav ;;
+bspwm) bspwm ;;
+xfce) startxfce4 ;;
+dwm) ssh-agent dwm ;;
+*) exec $fav ;;
 esac
 
-#/usr/share/xsession
+# /usr/share/xsessions
