@@ -41,7 +41,7 @@ sudo xbps-install -Sy font-awesome \
 	wireless_tools net-tools network-manager-applet bind-utils iftop nmap \
 	mpv mediainfo exiftool ffmpegthumbnailer ImageMagick maim sxiv xwallpaper ffmpeg python3-pip pywal \
 	unrar unzip zip p7zip tar engrampa \
-	tree ncdu lf Thunar thunar-archive-plugin thunar-media-tags-plugin \
+	tree ncdu lf gvfs Thunar thunar-archive-plugin thunar-media-tags-plugin \
 	zathura zathura-pdf-mupdf ghostscript \
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 	rsync wget curl aria2 yt-dlp transmission jq \

@@ -42,7 +42,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-joypixels ttf-font-awesom
 	wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils iftop nmap \
 	mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
 	unrar unzip zip p7zip tar engrampa \
-	tree ncdu lf thunar thunar-archive-plugin thunar-media-tags-plugin \
+	tree ncdu lf gvfs thunar thunar-archive-plugin thunar-media-tags-plugin \
 	zathura zathura-pdf-mupdf ghostscript \
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 	rsync wget curl aria2 yt-dlp transmission-cli jq \
