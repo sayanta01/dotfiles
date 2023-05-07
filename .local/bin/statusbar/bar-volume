@@ -1,6 +1,6 @@
 #!/bin/sh
 
-[ "$(pamixer --get-mute)" = true ] && echo '🔇 Mute' && exit
+[ "$(pamixer --get-mute)" = true ] && echo '🔇Mute' && exit
 
 vol="$(pamixer --get-volume)"
 
@@ -12,4 +12,4 @@ else
 	icon="🔉"
 fi
 
-echo "$icon $vol%"
+echo "$icon$vol%"
