@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 if [ -f "$XDG_CONFIG_HOME/.config/x11/xprofile" ]; then
 	. "$XDG_CONFIG_HOME/.config/x11/xprofile"
 else
