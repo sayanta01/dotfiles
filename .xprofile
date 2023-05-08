@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# kill if already running
+#kill if already running
 killall -9 pipewire pipewire-pulse wireplumber imwheel xcape kdeconnect-indicator
 
 pipewire &
