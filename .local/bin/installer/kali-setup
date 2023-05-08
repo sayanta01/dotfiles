@@ -35,6 +35,8 @@ sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
+yes | curl -sS https://starship.rs/install.sh | sh
+
 sudo apt install -y fonts-jetbrains-mono fonts-roboto fonts-terminus \
 	bspwm polybar rofi kitty dunst lxappearance maim playerctl pamixer \
 	ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf zoxide \

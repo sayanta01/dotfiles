@@ -28,6 +28,8 @@ sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
+yes | curl -sS https://starship.rs/install.sh | sh
+
 sudo xbps-install -Sy font-awesome \
 	noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk fonts-roboto-ttf terminus-font \
 	exa bat tldr fd ripgrep procs duf dust man fzf zoxide \
