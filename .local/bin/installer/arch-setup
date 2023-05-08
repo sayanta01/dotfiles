@@ -31,7 +31,7 @@ sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
 sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-joypixels ttf-font-awesome \
 	noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \
-	exa bat tldr fd ripgrep procs duf dust man fzf starship zoxide \
+	exa bat tldr fd ripgrep procs duf dust man fzf bash-completion starship zoxide \
 	mate-calc firefox qutebrowser meld linux-headers \
 	linux-lts linux-lts-headers neovim kitty newsboat trash-cli \
 	neofetch htop cowsay libconfig gnome-keyring \
