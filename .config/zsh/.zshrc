@@ -197,7 +197,7 @@ alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 alias tb="nc termbin.com 9999"
 alias cht="sh -c '\''curl cheat.sh/$1'\'' _"
 alias rate="sh -c '\''curl rate.sx/$1'\'' _"
-alias wttr_='sh -c '\''curl wttr.in/$1'\'' _"'
+alias wttr_="sh -c '\''curl wttr.in/$1'\'' _'"
 alias myip="curl ifconfig.me; echo"
 alias php-server="php -S 0.0.0.0:8000"
 alias python-server="python -m http.server 8000"
@@ -206,7 +206,7 @@ alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' 
 alias hst="history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c"
 alias ff="fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs -r $EDITOR"
 alias fonts="magick convert -list font | grep -iE 'font:.*' | fzf"
-alias find_="sh -c '\''find $@ 2>&1 | grep -v "Permission denied" >&2'\'' _"
+# alias find_="sh -c '\''find $@ 2>&1 | grep -v "Permission denied" >&2'\'' _"
 alias bigfile="du -h -x -s -- * | sort -r -h | head -20"
 alias psmem="ps axch -o cmd,%mem --sort=-%mem | head"
 alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
@@ -223,7 +223,7 @@ alias free="free -h"
 alias bc="bc -ql"
 alias hw="hwinfo --short"
 alias dmesg="sudo dmesg -T"
-alias up-fc='sudo fc-cache -fv'
+alias upfc='sudo fc-cache -fv'
 alias shred="shred -uvzn3"
 alias bat="bat --theme OneHalfDark"
 alias cat="bat --theme OneHalfDark -p"
