@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 export MANPAGER='nvim +Man!'
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
  --color=fg:#d6d6d6,bg:#030303,hl:#5f87af
