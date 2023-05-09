@@ -6,6 +6,8 @@ $git_status\
 $git_metrics\
 $character"""
 
+command_timeout = 20000
+
 [git_branch]
 symbol = " "
 format = "[$symbol$branch]($style) "
