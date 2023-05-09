@@ -56,7 +56,6 @@ export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"    # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
 
 export LESSHISTFILE="-"  # Disable files
-# export LESS="-R"
 
 export QT_QPA_PLATFORMTHEME="gtk2"    # have QT use gtk2 theme.
 export QT_QPA_PLATFORMTHEME="qt5ct"   
