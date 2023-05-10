@@ -55,10 +55,9 @@ export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"    # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
 
-export LESSHISTFILE="-"  # Disable files
-
+export LESSHISTFILE="-"    # Disable files
 export QT_QPA_PLATFORMTHEME="gtk2"    # have QT use gtk2 theme.
 export QT_QPA_PLATFORMTHEME="qt5ct"   
 export _JAVA_AWT_WM_NONREPARENTING=1 && wmname LG3D
-# export AWT_TOOLKIT="MToolkit wmname LG3D"  # fix Java applications do not work in DWM
-# export QT_QPA_PLATFORM=wayland      # needed for wayland
+# export AWT_TOOLKIT="MToolkit wmname LG3D"    # fix Java applications do not work in DWM
+# export QT_QPA_PLATFORM=wayland    # needed for wayland
