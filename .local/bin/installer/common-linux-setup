@@ -24,6 +24,11 @@ sudo cat <<EOF | sudo tee /etc/NetworkManager/conf.d/wifi-powersave.conf
 wifi.powersave = 2
 EOF
 
+# Nvidia driver and mkinitcpio
+# Modules_to_add="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
+# sed -i "s/^MODULES=.*/MODULES=($Modules_to_add)/" /etc/mkinitcpio.conf
+# sudo mkinitcpio -p linux
+
 # Display Asterisks while entering pswd
 # sudo su root -c "echo Defaults pwfeedback >> /etc/sudoers"
 

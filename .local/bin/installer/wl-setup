@@ -3,15 +3,15 @@
 # AUR
 paru -S hyprland-git waybar-hyprland-git xdg-desktop-portal-hyprland-git \
 	hyprprop-git hyprpicker-git swaylock-effects wlogout wlr-randr swww
-# sddm-git rofi-lbonn-wayland-git hyprland-nvidia-git
+# sddm-git rofi-lbonn-wayland-git hyprland-nvidia-git swaylock-effects-git
 # https://github.com/nyyManni/dmenu-wayland
 
-sudo pacman -S --noconfirm file-roller tumbler wlroots wofi \
-	qt5-wayland qt6-wayland xdg-desktop-portal-hyprland wl-clipboard wf-recorder \
-	slurp grim ydotool
-# wtype
+sudo pacman -S --noconfirm file-roller tumbler wlroots wofi polkit-gnome \
+	qt5-wayland qt6-wayland xdg-desktop-portal-hyprland xdg-desktop-portal-wlr \
+  wl-clipboard wf-recorder ffmpegthumbs \
+	slurp grim ydotool xorg-xwayland
+# wtype nwg-look swaybg 
 
-# nemo - file-manager
 # swappy - screenshot editor
 # libsixel - img2sixel
 # noise-suppression-for-voice
