@@ -29,6 +29,11 @@ EOF
 # sed -i "s/^MODULES=.*/MODULES=($Modules_to_add)/" /etc/mkinitcpio.conf
 # sudo mkinitcpio -p linux
 
+# Setting for the NVIDIA kernel module
+# sudo cat <<EOF | sudo tee /etc/modprobe.d/nvidia.conf
+# options nvidia-drm modeset=1
+# EOF
+
 # Display Asterisks while entering pswd
 # sudo su root -c "echo Defaults pwfeedback >> /etc/sudoers"
 
