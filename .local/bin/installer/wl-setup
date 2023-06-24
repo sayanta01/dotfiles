@@ -2,20 +2,22 @@
 
 # AUR
 paru -S hyprland-git waybar-hyprland-git xdg-desktop-portal-hyprland-git \
-	hyprprop-git hyprpicker-git swaylock-effects wlogout wlr-randr swww
-# sddm-git rofi-lbonn-wayland-git hyprland-nvidia-git swaylock-effects-git
+	hyprprop-git hyprpicker-git swaylock-effects-git wlogout wlr-randr
+# wallpaper manager - swww swaybg
+# nvidia - hyprland-nvidia-git libva-nvidia-driver-git
+# sddm-git rofi-lbonn-wayland-git
+# network transparency - waypipe
 # https://github.com/nyyManni/dmenu-wayland
 
 sudo pacman -S --noconfirm file-roller tumbler wlroots wofi polkit-gnome \
 	qt5-wayland qt6-wayland xdg-desktop-portal-hyprland xdg-desktop-portal-wlr \
-  wl-clipboard wf-recorder ffmpegthumbs \
-	slurp grim ydotool xorg-xwayland
-# wtype nwg-look swaybg 
-
-# swappy - screenshot editor
+	wl-clipboard wf-recorder ffmpegthumbs \
+	xorg-xwayland swayidle
 # libsixel - img2sixel
 # noise-suppression-for-voice
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
 
-# Image viewer: viewnior, nomacs, swayimg
-# Keyboard remapper: Hawck, input-remapper, Interception Tools, kbct, keyd, KMonad, xremap, swhkd
+# image viewer - viewnior, nomacs, swayimg
+# screenshot editor - swappy slurp grim
+# user input simulating tool - wtype ydotool
+# keyboard remapper - hawck, input-remapper, interception tools, kbct, keyd, KMonad, xremap, swhkd
