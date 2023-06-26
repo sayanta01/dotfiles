@@ -2,7 +2,8 @@
 
 # AUR
 paru -S hyprland-git waybar-hyprland-git xdg-desktop-portal-hyprland-git \
-	hyprprop-git hyprpicker-git swaylock-effects-git wlogout wlr-randr
+	hyprprop-git hyprpicker-git swaylock-effects-git wlogout wlr-randr \
+	slurp grim
 # wallpaper manager - swww swaybg
 # nvidia - hyprland-nvidia-git libva-nvidia-driver-git
 # sddm-git rofi-lbonn-wayland-git
@@ -17,7 +18,7 @@ sudo pacman -S --noconfirm file-roller tumbler wlroots wofi polkit-gnome \
 # noise-suppression-for-voice
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
 
+# screenshot editor - swappy
 # image viewer - viewnior, nomacs, swayimg
-# screenshot editor - swappy slurp grim
 # user input simulating tool - wtype ydotool
 # keyboard remapper - hawck, input-remapper, interception tools, kbct, keyd, KMonad, xremap, swhkd
