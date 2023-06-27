@@ -1,14 +1,33 @@
 #!/bin/sh
 
+# chrome://flags - Search for “ozone” and select Wayland
+
+sudo cat <<EOF | sudo tee /usr/share/xsessions/hyprland.desktop
+[Desktop Entry]
+Name=Hyprland
+Comment=An intelligent dynamic tiling Wayland compositor
+Exec=Hyprland
+Type=Application
+EOF
+
 # AUR
 paru -S hyprland-git waybar-hyprland-git xdg-desktop-portal-hyprland-git \
 	hyprprop-git hyprpicker-git swaylock-effects-git wlogout wlr-randr \
-	slurp grim
+	slurp grim sddm-git rofi-lbonn-wayland-git \
+	hyprland-nvidia-git nvidia-dkms libva libva-nvidia-driver-git
 # wallpaper manager - swww swaybg
-# nvidia - hyprland-nvidia-git libva-nvidia-driver-git
-# sddm-git rofi-lbonn-wayland-git
 # network transparency - waypipe
 # https://github.com/nyyManni/dmenu-wayland
+
+# Nvidia driver and mkinitcpio
+# Modules_to_add="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
+# sed -i "s/^MODULES=.*/MODULES=($Modules_to_add)/" /etc/mkinitcpio.conf
+# sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
+
+# Setting for the NVIDIA kernel module
+# sudo cat <<EOF | sudo tee /etc/modprobe.d/nvidia.conf
+# options nvidia-drm modeset=1
+# EOF
 
 sudo pacman -S --noconfirm file-roller tumbler wlroots wofi polkit-gnome \
 	qt5-wayland qt6-wayland xdg-desktop-portal-hyprland xdg-desktop-portal-wlr \
@@ -17,8 +36,8 @@ sudo pacman -S --noconfirm file-roller tumbler wlroots wofi polkit-gnome \
 # libsixel - img2sixel
 # noise-suppression-for-voice
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
-
 # screenshot editor - swappy
 # image viewer - viewnior, nomacs, swayimg
 # user input simulating tool - wtype ydotool
-# keyboard remapper - hawck, input-remapper, interception tools, kbct, keyd, KMonad, xremap, swhkd
+
+# sudo pacman -S sddm-runit
