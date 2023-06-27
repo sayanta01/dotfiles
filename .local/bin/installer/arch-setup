@@ -33,7 +33,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-joypixels ttf-font-awesom
 	noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \
 	exa bat tldr fd ripgrep procs duf dust man fzf bash-completion starship zoxide \
 	mate-calc firefox qutebrowser meld linux-headers \
-	linux-lts linux-lts-headers neovim kitty newsboat trash-cli \
+	linux-lts linux-lts-headers kitty newsboat trash-cli neovim \
 	neofetch htop cowsay libconfig gnome-keyring \
 	bspwm polybar sxhkd rofi dunst libnotify \
 	qt5ct qt6ct kvantum lxappearance xcape \
