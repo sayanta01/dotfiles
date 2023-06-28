@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # chrome://flags - Search for “ozone” and select Wayland
+cp -r ~/dotfiles/.config/hypr ~/.config
 
 sudo cat <<EOF | sudo tee /usr/share/xsessions/hyprland.desktop
 [Desktop Entry]
@@ -11,11 +12,12 @@ Type=Application
 EOF
 
 # AUR
-paru -S hyprland-git waybar-hyprland-git xdg-desktop-portal-hyprland-git \
-	hyprprop-git hyprpicker-git swaylock-effects-git wlogout wlr-randr \
-	slurp grim sddm-git rofi-lbonn-wayland-git \
+paru -S hyprland waybar-hyprland xdg-desktop-portal-hyprland \
+	hyprprop hyprpicker swaylock-effects wlogout wlr-randr \
+	grim slurp swww sddm-git \
 	hyprland-nvidia-git nvidia-dkms libva libva-nvidia-driver-git
-# wallpaper manager - swww swaybg
+
+# rofi-lbonn-wayland-git
 # network transparency - waypipe
 # https://github.com/nyyManni/dmenu-wayland
 
@@ -29,15 +31,15 @@ paru -S hyprland-git waybar-hyprland-git xdg-desktop-portal-hyprland-git \
 # options nvidia-drm modeset=1
 # EOF
 
-sudo pacman -S --noconfirm file-roller tumbler wlroots wofi polkit-gnome \
-	qt5-wayland qt6-wayland xdg-desktop-portal-hyprland xdg-desktop-portal-wlr \
-	wl-clipboard wf-recorder ffmpegthumbs \
-	xorg-xwayland swayidle
+sudo pacman -S --noconfirm file-roller tumbler wlroots polkit-gnome \
+	qt5-wayland qt6-wayland \
+	wl-clipboard wf-recorder ffmpegthumbs viewnior
+
+# swayidle
 # libsixel - img2sixel
+# screenshot editor - swappy
 # noise-suppression-for-voice
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
-# screenshot editor - swappy
-# image viewer - viewnior, nomacs, swayimg
-# user input simulating tool - wtype ydotool
+# user input simulating tool - ydotool wtype
 
 # sudo pacman -S sddm-runit

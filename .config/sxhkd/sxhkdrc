@@ -7,15 +7,15 @@ XF86MonBrightness{Up,Down}
 	             xbacklight{ --inc 10, --dec 10}
 	
 # volume control 
-XF86AudioLowerVolume
-              pamixer -d 5 
-              # amixer set Master 5%-
-              # pactl set-sink-volume @DEFAULT_SINK@ -5%
-
 XF86AudioRaiseVolume
               pamixer -i 5
               # amixer set Master 5%+
               # pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioLowerVolume
+              pamixer -d 5 
+              # amixer set Master 5%-
+              # pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 XF86AudioMute
          pamixer -t
