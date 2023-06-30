@@ -11,7 +11,6 @@
     // "custom/now-playing"
   ],
   "modules-right": [
-    "idle_inhibitor",
     "custom/date",
     "custom/nettraf",
     "custom/cpu",
@@ -25,13 +24,6 @@
   "hyprland/window": {
     "format": "{}",
     "max-length": 42
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": " ",
-      "deactivated": " "
-    }
   },
   "wlr/workspaces": {
     "disable-scroll": true,

@@ -3,7 +3,7 @@
 dizo="B4:9A:95:94:9B:CC"
 mivi="BB:8C:CF:C8:C1:04"
 
-choice=$(printf "dizo\nmivi" | dmenu -i -p "Choose device  ")
+choice=$(printf "dizo\nmivi" | dmenu -i -p "Choose device ")
 
 if [ "$choice" = "dizo" ]; then
 	connect=$(bluetoothctl info $dizo | grep Connected | awk '{print $2}')
