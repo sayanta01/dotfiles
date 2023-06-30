@@ -1,4 +1,8 @@
 #!/bin/sh
 
-kill -15 "$(ps -u "$USER" -o pid,%mem,%cpu,comm | sort -k2 -r | sed -n '1!p' | dmenu -i -l 20 | awk '{print $1}')"
-notify-send "killed process"
+selected_pid=$(ps -u "$USER" -o pid,%mem,%cpu,comm | sort -k2 -r | sed -n '1!p' | dmenu -i -l 20 | awk '{print $1}')
+
+if [ -n "$selected_pid" ]; then
+	kill -15 "$selected_pid"
+	notify-send "killed process"
+fi

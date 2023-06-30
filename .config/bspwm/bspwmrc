@@ -31,6 +31,7 @@ bspc rule -a Spotify desktop='^9'
 bspc rule -a TelegramDesktop desktop='^6'
 bspc rule -a qt5ct state=floating center=on
 bspc rule -a Nm-connection-editor state=floating center=on
+bspc rule -a Blueman-manager state=floating center=on
 bspc rule -a Pavucontrol state=floating center=on
 bspc rule -a Lxappearance state=floating center=on
 

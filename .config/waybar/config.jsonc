@@ -1,0 +1,153 @@
+{
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "modules-left": [
+    "wlr/workspaces",
+    "hyprland/window"
+    // "custom/now-playing"
+  ],
+  "modules-right": [
+    "idle_inhibitor",
+    "custom/date",
+    "custom/nettraf",
+    "custom/cpu",
+    "custom/memory",
+    "pulseaudio",
+    "custom/separator",
+    "pulseaudio#microphone",
+    // "battery",
+    "tray"
+  ],
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 42
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": " ",
+      "deactivated": " "
+    }
+  },
+  "wlr/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    // "on-scroll-up": "hyprctl dispatch workspace -1",
+    // "on-scroll-down": "hyprctl dispatch workspace +1",
+    // "persistent_workspaces": {
+    //   "1": [],
+    //   "2": [],
+    //   "3": [],
+    //   "4": [],
+    //   "5": [],
+    //   "6": [],
+    //   "7": [],
+    //   "8": [],
+    //   "9": [],
+    //   "10": []
+    // }
+    "format": "{icon}",
+    "format-icons": {
+      "1": "󰌀",
+      "2": "",
+      "3": "󰯈",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "󰽴",
+      "10": "󰥟"
+    }
+  },
+  "custom/separator": {
+    "format": "/",
+    "interval": "once"
+    // "tooltip": false
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "custom/nettraf": {
+    "interval": 2,
+    "exec": "~/.local/bin/statusbar/nettraf"
+    // "return-type": "json"
+  },
+  "custom/now-playing": {
+    "format": "󰎉 {}",
+    "interval": 2,
+    "exec": "~/.local/bin/statusbar/now-playing"
+  },
+  "custom/cpu": {
+    "interval": 2,
+    "exec": "~/.local/bin/statusbar/bar-cpu"
+  },
+  "custom/memory": {
+    "interval": 2,
+    "exec": "~/.local/bin/statusbar/bar-mem"
+  },
+  "custom/date": {
+    "interval": 2,
+    "exec": "~/.local/bin/statusbar/bar-time",
+    "on-click": "~/.local/bin/notify-oneliner/notify-cal"
+  },
+  // "battery": {
+  //   "states": {
+  //     "good": 94,
+  //     "warning": 29,
+  //     "critical": 20
+  //   },
+  //   "format": "{icon} {capacity}%",
+  //   "format-charging": " {capacity}%",
+  //   "format-plugged": " {capacity}%",
+  //   "format-alt": "{time} {icon}",
+  //   "format-icons": [
+  //     "",
+  //     "",
+  //     "",
+  //     "",
+  //     "",
+  //     "",
+  //     "",
+  //     "",
+  //     "",
+  //     "",
+  //     ""
+  //   ]
+  // },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "tooltip": false,
+    "format-muted": " Muted",
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    }
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " Muted",
+    "on-click-right": "pavucontrol",
+    "on-click": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 5
+  }
+}

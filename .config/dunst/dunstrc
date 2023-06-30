@@ -31,7 +31,7 @@
     always_run_script = true
     title = Dunst
     class = Dunst
-    corner_radius = 2
+    corner_radius = 0
     #text_icon_padding = 0
     icon_path = false
     ignore_newline = no

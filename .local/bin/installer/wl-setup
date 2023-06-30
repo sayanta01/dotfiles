@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # chrome://flags - Search for “ozone” and select Wayland
-cp -r ~/dotfiles/.config/hypr ~/.config
+cp -r ~/dotfiles/.config/{hypr,waybar,xsettingsd} ~/.config
 
 sudo cat <<EOF | sudo tee /usr/share/xsessions/hyprland.desktop
 [Desktop Entry]
@@ -41,5 +41,3 @@ sudo pacman -S --noconfirm file-roller tumbler wlroots polkit-gnome \
 # noise-suppression-for-voice
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
 # user input simulating tool - ydotool wtype
-
-# sudo pacman -S sddm-runit
