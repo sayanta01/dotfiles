@@ -1,12 +1,12 @@
 #!/bin/bash
 
-##### EDIT these values to suit the panel to affect
+#### EDIT these values to suit the panel to affect
 PANEL=1
 
 # the hide behaviour setting (1=intelligently, 2=always)
 HIDE=2
 
-##### Don't edit anything below
+#### Don't edit anything below
 # get the current setting
 CURR=$(xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior)
 

@@ -80,8 +80,8 @@ move() {
 	printf " "
 
 	# truncate position history by 1 (get rid of oldest)
-	LASTPOSX=($(echo "${LASTPOSX[@]}" | cut -d " " -f 2-) $POSX)
-	LASTPOSY=($(echo "${LASTPOSY[@]}" | cut -d " " -f 2-) $POSY)
+	LASTPOSX=("$(echo "${LASTPOSX[@]}" | cut -d " " -f 2-)" "$POSX")
+	LASTPOSY=("$(echo "${LASTPOSY[@]}" | cut -d " " -f 2-)" "$POSY")
 	tput cup 1 10
 	#echo "LASTPOSX array ${LASTPOSX[@]} LASTPOSY array ${LASTPOSY[@]}"
 	tput cup 2 10

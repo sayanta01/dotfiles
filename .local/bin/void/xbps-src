@@ -2,5 +2,5 @@
 
 echo "Package_Name ?"
 read -r name
-cd ~/void-packages && ./xbps-src pkg "$name"
+cd ~/void-packages && ./xbps-src pkg "$name" # fix this
 sudo xbps-install -y --repository=/hostdir/binpkgs/nonfree "$name"

@@ -1,21 +1,21 @@
 #!/bin/sh
 
-if [ -z "$1" ]; then
-	date=$(date "+%Y/%m/%d")
+if [ -z "$1" ]
+then
+  date=$(date "+%Y/%m/%d");
 else
-	date=$1
+  date=$1;
 fi
 
 cachedir="$HOME/.cache/epaper"
-datedir=$(echo "$date" | sed 's/\//-/g')
+datedir=$(sed 's/\//-/g' <<<"$date")
 
-mkdir -p "$cachedir/$datedir"
+mkdir -p "$cachedir"/"$datedir"
 
-for i in 0{1..9} {10..50}; do
-	if [ ! -f "$cachedir/$datedir/$i.jpg" ]; then
-		wget -O "$cachedir/$datedir/$i.jpg" "https://epaperwmimg.amarujala.com/$date/dl/$i/hdimage.jpg" || break
-	fi
+for i in 0{1..9} {10..50} ;
+do
+  wget -nc -O "$cachedir"/"$datedir"/"$i".jpg https://epaperwmimg.amarujala.com/"$date"/dl/"$i"/hdimage.jpg || break
 done
 
 notify-send -t 2000 "Here is your 🗞️"
-find "$cachedir/$datedir" -type f -name "*.jpg" -exec sxiv -z 110 {} +
+sxiv -z 110 "$cachedir"/"$datedir"/*

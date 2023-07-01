@@ -10,8 +10,13 @@ case $action in
 		sort -d | fzf | awk '{print $1}')
 	# sort -d | dmenu -i -l 20 | awk '{print $1}')
 
+	if [ -z "$package" ]; then
+		exit 0
+	fi
+
 	sudo pacman -S --noconfirm "$package"
-	notify-send " $package"
+	notify-send " $package "
+
 	;;
 "remove Program")
 	package=$(pacman -Qi |
@@ -19,11 +24,17 @@ case $action in
 		sort -d | fzf | awk '{print $1}')
 	# sort -d | dmenu -i -l 25 | awk '{print $1}')
 
+	if [ -z "$package" ]; then
+		exit 0
+	fi
+
 	sudo pacman -Rns --noconfirm "$package"
-	notify-send " $package"
+	notify-send " $package "
 	;;
 *)
-	notify-send "😕 No Option Selected"
+	notify-send "N󰟢 Option Selected"
 	exit 1
 	;;
 esac
+
+exit 0

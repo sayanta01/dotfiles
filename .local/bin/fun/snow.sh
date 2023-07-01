@@ -24,7 +24,7 @@ function move_flake() {
 	fi
 
 	#printf "\033[%s;%sH\u274$[($RANDOM%6)+3]\033[1;1H" ${snowflakes[$i]} $i
-	printf "\033[%s;%sH*\033[1;1H" "${snowflakes[$i]}" "$i"
+	printf "\033[%s;%sH\033[1;1H" "${snowflakes[$i]}" "$i"
 
 	lastflakes[$i]=${snowflakes[$i]}
 	snowflakes[$i]=$((${snowflakes[$i]} + 1))

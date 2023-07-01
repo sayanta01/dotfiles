@@ -1,6 +1,0 @@
-#!/bin/sh
-
-dir="${HOME}/.local/share/walls"
-BG="$(find "$dir" -name '*.jpg' -o -name '*.png' | shuf -n1)"
-cat "$BG" > ~/.local/share/walls/wallpaper.jpg
-xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg

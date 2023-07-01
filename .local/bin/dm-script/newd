@@ -1,6 +1,22 @@
 #!/bin/sh
 
-word=$(dmenu -p "Enter Word " <&-)
-mean=$(dmenu -p "Enter Meaning " <&-)
+choice=$(printf "add-newd\nshow-newd" | dmenu -i -p " ")
 
-echo "$word -> $mean" >> ~/.local/share/vocab/words.txt
+if [ "$choice" = "add-newd" ]; then
+	while true; do
+		word=$(dmenu -p "Enter Word " <&-)
+		if [ -z "$word" ]; then
+			break
+		fi
+		mean=$(dmenu -p "Enter Meaning " <&-)
+		if [ -z "$mean" ]; then
+			break
+		fi
+		echo "$word -> $mean" >> ~/.local/share/vocab/words.txt
+	done
+elif [ "$choice" = "show-newd" ]; then
+	newd="$(dmenu -p " " -l 20 <"$HOME/.local/share/vocab/words.txt" | cut -d' ' -f1)"
+	echo "$newd" | tr "\n" " " | xclip -sel c
+else
+	:
+fi

@@ -48,10 +48,10 @@ while getopts "p:t:c:f:s:r:RBCKhv" arg; do
 			V+=(${#sets[@]})
 			sets+=("${OPTARG:1}")
 		else
-			((OPTARG >= 0 && OPTARG < ${#sets[@]})) && V+=($OPTARG)
+			((OPTARG >= 0 && OPTARG < ${#sets[@]})) && V+=("$OPTARG")
 		fi
 		;;
-	c) [[ $OPTARG =~ ^[0-7]$ ]] && C+=($OPTARG) ;;
+	c) [[ $OPTARG =~ ^[0-7]$ ]] && C+=("$OPTARG") ;;
 	f) ((f = (OPTARG > 19 && OPTARG < 101) ? OPTARG : f)) ;;
 	s) ((s = (OPTARG > 4 && OPTARG < 16) ? OPTARG : s)) ;;
 	r) ((r = (OPTARG >= 0) ? OPTARG : r)) ;;
@@ -60,7 +60,7 @@ while getopts "p:t:c:f:s:r:RBCKhv" arg; do
 	C) NOCOLOR=1 ;;
 	K) KEEPCOLORANDTYPE=1 ;;
 	h)
-		echo -e "Usage: $(basename $0) [OPTION]..."
+		echo -e "Usage: $(basename "$0") [OPTION]..."
 		echo -e "Animated pipes terminal screensaver.\n"
 		echo -e " -p [1-]\tnumber of pipes (D=1)."
 		echo -e " -t [0-$((${#sets[@]} - 1))]\ttype of pipes, can be used more than once (D=0)."
@@ -92,7 +92,7 @@ CN=${#C[@]}
 
 cleanup() {
 	# clear up standard input
-	read -t 0.001 && cat </dev/stdin >/dev/null
+	read -rt 0.001 && cat </dev/stdin >/dev/null
 
 	# terminal has no smcup and rmcup capabilities
 	((FORCE_RESET)) && reset && exit 0
@@ -129,7 +129,7 @@ tput clear
 # any key press exits the loop and this script
 while
 	REPLY=
-	read -t 0.0$((1000 / f)) -n 1 2>/dev/null
+	read -rt 0.0$((1000 / f)) -n 1 2>/dev/null
 	[[ -z $REPLY ]]
 do
 	for ((i = 1; i <= p; i++)); do
@@ -147,7 +147,7 @@ do
 		((n[i] = (${n[i]} < 0) ? 3 : ${n[i]} % 4))
 
 		# Print:
-		tput cup ${y[i]} ${x[i]}
+		tput cup "${y[i]}" "${x[i]}"
 		echo -ne "\x1b[${BOLD}m"
 		[[ $NOCOLOR == 0 ]] && echo -ne "\x1b[3${c[i]}m"
 		echo -n "${sets[v[i]]:l[i]*4+n[i]:1}"
