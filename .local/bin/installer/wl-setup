@@ -46,6 +46,8 @@ sudo pacman -S --noconfirm file-roller tumbler wlroots polkit-gnome \
 # Font=MapleMono NF
 # EOF
 
-#### sddm-theme config
-# add - /usr/share/sddm/themes/sdt/theme.conf
-# Font="MapleMono NF"
+## sddm-theme config
+# config_file="/usr/share/sddm/themes/sdt/theme.conf"
+# add_font="Font=\"MapleMono NF\""
+# line_number=$(grep -n "Font=" "$config_file" | cut -d':' -f1)
+# sed -i "${line_number}s/.*/$add_font/" "$config_file"
