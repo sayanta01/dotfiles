@@ -15,7 +15,7 @@ EOF
 # AUR
 paru -S hyprland waybar-hyprland xdg-desktop-portal-hyprland \
 	hyprprop hyprpicker swaylock-effects wlogout wlr-randr \
-	grim slurp swappy swww libsixel sddm-git \
+	grim slurp swappy swww libsixel \
 	nvidia-dkms libva libva-nvidia-driver-git
 
 # rofi-lbonn-wayland-git
@@ -33,7 +33,7 @@ paru -S hyprland waybar-hyprland xdg-desktop-portal-hyprland \
 # EOF
 
 sudo pacman -S --noconfirm file-roller tumbler wlroots polkit-gnome \
-	qt5-wayland qt6-wayland \
+	qt5-wayland qt6-wayland sddm \
 	wl-clipboard wf-recorder ffmpegthumbs viewnior
 
 # noise-suppression-for-voice
