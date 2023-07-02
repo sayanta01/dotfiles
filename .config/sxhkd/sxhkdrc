@@ -123,15 +123,15 @@ alt + F9
 
 # screenshot +%I:%M:%d,%a
 Print
-    maim | tee ~/pix/$(date +%s)-Ful.png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
+    maim | tee ~/pix/$(date +%I:%M%b_%d)-Ful.png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
                  
 # ss select   
 shift + Print            
-        maim -s | tee ~/pix/$(date +%s)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
+        maim -s | tee ~/pix/$(date +%I:%M%b_%d)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
 
 # ss window
 alt + Print 
-	    maim -i $(xdotool getactivewindow) ~/pix/$(date +%s)-Win.png | notify-send -t 800 "Window Screenshot Taken"
+	    maim -i $(xdotool getactivewindow) ~/pix/$(date +%I:%M%b_%d)-Win.png | notify-send -t 800 "Window Screenshot Taken"
 	                           
 # chrome
 alt + b
