@@ -138,9 +138,13 @@ alt + b
       google-chrome-stable
       # $BROWSER
         
-# launcher
+# rofi
 alt + 0
       rofi -show drun -show-icons
+
+# dmenu
+super + space 
+        dmenu_run
 
 # spotify
 alt + s
@@ -154,10 +158,6 @@ alt + t
 # terminal
 super + Return
         kitty 
-		    
-# dmenu
-super + space 
-        dmenu_run
            
 # thunar
 super + e
@@ -234,17 +234,17 @@ super + ctrl + {m,x,s,p}
 alt + {_,shift + }Tab
      	bspc node -f {next,prev}.local.!hidden.window
 
-# focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	      bspc node -{f,s} {west,south,north,east}
+# focus the last node/desktop
+super + {grave,Tab}
+	      bspc {node,desktop} -f last
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	      bspc desktop -f {prev,next}.local
 
-# focus the last node/desktop
-super + {grave,Tab}
-	      bspc {node,desktop} -f last
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	      bspc node -{f,s} {west,south,north,east}
 
 # focus the older or newer node in the focus history
 super + {o,i}
