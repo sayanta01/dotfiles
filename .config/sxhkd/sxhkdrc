@@ -35,12 +35,12 @@ XF86AudioMicMute
 
 # switch layout
 # super + n
-        # bash ~/.local/bin/bspwm/layout
+        # ~/.local/bin/bspwm/layout
         ## bsp-layout next --layouts tall,tiled
 
 # hide unhide bar
 super + u
-        bash ~/.local/bin/statusbar/toggle-polybar
+        ~/.local/bin/statusbar/toggle-polybar
         # polybar-msg cmd toggle | bspc config top_padding 0
 
 # hide all windows
@@ -57,23 +57,23 @@ super + alt + n
 
 # pywal
 super + alt + o
-              bash ~/.local/bin/pywal
+              ~/.local/bin/pywal
 
 # wallch
 super + alt + p
-              bash ~/.local/bin/wallch
+              ~/.local/bin/wallch
 
 # temp clip
 super + alt + t
-              bash ~/.local/bin/dm-script/tclip
+              ~/.local/bin/dm-script/tclip
 
 # display temp clip
 super + alt + d
-              bash ~/.local/bin/dm-script/dclip
+              ~/.local/bin/dm-script/dclip
 
 # bluetooth
 alt + F1
-      bash ~/.local/bin/btch    		    
+      ~/.local/bin/btch    		    
 	     
 # vol down
 alt + F2
@@ -95,11 +95,11 @@ alt + F4
 
  # system_action
 super + F4
-        bash ~/.local/bin/dm-script/sys-action
+        ~/.local/bin/dm-script/sys-action
 	 
 # switch audio
 alt + F5       
-      bash ~/.local/bin/audiosw    
+      ~/.local/bin/audiosw    
 
 # previous
 alt + F6 
@@ -119,7 +119,7 @@ alt + F8
        
 # wifi
 alt + F9
-      bash ~/.local/bin/dm-script/wifi             
+      ~/.local/bin/dm-script/wifi             
 
 # screenshot +%I:%M:%d,%a
 Print
@@ -173,9 +173,7 @@ ctrl + alt + l
 	     
 # kill ps
 ctrl + alt + Delete
-             bash ~/.local/bin/dm-script/kil	     
-
-
+             ~/.local/bin/dm-script/kil	     
 
 
 #
