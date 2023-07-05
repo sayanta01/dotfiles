@@ -2,7 +2,7 @@
 
 # chrome://flags - Search for “ozone” and select Wayland
 
-cp -r ~/dotfiles/.config/{hypr,waybar,xsettingsd} ~/.config
+cp -r ~/dotfiles/.config/{hypr,waybar,swaylock,xsettingsd} ~/.config
 
 sudo cat <<EOF | sudo tee /usr/share/xsessions/hyprland.desktop
 [Desktop Entry]
@@ -14,11 +14,11 @@ EOF
 
 # AUR
 paru -S waybar-hyprland xdg-desktop-portal-hyprland \
-	hyprprop hyprpicker swaylock-effects wlogout wlr-randr \
-	grim slurp swappy swww libsixel \
+	hyprprop hyprpicker swaylock-effects wlr-randr \
+	grim slurp swappy swww \
+  libsixel waypipe \
 	hyprland-nvidia-git nvidia-dkms libva libva-nvidia-driver-git
 # rofi-lbonn-wayland-git
-# network transparency - waypipe
 # https://github.com/nyyManni/dmenu-wayland
 
 # Nvidia driver and mkinitcpio
