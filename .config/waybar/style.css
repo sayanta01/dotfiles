@@ -1,21 +1,21 @@
 * {
   border: none;
-  border-radius: 0;
-  font-family: 'JetBrainsMono Nerd Font';
+  border-radius: 2;
+  font-family: 'JetBrainsMono NF';
   font-weight: normal;
   font-size: 16px;
 }
 
 window#waybar {
-  background: rgba(21, 18, 27, 0);
-  color: #cdd6f4;
+  background: #040303;
+  border-radius: 0px;
 }
 
 #workspaces button {
-  padding-left: 11px;
-  padding-right: 12px;
   color: #c0caf5;
   background: #040303;
+  padding-left: 11px;
+  padding-right: 12px;
   margin-right: 2px;
 }
 
@@ -25,7 +25,7 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  color: #414868;
+  color: #bd2c40;
   background: #eba0ac;
 }
 
@@ -41,39 +41,42 @@ window#waybar {
 
 #workspaces,
 #window,
-#custom-separator,
 #custom-date,
 #custom-nettraf,
 #custom-cpu,
 #custom-memory,
+#custom-separator,
 #pulseaudio,
 #tray,
 #backlight {
-  background: #1e1e2e;
+  background: #040303;
   opacity: 0.9;
   padding: 0px 10px;
-  margin: 0px 0px;
-  margin-top: 0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 #tray {
-  margin-right: 5px;
-  margin-right: 0px;
+  margin-right: 2px;
 }
 
 #workspaces {
   background: #040303;
-  margin-left: 0px;
-  padding-right: 0px;
   padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 4px;
 }
 
 #window {
-  margin: 0px 0px 0px 5px;
+  background: #2a2e36;
+  border-radius: 8;
+  margin-left: 5px;
 }
 
 #custom-date {
   color: #fab387;
+  background: #2a2e36;
+  border-radius: 8;
   margin-right: 5px;
 }
 
@@ -84,6 +87,8 @@ window#waybar {
 
 #custom-cpu {
   color: #89b4fa;
+  background: #2a2e36;
+  border-radius: 8;
   margin-right: 5px;
 }
 
@@ -94,17 +99,20 @@ window#waybar {
 
 #pulseaudio {
   color: #89b4fa;
-  border-radius: 0px 0px 0px 0px;
+  background: #2a2e36;
+  border-radius: 8px 0px 0px 8px;
   margin-right: 0px;
 }
 
 #custom-separator {
   color: #89b4fa;
+  background: #2a2e36;
   border-radius: 0px 0px 0px 0px;
 }
 
 #pulseaudio.microphone {
   color: #cba6f7;
-  border-radius: 0px 0px 0px 0px;
+  background: #2a2e36;
+  border-radius: 0px 8px 8px 0px;
   margin-right: 5px;
 }

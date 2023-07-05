@@ -143,7 +143,7 @@ alt + 0
       rofi -show drun -show-icons
 
 # dmenu
-super + space 
+super + @space 
         dmenu_run
 
 # spotify
@@ -209,8 +209,9 @@ super + y
 #
 
 # set the window state
-# super + {t,shift + t,s,f}
-#        	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + {p,shift + p}
+       	bspc node -t {tiled,pseudo_tiled}
+
 super + {s,f}
         {bspc config pointer_follows_focus true; \
         bspc node -t $(bspc query -N -n -n .tiled >/dev/null && echo floating || echo tiled); \
@@ -227,6 +228,10 @@ super + ctrl + {m,x,s,p}
 #
 # focus/swap
 #
+
+# increase\decrease window gap on focused desktop
+super + {minus,equal}
+        bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-, +} 5))
 
 # focus the next/previous window in the current desktop
 alt + {_,shift + }Tab

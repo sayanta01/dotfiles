@@ -1,9 +1,11 @@
 {
   "layer": "top",
   "position": "top",
-  "mod": "dock",
+  // "mod": "dock",
+  "fixed-center": true,
   "exclusive": true,
   "passthrough": false,
+  "ipc": true,
   "gtk-layer-shell": true,
   "modules-left": [
     "wlr/workspaces",
@@ -26,23 +28,9 @@
     "max-length": 42
   },
   "wlr/workspaces": {
-    "disable-scroll": true,
+    // "disable-scroll": true,
     "all-outputs": true,
     "on-click": "activate",
-    // "on-scroll-up": "hyprctl dispatch workspace -1",
-    // "on-scroll-down": "hyprctl dispatch workspace +1",
-    // "persistent_workspaces": {
-    //   "1": [],
-    //   "2": [],
-    //   "3": [],
-    //   "4": [],
-    //   "5": [],
-    //   "6": [],
-    //   "7": [],
-    //   "8": [],
-    //   "9": [],
-    //   "10": []
-    // }
     "format": "{icon}",
     "format-icons": {
       "1": "󰌀",
@@ -58,33 +46,43 @@
     }
   },
   "custom/separator": {
+    "tooltip": false,
     "format": "/",
     "interval": "once"
-    // "tooltip": false
   },
   "tray": {
     "icon-size": 18,
     "spacing": 10
   },
   "custom/nettraf": {
+    "tooltip": false,
     "interval": 2,
-    "exec": "~/.local/bin/statusbar/nettraf"
+    "exec": "~/.local/bin/statusbar/nettraf",
+    "on-click": "~/.config/waybar/scripts/nm_name",
+    "on-click-right": "kitty -e nmtui"
     // "return-type": "json"
   },
   "custom/now-playing": {
+    "tooltip": false,
     "format": "󰎉 {}",
     "interval": 2,
-    "exec": "~/.local/bin/statusbar/now-playing"
+    "exec": "~/.local/bin/statusbar/now-playing",
+    "on-click": "~/.config/waybar/scripts/now_playing"
   },
   "custom/cpu": {
+    "tooltip": false,
     "interval": 2,
-    "exec": "~/.local/bin/statusbar/bar-cpu"
+    "exec": "~/.local/bin/statusbar/bar-cpu",
+    "on-click": "~/.config/waybar/scripts/cpu_usage"
   },
   "custom/memory": {
+    "tooltip": false,
     "interval": 2,
-    "exec": "~/.local/bin/statusbar/bar-mem"
+    "exec": "~/.local/bin/statusbar/bar-mem",
+    "on-click": "~/.config/waybar/scripts/mem_usage"
   },
   "custom/date": {
+    "tooltip": false,
     "interval": 2,
     "exec": "~/.local/bin/statusbar/bar-time",
     "on-click": "~/.local/bin/notify-oneliner/notify-cal"
@@ -114,8 +112,8 @@
   //   ]
   // },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
     "tooltip": false,
+    "format": "{icon} {volume}%",
     "format-muted": " Muted",
     "on-click": "pamixer -t",
     "on-click-right": "pavucontrol",
@@ -133,6 +131,7 @@
     }
   },
   "pulseaudio#microphone": {
+    "tooltip": false,
     "format": "{format_source}",
     "format-source": " {volume}%",
     "format-source-muted": " Muted",
