@@ -3,10 +3,10 @@ configuration {
 } 
 
 * {
-    font:                           "JetBrainsMono Nerd Font 12";
+    font:                           "JetBrainsMono NF 12";
     foreground:                     #A7B5CD;
     background:                     #101216;
-    highlight:	             		    #FFF;
+    highlight:	             		    #ffffff;
     red:                            #973d46;
     darkred:                        #973d46;
     blue:                           #517ba5;
@@ -41,15 +41,15 @@ textbox {
 listview {
     lines:	      8;
     columns:      1;
-    border:       0px 0px 0px ;
+    border:       0px 0px 0px 0px;
     border-color: @separatorcolor;
     spacing:      4px;
     scrollbar:    false;
-    padding:      0px 0px 0px ;
+    padding:      0px 0px 0px 0px;
 }
 
 element {
-    border:       0;
+    border:       0px;
     padding:      9px; 
 }
 
@@ -120,15 +120,15 @@ entry {
 }
 
 prompt {
-    padding: 0 2 0 0 ;
+    padding: 0px 2px 0px 0px ;
     text-color: @foreground;
 }
 
 inputbar {
     background-color: #282a36;
-    margin:           0px 0px 0px;
+    margin:           0px 0px 0px 0px;
     border:           0px;
     border-radius:    0px;
     border-color:     @background;
-    children:         [ prompt,entry];
+    children:         [prompt,entry];
 }
