@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontFamily": "JetBrainsMono NF",
   // Material Design Icons
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
@@ -54,6 +54,10 @@
     {
       "before": ["<leader>", "q"],
       "commands": [":q!"]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "commands": [":bdelete"]
     },
     {
       "before": ["<leader>", "h"],

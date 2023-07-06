@@ -16,7 +16,7 @@ export HISTSIZE=2000
 export HISTCONTROL=erasedups:ignoredups:ignorespace
 
 . "$HOME/.local/share/cargo/env"
-# . "$HOME/.cargo/env" # for Kali
+# . "$HOME/.cargo/env" # for kali
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

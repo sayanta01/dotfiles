@@ -24,7 +24,7 @@ bspc config presel_feedback_color "#44475A"
 # bspc rule -a Onboard state=floating
 # bspc rule -a Screenkey manage=off
 # bspc rule -a Anki state=floating
-bspc rule -a Zathura state=tiled
+# bspc rule -a Zathura state=tiled
 bspc rule -a Gimp state=floating
 bspc rule -a Inkscape state=floating
 bspc rule -a Spotify desktop='^9'
@@ -49,4 +49,3 @@ xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
 #killall -q "imwheel" &
 #imwheel -b 45 &
 #imwheel -b "4 5" &
-#wmname LG33D &

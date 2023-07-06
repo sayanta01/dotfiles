@@ -2,6 +2,7 @@
 
 # TODO
 # choose pipewire or pulseaudio
+# change default browser -> .profile
 # change audiosw sink-name
 # chnage record audio-output
 # add pswd in pass
