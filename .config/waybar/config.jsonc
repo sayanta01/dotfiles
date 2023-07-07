@@ -9,8 +9,8 @@
   "gtk-layer-shell": true,
   "modules-left": [
     "wlr/workspaces",
-    "hyprland/window"
-    // "custom/now-playing"
+    "hyprland/window",
+    "custom/now-playing"
   ],
   "modules-right": [
     "custom/date",
@@ -59,7 +59,7 @@
     "interval": 2,
     "exec": "~/.local/bin/statusbar/nettraf",
     "on-click": "~/.config/waybar/scripts/nm_name",
-    "on-click-right": "kitty -e nmtui"
+    "on-click-right": "kitty --class floating -e nmtui"
     // "return-type": "json"
   },
   "custom/now-playing": {
