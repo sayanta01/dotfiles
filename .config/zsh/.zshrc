@@ -104,6 +104,5 @@ PROMPT=' %b%{$fg[red]%}❯${vcs_info_msg_0_}%  '
 #PROMPT=' %b%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[white]%}  %{$fg[red]%})%{$fg[white]%} ${vcs_info_msg_0_} ~%  '
 # %b  %{$fg[red]%}(  %{$fg[yellow]%}%n  %{$fg[green]%}@  %{$fg[magenta]%}%M   %{$fg[white]%}   %{$fg[red]%})  %{$fg[white]%}
  
-
 #### ALIAS #### 
 alias hst="history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c"
