@@ -131,7 +131,6 @@ cmd chmod ${{
   lf -remote 'send reload'
 }}
 
-
 # Bindings
 # Remove some defaults
 map m

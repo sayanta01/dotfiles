@@ -15,7 +15,7 @@
 alias install="sudo pacman -Sy"
 alias update="sudo pacman -Syyu && echo '############### ⬆️AUR ###############'; paru -Sua"
 alias remove="sudo pacman -Rns"
-alias clean="sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo '############### 🚮cleaning Paru cache ###############'; rm -rf ~/.cache/paru"  # remove orphaned packages
+alias clean='sudo pacman -Rns "$(pacman -Qtdq)"; sudo pacman -Sc --noconfirm; echo "############### 🚮cleaning Paru cache ###############"; rm -rf ~/.cache/paru'
 alias unlock="sudo rm /var/lib/pacman/db.lck" # remove pacman lock
 alias installed="grep -i installed /var/log/pacman.log"
 
@@ -91,9 +91,15 @@ alias push="git push origin"
 alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 alias tb="nc termbin.com 9999"
-alias cht="sh -c '\''curl cheat.sh/$1'\'' _"
-alias rate="sh -c '\''curl rate.sx/$1'\'' _"
-alias wttr_="sh -c '\''curl wttr.in/$1'\'' _'"
+cht() {
+	sh -c "curl cheat.sh/$1"
+}
+wttr() {
+	sh -c "curl rate.sx/$1"
+}
+rate() {
+	sh -c "curl wttr.in/$1"
+}
 alias myip="curl ifconfig.me; echo"
 alias php-server="php -S 0.0.0.0:8000"
 alias python-server="python -m http.server 8000"

@@ -46,4 +46,4 @@ application/*zip) atool --list -- "$1" ;;
 *opendocument*) odt2txt "$1" ;;
 application/pgp-encrypted) gpg -d -- "$1" ;;
 esac
-exit 1
+# exit 1
