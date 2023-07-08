@@ -107,6 +107,7 @@ window#waybar {
 #custom-separator {
   color: #89b4fa;
   background: #2a2e36;
+  padding: 0px 0px 0px 0px;
   border-radius: 0px 0px 0px 0px;
 }
 
