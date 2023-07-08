@@ -7,31 +7,31 @@ effect-vignette=0.0:0.0
 color=1f1d2e80
 font=Cascadia Code
 indicator
-indicator-radius=160
-indicator-thickness=6
+indicator-radius=180
+indicator-thickness=8
 
-line-color=1f1d2e
-ring-color=191724
+line-color=040303
+ring-color=040303
 inside-color=1f1d2e
 text-color=e0def4
 text-caps-lock-color=e0def4
 
-key-hl-color=eb6f9200
-bs-hl-color=31748f00
+key-hl-color=31748f
+bs-hl-color=eb6f92
 
-separator-color=c0caf5
+separator-color=04030300
 
-line-ver-color=eb6f92
-ring-ver-color=eb6f92
+line-ver-color=040303
+ring-ver-color=31748f
 inside-ver-color=1f1d2e
-text-ver-color=e0def4
+text-ver-color=31748f
 
-line-wrong-color=1f1d2e
-ring-wrong-color=31748f
+line-wrong-color=040303
+ring-wrong-color=eb6f92
 inside-wrong-color=1f1d2e
-text-wrong-color=31748f
+text-wrong-color=e0def4
 
-line-clear-color=1f1d2e
+line-clear-color=040303
 ring-clear-color=9ccfd8
 inside-clear-color=1f1d2e
 text-clear-color=e0def4
@@ -41,5 +41,5 @@ grace-no-mouse
 grace-no-touch
 datestr=%a, %d %b
 timestr=%I:%M:%S
-fade-in=0.1
+fade-in=0.2
 ignore-empty-password
