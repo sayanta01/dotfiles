@@ -108,7 +108,7 @@ alias multitail="multitail --no-repeat -c"
 
 alias ff='fd --type f --hidden --exclude .git | fzf --preview "bat --color=always --style=numbers --line-range=:500 {}" | xargs -r "$EDITOR"'
 alias fonts="magick convert -list font | grep -iE 'font:.*' | fzf"
-alias bigfile="du -h -x -s -- * | sort -r -h | head -20"
+alias bigfile="du -hxs -- * | sort -rh | head -20"
 alias psmem="ps axch -o cmd,%mem --sort=-%mem | head"
 alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
 alias mkgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
