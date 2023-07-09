@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# chrome://flags - Search for “ozone” and select Wayland
+# chrome://flags - Search for 'ozone' and select auto
 
 cp -r ~/dotfiles/.config/{hypr,waybar,swaylock,xsettingsd} ~/.config
 
