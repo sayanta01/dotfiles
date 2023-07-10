@@ -1,11 +1,11 @@
 #!/bin/zsh
 
 export MANPAGER='nvim +Man!'
-#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
- --color=fg:#d6d6d6,bg:#030303,hl:#5f87af
- --color=fg+:#e8e8e8,bg+:#313244,hl+:#3bceff
+ --color=fg:#d6d6d6,bg:#121212,hl:#5f87af
+ --color=fg+:#e8e8e8,bg+:#262626,hl+:#3bceff
  --color=info:#afaf87,prompt:#d7005f,pointer:#b061ff
  --color=marker:#87ff00,spinner:#972eff,header:#87afaf"
 
@@ -15,7 +15,7 @@ export PATH="$PATH:$HOME/.local/share/cargo/bin"
 
 # Default programs
 export EDITOR="nvim"
-export TERMINAL="st"
+export TERMINAL="kitty"
 export READER="zathura"
 export BROWSER="google-chrome-stable"
 
@@ -37,6 +37,7 @@ export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
+export UNISON="$XDG_DATA_HOME/unison"
 export KODI_DATA="$XDG_DATA_HOME/kodi"
 export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"

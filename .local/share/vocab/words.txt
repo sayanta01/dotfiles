@@ -43,5 +43,3 @@ delude -> to make somebody believe something that is not true
 aggrandize -> to increase the power, rank or wealth of a person or country
 hostile -> having very strong feelings against somebody/something
 collusive -> involving scret or unlawful coorperation aimed at deceiving or gaining an advantage over others
-
-

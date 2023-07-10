@@ -67,7 +67,7 @@ super + alt + p
 super + alt + t
               ~/.local/bin/dm-script/tclip
 
-# display temp clip
+# display clip
 super + alt + d
               ~/.local/bin/dm-script/dclip
 
@@ -208,9 +208,9 @@ super + y
 # state/flags
 #
 
-# set the window state
-super + {p,shift + p}
-       	bspc node -t {tiled,pseudo_tiled}
+# increase\decrease window gap on focused desktop
+super + {minus,equal}
+        bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-, +} 5))
 
 super + {s,f}
         {bspc config pointer_follows_focus true; \
@@ -221,6 +221,10 @@ super + {s,f}
         bspc node -f; \
         bspc config pointer_follows_focus false}
 
+# set the window state
+super + {p,shift + p}
+       	bspc node -t {tiled,pseudo_tiled}
+
 # set the node flags
 super + ctrl + {m,x,s,p}
 	      bspc node -g {marked,locked,sticky,private}
@@ -229,31 +233,27 @@ super + ctrl + {m,x,s,p}
 # focus/swap
 #
 
-# increase\decrease window gap on focused desktop
-super + {minus,equal}
-        bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-, +} 5))
-
 # focus the next/previous window in the current desktop
 alt + {_,shift + }Tab
      	bspc node -f {next,prev}.local.!hidden.window
-
-# focus the last node/desktop
-super + {grave,Tab}
-	      bspc {node,desktop} -f last
-
-# focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	      bspc desktop -f {prev,next}.local
-
-# focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	      bspc node -{f,s} {west,south,north,east}
 
 # focus the older or newer node in the focus history
 super + {o,i}
       	bspc wm -h off; \
 	      bspc node {older,newer} -f; \
       	bspc wm -h on
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	      bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	      bspc {node,desktop} -f last
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	      bspc node -{f,s} {west,south,north,east}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}

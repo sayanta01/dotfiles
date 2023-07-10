@@ -3,8 +3,6 @@
 # - Dependency
 # curl https://raw.githubusercontent.com/phenax/bsp-layout/master/install.sh | bash -;
 
-# uncmnt binds in sxhkd
-
 master="tall"
 default="tiled"
 
