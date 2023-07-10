@@ -15,7 +15,7 @@ EOF
 # AUR
 paru -S waybar-hyprland xdg-desktop-portal-hyprland \
 	hyprprop hyprpicker swaylock-effects wlr-randr \
-	grim slurp swappy swww \
+	grim slurp swappy swww sddm-git \
   libsixel waypipe \
 	hyprland-nvidia-git nvidia-dkms libva libva-nvidia-driver-git
 # rofi-lbonn-wayland-git
@@ -32,7 +32,7 @@ paru -S waybar-hyprland xdg-desktop-portal-hyprland \
 # EOF
 
 sudo pacman -S --noconfirm file-roller tumbler wlroots polkit-gnome \
-	qt5-wayland qt6-wayland sddm \
+	qt5-wayland qt6-wayland sddm-runit \
 	wl-clipboard wf-recorder ffmpegthumbs viewnior
 # noise-suppression-for-voice
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
