@@ -7,6 +7,8 @@
   "terminal.integrated.fontSize": 17,
   // "terminal.integrated.fontWeight": "bold"
   "workbench.editor.highlightModifiedTabs": true,
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.ignoreRecommendations": false,
   "breadcrumbs.enabled": false,
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
@@ -17,6 +19,9 @@
   "editor.bracketPairColorization.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "GitHub Dark Default",
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.color": "rgba(20, 99, 89, 0.6)",
+  "vim.highlightedyank.enable": true,
   "editor.linkedEditing": true,
   "[python]": {
     "editor.formatOnType": true
@@ -188,6 +193,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.renderWhitespace": "none",
+  "explorer.confirmDragAndDrop": false,
   "errorLens.enabled": false,
   "git.openRepositoryInParentFolders": "never",
   "editor.scrollbar.vertical": "hidden",
