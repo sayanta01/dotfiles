@@ -10,7 +10,7 @@ bspc config pointer_motion_interval 16
 
 bspc config borderless_monocle true
 bspc config focus_follows_pointer true
-#bspc config gapless_monocle         true
+# bspc config gapless_monocle true
 bspc config pointer_modifier mod1
 
 # Pywal
@@ -30,11 +30,11 @@ bspc rule -a Gimp state=floating
 bspc rule -a Inkscape state=floating
 bspc rule -a Spotify desktop='^9'
 bspc rule -a TelegramDesktop desktop='^6'
+bspc rule -a Lxappearance state=floating center=on
 bspc rule -a qt5ct state=floating center=on
 bspc rule -a Nm-connection-editor state=floating center=on
-bspc rule -a Blueman-manager state=floating center=on
 bspc rule -a Pavucontrol state=floating center=on
-bspc rule -a Lxappearance state=floating center=on
+bspc rule -a Blueman-manager state=floating center=on
 
 # Autostart
 # pgrep -x sxhkd > /dev/null || sxhkd &

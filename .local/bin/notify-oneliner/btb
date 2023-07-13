@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Experimental=true > /etc/bluetooth/main.conf
+# Experimental = true > /etc/bluetooth/main.conf
 connect=$(bluetoothctl info)
 if [ "$connect" = "Missing device address argument" ]; then
 	notify-send "Bluetooth device not connected"

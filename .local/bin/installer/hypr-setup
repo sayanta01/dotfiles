@@ -2,7 +2,7 @@
 
 # chrome://flags - Search for 'ozone' and select auto
 
-cp -r ~/dotfiles/.config/{hypr,waybar,swaylock,xsettingsd} ~/.config
+cp -r ~/dotfiles/.config/{hypr,waybar,swaylock,xsettingsd,nwg-look} ~/.config
 
 sudo cat <<EOF | sudo tee /usr/share/xsessions/hyprland.desktop
 [Desktop Entry]
@@ -14,7 +14,7 @@ EOF
 
 # AUR
 paru -S waybar-hyprland xdg-desktop-portal-hyprland \
-	hyprprop hyprpicker swaylock-effects wlr-randr \
+	hyprprop wlr-randr hyprpicker swaylock-effects \
 	grim slurp swappy swww sddm-git \
   libsixel waypipe \
 	hyprland-nvidia-git nvidia-dkms libva libva-nvidia-driver-git
