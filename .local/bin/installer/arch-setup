@@ -28,6 +28,7 @@ git clone https://github.com/sayanta01/PapirusFlatMix ~/.local/share/icons/Papir
 sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
+sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
 sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-joypixels ttf-font-awesome \
 	noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \

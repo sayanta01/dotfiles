@@ -34,6 +34,7 @@ git clone https://github.com/sayanta01/PapirusFlatMix ~/.local/share/icons/Papir
 sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/PapirusFlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
+sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
 yes | curl -sS https://starship.rs/install.sh | sh
 
