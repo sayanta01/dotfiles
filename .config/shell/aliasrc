@@ -15,7 +15,7 @@
 alias install="sudo pacman -Sy"
 alias update="sudo pacman -Syyu && echo '############### ⬆️AUR ###############'; paru -Sua"
 alias remove="sudo pacman -Rns"
-alias clean='sudo pacman -Rns "$(pacman -Qtdq)"; sudo pacman -Sc --noconfirm; echo "############### 🚮cleaning Paru cache ###############"; rm -rf ~/.cache/paru'
+alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo "############### 🚮cleaning Paru cache ###############"; rm -rf ~/.cache/paru'
 alias unlock="sudo rm /var/lib/pacman/db.lck" # remove pacman lock
 alias installed="grep -i installed /var/log/pacman.log"
 
