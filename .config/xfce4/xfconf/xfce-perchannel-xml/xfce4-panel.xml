@@ -35,6 +35,8 @@
     <property name="plugin-9" type="string" value="pager">
       <property name="miniature-view" type="bool" value="true"/>
       <property name="rows" type="uint" value="1"/>
+      <property name="wrap-workspaces" type="bool" value="false"/>
+      <property name="workspace-scrolling" type="bool" value="false"/>
     </property>
     <property name="plugin-11" type="string" value="tasklist">
       <property name="show-handle" type="bool" value="false"/>
