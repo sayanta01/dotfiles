@@ -49,7 +49,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-joypixels ttf-font-awesom
 	rsync wget curl aria2 yt-dlp transmission-cli jq \
 	intel-ucode virtualbox-guest-utils \
 	xdg-utils xdg-user-dirs xdo xclip xdotool colorpicker wmctrl unclutter
-# socat exfat-utils brightnessctl  - additional tools
+# socat exfat-utils  - additional tools
 
 # use PulseAudio
 # sudo pacman -S pulseaudio pulseaudio-bluetooth pulsemixer
@@ -67,7 +67,7 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia nvtop glmark2
 
 # GUI apps
-sudo pacman -S --noconfirm scrcpy android-tools stress bpytop blueman bluez-utils ntfs-3g \
+sudo pacman -S --noconfirm scrcpy android-file-transfer android-tools stress bpytop blueman bluez-utils ntfs-3g \
 	obs-studio audacity gimp inkscape virtualbox kdeconnect blender telegram-desktop
 # sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 

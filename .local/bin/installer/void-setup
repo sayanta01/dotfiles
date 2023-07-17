@@ -48,7 +48,7 @@ sudo xbps-install -Sy font-awesome \
 	rsync wget curl aria2 yt-dlp transmission jq \
 	intel-ucode virtualbox-ose-guest powershell \
 	xdg-utils xdg-user-dirs xdo xclip xdotool colorpicker wmctrl unclutter
-# socat exfat-utils brightnessctl  - additional tools
+# socat exfat-utils  - additional tools
 
 # use PulseAudio
 # sudo pacman -S pulseaudio pavucontrol pulsemixer

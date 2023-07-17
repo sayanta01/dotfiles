@@ -43,5 +43,5 @@ rot13() {
 	fi
 }
 
-# Aliases
+# Alias
 alias hst="history | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c"
