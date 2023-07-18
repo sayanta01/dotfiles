@@ -82,7 +82,7 @@ sudo xbps-install -Sy betterlockscreen xwinwrap \
 # xbps-src
 git clone https://github.com/void-linux/void-packages ~/.local/share/void-packages
 cd ~/.local/share/void-packages && ./xbps-src binary-bootstrap
-echo XBPS_ALLOW_RESTRICTED=yes > /etc/conf # fix this
+echo XBPS_ALLOW_RESTRICTED=yes > etc/conf
 
 # Google-chrome
 cd ~/.local/share/void-packages && ./xbps-src pkg google-chrome
