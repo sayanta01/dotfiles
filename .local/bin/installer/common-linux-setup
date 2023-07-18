@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # TODO
+# https://goinglinux.com/articles/ToggleTrackpadTouchPad_en.htm
 # choose pipewire or pulseaudio
 # change default browser -> .profile
 # change audiosw sink-name
