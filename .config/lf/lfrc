@@ -44,7 +44,7 @@ cmd open ${{
         text/*|application/json) $EDITOR "$f";;
         *) xdg-open "$f" ;;
     esac
-}
+}}
 
 # Archive bindings
 cmd extract ${{

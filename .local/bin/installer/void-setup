@@ -80,12 +80,12 @@ sudo xbps-install -Sy betterlockscreen xwinwrap \
 	vscode anki simple-mtpfs cava
 
 # xbps-src
-git clone https://github.com/void-linux/void-packages ~/void-packages
-cd ~/void-packages && ./xbps-src binary-bootstrap
-echo XBPS_ALLOW_RESTRICTED=yes >~/void-packages/etc/conf
+git clone https://github.com/void-linux/void-packages ~/.local/share/void-packages
+cd ~/.local/share/void-packages && ./xbps-src binary-bootstrap
+echo XBPS_ALLOW_RESTRICTED=yes > /etc/conf # fix this
 
 # Google-chrome
-cd ~/void-packages && ./xbps-src pkg google-chrome
+cd ~/.local/share/void-packages && ./xbps-src pkg google-chrome
 sudo xbps-install -y --repository=hostdir/binpkgs/nonfree google-chrome
 
 # Picom

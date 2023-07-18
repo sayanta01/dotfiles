@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Package_Name ?"
+echo "Package_Name ?" # add fzf
 read -r name
-cd ~/void-packages && ./xbps-src pkg "$name" # fix this
+cd ~/.local/share/void-packages && ./xbps-src pkg "$name"
 sudo xbps-install -y --repository=/hostdir/binpkgs/nonfree "$name"
