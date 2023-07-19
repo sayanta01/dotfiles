@@ -40,6 +40,12 @@ sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
 # Fix screen tearing for nvidia-settings
 # nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
+# SysRq
+# https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
+# Reboot Even if System Utterly Broken (REISUB)
+echo "1" > /proc/sys/kernel/sysrq
+echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
+
 # Enable TouchPad Tapping for Laptop
 sudo mkdir /etc/X11/xorg.conf.d && sudo touch /etc/X11/xorg.conf.d/30-touchpad.conf
 sudo cat <<EOF | sudo tee /etc/X11/xorg.conf.d/30-touchpad.conf
