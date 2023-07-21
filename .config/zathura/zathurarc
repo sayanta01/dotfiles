@@ -30,7 +30,7 @@ set highlight-active-color      "#ff79c6" # Pink
 set default-bg                  "#181f21" # Background
 set default-fg                  "#dadada" # Foreground
 
-set render-loading              true  --
+set render-loading              true
 set render-loading-fg           "#181f21" # Background --
 set render-loading-bg           "#dadada" # Foreground --
 
