@@ -94,6 +94,7 @@ Server = https://ftp.crifo.org/artix-universe/
 
 sudo pacman -Sy artix-archlinux-support
 # sudo pacman -S artix-keyring  ( fix corrupted pkg "PGP signature" )
+# sudo pacman-key --populate artix
 
 /etc/pacman.conf >> in End
 #### ARCH REPO ####
