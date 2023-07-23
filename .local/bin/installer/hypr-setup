@@ -13,11 +13,12 @@ Type=Application
 EOF
 
 # AUR
-paru -S waybar-hyprland xdg-desktop-portal-hyprland \
+paru -S xdg-desktop-portal-hyprland \
 	hyprprop wlr-randr hyprpicker swaylock-effects \
 	grim slurp swappy swww sddm-git \
-  libsixel waypipe \
-	hyprland-nvidia-git nvidia-dkms libva libva-nvidia-driver-git
+	libsixel waypipe \
+	libva libva-nvidia-driver-git
+# hyprland-nvidia-git nvidia-dkms
 # rofi-lbonn-wayland-git
 # https://github.com/nyyManni/dmenu-wayland
 
@@ -31,7 +32,7 @@ paru -S waybar-hyprland xdg-desktop-portal-hyprland \
 # options nvidia-drm modeset=1
 # EOF
 
-sudo pacman -S --noconfirm file-roller tumbler wlroots polkit-gnome \
+sudo pacman -S --noconfirm hyprland waybar file-roller tumbler wlroots polkit-gnome \
 	qt5-wayland qt6-wayland sddm-runit \
 	wl-clipboard wf-recorder ffmpegthumbs viewnior
 # noise-suppression-for-voice
