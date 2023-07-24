@@ -18,6 +18,7 @@ alias remove="sudo pacman -Rns"
 alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo "############### 🚮cleaning Paru cache ###############"; rm -rf ~/.cache/paru'
 alias unlock="sudo rm /var/lib/pacman/db.lck" # remove pacman lock
 alias installed="grep -i installed /var/log/pacman.log"
+alias big="expac -H M '%m\t%n' | sort -h | nl"
 
 # XBPS
 # alias install="sudo xbps-install -Sv"
@@ -113,6 +114,8 @@ alias psmem="ps axch -o cmd,%mem --sort=-%mem | head"
 alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
 alias mkgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias microcode="grep . /sys/devices/system/cpu/vulnerabilities/*"
+alias userlist="cut -d: -f1 /etc/passwd | sort"
+alias audio="pactl info | grep 'Server Name'"
 
 alias ping="ping -c 7"
 alias ports="netstat -tulanp"
