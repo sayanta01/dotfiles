@@ -29,6 +29,9 @@ cd ~/dl/dmenu && sudo make clean install
 # My nvim config
 git clone https://github.com/sayanta01/nvim ~/.config/nvim
 
+# Tpm
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+
 # Themes
 git clone https://github.com/sayanta01/PapirusFlatMix ~/.local/share/icons/PapirusFlatMix
 sudo cp -r ~/.local/share/icons/PapirusFlatMix/cursors /usr/share/icons/Adwaita
