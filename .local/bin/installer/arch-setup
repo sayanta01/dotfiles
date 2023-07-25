@@ -51,7 +51,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-joypixels ttf-font-awesom
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 	rsync wget curl aria2 yt-dlp transmission-cli jq \
 	intel-ucode virtualbox-guest-utils \
-	xdg-utils xdg-user-dirs xdo xclip xdotool colorpicker wmctrl unclutter
+	xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl unclutter
 # socat exfat-utils  - additional tools
 
 # use PulseAudio
@@ -101,8 +101,8 @@ sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat
 # AUR
 git clone https://aur.archlinux.org/paru.git ~/.config/paru
 cd ~/.config/paru && makepkg -si
-yes | paru -S betterlockscreen xwinwrap-git google-chrome simple-mtpfs ttyper \
-	visual-studio-code-bin picom-ibhagwan-git powershell-bin cava anki-bin
+yes | paru -S betterlockscreen xwinwrap-git colorpicker google-chrome simple-mtpfs \
+	visual-studio-code-bin picom-ibhagwan-git powershell-bin ttyper cava anki-bin
 
 # /etc/pacman.conf              ( uncheck 'ignorepkg' and put pkgname )
 
