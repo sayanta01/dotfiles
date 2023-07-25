@@ -1,5 +1,8 @@
 [Desktop Entry]
 Type=Application
 Name=Text editor
-Exec=/usr/local/bin/st -e nvim %u
+Exec=kitty -e nvim %u
+# Exec=/usr/local/bin/st -e nvim %u
 Icon=nvim
+
+# update-desktop-database ~/.local/share/applications/

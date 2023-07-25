@@ -2,14 +2,15 @@
 image/png=img.desktop;
 image/jpeg=img.desktop;
 image/gif=img.desktop;
-text/x-shellscript=text.desktop;
-text/plain=text.desktop;
 video/x-matroska=video.desktop;
 application/postscript=pdf.desktop;
 application/pdf=org.pwmt.zathura.desktop;
+text/x-shellscript=text.desktop;
+text/plain=text.desktop;
 x-scheme-handler/https=google-chrome.desktop
 x-scheme-handler/http=google-chrome.desktop
 text/html=google-chrome.desktop
+
 # xdg-settings set default-web-browser google-chrome.desktop
 
 [Added Associations]
