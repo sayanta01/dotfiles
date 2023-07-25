@@ -140,6 +140,7 @@ alias tsm="transmission-remote"
 # alias wget="wget --hsts-file=/dev/null"
 alias wget='wget --hsts-file="$HOME/.cache/wget-hsts"'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
+alias nvidia-setting='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
 
 # alias mpv="bsp_swallow mpv"
 alias iv="sxiv"
