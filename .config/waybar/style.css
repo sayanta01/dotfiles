@@ -1,6 +1,6 @@
 * {
   border: none;
-  border-radius: 1;
+  border-radius: 0;
   font-family: 'JetBrainsMono NF';
   font-weight: normal;
   font-size: 16px;
@@ -23,6 +23,7 @@ window#waybar {
 #workspaces button.active {
   color: #414868;
   background: #c0caf5;
+  border-radius: 1;
 }
 
 #workspaces button.focused {
@@ -33,11 +34,13 @@ window#waybar {
 #workspaces button.urgent {
   color: #11111b;
   background: #bd2c40;
+  border-radius: 1;
 }
 
 #workspaces button:hover {
   color: #414868;
   background: #c0caf5;
+  border-radius: 1;
 }
 
 #workspaces,
