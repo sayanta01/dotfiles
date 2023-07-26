@@ -22,7 +22,7 @@ alias big="expac -H M '%m\t%n' | sort -h | nl"
 
 # XBPS
 # alias install="sudo xbps-install -Sv"
-# alias dry-i="sudo xbps-install -Sn"
+# alias dryi="sudo xbps-install -Sn"
 # alias update="sudo xbps-install -Suv"
 # alias remove="sudo xbps-remove -Rv"
 # alias clean="sudo xbps-remove -o; sudo xbps-remove -O"
@@ -109,7 +109,7 @@ alias multitail="multitail --no-repeat -c"
 
 alias ff='fd --type f --hidden --exclude .git | fzf --preview "bat --color=always --style=numbers --line-range=:500 {}" | xargs -r "$EDITOR"'
 alias fonts="magick convert -list font | grep -iE 'font:.*' | fzf"
-alias bigfile="du -hxs * | sort -rh | head"
+alias bigf="du -hxs * | sort -rh | head"
 alias psmem="ps axch -o cmd,%mem --sort=-%mem | head"
 alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
 alias mkgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -142,10 +142,8 @@ alias wget='wget --hsts-file="$HOME/.cache/wget-hsts"'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias nvidia-setting='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
 
-# alias mpv="bsp_swallow mpv"
 alias iv="sxiv"
 alias za="zathura"
-
 alias vim="nvim"
 alias se="sudoedit"
 alias mpc="mpd 2>/dev/null; ncmpcpp"

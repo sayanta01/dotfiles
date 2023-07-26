@@ -1,25 +1,22 @@
+/* shift + del -> del most used */
+
 configuration {
     display-drun: "";
+    display-run: "";
 } 
 
 * {
     font:                           "JetBrainsMono NF 12";
     foreground:                     #A7B5CD;
     background:                     #101216;
-    highlight:	             		    #ffffff;
-    red:                            #973d46;
-    darkred:                        #973d46;
-    blue:                           #517ba5;
-    darkblue:                       #517ba5;
-    yellow:                         #e0ae4a;
-    darkyellow:                     #e0ae4a;
+    highlight:	             		    #F8F8F2;
+    red:                            #973D46;
+    darkred:                        #973D46;
+    blue:                           #517BA5;
+    darkblue:                       #517BA5;
+    yellow:                         #E0AE4A;
+    darkyellow:                     #E0AE4A;
     border:                         #1B1E25;
-    green  :                        #7ca25c;
-    darkgreen:                      #7ca25c;
-    purple:                         #94628a;
-    darkpurple:                     #94628a;
-    cyan:                           #5f9f9e;
-    darkcyan:                       #5f9f9e;
 }
 
 window {
@@ -45,12 +42,12 @@ listview {
     border-color: @separatorcolor;
     spacing:      4px;
     scrollbar:    false;
-    padding:      0px 0px 0px 0px;
+    padding:      0px 8px 8px;
 }
 
 element {
-    border:       0px;
-    padding:      9px; 
+    border:       0;
+    padding:      8px; 
 }
 
 element normal.normal {
@@ -70,8 +67,8 @@ element normal.active {
 
 element selected.normal {
     background-color: @blue;
-    border-radius:    0px;
     text-color:       @background;
+    border-radius:    2px;
 }
 
 element selected.urgent {
@@ -106,29 +103,29 @@ element-text {
 }
 
 element-icon {
-    size:             1.0000em;
+    size:             1.0em;
     cursor:           inherit;
     text-color:       inherit;
 }
 
 entry {
-    spacing:           0px;
+    spacing:           0;
     padding:	         8px;
-    text-color:        #f8f8f2;
+    text-color:        #F8F8F2;
     placeholder:       "";
     placeholder-color: @foreground;
 }
 
 prompt {
-    padding: 0px 2px 0px 0px ;
+    padding: 0px 0px ;
     text-color: @foreground;
 }
 
 inputbar {
-    background-color: #282a36;
+    background-color: #282A36;
     margin:           0px 0px 0px 0px;
-    border:           0px;
-    border-radius:    0px;
+    border:           8px;
+    border-radius:    6px;
     border-color:     @background;
-    children:         [prompt,entry];
+    children:         [entry];
 }
