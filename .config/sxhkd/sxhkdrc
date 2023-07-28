@@ -22,16 +22,16 @@ XF86AudioMute
          # amixer set Master toggle
          # pactl set-sink-mute @DEFAULT_SINK@ toggle
 
+# mic control
+XF86AudioMicMute
+            pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
 # media player control 
 XF86Audio{Prev,Next}
          playerctl {previous,next}
 
 XF86AudioPlay 
          playerctl play-pause
-
-# mic control
-XF86AudioMicMute         
-            pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # switch layout
 # super + n
@@ -46,14 +46,6 @@ super + u
 # hide all windows
 super + d
         while bspc node any.hidden.window -g hidden=off; do false; done && while bspc node 'any.!hidden.window' -g hidden=on; do :; done
-
-# notion
-super + alt + m
-              xdg-open http://notion.new
-	      
-# notes
-super + alt + n
-              xdg-open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ
 
 # pywal
 super + alt + o
@@ -135,8 +127,7 @@ alt + Print
 	                           
 # chrome
 alt + b
-      google-chrome-stable
-      # $BROWSER
+      $BROWSER
         
 # rofi
 alt + 0

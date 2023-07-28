@@ -43,5 +43,4 @@ rot13() {
 alias hst="history | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c"
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[[ -s "$XDG_CONFIG_HOME/sdkman/bin/sdkman-init.sh" ]] && source "$XDG_CONFIG_HOME/sdkman/bin/sdkman-init.sh"
