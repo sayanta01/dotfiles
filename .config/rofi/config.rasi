@@ -1,8 +1,11 @@
 /* shift + del -> del most used */
 
 configuration {
-    display-drun: "";
-    display-run: "";
+    sidebar-mode: true;
+    modi: "drun,run";
+    display-drun: "Apps";
+    drun-display-format: "{icon} {name}";
+    display-run: "Cmds";
 } 
 
 * {
@@ -16,7 +19,14 @@ configuration {
     darkblue:                       #517BA5;
     yellow:                         #E0AE4A;
     darkyellow:                     #E0AE4A;
+    separatorcolor:                 #A7B5CD;
     border:                         #1B1E25;
+    bg-col-light:                   #689d69;
+    tab:                            #689d6a;
+    tab-selected:                   #1d2021;
+    blank:                          #1f2223;
+    blank-underline:                #191c1d;
+    button-underline:               #518554;
 }
 
 window {
@@ -36,7 +46,7 @@ textbox {
 }
 
 listview {
-    lines:	      8;
+    lines:	      6;
     columns:      1;
     border:       0px 0px 0px 0px;
     border-color: @separatorcolor;
@@ -53,16 +63,19 @@ element {
 element normal.normal {
     background-color: @background;
     text-color:       @foreground;
+    border-radius:    2px;
 }
 
 element normal.urgent {
     background-color: @red;
     text-color:       @background;
+    border-radius:    2px;
 }
 
 element normal.active {
-    background-color: @border;
+    background-color: @foreground;
     text-color:       @background;
+    border-radius:    2px;
 }
 
 element selected.normal {
@@ -74,26 +87,31 @@ element selected.normal {
 element selected.urgent {
     background-color: @red;
     text-color:       @background;
+    border-radius:    2px;
 }
 
 element selected.active {
     background-color: @yellow;
     text-color:       @background;
+    border-radius:    2px;
 }
 
 element alternate.normal {
     background-color: @background;
     text-color:       @foreground;
+    border-radius:    2px;
 }
 
 element alternate.urgent {
     background-color: @border;
     text-color:       @background;
+    border-radius:    2px;
 }
 
 element alternate.active {
     background-color: @border;
     text-color:       @background;
+    border-radius:    2px;
 }
 
 element-text {
@@ -114,6 +132,26 @@ entry {
     text-color:        #F8F8F2;
     placeholder:       "";
     placeholder-color: @foreground;
+}
+
+button {
+    padding: 4px;
+    margin: 0px 8px 5px 8px;
+    background-color: @blank;
+    text-color: @tab;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+    border-radius: 4px;
+    border: 0px 0px 2px 0px;
+    border-color: @blank-underline;
+}
+
+button selected {
+    background-color: @bg-col-light;
+    text-color: @tab-selected;
+    border-radius: 2px;
+    border: 0px 0px 2px 0px;
+    border-color: @button-underline;
 }
 
 prompt {
