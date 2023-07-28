@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Function to adjust the gaps by the given value
+adjust_gaps() {
+	current_gaps=$(cat gaps.txt)
+	new_gaps=$((current_gaps + $1))
+	echo "$new_gaps" >gaps.txt
+
+	hyprctl --batch "keyword general:gaps_in $new_gaps; \
+                  keyword general:gaps_out $new_gaps; \
+                  keyword general:gaps_in $new_gaps; \
+                  keyword general:gaps_out $new_gaps"
+}
+
+# Check if an argument is provided to the script
+if [ $# -ne 1 ]; then
+	echo "Usage: $0 <increase|decrease>"
+	exit 1
+fi
+
+# Create the gaps.txt file if it doesn't exist and initialize it with 0
+if [ ! -e "gaps.txt" ]; then
+	echo "0" >gaps.txt
+fi
+
+# Determine whether to increase or decrease based on the argument
+case "$1" in
+"increase")
+	adjust_gaps 8
+	echo "Gaps increased by 8"
+	;;
+"decrease")
+	adjust_gaps -8
+	echo "Gaps decreased by 8"
+	;;
+*)
+	echo "Invalid option Use 'increase' or 'decrease'"
+	exit 1
+	;;
+esac
