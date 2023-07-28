@@ -54,8 +54,6 @@
       <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r"/>
       <property name="&lt;Alt&gt;Print" type="string" value="xfce4-screenshooter -w"/>
       <property name="&lt;Alt&gt;F7" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"/>
-      <property name="&lt;Alt&gt;&lt;Super&gt;n" type="string" value="xdg-open https://keep.google.com/u/0/#NOTE/1e8tKlz_U77x96yHP9ECxwG31tHNnsfkS_1vWFsBs9pfLXNhmoBhe8ROdLAC0eQ"/>
-      <property name="&lt;Alt&gt;&lt;Super&gt;m" type="string" value="xdg-open http://notion.new"/>
       <property name="&lt;Alt&gt;0" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="betterlockscreen -l blur"/>
       <property name="&lt;Alt&gt;F5" type="string" value="./.local/bin/audiosw"/>

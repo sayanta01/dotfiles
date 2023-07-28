@@ -1,6 +1,10 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
+[/home/bot/desk/live-wall.gif]
+row=0
+col=0
+
 [/home/bot/desk/repo]
 row=2
 col=0
