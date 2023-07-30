@@ -2,9 +2,9 @@
 
 # Function to adjust the gaps by the given value
 adjust_gaps() {
-	current_gaps=$(cat gaps.txt)
+	current_gaps=$(cat "$CACHE_DIR/gaps.txt")
 	new_gaps=$((current_gaps + $1))
-	echo "$new_gaps" >gaps.txt
+	echo "$new_gaps" >"$CACHE_DIR/gaps.txt"
 
 	hyprctl --batch "keyword general:gaps_in $new_gaps; \
                   keyword general:gaps_out $new_gaps; \
@@ -18,9 +18,12 @@ if [ $# -ne 1 ]; then
 	exit 1
 fi
 
+# Set the cache directory
+CACHE_DIR="$HOME/.cache"
+
 # Create the gaps.txt file if it doesn't exist and initialize it with 0
-if [ ! -e "gaps.txt" ]; then
-	echo "0" >gaps.txt
+if [ ! -e "$CACHE_DIR/gaps.txt" ]; then
+	echo "0" >"$CACHE_DIR/gaps.txt"
 fi
 
 # Determine whether to increase or decrease based on the argument
@@ -34,7 +37,7 @@ case "$1" in
 	echo "Gaps decreased by 8"
 	;;
 *)
-	echo "Invalid option Use 'increase' or 'decrease'"
+	echo "Invalid option. Use 'increase' or 'decrease'."
 	exit 1
 	;;
 esac
