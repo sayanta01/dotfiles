@@ -7,5 +7,3 @@ if [ "$session_type" = "x11" ]; then
 elif [ "$session_type" = "wayland" ]; then
   dmenu -i -l 40 < /tmp/tmpclip.txt | tr -d '\n' | wl-copy
 fi
-
-

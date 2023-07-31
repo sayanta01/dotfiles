@@ -1,6 +1,0 @@
-#!/bin/bash
-
-dir="${HOME}/.local/share/walls"
-monitor="$(xrandr --query | grep " connected" | cut -d" " -f1)"
-RANDFILE=$(find "$dir" -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" -o -name "*.webp" | shuf -n1)
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor"$monitor"/workspace0/last-image -s "${RANDFILE}"

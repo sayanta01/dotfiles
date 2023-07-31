@@ -88,6 +88,7 @@
       <property name="enable-multimedia-keys" type="bool" value="false"/>
       <property name="enable-mpris" type="bool" value="false"/>
       <property name="blacklisted-players" type="string" value=""/>
+      <property name="known-players" type="string" value="Spotify"/>
     </property>
     <property name="plugin-22" type="string" value="actions">
       <property name="appearance" type="uint" value="0"/>

@@ -1,4 +1,12 @@
 #!/bin/sh
 
-emoji="$(dmenu -p "Sel Emoji " -l 20 < "$HOME/.local/share/vocab" | cut -d' ' -f1)"
-echo "$emoji" | tr "\n" " " | xclip -sel c
+session_type="$XDG_SESSION_TYPE"
+
+if [ "$session_type" = "x11" ]; then
+	emoji="$(dmenu -p "Sel Emoji " -l 20 < "$HOME/.local/share/emoji" | cut -d' ' -f1)"
+	echo "$emoji" | tr "\n" " " | xclip -sel c
+
+elif [ "$session_type" = "wayland" ]; then
+	emoji="$(dmenu -p "Sel Emoji " -l 20 < "$HOME/.local/share/emoji" | cut -d' ' -f1)"
+	echo "$emoji" | tr "\n" " " | wl-copy
+fi

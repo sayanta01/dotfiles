@@ -69,7 +69,7 @@
       <property name="&lt;Alt&gt;F3" type="string" value="pamixer -i 5"/>
       <property name="&lt;Alt&gt;F2" type="string" value="pamixer -d 5"/>
       <property name="&lt;Super&gt;u" type="string" value="./.local/bin/xfce/toggle-xfce-panel"/>
-      <property name="&lt;Alt&gt;&lt;Super&gt;p" type="string" value="./.local/bin/xfce/xfce-wallch"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;p" type="string" value="./.local/bin/wallch"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

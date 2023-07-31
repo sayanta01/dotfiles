@@ -1,20 +1,21 @@
 #!/bin/sh
 
-choice=$(printf "eth\nup\ndown\nconnect" | dmenu -p ">_ ")
+choice=$(printf "eth\nup\ndown\nnew_connection" | dmenu -p ">_ ")
 case $choice in
-"connect")
-	bssid=$(nmcli device wifi list | sed -n '1!p' | cut -b 9- | dmenu -p "Select Wifi  " -l 20 | cut -d' ' -f1)
-	pass=$(echo "" | dmenu -p "Enter Pswd  ")
+"new_connection")
+	bssid=$(nmcli device wifi list | sed -n '1!p' | cut -b 9- | dmenu -p "Select  " -l 20 | cut -d' ' -f1)
+	pass=$(echo "" | dmenu -p "Enter Pswd  ")
 	nmcli device wifi "$choice" "$bssid" password "$pass"
 	;;
 "up" | "down")
-	ssid=$(nmcli device wifi list | sed -n '1!p' | cut -b 9- | dmenu -p "Select Wifi  " -l 20 | cut -d' ' -f3)
+	ssid=$(nmcli device wifi list | sed -n '1!p' | cut -b 9- | dmenu -p "Select  " -l 20 | cut -d' ' -f3)
 	nmcli c "$choice" "$ssid"
 	;;
 "eth")
 	nmcli d connect wlan0 && nmcli d disconnect wlan0 && nmcli d connect eth0
 	;;
 esac
+
 wifistatus=$(nmcli d | grep wlan0 | cut -d ' ' -f10)
 case $wifistatus in
 "connected")
