@@ -5,39 +5,6 @@ set icons true
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 
-# Custom Functions
-# Set wallpaper
-cmd setwallpaper %cp "$f" ~/.config/wallpaper.jpg && xwallpaper --zoom "$f"
-
-# Cmds/Functions - lukes
-# cmd open ${{
-#     case $(file --mime-type "$(readlink -f $f)" -b) in
-#    	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
-# 	  image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
-#     text/*|application/json|inode/x-empty) $EDITOR $fx;;
-#    	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
-#   	image/svg+xml) display -- $f ;;
-#   	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" |
-# 		setsid -f sxiv -aio 2>/dev/null | while read -r file; do
-# 			[ -z "$file" ] && continue
-# 			lf -remote "send select \"$file\""
-# 			lf -remote "send toggle"
-# 		done &
-# 		;;
-# 	audio/*) mpv --audio-display=no $f ;;
-# 	video/*|application/vnd.rn-realmedia) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
-# 	application/pdf|application/vnd.djvu|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
-# 	application/pgp-encrypted) $EDITOR $fx ;;
-# 	application/vnd.openxmlformats-officedocument.wordprocessingml.document|application/vnd.oasis.opendocument.text) setsid -f lowriter $fx >/dev/null 2>&1 ;;
-# 	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|application/octet-stream|application/vnd.oasis.opendocument.spreadsheet|application/vnd.oasis.opendocument.spreadsheet-template) setsid -f localc $fx >/dev/null 2>&1 ;;
-# 	application/vnd.openxmlformats-officedocument.presentationml.presentation|application/vnd.oasis.opendocument.presentation-template|application/vnd.oasis.opendocument.presentation|application/vnd.ms-powerpoint) setsid -f loimpress $fx >/dev/null 2>&1 ;;
-# 	application/vnd.oasis.opendocument.graphics|application/vnd.oasis.opendocument.graphics-template) setsid -f lodraw $fx >/dev/null 2>&1 ;;
-# 	application/vnd.oasis.opendocument.formula) setsid -f lomath $fx >/dev/null 2>&1 ;;
-# 	application/vnd.oasis.opendocument.database) setsid -f lobase $fx >/dev/null 2>&1 ;;
-#         *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
-#     esac
-# }}
-
 # Cmds/Functions
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
@@ -55,11 +22,6 @@ cmd extract ${{
       *.tar) tar -xvf "$f" ;;
       *) echo "Unsupported format" ;;
   esac
-}}
-
-# Execute exe
-cmd execute ${{
-	wine "$f"
 }}
 
 # Move to Trash
@@ -131,6 +93,27 @@ cmd chmod ${{
   lf -remote 'send reload'
 }}
 
+cmd bulkrename ${{
+    tmpfile_old="$(mktemp)"
+    tmpfile_new="$(mktemp)"
+
+    [ -n "$fs" ] && fs=$(basename -a $fs) || fs=$(ls)
+
+    echo "$fs" > "$tmpfile_old"
+    echo "$fs" > "$tmpfile_new"
+    $EDITOR "$tmpfile_new"
+
+    [ "$(wc -l < "$tmpfile_old")" -eq "$(wc -l < "$tmpfile_new")" ] || { rm -f "$tmpfile_old" "$tmpfile_new"; exit 1; }
+
+    paste "$tmpfile_old" "$tmpfile_new" | while IFS="$(printf '\t')" read -r src dst
+    do
+        [ "$src" = "$dst" ] || [ -e "$dst" ] || mv -- "$src" "$dst"
+    done
+
+    rm -f "$tmpfile_old" "$tmpfile_new"
+    lf -remote "send $id unselect"
+}}
+
 # Bindings
 # Remove some defaults
 map m
@@ -143,7 +126,7 @@ map "'"
 # Basic Functions
 map . set hidden!
 map E extract
-map ae execute
+map ae $bash "$f"
 map dd trash
 map DD delete
 map dr restore_trash
@@ -155,15 +138,15 @@ map p paste
 map r rename
 map M moveto
 map C copyto
-map L clear
 map R reload
 map U unselect
-map sp chmod
+map L clear
 
-map c $code "$f"
-map nv $nvim "$f"
+map sp chmod
+map B bulkrename
 map <enter> open
-map bg setwallpaper
+# map c $code "$f"
+# map nv $nvim "$f"
 
 # Movement
 map gd cd ~/dl

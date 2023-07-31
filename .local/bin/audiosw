@@ -1,50 +1,79 @@
 #!/bin/sh
 
-monitor="alsa_output.pci-0000_01_00.1.hdmi-stereo"
-mivi="bluez_sink.BB_8C_CF_C8_C1_04.a2dp_sink"
-dizo="bluez_sink.B4_9A_95_94_9B_CC.a2dp_sink"
-
-# get the current default audio sink and source
-curr_device=$(pactl info | grep "Default Sink" | awk '{print $3}')
-# curr_source=$(pactl info | grep "Default Source" | awk '{print $3}' | sed 's/\.monitor//g')
-
-# function to set the default audio sink and source
-set_audio_device() {
-	(
-		pactl set-default-sink "$1"
-		pactl set-default-source "$1.monitor"
-	)
+get_all_sinks() {
+	pactl list short sinks | cut -f 2
 }
 
-# function to check if a device is available
-is_device_available() {
-	available_devices=$(pactl list sinks short | awk '{print $2}')
-	case "$available_devices" in
-	*"$1"*) return 0 ;;
-	*) return 1 ;;
-	esac
+get_default_sink() {
+	pactl info | grep 'Default Sink' | cut -d':' -f 2
 }
 
-# switch between devices
-if [ "$curr_device" = "$monitor" ]; then
-	# if the current device is the monitor, switch to mivi if available, otherwise switch to dizo
-	if is_device_available "$mivi"; then
-		set_audio_device "$mivi"
-	else
-		set_audio_device "$dizo"
+DEF_SINK=$(get_default_sink)
+for SINK in $(get_all_sinks); do
+	[ -z "$FIRST" ] && FIRST=$SINK # Save the first index in case the current default is the last in the list
+	# get_default_sink currently returns the index with a leading space
+	if [ " $SINK" = "$DEF_SINK" ]; then
+		NEXT=1
+	# Subsequent pass, don't need continue above
+	elif [ -n "$NEXT" ]; then
+		NEW_DEFAULT_SINK=$SINK
+		break
 	fi
-elif [ "$curr_device" = "$mivi" ]; then
-	# if the current device is mivi, switch to dizo if available, otherwise switch to monitor
-	if is_device_available "$dizo"; then
-		set_audio_device "$dizo"
-	else
-		set_audio_device "$monitor"
-	fi
-else
-	# if the current device is dizo or any other device, switch to monitor if available, otherwise switch to mivi
-	if is_device_available "$monitor"; then
-		set_audio_device "$monitor"
-	else
-		set_audio_device "$mivi"
-	fi
-fi
+done
+
+# Don't particularly like this method of making it circular, but...
+[ -z "$NEW_DEFAULT_SINK" ] && NEW_DEFAULT_SINK=$FIRST
+
+# Set default sink for new audio playback
+pactl set-default-sink "$NEW_DEFAULT_SINK"
+
+# ---------- ---------- ---------- ---------- ----------
+
+# monitor="alsa_output.pci-0000_01_00.1.hdmi-stereo"
+# mivi="bluez_sink.BB_8C_CF_C8_C1_04.a2dp_sink"
+# dizo="bluez_sink.B4_9A_95_94_9B_CC.a2dp_sink"
+#
+# # get the current default audio sink and source
+# curr_device=$(pactl info | grep "Default Sink" | awk '{print $3}')
+# # curr_source=$(pactl info | grep "Default Source" | awk '{print $3}' | sed 's/\.monitor//g')
+#
+# # function to set the default audio sink and source
+# set_audio_device() {
+# 	(
+# 		pactl set-default-sink "$1"
+# 		pactl set-default-source "$1.monitor"
+# 	)
+# }
+#
+# # function to check if a device is available
+# is_device_available() {
+# 	available_devices=$(pactl list sinks short | awk '{print $2}')
+# 	case "$available_devices" in
+# 	*"$1"*) return 0 ;;
+# 	*) return 1 ;;
+# 	esac
+# }
+#
+# # switch between devices
+# if [ "$curr_device" = "$monitor" ]; then
+# 	# if the current device is the monitor, switch to mivi if available, otherwise switch to dizo
+# 	if is_device_available "$mivi"; then
+# 		set_audio_device "$mivi"
+# 	else
+# 		set_audio_device "$dizo"
+# 	fi
+# elif [ "$curr_device" = "$mivi" ]; then
+# 	# if the current device is mivi, switch to dizo if available, otherwise switch to monitor
+# 	if is_device_available "$dizo"; then
+# 		set_audio_device "$dizo"
+# 	else
+# 		set_audio_device "$monitor"
+# 	fi
+# else
+# 	# if the current device is dizo or any other device, switch to monitor if available, otherwise switch to mivi
+# 	if is_device_available "$monitor"; then
+# 		set_audio_device "$monitor"
+# 	else
+# 		set_audio_device "$mivi"
+# 	fi
+# fi

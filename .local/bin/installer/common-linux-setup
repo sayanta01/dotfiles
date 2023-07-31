@@ -4,7 +4,6 @@
 # https://goinglinux.com/articles/ToggleTrackpadTouchPad_en.htm
 # choose pipewire or pulseaudio
 # change default browser -> .profile
-# change audiosw sink-name
 # chnage record audio-output
 # change sys-status check-updates according to ur pkg-manager
 # ucmnt alias for ur pkg-manager
