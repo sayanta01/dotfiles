@@ -1,3 +1,0 @@
-#!/bin/sh
-
-printf '%s\n' "$(wl-paste -n)" >> /tmp/tmpclip.txt

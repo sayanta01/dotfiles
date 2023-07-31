@@ -1,3 +1,0 @@
-#!/bin/sh
-
-dmenu -i -l 40 < /tmp/tmpclip.txt | tr -d '\n' | wl-copy
