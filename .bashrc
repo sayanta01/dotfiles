@@ -39,8 +39,15 @@ rot13() {
 	fi
 }
 
-# Alias
-alias hst="history | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c"
+function hst() {
+	session_type="$XDG_SESSION_TYPE"
+
+	if [ "$session_type" = "x11" ]; then
+		history | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
+	elif [ "$session_type" = "wayland" ]; then
+		history | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
+	fi
+}
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "$HOME/.config/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.config/sdkman/bin/sdkman-init.sh"

@@ -104,5 +104,12 @@ PROMPT=' %b%{$fg[red]%}❯${vcs_info_msg_0_}%  '
 #PROMPT=' %b%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[white]%}  %{$fg[red]%})%{$fg[white]%} ${vcs_info_msg_0_} ~%  '
 # %b  %{$fg[red]%}(  %{$fg[yellow]%}%n  %{$fg[green]%}@  %{$fg[magenta]%}%M   %{$fg[white]%}   %{$fg[red]%})  %{$fg[white]%}
  
-#### ALIAS #### 
-alias hst="history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c"
+function hst() {
+    session_type="$XDG_SESSION_TYPE"
+
+    if [ "$session_type" = "x11" ]; then
+        history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
+    elif [ "$session_type" = "wayland" ]; then
+        history 0 | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
+    fi
+}
