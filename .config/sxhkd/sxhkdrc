@@ -160,7 +160,7 @@ ctrl + alt + k
 
 # screenlock
 ctrl + alt + l
-             betterlockscreen -l blur
+             ~/.local/bin/lockscreen
 	     
 # kill ps
 ctrl + alt + Delete
