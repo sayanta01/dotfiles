@@ -4,11 +4,11 @@
 
 cp -r ~/dotfiles/.config/{hypr,waybar,swaylock,xsettingsd,nwg-look} ~/.config
 
-sudo cat <<EOF | sudo tee /usr/share/xsessions/hyprland.desktop
+sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop
 [Desktop Entry]
 Name=Hyprland
 Comment=An intelligent dynamic tiling Wayland compositor
-Exec=Hyprland
+Exec=dbus-launch Hyprland
 Type=Application
 EOF
 
