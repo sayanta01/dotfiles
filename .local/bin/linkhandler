@@ -1,19 +1,28 @@
 #!/bin/sh
 
-# Feed script a url or file location.
-# If an image, it will view in sxiv,
+# feed script a url or file location
+# if an image, it will view in sxiv,
 # if a video or gif, it will view in mpv
 # if a music file or pdf, it will download,
 # otherwise it opens link in browser.
 
+# check session type and select appropriate clipboard tool
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+	clipboard_tool="wl-paste -n"
+else
+	clipboard_tool="xclip -o"
+fi
+
+# get URL or file location from clipboard or argument
 if [ -z "$1" ]; then
-	url="$(xclip -o)"
+	url="$($clipboard_tool)"
 else
 	url="$1"
 fi
 
+# determine action based on content type
 case "$url" in
-*mkv | *webm | *mp4 | *youtube.com/watch* | *youtube.com/playlist* | *youtube.com/shorts* | *youtu.be* | *hooktube.com* | *bitchute.com* | *videos.lukesmith.xyz* | *odysee.com*)
+*mkv | *webm | *mp4 | *youtube.com/watch* | *youtube.com/playlist* | *youtube.com/shorts* | *youtu.be* | *hooktube.com* | *bitchute.com* | *odysee.com*)
 	setsid -f mpv -quiet "$url" >/dev/null 2>&1
 	;;
 *png | *jpg | *jpe | *jpeg | *gif)

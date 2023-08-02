@@ -51,7 +51,8 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-joypixels ttf-font-awesom
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 	rsync wget curl aria2 yt-dlp transmission-cli jq \
 	intel-ucode virtualbox-guest-utils \
-	xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl unclutter
+	xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl \
+  gvfs-mtp gvfs-gphoto2 unclutter
 # socat exfat-utils  - additional tools
 
 # use PulseAudio
