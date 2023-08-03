@@ -52,8 +52,7 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-joypixels ttf-font-awesom
 	rsync wget curl aria2 yt-dlp transmission-cli jq \
 	intel-ucode virtualbox-guest-utils \
 	xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl \
-  gvfs-mtp gvfs-gphoto2 unclutter
-# socat exfat-utils  - additional tools
+  gvfs-mtp gvfs-gphoto2 unclutter socat exfat-utils
 
 # use PulseAudio
 # sudo pacman -S pulseaudio pulseaudio-bluetooth
@@ -76,13 +75,14 @@ sudo pacman -S --noconfirm scrcpy android-file-transfer android-tools stress bpy
 # sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 
 # Services
-sudo pacman -S --noconfirm cronie-runit docker-runit openssh-runit libvirt-runit bluez-runit
+sudo pacman -S --noconfirm cronie-runit docker-runit openssh-runit libvirt-runit bluez-runit dbus-runit
 # sudo pacman -S --noconfirm cronie docker openssh libvirt bluez ( arch )
-# sudo ln -s /etc/runit/sv/cronie /run/runit/service  ( artix )
-# sudo ln -s /run/runit/sv/docker /run/runit/service  ( artix )
-# sudo touch /run/runit/service/docker/down           ( artix )
-# sudo ln -s /etc/runit/sv/sshd /run/runit/service  ( artix )
-# sudo touch /run/runit/service/sshd/down           ( artix )
+sudo ln -s /etc/runit/sv/dbus /run/runit/service
+sudo ln -s /etc/runit/sv/cronie /run/runit/service
+sudo ln -s /run/runit/sv/docker /run/runit/service
+sudo touch /run/runit/service/docker/down
+sudo ln -s /etc/runit/sv/sshd /run/runit/service
+sudo touch /run/runit/service/sshd/down
 
 # VM
 # sudo usermod -aG vboxusers $USER  # enable USB usage for Virtual-Box
