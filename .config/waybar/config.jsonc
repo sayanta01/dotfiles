@@ -48,7 +48,7 @@
   },
   "tray": {
     "icon-size": 18,
-    "spacing": 10
+    "spacing": 6
   },
   "custom/nettraf": {
     "tooltip": false,
