@@ -4,14 +4,6 @@
 
 cp -r ~/dotfiles/.config/{hypr,waybar,swaylock,xsettingsd,nwg-look} ~/.config
 
-sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop
-[Desktop Entry]
-Name=Hyprland
-Comment=An intelligent dynamic tiling Wayland compositor
-Exec=dbus-launch Hyprland
-Type=Application
-EOF
-
 # AUR
 paru -S xdg-desktop-portal-hyprland \
 	hyprprop wlr-randr hyprpicker swaylock-effects \
@@ -38,6 +30,14 @@ sudo pacman -S --noconfirm hyprland waybar file-roller tumbler wlroots polkit-gn
 # noise-suppression-for-voice
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
 # user input simulating tool - ydotool wtype
+
+sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop
+[Desktop Entry]
+Name=Hyprland
+Comment=An intelligent dynamic tiling Wayland compositor
+Exec=dbus-launch Hyprland
+Type=Application
+EOF
 
 # sudo cat <<EOF | sudo tee /etc/sddm.conf.d/10-theme.conf
 # [Theme]
