@@ -73,7 +73,7 @@ askrecording() {
 }
 
 asktoend() {
-	response=$(printf "No\\nYes" | dmenu -p "Recording still active. End recording?") &&
+	response=$(printf "No\\nYes" | dmenu -p "Recording still active, End recording?") &&
 		[ "$response" = "Yes" ] && killrecording
 }
 
