@@ -3,7 +3,7 @@
 
 include "~/.gtkrc-2.0.mine"
 gtk-theme-name="Sweet-Dark-v40"
-gtk-icon-theme-name="PapirusFlatMix"
+gtk-icon-theme-name="Papirus-FlatMix"
 gtk-font-name="SF Pro Text Bold 11"
 gtk-cursor-theme-name="elementary"
 gtk-cursor-theme-size=0
