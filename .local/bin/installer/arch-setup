@@ -9,7 +9,7 @@ chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.s
 mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp}
 
 # Maple
-mver="v6.3"
+mver="v6.4"
 wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
 yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
 

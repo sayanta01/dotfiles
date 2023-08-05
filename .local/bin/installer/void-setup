@@ -59,12 +59,12 @@ sudo xbps-install -Sy font-awesome \
 # sudo pacman -S pipewire wireplumber libspa-bluetooth
 
 # Maple
-mver="v6.3"
+mver="v6.4"
 wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
 yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
 
 # JetBrainsMono
-jver="v2.3.3" # https://github.com/ryanoasis/nerd-fonts
+jver="v3.0.2" # https://github.com/ryanoasis/nerd-fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/$jver/JetBrainsMono.zip
 yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
 
