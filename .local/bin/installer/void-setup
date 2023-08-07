@@ -8,20 +8,33 @@ cp -r ~/dotfiles/{.bashrc,.bash_profile,.profile,.zprofile,.xprofile,.xinitrc,.i
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
-
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp}
+
+# Maple-font
+mver="v6.4"
+wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
+yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
+# Nerd-fonts
+latest_nf="v3.0.2"
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/CascadiaCode.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/JetBrainsMono.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/Cousine.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/FiraCode.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+fc-cache -f -v
 
 # Suckless
 sudo xbps-install -Sy libXft-devel harfbuzz-devel libXinerama-devel
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
-
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
 # My nvim config
 git clone https://github.com/sayanta01/nvim ~/.config/nvim
-
 # Tpm
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
@@ -33,14 +46,14 @@ sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
 sudo xbps-install -Sy font-awesome \
-	noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk fonts-roboto-ttf terminus-font \
+	noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk terminus-font \
 	exa bat tldr fd ripgrep procs duf dust man fzf bash-completion starship zoxide \
 	mate-calc firefox qutebrowser meld \
 	linux-headers kitty newsboat trash-cli neovim \
-	neofetch htop cowsay libconfig gnome-keyring \
-	bspwm polybar sxhkd rofi dunst libnotify \
+	neofetch htop cowsay gnome-keyring \
+	bspwm polybar sxhkd rofi dunst picom \
 	qt5ct qt6ct kvantum lxappearance xcape \
-	playerctl pamixer pulsemixer pavucontrol mpd ncmpcpp python3-dbus \
+	playerctl pulsemixer pavucontrol mpd ncmpcpp python3-dbus \
 	dialog cmake wmname imwheel pass \
 	wireless_tools net-tools network-manager-applet bind-utils iftop nmap \
 	mpv mediainfo exiftool ffmpegthumbnailer ImageMagick maim sxiv xwallpaper ffmpeg python3-pip pywal \
@@ -51,22 +64,11 @@ sudo xbps-install -Sy font-awesome \
 	rsync wget curl aria2 yt-dlp transmission jq \
 	intel-ucode virtualbox-ose-guest powershell \
 	xdg-utils xdg-user-dirs xdo xclip xdotool colorpicker wmctrl unclutter
-# socat exfat-utils  - additional tools
+# socat exfat-utils libconfig libnotify - additional tools
 
-# use PulseAudio
+# Audio server
+sudo pacman -S pipewire wireplumber libspa-bluetooth
 # sudo pacman -S pulseaudio
-# use PipeWire
-# sudo pacman -S pipewire wireplumber libspa-bluetooth
-
-# Maple
-mver="v6.4"
-wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
-yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
-
-# JetBrainsMono
-jver="v3.0.2" # https://github.com/ryanoasis/nerd-fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$jver/JetBrainsMono.zip
-yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
 
 # Nvidia
 # sudo xbps-install -Sy nvidia nvidia-libs-32bit nvtop glmark2
@@ -80,22 +82,16 @@ sudo xbps-install -Sy qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtp
 # ovmf
 
 sudo xbps-install -Sy betterlockscreen xwinwrap \
-	vscode anki simple-mtpfs cava
+	vscode anki simple-mtpfs anki cava
 
 # xbps-src
 git clone https://github.com/void-linux/void-packages ~/.local/share/void-packages
 cd ~/.local/share/void-packages && ./xbps-src binary-bootstrap
-echo XBPS_ALLOW_RESTRICTED=yes > etc/conf
+echo XBPS_ALLOW_RESTRICTED=yes >etc/conf
 
 # Google-chrome
 cd ~/.local/share/void-packages && ./xbps-src pkg google-chrome
 sudo xbps-install -y --repository=hostdir/binpkgs/nonfree google-chrome
-
-# Picom
-git clone https://github.com/ibhagwan/picom-ibhagwan-template ~/picom-ibhagwan
-mv ~/picom-ibhagwan ~/void-packages/srcpkgs/picom-ibhagwan
-cd ~/void-packages && ./xbps-src pkg picom-ibhagwan
-sudo xbps-install -y --repository=hostdir/binpkgs picom-ibhagwan
 
 # Change Teletype font
 echo 'FONT="ter-d16b"' | sudo tee -a /etc/rc.conf

@@ -5,24 +5,32 @@ cp -r ~/dotfiles/{.bashrc,.bash_profile,.profile,.zprofile,.xprofile,.xinitrc,.i
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
-
 mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp}
 
-# Maple
+# Maple-font
 mver="v6.4"
 wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
 yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
+# Nerd-fonts
+latest_nf="v3.0.2"
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/CascadiaCode.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/JetBrainsMono.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/Cousine.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/FiraCode.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+fc-cache -f -v
 
 # Suckless
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
-
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
 # My nvim config
 git clone https://github.com/sayanta01/nvim ~/.config/nvim
-
 # Tpm
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
@@ -33,15 +41,15 @@ sudo cp -r ~/.local/share/icons/Papirus-FlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
-sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-joypixels ttf-font-awesome \
-	noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-roboto terminus-font \
+sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
+	noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
 	exa bat tldr fd ripgrep procs duf dust man fzf bash-completion starship zoxide \
 	mate-calc firefox qutebrowser meld linux-headers \
 	linux-lts linux-lts-headers kitty newsboat trash-cli neovim \
-	neofetch htop cowsay libconfig gnome-keyring \
-	bspwm polybar sxhkd rofi dunst libnotify \
+	neofetch stress htop cowsay gnome-keyring \
+	bspwm polybar sxhkd rofi dunst picom \
 	qt5ct qt6ct kvantum lxappearance xcape \
-	playerctl pamixer pulsemixer pavucontrol mpd ncmpcpp dbus-python \
+	playerctl pulsemixer pavucontrol mpd ncmpcpp dbus-python \
 	dialog cmake wmname imwheel pass \
 	wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils iftop nmap \
 	mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
@@ -52,25 +60,22 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-joypixels ttf-font-awesom
 	rsync wget curl aria2 yt-dlp transmission-cli jq \
 	intel-ucode virtualbox-guest-utils \
 	xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl \
-  gvfs-mtp gvfs-gphoto2 unclutter socat exfat-utils
+	gvfs-mtp gvfs-gphoto2 unclutter socat exfat-utils libconfig libnotify
 
-# use PulseAudio
+# Audio server
+sudo pacman -S pipewire pipewire-pulse wireplumber
 # sudo pacman -S pulseaudio pulseaudio-bluetooth
-# use PipeWire
-# sudo pacman -S pipewire pipewire-pulse wireplumber
 
 # Display Manager
 sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # lightdm-runit  ( artix )
 # dm-tool switch-to-greeter
-# move a img to /etc/lightdm for lightdm wallpaper
-# echo 'background = /etc/lightdm/bg.jpg' | sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf
 
 # Nvidia
 # sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia nvtop glmark2
 
 # GUI apps
-sudo pacman -S --noconfirm scrcpy android-file-transfer android-tools stress bpytop blueman bluez-utils ntfs-3g \
+sudo pacman -S --noconfirm scrcpy android-file-transfer android-tools blueman bluez-utils ntfs-3g \
 	obs-studio audacity gimp inkscape virtualbox kdeconnect blender telegram-desktop
 # sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 
@@ -103,7 +108,7 @@ sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat
 git clone https://aur.archlinux.org/paru.git ~/.config/paru
 cd ~/.config/paru && makepkg -si
 yes | paru -S betterlockscreen xwinwrap-git colorpicker google-chrome simple-mtpfs \
-	visual-studio-code-bin picom-ibhagwan-git powershell-bin ttyper cava anki-bin
+	visual-studio-code-bin powershell-bin ttyper cava anki-bin
 
 # /etc/pacman.conf              ( uncheck 'ignorepkg' and put pkgname )
 

@@ -5,54 +5,55 @@ cp -r ~/dotfiles/{.bashrc,.bash_profile,.profile,.zprofile,.xprofile,.xinitrc,.i
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
-
 mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp}
 
-# Maple
-mver="v6.3"
+# Maple-font
+mver="v6.4"
 wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
-yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/truetype
-
-# JetBrainsMono
-jver="v2.3.3" # https://github.com/ryanoasis/nerd-fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$jver/JetBrainsMono.zip
-yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/truetype
+yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
+# Nerd-fonts
+latest_nf="v3.0.2"
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/CascadiaCode.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/JetBrainsMono.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/Cousine.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/FiraCode.zip
+yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+fc-cache -f -v
 
 # Suckless
 sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
-
 git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
 # My nvim config
 git clone https://github.com/sayanta01/nvim ~/.config/nvim
-
 # Tpm
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # Themes
-git clone https://github.com/sayanta01/Papirus-FlatMix ~/.local/share/icons/PapirusFlatMix
+git clone https://github.com/sayanta01/Papirus-FlatMix ~/.local/share/icons/Papirus-FlatMix
 sudo cp -r ~/.local/share/icons/Papirus-FlatMix/cursors /usr/share/icons/Adwaita
 sudo cp -r ~/.local/share/icons/Papirus-FlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
-yes | curl -sS https://starship.rs/install.sh | sh
-
-sudo apt install -y fonts-jetbrains-mono fonts-roboto fonts-terminus \
-	bspwm polybar rofi kitty dunst lxappearance maim playerctl pamixer \
+sudo apt install -y fonts-terminus \
+	bspwm polybar rofi kitty dunst lxappearance maim playerctl \
 	ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf zoxide \
 	lf zathura htop qt5-style-kvantum meld \
 	imwheel xclip xdo xwallpaper gpg cowsay xcape betterlockscreen \
 	exiftool aria2 wmname wmctrl neofetch \
 	transmission-daemon trash-cli docker.io iftop aptitude synaptic
-#ncdu apt-transport-https translate-shell stacer
-#sudo systemctl disable docker.socket
+# ncdu apt-transport-https translate-shell stacer
+# sudo systemctl disable docker.socket
+yes | curl -sS https://starship.rs/install.sh | sh
 
-#wget 'https://discord.com/api/download?platform=linux&format=deb' -O ~/dl/discord.deb
-#aria2c -x9 -o vscode.deb -d ~/dl 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
+wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/dl/vscode.deb
 # aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 # cd ~/dl && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
@@ -65,4 +66,5 @@ sudo apt install -y fonts-jetbrains-mono fonts-roboto fonts-terminus \
 # sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 cp ~/.config/zsh/.zshrc ~/
 mv ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
-sudo apt remove --purge xfce4-clipman catfish kali-hidpi-mode onboard xterm cherrytree plymouth
+
+sudo apt remove --purge xfce4-clipman catfish kali-hidpi-mode onboard xterm cherrytree plymouth qterminal
