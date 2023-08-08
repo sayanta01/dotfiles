@@ -59,8 +59,11 @@ sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 	rsync wget curl aria2 yt-dlp transmission-cli jq \
 	intel-ucode virtualbox-guest-utils \
-	xdg-utils xdg-user-dirs xdo xclip xdotool wmctrl \
-	gvfs-mtp gvfs-gphoto2 unclutter socat exfat-utils libconfig libnotify
+	xdg-utils xdg-user-dirs xdo \
+	gvfs-mtp gvfs-gphoto2 unclutter socat exfat-utils \
+	xorg-xinit xclip xdotool wmctrl unclutter
+# libx11 libxrandr libxinerama libxft
+# xorg-server xorg-xrdb xorg-xwininfo xorg-xprop xorg-xrandr xorg-xsetroot xorg-xbacklight
 
 # Audio server
 sudo pacman -S pipewire pipewire-pulse wireplumber
@@ -72,7 +75,7 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # dm-tool switch-to-greeter
 
 # Nvidia
-# sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia nvtop glmark2
+# sudo pacman -S --noconfirm nvidia-dkms nvidia-settings opencl-nvidia nvtop glmark2
 
 # GUI apps
 sudo pacman -S --noconfirm scrcpy android-file-transfer android-tools blueman bluez-utils ntfs-3g \

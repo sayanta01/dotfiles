@@ -64,7 +64,7 @@ sudo xbps-install -Sy font-awesome \
 	rsync wget curl aria2 yt-dlp transmission jq \
 	intel-ucode virtualbox-ose-guest powershell \
 	xdg-utils xdg-user-dirs xdo xclip xdotool colorpicker wmctrl unclutter
-# socat exfat-utils libconfig libnotify - additional tools
+# socat exfat-utils  - additional tools
 
 # Audio server
 sudo pacman -S pipewire wireplumber libspa-bluetooth

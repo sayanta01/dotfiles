@@ -19,7 +19,7 @@ set_nf_name() {
 		awk -v blu="${blu}" -v cyn="${cyn}" -v bld="${bld}" -v rst="${rst}" \
 			-F'/' '
         {
-            print blu bld $9 rst "&& - " cyn $0
+          print blu bld $9 rst "&& - " cyn $0
         }' |
 		sed 's/\.zip//' | column -ts '&&'
 }
