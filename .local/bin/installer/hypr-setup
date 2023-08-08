@@ -39,14 +39,8 @@ Exec=dbus-launch Hyprland
 Type=Application
 EOF
 
-# sudo cat <<EOF | sudo tee /etc/sddm.conf.d/10-theme.conf
+# sudo cat <<EOF | sudo tee /etc/sddm.conf.d/sddm.conf
 # [Theme]
-# Current=sdt
+# Current=elarun
 # Font=MapleMono NF
 # EOF
-
-## sddm-theme config
-# config_file="/usr/share/sddm/themes/sdt/theme.conf"
-# add_font="Font=\"MapleMono NF\""
-# line_number=$(grep -n "Font=" "$config_file" | cut -d':' -f1)
-# sed -i "${line_number}s/.*/$add_font/" "$config_file"
