@@ -29,12 +29,12 @@ fi
 # Determine whether to increase or decrease based on the argument
 case "$1" in
 "increase")
-	adjust_gaps 8
-	echo "Gaps increased by 8"
+	adjust_gaps 4
+	echo "Gaps increased by 4"
 	;;
 "decrease")
-	adjust_gaps -8
-	echo "Gaps decreased by 8"
+	adjust_gaps -4
+	echo "Gaps decreased by 4"
 	;;
 *)
 	echo "Invalid option. Use 'increase' or 'decrease'."
