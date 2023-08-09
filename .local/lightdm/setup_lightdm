@@ -1,6 +1,11 @@
 #!/bin/sh
 
-sudo cp ~/.local/share/walls/cyberpunk-girl.jpg /etc/lightdm
+if [ -d "$HOME/.local/share/walls" ]; then
+	set -- "$HOME/.local/share/walls"/*
+	if [ -e "$1" ]; then
+		sudo cp "$1" "/etc/lightdm/lightdm-wall.jpg" >/dev/null 2>&1
+	fi
+fi
 
 echo '[greeter]
 background = /etc/lightdm/cyberpunk-girl.jpg
