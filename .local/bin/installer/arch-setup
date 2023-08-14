@@ -107,8 +107,8 @@ sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat
 # sudo virsh net-autostart default
 
 # AUR
-git clone https://aur.archlinux.org/paru.git ~/.config/paru
-cd ~/.config/paru && makepkg -si
+git clone https://aur.archlinux.org/paru.git ~/.cache/paru
+cd ~/.config/paru && makepkg -fsri
 yes | paru -S betterlockscreen xwinwrap-git colorpicker google-chrome simple-mtpfs \
 	visual-studio-code-bin powershell-bin ttyper cava anki-bin
 

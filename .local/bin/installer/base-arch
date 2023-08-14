@@ -20,7 +20,7 @@ sda2 root           #give rest of space
 write & quit
 
 ##### formating ######
-mkfs.fat -F32 /dev/sda1
+mkfs.fat -F 32 /dev/sda1
 mkfs.ext4 /dev/sda2
 # mkswap /dev/sda3
 
@@ -32,7 +32,7 @@ mount /dev/sda1 /mnt/boot/efi
 
 ##### install base system #####
 basestrap /mnt base base-devel linux linux-firmware neovim zsh tmux runit elogind-runit  ( artix )
- pacstrap /mnt base base-devel linux linux-firmware neovim zsh tmux  ( arch )
+ pacstrap -K /mnt base base-devel linux linux-firmware neovim zsh tmux  ( arch )
 
 #### generate fstab ####
 fstabgen -U /mnt >> /mnt/etc/fstab  ( artix )
