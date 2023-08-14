@@ -25,7 +25,7 @@ yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/FiraCode.zip
 yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
 fc-cache -f -v
-rm -rf MapleMono-N.zip CascadiaCode.zip JetBrainsMono.zip Cousine.zip FiraCode.zip
+rm -rf MapleMono-NF.zip CascadiaCode.zip JetBrainsMono.zip Cousine.zip FiraCode.zip
 
 # Suckless
 sudo xbps-install -Sy libXft-devel harfbuzz-devel libXinerama-devel
