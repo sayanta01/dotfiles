@@ -113,3 +113,6 @@ function hst() {
         history 0 | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
     fi
 }
+
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+[[ -s "$HOME/.local/share/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.local/share/sdkman/bin/sdkman-init.sh"
