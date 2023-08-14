@@ -69,4 +69,4 @@ yes | curl -sS https://starship.rs/install.sh | sh
 # cp ~/.config/zsh/.zshrc ~/
 mv ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
 
-sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth qterminal kali-hidpi-mode
+# sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth qterminal kali-hidpi-mode
