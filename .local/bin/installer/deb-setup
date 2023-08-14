@@ -42,7 +42,7 @@ sudo cp -r ~/.local/share/icons/Papirus-FlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
-sudo apt install -y apt-transport-https fonts-terminus \
+sudo apt install -y apt-transport-https tmux fonts-terminus \
 	bspwm polybar rofi kitty dunst lxappearance maim playerctl \
 	ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf zoxide \
 	lf zathura htop qt5-style-kvantum meld \
@@ -51,6 +51,7 @@ sudo apt install -y apt-transport-https fonts-terminus \
 	transmission-daemon trash-cli docker.io iftop aptitude synaptic
 # ncdu translate-shell stacer
 # sudo systemctl disable docker.socket
+
 yes | curl -sS https://starship.rs/install.sh | sh
 
 # wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/dl/vscode.deb
@@ -64,7 +65,8 @@ yes | curl -sS https://starship.rs/install.sh | sh
 # sudo systemd-analyze  ( critical-chain )
 # sudo su root -c "echo deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free >> /etc/apt/sources.list"
 # sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
-cp ~/.config/zsh/.zshrc ~/
+
+# cp ~/.config/zsh/.zshrc ~/
 mv ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
 
-# sudo apt remove --purge xfce4-clipman catfish kali-hidpi-mode onboard xterm cherrytree plymouth qterminal
+sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth qterminal kali-hidpi-mode
