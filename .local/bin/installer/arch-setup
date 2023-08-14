@@ -21,7 +21,8 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/Cousin
 yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/FiraCode.zip
 yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-fc-cache -f -v
+fc-cache -fv
+rm -rf MapleMono-N.zip CascadiaCode.zip JetBrainsMono.zip Cousine.zip FiraCode.zip
 
 # Suckless
 git clone https://github.com/LukeSmithxyz/st.git ~/dl/st

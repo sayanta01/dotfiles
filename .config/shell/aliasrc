@@ -114,9 +114,8 @@ alias psmem="ps axch -o cmd,%mem --sort=-%mem | head"
 alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
 alias microcode="grep . /sys/devices/system/cpu/vulnerabilities/*"
 alias userlist="cut -d: -f1 /etc/passwd | sort"
-alias audio="pactl info | grep 'Server Name'"
 
-alias ping="ping -c 7"
+alias ping="ping -c 6"
 alias ports="netstat -tulanp"
 alias copy="rsync --progress -aluvr"
 
@@ -126,7 +125,6 @@ alias free="free -h"
 alias bc="bc -ql"
 alias hw="hwinfo --short"
 alias dmesg="sudo dmesg -T"
-alias upfc='sudo fc-cache -fv'
 alias shred="shred -uvzn3"
 alias bat="bat --theme OneHalfDark"
 alias cat="bat --theme OneHalfDark -p"
