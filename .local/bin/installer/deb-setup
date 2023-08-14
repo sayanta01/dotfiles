@@ -43,6 +43,7 @@ sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
 sudo apt install -y apt-transport-https tmux fonts-terminus \
+	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
 	bspwm polybar rofi kitty dunst lxappearance maim playerctl \
 	ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf zoxide \
 	lf zathura htop qt5-style-kvantum meld \
