@@ -1,11 +1,14 @@
 #!/bin/sh
 
+## wsl --help
+
 # wsl --install
 # wsl --set-default-version 2
 # wsl --status
 # wsl --update
 # wsl --list --online # install distro
-# wsl -l -v
+# wsl -l -v # list distro
+# wsl -t Ubuntu # terminate distro
 
 sudo apt install -y wget curl x11-xserver-utils dbus-x11 xrdp xfce4 xfce4-goodies
 
