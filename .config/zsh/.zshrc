@@ -65,14 +65,14 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 HISTSIZE=2000
 SAVEHIST=2000
 HISTFILE="$XDG_DATA_HOME/history"
-# HISTFILE=~/.zsh_history  # for kali-linux 
+# HISTFILE="$HOME/.zsh_history"  # for kali-linux 
 setopt hist_ignore_space       # ignore commands that start with space
 setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_all_dups    # ignore duplicated commands history list
 setopt hist_verify             # show command with history expansion to user before running it
 
 # Plugins
-# Kali PATH
+# Debian PATH
 #source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 #source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
 #source /etc/zsh_command_not_found 2>/dev/null
@@ -111,6 +111,8 @@ function hst() {
         history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
     elif [ "$session_type" = "wayland" ]; then
         history 0 | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
+    else
+        history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
     fi
 }
 

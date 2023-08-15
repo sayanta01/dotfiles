@@ -15,9 +15,6 @@ export HISTFILESIZE=2000
 export HISTSIZE=2000
 export HISTCONTROL=erasedups:ignoredups:ignorespace
 
-. "$HOME/.local/share/cargo/env"
-# . "$HOME/.cargo/env" # for kali
-
 # Aliases
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
 
@@ -46,8 +43,13 @@ function hst() {
 		history | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
 	elif [ "$session_type" = "wayland" ]; then
 		history | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
+	else
+		history | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
 	fi
 }
+
+. "$HOME/.local/share/cargo/env"
+# . "$HOME/.cargo/env" # 4 kali
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "$HOME/.local/share/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.local/share/sdkman/bin/sdkman-init.sh"
