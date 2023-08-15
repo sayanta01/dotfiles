@@ -46,11 +46,11 @@ sudo apt install -y apt-transport-https tmux fonts-terminus \
 	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
 	bspwm polybar rofi kitty dunst lxappearance maim playerctl \
 	ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf zoxide \
-	lf zathura htop qt5-style-kvantum meld \
-	imwheel xclip xdo xwallpaper gpg cowsay xcape betterlockscreen \
+	zathura htop qt5-style-kvantum meld \
+	imwheel xclip xdo xwallpaper gpg cowsay xcape \
 	exiftool aria2 wmname wmctrl neofetch \
 	transmission-daemon trash-cli docker.io iftop aptitude synaptic
-# ncdu translate-shell stacer
+# lf betterlockscreen ncdu translate-shell stacer
 # sudo systemctl disable docker.socket
 
 yes | curl -sS https://starship.rs/install.sh | sh
