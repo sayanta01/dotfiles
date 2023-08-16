@@ -96,10 +96,10 @@ cht() {
 	sh -c "curl cheat.sh/$1"
 }
 wttr() {
-	sh -c "curl rate.sx/$1"
+	sh -c "curl wttr.in/$1"
 }
 rate() {
-	sh -c "curl wttr.in/$1"
+	sh -c "curl rate.sx/$1"
 }
 alias myip="curl ifconfig.me; echo"
 alias php-server="php -S 0.0.0.0:8000"
