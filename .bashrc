@@ -13,7 +13,7 @@ shopt -s checkwinsize # Check the window size after each command and, if necessa
 
 export HISTFILESIZE=2000
 export HISTSIZE=2000
-export HISTCONTROL=erasedups:ignoredups:ignorespace
+export HISTCONTROL=erasedups:ignoreboth
 
 # Aliases
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
@@ -49,7 +49,16 @@ function hst() {
 }
 
 . "$HOME/.local/share/cargo/env"
-# . "$HOME/.cargo/env" # 4 kali
+# . "$HOME/.cargo/env" # for kali
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "$HOME/.local/share/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.local/share/sdkman/bin/sdkman-init.sh"
+
+# Enable programmable completion features for some commands
+if ! shopt -oq posix; then
+	if [ -f /usr/share/bash-completion/bash_completion ]; then
+		. /usr/share/bash-completion/bash_completion
+	elif [ -f /etc/bash_completion ]; then
+		. /etc/bash_completion
+	fi
+fi
