@@ -62,8 +62,8 @@ sudo xbps-install -Sy font-awesome \
 	zathura zathura-pdf-mupdf ghostscript \
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 	rsync wget curl aria2 yt-dlp transmission jq \
-	intel-ucode virtualbox-ose-guest powershell \
-	xdg-utils xdg-user-dirs xdo xclip xdotool colorpicker wmctrl unclutter
+	xdg-utils xdg-user-dirs xdo xclip xdotool colorpicker wmctrl unclutter powershell
+# intel-ucode
 # socat exfat-utils  - additional tools
 
 # Audio server
@@ -75,7 +75,7 @@ sudo pacman -S pipewire wireplumber libspa-bluetooth
 
 # GUI apps
 sudo xbps-install -Sy scrcpy android-tools stress bpytop blueman bluez ntfs-3g \
-	obs audacity gimp inkscape virtualbox-ose kdeconnect blender telegram-desktop
+	obs audacity gimp inkscape virtualbox-ose virtualbox-ose-guest kdeconnect blender telegram-desktop
 
 # VM
 sudo xbps-install -Sy qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm libvirt cronie docker openssh

@@ -58,10 +58,10 @@ sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	zathura zathura-pdf-mupdf ghostscript \
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 	rsync wget curl aria2 yt-dlp transmission-cli jq \
-	intel-ucode virtualbox-guest-utils \
 	xdg-utils xdg-user-dirs xdo \
 	gvfs-mtp gvfs-gphoto2 unclutter socat exfat-utils \
 	xorg-xinit xclip xdotool wmctrl unclutter
+# intel-ucode
 # libx11 libxrandr libxinerama libxft
 # xorg-server xorg-xrdb xorg-xwininfo xorg-xprop xorg-xrandr xorg-xsetroot xorg-xbacklight
 
@@ -79,7 +79,7 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 
 # GUI apps
 sudo pacman -S --noconfirm scrcpy android-file-transfer android-tools blueman bluez-utils ntfs-3g \
-	obs-studio audacity gimp inkscape virtualbox kdeconnect blender telegram-desktop
+	obs-studio audacity gimp inkscape virtualbox virtualbox-guest-utils kdeconnect blender telegram-desktop
 # sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 
 # Services
@@ -93,9 +93,10 @@ sudo ln -s /etc/runit/sv/sshd /run/runit/service
 sudo touch /run/runit/service/sshd/down
 
 # VM
-# sudo usermod -aG vboxusers $USER  # enable USB usage for Virtual-Box
-sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm
-# qemu-arch-extra  ( arch )
+# sudo usermod -aG vboxusers $USER  # enable USB usage for virtual-box
+sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm spice-vdagent-runit
+# qemu-arch-extra spice-vdagent ( arch )
+# sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service ( artix )
 # sudo ln -s /etc/runit/sv/virtlogd /run/runit/service  ( artix )
 # sudo touch /run/runit/service/virtlogd/down  ( artix )
 # sudo ln -s /etc/runit/sv/libvirtd /run/runit/service  ( artix )
