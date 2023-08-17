@@ -43,7 +43,7 @@ sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
 sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
-	exa bat tldr fd ripgrep procs duf dust man fzf bash-completion starship zoxide \
+	exa bat tldr fd ripgrep procs duf dust man-db fzf bash-completion starship zoxide \
 	mate-calc firefox qutebrowser meld linux-headers \
 	linux-lts linux-lts-headers kitty newsboat trash-cli neovim \
 	neofetch stress htop cowsay gnome-keyring \
@@ -79,12 +79,13 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 
 # GUI apps
 sudo pacman -S --noconfirm scrcpy android-file-transfer android-tools blueman bluez-utils ntfs-3g \
-	obs-studio audacity gimp inkscape virtualbox virtualbox-guest-utils kdeconnect blender telegram-desktop
+	obs-studio audacity gimp inkscape kdeconnect blender telegram-desktop
+# virtualbox virtualbox-guest-utils
 # sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 
 # Services
 sudo pacman -S --noconfirm cronie-runit docker-runit openssh-runit libvirt-runit bluez-runit dbus-runit
-# sudo pacman -S --noconfirm cronie docker openssh libvirt bluez ( arch )
+# sudo pacman -S --noconfirm cronie docker openssh libvirt bluez dbus ( arch )
 sudo ln -s /etc/runit/sv/dbus /run/runit/service
 sudo ln -s /etc/runit/sv/cronie /run/runit/service
 sudo ln -s /run/runit/sv/docker /run/runit/service

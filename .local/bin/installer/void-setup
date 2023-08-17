@@ -47,7 +47,7 @@ sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
 sudo xbps-install -Sy font-awesome \
 	noto-fonts-ttf noto-fonts-emoji noto-fonts-cjk terminus-font \
-	exa bat tldr fd ripgrep procs duf dust man fzf bash-completion starship zoxide \
+	exa bat tldr fd ripgrep procs duf dust man-db fzf bash-completion starship zoxide \
 	mate-calc firefox qutebrowser meld \
 	linux-headers kitty newsboat trash-cli neovim \
 	neofetch htop cowsay gnome-keyring \
