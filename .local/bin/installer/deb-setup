@@ -51,7 +51,7 @@ sudo apt install -y zsh zsh-syntax-highlighting zsh-autosuggestions \
 	imwheel xclip xdo xwallpaper gpg cowsay xcape \
 	exiftool aria2 wmname wmctrl neofetch \
 	transmission-daemon trash-cli docker.io ssh iftop aptitude synaptic
-# lf betterlockscreen ncdu translate-shell stacer
+# lf betterlockscreen ncdu translate-shell
 # sudo systemctl enable docker.socket
 sudo systemctl enable ssh.socket
 

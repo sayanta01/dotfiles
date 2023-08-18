@@ -50,20 +50,30 @@ sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	bspwm polybar sxhkd rofi dunst picom \
 	qt5ct qt6ct kvantum lxappearance xcape \
 	playerctl pulsemixer pavucontrol mpd ncmpcpp dbus-python \
-	dialog cmake wmname imwheel pass \
-	wireless_tools net-tools nm-connection-editor network-manager-applet dnsutils iftop nmap \
-	mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper ffmpeg python-pip python-pywal \
-	unrar unzip zip p7zip tar engrampa \
-	tree ncdu lf gvfs thunar thunar-archive-plugin thunar-media-tags-plugin \
+	cmake wmname imwheel pass \
+	wireless_tools net-tools network-manager-applet dnsutils iftop nmap \
+	mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper python-pip python-pywal \
+	zip unzip unrar p7zip engrampa \
+	ncdu lf gvfs thunar thunar-archive-plugin thunar-media-tags-plugin \
 	zathura zathura-pdf-mupdf ghostscript \
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-	rsync wget curl aria2 yt-dlp transmission-cli jq \
+	rsync wget aria2 yt-dlp transmission-cli jq \
 	xdg-utils xdg-user-dirs xdo \
-	gvfs-mtp gvfs-gphoto2 unclutter socat exfat-utils \
+	gvfs-mtp gvfs-gphoto2 socat exfat-utils \
 	xorg-xinit xclip xdotool wmctrl unclutter
-# intel-ucode
-# libx11 libxrandr libxinerama libxft
+# libx11 libxft libxrandr libxinerama
 # xorg-server xorg-xrdb xorg-xwininfo xorg-xprop xorg-xrandr xorg-xsetroot xorg-xbacklight
+
+# Check CPU vendor
+cpu_vendor=$(grep vendor_id /proc/cpuinfo | uniq | awk -F ': ' '{print $2}')
+
+if [ "$cpu_vendor" = "GenuineIntel" ]; then
+	sudo pacman -S intel-ucode
+elif [ "$cpu_vendor" = "AuthenticAMD" ]; then
+	sudo pacman -S amd-ucode
+else
+	echo "Unsupported CPU vendor"
+fi
 
 # Audio server
 sudo pacman -S pipewire pipewire-pulse wireplumber
@@ -74,24 +84,27 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # lightdm-runit  ( artix )
 # dm-tool switch-to-greeter
 
-# Nvidia
-# sudo pacman -S --noconfirm nvidia-dkms nvidia-settings opencl-nvidia nvtop glmark2
+# Check Nvidia GPU
+if lspci | grep -i nvidia; then
+	sudo pacman -S --noconfirm nvidia-dkms nvidia-settings opencl-nvidia nvtop glmark2
+else
+	echo "No NVIDIA GPU detected"
+fi
 
 # GUI apps
-sudo pacman -S --noconfirm scrcpy android-file-transfer android-tools blueman bluez-utils ntfs-3g \
+sudo pacman -S --noconfirm scrcpy android-file-transfer android-tools blueman bluez-utils bluez-runit ntfs-3g \
 	obs-studio audacity gimp inkscape kdeconnect blender telegram-desktop
-# virtualbox virtualbox-guest-utils
 # sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
+# virtualbox virtualbox-guest-utils
 
 # Services
-sudo pacman -S --noconfirm cronie-runit docker-runit openssh-runit libvirt-runit bluez-runit dbus-runit
+sudo pacman -S --noconfirm cronie-runit docker-runit openssh-runit libvirt-runit dbus-runit
 # sudo pacman -S --noconfirm cronie docker openssh libvirt bluez dbus ( arch )
 sudo ln -s /etc/runit/sv/dbus /run/runit/service
 sudo ln -s /etc/runit/sv/cronie /run/runit/service
 sudo ln -s /run/runit/sv/docker /run/runit/service
 sudo touch /run/runit/service/docker/down
 sudo ln -s /etc/runit/sv/sshd /run/runit/service
-sudo touch /run/runit/service/sshd/down
 
 # VM
 # sudo usermod -aG vboxusers $USER  # enable USB usage for virtual-box
