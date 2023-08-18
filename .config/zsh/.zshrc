@@ -116,5 +116,19 @@ function hst() {
     fi
 }
 
+lfcd () {
+    tmp="$(mktemp)"
+    command lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+              cd "$dir" || exit 1
+            fi
+        fi
+    fi
+}
+
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 # [[ -s "$HOME/.local/share/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.local/share/sdkman/bin/sdkman-init.sh"
