@@ -1,6 +1,5 @@
 {
   "editor.fontFamily": "JetBrainsMono NF",
-  // Material Design Icons
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
   // "editor.fontWeight": "bold",
@@ -19,7 +18,6 @@
   "editor.bracketPairColorization.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "GitHub Dark Default",
-  "vim.useSystemClipboard": true,
   "vim.highlightedyank.color": "rgba(20, 99, 89, 0.6)",
   "vim.highlightedyank.enable": true,
   "editor.linkedEditing": true,
@@ -27,12 +25,18 @@
     "editor.formatOnType": true
   },
   "vim.easymotion": true,
+  "vim.easymotionMarkerooundColor": "#020202",
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
   "vim.sneak": true,
-  // "vim.easymotionMarkerooundColor": "#020202",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
   "vim.normalModeKeyBindings": [
     // buffer
     {
@@ -132,12 +136,6 @@
       "commands": ["editor.showOutgoingCalls"]
     }
   ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    }
-  ],
   "vim.visualModeKeyBindings": [
     {
       "before": [">"],
@@ -149,14 +147,14 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    // {
-    //   "before": ["<leader>", "v"],
-    //   "commands": ["workbench.action.splitEditor"]
-    // },
-    // {
-    //   "before": ["<leader>", "s"],
-    //   "commands": ["workbench.action.splitEditorDown"]
-    // },
+    {
+      "before": ["<leader>", "v"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
     {
       "before": ["<leader>", "f"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
@@ -192,24 +190,17 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.renderWhitespace": "none",
-  "explorer.confirmDragAndDrop": false,
+  "editor.cursorBlinking": "solid",
   "errorLens.enabled": true,
+  "explorer.confirmDragAndDrop": false,
+  "window.menuBarVisibility": "toggle"
   // "git.openRepositoryInParentFolders": "never",
   // "editor.scrollbar.vertical": "hidden",
-  "window.menuBarVisibility": "toggle",
-  "editor.cursorBlinking": "solid"
 }
-
-
-
-
-
-keymap("n", "<C-d>", "<C-d>zz", opts)
-keymap("n", "<C-u>", "<C-u>zz", opts)
-
--- Search term in middle
-keymap("n", "n", "nzzzv", opts)
-keymap("n", "N", "NNzzv", opts)
-
-
