@@ -48,6 +48,20 @@ function hst() {
 	fi
 }
 
+lfcd() {
+	tmp="$(mktemp)"
+	command lf -last-dir-path="$tmp" "$@"
+	if [ -f "$tmp" ]; then
+		dir="$(cat "$tmp")"
+		rm -f "$tmp"
+		if [ -d "$dir" ]; then
+			if [ "$dir" != "$(pwd)" ]; then
+				cd "$dir" || exit 1
+			fi
+		fi
+	fi
+}
+
 . "$HOME/.local/share/cargo/env"
 # . "$HOME/.cargo/env" # for kali
 

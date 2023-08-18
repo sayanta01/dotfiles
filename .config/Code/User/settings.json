@@ -149,14 +149,14 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "v"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    {
-      "before": ["<leader>", "s"],
-      "commands": ["workbench.action.splitEditorDown"]
-    },
+    // {
+    //   "before": ["<leader>", "v"],
+    //   "commands": ["workbench.action.splitEditor"]
+    // },
+    // {
+    //   "before": ["<leader>", "s"],
+    //   "commands": ["workbench.action.splitEditorDown"]
+    // },
     {
       "before": ["<leader>", "f"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
@@ -164,15 +164,15 @@
     {
       "before": ["<leader>", "e"],
       "commands": ["workbench.view.explorer"]
-    },
-    {
-      "before": ["C-e"],
-      "after": ["_"]
-    },
-    {
-      "before": ["C-b"],
-      "after": ["$"]
     }
+    // {
+    //   "before": ["C-e"],
+    //   "after": ["_"]
+    // },
+    // {
+    //   "before": ["C-b"],
+    //   "after": ["$"]
+    // }
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
@@ -194,9 +194,22 @@
   },
   "editor.renderWhitespace": "none",
   "explorer.confirmDragAndDrop": false,
-  "errorLens.enabled": false,
-  "git.openRepositoryInParentFolders": "never",
-  "editor.scrollbar.vertical": "hidden",
+  "errorLens.enabled": true,
+  // "git.openRepositoryInParentFolders": "never",
+  // "editor.scrollbar.vertical": "hidden",
   "window.menuBarVisibility": "toggle",
   "editor.cursorBlinking": "solid"
 }
+
+
+
+
+
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+
+-- Search term in middle
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "NNzzv", opts)
+
+

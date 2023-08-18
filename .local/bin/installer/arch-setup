@@ -25,18 +25,18 @@ fc-cache -fv
 rm -rf MapleMono-NF.zip CascadiaCode.zip JetBrainsMono.zip Cousine.zip FiraCode.zip
 
 # Suckless
-git clone https://github.com/LukeSmithxyz/st.git ~/dl/st
+git clone --depth=1 https://github.com/LukeSmithxyz/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
-git clone https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
+git clone --depth=1 https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
 # My nvim config
-git clone https://github.com/sayanta01/nvim ~/.config/nvim
+git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
 # Tpm
-git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # Themes
-git clone https://github.com/sayanta01/Papirus-FlatMix ~/.local/share/icons/Papirus-FlatMix
+git clone --depth=1 https://github.com/sayanta01/Papirus-FlatMix ~/.local/share/icons/Papirus-FlatMix
 sudo cp -r ~/.local/share/icons/Papirus-FlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
@@ -123,7 +123,7 @@ sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat
 # sudo virsh net-autostart default
 
 # AUR
-git clone https://aur.archlinux.org/paru.git ~/.cache/paru
+git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru
 cd ~/.config/paru && makepkg -fsri
 yes | paru -S betterlockscreen xwinwrap-git colorpicker google-chrome simple-mtpfs \
 	visual-studio-code-bin powershell-bin ttyper cava anki-bin
