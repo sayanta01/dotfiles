@@ -79,7 +79,7 @@ yes | curl -sS https://starship.rs/install.sh | sh
 # Fix Kali
 distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
 if [ "$distro" = "Kali" ]; then
-	cp ~/.config/zsh/.zshrc ~/ && cp ~/.config/zsh/.zshenv ~/
+	cp ~/.config/zsh/.zshrc ~/ 
 	if ! grep -q "source ~/.profile" ~/.zshrc; then
 		echo "source ~/.profile" >> ~/.zshrc
 	fi
