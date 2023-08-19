@@ -5,24 +5,31 @@ cp -r ~/dotfiles/{.bashrc,.bash_profile,.profile,.zprofile,.xprofile,.xinitrc,.i
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
-mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp}
+mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp}
 
-# Maple-font
-mver="v6.4"
-wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
-yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
-# Nerd-fonts
-latest_nf="v3.0.2"
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/CascadiaCode.zip
-yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/JetBrainsMono.zip
-yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/Cousine.zip
-yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/FiraCode.zip
-yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-fc-cache -f -v
-rm -rf MapleMono-NF.zip CascadiaCode.zip JetBrainsMono.zip Cousine.zip FiraCode.zip
+printf "Fonts? (yes/no): "
+read -r choice
+
+if [ "$choice" = "yes" ]; then
+	# Maple-font
+	mver="v6.4"
+	wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
+	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
+	# Nerd-fonts
+	latest_nf="v3.0.2"
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/CascadiaCode.zip
+	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/JetBrainsMono.zip
+	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/Cousine.zip
+	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/FiraCode.zip
+	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+	fc-cache -fv
+	rm -rf MapleMono-NF.zip CascadiaCode.zip JetBrainsMono.zip Cousine.zip FiraCode.zip
+else
+	:
+fi
 
 # Suckless
 sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev
@@ -68,8 +75,7 @@ yes | curl -sS https://starship.rs/install.sh | sh
 # sudo systemd-analyze  ( critical-chain )
 # sudo su root -c "echo deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free >> /etc/apt/sources.list"
 # sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+# sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth qterminal kali-hidpi-mode
 
 # cp ~/.config/zsh/.zshrc ~/
 mv ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
-
-# sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth qterminal kali-hidpi-mode

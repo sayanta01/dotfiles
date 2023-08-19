@@ -8,24 +8,31 @@ cp -r ~/dotfiles/{.bashrc,.bash_profile,.profile,.zprofile,.xprofile,.xinitrc,.i
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
-mkdir ~/{desk,dox,dl,music,templates,pub,pix,vids,code,imp}
+mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp}
 
-# Maple-font
-mver="v6.4"
-wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
-yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
-# Nerd-fonts
-latest_nf="v3.0.2"
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/CascadiaCode.zip
-yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/JetBrainsMono.zip
-yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/Cousine.zip
-yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/FiraCode.zip
-yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-fc-cache -f -v
-rm -rf MapleMono-NF.zip CascadiaCode.zip JetBrainsMono.zip Cousine.zip FiraCode.zip
+printf "Fonts? (yes/no): "
+read -r choice
+
+if [ "$choice" = "yes" ]; then
+	# Maple-font
+	mver="v6.4"
+	wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
+	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
+	# Nerd-fonts
+	latest_nf="v3.0.2"
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/CascadiaCode.zip
+	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/JetBrainsMono.zip
+	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/Cousine.zip
+	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/FiraCode.zip
+	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+	fc-cache -fv
+	rm -rf MapleMono-NF.zip CascadiaCode.zip JetBrainsMono.zip Cousine.zip FiraCode.zip
+else
+	:
+fi
 
 # Suckless
 sudo xbps-install -Sy libXft-devel harfbuzz-devel libXinerama-devel
@@ -103,7 +110,7 @@ sudo xbps-install -Sy betterlockscreen xwinwrap \
 # xbps-src
 git clone --depth=1 https://github.com/void-linux/void-packages ~/.local/share/void-packages
 cd ~/.local/share/void-packages && ./xbps-src binary-bootstrap
-echo XBPS_ALLOW_RESTRICTED=yes >etc/conf
+echo XBPS_ALLOW_RESTRICTED=yes > etc/conf
 
 # Google-chrome
 cd ~/.local/share/void-packages && ./xbps-src pkg google-chrome
