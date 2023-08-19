@@ -4,18 +4,22 @@
 # alias sudo='doas'
 
 # Kali
-#alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
-#alias install='sudo nala install'
-#alias update='sudo nala update'
-#alias remove='sudo nala purge'
-#alias uplist='apt list --upgradable'
-#alias clean='sudo apt -y autoremove; sudo apt clean'
+# alias install='sudo nala install'
+# alias update='sudo nala update'
+# alias uplist='apt list --upgradable'
+# alias remove='sudo nala purge'
+# alias clean='sudo apt -y autoremove; sudo apt clean'
+# alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
+# alias installed='sudo apt list --installed'
+# bigpkg() {
+# 	dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{size=$1/1024; name=$2; printf "%.2f MB\t%s\n", size, name}'
+# }
 
 # Arch
 alias install="sudo pacman -Sy"
-alias update="sudo pacman -Syyu && echo '############### ⬆️AUR ###############'; paru -Sua"
+alias update="sudo pacman -Syyu && echo '########## ⬆️AUR ##########'; paru -Sua"
 alias remove="sudo pacman -Rns"
-alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo "############### 🚮cleaning Paru cache ###############"; rm -rf ~/.cache/paru'
+alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo "########## 🚮cleaning Paru cache ##########"; rm -rf ~/.cache/paru'
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias installed="grep -i installed /var/log/pacman.log"
 alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
