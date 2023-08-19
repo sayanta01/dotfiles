@@ -59,7 +59,7 @@ export UNISON="$XDG_DATA_HOME/unison"
 export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export HISTFILE="$XDG_DATA_HOME/bash/history"    # run this - mkdir -p "$XDG_DATA_HOME"/bash 
+# export HISTFILE="$XDG_DATA_HOME/bash/history"    # run this - mkdir -p "$XDG_DATA_HOME"/bash 
 export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
