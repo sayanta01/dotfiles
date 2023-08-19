@@ -75,9 +75,28 @@ else
 	echo "Unsupported CPU vendor"
 fi
 
-# Audio server
-sudo pacman -S pipewire pipewire-pulse wireplumber
-# sudo pacman -S pulseaudio pulseaudio-bluetooth
+distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
+if [ "$distro" = "Artix" ]; then
+	## Audio server
+	sudo pacman -S --noconfirm pipewire pipewire-pulse wireplumber
+	# sudo pacman -S pulseaudio pulseaudio-bluetooth
+
+	## Services
+	sudo pacman -S --noconfirm openssh-runit bluez-runit docker-runit dbus-runit cronie-runit
+	sudo ln -s /etc/runit/sv/sshd /run/runit/service
+	sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
+	sudo ln -s /run/runit/sv/docker /run/runit/service
+	# sudo touch /run/runit/service/docker/down
+	sudo ln -s /etc/runit/sv/dbus /run/runit/service
+	# sudo ln -s /etc/runit/sv/cronie /run/runit/service
+else
+	## Audio server
+	sudo pacman -S --noconfirm pipewire pipewire-pulse wireplumber
+	systemctl --user --now enable pipewire pipewire-pulse wireplumber
+
+	## Services
+	sudo pacman -S --noconfirm openssh bluez docker cronie dbus
+fi
 
 # Display Manager
 sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
@@ -92,53 +111,47 @@ else
 fi
 
 # GUI apps
-sudo pacman -S --noconfirm scrcpy android-file-transfer android-tools blueman bluez-utils bluez-runit ntfs-3g \
-	obs-studio audacity gimp inkscape kdeconnect blender telegram-desktop
-# sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
+sudo pacman -S --noconfirm scrcpy android-tools android-file-transfer \
+	obs-studio blender audacity gimp inkscape \
+	kdeconnect telegram-desktop \
+	blueman bluez-utils \
+	ntfs-3g
 # virtualbox virtualbox-guest-utils
-
-# Services
-sudo pacman -S --noconfirm cronie-runit docker-runit openssh-runit libvirt-runit dbus-runit
-# sudo pacman -S --noconfirm cronie docker openssh libvirt bluez dbus ( arch )
-sudo ln -s /etc/runit/sv/dbus /run/runit/service
-sudo ln -s /etc/runit/sv/cronie /run/runit/service
-sudo ln -s /run/runit/sv/docker /run/runit/service
-sudo touch /run/runit/service/docker/down
-sudo ln -s /etc/runit/sv/sshd /run/runit/service
+# sudo usermod -aG vboxusers "$USER"  # USB usage for Virtual-Box
 
 # VM
-# sudo usermod -aG vboxusers $USER  # enable USB usage for virtual-box
-sudo pacman -S --noconfirm qemu virt-manager bridge-utils dnsmasq openbsd-netcat ovmf swtpm spice-vdagent-runit
-# qemu-arch-extra spice-vdagent ( arch )
-# sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service ( artix )
-# sudo ln -s /etc/runit/sv/virtlogd /run/runit/service  ( artix )
-# sudo touch /run/runit/service/virtlogd/down  ( artix )
-# sudo ln -s /etc/runit/sv/libvirtd /run/runit/service  ( artix )
-# sudo touch /run/runit/service/libvirtd/down  ( artix )
-# sudo systemctl enable --now libvirtd  ( arch )
-# sudo vim /etc/libvirt/libvirtd.conf  #uncmnt line 81,104  ( arch )
-# sudo usermod -aG libvirt $USER
-# sudo systemctl restart libvirtd  ( arch )
-# sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
-# sudo virsh net-autostart default
+sudo pacman -S --noconfirm qemu virt-manager dnsmasq bridge-utils openbsd-netcat ovmf swtpm libvirt-runit spice-vdagent-runit
+# libvirt spice-vdagent qemu-arch-extra
+sudo ln -s /etc/runit/sv/virtlogd /run/runit/service
+sudo touch /run/runit/service/virtlogd/down
+sudo ln -s /etc/runit/sv/libvirtd /run/runit/service
+sudo touch /run/runit/service/libvirtd/down
+sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service
+sudo touch /run/runit/service/spice-vdagentd/down
+# sudo systemctl enable --now libvirtd # arch
+sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
+sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
+sudo usermod -aG libvirt "$USER"
+# sudo systemctl restart libvirtd # arch
 
 # AUR
 git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru
-cd ~/.config/paru && makepkg -fsri
+cd ~/.cache/paru && makepkg -fsri --noconfirm
 yes | paru -S betterlockscreen xwinwrap-git colorpicker google-chrome simple-mtpfs \
 	visual-studio-code-bin powershell-bin ttyper cava anki-bin
 
-# /etc/pacman.conf              ( uncheck 'ignorepkg' and put pkgname )
+# /etc/pacman.conf    #IgnorePkg =
 
 # Change Teletype font
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
 sudo su root -c "echo -e FONT='ter-d18b.psf.gz' >> /etc/vconsole.conf"
 
-# Fix qt5ct
+# Fix qt
 # echo 'QT_QPA_PLATFORMTHEME="qt5ct"' | sudo tee -a /etc/environment
 
-# Fix bluetooth          & Get percentage of connected device
-# ControllerMode = bredr & Experimental = true > /etc/bluetooth/main.conf
+# Get percentage of connected device
+sudo sed -i 's/# ControllerMode = bredr/ControllerMode = bredr/' /etc/bluetooth/main.conf
+sudo sed -i 's/^# \(Experimental = true\)/\1/' /etc/bluetooth/main.conf
 
 # Fix suckless utilities give XOpenIM failed error
 # echo 'LANG=en_US.UTF-8

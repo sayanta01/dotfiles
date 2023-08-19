@@ -58,28 +58,44 @@ sudo xbps-install -Sy font-awesome \
 	wireless_tools net-tools network-manager-applet bind-utils iftop nmap \
 	mpv mediainfo exiftool ffmpegthumbnailer ImageMagick maim sxiv xwallpaper ffmpeg python3-pip pywal \
 	zip unzip unrar p7zip engrampa \
-  ncdu lf gvfs Thunar thunar-archive-plugin thunar-media-tags-plugin \
+	ncdu lf gvfs Thunar thunar-archive-plugin thunar-media-tags-plugin \
 	zathura zathura-pdf-mupdf ghostscript \
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 	rsync wget aria2 yt-dlp transmission jq \
 	xdg-utils xdg-user-dirs xdo xclip xdotool colorpicker wmctrl unclutter powershell
-# intel-ucode
 # socat exfat-utils  - additional tools
+
+# Check CPU vendor
+cpu_vendor=$(grep vendor_id /proc/cpuinfo | uniq | awk -F ': ' '{print $2}')
+
+if [ "$cpu_vendor" = "GenuineIntel" ]; then
+	sudo xbps-install -Sy intel-ucode
+elif [ "$cpu_vendor" = "AuthenticAMD" ]; then
+	sudo xbps-install -Sy amd-ucode
+else
+	echo "Unsupported CPU vendor"
+fi
 
 # Audio server
 sudo pacman -S pipewire wireplumber libspa-bluetooth
 # sudo pacman -S pulseaudio
 
-# Nvidia
-# sudo xbps-install -Sy nvidia nvidia-libs-32bit nvtop glmark2
+# Check Nvidia GPU
+if lspci | grep -i nvidia; then
+	sudo xbps-install -Sy nvidia nvidia-libs-32bit nvtop glmark2
+else
+	echo "No NVIDIA GPU detected"
+fi
 
 # GUI apps
-sudo xbps-install -Sy scrcpy android-tools stress bpytop blueman bluez ntfs-3g \
-	obs audacity gimp inkscape virtualbox-ose virtualbox-ose-guest kdeconnect blender telegram-desktop
+sudo xbps-install -Sy scrcpy android-tools stress bpytop \
+	obs blender audacity gimp inkscape \
+	kdeconnect telegram-desktop \
+	blueman bluez ntfs-3g
+# virtualbox-ose virtualbox-ose-guest
 
 # VM
-sudo xbps-install -Sy qemu virt-manager bridge-utils dnsmasq openbsd-netcat swtpm libvirt cronie docker openssh
-# ovmf
+sudo xbps-install -Sy qemu virt-manager dnsmasq bridge-utils openbsd-netcat swtpm libvirt openssh docker
 
 sudo xbps-install -Sy betterlockscreen xwinwrap \
 	vscode anki simple-mtpfs anki cava
