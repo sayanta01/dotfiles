@@ -80,11 +80,11 @@ yes | curl -sS https://starship.rs/install.sh | sh
 distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
 if [ "$distro" = "Kali" ]; then
   ln -s ~/.config/zsh/.zshrc ~/.zshrc
-	if ! grep -q "source ~/.profile" ~/.zshrc; then
-		echo "source ~/.profile" >> ~/.zshrc
-	fi
-	# cp ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
+	# if ! grep -q "source ~/.profile" ~/.zshrc; then
+	# 	echo "source ~/.profile" >> ~/.zshrc
+	# fi
 	sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth qterminal kali-hidpi-mode
+  # cp ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
 else
 	:
 fi
