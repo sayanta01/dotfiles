@@ -5,7 +5,7 @@
 cp -r ~/dotfiles/.config/{hypr,waybar,swaylock,xsettingsd,nwg-look} ~/.config
 
 # AUR
-paru -S xdg-desktop-portal-hyprland \
+yes | paru -S xdg-desktop-portal-hyprland \
 	hyprprop wlr-randr hyprpicker swaylock-effects \
 	grim slurp swappy swww sddm-git \
 	libsixel waypipe \
