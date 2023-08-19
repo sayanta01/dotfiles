@@ -122,4 +122,4 @@ Include = /etc/pacman.d/mirrorlist-arch
 sudo pacman-key --init
 sudo pacman-key --populate archlinux
 sudo pacman -Syyu
-sudo dbus-uuidgen | sudo tee /var/lib/dbus/machine-id ( artix )
+sudo dbus-uuidgen | sudo tee /var/lib/dbus/machine-id    ( artix )

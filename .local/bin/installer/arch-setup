@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# sudo pacman -Syyu
 dots=".bashrc .bash_profile .profile .zprofile .xprofile .xinitrc .imwheelrc .vimrc"
 for file in $dots; do
 	cp -r ~/dotfiles/"$file" ~/
