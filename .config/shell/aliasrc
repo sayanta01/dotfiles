@@ -16,28 +16,17 @@ alias install="sudo pacman -Sy"
 alias update="sudo pacman -Syyu && echo '############### ⬆️AUR ###############'; paru -Sua"
 alias remove="sudo pacman -Rns"
 alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo "############### 🚮cleaning Paru cache ###############"; rm -rf ~/.cache/paru'
-alias unlock="sudo rm /var/lib/pacman/db.lck" # remove pacman lock
+alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias installed="grep -i installed /var/log/pacman.log"
-alias big="expac -H M '%m\t%n' | sort -h | nl"
-
-# XBPS
-# alias install="sudo xbps-install -Sv"
-# alias dryi="sudo xbps-install -Sn"
-# alias update="sudo xbps-install -Suv"
-# alias remove="sudo xbps-remove -Rv"
-# alias clean="sudo xbps-remove -o; sudo xbps-remove -O"
+alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 
 # Runit
-alias ssh-on="sudo sv start sshd"
-alias ssh-off="sudo sv stop sshd"
 alias doc-on="sudo sv start docker"
 alias doc-off="sudo sv stop docker"
 alias vm-on="sudo sv start libvirtd virtlogd spice-vdagentd"
 alias vm-off="sudo sv stop libvirtd virtlogd spice-vdagentd"
 
 # Systemd
-# alias ssh-on="sudo systemctl start sshd.service"
-# alias ssh-off="sudo systemctl stop sshd.service"
 # alias doc-on="sudo systemctl start docker.socket"
 # alias doc-off="sudo systemctl stop docker.socket"
 # alias vm-on="sudo systemctl start libvirtd.service"
@@ -71,11 +60,11 @@ alias mv="mv -iv"
 alias rm="rm -iv"
 alias del="gio trash"
 alias tre="trash-restore"
-alias sdn="sudo shutdown -h now"
 alias less="less -R"
 alias mkdir="mkdir -pv"
 alias trim="sudo fstrim -va"
 alias logout='sudo pkill -u "$USER"'
+alias sdn="sudo shutdown -h now"
 
 alias lg="lazygit"
 alias add.="git add ."
@@ -110,7 +99,6 @@ alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' 
 alias multitail="multitail --no-repeat -c"
 
 alias ff='fd --type f --hidden --exclude .git | fzf --preview "bat --color=always --style=numbers --line-range=:500 {}" | xargs -r "$EDITOR"'
-alias fonts="magick convert -list font | grep -iE 'font:.*' | fzf"
 alias bigf="du -hxs * | sort -rh | head"
 alias psmem="ps axch -o cmd,%mem --sort=-%mem | head"
 alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
