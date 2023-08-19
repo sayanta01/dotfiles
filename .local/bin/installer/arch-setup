@@ -79,9 +79,9 @@ sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 cpu_vendor=$(grep vendor_id /proc/cpuinfo | uniq | awk -F ': ' '{print $2}')
 
 if [ "$cpu_vendor" = "GenuineIntel" ]; then
-	sudo pacman -S intel-ucode
+	sudo pacman -S --noconfirm intel-ucode
 elif [ "$cpu_vendor" = "AuthenticAMD" ]; then
-	sudo pacman -S amd-ucode
+	sudo pacman -S --noconfirm amd-ucode
 else
 	echo "Unsupported CPU vendor"
 fi
