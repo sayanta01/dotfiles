@@ -79,12 +79,13 @@ yes | curl -sS https://starship.rs/install.sh | sh
 # Fix Kali
 distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
 if [ "$distro" = "Kali" ]; then
-  ln -s ~/.config/zsh/.zshrc ~/.zshrc
-	if ! grep -q "source ~/.profile" ~/.zshrc; then
-		echo "source ~/.profile" >> ~/.zshrc
+	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
+		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
 	fi
-  # cp ~/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.config/autostart/.hidden/xresources.desktop ~/.config/autostart
+  ln -s ~/.config/zsh/.zshrc ~/.zshrc
+  sudo ln -s /usr/bin/fdfind /usr/bin/fd
 	sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth qterminal kali-hidpi-mode
+  # cp ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
 else
 	:
 fi
