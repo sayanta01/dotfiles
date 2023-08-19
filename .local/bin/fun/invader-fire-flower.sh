@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# Fire flower by Invader
-#
-# Depicts a fire flower featured in nintendo games.
-#
-# Author: rob o'leary
-
 f=3 b=4
 
 for j in f b; do

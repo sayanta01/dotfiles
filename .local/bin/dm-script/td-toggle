@@ -3,7 +3,7 @@
 # if transmission-daemon is running, will ask to kill, else will ask to start
 if pidof transmission-daemon >/dev/null ;
 then
-	[ "$(printf "No\\nYes" | dmenu -i -p "Turn off transmission-daemon?")" = "Yes" ] && killall transmission-daemon && notify-send "transmission-daemon Disabled"
+	[ "$(printf "no\\nyes" | dmenu -i -p "Turn off transmission-daemon?")" = "yes" ] && killall transmission-daemon && notify-send "transmission-daemon Disabled"
 else
-	[ "$(printf "No\\nYes" | dmenu -i -p "Turn on transmission daemon?")" = "Yes" ] && transmission-daemon && notify-send "transmission-daemon Enabled"
+	[ "$(printf "no\\nyes" | dmenu -i -p "Turn on transmission daemon?")" = "yes" ] && transmission-daemon && notify-send "transmission-daemon Enabled"
 fi
