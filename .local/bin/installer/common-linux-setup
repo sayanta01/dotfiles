@@ -1,14 +1,13 @@
 #!/bin/sh
 
 # TODO
-# https://goinglinux.com/articles/ToggleTrackpadTouchPad_en.htm
 # change default browser -> .profile
 # change sys-status check-updates according to ur pkg-manager
 # change git config username
 # add pswd in pass
 # change btch mac-add
-# add notify-sound if u want
 # change lfrc directory name
+# add notify-sound if u want
 
 # Change DNS server to cloudflare
 sudo cat <<EOF | sudo tee /etc/resolv.conf

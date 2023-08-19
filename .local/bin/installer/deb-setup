@@ -57,7 +57,7 @@ sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 sudo apt install -y zsh zsh-syntax-highlighting zsh-autosuggestions \
 	apt-transport-https tmux fonts-terminus \
 	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
-	bspwm polybar rofi kitty dunst lxappearance maim playerctl \
+	bspwm polybar rofi kitty dunst lxappearance maim playerctl pamixer \
 	ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf zoxide \
 	zathura htop qt5-style-kvantum meld \
 	imwheel xclip xdo xwallpaper gpg cowsay xcape \
@@ -76,10 +76,12 @@ yes | curl -sS https://starship.rs/install.sh | sh
 # Console Font
 # sudo dpkg-reconfigure console-setup
 
+# Fix Kali
 distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
 if [ "$distro" = "Kali" ]; then
-	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
+	cp ~/.config/zsh/.zshrc ~/ && cp ~/.config/zsh/.zshenv ~/
+	if ! grep -q "source ~/.profile" ~/.zshrc; then
+		echo "source ~/.profile" >> ~/.zshrc
 	fi
 	# cp ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
 	sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth qterminal kali-hidpi-mode
@@ -87,6 +89,5 @@ else
 	:
 fi
 
-# Fix Kali
 # sudo systemd-analyze # Display Boot Time Info
 # sudo su root -c "echo deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free >> /etc/apt/sources.list"
