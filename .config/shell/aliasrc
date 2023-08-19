@@ -32,8 +32,8 @@ alias ssh-on="sudo sv start sshd"
 alias ssh-off="sudo sv stop sshd"
 alias doc-on="sudo sv start docker"
 alias doc-off="sudo sv stop docker"
-alias vm-on="sudo sv start libvirtd virtlogd"
-alias vm-off="sudo sv stop libvirtd virtlogd"
+alias vm-on="sudo sv start libvirtd virtlogd spice-vdagentd"
+alias vm-off="sudo sv stop libvirtd virtlogd spice-vdagentd"
 
 # Systemd
 # alias ssh-on="sudo systemctl start sshd.service"
