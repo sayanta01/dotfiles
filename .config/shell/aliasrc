@@ -47,6 +47,8 @@ alias probe="sudo -E hw-probe -all -upload"
 alias sysctlfail="systemctl --failed"
 alias jctl="sudo journalctl -p 3 -xb"
 alias cleanjctl="sudo journalctl --vacuum-time=2weeks"
+alias chain="sudo systemd-analyze critical-chain"
+alias blame="sudo systemd-analyze blame"
 
 alias la="exa --icons"
 alias ls="ls --color=auto"

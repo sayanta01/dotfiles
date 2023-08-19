@@ -1,11 +1,16 @@
 #!/bin/sh
 
 # sudo pacman -Syyu
-cp -r ~/dotfiles/{.bashrc,.bash_profile,.profile,.zprofile,.xprofile,.xinitrc,.imwheelrc,.vimrc} ~/
+dots=".bashrc .bash_profile .profile .zprofile .xprofile .xinitrc .imwheelrc .vimrc"
+for file in $dots; do
+	cp -r ~/dotfiles/"$file" ~/
+done
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
-chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
-mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp}
+chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/
+for dir in desk dox dl music vids pix templates pub code imp; do
+	mkdir ~/"$dir"
+done
 
 printf "Fonts? (yes/no): "
 read -r choice

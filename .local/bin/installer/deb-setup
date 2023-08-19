@@ -1,11 +1,16 @@
-#!/bin/bash
+#!/bin/sh
 
 # yes | sudo apt full-upgrade
-cp -r ~/dotfiles/{.bashrc,.bash_profile,.profile,.zprofile,.xprofile,.xinitrc,.imwheelrc,.vimrc} ~/
+dots=".bashrc .bash_profile .profile .zprofile .xprofile .xinitrc .imwheelrc .vimrc"
+for file in $dots; do
+	cp -r ~/dotfiles/"$file" ~/
+done
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
-chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/{scope,cleaner}
-mkdir ~/{desk,dox,dl,music,vids,pix,templates,pub,code,imp}
+chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/
+for dir in desk dox dl music vids pix templates pub code imp; do
+	mkdir ~/"$dir"
+done
 
 printf "Fonts? (yes/no): "
 read -r choice
@@ -72,9 +77,8 @@ yes | curl -sS https://starship.rs/install.sh | sh
 # sudo dpkg-reconfigure console-setup
 
 # Fix Kali
-# sudo systemd-analyze  ( critical-chain )
+# sudo systemd-analyze # Display Boot Time Info
 # sudo su root -c "echo deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free >> /etc/apt/sources.list"
-# sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 # sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth qterminal kali-hidpi-mode
 
 # cp ~/.config/zsh/.zshrc ~/
