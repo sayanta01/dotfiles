@@ -57,7 +57,7 @@ sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 sudo apt install -y zsh zsh-syntax-highlighting zsh-autosuggestions \
 	apt-transport-https tmux fonts-terminus \
 	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
-	bspwm polybar rofi kitty dunst lxappearance maim playerctl pamixer \
+	bspwm polybar rofi kitty dunst lxappearance maim playerctl pulsemixer \
 	ffmpeg mpv sxiv exa fzf fd-find tldr duf zoxide \
 	zathura htop qt5-style-kvantum meld \
 	imwheel xclip xdo xwallpaper gpg cowsay xcape \
@@ -79,16 +79,17 @@ yes | curl -sS https://starship.rs/install.sh | sh
 # sudo dpkg-reconfigure console-setup
 
 # Fix debian
-if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-	echo "source ~/.profile" >> ~/.config/zsh/.zshrc
-fi
-ln -s ~/.config/zsh/.zshrc ~/.zshrc
-sudo ln -s /usr/bin/fdfind /usr/bin/fd
-
+sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth
 distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
 if [ "$distro" = "Kali" ]; then
-	sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth qterminal kali-hidpi-mode
-  # cp ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
+	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
+		echo "source ~/.profile" >>~/.config/zsh/.zshrc
+	fi
+	ln -s ~/.config/zsh/.zshrc ~/.zshrc
+	sudo ln -s /usr/bin/fdfind /usr/bin/fd
+	sudo apt install -y pamixer
+	sudo apt remove --purge qterminal kali-hidpi-mode
+	# cp ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
 else
 	:
 fi
