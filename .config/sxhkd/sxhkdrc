@@ -149,6 +149,10 @@ alt + t
 # terminal
 super + Return
         kitty 
+
+# scratchpad
+alt + Return
+           ~/.local/bin/bspwm/scpad
            
 # thunar
 super + e
