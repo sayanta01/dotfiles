@@ -39,8 +39,9 @@ Exec=dbus-launch Hyprland
 Type=Application
 EOF
 
-# sudo cat <<EOF | sudo tee /etc/sddm.conf.d/sddm.conf
-# [Theme]
-# Current=elarun
-# Font=MapleMono NF
-# EOF
+sudo cat <<EOF | sudo tee /etc/sddm.conf.d/sddm.conf
+[Theme]
+Current=elarun
+Font=MapleMono NF
+EOF
+sudo cp -r aesthetic.jpg /usr/share/sddm/themes/elarun/images/background.png
