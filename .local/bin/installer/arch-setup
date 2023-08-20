@@ -54,7 +54,7 @@ sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
 sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
-	exa bat tldr fd ripgrep procs duf dust man-db fzf bash-completion starship zoxide \
+	exa bat tldr fd procs duf dust man-db fzf bash-completion starship zoxide \
 	mate-calc firefox qutebrowser meld linux-headers \
 	linux-lts linux-lts-headers kitty newsboat trash-cli neovim \
 	neofetch stress htop cowsay gnome-keyring \

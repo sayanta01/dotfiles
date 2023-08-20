@@ -58,11 +58,13 @@ sudo apt install -y zsh zsh-syntax-highlighting zsh-autosuggestions \
 	apt-transport-https tmux fonts-terminus \
 	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
 	bspwm polybar rofi kitty dunst lxappearance maim playerctl pamixer \
-	ffmpeg mpv sxiv exa fzf nala ripgrep fd-find tldr duf zoxide \
+	ffmpeg mpv sxiv exa fzf fd-find tldr duf zoxide \
 	zathura htop qt5-style-kvantum meld \
 	imwheel xclip xdo xwallpaper gpg cowsay xcape \
 	exiftool aria2 wmname wmctrl neofetch \
-	transmission-daemon trash-cli docker.io ssh iftop aptitude synaptic
+	transmission-daemon trash-cli \
+	docker.io ssh iftop net-tools \
+	nala aptitude synaptic
 # lf betterlockscreen ncdu translate-shell
 # sudo systemctl enable docker.socket
 sudo systemctl enable ssh.socket
@@ -76,19 +78,20 @@ yes | curl -sS https://starship.rs/install.sh | sh
 # Console Font
 # sudo dpkg-reconfigure console-setup
 
-# Fix Kali
+# Fix debian
+if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
+	echo "source ~/.profile" >> ~/.config/zsh/.zshrc
+fi
+ln -s ~/.config/zsh/.zshrc ~/.zshrc
+sudo ln -s /usr/bin/fdfind /usr/bin/fd
+
 distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
 if [ "$distro" = "Kali" ]; then
-	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
-	fi
-  ln -s ~/.config/zsh/.zshrc ~/.zshrc
-  sudo ln -s /usr/bin/fdfind /usr/bin/fd
 	sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth qterminal kali-hidpi-mode
   # cp ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
 else
 	:
 fi
 
-# sudo systemd-analyze # Display Boot Time Info
+# sudo systemd-analyze # Boot time info
 # sudo su root -c "echo deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free >> /etc/apt/sources.list"
