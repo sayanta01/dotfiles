@@ -106,7 +106,7 @@ else
 	systemctl --user --now enable pipewire pipewire-pulse wireplumber
 
 	## Services
-	sudo pacman -S --noconfirm openssh bluez docker cronie dbus
+	sudo pacman -S --noconfirm openssh bluez docker dbus cronie
 fi
 
 # Display Manager
@@ -116,7 +116,8 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 
 # Check Nvidia GPU
 if lspci | grep -i nvidia; then
-	sudo pacman -S --noconfirm nvidia-dkms nvidia-settings opencl-nvidia nvtop glmark2
+	sudo pacman -S --noconfirm nvidia-dkms nvidia-settings opencl-nvidia \
+		nvtop glmark2
 else
 	echo "No NVIDIA GPU detected"
 fi
@@ -131,7 +132,7 @@ sudo pacman -S --noconfirm scrcpy android-tools android-file-transfer \
 # sudo usermod -aG vboxusers "$USER"  # USB usage for Virtual-Box
 
 # VM
-sudo pacman -S --noconfirm qemu virt-manager dnsmasq bridge-utils openbsd-netcat ovmf swtpm libvirt-runit spice-vdagent-runit
+sudo pacman -S --noconfirm qemu virt-manager dnsmasq bridge-utils openbsd-netcat libvirt-runit spice-vdagent-runit
 # libvirt spice-vdagent qemu-arch-extra
 sudo ln -s /etc/runit/sv/virtlogd /run/runit/service
 sudo touch /run/runit/service/virtlogd/down

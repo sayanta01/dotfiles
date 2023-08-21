@@ -83,7 +83,7 @@ sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth
 distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
 if [ "$distro" = "Kali" ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >>~/.config/zsh/.zshrc
+		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
 	sudo ln -s /usr/bin/fdfind /usr/bin/fd
