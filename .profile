@@ -55,8 +55,8 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android" # seems not working
 export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
-export UNISON="$XDG_DATA_HOME/unison"
 export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
+export UNISON="$XDG_DATA_HOME/unison"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/history"
