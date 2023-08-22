@@ -156,10 +156,10 @@ yes | paru -S betterlockscreen xwinwrap-git colorpicker google-chrome simple-mtp
 
 # Change Teletype font
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
-sudo su root -c "echo -e FONT='ter-d18b.psf.gz' >> /etc/vconsole.conf"
+sudo su root -c "echo -e FONT='ter-d18b.psf.gz' > /etc/vconsole.conf"
 
 # Fix qt
-# echo 'QT_QPA_PLATFORMTHEME="qt5ct"' | sudo tee -a /etc/environment
+sudo sh -c 'echo "QT_QPA_PLATFORMTHEME=\"qt5ct\"" > /etc/environment'
 
 # Get percentage of connected device
 sudo sed -i 's/# ControllerMode = bredr/ControllerMode = bredr/' /etc/bluetooth/main.conf
