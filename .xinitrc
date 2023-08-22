@@ -16,5 +16,3 @@ xfce) startxfce4 ;;
 dwm) ssh-agent dwm ;;
 *) exec $fav ;;
 esac
-
-# /usr/share/xsessions
