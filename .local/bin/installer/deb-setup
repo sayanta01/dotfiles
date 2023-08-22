@@ -85,7 +85,9 @@ if [ "$distro" = "Kali" ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
 		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
 	fi
+  sed -i "s|HISTFILE=\"\$XDG_DATA_HOME/history\"|HISTFILE=\"\$HOME/.zsh_history\"|" ~/.config/zsh/.zshrc
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
+
 	sudo ln -s /usr/bin/fdfind /usr/bin/fd
 	sudo apt install -y pamixer
 	sudo apt remove --purge qterminal kali-hidpi-mode
