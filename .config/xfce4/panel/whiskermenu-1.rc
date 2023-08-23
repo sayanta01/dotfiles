@@ -1,5 +1,5 @@
 favorites=xfce4-terminal-emulator.desktop,xfce4-file-manager.desktop,xfce4-web-browser.desktop
-recent=xfce-keyboard-settings.desktop,virtualbox.desktop,xfce4-mail-reader.desktop,pavucontrol.desktop,blueman-manager.desktop,blueman-adapters.desktop,julia.desktop,xfce-settings-manager.desktop,firefox.desktop,xfce4-settings-editor.desktop
+recent=xfce-wm-settings.desktop,xfce-keyboard-settings.desktop,xfce4-mail-reader.desktop,pavucontrol.desktop,blueman-manager.desktop,blueman-adapters.desktop,julia.desktop,xfce-settings-manager.desktop,firefox.desktop,xfce4-settings-editor.desktop
 button-icon=kali-panel-menu
 button-single-row=false
 show-button-title=false
