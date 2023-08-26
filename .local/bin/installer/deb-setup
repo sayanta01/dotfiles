@@ -75,25 +75,25 @@ yes | curl -sS https://starship.rs/install.sh | sh
 # aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 # cd ~/dl && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
-# Console Font
-# sudo dpkg-reconfigure console-setup
-
 # Fix debian
+sudo ln -s /usr/bin/fdfind /usr/bin/fd
 sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth
+
+distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
+[ "$distro" = "Kali" ] && sudo apt remove --purge qterminal kali-hidpi-mode
+
 distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
-if [ "$distro" = "Kali" ]; then
+if [ "$distro" = "Ubuntu" ] || [ "$distro" = "Kali" ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
 		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
-
-	sudo ln -s /usr/bin/fdfind /usr/bin/fd
-	sudo apt install -y pamixer
-	sudo apt remove --purge qterminal kali-hidpi-mode
-	# cp ~/.config/autostart/.hidden/xresources.desktop ~/.config/autostart
 else
 	:
 fi
+
+# Console Font
+# sudo dpkg-reconfigure console-setup
 
 # sudo systemd-analyze # Boot time info
 # sudo su root -c "echo deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main contrib non-free >> /etc/apt/sources.list"
