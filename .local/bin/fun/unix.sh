@@ -1,7 +1,6 @@
 #!/bin/sh
 
-#original artwork by http://www.sanderfocus.nl/#/portfolio/tech-heroes
-#converted to shell by #nixers @ irc.unix.chat
+# original artwork by http://www.sanderfocus.nl/#/portfolio/tech-heroes
 
 cat <<'eof'
                      [38;5;255m,_ ,_==▄▂[0m

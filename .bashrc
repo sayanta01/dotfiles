@@ -49,16 +49,12 @@ function hst() {
 }
 
 lfcd() {
-	tmp="$(mktemp)"
-	command lf -last-dir-path="$tmp" "$@"
+	tmp="$(mktemp -uq)"
+	trap 'rm -f $tmp >/dev/null 2>&1 && trap - HUP INT QUIT TERM PWR EXIT' HUP INT QUIT TERM PWR EXIT
+	lf -last-dir-path="$tmp" "$@"
 	if [ -f "$tmp" ]; then
 		dir="$(cat "$tmp")"
-		rm -f "$tmp"
-		if [ -d "$dir" ]; then
-			if [ "$dir" != "$(pwd)" ]; then
-				cd "$dir" || exit 1
-			fi
-		fi
+		[ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir" || return 1
 	fi
 }
 

@@ -1,9 +1,5 @@
 #!/bin/bash
 
-########################
-# snow.sh
-########################
-
 LINES=$(tput lines)
 COLUMNS=$(tput cols)
 

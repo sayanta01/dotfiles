@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# Author: GekkoP
-# Source: http://linuxbbq.org/bbs/viewtopic.php?f=4&t=1656#p33189
+# http://linuxbbq.org/bbs/viewtopic.php?f=4&t=1656#p33189
 
 f=3 b=4
 for j in f b; do
@@ -11,7 +10,6 @@ for j in f b; do
 done
 d=$'\e[1m'
 t=$'\e[0m'
-v=$'\e[7m'
 
 cat <<EOF
 

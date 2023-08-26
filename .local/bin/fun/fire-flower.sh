@@ -12,9 +12,7 @@ for i in {0..7}; do
 	printf -v g"$i" %b "\e[9${i}m"
 done
 
-bd=$'\e[1m'
 rt=$'\e[0m'
-iv=$'\e[7m'
 
 cat <<EOF
 
