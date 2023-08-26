@@ -1,8 +1,6 @@
 #!/bin/zsh
 
 export MANPAGER='nvim +Man!'
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
  --color=fg:#d6d6d6,bg:#121212,hl:#5f87af
  --color=fg+:#e8e8e8,bg+:#262626,hl+:#3bceff
@@ -71,8 +69,8 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT="MToolkit wmname LG3D"    # fix Java applications
 
-if [ -f "$HOME/.local/share/cargo/env" ]; then
-	source "$HOME/.local/share/cargo/env"
-else
-	source "$HOME/.cargo/env"
-fi
+# if [ -f "$HOME/.local/share/cargo/env" ]; then
+# 	source "$HOME/.local/share/cargo/env"
+# else
+# 	source "$HOME/.cargo/env"
+# fi
