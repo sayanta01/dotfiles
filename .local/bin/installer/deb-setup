@@ -54,17 +54,17 @@ sudo cp -r ~/.local/share/icons/Papirus-FlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
-sudo apt install -y zsh zsh-syntax-highlighting zsh-autosuggestions \
-	apt-transport-https tmux fonts-terminus \
+sudo apt install -y nala apt-transport-https \
+	zsh zsh-syntax-highlighting zsh-autosuggestions \
+	tmux fonts-terminus \
 	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
 	bspwm polybar rofi kitty dunst lxappearance maim playerctl pulsemixer \
 	ffmpeg mpv sxiv exa fzf fd-find tldr duf zoxide \
 	zathura htop qt5-style-kvantum meld \
-	imwheel xclip xdo xwallpaper gpg cowsay xcape \
+	imwheel xclip xdo xwallpaper gpg xcape \
 	exiftool aria2 wmname wmctrl neofetch \
 	transmission-daemon trash-cli \
-	docker.io ssh iftop net-tools \
-	nala aptitude synaptic
+	docker.io ssh iftop net-tools
 # lf betterlockscreen ncdu translate-shell
 # sudo systemctl enable docker.socket
 sudo systemctl enable ssh.socket
@@ -77,22 +77,22 @@ yes | curl -sS https://starship.rs/install.sh | sh
 
 # Fix debian
 sudo ln -s /usr/bin/fdfind /usr/bin/fd
-sudo apt remove --purge xfce4-clipman catfish onboard xterm cherrytree plymouth
+sudo apt remove purge xfce4-clipman catfish onboard xterm cherrytree plymouth
 
 distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
-[ "$distro" = "Kali" ] && sudo apt remove --purge qterminal kali-hidpi-mode
+[ "$distro" = "Kali" ] && sudo apt remove purge qterminal kali-hidpi-mode
 
-distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
-if [ "$distro" = "Ubuntu" ] || [ "$distro" = "Kali" ]; then
+distro=$(grep ID= /etc/os-release | sed -n 2p | cut -d= -f2)
+if [ "$distro" = "ubuntu" ] || [ "$distro" = "kali" ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
+		echo "source ~/.profile" >>~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
 else
 	:
 fi
 
-# Console Font
+# Console font
 # sudo dpkg-reconfigure console-setup
 
 # sudo systemd-analyze # Boot time info
