@@ -78,7 +78,7 @@ HELP
 }
 
 # parse command-line options
-# It depends on a valid COLORS which is set by _CP_init_termcap_vars
+# it depends on a valid COLORS which is set by _CP_init_termcap_vars
 parse() {
 	# test if $1 is a natural number in decimal, an integer >= 0
 	is_N() {

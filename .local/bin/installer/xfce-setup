@@ -1,65 +1,63 @@
 #!/bin/sh
 
 ##===== Xfce4 Base =====##
-sudo pacman -S exo garcon libxfce4ui libxfce4util thunar-volman tumbler xfce4-dev-tools \
-	xfce4-panel xfce4-session xfce4-settings xfconf xfce4-terminal xfdesktop xfwm4
+distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
+if [ "$distro" = "Artix" ]; then
+	sudo pacman -Rns xfce4-appfinder xfwm4-themes
+else
+	sudo apt purge xfce4-appfinder
+fi
 
-sudo pacman -Rns xfce4-appfinder xfwm4-themes
-
-##### Install #####
-#exo              # Application library for Xfce
+#### Install ####
+#exo              # Application library
 #garcon           # Implementation of the freedesktop.org menu specification
-#libxfce4ui       # Commonly used Xfce widgets among Xfce applications
-#libxfce4util     # Basic utility non-GUI functions for Xfce
-#thunar-volman    # Automatic management of removeable devices in Thunar
 #tumbler          # D-Bus service for applications to request thumbnails
-#xfce4-dev-tools  # Xfce developer tools
-#xfce4-panel      # Panel for the Xfce desktop environment
-#xfce4-session    # Session manager for Xfce
-#xfce4-settings   # Settings manager of the Xfce desktop
+#xfce4-session    # Session manager
+#xfce4-settings   # Settings manager
 #xfconf           # Flexible, easy-to-use configuration management system
-#xfce4-terminal   # A modern terminal emulator primarily for the Xfce desktop environment
-#xfdesktop        # A desktop manager for Xfce
-#xfwm4            # Xfce's window manager
-
-##### Remove #####
-# xfce4-appfinder  # An application finder
-# xfwm4-themes     # A set of additional themes for the Xfce window manager
+#xfdesktop        # Desktop manager
+#xfwm4            # Window manager
+#libxfce4ui       # Commonly used Xfce widgets among Xfce applications
+#libxfce4util     # Basic utility non-GUI functions
+#xfce4-dev-tools  # Developer tools
+#thunar-volman    # Automatic management of removeable devices in Thunar
 
 ##===== Xfce4 Goodies =====##
 sudo pacman -S xfce4-taskmanager xfce4-datetime-plugin ristretto xfce4-whiskermenu-plugin \
 	xfce4-pulseaudio-plugin xfce4-screenshooter xfce4-cpufreq-plugin xfce4-cpugraph-plugin
 
-sudo pacman -S xfce4-power-manager xfce4-battery-plugin xfce4-mount-plugin xfce4-mpc-plugin
+sudo pacman -S xfce4-power-manager xfce4-battery-plugin \
+	xfce4-mount-plugin xfce4-mpc-plugin
 
 sudo pacman -Rns mousepad parole xfce4-notifyd xfburn xfce4-dict \
-    xfce4-battery-plugin xfce4-clipman-plugin xfce4-eyes-plugin xfce4-battery-plugin \
-    xfce4-xkb-plugin xfce4-weather-plugin xfce4-wavelan-plugin xfce4-mailwatch-plugin \
-    xfce4-genmon-plugin xfce4-sensors-plugin xfce4-verve-plugin xfce4-timer-plugin \
-    xfce4-diskperf-plugin xfce4-netload-plugin xfce4-smartbookmark-plugin xfce4-fsguard-plugin \
-    xfce4-systemload-plugin xfce4-power-manager xfce4-screensaver xfce4-artwork xfce4-notes-plugin xfce4-time-out-plugin
+	xfce4-battery-plugin xfce4-clipman-plugin xfce4-eyes-plugin xfce4-battery-plugin \
+	xfce4-xkb-plugin xfce4-weather-plugin xfce4-wavelan-plugin xfce4-mailwatch-plugin \
+	xfce4-genmon-plugin xfce4-sensors-plugin xfce4-verve-plugin xfce4-timer-plugin \
+	xfce4-diskperf-plugin xfce4-netload-plugin xfce4-smartbookmark-plugin xfce4-fsguard-plugin \
+	xfce4-systemload-plugin xfce4-power-manager xfce4-screensaver \
+	xfce4-notes-plugin xfce4-artwork xfce4-time-out-plugin
 
-##### Install #####
+#### Install ####
 # xfce4-taskmanager
 # xfce4-screenshooter
 # xfce4-pulseaudio-plugin
-# ristretto                 # A fast and lightweight picture viewer for Xfce
+# ristretto                 # Fast and lightweight picture viewer
 # xfce4-cpufreq-plugin      # CPU frequency plugin
 # xfce4-cpugraph-plugin     # Graphical representation of the CPU load
 # xfce4-whiskermenu-plugin  # Menu for the Xfce4 panel
-# xfce4-datetime-plugin     # A date and time display plugin
+# xfce4-datetime-plugin     # Display date and time
 
-##### Install When Needed #####
+#### Install When Needed ####
 # xfce4-power-manager
-# xfce4-battery-plugin  # A battery monitor plugin
-# xfce4-mount-plugin    # Mount/Umount utility for the Xfce4 panel
-# xfce4-mpc-plugin      # Control the Music Player Daemon
+# xfce4-battery-plugin      # Battery monitor
+# xfce4-mount-plugin        # Mount/Umount utility for the Xfce4 panel
+# xfce4-mpc-plugin          # Control the Music Player Daemon
 
-##### Remove #####
+#### Remove ####
 # mousepad
 # parole                      # Modern media player based on the GStreamer framework
 # xfce4-notifyd
-# xfburn                      # A simple CD/DVD burning tool based on libburnia libraries
+# xfburn                      # Simple CD/DVD burning tool based on libburnia libraries
 # xfce4-artwork               # Backdrops
 # xfce4-screensaver
 # xfce4-clipman-plugin
@@ -69,7 +67,7 @@ sudo pacman -Rns mousepad parole xfce4-notifyd xfburn xfce4-dict \
 # xfce4-netload-plugin
 # xfce4-weather-plugin
 # xfce4-mailwatch-plugin
-# xfce4-dict                  # A dictionary plugin for the Xfce panel
+# xfce4-dict                  # Dictionary plugin for the Xfce panel
 # xfce4-xkb-plugin            # Plugin to switch keyboard layouts
 # xfce4-wavelan-plugin        # Plugin to monitor wifi connectivity
 # xfce4-genmon-plugin         # Plugin that monitors customizable programs stdout
@@ -79,4 +77,4 @@ sudo pacman -Rns mousepad parole xfce4-notifyd xfburn xfce4-dict \
 # xfce4-smartbookmark-plugin  # Allows you to send requests directly to your browser and perform a custom search
 # xfce4-time-out-plugin       # Pomodoro take a break from your computer with this plugin
 # xfce4-fsguard-plugin        # File system usage monitor plugin
-# xfce4-systemload-plugin     # A system load plugin
+# xfce4-systemload-plugin     # System load plugin

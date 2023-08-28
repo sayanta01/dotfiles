@@ -5,11 +5,11 @@ PROGRAM="unclutter"
 # Check if the program is running
 if pgrep "$PROGRAM" >/dev/null; then
 	# If the program is running, kill it
-	notify-send -t 990 "Unclutter ☠️" 
+	notify-send -t 990 "Unclutter ☠️"
 	pkill "$PROGRAM"
 else
 	# If the program is not running, start it
 	notify-send -t 990 "Unclutter 🚀"
-  unclutter -idle 0 &
+	unclutter -idle 0 &
 	# unclutter -idle 0.01 -root &
 fi

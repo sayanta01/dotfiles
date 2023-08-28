@@ -19,7 +19,6 @@ function move_flake() {
 		fi
 	fi
 
-	#printf "\033[%s;%sH\u274$[($RANDOM%6)+3]\033[1;1H" ${snowflakes[$i]} $i
 	printf "\033[%s;%sH\033[1;1H" "${snowflakes[$i]}" "$i"
 
 	lastflakes[$i]=${snowflakes[$i]}
@@ -27,9 +26,9 @@ function move_flake() {
 }
 
 while :; do
-	i=$(($RANDOM % $COLUMNS))
+	i=$((RANDOM % COLUMNS))
 
-	move_flake $i
+	move_flake "$i"
 
 	for x in "${!lastflakes[@]}"; do
 		move_flake "$x"

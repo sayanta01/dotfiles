@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
-
+#
+# https://github.com/sdushantha/fontpreview
+#
 # Dependencies: sxiv, imagemagick, xdotool, fzf
+
+VERSION=1.0.7
+
 # Default values
 SEARCH_PROMPT="❯ "
-SIZE=540x360
+SIZE=532x365
 POSITION="+0+0"
 FONT_SIZE=38
 BG_COLOR="#ffffff"
 FG_COLOR="#000000"
-PREVIEW_TEXT="Sayanta\ABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijklm\nnopqrstuvwxyz\n1234567890\n!@$\%(){}[]"
+PREVIEW_TEXT="Sayanta\nABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijklm\nnopqrstuvwxyz\n1234567890\n!@$\%(){}[]"
 
 show_help() {
 	printf "%s" "\
@@ -176,7 +181,7 @@ while true; do
 		exit
 		;;
 	--version)
-		echo "$VERSION"
+		echo $VERSION
 		exit
 		;;
 	-i | --input)

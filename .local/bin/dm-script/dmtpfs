@@ -10,7 +10,6 @@ fi
 # Select device
 Devices=$(simple-mtpfs -l)
 
-# if [ ! -n "$Devices" ]; then
 if [ -z "$Devices" ]; then
 	notify-send "No devices found ❌"
 	exit
@@ -23,7 +22,6 @@ else
 	fi
 fi
 
-# if [ ! -n "$(find "$Dir$Name" -maxdepth 0 -empty)" ]; then
 if [ -z "$(find "$Dir$Name" -maxdepth 0 -empty)" ]; then
 	fusermount -u "$Dir$Name" && gio trash "$Dir" && notify-send "Device Unmounted 📵"
 else

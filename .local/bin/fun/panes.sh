@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# http://linuxbbq.org/bbs/viewtopic.php?f=4&t=1656#p33189
-
 f=3 b=4
 for j in f b; do
 	for i in {0..7}; do

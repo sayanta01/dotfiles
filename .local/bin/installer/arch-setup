@@ -111,7 +111,7 @@ fi
 
 # Display Manager
 sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
-# lightdm-runit  ( artix )
+# lightdm-runit  # artix
 # dm-tool switch-to-greeter
 
 # Check Nvidia GPU
@@ -140,16 +140,16 @@ sudo ln -s /etc/runit/sv/libvirtd /run/runit/service
 sudo touch /run/runit/service/libvirtd/down
 sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service
 sudo touch /run/runit/service/spice-vdagentd/down
-# sudo systemctl enable --now libvirtd # arch
+# sudo systemctl enable --now libvirtd  # arch
 sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
 sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
 sudo usermod -aG libvirt "$USER"
-# sudo systemctl restart libvirtd # arch
+# sudo systemctl restart libvirtd  # arch
 
 # AUR
 git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru
 cd ~/.cache/paru && makepkg -fsri --noconfirm
-yes | paru -S betterlockscreen xwinwrap-git colorpicker google-chrome simple-mtpfs \
+yes | paru -S betterlockscreen colorpicker google-chrome simple-mtpfs \
 	visual-studio-code-bin powershell-bin ttyper cava anki-bin
 
 # /etc/pacman.conf    #IgnorePkg =

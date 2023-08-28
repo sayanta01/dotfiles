@@ -10,7 +10,7 @@ yes | paru -S xdg-desktop-portal-hyprland \
 	grim slurp swappy swww sddm-git \
 	libsixel waypipe \
 	libva libva-nvidia-driver-git
-# hyprland-nvidia-git nvidia-dkms
+# hyprland-nvidia-git
 # rofi-lbonn-wayland-git
 # https://github.com/nyyManni/dmenu-wayland
 
@@ -25,11 +25,9 @@ yes | paru -S xdg-desktop-portal-hyprland \
 # EOF
 
 sudo pacman -S --noconfirm hyprland waybar file-roller tumbler wlroots polkit-gnome \
-	qt5-wayland qt6-wayland sddm-runit \
+	qt5-wayland qt6-wayland ydotool sddm-runit \
 	wl-clipboard wf-recorder ffmpegthumbs viewnior
-# noise-suppression-for-voice
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
-# user input simulating tool - ydotool wtype
 
 sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop
 [Desktop Entry]
