@@ -61,7 +61,7 @@ sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	bspwm polybar sxhkd rofi dunst \
 	qt5ct qt6ct kvantum lxappearance xcape \
 	playerctl pulsemixer pavucontrol mpd ncmpcpp dbus-python \
-	cmake wmname imwheel pass \
+	cmake wmname pass \
 	wireless_tools net-tools network-manager-applet dnsutils iftop nmap \
 	mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper python-pip python-pywal \
 	zip unzip unrar p7zip engrampa \
