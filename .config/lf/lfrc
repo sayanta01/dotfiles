@@ -4,8 +4,6 @@ set ignorecase true
 set icons true
 set cleaner "~/.config/lf/lf_kitty_clean"
 set previewer "~/.config/lf/lf_kitty_preview"
-# set cleaner "~/.config/lf/cleaner"
-# set previewer "~/.config/lf/scope"
 
 # Cmds/Functions
 cmd open ${{
