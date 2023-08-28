@@ -87,15 +87,6 @@ alias push="git push origin"
 alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 alias tb="nc termbin.com 9999"
-cht() {
-	sh -c "curl cheat.sh/$1"
-}
-wttr() {
-	sh -c "curl wttr.in/$1"
-}
-rate() {
-	sh -c "curl rate.sx/$1"
-}
 alias myip="curl ifconfig.me; echo"
 alias php-server="php -S 0.0.0.0:8000"
 alias py-server="python -m http.server 8000"

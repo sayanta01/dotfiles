@@ -13,7 +13,7 @@ setopt promptsubst          # enable command substitution in prompt
 
 # Configure keybindings
 bindkey -e                                        # emacs key bindings
-bindkey -s '^o' 'lf^M'
+bindkey -s '^o' 'lfcd^M'
 bindkey -s '^r' 'hst^M'
 bindkey -s '^t' 'tmux^M'
 bindkey ' ' magic-space                           # history expansion on space
@@ -68,16 +68,17 @@ HISTFILE="$XDG_DATA_HOME/history"
 setopt hist_ignore_space       # ignore commands that start with space
 setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_all_dups    # ignore duplicated commands history list
-setopt hist_verify             # show command with history expansion to user before running it
+setopt hist_verify             # show command with history expansion
 
 # Plugins
 # Debian PATH
-#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-#source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
-#source /etc/zsh_command_not_found 2>/dev/null
+# source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+# source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
+# source /etc/zsh_command_not_found 2>/dev/null
 
 source ~/.config/zsh/tty-colors
 source ~/.config/shell/aliasrc
+source ~/.config/shell/function
 
 # Arch PATH
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
@@ -115,19 +116,5 @@ function hst() {
     fi
 }
 
-lfcd () {
-    tmp="$(mktemp)"
-    command lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        if [ -d "$dir" ]; then
-            if [ "$dir" != "$(pwd)" ]; then
-              cd "$dir" || exit 1
-            fi
-        fi
-    fi
-}
-
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "$HOME/.local/share/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.local/share/sdkman/bin/sdkman-init.sh"
+# [[ -s "$HOME/.local/share/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.local/share/sdkman/bin/sdkman-init.sh"

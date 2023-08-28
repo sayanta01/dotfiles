@@ -17,24 +17,7 @@ export HISTCONTROL=erasedups:ignoreboth
 
 # Aliases
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
-
-# Automatically do an ls after each cd
-# cd() {
-# 	if [ -n "$1" ]; then
-# 		builtin cd "$@" && ls
-# 	else
-# 		builtin cd ~ && ls
-# 	fi
-# }
-
-# For some reason, rot13 pops up everywhere
-rot13() {
-	if [ $# -eq 0 ]; then
-		tr 'a-mn-zA-MN-Z' 'n-za-mN-ZA-M'
-	else
-		echo "$*" | tr 'a-mn-zA-MN-Z' 'n-za-mN-ZA-M'
-	fi
-}
+[ -f "$HOME/.config/shell/function" ] && source "$HOME/.config/shell/function"
 
 function hst() {
 	session_type="$XDG_SESSION_TYPE"
@@ -48,15 +31,5 @@ function hst() {
 	fi
 }
 
-lfcd() {
-	tmp="$(mktemp -uq)"
-	trap 'rm -f $tmp >/dev/null 2>&1 && trap - HUP INT QUIT TERM PWR EXIT' HUP INT QUIT TERM PWR EXIT
-	lf -last-dir-path="$tmp" "$@"
-	if [ -f "$tmp" ]; then
-		dir="$(cat "$tmp")"
-		[ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir" || return 1
-	fi
-}
-
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "$HOME/.local/share/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.local/share/sdkman/bin/sdkman-init.sh"
+# [[ -s "$HOME/.local/share/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.local/share/sdkman/bin/sdkman-init.sh"
