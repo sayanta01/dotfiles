@@ -67,7 +67,7 @@ export LESSHISTFILE="-"    # disable files
 export QT_QPA_PLATFORMTHEME="gtk2"    # have QT use gtk2 theme
 export QT_QPA_PLATFORMTHEME="qt5ct"   
 export _JAVA_AWT_WM_NONREPARENTING=1
-export AWT_TOOLKIT="MToolkit wmname LG3D"    # fix Java applications
+export AWT_TOOLKIT="MToolkit wmname LG3D"  # fix Java applications
 
 # if [ -f "$HOME/.local/share/cargo/env" ]; then
 # 	source "$HOME/.local/share/cargo/env"

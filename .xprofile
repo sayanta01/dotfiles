@@ -8,4 +8,3 @@ pipewire-pulse &
 wireplumber &
 xcape -e 'Super_L=Alt_L|0' &
 kdeconnect-indicator &
-xrdb merge ~/.config/x11/xresources

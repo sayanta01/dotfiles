@@ -36,9 +36,9 @@ else
 fi
 
 # Suckless
-git clone --depth=1 https://github.com/LukeSmithxyz/st.git ~/dl/st
+git clone --depth=1 https://github.com/sayanta01/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
-git clone --depth=1 https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
+git clone --depth=1 https://github.com/sayanta01/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
 # My nvim config
