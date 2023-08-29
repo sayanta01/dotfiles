@@ -51,18 +51,18 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 # cache="${XDG_CACHE_HOME}/npm"
 # init-module="${XDG_CONFIG_HOME}/npm/config/npm-init.js"
 
-export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android" # seems not working
-export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
-export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
-export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
-export UNISON="$XDG_DATA_HOME/unison"
+# export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android" 
+# export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
+# export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
+# export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
+# export UNISON="$XDG_DATA_HOME/unison"
+# export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"    # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/history"
 export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
-# export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"    # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
 
 export LESSHISTFILE="-"    # disable files
 export QT_QPA_PLATFORMTHEME="gtk2"    # have QT use gtk2 theme
