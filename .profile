@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 export MANPAGER='nvim +Man!'
+
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
  --color=fg:#d6d6d6,bg:#121212,hl:#5f87af
  --color=fg+:#e8e8e8,bg+:#262626,hl+:#3bceff
