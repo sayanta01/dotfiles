@@ -154,6 +154,14 @@ yes | paru -S betterlockscreen colorpicker google-chrome simple-mtpfs \
 
 # /etc/pacman.conf    #IgnorePkg =
 
+distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
+if [ "$distro" = "Artix" ] || [ "$distro" = "Arch" ]; then
+	sed -i 's/^# source \/usr\/share\/zsh\/plugins\/zsh-syntax-highlighting\/zsh-syntax-highlighting.plugin.zsh/source \/usr\/share\/zsh\/plugins\/zsh-syntax-highlighting\/zsh-syntax-highlighting.plugin.zsh/' ~/.config/zsh/.zshrc
+	sed -i 's/^# source \/usr\/share\/zsh\/plugins\/zsh-autosuggestions\/zsh-autosuggestions.plugin.zsh/source \/usr\/share\/zsh\/plugins\/zsh-autosuggestions\/zsh-autosuggestions.plugin.zsh/' ~/.config/zsh/.zshrc
+else
+	:
+fi
+
 # Change Teletype font
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
 sudo su root -c "echo -e FONT='ter-d18b.psf.gz' > /etc/vconsole.conf"

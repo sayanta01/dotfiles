@@ -1,5 +1,5 @@
 # cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
-eval "$(zoxide init zsh)"  # comment this if u don't use zoxide
+# eval "$(zoxide init zsh)"  # comment this if u don't use zoxide
 
 # setopt correct              # auto correct mistakes
 # setopt autocd               # change directory just by typing its name
@@ -61,7 +61,7 @@ zstyle ':completion:*' list-prompt %S TAB for more
 zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-# History configurations
+# History configs
 HISTSIZE=2000
 SAVEHIST=2000
 HISTFILE="$XDG_DATA_HOME/history"
@@ -81,8 +81,8 @@ source ~/.config/shell/aliasrc
 source ~/.config/shell/function
 
 # Arch PATH
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null
 
 # Prompt
 autoload -Uz vcs_info colors && colors
@@ -98,12 +98,11 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 }
 
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})"
+zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}[%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%}]"
 
 PROMPT=' %b%{$fg[red]%}❯${vcs_info_msg_0_}%  '
-#PROMPT=' %b%{$fg[red]%}(%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M%{$fg[white]%}  %{$fg[red]%})%{$fg[white]%} ${vcs_info_msg_0_} ~%  '
-# %b  %{$fg[red]%}(  %{$fg[yellow]%}%n  %{$fg[green]%}@  %{$fg[magenta]%}%M   %{$fg[white]%}   %{$fg[red]%})  %{$fg[white]%}
  
+# Fzf history
 function hst() {
     session_type="$XDG_SESSION_TYPE"
 

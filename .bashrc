@@ -2,7 +2,6 @@
 # ~/.bashrc
 #
 
-eval "$(zoxide init bash)"
 eval "$(starship init bash)"
 
 [[ $- != *i* ]] && return # If not running interactively, don't do anything
