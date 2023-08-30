@@ -58,9 +58,9 @@ sudo apt install -y nala apt-transport-https \
 	zsh zsh-syntax-highlighting zsh-autosuggestions \
 	tmux fonts-terminus \
 	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
-	bspwm polybar rofi kitty dunst lxappearance maim playerctl pulsemixer \
+	bspwm polybar rofi kitty dunst maim playerctl pulsemixer \
 	ffmpeg mpv sxiv exa fzf fd-find tldr duf zoxide \
-	zathura htop qt5-style-kvantum meld \
+	zathura htop lxappearance breeze meld \
 	imwheel xclip xdo xwallpaper gpg xcape \
 	exiftool aria2 wmname wmctrl neofetch \
 	transmission-daemon trash-cli \
