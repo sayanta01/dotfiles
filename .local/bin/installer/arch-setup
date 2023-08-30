@@ -59,7 +59,7 @@ sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	linux-lts linux-lts-headers kitty newsboat trash-cli neovim \
 	neofetch stress htop cowsay gnome-keyring \
 	bspwm polybar sxhkd rofi dunst \
-	qt5ct qt6ct breeze lxappearance xcape \
+	qt5ct qt6ct lxappearance xcape \
 	playerctl pulsemixer pavucontrol mpd ncmpcpp dbus-python \
 	cmake wmname pass \
 	wireless_tools net-tools network-manager-applet dnsutils iftop nmap \

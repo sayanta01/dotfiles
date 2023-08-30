@@ -60,7 +60,7 @@ sudo apt install -y nala apt-transport-https \
 	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
 	bspwm polybar rofi kitty dunst maim playerctl pulsemixer \
 	ffmpeg mpv sxiv exa fzf fd-find tldr duf zoxide \
-	zathura htop lxappearance breeze meld \
+	zathura htop lxappearance meld \
 	imwheel xclip xdo xwallpaper gpg xcape \
 	exiftool aria2 wmname wmctrl neofetch \
 	transmission-daemon trash-cli \
