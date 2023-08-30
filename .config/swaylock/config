@@ -5,7 +5,7 @@ clock
 effect-blur=49x9
 effect-vignette=0.0:0.0
 color=1f1d2e80
-font=Cascadia Code
+font=SF Pro Text
 indicator
 indicator-radius=180
 indicator-thickness=8
