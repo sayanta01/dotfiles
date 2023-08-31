@@ -1,5 +1,4 @@
 # cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
-# eval "$(zoxide init zsh)"  # comment this if u don't use zoxide
 
 # setopt correct              # auto correct mistakes
 # setopt autocd               # change directory just by typing its name
@@ -31,7 +30,7 @@ bindkey '^K' kill-line
 
 #bindkey "^A" vi-beginning-of-line
 #bindkey '^E' end-of-line
-#bindkey '^H' backward-kill-word                   # forward del word 
+#bindkey '^H' backward-kill-word                  # forward del word 
 #bindkey '^K' kill-line
 #bindkey '^B' backward-char
 #bindkey '^F' forward-char

@@ -7,4 +7,3 @@ pipewire &
 pipewire-pulse &
 wireplumber &
 kdeconnect-indicator &
-xrdb merge ~/.config/x11/xresources

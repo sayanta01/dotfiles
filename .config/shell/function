@@ -1,5 +1,29 @@
 #!/bin/sh
 
+ext() {
+	if [ -f "$1" ]; then
+		case $1 in
+		*.tar.bz2) tar xjf "$1" ;;
+		*.tar.gz) tar xzf "$1" ;;
+		*.bz2) bunzip2 "$1" ;;
+		*.rar) unrar x "$1" ;;
+		*.gz) gunzip "$1" ;;
+		*.tar) tar xf "$1" ;;
+		*.tbz2) tar xjf "$1" ;;
+		*.tgz) tar xzf "$1" ;;
+		*.zip) unzip "$1" ;;
+		*.Z) uncompress "$1" ;;
+		*.7z) 7z x "$1" ;;
+		*.deb) ar x "$1" ;;
+		*.tar.xz) tar xf "$1" ;;
+		*.tar.zst) unzstd "$1" ;;
+		*) echo "'$1' cannot be extracted via ext()" ;;
+		esac
+	else
+		echo "'$1' is not a valid file"
+	fi
+}
+
 cht() {
 	sh -c "curl cheat.sh/$1"
 }
@@ -30,15 +54,6 @@ lfcd() {
 	fi
 }
 
-# For some reason, rot13 pops up everywhere
-rot13() {
-	if [ $# -eq 0 ]; then
-		tr 'a-mn-zA-MN-Z' 'n-za-mN-ZA-M'
-	else
-		echo "$*" | tr 'a-mn-zA-MN-Z' 'n-za-mN-ZA-M'
-	fi
-}
-
 # Automatically do an ls after each cd
 # cd() {
 # 	if [ -n "$1" ]; then
@@ -47,3 +62,12 @@ rot13() {
 # 		builtin cd ~ && ls
 # 	fi
 # }
+
+# For some reason, rot13 pops up everywhere
+rot13() {
+	if [ $# -eq 0 ]; then
+		tr 'a-mn-zA-MN-Z' 'n-za-mN-ZA-M'
+	else
+		echo "$*" | tr 'a-mn-zA-MN-Z' 'n-za-mN-ZA-M'
+	fi
+}

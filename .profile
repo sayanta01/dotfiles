@@ -43,8 +43,8 @@ export KODI_DATA="$XDG_DATA_HOME/kodi"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"          # run this - gpg2 --homedir "$XDG_DATA_HOME/gnupg"
-export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"     # to use this comment .zshrc wget alias
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"          # run - gpg2 --homedir "$XDG_DATA_HOME/gnupg"
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 # $npm config edit
 # prefix="${XDG_DATA_HOME}/npm"
@@ -64,9 +64,9 @@ export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 
-export LESSHISTFILE="-"    # disable files
+export LESSHISTFILE="-"      # disable files
 export QT_QPA_PLATFORMTHEME="gtk2"    # have QT use gtk2 theme
-export QT_QPA_PLATFORMTHEME="qt5ct"  
+export QT_QPA_PLATFORMTHEME="qt5ct"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT="MToolkit wmname LG3D"  # fix Java applications
 

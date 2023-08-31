@@ -119,8 +119,7 @@ alias ffmpeg="ffmpeg -hide_banner"
 alias ffplay="ffplay -hide_banner"
 alias ffprobe="ffprobe -hide_banner"
 alias tsm="transmission-remote"
-# alias wget="wget --hsts-file=/dev/null"
-alias wget='wget --hsts-file="$HOME/.cache/wget-hsts"'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias nvidia-setting='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
 
