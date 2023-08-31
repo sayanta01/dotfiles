@@ -17,30 +17,28 @@ read -r choice
 
 if [ "$choice" = "y" ]; then
 	# Maple-font
-	mver="v6.4"
-	wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
+	wget https://github.com/subframe7536/Maple-font/releases/latest/download/MapleMono-NF.zip
 	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
 	# Nerd-fonts
-	latest_nf="v3.0.2"
-	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/CascadiaCode.zip
+	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/JetBrainsMono.zip
-	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/Cousine.zip
-	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/FiraCode.zip
-	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Cousine.zip
+	yes | sudo unzip Cousine.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
+	yes | sudo unzip FiraCode.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip
+	yes | sudo unzip CascadiaCode.zip -d /usr/share/fonts/TTF
 	fc-cache -fv
-	rm -rf MapleMono-NF.zip CascadiaCode.zip JetBrainsMono.zip Cousine.zip FiraCode.zip
+	rm -rf MapleMono-NF.zip JetBrainsMono.zip Cousine.zip FiraCode.zip CascadiaCode.zip
 else
 	:
 fi
 
 # Suckless
 sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev
-git clone --depth=1 https://github.com/LukeSmithxyz/st.git ~/dl/st
+git clone --depth=1 https://github.com/sayanta01/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
-git clone --depth=1 https://github.com/LukeSmithxyz/dmenu.git ~/dl/dmenu
+git clone --depth=1 https://github.com/sayanta01/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
 # My nvim config
@@ -93,7 +91,7 @@ distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
 distro=$(grep ID= /etc/os-release | sed -n 2p | cut -d= -f2)
 if [ "$distro" = "ubuntu" ] || [ "$distro" = "kali" ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
+		echo "source ~/.profile" >>~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
 	ln -s ~/.config/x11/xinitrc ~/.xinitrc

@@ -16,21 +16,19 @@ read -r choice
 
 if [ "$choice" = "y" ]; then
 	# Maple-font
-	mver="v6.4"
-	wget https://github.com/subframe7536/Maple-font/releases/download/$mver/MapleMono-NF.zip
+	wget https://github.com/subframe7536/Maple-font/releases/latest/download/MapleMono-NF.zip
 	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
 	# Nerd-fonts
-	latest_nf="v3.0.2"
-	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/CascadiaCode.zip
+	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/JetBrainsMono.zip
-	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/Cousine.zip
-	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-	wget https://github.com/ryanoasis/nerd-fonts/releases/download/$latest_nf/FiraCode.zip
-	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Cousine.zip
+	yes | sudo unzip Cousine.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
+	yes | sudo unzip FiraCode.zip -d /usr/share/fonts/TTF
+	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip
+	yes | sudo unzip CascadiaCode.zip -d /usr/share/fonts/TTF
 	fc-cache -fv
-	rm -rf MapleMono-NF.zip CascadiaCode.zip JetBrainsMono.zip Cousine.zip FiraCode.zip
+	rm -rf MapleMono-NF.zip JetBrainsMono.zip Cousine.zip FiraCode.zip CascadiaCode.zip
 else
 	:
 fi
