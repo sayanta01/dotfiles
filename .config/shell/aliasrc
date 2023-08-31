@@ -21,6 +21,7 @@ alias update="sudo pacman -Syyu && echo '########## ⬆️AUR ##########'; paru 
 alias remove="sudo pacman -Rns"
 alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo "########## 🚮cleaning Paru cache ##########"; rm -rf ~/.cache/paru'
 alias unlock="sudo rm /var/lib/pacman/db.lck"
+alias fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
 alias installed="grep -i installed /var/log/pacman.log"
 alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 
