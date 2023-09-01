@@ -13,7 +13,7 @@ quiet=false
 # default theme
 loginbox=00000066
 loginshadow=00000000
-locktext="Type password..."
+locktext=""
 font="Comic Mono"
 
 ringwrongcolor=#282a36     #show ring before entering pswd 
