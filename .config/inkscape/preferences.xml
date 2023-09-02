@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<inkscape version="1" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+<inkscape version="1">
   <group id="window">
     <group id="menu" state="1" />
     <group id="commands" state="1" />
@@ -34,8 +34,9 @@
     <group id="scrollbars" state="0" />
   </group>
   <group id="template">
-    <sodipodi:namedview id="base" pagecolor="#ffffff" pageopacity="0.0" pagecheckerboard="0" bordercolor="#000000"
-      borderopacity="0.25" objecttolerance="10.0" gridtolerance="10.0" guidetolerance="10.0" pageshadow="2" />
+    <group id="base" pagecolor="#ffffff" deskcolor="#d1d1d1" pageopacity="0.0" pagecheckerboard="0"
+      bordercolor="#000000" borderopacity="0.25" objecttolerance="10.0" gridtolerance="10.0" guidetolerance="10.0"
+      pageshadow="2" />
   </group>
   <group id="tools" bounding_box="0">
     <group id="shapes" style="fill-rule:evenodd;" selcue="1" gradientdrag="1">
@@ -145,13 +146,23 @@
       <dash id="dash-0110-0110" style="stroke-dasharray:0.1,0.1" />
     </group>
   </group>
-  <group id="colorselector" page="0" switcher="1" />
+  <group id="colorselector" page="0" switcher="1">
+    <group id="RGB" visible="1" />
+    <group id="HSL" visible="1" />
+    <group id="CMYK" visible="1" />
+    <group id="HSV" visible="1" />
+    <group id="HSLuv" visible="1" />
+    <group id="OKLAB" visible="1" />
+    <group id="CMS" visible="1" />
+  </group>
   <group id="embedded">
-    <group id="swatches" panel_size="1" panel_mode="1" panel_ratio="100" panel_wrap="0" palette="Inkscape default" />
+    <group id="swatches" panel_size="1" panel_mode="1" panel_ratio="100" panel_wrap="0" palette="Inkscape default">
+      <group id="pinned" none="1" rgb000000="1" black="1" rgb808080="1" gray-50="1" rgbffffff="1" white="1" />
+    </group>
   </group>
   <group id="dialogs">
     <group id="toolbox" />
-    <group id="fillstroke" />
+    <group id="fillstroke" page="1" />
     <group id="filtereffects" />
     <group id="textandfont" />
     <group id="transformation" applyseparately="0" />
@@ -178,7 +189,7 @@
     <group id="extension-error" show-on-startup="0" />
     <group id="memory" />
     <group id="messages" />
-    <group id="swatches" />
+    <group id="swatches" palette="Auto" />
     <group id="iconpreview" />
     <group id="aboutextensions" />
     <group id="treeeditor" />
@@ -188,6 +199,7 @@
     <group id="input" />
     <group id="colorpickerwindow" />
     <group id="undo-history" />
+    <group id="objects" expand_to_layer="1" />
   </group>
   <group id="printing">
     <settings id="ps" />
@@ -208,7 +220,7 @@
     <group id="dragtolerance" value="4.0" />
     <group id="grabsize" value="4" />
     <group id="displayprofile" enable="0" from_display="0" intent="0" uri="" />
-    <group id="softproof" enable="0" intent="0" gamutcolor="#808080" gamutwarn="0" bpc="0" preserveblack="0" uri="" />
+    <group id="softproof" enable="0" intent="0" gamutcolor="#808080" gamutwarn="0" bpc="0" uri="" preserveblack="0" />
     <group id="savewindowgeometry" value="1" />
     <group id="defaultoffsetwidth" value="2px" />
     <group id="defaultscale" value="2px" />
@@ -265,17 +277,19 @@
     <group id="iconrender" named_nodelay="0" />
     <group id="autosave" enable="1" interval="10" path="" max="50" />
     <group id="grids" no_emphasize_when_zoomedout="0">
-      <group id="xy" units="px" origin_x="0.0" origin_y="0.0" spacing_x="1.0" spacing_y="1.0" empspacing="5"
-        dotted="0" />
+      <group id="xy" origin_x="0.0" origin_y="0.0" spacing_x="1.0" spacing_y="1.0" empspacing="5" dotted="0"
+        units="px" />
       <group id="axonom" units="mm" origin_x="0.0" origin_y="0.0" spacing_y="1.0" angle_x="30.0" angle_z="30.0"
         empspacing="5" />
     </group>
     <group id="workarounds" colorsontop="0" partialdynamic="0" />
     <group id="font" unitType="2" />
     <group id="boot" theme="custom">
-      <group id="shown" ver1.2.1="1" />
+      <group id="shown" ver1.2.1="1" ver1.3="1" />
     </group>
     <group id="rendering" />
+    <group id="threading" />
+    <group id="ruler" />
   </group>
   <group id="extensions" org.inkscape.output.png.inkscape.png_bitdepth="99"
     org.inkscape.output.png.inkscape.png_compression="6" org.inkscape.output.png.inkscape.png_antialias="2" />
@@ -321,12 +335,10 @@
   </group>
   <group id="ui" language="" />
   <group id="live_effects" flattening="0" />
-  <group id="theme" defaultPreferDarkTheme="0" defaultIconTheme="PapirusFlatMix" defaultGtkTheme="Sweet-Dark-v40"
-    narrowSpinButton="1" preferDarkTheme="1" darkTheme="1" symbolicIcons="1" symbolicDefaultBaseColors="1"
-    symbolicDefaultHighColors="1">
-    <group id="multicolor" symbolicBaseColor="3857049087" symbolicSuccessColor="3435973887"
-      symbolicWarningColor="2155905279" symbolicErrorColor="2155905279" />
-    <group id="PapirusFlatMix" symbolicBaseColor="3284652543" symbolicSuccessColor="9875967"
-      symbolicWarningColor="3428122879" symbolicErrorColor="3860020991" />
+  <group id="theme" defaultPreferDarkTheme="0" defaultIconTheme="Papirus-FlatMix" defaultGtkTheme="Sweet-Dark-v40"
+    narrowSpinButton="1" preferDarkTheme="1" darkTheme="1" symbolicIcons="0" symbolicDefaultBaseColors="1"
+    symbolicDefaultHighColors="1" syntax-color-theme="inkscape-dark" iconTheme="multicolor">
+    <group id="multicolor" symbolicBaseColor="3958107135" symbolicSuccessColor="180295167"
+      symbolicWarningColor="4279865599" symbolicErrorColor="10086143" />
   </group>
 </inkscape>
