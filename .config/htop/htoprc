@@ -1,5 +1,5 @@
-# Beware! This file is rewritten by htop when settings are changed in the interface.
-# The parser is also very primitive, and not human-friendly.
+# Beware! This file is rewritten by htop when settings are changed in the interface
+# The parser is also very primitive, and not human-friendly
 show_program_path=1
 highlight_base_name=1
 show_cpu_frequency=1

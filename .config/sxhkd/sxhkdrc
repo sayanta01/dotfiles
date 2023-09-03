@@ -4,7 +4,7 @@
 
 # brightness control
 XF86MonBrightness{Up,Down}
-	             xbacklight{ --inc 10, --dec 10}
+	               xbacklight{ --inc 10, --dec 10}
 	
 # volume control 
 XF86AudioRaiseVolume
@@ -49,19 +49,19 @@ super + d
 
 # pywal
 super + alt + o
-              ~/.local/bin/pywal
+        ~/.local/bin/pywal
 
 # wallch
 super + alt + p
-              ~/.local/bin/wallch
+        ~/.local/bin/wallch
 
 # temp clip
 super + alt + t
-              ~/.local/bin/dm-script/tclip
+        ~/.local/bin/dm-script/tclip
 
 # display clip
 super + alt + d
-              ~/.local/bin/dm-script/dclip
+        ~/.local/bin/dm-script/dclip
 
 # bluetooth
 alt + F1
@@ -152,7 +152,7 @@ super + Return
 
 # scratchpad
 alt + Return
-           ~/.local/bin/bspwm/scpad
+      ~/.local/bin/bspwm/scpad
            
 # thunar
 super + e
@@ -160,15 +160,15 @@ super + e
 
 # calc
 ctrl + alt + k
-             mate-calculator
+       mate-calculator
 
 # screenlock
 ctrl + alt + l
-             ~/.local/bin/lockscreen
+       ~/.local/bin/lockscreen
 	     
 # kill ps
 ctrl + alt + Delete
-             ~/.local/bin/dm-script/kil	     
+       ~/.local/bin/dm-script/kil	     
 
 
 #

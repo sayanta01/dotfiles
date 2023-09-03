@@ -41,7 +41,7 @@ set recolor-darkcolor           "#dadada" # Foreground
 # Startup options
 set sandbox none
 set recolor true
-set font "JetBrainsMono Nerd Font 10"
+set font "JetBrainsMono NF 10"
 set page-padding 2
 set window-height 800
 set window-width 800
