@@ -37,7 +37,7 @@ bspc rule -a scpad locked=on sticky=on state=floating rectangle=900x400+500+32
 xsetroot -cursor_name left_ptr &
 ./.config/polybar/launch.sh &
 ./.config/sxhkd/sxhkd.sh &
-xset r rate 260 60 &
+xset r rate 280 60 &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
 # xcape -e 'super_l=alt_l|0' &
 # kdeconnect-indicator &
