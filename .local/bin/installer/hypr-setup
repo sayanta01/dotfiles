@@ -25,8 +25,8 @@ yes | paru -S xdg-desktop-portal-hyprland \
 # EOF
 
 sudo pacman -S --noconfirm hyprland waybar file-roller tumbler wlroots polkit-gnome \
-	qt5-wayland qt6-wayland ydotool sddm-runit \
-	wl-clipboard wf-recorder ffmpegthumbs viewnior
+	qt5-wayland qt6-wayland viewnior sddm-runit \
+	wl-clipboard wf-recorder ffmpegthumbs ydotool
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
 
 sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop
