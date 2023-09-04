@@ -1,0 +1,4 @@
+! Sxiv Colors
+Sxiv.background: #000000
+Sxiv.foreground: #626294
+Sxiv.font: JetBrainsMono NF:size=11
