@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #### VOID ####
-sudo mkdir /usr/share/grub/themes # same steps of Arch / Debian
+# same steps of Arch / Debian
+sudo mkdir /usr/share/grub/themes
 
 #### ARCH ####
 sudo cp -r catppuccin-mocha-grub-theme /usr/share/grub/themes/
