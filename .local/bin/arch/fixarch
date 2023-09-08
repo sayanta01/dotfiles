@@ -2,8 +2,8 @@
 
 distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
 if [ "$distro" = "Artix" ]; then
-	sudo pacman -Sy artix-archlinux-support
-	sudo pacman -S artix-keyring
+	sudo pacman -Sy --noconfirm artix-archlinux-support
+	sudo pacman -S --noconfirm artix-keyring
 	sudo pacman-key --populate artix
 elif [ "$distro" = "Arch" ]; then
 	echo "Running Arch-specific commands..."
