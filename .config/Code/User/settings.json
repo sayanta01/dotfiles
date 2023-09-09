@@ -30,7 +30,7 @@
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
-  "vim.sneak": true,
+  // "vim.sneak": true,
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
@@ -38,7 +38,6 @@
     }
   ],
   "vim.normalModeKeyBindings": [
-    // buffer
     {
       "before": ["<S-l>"],
       "commands": ["workbench.action.nextEditor"]
@@ -163,14 +162,6 @@
       "before": ["<leader>", "e"],
       "commands": ["workbench.view.explorer"]
     }
-    // {
-    //   "before": ["C-e"],
-    //   "after": ["_"]
-    // },
-    // {
-    //   "before": ["C-b"],
-    //   "after": ["$"]
-    // }
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
@@ -200,7 +191,7 @@
   "editor.cursorBlinking": "solid",
   "errorLens.enabled": true,
   "explorer.confirmDragAndDrop": false,
-  "window.menuBarVisibility": "toggle"
-  // "git.openRepositoryInParentFolders": "never",
-  // "editor.scrollbar.vertical": "hidden",
+  "window.menuBarVisibility": "toggle",
+  "editor.scrollbar.vertical": "hidden"
+  // "git.openRepositoryInParentFolders": "never"
 }

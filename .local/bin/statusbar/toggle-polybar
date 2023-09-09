@@ -16,5 +16,5 @@ else
 	bspc config -m "$toggle" top_padding 27
 fi
 
-#run "xwininfo" tap cursor in polybar
-#change window id
+# run "xwininfo" tap cursor in polybar
+# change window id

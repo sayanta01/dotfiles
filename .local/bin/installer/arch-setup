@@ -52,23 +52,23 @@ sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
 sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
-	exa bat fd fzf man-db tldr procs duf bash-completion starship \
+	exa bat fd fzf man-db bash-completion starship \
 	mate-calc firefox qutebrowser meld linux-headers \
 	linux-lts linux-lts-headers kitty newsboat trash-cli neovim \
 	neofetch stress htop cowsay gnome-keyring \
 	bspwm polybar sxhkd rofi dunst \
 	qt5ct qt6ct lxappearance xcape \
-	playerctl pulsemixer pavucontrol mpd ncmpcpp dbus-python \
+	playerctl pulsemixer pavucontrol mpd ncmpcpp \
 	cmake wmname pass \
-	wireless_tools net-tools network-manager-applet dnsutils iftop nmap \
+	wireless_tools net-tools network-manager-applet dnsutils iftop \
 	mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper python-pip python-pywal \
 	zip unzip unrar p7zip engrampa \
-	ncdu lf gvfs thunar thunar-archive-plugin thunar-media-tags-plugin \
+	lf gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 	zathura zathura-pdf-mupdf ghostscript \
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-	rsync wget aria2 yt-dlp transmission-cli jq \
+	rsync wget yt-dlp aria2 transmission-cli jq \
 	xdg-utils xdg-user-dirs xdo \
-	gvfs-mtp gvfs-gphoto2 socat exfat-utils \
+	socat nmap exfat-utils \
 	xorg-xinit xclip xdotool wmctrl unclutter
 # libx11 libxft libxrandr libxinerama
 # xorg-server xorg-xrdb xorg-xwininfo xorg-xprop xorg-xrandr xorg-xsetroot xorg-xbacklight

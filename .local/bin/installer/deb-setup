@@ -57,7 +57,7 @@ sudo apt install -y nala apt-transport-https \
 	tmux fonts-terminus \
 	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
 	bspwm polybar rofi kitty dunst maim playerctl pulsemixer \
-	ffmpeg mpv sxiv exa fzf fd-find tldr duf \
+	ffmpeg mpv sxiv exa fzf fd-find \
 	zathura htop lxappearance meld \
 	imwheel xclip xdo xdotool xwallpaper gpg xcape \
 	exiftool aria2 wmname wmctrl neofetch \
