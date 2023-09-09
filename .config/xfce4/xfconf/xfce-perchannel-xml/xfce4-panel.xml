@@ -11,6 +11,7 @@
       <property name="size" type="uint" value="28"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
+        <value type="int" value="6"/>
         <value type="int" value="9"/>
         <value type="int" value="3"/>
         <value type="int" value="11"/>
@@ -31,7 +32,56 @@
     <property name="dark-mode" type="bool" value="false"/>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-1" type="string" value="whiskermenu"/>
+    <property name="plugin-1" type="string" value="whiskermenu">
+      <property name="button-icon" type="string" value="kali-panel-menu"/>
+      <property name="launcher-show-description" type="bool" value="false"/>
+      <property name="hover-switch-category" type="bool" value="true"/>
+      <property name="view-mode" type="int" value="1"/>
+      <property name="sort-categories" type="bool" value="false"/>
+      <property name="default-category" type="int" value="1"/>
+      <property name="favorites-in-recent" type="bool" value="true"/>
+      <property name="position-search-alternate" type="bool" value="false"/>
+      <property name="position-categories-alternate" type="bool" value="true"/>
+      <property name="menu-width" type="int" value="600"/>
+      <property name="menu-height" type="int" value="600"/>
+      <property name="show-command-lockscreen" type="bool" value="false"/>
+      <property name="command-switchuser" type="string" value="dm-tool switch-to-greeter"/>
+      <property name="show-command-logout" type="bool" value="false"/>
+      <property name="show-command-menueditor" type="bool" value="false"/>
+      <property name="show-command-profile" type="bool" value="false"/>
+      <property name="favorites" type="array">
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="xfce4-file-manager.desktop"/>
+        <value type="string" value="xfce4-web-browser.desktop"/>
+      </property>
+      <property name="recent" type="array">
+        <value type="string" value="xfce4-settings-editor.desktop"/>
+        <value type="string" value="waydroid.com.android.settings.desktop"/>
+        <value type="string" value="firefox.desktop"/>
+        <value type="string" value="xfce-mouse-settings.desktop"/>
+        <value type="string" value="nm-connection-editor.desktop"/>
+        <value type="string" value="xfce4-about.desktop"/>
+        <value type="string" value="xfce-wm-settings.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="xfce4-mail-reader.desktop"/>
+        <value type="string" value="pavucontrol.desktop"/>
+      </property>
+      <property name="profile-shape" type="int" value="2"/>
+      <property name="position-profile-alternate" type="bool" value="false"/>
+      <property name="button-single-row" type="bool" value="false"/>
+      <property name="show-button-icon" type="bool" value="false"/>
+      <property name="show-button-title" type="bool" value="true"/>
+      <property name="position-categories-horizontal" type="bool" value="false"/>
+      <property name="menu-opacity" type="int" value="100"/>
+      <property name="category-show-name" type="bool" value="true"/>
+      <property name="launcher-show-name" type="bool" value="true"/>
+      <property name="launcher-show-tooltip" type="bool" value="true"/>
+      <property name="position-commands-alternate" type="bool" value="false"/>
+      <property name="stay-on-focus-out" type="bool" value="false"/>
+      <property name="recent-items-max" type="int" value="10"/>
+      <property name="confirm-session-command" type="bool" value="true"/>
+      <property name="show-command-settings" type="bool" value="false"/>
+    </property>
     <property name="plugin-9" type="string" value="pager">
       <property name="miniature-view" type="bool" value="true"/>
       <property name="rows" type="uint" value="1"/>
@@ -115,7 +165,7 @@
       <property name="digital-time-font" type="string" value="SF Pro Text Semi-Bold 11"/>
     </property>
     <property name="plugin-2" type="string" value="cpugraph">
-      <property name="update-interval" type="int" value="3"/>
+      <property name="update-interval" type="int" value="4"/>
       <property name="time-scale" type="int" value="0"/>
       <property name="size" type="int" value="50"/>
       <property name="mode" type="int" value="2"/>
@@ -191,6 +241,9 @@
       <property name="style" type="uint" value="2"/>
     </property>
     <property name="plugin-4" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-6" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
   </property>
