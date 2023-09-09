@@ -45,6 +45,10 @@ git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
 git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # Themes
+wget -P ~/dl https://github.com/ful1e5/apple_cursor/releases/latest/download/macOS-BigSur.tar.gz
+cd ~/dl || exit
+tar -xvf macOS-BigSur.tar.gz
+sudo cp -r macOS-BigSur /usr/share/icons
 git clone --depth=1 https://github.com/sayanta01/Papirus-FlatMix ~/.local/share/icons/Papirus-FlatMix
 sudo cp -r ~/.local/share/icons/Papirus-FlatMix /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
