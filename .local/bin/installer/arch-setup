@@ -1,13 +1,13 @@
 #!/bin/sh
 
-dots=".bashrc .bash_profile .profile .zprofile .xprofile .xinitrc .imwheelrc .vimrc"
+dots=".bashrc .profile .vimrc .xprofile .zprofile"
 for file in $dots; do
 	cp -r ~/dotfiles/"$file" ~/
 done
 mkdir "$HOME/.local/bin"
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/
-for dir in desk dox dl music vids pix templates pub code imp; do
+for dir in desk dl dox music pix vids pub templates code imp; do
 	mkdir ~/"$dir"
 done
 
