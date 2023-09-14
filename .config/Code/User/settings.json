@@ -125,15 +125,15 @@
     {
       "before": ["<leader>", "l", "q"],
       "commands": ["editor.action.quickFix"]
-    },
-    {
-      "before": ["<leader>", "l", "i"],
-      "commands": ["editor.showIncomingCalls"]
-    },
-    {
-      "before": ["<leader>", "l", "o"],
-      "commands": ["editor.showOutgoingCalls"]
     }
+    // {
+    //   "before": ["<leader>", "l", "i"],
+    //   "commands": ["editor.showIncomingCalls"]
+    // },
+    // {
+    //   "before": ["<leader>", "l", "o"],
+    //   "commands": ["editor.showOutgoingCalls"]
+    // }
   ],
   "vim.visualModeKeyBindings": [
     {
