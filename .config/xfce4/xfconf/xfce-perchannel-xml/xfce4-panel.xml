@@ -55,16 +55,16 @@
         <value type="string" value="xfce4-web-browser.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="xfce4-settings-editor.desktop"/>
-        <value type="string" value="waydroid.com.android.settings.desktop"/>
-        <value type="string" value="firefox.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
         <value type="string" value="xfce-mouse-settings.desktop"/>
-        <value type="string" value="nm-connection-editor.desktop"/>
-        <value type="string" value="xfce4-about.desktop"/>
+        <value type="string" value="xfce4-terminal.desktop"/>
         <value type="string" value="xfce-wm-settings.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="xfce4-mail-reader.desktop"/>
-        <value type="string" value="pavucontrol.desktop"/>
+        <value type="string" value="org.inkscape.Inkscape.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="xfce4-file-manager.desktop"/>
+        <value type="string" value="xfce-display-settings.desktop"/>
+        <value type="string" value="xfce-backdrop-settings.desktop"/>
+        <value type="string" value="xfce4-mime-settings.desktop"/>
       </property>
       <property name="profile-shape" type="int" value="2"/>
       <property name="position-profile-alternate" type="bool" value="false"/>
@@ -121,6 +121,7 @@
         <value type="string" value="networkmanager applet"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="spotify-client"/>
         <value type="string" value="KDE Connect Indicator"/>
         <value type="string" value="discord1"/>
         <value type="string" value="Slack1"/>

@@ -4,7 +4,7 @@
   <property name="general" type="empty">
     <property name="button_layout" type="string" value="O|SHMC"/>
     <property name="theme" type="string" value="empty"/>
-    <property name="title_font" type="string" value="Qanelas Bold 9"/>
+    <property name="title_font" type="string" value="SF Pro Text Medium 9"/>
     <property name="easy_click" type="string" value="Alt"/>
     <property name="workspace_count" type="int" value="10"/>
     <property name="cycle_workspaces" type="bool" value="false"/>
