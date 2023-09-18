@@ -3,6 +3,7 @@
 #
 
 eval "$(starship init bash)"
+export PS1="\W \[\e[31m\]❯\[\e[m\] "
 
 [[ $- != *i* ]] && return # If not running interactively, don't do anything
 
