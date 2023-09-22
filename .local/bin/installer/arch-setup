@@ -151,7 +151,7 @@ sudo usermod -aG libvirt "$USER"
 # AUR
 git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru
 cd ~/.cache/paru && makepkg -fsri --noconfirm
-yes | paru -S betterlockscreen colorpicker google-chrome simple-mtpfs \
+yes | paru -S betterlockscreen colorpicker simple-mtpfs \
 	visual-studio-code-bin powershell-bin ttyper cava
 
 # /etc/pacman.conf    #IgnorePkg =
