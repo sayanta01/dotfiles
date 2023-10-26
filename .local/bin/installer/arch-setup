@@ -118,8 +118,7 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 
 # Check Nvidia GPU
 if lspci | grep -i nvidia; then
-	sudo pacman -S --noconfirm nvidia-dkms lib32-nvidia-utils \
-    nvidia-settings opencl-nvidia \
+	sudo pacman -S --noconfirm nvidia-dkms nvidia-settings opencl-nvidia \
 		nvtop glmark2
 else
 	echo "No NVIDIA GPU detected"
