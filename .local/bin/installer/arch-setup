@@ -57,7 +57,7 @@ sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
 	exa bat fd fzf man-db bash-completion starship \
-	mate-calc firefox qutebrowser meld linux-headers \
+	mate-calc firefox qutebrowser meld \
 	linux-lts linux-lts-headers kitty newsboat trash-cli neovim \
 	neofetch stress htop cowsay gnome-keyring \
 	bspwm polybar sxhkd rofi dunst \
@@ -118,7 +118,8 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 
 # Check Nvidia GPU
 if lspci | grep -i nvidia; then
-	sudo pacman -S --noconfirm nvidia-dkms nvidia-settings opencl-nvidia \
+	sudo pacman -S --noconfirm nvidia-dkms lib32-nvidia-utils \
+    nvidia-settings opencl-nvidia \
 		nvtop glmark2
 else
 	echo "No NVIDIA GPU detected"

@@ -31,8 +31,8 @@ mount /dev/sda1 /mnt/boot/efi
 # swapon /dev/sda3
 
 ##### install base system #####
-basestrap /mnt base base-devel linux linux-firmware neovim zsh tmux runit elogind-runit  ( artix )
- pacstrap -K /mnt base base-devel linux linux-firmware neovim zsh tmux  ( arch )
+basestrap /mnt base base-devel linux linux-headers linux-firmware neovim zsh tmux runit elogind-runit  ( artix )
+ pacstrap -K /mnt base base-devel linux linux-headers linux-firmware neovim zsh tmux  ( arch )
 
 #### generate fstab ####
 fstabgen -U /mnt >> /mnt/etc/fstab  ( artix )
