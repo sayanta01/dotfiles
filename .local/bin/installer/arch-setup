@@ -117,12 +117,13 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # dm-tool switch-to-greeter
 
 # Check Nvidia GPU
-if lspci | grep -i nvidia; then
-	sudo pacman -S --noconfirm nvidia-dkms nvidia-settings opencl-nvidia \
-		nvtop glmark2
-else
-	echo "No NVIDIA GPU detected"
-fi
+# if lspci | grep -i nvidia; then
+## for lts kernel - nvidia-dkms
+# 	sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia \
+# 		nvtop glmark2
+# else
+# 	echo "No NVIDIA GPU detected"
+# fi
 
 # GUI apps
 sudo pacman -S --noconfirm scrcpy android-tools android-file-transfer \

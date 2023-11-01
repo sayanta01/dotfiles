@@ -658,13 +658,13 @@ button.suggested-action {
   border: none;
   box-shadow: none;
   color: white;
-  border-radius: 100px;
-  background: linear-gradient(to right, #654ea3 0%, #eaafc8 100%); }
+  border-radius: 8px;
+  background: linear-gradient(45deg, #5433FF, #E948FF, #FF005B); }
   .selection-mode button.titlebutton, button.suggested-action.flat {
     box-shadow: none;
     color: white;
-    border-radius: 100px;
-    background: linear-gradient(to right, #654ea3 0%, #eaafc8 100%); }
+    border-radius: 8px;
+    background: linear-gradient(45deg, #5433FF, #E948FF, #FF005B); }
   button.suggested-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
@@ -768,13 +768,13 @@ button.destructive-action {
   border: none;
   box-shadow: none;
   color: white;
-  border-radius: 100px;
+  border-radius: 8px;
   background: linear-gradient(to right, #FF416C, #FF4B2B); }
   button.destructive-action.flat {
     box-shadow: none;
     color: white;
-    border-radius: 100px;
-    background: linear-gradient(to right, #654ea3 0%, #eaafc8 100%); }
+    border-radius: 8px;
+    background: linear-gradient(45deg, #5433FF, #E948FF, #FF005B); }
   button.destructive-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
@@ -1030,7 +1030,7 @@ popover.background radiobutton,
   modelbutton.flat:hover, popover.background checkbutton:hover,
   popover.background radiobutton:hover,
   .menuitem.button.flat:hover {
-    background-color: #202435; }
+    background-color: #252a3f; }
   modelbutton.flat check:last-child, popover.background checkbutton check:last-child,
   popover.background radiobutton check:last-child,
   modelbutton.flat radio:last-child,
@@ -2251,13 +2251,13 @@ GraniteWidgetsWelcome {
     headerbar button.suggested-action {
       box-shadow: none;
       border: none;
-      background-image: linear-gradient(to right, #654ea3 0%, #eaafc8 100%); }
+      background-image: linear-gradient(45deg, #5433FF, #E948FF, #FF005B); }
       .titlebar button.suggested-action:disabled, .titlebar button.suggested-action:disabled:backdrop, .titlebar button.suggested-action:backdrop,
       headerbar button.suggested-action:disabled,
       headerbar button.suggested-action:disabled:backdrop,
       headerbar button.suggested-action:backdrop {
         border: none;
-        background-image: linear-gradient(to right, #654ea3 0%, #eaafc8 100%); }
+        background-image: linear-gradient(45deg, #5433FF, #E948FF, #FF005B); }
         .titlebar button.suggested-action:disabled:hover, .titlebar button.suggested-action:disabled:active, .titlebar button.suggested-action:disabled:checked, .titlebar button.suggested-action:disabled:backdrop:hover, .titlebar button.suggested-action:disabled:backdrop:active, .titlebar button.suggested-action:disabled:backdrop:checked, .titlebar button.suggested-action:backdrop:hover, .titlebar button.suggested-action:backdrop:active, .titlebar button.suggested-action:backdrop:checked,
         headerbar button.suggested-action:disabled:hover,
         headerbar button.suggested-action:disabled:active,
@@ -2269,7 +2269,7 @@ GraniteWidgetsWelcome {
         headerbar button.suggested-action:backdrop:active,
         headerbar button.suggested-action:backdrop:checked {
           border: none;
-          background-image: linear-gradient(to right, #654ea3 0%, #eaafc8 100%); }
+          background-image: linear-gradient(45deg, #5433FF, #E948FF, #FF005B); }
     .titlebar button.appmenu,
     headerbar button.appmenu {
       background: transparent; }
@@ -2586,7 +2586,8 @@ infobar {
       box-shadow: none; }
 
 .info {
-  background-color: #71f79f; }
+  background-color: #71f79f;
+  color: #000000; }
   .info:backdrop {
     background-color: #a1fac0;
     color: rgba(254, 254, 254, 0.5); }
@@ -2710,10 +2711,8 @@ list {
     border-color: #0a0c11; }
 
 row {
-  padding: 5px 11px;
-  transition: all 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-  row label {
-    padding-left: 8px; }
+  background-color: transparent;
+  border-color: #090a0f; }
   row:hover {
     transition: none; }
   row:backdrop {
@@ -4557,12 +4556,11 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     padding: 2px 0 0; }
   .budgie-popover button,
   .budgie-popover.background button {
-    color: #C3C7D1;
-    border: none;
-    background: transparent; }
+    color: #C3C7D1; }
     .budgie-popover button:hover,
     .budgie-popover.background button:hover {
-      color: #c50ed2; }
+      color: #fefefe;
+      background: #212638; }
 
 .budgie-popover > .container {
   padding: 2px; }
@@ -4606,7 +4604,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
       box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.2); }
     .budgie-menu .category-button:checked {
       color: #fefefe;
-      background: linear-gradient(to right, #654ea3 0%, #eaafc8 100%); }
+      background: linear-gradient(45deg, #5433FF, #E948FF, #FF005B); }
       .budgie-menu .category-button:checked:hover {
         color: rgba(254, 254, 254, 0.9); }
     .budgie-menu .category-button:checked:disabled {
@@ -4620,8 +4618,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 0;
-    box-shadow: none;
-    background: yellow; }
+    box-shadow: none; }
   .budgie-menu button {
     border: none;
     background: transparent; }
@@ -4797,7 +4794,7 @@ button.raven-trigger {
     color: white;
     font-weight: 700; }
   .budgie-panel.transparent {
-    background-color: rgba(0, 0, 0, 0.2); }
+    background-color: rgba(0, 0, 0, 0.4); }
     .top .budgie-panel.transparent {
       border-bottom-color: transparent; }
     .bottom .budgie-panel.transparent {
@@ -5098,7 +5095,7 @@ button.raven-trigger {
       background: #c74ded;
       color: #fefefe; }
     .raven .powerstrip button.image-button:first-child {
-      background: linear-gradient(to right, #654ea3 0%, #eaafc8 100%); }
+      background: linear-gradient(45deg, #5433FF, #E948FF, #FF005B); }
       .raven .powerstrip button.image-button:first-child:hover {
         background: rgba(197, 14, 210, 0.85); }
       .raven .powerstrip button.image-button:first-child:active {
@@ -5419,6 +5416,18 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
   .nautilus-window .titlebar .path-bar-box button:active:backdrop,
   .nautilus-window .titlebar .path-bar-box button:active:backdrop label, .nautilus-window .titlebar .path-bar-box button:checked:backdrop, .nautilus-window .titlebar .path-bar-box button:checked:backdrop label {
     color: whitesmoke; }
+.nautilus-window .titlebar .path-buttons-box .dim-label, .nautilus-window .titlebar .path-buttons-box label.separator, .nautilus-window .titlebar .path-buttons-box .subtitle {
+  color: transparent; }
+.nautilus-window .titlebar .path-buttons-box button .horizontal .dim-label, .nautilus-window .titlebar .path-buttons-box button .horizontal label.separator, .nautilus-window .titlebar .path-buttons-box button .horizontal .subtitle {
+  color: #C3C7D1; }
+.nautilus-window .titlebar .path-buttons-box button:hover .dim-label, .nautilus-window .titlebar .path-buttons-box button:hover label.separator, .nautilus-window .titlebar .path-buttons-box button:hover .subtitle, .nautilus-window .titlebar .path-buttons-box button:focus .dim-label, .nautilus-window .titlebar .path-buttons-box button:focus label.separator, .nautilus-window .titlebar .path-buttons-box button:focus .subtitle {
+  color: #c50ed2; }
+.nautilus-window .titlebar .path-buttons-box .current-dir label {
+  padding: 6px 12px;
+  border-radius: 23px;
+  background: linear-gradient(to right, #c50ed2, #8500f7);
+  box-shadow: 0px 0px 5px rgba(197, 14, 210, 0.98);
+  color: white; }
 .nautilus-window .titlebar .linked:not(.path-bar) button:active, .nautilus-window .titlebar .linked:not(.path-bar) button:checked, .nautilus-window .titlebar .linked:not(.path-bar) button:active:backdrop, .nautilus-window .titlebar .linked:not(.path-bar) button:checked:backdrop {
   background: transparent;
   color: #c50ed2;
@@ -5492,10 +5501,12 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
   #gnc-id-main-window .arrow.button.toggle:hover {
     border-color: #c50ed2; }
 
-.xfce4-panel.panel {
-  background-color: #181b28;
-  text-shadow: none;
-  -gtk-icon-shadow: none; }
+.xfce4-panel {
+  border-radius: 0; }
+  .xfce4-panel.panel {
+    background-color: #181b28;
+    text-shadow: none;
+    -gtk-icon-shadow: none; }
 
 #tasklist-button {
   color: rgba(255, 255, 255, 0.8);
@@ -5543,10 +5554,6 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
 .thunar toolbar.horizontal button image {
   -gtk-icon-transform: scale(0.72); }
 
-scrolledwindow.sidebar treeview.view {
-  background: #12151f;
-  padding: 1.5px; }
-
 /* path-bar of thunar */
 window.thunar toolbar#location-toolbar > toolitem > widget > widget.linked.path-bar > button.toggle.path-bar-button, .thunar toolbar .path-bar-button {
   margin-top: 7px;
@@ -5566,18 +5573,27 @@ window.thunar toolbar#location-toolbar > toolitem > widget > widget.linked.path-
   box-shadow: none; }
 
 /* thunar sidepane */
-window.thunar paned > scrolledwindow treeview.view:hover {
-  background: #10131b; }
-window.thunar paned > scrolledwindow treeview.view:selected {
-  border-radius: 23px;
-  background: linear-gradient(to right, #c50ed2, #8500f7);
-  box-shadow: 0px 0px 5px rgba(197, 14, 210, 0.98);
-  color: white;
-  border-radius: 0;
-  box-shadow: none; }
+.thunar scrolledwindow.sidebar treeview.view {
+  background: #12151f;
+  padding: 1.5px; }
+  .thunar scrolledwindow.sidebar treeview.view:hover {
+    background: #202435; }
+  .thunar scrolledwindow.sidebar treeview.view:selected {
+    border-radius: 23px;
+    background: linear-gradient(to right, #c50ed2, #8500f7);
+    box-shadow: 0px 0px 5px rgba(197, 14, 210, 0.98);
+    color: white;
+    border-radius: 0;
+    box-shadow: none; }
 
 window.thunar toolbar#location-toolbar entry {
   border-radius: 10px; }
+
+/* Vala-appmenu-plugin*/
+.-vala-panel-appmenu-core scrolledwindow,
+.-vala-panel-appmenu-private > menuitem,
+.-vala-panel-appmenu-private > menuitem:first-child > label {
+  color: white; }
 
 /********
  * Gala *
@@ -5660,21 +5676,6 @@ window.thunar toolbar#location-toolbar entry {
 /*********
  * Panel *
  ********/
-.panel {
-  background-color: transparent;
-  transition: all 100ms ease-in-out; }
-  .panel.maximized {
-    background-color: #181b28; }
-  .panel.translucent {
-    background-color: rgba(24, 27, 40, 0.5); }
-  .panel.color-light.translucent {
-    background-color: rgba(255, 255, 255, 0.85); }
-
-menubar.panel,
-.panel menubar {
-  box-shadow: none;
-  border: none; }
-
 .composited-indicator > revealer,
 .composited-indicator > revealer image,
 .composited-indicator > revealer label,
