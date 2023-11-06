@@ -49,8 +49,8 @@ git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/t
 # cd ~/dl || exit
 # tar -xvf macOS-BigSur.tar.gz
 # sudo cp -r macOS-BigSur /usr/share/icons
-git clone --depth=1 https://github.com/sayanta01/Papirus-FlatMix ~/.local/share/icons/Papirus-FlatMix
-sudo cp -r ~/.local/share/icons/Papirus-FlatMix /usr/share/icons
+git clone --depth=1 https://github.com/sayanta01/BeautySolar ~/.local/share/icons/BeautySolar
+sudo cp -r ~/.local/share/icons/BeautySolar /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
 
