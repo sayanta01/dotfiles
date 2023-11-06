@@ -11,7 +11,7 @@
   <property name="dropdown-status-icon" type="bool" value="false"/>
   <property name="dropdown-position-vertical" type="uint" value="6"/>
   <property name="dropdown-always-show-tabs" type="bool" value="false"/>
-  <property name="font-name" type="string" value="JetBrainsMono Nerd Font Light 12"/>
+  <property name="font-name" type="string" value="JetBrainsMono Nerd Font Ultra-Light 14"/>
   <property name="misc-always-show-tabs" type="bool" value="false"/>
   <property name="misc-bell" type="bool" value="false"/>
   <property name="misc-bell-urgent" type="bool" value="false"/>

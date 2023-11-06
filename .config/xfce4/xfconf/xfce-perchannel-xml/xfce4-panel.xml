@@ -55,8 +55,9 @@
         <value type="string" value="xfce4-web-browser.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="xfce-mouse-settings.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
         <value type="string" value="xfce4-terminal.desktop"/>
         <value type="string" value="xfce-wm-settings.desktop"/>
         <value type="string" value="org.inkscape.Inkscape.desktop"/>
@@ -64,7 +65,6 @@
         <value type="string" value="xfce4-file-manager.desktop"/>
         <value type="string" value="xfce-display-settings.desktop"/>
         <value type="string" value="xfce-backdrop-settings.desktop"/>
-        <value type="string" value="xfce4-mime-settings.desktop"/>
       </property>
       <property name="profile-shape" type="int" value="2"/>
       <property name="position-profile-alternate" type="bool" value="false"/>
@@ -140,6 +140,7 @@
       <property name="enable-mpris" type="bool" value="false"/>
       <property name="blacklisted-players" type="string" value=""/>
       <property name="known-players" type="string" value="Spotify"/>
+      <property name="volume-max" type="uint" value="120"/>
     </property>
     <property name="plugin-22" type="string" value="actions">
       <property name="appearance" type="uint" value="0"/>

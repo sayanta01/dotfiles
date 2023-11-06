@@ -1,7 +1,7 @@
 app=sxiv
 last_user=
 last_extension=png
-screenshot_dir=file:~/pix
+screenshot_dir=file:///home/bot/pix
 enable_imgur_upload=true
 action=1
 delay=0
@@ -9,4 +9,5 @@ region=1
 show_mouse=1
 show_border=1
 show_in_folder=true
+custom_action_command=none
 
