@@ -8,3 +8,11 @@ for (( ; ;))
     sleep 1
     clear
 done
+
+# transmission-daemon  ( start )
+# transmission-daemon --download-dir ~/dl  ( set for once )
+# transmission-remote -a  ( ~/path/of/torrent-file ) | ( magnet-link )
+# transmission-remote -l  ( list torrent downloading )
+# transmission-remote -t ID,ID  -S  ( --stop )  -ss  ( --start )
+# transmission-remote -t all --stop --start
+# transmission-remote -t ID -r  ( --remove )
