@@ -6,8 +6,8 @@
   <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_100_PERCENT"/>
   <property name="last-separator-position" type="int" value="170"/>
   <property name="last-show-hidden" type="bool" value="true"/>
-  <property name="last-window-width" type="int" value="1001"/>
-  <property name="last-window-height" type="int" value="518"/>
+  <property name="last-window-width" type="int" value="960"/>
+  <property name="last-window-height" type="int" value="1051"/>
   <property name="last-window-maximized" type="bool" value="false"/>
   <property name="last-sort-column" type="string" value="THUNAR_COLUMN_NAME"/>
   <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
@@ -16,4 +16,10 @@
   <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_16"/>
   <property name="tree-icon-emblems" type="bool" value="true"/>
   <property name="misc-middle-click-in-tab" type="bool" value="true"/>
+  <property name="misc-folders-first" type="bool" value="true"/>
+  <property name="misc-file-size-binary" type="bool" value="true"/>
+  <property name="misc-directory-specific-settings" type="bool" value="false"/>
+  <property name="shortcuts-icon-emblems" type="bool" value="true"/>
+  <property name="misc-full-path-in-tab-title" type="bool" value="false"/>
+  <property name="misc-show-delete-action" type="bool" value="false"/>
 </channel>

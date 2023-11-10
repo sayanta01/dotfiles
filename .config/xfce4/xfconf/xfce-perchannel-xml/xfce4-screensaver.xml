@@ -24,4 +24,7 @@
       <property name="arguments" type="string" value="-n 5"/>
     </property>
   </property>
+  <property name="lock" type="empty">
+    <property name="sleep-activation" type="bool" value="false"/>
+  </property>
 </channel>

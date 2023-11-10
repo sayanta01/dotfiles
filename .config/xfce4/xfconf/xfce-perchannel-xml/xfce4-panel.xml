@@ -13,7 +13,6 @@
         <value type="int" value="1"/>
         <value type="int" value="6"/>
         <value type="int" value="9"/>
-        <value type="int" value="3"/>
         <value type="int" value="11"/>
         <value type="int" value="12"/>
         <value type="int" value="2"/>
@@ -55,16 +54,16 @@
         <value type="string" value="xfce4-web-browser.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="xfce-mouse-settings.desktop"/>
+        <value type="string" value="xfce-settings-manager.desktop"/>
+        <value type="string" value="xfce4-settings-editor.desktop"/>
+        <value type="string" value="waydroid.com.android.settings.desktop"/>
         <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="xfce4-terminal.desktop"/>
-        <value type="string" value="xfce-wm-settings.desktop"/>
-        <value type="string" value="org.inkscape.Inkscape.desktop"/>
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
-        <value type="string" value="xfce4-file-manager.desktop"/>
-        <value type="string" value="xfce-display-settings.desktop"/>
-        <value type="string" value="xfce-backdrop-settings.desktop"/>
+        <value type="string" value="nm-connection-editor.desktop"/>
+        <value type="string" value="xfce4-accessibility-settings.desktop"/>
+        <value type="string" value="xfce4-about.desktop"/>
+        <value type="string" value="xfce-mouse-settings.desktop"/>
+        <value type="string" value="google-chrome.desktop"/>
+        <value type="string" value="panel-preferences.desktop"/>
       </property>
       <property name="profile-shape" type="int" value="2"/>
       <property name="position-profile-alternate" type="bool" value="false"/>
@@ -81,6 +80,9 @@
       <property name="recent-items-max" type="int" value="10"/>
       <property name="confirm-session-command" type="bool" value="true"/>
       <property name="show-command-settings" type="bool" value="false"/>
+      <property name="launcher-icon-size" type="int" value="2"/>
+      <property name="category-icon-size" type="int" value="1"/>
+      <property name="button-title" type="string" value=" Applications"/>
     </property>
     <property name="plugin-9" type="string" value="pager">
       <property name="miniature-view" type="bool" value="true"/>
@@ -89,15 +91,17 @@
       <property name="workspace-scrolling" type="bool" value="false"/>
     </property>
     <property name="plugin-11" type="string" value="tasklist">
-      <property name="show-handle" type="bool" value="false"/>
+      <property name="show-handle" type="bool" value="true"/>
       <property name="show-labels" type="bool" value="true"/>
       <property name="middle-click" type="uint" value="1"/>
-      <property name="grouping" type="uint" value="1"/>
+      <property name="grouping" type="bool" value="true"/>
       <property name="flat-buttons" type="bool" value="true"/>
       <property name="sort-order" type="uint" value="0"/>
       <property name="show-wireframes" type="bool" value="false"/>
       <property name="window-scrolling" type="bool" value="false"/>
-      <property name="include-all-monitors" type="bool" value="true"/>
+      <property name="include-all-monitors" type="bool" value="false"/>
+      <property name="show-tooltips" type="bool" value="false"/>
+      <property name="include-all-workspaces" type="bool" value="false"/>
     </property>
     <property name="plugin-12" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
@@ -130,6 +134,8 @@
         <value type="string" value="blueman"/>
         <value type="string" value="chrome_status_icon_1"/>
       </property>
+      <property name="icon-size" type="int" value="22"/>
+      <property name="menu-is-primary" type="bool" value="false"/>
     </property>
     <property name="plugin-16" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
@@ -139,7 +145,7 @@
       <property name="enable-multimedia-keys" type="bool" value="false"/>
       <property name="enable-mpris" type="bool" value="false"/>
       <property name="blacklisted-players" type="string" value=""/>
-      <property name="known-players" type="string" value="Spotify"/>
+      <property name="known-players" type="string" value="Chrome;Spotify"/>
       <property name="volume-max" type="uint" value="120"/>
     </property>
     <property name="plugin-22" type="string" value="actions">
@@ -162,7 +168,7 @@
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="digital-format" type="string" value="%a, %b %d 󱑅 %I:%M:%S "/>
-      <property name="digital-time-format" type="string" value="%a, %d %b 🕖 %I:%M:%S "/>
+      <property name="digital-time-format" type="string" value="%a, %d %b 🕖 %I:%M:%S"/>
       <property name="digital-layout" type="uint" value="3"/>
       <property name="digital-time-font" type="string" value="SF Pro Text Semi-Bold 11"/>
     </property>
@@ -238,9 +244,6 @@
         <value type="double" value="0.40000000000000002"/>
         <value type="double" value="1"/>
       </property>
-    </property>
-    <property name="plugin-3" type="string" value="separator">
-      <property name="style" type="uint" value="2"/>
     </property>
     <property name="plugin-4" type="string" value="separator">
       <property name="style" type="uint" value="0"/>

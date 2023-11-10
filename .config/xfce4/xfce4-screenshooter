@@ -1,7 +1,7 @@
 app=sxiv
 last_user=
 last_extension=png
-screenshot_dir=file:///home/bot/pix
+screenshot_dir=file:/home/bot/pix
 enable_imgur_upload=true
 action=1
 delay=0
