@@ -27,11 +27,8 @@ EOF
 # Remove Firefox ~/.pulse-cookie
 sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
 
-# Turn off mitigations
-# /etc/default/grub >> GRUB_CMDLINE_LINUX*="rhgb quiet mitigations=off"
-
 # Fix screen tearing for nvidia-settings
-# nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+# sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
 # SysRq
 # https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html

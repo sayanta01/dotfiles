@@ -9,24 +9,26 @@ yes | paru -S xdg-desktop-portal-hyprland \
 	hyprprop wlr-randr hyprpicker swaylock-effects \
 	grim slurp swappy swww sddm-git \
 	libsixel waypipe \
+	hyprland-nvidia-git \
 	libva libva-nvidia-driver-git
-# hyprland-nvidia-git
 # rofi-lbonn-wayland-git
 # https://github.com/nyyManni/dmenu-wayland
 
+# https://wiki.hyprland.org/Nvidia/
+
 # Nvidia driver and mkinitcpio
-# Modules_to_add="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
-# sed -i "s/^MODULES=.*/MODULES=($Modules_to_add)/" /etc/mkinitcpio.conf
+# modules_to_add="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
+# sed -i "s/^MODULES=.*/MODULES=($modules_to_add)/" /etc/mkinitcpio.conf
 # sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
 
 # Setting for the NVIDIA kernel module
-# sudo cat <<EOF | sudo tee /etc/modprobe.d/nvidia.conf
-# options nvidia-drm modeset=1
-# EOF
+sudo cat <<EOF | sudo tee /etc/modprobe.d/nvidia.conf
+options nvidia-drm modeset=1
+EOF
 
 sudo pacman -S --noconfirm hyprland waybar file-roller tumbler wlroots polkit-gnome \
 	qt5-wayland qt6-wayland viewnior sddm-runit \
-	wl-clipboard wf-recorder ffmpegthumbs ydotool
+	wl-clipboard wf-recorder ffmpegthumbs
 # waydroid - container-based approach to boot a full Android system on GNU/Linux
 
 sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop

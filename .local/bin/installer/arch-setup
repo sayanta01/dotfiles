@@ -117,13 +117,14 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # dm-tool switch-to-greeter
 
 # Check Nvidia GPU
-# if lspci | grep -i nvidia; then
-## for lts kernel - nvidia-dkms
-# 	sudo pacman -S --noconfirm nvidia nvidia-settings opencl-nvidia \
-# 		nvtop glmark2
-# else
-# 	echo "No NVIDIA GPU detected"
-# fi
+if lspci | grep -i nvidia; then
+	# for lts kernel - nvidia-dkms
+	sudo pacman -S --noconfirm nvidia nvidia-utils lib32-nvidia-utils nvidia-settings opencl-nvidia \
+		nvtop glmark2
+else
+	echo "No NVIDIA GPU detected"
+fi
+# https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
 
 # GUI apps
 sudo pacman -S --noconfirm scrcpy android-tools android-file-transfer \
@@ -166,8 +167,8 @@ else
 fi
 
 # Change Teletype font
-sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
-sudo su root -c "echo -e FONT='ter-d18b.psf.gz' > /etc/vconsole.conf"
+# sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
+# sudo su root -c "echo -e FONT='ter-d18b.psf.gz' > /etc/vconsole.conf"
 
 # Fix qt
 sudo sh -c 'echo "QT_QPA_PLATFORMTHEME=\"qt5ct\"" > /etc/environment'
