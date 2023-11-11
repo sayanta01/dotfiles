@@ -1,6 +1,6 @@
 #!/bin/sh
 
-choice=$(printf "10fast\nmonkey-type\nadvance-10fast\ntype-racer" | dmenu -i -p " ")
+choice=$(printf "10fast\nmonkey-type\nadvance-10fast\ntype-racer" | dmenu -i -p "󰥻 ")
 
 if [ "$choice" = "10fast" ]; then
 	xdg-open https://10fastfingers.com/typing-test/english

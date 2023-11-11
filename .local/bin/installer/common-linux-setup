@@ -67,4 +67,4 @@ EOF
 # -i ecryptfs-utils cryptsetup
 # use this when u get laptop
 
-# sudo vim /etc/hosts           ( blk sites )
+# sudo vim /etc/hosts          ( blk sites )

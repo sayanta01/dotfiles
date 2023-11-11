@@ -95,11 +95,11 @@ if [ "$distro" = "Artix" ]; then
 	# sudo pacman -S pulseaudio pulseaudio-bluetooth
 
 	## Services
-	sudo pacman -S --noconfirm openssh-runit bluez-runit docker-runit dbus-runit cronie-runit
+	sudo pacman -S --noconfirm openssh-runit docker-runit bluez-runit dbus-runit cronie-runit
 	sudo ln -s /etc/runit/sv/sshd /run/runit/service
-	sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 	sudo ln -s /run/runit/sv/docker /run/runit/service
 	# sudo touch /run/runit/service/docker/down
+	sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 	sudo ln -s /etc/runit/sv/dbus /run/runit/service
 	# sudo ln -s /etc/runit/sv/cronie /run/runit/service
 else
@@ -108,7 +108,7 @@ else
 	systemctl --user --now enable pipewire pipewire-pulse wireplumber
 
 	## Services
-	sudo pacman -S --noconfirm openssh bluez docker dbus cronie
+	sudo pacman -S --noconfirm openssh docker bluez dbus cronie
 fi
 
 # Display Manager
@@ -117,13 +117,13 @@ sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # dm-tool switch-to-greeter
 
 # Check Nvidia GPU
-if lspci | grep -i nvidia; then
-	sudo pacman -S --noconfirm nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings opencl-nvidia \
-		nvtop glmark2
-else
-	echo "No NVIDIA GPU detected"
-fi
-# https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
+# if lspci | grep -i nvidia; then
+# 	sudo pacman -S --noconfirm nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings opencl-nvidia \
+# 		nvtop glmark2
+# else
+# 	echo "No NVIDIA GPU detected"
+# fi
+## https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
 
 # GUI apps
 sudo pacman -S --noconfirm scrcpy android-tools android-file-transfer \
@@ -153,7 +153,7 @@ sudo usermod -aG libvirt "$USER"
 git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru
 cd ~/.cache/paru && makepkg -fsri --noconfirm
 paru -S betterlockscreen colorpicker simple-mtpfs \
-	visual-studio-code-bin powershell-bin ttyper cava
+	visual-studio-code-bin powershell-bin ttyper
 
 # /etc/pacman.conf    #IgnorePkg =
 

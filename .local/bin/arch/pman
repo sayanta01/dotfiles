@@ -15,7 +15,7 @@ case $action in
 	fi
 
 	sudo pacman -S --noconfirm "$package"
-	notify-send " $package "
+	notify-send " $package  "
 
 	;;
 "remove Program")
@@ -29,10 +29,10 @@ case $action in
 	fi
 
 	sudo pacman -Rns --noconfirm "$package"
-	notify-send " $package "
+	notify-send " $package  "
 	;;
 *)
-	notify-send "N󰟢 Option Selected"
+	notify-send "N Option Selected"
 	exit 1
 	;;
 esac

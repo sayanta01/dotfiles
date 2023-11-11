@@ -10,7 +10,7 @@ station <adpater-name> connect <network-name>  #example: NullByte
 
 #### change tty font ####
 pacman -Sy terminus-font
-setfont /usr/share/kbd/consolefonts/ter-d18b.psf.gz
+setfont /usr/share/kbd/consolefonts/ter-d16n.psf.gz
 
 #### partition disk ####
 cfdisk /dev/sda
@@ -122,4 +122,4 @@ Include = /etc/pacman.d/mirrorlist-arch
 sudo pacman-key --init
 sudo pacman-key --populate archlinux
 sudo pacman -Syyu
-sudo dbus-uuidgen | sudo tee /var/lib/dbus/machine-id    ( artix )
+# sudo dbus-uuidgen | sudo tee /var/lib/dbus/machine-id    ( artix )

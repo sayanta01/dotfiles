@@ -1,6 +1,6 @@
 #!/bin/sh
 
-choice=$(printf "lofi\nwhite-noise\nclassic\nyt-playlist" | dmenu -i -p "Choose music  ")
+choice=$(printf "lofi\nwhite-noise\nclassic\nyt-playlist" | dmenu -i -p "Choose music 󰽴 ")
 
 if [ "$choice" = "lofi" ]; then
 	url="https://youtu.be/jfKfPfyJRdk"
