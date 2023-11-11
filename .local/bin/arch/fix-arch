@@ -5,6 +5,7 @@ if [ "$distro" = "Artix" ]; then
 	sudo pacman -Sy --noconfirm artix-archlinux-support
 	sudo pacman -S --noconfirm artix-keyring
 	sudo pacman-key --populate artix
+	sudo pacman -Scc
 elif [ "$distro" = "Arch" ]; then
 	echo "Running Arch-specific commands..."
 else
