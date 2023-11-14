@@ -1,10 +1,8 @@
 {
   "editor.fontFamily": "JetBrainsMono NF",
   "editor.fontLigatures": true,
-  "editor.fontSize": 18,
-  // "editor.fontWeight": "bold",
-  "terminal.integrated.fontSize": 17,
-  // "terminal.integrated.fontWeight": "bold"
+  "editor.fontSize": 19,
+  "terminal.integrated.fontSize": 19,
   "workbench.editor.highlightModifiedTabs": true,
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": false,
@@ -68,7 +66,7 @@
       "commands": [":bdelete"]
     },
     {
-      "before": ["<leader>", "h"],
+      "before": ["<leader>", "n"],
       "commands": [":nohl"]
     },
     {
