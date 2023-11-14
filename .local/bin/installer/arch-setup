@@ -112,8 +112,7 @@ else
 fi
 
 # Display Manager
-sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
-# lightdm-runit  # artix
+# sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
 # dm-tool switch-to-greeter
 
 # Check Nvidia GPU
