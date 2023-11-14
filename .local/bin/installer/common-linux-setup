@@ -28,7 +28,7 @@ EOF
 sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
 
 # Fix screen tearing for nvidia-settings
-# sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+# nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
 # SysRq
 # https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
