@@ -1,17 +1,20 @@
 {
   "layer": "top",
   "position": "top",
-  // "mod": "dock",
-  "fixed-center": true,
+  // "fixed-center": true, // for center-modules
   "exclusive": true,
   "passthrough": false,
   "ipc": true,
   "gtk-layer-shell": true,
-  "modules-left": ["wlr/workspaces", "hyprland/window", "custom/now-playing"],
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window",
+    "custom/now-playing"
+  ],
   "modules-right": [
     "custom/date",
     "custom/nettraf",
-    "custom/cpu",
+    // "custom/cpu",
     "custom/memory",
     "pulseaudio",
     "custom/separator",
@@ -20,10 +23,9 @@
     "tray"
   ],
   "hyprland/window": {
-    "format": "{}",
     "max-length": 42
   },
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     // "disable-scroll": true,
     "all-outputs": true,
     "on-click": "activate",
@@ -52,7 +54,7 @@
   },
   "custom/nettraf": {
     "tooltip": false,
-    "interval": 2,
+    "interval": 4,
     "exec": "~/.local/bin/statusbar/nettraf",
     "on-click": "~/.config/waybar/scripts/nm_name",
     "on-click-right": "kitty --class floating -e nmtui"
@@ -65,15 +67,15 @@
     "exec": "~/.local/bin/statusbar/now-playing",
     "on-click": "~/.config/waybar/scripts/now_playing"
   },
-  "custom/cpu": {
-    "tooltip": false,
-    "interval": 2,
-    "exec": "~/.local/bin/statusbar/bar-cpu",
-    "on-click": "~/.config/waybar/scripts/cpu_usage"
-  },
+  // "custom/cpu": {
+  //   "tooltip": false,
+  //   "interval": 4,
+  //   "exec": "~/.local/bin/statusbar/bar-cpu",
+  //   "on-click": "~/.config/waybar/scripts/cpu_usage"
+  // },
   "custom/memory": {
     "tooltip": false,
-    "interval": 2,
+    "interval": 4,
     "exec": "~/.local/bin/statusbar/bar-mem",
     "on-click": "~/.config/waybar/scripts/mem_usage"
   },
@@ -132,8 +134,8 @@
     "format": "{format_source}",
     "format-source": " {volume}%",
     "format-source-muted": " Muted",
-    "on-click-right": "kitty --class floating -e pulsemixer",
     "on-click": "pamixer --default-source -t",
+    "on-click-right": "kitty --class floating -e pulsemixer",
     "on-scroll-up": "pamixer --default-source -i 5",
     "on-scroll-down": "pamixer --default-source -d 5",
     "scroll-step": 5

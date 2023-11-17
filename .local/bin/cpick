@@ -1,0 +1,11 @@
+#!/bin/sh
+
+session_type="$XDG_SESSION_TYPE"
+
+if [ "$session_type" = "x11" ]; then
+	colorpicker --short --one-shot --preview | xclip -sel c
+elif [ "$session_type" = "wayland" ]; then
+	hyprpicker -a -n
+else
+	colorpicker --short --one-shot --preview | xclip -sel c
+fi

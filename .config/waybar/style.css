@@ -48,7 +48,7 @@ window#waybar {
 #window,
 #custom-date,
 #custom-nettraf,
-#custom-cpu,
+/* #custom-cpu, */
 #custom-memory,
 #custom-separator,
 #pulseaudio,
@@ -90,12 +90,12 @@ window#waybar {
   margin-right: 5px;
 }
 
-#custom-cpu {
-  color: #89b4fa;
-  background: #2a2e36;
-  border-radius: 8;
-  margin-right: 5px;
-}
+/* #custom-cpu { */
+/*   color: #89b4fa; */
+/*   background: #2a2e36; */
+/*   border-radius: 8; */
+/*   margin-right: 5px; */
+/* } */
 
 #custom-memory {
   color: #89b4fa;
