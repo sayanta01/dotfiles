@@ -4,7 +4,6 @@
 # alias sudo='doas'
 
 # Kali
-# alias install='sudo nala install'
 # alias update='sudo nala update'
 # alias uplist='apt list --upgradable'
 # alias remove='sudo nala purge'
@@ -16,7 +15,6 @@
 # }
 
 # Arch
-alias install="sudo pacman -Sy"
 alias update="sudo pacman -Syyu && echo '########## ⬆️AUR ##########'; paru -Sua"
 alias remove="sudo pacman -Rns"
 alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo "########## 🚮cleaning Paru cache ##########"; rm -rf ~/.cache/paru'

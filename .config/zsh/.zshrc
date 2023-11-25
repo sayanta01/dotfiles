@@ -1,14 +1,14 @@
 # cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
-# setopt correct              # auto correct mistakes
 # setopt autocd               # change directory just by typing its name
 # setopt interactivecomments  # allow comments in interactive mode
-setopt extendedglob
-setopt magicequalsubst      # enable filename expansion for arguments of the form ‘anything=expression’
-setopt nonomatch            # hide error message if there is no match for the pattern
-setopt notify               # report the status of background jobs immediately
-setopt numericglobsort      # sort filenames numerically when it makes sense
-setopt promptsubst          # enable command substitution in prompt
+# setopt extendedglob
+# setopt correct              # auto correct mistakes
+# setopt numericglobsort      # sort filenames numerically when it makes sense
+# setopt magicequalsubst      # enable filename expansion for arguments of the form ‘anything=expression’
+# setopt nonomatch            # hide error message if there is no match for the pattern
+# setopt notify               # report the status of background jobs immediately
+# setopt promptsubst          # enable command substitution in prompt
 
 # Configure keybindings
 bindkey -e                                        # emacs key bindings
@@ -61,11 +61,11 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # History configs
-HISTSIZE=2000
-SAVEHIST=2000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE="$XDG_DATA_HOME/history"
 setopt hist_ignore_space       # ignore commands that start with space
-setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
+# setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_all_dups    # ignore duplicated commands history list
 setopt hist_verify             # show command with history expansion
 
