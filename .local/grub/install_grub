@@ -1,25 +1,25 @@
 #!/bin/bash
 
-#### VOID ####
+## VOID ##
 # same steps of Arch / Debian
 sudo mkdir /usr/share/grub/themes
 
-#### ARCH ####
+## ARCH ##
 sudo cp -r catppuccin-mocha-grub-theme /usr/share/grub/themes/
 echo 'GRUB_THEME="/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt"' | sudo tee -a /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-#### DEBIAN ####
+## DEBIAN ##
 # sudo cp -r catppuccin-mocha-grub-theme /boot/grub/themes
 # echo 'GRUB_THEME="/boot/grub/themes/catppuccin-mocha-grub-theme/theme.txt"' | sudo tee -a /etc/default/grub
 # sudo rm -rf /usr/share/images/desktop-base/desktop-grub.png
 # sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-#### Another Method For Debian ####
+## Another Method For Debian ##
 #sudo rm -rf /boot/grub/themes/kali/* && sudo cp -r catppuccin-mocha-grub-theme/* /boot/grub/themes/kali
 #sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-#### For ALL distro ####
+## For ALL distro ##
 echo 'menuentry "Reboot" --class restart {
   reboot
 }

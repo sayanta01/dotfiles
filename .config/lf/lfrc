@@ -126,7 +126,7 @@ map "'"
 # Basic Functions
 map . set hidden!
 map E extract
-map ae $bash "$f"
+map ex $bash "$f"
 map dd trash
 map DD delete
 map dr restore_trash
@@ -142,7 +142,6 @@ map R reload
 map U unselect
 map L clear
 
-map sp chmod
 map B bulkrename
 map <enter> open
 # map c $code "$f"

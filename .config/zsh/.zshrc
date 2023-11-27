@@ -44,7 +44,7 @@ bindkey '^K' kill-line
 #bindkey '^D' exit_zsh
 
 # Hide EOL sign ('%')
-#PROMPT_EOL_MARK="" 
+# PROMPT_EOL_MARK="" 
 
 # Time format
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
@@ -61,8 +61,8 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # History configs
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=9000
+SAVEHIST=9000
 HISTFILE="$XDG_DATA_HOME/history"
 setopt hist_ignore_space       # ignore commands that start with space
 # setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE

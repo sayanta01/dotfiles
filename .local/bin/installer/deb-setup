@@ -14,12 +14,9 @@ done
 
 printf "Fonts? (y/n): "
 read -r choice
-
 if [ "$choice" = "y" ]; then
-	# Maple-font
 	wget https://github.com/subframe7536/Maple-font/releases/latest/download/MapleMono-NF.zip
 	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
-	# Nerd-fonts
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Cousine.zip
@@ -61,7 +58,6 @@ sudo apt install -y nala apt-transport-https \
 	zathura htop lxappearance meld \
 	xclip xdo xdotool xwallpaper gpg xcape \
 	exiftool aria2 wmname wmctrl neofetch \
-	transmission-daemon trash-cli \
 	docker.io ssh iftop net-tools
 # betterlockscreen ncdu translate-shell
 # sudo systemctl enable docker.socket

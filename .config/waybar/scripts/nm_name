@@ -1,3 +1,0 @@
-#!/bin/sh
-
-notify-send -t 900 "Connected with $(ip route | awk '/default/ {print $5}')"

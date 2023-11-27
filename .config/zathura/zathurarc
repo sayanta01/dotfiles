@@ -55,11 +55,8 @@ map d scroll half-down
 map D toggle_page_mode
 map r reload
 map R rotate
-map K zoom in
-map J zoom out
 map p print
 map i recolor
-map g goto top
 
 # f for fullscreen
 # unmap f

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# TODO: add wayland support
+
 # ctrl x them shortkey
 while read -r file; do
 	case "$1" in

@@ -13,12 +13,9 @@ done
 
 printf "Fonts? (y/n): "
 read -r choice
-
 if [ "$choice" = "y" ]; then
-	# Maple-font
 	wget https://github.com/subframe7536/Maple-font/releases/latest/download/MapleMono-NF.zip
 	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
-	# Nerd-fonts
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Cousine.zip
@@ -58,19 +55,19 @@ sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
 	exa bat fd fzf man-db bash-completion starship \
 	mate-calc firefox qutebrowser meld \
-	linux-lts linux-lts-headers kitty newsboat trash-cli neovim \
+	linux-lts linux-lts-headers kitty newsboat neovim \
 	neofetch stress htop cowsay gnome-keyring \
 	bspwm polybar sxhkd rofi dunst \
 	qt5ct qt6ct lxappearance xcape \
 	playerctl pulsemixer pavucontrol mpd ncmpcpp \
 	cmake wmname pass \
-	wireless_tools net-tools network-manager-applet dnsutils iftop \
+	wireless_tools net-tools dnsutils iftop network-manager-applet \
 	mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper python-pip python-pywal \
 	zip unzip unrar p7zip engrampa \
 	lf gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 	zathura zathura-pdf-mupdf ghostscript \
 	zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-	rsync wget yt-dlp aria2 transmission-cli jq \
+	rsync wget yt-dlp aria2 jq transmission-cli \
 	xdg-utils xdg-user-dirs xdo \
 	socat nmap exfat-utils \
 	xorg-xinit xclip xdotool wmctrl unclutter
@@ -79,7 +76,6 @@ sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 
 # Check CPU vendor
 cpu_vendor=$(grep vendor_id /proc/cpuinfo | uniq | awk -F ': ' '{print $2}')
-
 if [ "$cpu_vendor" = "GenuineIntel" ]; then
 	sudo pacman -S --noconfirm intel-ucode
 elif [ "$cpu_vendor" = "AuthenticAMD" ]; then
@@ -92,7 +88,7 @@ distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
 if [ "$distro" = "Artix" ]; then
 	## Audio server
 	sudo pacman -S --noconfirm pipewire pipewire-pulse wireplumber
-	# sudo pacman -S pulseaudio pulseaudio-bluetooth
+	# sudo pacman -S --noconfirm pulseaudio pulseaudio-bluetooth
 
 	## Services
 	sudo pacman -S --noconfirm openssh-runit docker-runit bluez-runit dbus-runit cronie-runit

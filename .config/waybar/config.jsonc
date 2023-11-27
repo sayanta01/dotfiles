@@ -56,7 +56,6 @@
     "tooltip": false,
     "interval": 4,
     "exec": "~/.local/bin/statusbar/nettraf",
-    "on-click": "~/.config/waybar/scripts/nm_name",
     "on-click-right": "kitty --class floating -e nmtui"
     // "return-type": "json"
   },
@@ -83,7 +82,7 @@
     "tooltip": false,
     "interval": 2,
     "exec": "~/.local/bin/statusbar/bar-time",
-    "on-click": "~/.local/bin/notify-oneliner/notify-cal"
+    "on-click": "~/.local/bin/statusbar/notify-cal"
   },
   // "battery": {
   //   "states": {

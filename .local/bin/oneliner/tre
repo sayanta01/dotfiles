@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Tab for select
+gio trash --list | column -t -s "$(printf '\t')" | fzf -i -e -m -d / --with-nth 4.. \
+	--bind 'home:first,end:last,ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all' \
+	--prompt="gio trash restore file(s): " | cut -d ' ' -f1 | while read -r line; do gio trash --restore "$line"; done

@@ -6,9 +6,9 @@ cp -r ~/dotfiles/.config/{hypr,waybar,swaylock,xsettingsd,nwg-look} ~/.config
 
 # AUR
 yes | paru -S xdg-desktop-portal-hyprland \
-	hyprprop wlr-randr hyprpicker swaylock-effects \
-	grim slurp swappy swww sddm-git \
-	libsixel waypipe \
+	wlr-randr hyprpicker swaylock-effects \
+	grim slurp swappy swww libsixel sddm-git \
+	hyprprop waypipe \
 	hyprland-nvidia-git \
 	libva libva-nvidia-driver-git
 # rofi-lbonn-wayland-git
