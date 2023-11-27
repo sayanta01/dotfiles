@@ -113,7 +113,7 @@ fi
 
 # Check Nvidia GPU
 # if lspci | grep -i nvidia; then
-# 	sudo pacman -S --noconfirm nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings opencl-nvidia \
+# 	sudo pacman -S --noconfirm nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia \
 # 		nvtop glmark2
 # else
 # 	echo "No NVIDIA GPU detected"
