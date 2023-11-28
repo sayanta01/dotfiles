@@ -61,10 +61,9 @@
   },
   "custom/now-playing": {
     "tooltip": false,
-    "format": "󰎉 {}",
+    "format": " 󰎉 {}",
     "interval": 2,
-    "exec": "~/.local/bin/statusbar/now-playing",
-    "on-click": "~/.config/waybar/scripts/now_playing"
+    "exec": "~/.local/bin/statusbar/now-playing"
   },
   // "custom/cpu": {
   //   "tooltip": false,
