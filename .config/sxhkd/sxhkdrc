@@ -110,11 +110,11 @@ alt + F8
        
 # screenshot
 Print
-    maim | tee $(xdg-user-dir PICTURES)/$(date +%I:%M%b_%d)-Ful.png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
+    maim | tee $(xdg-user-dir PICTURES)/ss/$(date +%I:%M%b_%d)-Ful.png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
                  
 # ss select   
 shift + Print            
-        maim -s | tee $(xdg-user-dir PICTURES)/$(date +%I:%M%b_%d)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
+        maim -s | tee $(xdg-user-dir PICTURES)/ss/$(date +%I:%M%b_%d)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
 
 # ss window
 # alt + Print 
