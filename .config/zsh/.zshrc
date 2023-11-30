@@ -34,8 +34,7 @@ bindkey '^T' transpose-chars
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 # Enable completion 
-autoload -Uz compinit
-compinit -d ~/.cache/zcompdump
+autoload -Uz compinit && compinit -d $HOME/.cache/zcompdump
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files
 zstyle ':completion:*' menu select
@@ -46,15 +45,15 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # History
 HISTSIZE=9000
 SAVEHIST=9000
-HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
+HISTFILE="$HOME/.local/share/history"
 setopt hist_ignore_space       # ignore commands that start with space
 setopt hist_ignore_all_dups    # ignore duplicated commands history list
 setopt hist_verify             # show command with history expansion
 
 # Load aliases and shortcuts if existent
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
-# [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/tty-colors" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/tty-colors"
+[ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
+[ -f "$HOME/.config/shell/shortcutrc" ] && source "$HOME/.config/shell/shortcutrc"
+# [ -f "$HOME/.config/shell/tty-colors" ] && source "$HOME/.config/shell/tty-colors"
 
 # Plugins
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]; then

@@ -17,7 +17,7 @@ export HISTCONTROL=erasedups:ignoreboth
 
 # Aliases
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
-[ -f "$HOME/.config/shell/function" ] && source "$HOME/.config/shell/function"
+[ -f "$HOME/.config/shell/shortcutrc" ] && source "$HOME/.config/shell/shortcutrc"
 
 function hst() {
 	session_type="$XDG_SESSION_TYPE"
