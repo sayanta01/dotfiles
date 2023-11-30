@@ -1,18 +1,18 @@
 # You can add comments to these files with #
-cf  $HOME/.config
-bn  $HOME/.local/bin
-l   $HOME/.local/share
 cac $HOME/.cache
-src $HOME/.local/src
+cf  $HOME/.config
+sc  $HOME/.local/bin
+dt   $HOME/.local/share
 
 h   $HOME
-d   $HOME/dl
-vd  $HOME/vids
+D   $HOME/dl
+d   $HOME/dox
 m   $HOME/music
+vd  $HOME/vids
 dx  $HOME/desk
 px  $HOME/pix
-D   $HOME/dox
-pub $HOME/pub
-tmp $HOME/templates
-cod $HOME/code
-imp $HOME/imp
+
+pb $HOME/pub
+tm $HOME/templates
+cd $HOME/code
+im $HOME/imp
