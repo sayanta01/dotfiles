@@ -1,5 +1,3 @@
-/* shift + del -> del most used */
-
 configuration {
     sidebar-mode: true;
     modi: "drun,run";
