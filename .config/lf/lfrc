@@ -40,8 +40,8 @@ cmd trash ${{
 }}
 
 # Restore from Trash
-cmd restore_trash ${{
-  trash-restore
+cmd trash_restore ${{
+  tre
 }}
 
 # Create file
@@ -129,7 +129,7 @@ map E extract
 map ex $bash "$f"
 map dd trash
 map DD delete
-map dr restore_trash
+map dr trash_restore
 map mf mkfile
 map md mkdir
 map x cut

@@ -7,13 +7,13 @@ dim_level=40
 blur_level=2
 pixel_scale=10,1000
 solid_color=333333
-wallpaper_cmd="feh --bg-fill"
 quiet=false
+wallpaper_cmd="feh --bg-fill"
 
 # default theme
 loginbox=00000066
 loginshadow=00000000
-locktext=""
+locktext="Type password to unlock..."
 font="SF Pro Text"
 
 ringwrongcolor=#282a36     #show ring before entering pswd 

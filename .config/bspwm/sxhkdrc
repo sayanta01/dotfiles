@@ -38,7 +38,7 @@ XF86AudioPlay
         # ~/.local/bin/bspwm/layout
         ## bsp-layout next --layouts tall,tiled
 
-# hide unhide bar
+# hide/unhide bar
 super + u
         ~/.local/bin/statusbar/toggle-polybar
 
@@ -50,11 +50,11 @@ super + d
 super + alt + o
         ~/.local/bin/pywal
 
-# wallch
+# wallpaper 
 super + alt + p
         ~/.local/bin/wallch
 
-# temp clip
+# tmp clip
 super + alt + t
         ~/.local/bin/dm-script/tclip
 
@@ -69,22 +69,16 @@ alt + F1
 # vol down
 alt + F2
       pamixer -d 5 
-      # amixer set Master 5%-
-      # pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 # vol up
 alt + F3
       pamixer -i 5 
-      # amixer set Master 5%+
-      # pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 # mute
 alt + F4
       pamixer -t
-      # amixer set Master toggle         
-      # pactl set-sink-mute @DEFAULT_SINK@ toggle
 
- # system_action
+ # system action
 super + F4
         ~/.local/bin/dm-script/sys-action
 	 
@@ -96,11 +90,11 @@ alt + F5
 alt + F6 
       playerctl previous   
 	
-# play, pause   
+# play/pause   
 super + F7
         playerctl play-pause
   
-# spotify play pause
+# spotify play/pause
 alt + F7
       dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
@@ -161,7 +155,7 @@ ctrl + alt + k
 ctrl + alt + l
        ~/.local/bin/lockscreen
 	     
-# kill ps
+# kill task
 ctrl + alt + Delete
        ~/.local/bin/dm-script/kil	     
 
