@@ -1,10 +1,1 @@
-#!/bin/sh
-
-# kill if already running
-killall -9 pipewire pipewire-pulse wireplumber xcape kdeconnect-indicator
-
-pipewire &
-pipewire-pulse &
-wireplumber &
-xcape -e 'Super_L=Alt_L|0' &
-kdeconnect-indicator &
+.config/x11/xprofile

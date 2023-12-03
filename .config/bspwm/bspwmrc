@@ -32,9 +32,9 @@ bspc rule -a Blueman-manager state=floating center=on
 bspc rule -a scpad locked=on sticky=on state=floating rectangle=900x400+500+32 
 
 # Autostart
-pgrep -x sxhkd > /dev/null || sxhkd -c "$HOME/.config/bspwm/sxhkdrc" &
 xsetroot -cursor_name left_ptr &
 ./.config/polybar/launch.sh &
+./.config/sxhkd/sxhkd.sh &
 xset r rate 280 60 &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
 # xcape -e 'super_l=alt_l|0' &
