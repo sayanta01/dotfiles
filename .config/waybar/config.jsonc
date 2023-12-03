@@ -75,7 +75,8 @@
     "tooltip": false,
     "interval": 4,
     "exec": "~/.local/bin/statusbar/bar-mem",
-    "on-click": "~/.config/waybar/scripts/mem_usage"
+    "on-click": "~/.config/waybar/scripts/mem_usage",
+    "on-click-right": "kitty --class floating -e htop"
   },
   "custom/date": {
     "tooltip": false,
