@@ -11,6 +11,7 @@ for dir in desk dl dox music pix vids pub templates code imp; do
 	mkdir ~/"$dir"
 done
 
+# Fonts
 printf "Fonts? (y/n): "
 read -r choice
 if [ "$choice" = "y" ]; then
@@ -18,14 +19,12 @@ if [ "$choice" = "y" ]; then
 	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Cousine.zip
-	yes | sudo unzip Cousine.zip -d /usr/share/fonts/TTF
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
 	yes | sudo unzip FiraCode.zip -d /usr/share/fonts/TTF
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip
 	yes | sudo unzip CascadiaCode.zip -d /usr/share/fonts/TTF
 	fc-cache -fv
-	rm -rf MapleMono-NF.zip JetBrainsMono.zip Cousine.zip FiraCode.zip CascadiaCode.zip
+	rm -rf MapleMono-NF.zip JetBrainsMono.zip FiraCode.zip CascadiaCode.zip
 else
 	:
 fi
@@ -36,16 +35,12 @@ cd ~/dl/st && sudo make clean install
 git clone --depth=1 https://github.com/sayanta01/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
-# My nvim config
+# Nvim
 git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
-# Tpm
+# Tmux
 git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # Themes
-# wget -P ~/dl https://github.com/ful1e5/apple_cursor/releases/latest/download/macOS-BigSur.tar.gz
-# cd ~/dl || exit
-# tar -xvf macOS-BigSur.tar.gz
-# sudo cp -r macOS-BigSur /usr/share/icons
 git clone --depth=1 https://github.com/sayanta01/BeautySolar ~/.local/share/icons/BeautySolar
 sudo cp -r ~/.local/share/icons/BeautySolar /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
@@ -148,19 +143,11 @@ sudo usermod -aG libvirt "$USER"
 git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru
 cd ~/.cache/paru && makepkg -fsri --noconfirm
 paru -S betterlockscreen colorpicker simple-mtpfs \
-	visual-studio-code-bin powershell-bin ttyper
+	visual-studio-code-bin powershell-bin
 
 # /etc/pacman.conf    #IgnorePkg =
 
-# distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
-# if [ "$distro" = "Artix" ] || [ "$distro" = "Arch" ]; then
-# 	sed -i 's/^# source \/usr\/share\/zsh\/plugins\/zsh-syntax-highlighting\/zsh-syntax-highlighting.plugin.zsh/source \/usr\/share\/zsh\/plugins\/zsh-syntax-highlighting\/zsh-syntax-highlighting.plugin.zsh/' ~/.config/zsh/.zshrc
-# 	sed -i 's/^# source \/usr\/share\/zsh\/plugins\/zsh-autosuggestions\/zsh-autosuggestions.plugin.zsh/source \/usr\/share\/zsh\/plugins\/zsh-autosuggestions\/zsh-autosuggestions.plugin.zsh/' ~/.config/zsh/.zshrc
-# else
-# 	:
-# fi
-
-# Change Teletype font
+# Teletype font
 # sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
 # sudo su root -c "echo -e FONT='ter-d18b.psf.gz' > /etc/vconsole.conf"
 
@@ -170,16 +157,3 @@ sudo sh -c 'echo "QT_QPA_PLATFORMTHEME=\"qt5ct\"" > /etc/environment'
 # Get percentage of connected device
 sudo sed -i 's/# ControllerMode = bredr/ControllerMode = bredr/' /etc/bluetooth/main.conf
 sudo sed -i 's/^# \(Experimental = true\)/\1/' /etc/bluetooth/main.conf
-
-# Fix suckless utilities give XOpenIM failed error
-# echo 'LANG=en_US.UTF-8
-# LC_CTYPE=en_US.UTF-8
-# LC_ADDRESS=en_US.UTF-8
-# LC_IDENTIFICATION=en_US.UTF-8
-# LC_MEASUREMENT=en_US.UTF-8
-# LC_MONETARY=en_US.UTF-8
-# LC_NAME=en_US.UTF-8
-# LC_NUMERIC=en_US.UTF-8
-# LC_PAPER=en_US.UTF-8
-# LC_TELEPHONE=en_US.UTF-8
-# LC_TIME=en_US.UTF-8' | sudo tee -a /etc/locale.conf

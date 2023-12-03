@@ -12,6 +12,7 @@ for dir in desk dl dox music pix vids pub templates code imp; do
 	mkdir ~/"$dir"
 done
 
+# Fonts
 printf "Fonts? (y/n): "
 read -r choice
 if [ "$choice" = "y" ]; then
@@ -19,14 +20,12 @@ if [ "$choice" = "y" ]; then
 	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
-	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Cousine.zip
-	yes | sudo unzip Cousine.zip -d /usr/share/fonts/TTF
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
 	yes | sudo unzip FiraCode.zip -d /usr/share/fonts/TTF
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip
 	yes | sudo unzip CascadiaCode.zip -d /usr/share/fonts/TTF
 	fc-cache -fv
-	rm -rf MapleMono-NF.zip JetBrainsMono.zip Cousine.zip FiraCode.zip CascadiaCode.zip
+	rm -rf MapleMono-NF.zip JetBrainsMono.zip FiraCode.zip CascadiaCode.zip
 else
 	:
 fi
@@ -38,9 +37,9 @@ cd ~/dl/st && sudo make clean install
 git clone --depth=1 https://github.com/sayanta01/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
-# My nvim config
+# Nvim
 git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
-# Tpm
+# Tmux
 git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # Themes
@@ -68,14 +67,6 @@ yes | curl -sS https://starship.rs/install.sh | sh
 # wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/dl/vscode.deb
 # aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 # cd ~/dl && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
-#
-# distro=$(grep ID= /etc/os-release | sed -n 2p | cut -d= -f2)
-# if [ "$distro" = "ubuntu" ] || [ "$distro" = "kali" ] || [ "$distro" = "debian" ]; then
-# 	sed -i 's/^# source \/usr\/share\/zsh-syntax-highlighting\/zsh-syntax-highlighting.zsh/source \/usr\/share\/zsh-syntax-highlighting\/zsh-syntax-highlighting.zsh/' ~/.config/zsh/.zshrc
-# 	sed -i 's/^# source \/usr\/share\/zsh-autosuggestions\/zsh-autosuggestions.zsh/source \/usr\/share\/zsh-autosuggestions\/zsh-autosuggestions.zsh/' ~/.config/zsh/.zshrc
-# else
-# 	:
-# fi
 
 # Fix debian
 sudo ln -s /usr/bin/fdfind /usr/bin/fd
