@@ -9,7 +9,7 @@ export PS1="\W \[\e[31m\]❯\[\e[m\] "
 
 # shopt -s autocd        # Allows you to cd into directory merely by typing the directory name
 shopt -s histappend    # Append to the history file, don't overwrite it
-shopt -s checkwinsize  # Check the window size after each command and, if necessary, update the values of LINES and COLUMNS
+# shopt -s checkwinsize  # Check the window size after each command and, if necessary, update the values of LINES and COLUMNS
 
 export HISTFILESIZE=2000
 export HISTSIZE=2000
