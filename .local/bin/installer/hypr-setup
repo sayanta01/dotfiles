@@ -2,7 +2,9 @@
 
 # chrome://flags - Search for 'ozone' and select auto
 
-cp -r ~/dotfiles/.config/{hypr,waybar,swaylock,xsettingsd,nwg-look} ~/.config
+for dir in hypr waybar swaylock xsettingsd nwg-look; do
+    cp -r "$HOME/dotfiles/.config/$dir" "$HOME/.config"
+done
 
 # AUR
 yes | paru -S xdg-desktop-portal-hyprland \

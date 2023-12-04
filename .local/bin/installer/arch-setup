@@ -1,10 +1,9 @@
 #!/bin/sh
 
-dots=".bashrc .profile .vimrc .xprofile .zprofile"
-for file in $dots; do
-	cp -r ~/dotfiles/"$file" ~/
+for dots in .bashrc .profile .vimrc .xprofile .zprofile; do
+    cp -r "$HOME/dotfiles/$dots" "$HOME"
 done
-mkdir "$HOME/.local/bin"
+[ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/
 for dir in desk dl dox music pix vids pub templates code imp; do
@@ -44,7 +43,7 @@ git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/t
 git clone --depth=1 https://github.com/sayanta01/BeautySolar ~/.local/share/icons/BeautySolar
 sudo cp -r ~/.local/share/icons/BeautySolar /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
-sudo cp -r ~/.local/share/fonts /usr/share/fonts/local-fonts
+sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 
 sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
@@ -79,9 +78,9 @@ else
 	echo "Unsupported CPU vendor"
 fi
 
+## Audio server
 distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
 if [ "$distro" = "Artix" ]; then
-	## Audio server
 	sudo pacman -S --noconfirm pipewire pipewire-pulse wireplumber
 	# sudo pacman -S --noconfirm pulseaudio pulseaudio-bluetooth
 
@@ -94,7 +93,6 @@ if [ "$distro" = "Artix" ]; then
 	sudo ln -s /etc/runit/sv/dbus /run/runit/service
 	# sudo ln -s /etc/runit/sv/cronie /run/runit/service
 else
-	## Audio server
 	sudo pacman -S --noconfirm pipewire pipewire-pulse wireplumber
 	systemctl --user --now enable pipewire pipewire-pulse wireplumber
 
