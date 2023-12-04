@@ -13,7 +13,7 @@
     padding = 8
     horizontal_padding = 8
     frame_width = 2
-    frame_color = "#ABB2BF"
+    frame_color = "#abb2bf"
     separator_color = frame
     sort = yes
     font = "JetBrainsMono NF 11"
@@ -76,7 +76,7 @@
 
 [urgency_normal]
      background = "#282a36"
-     foreground = "#D8DEE9"
+     foreground = "#d8dee9"
      timeout = 4
 
 [urgency_critical]
