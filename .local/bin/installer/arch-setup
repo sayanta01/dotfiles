@@ -1,11 +1,11 @@
 #!/bin/sh
 
 for dots in .bashrc .profile .vimrc .xprofile .zprofile; do
-    cp -r "$HOME/dotfiles/$dots" "$HOME"
+	cp -r "$HOME/dotfiles/$dots" "$HOME"
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
-chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/
+chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 for dir in desk dl dox music pix vids pub templates code imp; do
 	mkdir ~/"$dir"
 done
@@ -48,15 +48,14 @@ sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
 	exa bat fd fzf man-db bash-completion starship \
-	mate-calc firefox qutebrowser meld \
-	linux-lts linux-lts-headers kitty newsboat neovim \
-	neofetch stress htop cowsay gnome-keyring \
+	mate-calc meld firefox qutebrowser \
+	linux-lts linux-lts-headers kitty neovim newsboat \
+	gnome-keyring cowsay htop stress neofetch \
 	bspwm polybar sxhkd rofi dunst \
-	qt5ct qt6ct lxappearance xcape \
-	playerctl pulsemixer pavucontrol mpd ncmpcpp \
-	cmake wmname pass \
-	wireless_tools net-tools dnsutils iftop network-manager-applet \
-	mpv mediainfo perl-image-exiftool ffmpegthumbnailer imagemagick maim sxiv xwallpaper python-pip python-pywal \
+	qt5ct qt6ct lxappearance xcape pass \
+	pavucontrol playerctl pulsemixer mpd ncmpcpp \
+	net-tools wireless_tools iftop network-manager-applet \
+	mpv mediainfo perl-image-exiftool imagemagick nsxiv maim xwallpaper python-pip python-pywal \
 	zip unzip unrar p7zip engrampa \
 	lf gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 	zathura zathura-pdf-mupdf ghostscript \
@@ -64,9 +63,10 @@ sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 	rsync wget yt-dlp aria2 jq transmission-cli \
 	xdg-utils xdg-user-dirs xdo \
 	socat nmap exfat-utils \
-	xorg-xinit xclip xdotool wmctrl unclutter
+	xorg-xinit xclip xdotool \
+  wmname wmctrl unclutter
 # libx11 libxft libxrandr libxinerama
-# xorg-server xorg-xrdb xorg-xwininfo xorg-xprop xorg-xrandr xorg-xsetroot xorg-xbacklight
+# xorg-server xorg-xwininfo xorg-xprop xorg-xrdb xorg-xrandr xorg-xsetroot xorg-xbacklight
 
 # Check CPU vendor
 cpu_vendor=$(grep vendor_id /proc/cpuinfo | uniq | awk -F ': ' '{print $2}')

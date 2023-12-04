@@ -1,7 +1,8 @@
 #!/bin/sh
 
-sudo figlet lolcat toilet espeak cool-retro-term mapscii jp2a browsh \
-	nyancat fortune sl cmatrix asciiquarium hollywood oneko tty-clock
+sudo figlet toilet lolcat espeak cool-retro-term mapscii jp2a browsh \
+	nyancat cmatrix sl asciiquarium hollywood fortune tty-clock
 
 # Games
-sudo bastet mari0 pacman4console nsnake scratch supertuxkart google-earth-pro ani-cli
+sudo scratch mari0 bastet supertuxkart \
+	google-earth-pro ani-cli

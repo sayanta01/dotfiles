@@ -6,7 +6,7 @@ for dots in .bashrc .profile .vimrc .xprofile .zprofile; do
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
-chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/sxiv/ ~/.config/lf/
+chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 for dir in desk dl dox music pix vids pub templates code imp; do
 	mkdir ~/"$dir"
 done
@@ -51,12 +51,13 @@ sudo apt install -y nala apt-transport-https \
 	zsh zsh-syntax-highlighting zsh-autosuggestions \
 	tmux fonts-terminus \
 	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
-	bspwm polybar rofi dunst kitty maim playerctl pulsemixer \
-	ffmpeg mpv sxiv exa fzf fd-find \
-	zathura htop lxappearance meld \
-	xclip xdo xdotool xwallpaper gpg xcape \
+	bspwm polybar rofi dunst lxappearance xcape \
+  kitty maim playerctl pulsemixer \
+	ffmpeg mpv nsxiv exa fzf fd-find \
+	zathura htop meld \
+	xclip xdo xdotool xwallpaper gpg \
 	exiftool aria2 wmname wmctrl neofetch \
-	docker.io ssh iftop net-tools
+	docker.io ssh net-tools iftop 
 # betterlockscreen ncdu translate-shell
 # sudo systemctl enable docker.socket
 sudo systemctl enable ssh.socket

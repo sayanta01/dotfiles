@@ -121,7 +121,7 @@ alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias nvidia-setting='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
 
-alias iv="xrdb merge ~/.config/x11/xresources; sxiv"
+alias iv="xrdb merge ~/.config/x11/xresources; nsxiv"
 alias za="zathura"
 alias vim="nvim"
 alias vimdiff="nvim -d"

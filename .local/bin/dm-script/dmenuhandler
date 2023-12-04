@@ -9,5 +9,5 @@ vim) curl -sL "$feed" >"/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" && setsi
 firefox) firefox "$feed" >/dev/null 2>&1 ;;
 pdf) curl -sL "$feed" >"/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" && zathura "/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" >/dev/null 2>&1 ;;
 mpv) setsid -f mpv -quiet "$feed" >/dev/null 2>&1 ;;
-sxiv) curl -sL "$feed" >"/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" && sxiv -a "/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" >/dev/null 2>&1 ;;
+sxiv) curl -sL "$feed" >"/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" && nsxiv -a "/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" >/dev/null 2>&1 ;;
 esac

@@ -18,4 +18,4 @@ do
 done
 
 notify-send -t 2000 "Here is your 🗞️"
-sxiv -z 110 "$cachedir"/"$datedir"/*
+nsxiv -z 110 "$cachedir"/"$datedir"/*
