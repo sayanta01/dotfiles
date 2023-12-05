@@ -112,7 +112,7 @@ shift + Print
 
 # ss window
 # alt + Print 
-# 	    maim -i $(xdotool getactivewindow) $(xdg-user-dir PICTURES)/$(date +%I:%M%b_%d)-Win.png | notify-send -t 800 "Window Screenshot Taken"
+# 	    maim -i $(xdotool getactivewindow) $(xdg-user-dir PICTURES)/ss/$(date +%I:%M%b_%d)-Win.png | notify-send -t 800 "Window Screenshot Taken"
 	                           
 # chrome
 alt + b
