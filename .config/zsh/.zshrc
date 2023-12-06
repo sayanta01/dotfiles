@@ -23,9 +23,9 @@ bindkey '^[[1;5C' forward-word                    # ctrl + ->
 bindkey '^[[1;5D' backward-word                   # ctrl + <-
 bindkey '^[[5~' beginning-of-buffer-or-history    # page up
 bindkey '^[[6~' end-of-buffer-or-history          # page down
+bindkey '^[[H' beginning-of-line                  # home
+bindkey '^[[F' end-of-line                        # end
 bindkey '^[[Z' undo                               # shift + Tab undo last action
-bindkey '^I' expand-or-complete
-bindkey '^T' transpose-chars
 
 # Hide EOL sign ('%')
 # PROMPT_EOL_MARK="" 
