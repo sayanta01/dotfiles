@@ -1,0 +1,12 @@
+#!/bin/sh
+
+workspace_name="${1:-terminal}"
+cmd="${2:-kitty}"
+
+windows=$(hyprctl clients -j | jq ".[] | select(.workspace.name == \"special:$workspace_name\")")
+
+if [ -z "$windows" ]; then
+	hyprctl dispatch "exec [workspace special:$workspace_name] $cmd"
+else
+	hyprctl dispatch togglespecialworkspace "$workspace_name"
+fi

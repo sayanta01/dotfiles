@@ -4,29 +4,17 @@
 
 # brightness control
 XF86MonBrightness{Up,Down}
-	               xbacklight{ --inc 10, --dec 10}
+	               xbacklight {-inc 10,-dec 10}
 	
 # volume control 
-XF86AudioRaiseVolume
-              pamixer -i 5
-              # amixer set Master 5%+
-              # pactl set-sink-volume @DEFAULT_SINK@ +5%
-
-XF86AudioLowerVolume
-              pamixer -d 5 
-              # amixer set Master 5%-
-              # pactl set-sink-volume @DEFAULT_SINK@ -5%
-
-XF86AudioMute
-         pamixer -t
-         # amixer set Master toggle
-         # pactl set-sink-mute @DEFAULT_SINK@ toggle
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+         pamixer {-i 5,-d 5,-t}
 
 # mic control
 XF86AudioMicMute
-            pactl set-source-mute @DEFAULT_SOURCE@ toggle
+         pamixer --default-source -t
 
-# media player control 
+# music control 
 XF86Audio{Prev,Next}
          playerctl {previous,next}
 
@@ -36,7 +24,7 @@ XF86AudioPlay
 # switch layout
 # super + n
         # ~/.local/bin/bspwm/layout
-        ## bsp-layout next --layouts tall,tiled
+        # notify-send -t 600 "layout switched!"; bsp-layout next --layouts tall,tiled
 
 # hide/unhide bar
 super + u
@@ -104,15 +92,15 @@ alt + F8
        
 # screenshot
 Print
-    maim | tee $(xdg-user-dir PICTURES)/ss/$(date +%I:%M%b_%d)-Ful.png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
+    maim | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Ful.png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
                  
 # ss select   
 shift + Print            
-        maim -s | tee $(xdg-user-dir PICTURES)/ss/$(date +%I:%M%b_%d)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
+        maim -s | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
 
 # ss window
 # alt + Print 
-# 	    maim -i $(xdotool getactivewindow) $(xdg-user-dir PICTURES)/ss/$(date +%I:%M%b_%d)-Win.png | notify-send -t 800 "Window Screenshot Taken"
+	    # maim -i $(xdotool getactivewindow) $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Win.png | notify-send -t 800 "Window Screenshot Taken"
 	                           
 # chrome
 alt + b
@@ -139,10 +127,6 @@ alt + t
 super + Return
         kitty 
 
-# scratchpad
-alt + Return
-      ~/.local/bin/bspwm/scpad
-           
 # thunar
 super + e
         thunar
@@ -159,6 +143,9 @@ ctrl + alt + l
 ctrl + alt + Delete
        ~/.local/bin/dm-script/kil	     
 
+# scratchpad
+alt + Return
+      ~/.local/bin/bspwm/scpad
 
 #
 # bspwm hotkeys
@@ -180,13 +167,14 @@ super + {_,shift + }q
 super + m
       	bspc desktop -l next
 
+# send the newest marked node to the newest preselected node
+super + y
+        bspc node -n newest.!automatic.local
+        # bspc node newest.marked.local -n newest.!automatic.local
+
 # swap the current node and the biggest window
 super + g
       	bspc node -s biggest.window
-	
-# send the newest marked node to the newest preselected node
-super + y
-      	bspc node newest.marked.local -n newest.!automatic.local
 
 #
 # state/flags
@@ -221,11 +209,9 @@ super + ctrl + {m,x,s,p}
 alt + {_,shift + }Tab
      	bspc node -f {next,prev}.local.!hidden.window
 
-# focus the older or newer node in the focus history
-super + {o,i}
-      	bspc wm -h off; \
-	      bspc node {older,newer} -f; \
-      	bspc wm -h on
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	      bspc node -{f,s} {west,south,north,east}
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -235,9 +221,11 @@ super + bracket{left,right}
 super + {grave,Tab}
 	      bspc {node,desktop} -f last
 
-# focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	      bspc node -{f,s} {west,south,north,east}
+# focus the older or newer node in the focus history
+super + {o,i}
+      	bspc wm -h off; \
+	      bspc node {older,newer} -f; \
+      	bspc wm -h on
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}

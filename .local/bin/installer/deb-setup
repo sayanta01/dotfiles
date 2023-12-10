@@ -1,15 +1,16 @@
 #!/bin/sh
 
 # yes | sudo apt full-upgrade
-for dots in .bashrc .profile .vimrc .xprofile .zprofile; do
-    cp -r "$HOME/dotfiles/$dots" "$HOME"
-done
-[ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
-cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
-chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 for dir in desk dl dox music pix vids pub templates code imp; do
 	mkdir ~/"$dir"
 done
+for dots in .bashrc .profile .vimrc .xprofile .zprofile; do
+	cp -r "$HOME/dotfiles/$dots" "$HOME"
+done
+[ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
+[ -d ~/pix/ss/ ] || mkdir -p ~/pix/ss/
+cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
+chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
 # Fonts
 printf "Fonts? (y/n): "
@@ -52,12 +53,12 @@ sudo apt install -y nala apt-transport-https \
 	tmux fonts-terminus \
 	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
 	bspwm polybar rofi dunst lxappearance xcape \
-  kitty maim playerctl pulsemixer \
+	kitty maim playerctl pulsemixer \
 	ffmpeg mpv nsxiv exa fzf fd-find \
 	zathura htop meld \
 	xclip xdo xdotool xwallpaper gpg \
 	exiftool aria2 wmname wmctrl neofetch \
-	docker.io ssh net-tools iftop 
+	docker.io ssh net-tools iftop
 # betterlockscreen ncdu translate-shell
 # sudo systemctl enable docker.socket
 sudo systemctl enable ssh.socket
@@ -78,7 +79,7 @@ distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
 distro=$(grep ID= /etc/os-release | sed -n 2p | cut -d= -f2)
 if [ "$distro" = "ubuntu" ] || [ "$distro" = "kali" ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
+		echo "source ~/.profile" >>~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
 	ln -s ~/.config/x11/xinitrc ~/.xinitrc

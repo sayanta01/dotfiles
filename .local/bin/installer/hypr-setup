@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# chrome://flags - Search for 'ozone' and select auto
+# chrome://flags - ozone > auto
+# about:config - media.peerconnection.enabled > true
 
 for dir in hypr waybar swaylock xsettingsd nwg-look; do
     cp -r "$HOME/dotfiles/.config/$dir" "$HOME/.config"
@@ -9,14 +10,14 @@ done
 # AUR
 yes | paru -S xdg-desktop-portal-hyprland \
 	wlr-randr hyprpicker swaylock-effects \
-	grim slurp swappy swww libsixel sddm-git \
-	hyprprop waypipe \
+	grim slurp swappy swww sddm-git libsixel \
+	hyprprop wlsunset waypipe nwg-look \
 	hyprland-nvidia-git \
 	libva libva-nvidia-driver-git
 # rofi-lbonn-wayland-git
 # https://github.com/nyyManni/dmenu-wayland
 
-# https://wiki.hyprland.org/Nvidia/
+## https://wiki.hyprland.org/Nvidia/
 
 # Nvidia driver and mkinitcpio
 # modules_to_add="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
