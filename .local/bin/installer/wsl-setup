@@ -14,5 +14,5 @@ sudo apt install -y wget curl x11-xserver-utils dbus-x11 xrdp xfce4 xfce4-goodie
 
 # DE
 sudo sed -i 's/3389/3390/g' /etc/xrdp/xrdp.ini
-/etc/xrdp/startwm.sh # cmnt last 2 lines of Xsession & add startxfce4 bottom
+/etc/xrdp/startwm.sh # cmnt last 2 lines of Xsession & add `startxfce4` in bottom
 sudo /etc/init.d/xrdp start
