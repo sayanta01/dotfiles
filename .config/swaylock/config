@@ -2,8 +2,8 @@ daemonize
 show-failed-attempts
 screenshot
 clock
-effect-blur=49x9
-effect-vignette=0.0:0.0
+effect-blur=29x6
+effect-vignette=1:1
 color=1f1d2e80
 font=SF Pro Text
 indicator
