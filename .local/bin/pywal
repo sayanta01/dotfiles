@@ -1,10 +1,7 @@
 #!/bin/sh
 
-# Name of the program to check
-PROGRAM="bspwm"
-
 # Check if the program is running
-if pgrep "$PROGRAM" >/dev/null; then
+if pgrep bspwm >/dev/null; then
 	wal -qi ~/.local/share/walls && bspc wm -r
 else
 	wal -qi ~/.local/share/walls

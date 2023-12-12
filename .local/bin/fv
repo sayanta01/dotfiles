@@ -44,7 +44,7 @@ optional arguments:
 pre_exit() {
 	# Get the proccess ID of this script and kill it.
 	# We are dumping the output of kill to /dev/null
-	# because if the user quits sxiv before they
+	# because if the user quits nsxiv before they
 	# exit this script, an error will be shown
 	# from kill and we dont want that
 	kill -9 "$(cat "$PIDFILE" 2>/dev/null)" &>/dev/null
@@ -66,7 +66,7 @@ generate_preview() {
 
 main() {
 	# Checkig if needed dependencies are installed
-	dependencies=(xdotool sxiv convert fzf)
+	dependencies=(xdotool nsxiv convert fzf)
 	for dependency in "${dependencies[@]}"; do
 		type -p "$dependency" &>/dev/null || {
 			echo "error: Could not find '${dependency}', is it installed?" >&2
@@ -109,33 +109,33 @@ main() {
 		if [[ $FIRST_RUN == true ]]; then
 			FIRST_RUN=false
 
-			# Display the font preview using sxiv
-			#sxiv -g "$SIZE$POSITION" "$FONT_PREVIEW" -N "fontpreview" -b &
-			sxiv -N "fontpreview" -b -g "$SIZE$POSITION" "$FONT_PREVIEW" &
+			# Display the font preview using nsxiv
+			#nsxiv -g "$SIZE$POSITION" "$FONT_PREVIEW" -N "fontpreview" -b &
+			nsxiv -N "fontpreview" -b -g "$SIZE$POSITION" "$FONT_PREVIEW" &
 
-			# Change focus from sxiv, back to the terminal window
+			# Change focus from nsxiv, back to the terminal window
 			# so that user can continue to search for fonts without
 			# having to manually change focus back to the terminal window
 			xdotool windowfocus "$(cat "$TERMWIN_IDFILE")"
 
 			# Save the process ID so that we can kill
-			# sxiv when the user exits the script
+			# nsxiv when the user exits the script
 			echo $! >"$PIDFILE"
 
-		# Check for crashes of sxiv
+		# Check for crashes of nsxiv
 		elif [[ -f $PIDFILE ]]; then
 			if ! pgrep -F "$PIDFILE" >/dev/null 2>&1; then
-				echo "Restart sxiv - You maybe using a obsolete version. " >&2
-				# Display the font preview using sxiv
-				sxiv -g "$SIZE$POSITION" -N "fontpreview" -b "$FONT_PREVIEW" &
+				echo "Restart nsxiv - You maybe using a obsolete version. " >&2
+				# Display the font preview using nsxiv
+				nsxiv -g "$SIZE$POSITION" -N "fontpreview" -b "$FONT_PREVIEW" &
 
-				# Change focus from sxiv, back to the terminal window
+				# Change focus from nsxiv, back to the terminal window
 				# so that user can continue to search for fonts without
 				# having to manually change focus back to the terminal window
 				xdotool windowfocus "$(cat "$TERMWIN_IDFILE")"
 
 				# Save the process ID so that we can kill
-				# sxiv when the user exits the script
+				# nsxiv when the user exits the script
 				echo $! >"$PIDFILE"
 			fi
 
@@ -144,7 +144,7 @@ main() {
 }
 
 # Disable CTRL-Z because if we allowed this key press,
-# then the script would exit but, sxiv would still be
+# then the script would exit but, nsxiv would still be
 # running
 trap "" SIGTSTP
 

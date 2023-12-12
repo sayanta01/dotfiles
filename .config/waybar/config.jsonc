@@ -4,8 +4,8 @@
   // "fixed-center": true, // for center-modules
   "exclusive": true,
   "passthrough": false,
-  "ipc": true,
-  "gtk-layer-shell": true,
+  "ipc": false,
+  // "gtk-layer-shell": true,
   "modules-left": [
     "hyprland/workspaces",
     "hyprland/window",

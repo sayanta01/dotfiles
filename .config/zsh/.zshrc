@@ -10,7 +10,7 @@
 # setopt notify               # report the status of background jobs immediately
 # setopt promptsubst          # enable command substitution in prompt
 
-# Configure keybindings
+# Keybindings
 bindkey -e                                        # emacs key bindings
 bindkey -s '^o' 'lfcd^M'
 bindkey -s '^r' 'hst^M'

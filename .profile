@@ -40,28 +40,19 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 export SDKMAN_DIR="$XDG_DATA_HOME/sdkman"
-export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 export KODI_DATA="$XDG_DATA_HOME/kodi"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-# $npm config edit
-# prefix="${XDG_DATA_HOME}/npm"
-# cache="${XDG_CACHE_HOME}/npm"
-# init-module="${XDG_CONFIG_HOME}/npm/config/npm-init.js"
-
-# export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
-# export ANSIBLE_HOME="${XDG_CONFIG_HOME}/ansible"
-# export ANSIBLE_CONFIG="${XDG_CONFIG_HOME}/ansible.cfg"
-# export ANSIBLE_GALAXY_CACHE_DIR="${XDG_CACHE_HOME}/ansible/galaxy_cache"
-
-# export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" # npm config edit
+export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
+export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
 # export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
 # export UNISON="$XDG_DATA_HOME/unison"
-# export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"    # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
+# export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default" # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/history"

@@ -32,7 +32,7 @@ case $action in
 	notify-send " $package  "
 	;;
 *)
-	notify-send "N Option Selected"
+	notify-send "No Option Selected"
 	exit 1
 	;;
 esac

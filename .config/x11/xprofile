@@ -6,5 +6,5 @@ killall -9 pipewire pipewire-pulse wireplumber xcape kdeconnect-indicator
 pipewire &
 pipewire-pulse &
 wireplumber &
-xcape -e 'Super_L=Alt_L|0' & 
+xcape -e 'Super_L=Alt_L|0' &
 kdeconnect-indicator &

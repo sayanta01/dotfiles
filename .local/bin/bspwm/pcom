@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# Name of the program to check
 PROGRAM="picom"
 
 # Check if the program is running
