@@ -32,7 +32,7 @@ fi
 
 # Suckless
 sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev
-git clone --depth=1 https://github.com/sayanta01/st.git ~/dl/st
+[ -d ~/dl/st/ ] || git clone --depth=1 https://github.com/sayanta01/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
 git clone --depth=1 https://github.com/sayanta01/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
@@ -40,7 +40,7 @@ cd ~/dl/dmenu && sudo make clean install
 # Nvim
 git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
 # Tmux
-git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+[ -d ~/.config/tmux/plugins/ ] || git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # Themes
 git clone --depth=1 https://github.com/sayanta01/BeautySolar ~/.local/share/icons/BeautySolar

@@ -25,7 +25,7 @@ yes | paru -S xdg-desktop-portal-hyprland \
 # sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
 
 # Setting for the NVIDIA kernel module
-printf "Want to setup kernel module for NVIDIA? (y/N): "
+printf "Setup kernel module for NVIDIA? (y/N): "
 read -r choice
 if [ "$choice" = "y" ]; then
 	sudo cat <<EOF | sudo tee /etc/modprobe.d/nvidia.conf
