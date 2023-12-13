@@ -15,7 +15,6 @@
   "terminal.integrated.gpuAcceleration": "on",
   "editor.bracketPairColorization.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "GitHub Dark Default",
   "vim.highlightedyank.color": "rgba(20, 99, 89, 0.6)",
   "vim.highlightedyank.enable": true,
   "editor.linkedEditing": true,
@@ -44,10 +43,10 @@
       "before": ["<S-h>"],
       "commands": ["workbench.action.previousEditor"]
     },
-    {
-      "before": ["<S-b>"],
-      "commands": [":enew"]
-    },
+    // {
+    //   "before": ["<S-b>"],
+    //   "commands": [":enew"]
+    // },
     // basic
     {
       "before": ["<leader>", "/"],
@@ -106,7 +105,6 @@
     {
       "before": ["l", "t"],
       "commands": ["editor.action.goToTypeDefinition"]
-      // "commands": ["editor.action.peekTypeDefinition"]
     },
     {
       "before": ["<leader>", "l", "r"],
@@ -190,6 +188,6 @@
   "errorLens.enabled": true,
   "explorer.confirmDragAndDrop": false,
   "window.menuBarVisibility": "toggle",
-  "editor.scrollbar.vertical": "hidden"
-  // "git.openRepositoryInParentFolders": "never"
+  "editor.scrollbar.vertical": "hidden",
+  "git.openRepositoryInParentFolders": "never"
 }
