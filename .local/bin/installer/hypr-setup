@@ -8,7 +8,7 @@ for dir in hypr waybar swaylock xsettingsd nwg-look; do
 done
 
 # AUR
-yes | paru -S xdg-desktop-portal-hyprland \
+yes | paru -S hyprland-git xdg-desktop-portal-hyprland \
 	wlr-randr hyprpicker swaylock-effects \
 	grim slurp swappy swww sddm-git libsixel \
 	hyprprop wlsunset waypipe nwg-look \
@@ -37,7 +37,7 @@ else
 	:
 fi
 
-sudo pacman -S --noconfirm hyprland waybar file-roller tumbler wlroots polkit-gnome \
+sudo pacman -S --noconfirm waybar file-roller tumbler wlroots polkit-gnome \
 	qt5-wayland qt6-wayland viewnior sddm-runit \
 	wl-clipboard wf-recorder ffmpegthumbs
 

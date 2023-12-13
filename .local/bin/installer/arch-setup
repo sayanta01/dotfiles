@@ -51,7 +51,7 @@ read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 		noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
-		exa bat fd fzf man-db bash-completion starship \
+		eza bat fd fzf man-db bash-completion starship \
 		mate-calc meld firefox qutebrowser \
 		linux-lts linux-lts-headers kitty neovim newsboat \
 		gnome-keyring cowsay htop stress neofetch \
@@ -66,7 +66,7 @@ if [ "$choice" = "y" ]; then
 		zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 		rsync wget yt-dlp aria2 jq transmission-cli \
 		xsct xdg-utils xdg-user-dirs xdo \
-		socat nmap exfat-utils \
+		pacman-contrib socat exfat-utils \
 		xorg-xinit xclip xdotool \
 		wmname wmctrl unclutter
 # libx11 libxft libxrandr libxinerama
