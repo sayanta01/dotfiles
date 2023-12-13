@@ -5,6 +5,7 @@
   "exclusive": true,
   "passthrough": false,
   "ipc": false,
+  "tooltip": false,
   // "gtk-layer-shell": true,
   "modules-left": [
     "hyprland/workspaces",
@@ -114,7 +115,6 @@
     "format-muted": " Muted",
     "on-click": "pamixer -t",
     "on-click-right": "pavucontrol",
-    // "on-click-right": "kitty --class floating -e pulsemixer",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
     "scroll-step": 5,
@@ -134,7 +134,7 @@
     "format-source": " {volume}%",
     "format-source-muted": " Muted",
     "on-click": "pamixer --default-source -t",
-    "on-click-right": "kitty --class floating -e pulsemixer",
+    // "on-click-right": "kitty --class floating -e pulsemixer",
     "on-scroll-up": "pamixer --default-source -i 5",
     "on-scroll-down": "pamixer --default-source -d 5",
     "scroll-step": 5
