@@ -12,7 +12,7 @@ cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
 # Fonts
-printf "Fonts? (y/n): "
+printf "Fonts? (y/N): "
 read -r choice
 if [ "$choice" = "y" ]; then
 	wget https://github.com/subframe7536/Maple-font/releases/latest/download/MapleMono-NF.zip
@@ -124,19 +124,25 @@ sudo pacman -S --noconfirm scrcpy android-tools android-file-transfer \
 # sudo usermod -aG vboxusers "$USER"  # USB usage for Virtual-Box
 
 # VM
-sudo pacman -S --noconfirm qemu virt-manager dnsmasq bridge-utils openbsd-netcat libvirt-runit spice-vdagent-runit
-# libvirt spice-vdagent qemu-arch-extra
-sudo ln -s /etc/runit/sv/virtlogd /run/runit/service
-sudo touch /run/runit/service/virtlogd/down
-sudo ln -s /etc/runit/sv/libvirtd /run/runit/service
-sudo touch /run/runit/service/libvirtd/down
-sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service
-sudo touch /run/runit/service/spice-vdagentd/down
-# sudo systemctl enable --now libvirtd  # arch
-sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
-sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
-sudo usermod -aG libvirt "$USER"
+printf "Want to install QEMU VM ? (y/N): "
+read -r choice
+if [ "$choice" = "y" ]; then
+	sudo pacman -S --noconfirm qemu virt-manager dnsmasq bridge-utils openbsd-netcat libvirt-runit spice-vdagent-runit
+	# libvirt spice-vdagent qemu-arch-extra
+	sudo ln -s /etc/runit/sv/virtlogd /run/runit/service
+	sudo touch /run/runit/service/virtlogd/down
+	sudo ln -s /etc/runit/sv/libvirtd /run/runit/service
+	sudo touch /run/runit/service/libvirtd/down
+	sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service
+	sudo touch /run/runit/service/spice-vdagentd/down
+	# sudo systemctl enable --now libvirtd  # arch
+	sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
+	sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
+	sudo usermod -aG libvirt "$USER"
 # sudo systemctl restart libvirtd  # arch
+else
+	:
+fi
 
 # AUR
 git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru

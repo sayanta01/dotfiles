@@ -4,7 +4,7 @@
 # about:config - media.peerconnection.enabled > true
 
 for dir in hypr waybar swaylock xsettingsd nwg-look; do
-    cp -r "$HOME/dotfiles/.config/$dir" "$HOME/.config"
+	cp -r "$HOME/dotfiles/.config/$dir" "$HOME/.config"
 done
 
 # AUR
@@ -25,14 +25,20 @@ yes | paru -S xdg-desktop-portal-hyprland \
 # sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
 
 # Setting for the NVIDIA kernel module
-sudo cat <<EOF | sudo tee /etc/modprobe.d/nvidia.conf
+printf "Want to setup kernel module for NVIDIA? (y/N): "
+read -r choice
+if [ "$choice" = "y" ]; then
+	sudo cat <<EOF | sudo tee /etc/modprobe.d/nvidia.conf
 options nvidia-drm modeset=1
 EOF
+else
+	:
+fi
 
 sudo pacman -S --noconfirm hyprland waybar file-roller tumbler wlroots polkit-gnome \
 	qt5-wayland qt6-wayland viewnior sddm-runit \
 	wl-clipboard wf-recorder ffmpegthumbs
-# waydroid - container-based approach to boot a full Android system on GNU/Linux
+# waydroid - container-based approach to boot a full Android system
 
 sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop
 [Desktop Entry]
@@ -42,9 +48,16 @@ Exec=dbus-launch Hyprland
 Type=Application
 EOF
 
-sudo cat <<EOF | sudo tee /etc/sddm.conf.d/sddm.conf
+# Sddm theme
+printf "Do you want to change sddm theme? (y/N): "
+read -r choice
+if [ "$choice" = "y" ]; then
+	sudo cat <<EOF | sudo tee /etc/sddm.conf.d/sddm.conf
 [Theme]
 Current=elarun
 Font=MapleMono NF
 EOF
-sudo cp -r ~/.local/share/walls/astro.jpg /usr/share/sddm/themes/elarun/images/background.png
+	sudo cp -r ~/.local/share/walls/astro.jpg /usr/share/sddm/themes/elarun/images/background.png
+else
+	:
+fi

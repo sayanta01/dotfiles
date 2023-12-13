@@ -13,7 +13,7 @@ cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
 # Fonts
-printf "Fonts? (y/n): "
+printf "Fonts? (y/N): "
 read -r choice
 if [ "$choice" = "y" ]; then
 	wget https://github.com/subframe7536/Maple-font/releases/latest/download/MapleMono-NF.zip
