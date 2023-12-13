@@ -1,3 +1,0 @@
-#!/bin/sh
-
-notify-send "🖥 Cpu hogs" "$(ps axch -o cmd:16,%cpu --sort=-%cpu | head)"
