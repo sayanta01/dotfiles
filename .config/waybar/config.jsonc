@@ -69,13 +69,13 @@
   //   "tooltip": false,
   //   "interval": 4,
   //   "exec": "~/.local/bin/statusbar/bar-cpu",
-  //   "on-click": "~/.config/waybar/scripts/cpu_usage"
+  //   "on-click": "notify-send \"🖥 Cpu hogs\" \"$(ps axch -o cmd:16,%cpu --sort=-%cpu | head)\""
   // },
   "custom/memory": {
     "tooltip": false,
     "interval": 4,
     "exec": "~/.local/bin/statusbar/bar-mem",
-    "on-click": "~/.config/waybar/scripts/mem_usage",
+    "on-click": "notify-send \"🧠 Memory hogs\" \"$(ps axch -o cmd:16,%mem --sort=-%mem | head)\"",
     "on-click-right": "kitty --class floating -e htop"
   },
   "custom/date": {

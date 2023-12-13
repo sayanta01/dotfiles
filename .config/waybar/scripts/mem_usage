@@ -1,3 +1,0 @@
-#!/bin/sh
-
-notify-send "🧠 Memory hogs" "$(ps axch -o cmd:16,%mem --sort=-%mem | head)" 
