@@ -15,7 +15,9 @@ yes | paru -S xdg-desktop-portal-hyprland \
 	hyprland-nvidia-git \
 	libva libva-nvidia-driver-git
 # rofi-lbonn-wayland-git
-# https://github.com/nyyManni/dmenu-wayland
+# kooha - Minimalistic screen recorder, using the xdg-desktop-portal ScreenCast protocol
+# ydotool - A generic Linux command-line automation tool for Wayland
+# waydroid - Container-based approach to boot a full Android system
 
 ## https://wiki.hyprland.org/Nvidia/
 
@@ -38,7 +40,6 @@ fi
 sudo pacman -S --noconfirm hyprland waybar file-roller tumbler wlroots polkit-gnome \
 	qt5-wayland qt6-wayland viewnior sddm-runit \
 	wl-clipboard wf-recorder ffmpegthumbs
-# waydroid - container-based approach to boot a full Android system
 
 sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop
 [Desktop Entry]
