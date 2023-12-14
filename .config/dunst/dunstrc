@@ -8,7 +8,7 @@
     scale = 0
     notification_limit = 0
     indicate_hidden = yes
-    #transparency = 0
+    # transparency = 0
     separator_height = 2
     padding = 8
     horizontal_padding = 8
@@ -22,7 +22,7 @@
     format = "<b>%s</b>\n%b"
     alignment = center
     show_age_threshold = 60
-    #icon_position = left
+    # icon_position = left
     min_icon_size = 40
     max_icon_size = 50
     sticky_history = yes
@@ -32,7 +32,7 @@
     title = Dunst
     class = Dunst
     corner_radius = 0
-    #text_icon_padding = 0
+    # text_icon_padding = 0
     icon_path = false
     ignore_newline = no
     stack_duplicates = true
@@ -45,16 +45,16 @@
     enable_recursive_icon_lookup = false
     progress_bar = false
     
-    #progress_bar_height = 90
-    #progress_bar_frame_width = 2
-    #progress_bar_min_width = 200
-    #progress_bar_max_width = 280
+    # progress_bar_height = 90
+    # progress_bar_frame_width = 2
+    # progress_bar_min_width = 200
+    # progress_bar_max_width = 280
   
   
-### Wayland ###
+## Wayland ##
     #Uncomment for notications appear under fullscreen
     #applications (default: overlay)
-    #Set this to true to use X11 output on Wayland.
+    #Set this to true to use X11 output on Wayland
     # layer = top
     # force_xwayland = false
     # force_xinerama = false

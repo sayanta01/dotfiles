@@ -30,7 +30,7 @@ bspc rule -a Lxappearance state=floating center=on
 bspc rule -a Nm-connection-editor state=floating center=on
 bspc rule -a Pavucontrol state=floating center=on
 bspc rule -a Blueman-manager state=floating center=on
-bspc rule -a scpad locked=on sticky=on state=floating rectangle=966x699+480+38
+bspc rule -a scpad locked=on sticky=on state=floating rectangle=999x800+460+90
 
 # Autostart
 xsetroot -cursor_name left_ptr &
