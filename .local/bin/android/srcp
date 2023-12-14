@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# Todo : how to use mic/camera for video calling
+
+# setup
+connect() {
+	ip=$(adb shell ip route | awk '{print $9}')
+	adb devices && adb tcpip 5555 && adb connect "$ip":5555
+	# Run `adb disconnect` once you're done
+}
+
+# audio recording
+audio() {
+	[ -d ~/music/audio/ ] || mkdir -p ~/music/audio/
+	scrcpy --no-video --audio-source=mic \
+		--audio-bit-rate=128K \
+		--record="$(xdg-user-dir MUSIC)/audio/$(date +%d_%b_%I:%M)-recording.opus"
+}
+
+# works like a charm
+camera() {
+	scrcpy --video-source=camera \
+		--audio-source=mic \
+		--camera-facing=back \
+		--camera-fps=40
+}
+
+# sound for bgmi - fix mic
+game() {
+	scrcpy --no-video --audio-output-buffer=10
+}
+
+# Call the functions based on user input
+if [ "$1" = "connect" ]; then
+	connect
+elif [ "$1" = "audio" ]; then
+	audio
+elif [ "$1" = "camera" ]; then
+	camera
+elif [ "$1" = "game" ]; then
+	game
+else
+	exit 1
+fi
