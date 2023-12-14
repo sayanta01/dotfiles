@@ -22,9 +22,9 @@ XF86AudioPlay
          playerctl play-pause
 
 # switch layout
-# super + n
-        # ~/.local/bin/bspwm/layout
-        # notify-send -t 600 "layout switched!"; bsp-layout next --layouts tall,tiled
+super + n
+        ~/.local/bin/bspwm/layout
+        # bsp-layout next --layouts tall,tiled && notify-send -t 900 "$(bsp-layout get) layout"
 
 # hide/unhide bar
 super + u
