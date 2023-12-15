@@ -8,7 +8,7 @@ for dir in hypr waybar swaylock xsettingsd nwg-look; do
 done
 
 # AUR
-yes | paru -S hyprland-git xdg-desktop-portal-hyprland \
+paru -S hyprland-git xdg-desktop-portal-hyprland \
 	wlr-randr hyprpicker swaylock-effects \
 	grim slurp swappy swww sddm-git libsixel \
 	hyprprop wlsunset waypipe nwg-look \
