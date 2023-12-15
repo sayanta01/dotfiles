@@ -16,8 +16,8 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 # sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## Another Method For Debian ##
-#sudo rm -rf /boot/grub/themes/kali/* && sudo cp -r catppuccin-mocha-grub-theme/* /boot/grub/themes/kali
-#sudo grub-mkconfig -o /boot/grub/grub.cfg
+# sudo rm -rf /boot/grub/themes/kali/* && sudo cp -r catppuccin-mocha-grub-theme/* /boot/grub/themes/kali
+# sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## For ALL distro ##
 echo 'menuentry "Reboot" --class restart {
