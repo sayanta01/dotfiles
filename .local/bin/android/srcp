@@ -6,7 +6,7 @@
 connect() {
 	ip=$(adb shell ip route | awk '{print $9}')
 	adb devices && adb tcpip 5555 && adb connect "$ip":5555
-	# Run `adb disconnect` once you're done
+  # Run `adb disconnect` `adb kill-server' troubleshooting
 }
 
 # audio recording

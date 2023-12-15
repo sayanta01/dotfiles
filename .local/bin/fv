@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #
 # https://github.com/sdushantha/fontpreview
-#
-# Dependencies: sxiv, imagemagick, xdotool, fzf
+# Dependencies: nsxiv, imagemagick, xdotool, fzf
 
 VERSION=1.0.7
 

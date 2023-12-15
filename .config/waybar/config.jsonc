@@ -1,7 +1,6 @@
 {
   "layer": "top",
   "position": "top",
-  // "fixed-center": true, // for center-modules
   "exclusive": true,
   "passthrough": false,
   "ipc": false,
@@ -27,7 +26,6 @@
     "max-length": 42
   },
   "hyprland/workspaces": {
-    // "disable-scroll": true,
     "all-outputs": true,
     "on-click": "activate",
     "format": "{icon}",
@@ -89,25 +87,15 @@
   //   "states": {
   //     "good": 94,
   //     "warning": 29,
-  //     "critical": 20
+  //     "critical": 16
   //   },
   //   "format": "{icon} {capacity}%",
-  //   "format-charging": " {capacity}%",
-  //   "format-plugged": " {capacity}%",
+  //   "format-charging": "{capacity}% ",
+  //   "format-plugged": "{capacity}% ",
   //   "format-alt": "{time} {icon}",
-  //   "format-icons": [
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     "",
-  //     ""
-  //   ]
+  //   // "format-good": "", // An empty format will hide the module
+  //   // "format-full": "",
+  //   "format-icons": ["", "", "", "", ""]
   // },
   "pulseaudio": {
     "tooltip": false,
