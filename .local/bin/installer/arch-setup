@@ -68,7 +68,7 @@ if [ "$choice" = "y" ]; then
 		xsct xdg-utils xdg-user-dirs xdo \
 		pacman-contrib socat exfat-utils \
 		xorg-xinit xclip xdotool \
-		wmname wmctrl unclutter
+		wmname wmctrl grub-customizer
 # libx11 libxft libxrandr libxinerama
 # xorg-server xorg-xwininfo xorg-xprop xorg-xrdb xorg-xrandr xorg-xsetroot xorg-xbacklight
 else

@@ -23,12 +23,10 @@
     "command": "toggleVim"
   },
   {
-    // "key": "shift+alt+j",
     "key": "alt+j",
     "command": "editor.action.moveLinesDownAction"
   },
   {
-    // "key": "shift+alt+k",
     "key": "alt+k",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"

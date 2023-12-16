@@ -8,7 +8,7 @@ sudo plymouth-set-default-theme -R lone
 
 ## ARCH ##
 # /etc/mkinitcpio.conf    `in HOOKS add - plymouth after udev`
-sudo mkinitcpio -p linux / linux-lts
+sudo mkinitcpio -p linux-lts / linux
 
 # /etc/default/grub  `in GRUB_CMDLINE_LINUX_DEFATULT add - splash rd.udev.log_priority=3 vt.global_cursor_default=0`
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -21,4 +21,4 @@ sudo systemctl disable lightdm
 sudo systemctl enable lightdm-plymouth
 
 # sudo vim /etc/plymouth/plymouthd.conf  `ShowDelay=0 and DeviceTimeout=5`
-# sudo mkinitcpio -p linux / linux-lts  `Regenerate config file for theme`
+# sudo mkinitcpio -p linux-lts / linux  `Regenerate config file for theme`

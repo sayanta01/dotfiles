@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# sudo pacman -S --noconfirm lightdm-gtk-greeter-settings
+# dm-tool switch-to-greeter
+
 if [ -d "$HOME/.local/share/walls" ]; then
 	set -- "$HOME/.local/share/walls"/*
 	if [ -e "$1" ]; then
