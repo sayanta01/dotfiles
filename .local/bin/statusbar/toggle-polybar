@@ -13,7 +13,7 @@ if [[ "IsViewable" == "$WINDOW_STATE" ]]; then
 else
 	xdo show -N Polybar
 	# echo "Showing polybar"
-	bspc config -m "$toggle" top_padding 29
+	bspc config -m "$toggle" top_padding 26
 fi
 
 # run "xwininfo" tap cursor in polybar
