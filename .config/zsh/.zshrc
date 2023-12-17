@@ -53,7 +53,6 @@ setopt hist_verify             # show command with history expansion
 # Load aliases and shortcuts if existent
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
 [ -f "$HOME/.config/shell/shortcutrc" ] && source "$HOME/.config/shell/shortcutrc"
-# [ -f "$HOME/.config/shell/tty-colors" ] && source "$HOME/.config/shell/tty-colors"
 
 # Plugins
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]; then

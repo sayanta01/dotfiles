@@ -14,5 +14,3 @@ px  $HOME/pix
 
 pb $HOME/pub
 tm $HOME/templates
-cd $HOME/code
-im $HOME/imp

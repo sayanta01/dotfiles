@@ -3,11 +3,11 @@
 
 export MANPAGER='nvim +Man!'
 
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
- --color=fg:#d6d6d6,bg:#121212,hl:#5f87af
- --color=fg+:#e8e8e8,bg+:#262626,hl+:#3bceff
- --color=info:#afaf87,prompt:#d7005f,pointer:#b061ff
- --color=marker:#87ff00,spinner:#972eff,header:#87afaf"
+# export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
+#  --color=fg:#d6d6d6,bg:#121212,hl:#5f87af
+#  --color=fg+:#e8e8e8,bg+:#262626,hl+:#3bceff
+#  --color=info:#afaf87,prompt:#d7005f,pointer:#b061ff
+#  --color=marker:#87ff00,spinner:#972eff,header:#87afaf"
 
 # Paths
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
@@ -51,7 +51,6 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
 export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
 # export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
-# export UNISON="$XDG_DATA_HOME/unison"
 # export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default" # run this - mkdir -p "$XDG_DATA_HOME"/wineprefixes
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"

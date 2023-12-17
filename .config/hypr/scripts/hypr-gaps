@@ -30,14 +30,11 @@ fi
 case "$1" in
 "increase")
 	adjust_gaps 4
-	echo "Gaps increased by 4"
 	;;
 "decrease")
 	adjust_gaps -4
-	echo "Gaps decreased by 4"
 	;;
 *)
-	echo "Invalid option. Use 'increase' or 'decrease'."
 	exit 1
 	;;
 esac

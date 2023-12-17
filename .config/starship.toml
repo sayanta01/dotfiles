@@ -8,6 +8,12 @@ $character"""
 
 command_timeout = 20000
 
+[directory]
+style = "blue"
+read_only = " "
+truncation_length = 4
+truncate_to_repo = false
+
 [git_branch]
 symbol = " "
 format = "[$symbol$branch]($style) "
@@ -24,12 +30,6 @@ style = "cyan"
 
 [git_metrics]
 disabled = false
-
-[directory]
-style = "blue"
-read_only = " "
-truncation_length = 4
-truncate_to_repo = false
 
 [character]
 success_symbol = "[❯](pink)"

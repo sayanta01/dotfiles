@@ -34,11 +34,6 @@ rate() {
 	sh -c "curl rate.sx/$1"
 }
 
-gcom() {
-	git add .
-	git commit -m "$1"
-}
-
 lazyg() {
 	git add .
 	git commit -m "$1"
@@ -54,15 +49,6 @@ lfcd() {
 		[ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir" || return 1
 	fi
 }
-
-# Automatically do an ls after each cd
-# cd() {
-# 	if [ -n "$1" ]; then
-# 		builtin cd "$@" && ls
-# 	else
-# 		builtin cd ~ && ls
-# 	fi
-# }
 
 # For some reason, rot13 pops up everywhere
 rot13() {

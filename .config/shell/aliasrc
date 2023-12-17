@@ -3,7 +3,7 @@
 # Replace sudo with doas
 # alias sudo='doas'
 
-# Kali
+# Debian
 # alias update='sudo nala update'
 # alias uplist='apt list --upgradable'
 # alias remove='sudo nala purge'
@@ -131,7 +131,7 @@ alias aft="android-file-transfer"
 alias ytdl-vid="yt-dlp -f bestvideo+bestaudio"
 alias ytdl-aud="yt-dlp --extract-audio --audio-format m4a"
 
-# for Arch Linux only
+# Arch Linux only
 # alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 # alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
 # alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
