@@ -1,12 +1,9 @@
 #!/bin/sh
 
-# Todo : how to use mic/camera for video calling
-
 # setup
 connect() {
 	ip=$(adb shell ip route | awk '{print $9}')
-	adb devices && adb tcpip 5555 && adb connect "$ip":5555
-  # Run `adb disconnect` `adb kill-server' troubleshooting
+	adb connect "$ip":5555
 }
 
 # audio recording
@@ -22,7 +19,8 @@ camera() {
 	scrcpy --video-source=camera \
 		--audio-source=mic \
 		--camera-facing=back \
-		--camera-fps=40
+		--camera-fps=40 \
+		--orientation=90
 }
 
 # sound in earphone - fix mic
