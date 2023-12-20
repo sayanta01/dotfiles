@@ -10,7 +10,7 @@ done
 # AUR
 paru -S hyprland-git xdg-desktop-portal-hyprland \
 	wlr-randr hyprpicker swaylock-effects \
-	grim slurp swappy swww sddm-git libsixel \
+	grim slurp swappy swww libsixel \
 	hyprprop wlsunset waypipe nwg-look \
 	hyprland-nvidia-git \
 	libva libva-nvidia-driver-git
@@ -50,15 +50,16 @@ Type=Application
 EOF
 
 # Sddm theme
-printf "Do you want to change sddm theme? (y/N): "
+printf "SDDM theme? (y/N): "
 read -r choice
 if [ "$choice" = "y" ]; then
+	git clone --depth=1 https://github.com/JaKooLit/simple-sddm.git ~/simple-sddm
+	sudo mv ~/simple-sddm /usr/share/sddm/themes/
 	sudo cat <<EOF | sudo tee /etc/sddm.conf.d/sddm.conf
 [Theme]
-Current=elarun
-Font=MapleMono NF
+Current=simple-sddm
+Font=JetBrainsMono NF
 EOF
-	sudo cp -r ~/.local/share/walls/astro.jpg /usr/share/sddm/themes/elarun/images/background.png
 else
 	:
 fi
