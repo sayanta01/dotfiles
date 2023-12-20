@@ -15,6 +15,7 @@ elif [ "$bat_capacity" -gt 20 ]; then
 else
 	bat_status=""
 fi
+
 # bat="$bat_status $bat_capacity%"
 echo bat="$bat_status $bat_capacity%"
 
