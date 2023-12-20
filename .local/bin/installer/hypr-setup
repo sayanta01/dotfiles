@@ -11,7 +11,7 @@ done
 paru -S hyprland-git xdg-desktop-portal-hyprland \
 	wlr-randr hyprpicker swaylock-effects \
 	grim slurp swappy swww libsixel \
-	hyprprop wlsunset waypipe nwg-look \
+	hyprprop wlsunset waypipe nwg-look-bin \
 	hyprland-nvidia-git \
 	libva libva-nvidia-driver-git
 # rofi-lbonn-wayland-git
