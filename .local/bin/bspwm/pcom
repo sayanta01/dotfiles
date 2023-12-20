@@ -1,14 +1,16 @@
 #!/bin/sh
 
 PROGRAM="picom"
+WM="bspwm"
 
-# Check if the program is running
-if pgrep "$PROGRAM" >/dev/null; then
-	# If the program is running, kill it
-	notify-send -t 990 "Picom ☠️"
-	pkill "$PROGRAM"
-else
-	# If the program is not running, start it
-	notify-send -t 990 "Picom 🚀"
-	"$PROGRAM" &
+# only for BSPWM
+current_wm=$(wmctrl -m | awk '/Name:/ {print $2}')
+if [ "$current_wm" = "$WM" ]; then
+	if pgrep "$PROGRAM" >/dev/null; then
+		notify-send -t 990 "Picom 💀"
+		pkill "$PROGRAM"
+	else
+		notify-send -t 990 "Picom 🚀"
+		"$PROGRAM" &
+	fi
 fi
