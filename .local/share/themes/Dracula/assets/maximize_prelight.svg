@@ -6,7 +6,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="maximize_prelight.svg"
    inkscape:export-filename="maximize_prelight.png"
    inkscape:export-xdpi="96"
@@ -27,8 +27,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="30.42623"
-     inkscape:cx="-8.5452585"
+     inkscape:zoom="15.213115"
+     inkscape:cx="-31.518857"
      inkscape:cy="7.9536637"
      inkscape:document-units="px"
      inkscape:current-layer="g4147"
@@ -38,9 +38,9 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1920"
-     inkscape:window-height="1051"
+     inkscape:window-height="1013"
      inkscape:window-x="0"
-     inkscape:window-y="29"
+     inkscape:window-y="31"
      inkscape:window-maximized="1"
      inkscape:document-rotation="0"
      inkscape:showpageshadow="2"
@@ -85,10 +85,9 @@
              id="path4291" />
           <path
              inkscape:connector-curvature="0"
-             d="m 364.14001,635.60414 16.02015,14.39703 h 204.40235 c 35.579,0 64.692,-29.113 64.692,-64.695 V 377.84119 L 633.56329,363.18551 608.55398,358.8107 359.45904,607.90564 Z m 131.74743,-414.46477 -4.47499,-7.3492 H 281.43451 c -35.583,0 -64.692,29.109 -64.692,64.691 v 209.71135 l 15.30621,19.58979 26.54177,-2.89512 246.34901,-246.34901 4.35638,-17.04875"
+             d="m 317.36351,650.00117 267.199,0 c 35.579,0 64.692,-29.113 64.692,-64.695 l 0,-267.196 -331.891,331.891 z m 232.324,-436.211 -268.253,0 c -35.583,0 -64.692,29.109 -64.692,64.691 l 0,268.254 332.945,-332.945"
              style="fill:#032702;fill-opacity:1;fill-rule:evenodd;stroke:none"
-             id="path4293"
-             sodipodi:nodetypes="ccsscccccccssccccc" />
+             id="path4293" />
         </g>
       </g>
     </g>
