@@ -132,7 +132,8 @@ alias ytdl-vid="yt-dlp -f bestvideo+bestaudio"
 alias ytdl-aud="yt-dlp --extract-audio --audio-format m4a"
 
 # Arch Linux only
-# alias arch-mirror= "sudo reflector --verbose --fastest 40 --latest 40 --number 20 --save /etc/pacman.d/mirrorlist"
-# alias arch-mirrord="sudo reflector --verbose --sort delay --latest 60 --number 20 --save /etc/pacman.d/mirrorlist"
-# alias arch-mirrors="sudo reflector --verbose --sort score --latest 60 --number 20 --save /etc/pacman.d/mirrorlist"
-# alias arch-mirrora="sudo reflector --verbose --sort age   --latest 60 --number 20 --save /etc/pacman.d/mirrorlist"
+# https://archlinux.org/mirrorlist/
+# alias arch-mirror= "sudo reflector --verbose --fastest 40 --latest 60 --sort rate --save /etc/pacman.d/mirrorlist"
+# alias arch-mirrora="sudo reflector --verbose --latest 60 --sort age --save /etc/pacman.d/mirrorlist"
+# alias arch-mirrord="sudo reflector --verbose --latest 60 --sort delay --save /etc/pacman.d/mirrorlist"
+# alias arch-mirrors="sudo reflector --verbose --latest 60 --sort score --save /etc/pacman.d/mirrorlist"
