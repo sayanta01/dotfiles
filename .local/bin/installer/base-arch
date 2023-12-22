@@ -1,12 +1,12 @@
-# enable efi                        #VM settings
-# ls /sys/firmware/efi/efivars      #check uefi
+# enable efi                        # VM settings
+# ls /sys/firmware/efi/efivars      # check uefi
 
 #### connect wifi ####
 iwctl
-device list  #show adpater  - example: wlan0
+device list  # show adpater  - example: wlan0
 station <adpater-name> scan 
-station <adpater-name> get-networks            #show available networks
-station <adpater-name> connect <network-name>  #example: NullByte 
+station <adpater-name> get-networks            # show available networks
+station <adpater-name> connect <network-name>  # example: NullByte 
 
 #### change tty font ####
 pacman -Sy terminus-font
@@ -14,8 +14,8 @@ setfont /usr/share/kbd/consolefonts/ter-d16n.psf.gz
 
 #### partition disk ####
 cfdisk /dev/sda
-sda1 boot 400M      #partition type EFI system
-sda2 root           #give rest of space
+sda1 boot 400M      # partition type EFI system
+sda2 root           # give rest of space
 # sda3 swap         - optional
 write & quit
 
@@ -41,8 +41,8 @@ genfstab -U /mnt >> /mnt/etc/fstab  ( arch )
 artix-chroot /mnt  ( artix )
  arch-chroot /mnt  ( arch )
 
-vim /etc/pacman.conf                    #uncmnt colors and ParallerDownloads, add ILoveCandy
-vim /etc/makepkg.conf                   #uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
+vim /etc/pacman.conf                    # uncmnt colors and ParallerDownloads, add ILoveCandy
+vim /etc/makepkg.conf                   # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
 
 #### configure system clock ####
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
@@ -51,7 +51,7 @@ hwclock --systohc
 timedatectl set-ntp true  ( arch )
 
 #### set localization ####
-vim /etc/locale.gen                     #uncmnt US.UTF-8
+vim /etc/locale.gen                     # uncmnt US.UTF-8
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C"  ( artix ) 
@@ -74,12 +74,13 @@ pacman -S grub os-prober efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
-passwd  #set root pswd
+passwd  # set root pswd
 useradd -m -G wheel,storage,power -s /bin/zsh bot
 passwd bot
 
-EDITOR=vim visudo                       #uncmnt %wheel ALL=(ALL:ALL) ALL
-exit - chroot environment & sudo reboot
+EDITOR=vim visudo                       # uncmnt %wheel ALL=(ALL:ALL) ALL
+exit - chroot environment
+sudo reboot
 
 
 #### Add Arch Repo for Artix ####
