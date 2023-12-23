@@ -20,9 +20,9 @@ set_wallpaper_hyprland() {
 
 	# Check if the program is running
 	if pgrep "$PROGRAM" >/dev/null; then
-		swww img "$BG" --transition-fps 255 --transition-type $trans_type --transition-duration 1
+		swww img "$BG" --transition-fps 244 --transition-type $trans_type --transition-duration 1
 	else
-		swww init && swww img "$BG" --transition-fps 255 --transition-type $trans_type --transition-duration 1
+		swww init && swww img "$BG" --transition-fps 244 --transition-type $trans_type --transition-duration 1
 	fi
 }
 

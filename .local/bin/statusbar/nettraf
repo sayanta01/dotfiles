@@ -20,8 +20,7 @@ tx_speed=$(echo "scale=2; ($new_tx_bytes - $tx_bytes) / $INT" | bc)
 
 # Print the results
 printf "%4sB 📡 %4sB\n" "$(numfmt --to=iec "$rx_speed")" "$(numfmt --to=iec "$tx_speed")"
-# printf "%4sB 󰀂  %4sB\n" "$(numfmt --to=iec "$rx_speed")" "$(numfmt --to=iec "$tx_speed")"
-# printf "%4sB 🌐📶 %4sB\n" "$(numfmt --to=iec "$rx_speed")" "$(numfmt --to=iec "$tx_speed")"
+# 🌐📶 󰀂 
 
 # --------------------------------------------------------------------------------------
 
@@ -45,5 +44,3 @@ printf "%4sB 📡 %4sB\n" "$(numfmt --to=iec "$rx_speed")" "$(numfmt --to=iec "$
 #
 # # Returning the results
 printf "%4sB 📡 %4sB\n" "$(numfmt --to=iec "$rx_speed")" "$(numfmt --to=iec "$tx_speed")"
-# printf "%4sB 󰀂  %4sB\n" "$(numfmt --to=iec "$rx_speed")" "$(numfmt --to=iec "$tx_speed")"
-# printf "%4sB 🌐📶 %4sB\n" "$(numfmt --to=iec "$rx_speed")" "$(numfmt --to=iec "$tx_speed")"
