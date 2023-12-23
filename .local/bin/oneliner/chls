@@ -1,6 +1,3 @@
 #!/bin/sh
 
-# Check if the program is running
-if pgrep bspwm >/dev/null; then
-	betterlockscreen -u ~/.local/share/walls --fx blur && notify-send "Lockscreen changed 🖼️"
-fi
+[ "$XDG_SESSION_TYPE" = "x11" ] && betterlockscreen -u ~/.local/share/walls --fx blur && notify-send "Lockscreen changed 🖼️"
