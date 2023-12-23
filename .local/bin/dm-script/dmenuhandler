@@ -1,10 +1,17 @@
 #!/bin/sh
 
+# check session type and select appropriate clipboard tool
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+	clipboard_tool="wl-copy"
+else
+	clipboard_tool="xclip -sel c"
+fi
+
 # Feed this script a link and it will give dmenu
 feed="${1:-$(true | dmenu -p 'Paste URL or file path')}"
 
 case "$(printf "copy-url\\nmpv\\nfirefox\\nvim\\nsxiv\\npdf" | dmenu -i -p "Open it with?")" in
-"copy-url") echo "$feed" | xclip -sel clipboard ;;
+"copy-url") echo "$feed" | $clipboard_tool ;;
 vim) curl -sL "$feed" >"/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" && setsid -f "$TERMINAL" -e "$EDITOR" "/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" >/dev/null 2>&1 ;;
 firefox) firefox "$feed" >/dev/null 2>&1 ;;
 pdf) curl -sL "$feed" >"/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" && zathura "/tmp/$(echo "$feed" | sed "s|.*/||;s/%20/ /g")" >/dev/null 2>&1 ;;
