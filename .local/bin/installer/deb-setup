@@ -22,10 +22,8 @@ if [ "$choice" = "y" ]; then
 	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
 	yes | sudo unzip FiraCode.zip -d /usr/share/fonts/TTF
-	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.zip
-	yes | sudo unzip CascadiaCode.zip -d /usr/share/fonts/TTF
 	fc-cache -fv
-	rm -rf MapleMono-NF.zip JetBrainsMono.zip FiraCode.zip CascadiaCode.zip
+	rm -rf MapleMono-NF.zip JetBrainsMono.zip FiraCode.zip
 else
 	:
 fi
