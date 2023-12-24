@@ -13,15 +13,17 @@ cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
 # Fonts
-printf "Fonts? (y/N): "
+printf "Update/Install Fonts? (y/N): "
 read -r choice
 if [ "$choice" = "y" ]; then
+  [ -d /usr/share/fonts/nerd-fonts ] && sudo rm -r nerd-fonts
+  [ -d /usr/share/fonts/nerd-fonts ] || sudo mkdir /usr/share/fonts/nerd-fonts
 	wget https://github.com/subframe7536/Maple-font/releases/latest/download/MapleMono-NF.zip
-	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/TTF
+	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/nerd-fonts
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
-	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/TTF
+	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/nerd-fonts
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
-	yes | sudo unzip FiraCode.zip -d /usr/share/fonts/TTF
+	yes | sudo unzip FiraCode.zip -d /usr/share/fonts/nerd-fonts
 	fc-cache -fv
 	rm -rf MapleMono-NF.zip JetBrainsMono.zip FiraCode.zip
 else
