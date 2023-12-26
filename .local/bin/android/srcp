@@ -3,7 +3,7 @@
 # setup
 connect() {
 	ip=$(adb shell ip route | awk '{print $9}')
-	adb connect "$ip":5555
+	adb tcpip 5555 && adb connect "$ip":5555
 }
 
 # audio recording
