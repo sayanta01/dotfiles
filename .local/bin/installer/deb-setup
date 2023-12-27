@@ -16,8 +16,8 @@ chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.s
 printf "Update/Install Fonts? (y/N): "
 read -r choice
 if [ "$choice" = "y" ]; then
-  [ -d /usr/share/fonts/nerd-fonts ] && sudo rm -r nerd-fonts
-  [ -d /usr/share/fonts/nerd-fonts ] || sudo mkdir /usr/share/fonts/nerd-fonts
+	[ -d /usr/share/fonts/nerd-fonts ] && sudo rm -r nerd-fonts
+	[ -d /usr/share/fonts/nerd-fonts ] || sudo mkdir /usr/share/fonts/nerd-fonts
 	wget https://github.com/subframe7536/Maple-font/releases/latest/download/MapleMono-NF.zip
 	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/nerd-fonts
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
@@ -34,7 +34,7 @@ fi
 sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev
 [ -d ~/dl/st/ ] || git clone --depth=1 https://github.com/sayanta01/st.git ~/dl/st
 cd ~/dl/st && sudo make clean install
-git clone --depth=1 https://github.com/sayanta01/dmenu.git ~/dl/dmenu
+[ -d ~/dl/dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu.git ~/dl/dmenu
 cd ~/dl/dmenu && sudo make clean install
 
 # Nvim
@@ -59,8 +59,8 @@ if [ "$choice" = "y" ]; then
 		kitty maim playerctl pulsemixer \
 		ffmpeg mpv nsxiv exa fzf fd-find \
 		zathura htop meld \
-		xclip xdo xdotool xwallpaper gpg \
-		exiftool aria2 wmname wmctrl neofetch \
+		xclip xdotool xwallpaper gpg \
+		exiftool aria2 wmname neofetch \
 		docker.io ssh net-tools iftop
 	# betterlockscreen ncdu translate-shell
 	# sudo systemctl enable docker.socket
