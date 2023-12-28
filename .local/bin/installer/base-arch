@@ -63,10 +63,10 @@ vim /etc/hosts
 ::1         localhost
 127.0.1.1   LilWarmachine.localdomain   LilWarmachine
 
-pacman -S git dosfstools mtools dhcpcd xorg networkmanager-runit  ( artix )
+pacman -S git dosfstools dhcpcd xorg networkmanager-runit  ( artix )
 ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix after reboot )
 
-pacman -S git dosfstools mtools dhcpcd xorg networkmanager reflector  ( arch )
+pacman -S git dosfstools dhcpcd xorg networkmanager reflector  ( arch )
 systemctl enable NetworkManager  ( arch )
 
 #### install bootloader ####
