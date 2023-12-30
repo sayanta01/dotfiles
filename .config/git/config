@@ -3,3 +3,5 @@
 	email = sayantasingh01@gmail.com
 [advice]
   statusHints = false
+[color]
+	ui = true
