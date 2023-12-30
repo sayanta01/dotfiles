@@ -60,6 +60,6 @@ export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 
 export LESSHISTFILE="-"            # disable files
 export QT_QPA_PLATFORMTHEME="gtk2" # have QT use gtk2 theme
-export QT_QPA_PLATFORMTHEME="qt5ct"
+# export QT_QPA_PLATFORMTHEME="qt5ct"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT="MToolkit wmname LG3D" # fix Java applications
