@@ -67,6 +67,7 @@ alias mkdir="mkdir -pv"
 alias trim="sudo fstrim -va"
 alias logout='sudo pkill -u "$USER"'
 alias sdn="sudo shutdown -h now"
+alias fix-faillock='faillock --user "$USER" --reset'
 
 alias lg="lazygit"
 alias add.="git add ."
