@@ -67,7 +67,7 @@ if [ "$choice" = "y" ]; then
 		rsync wget yt-dlp aria2 jq \
 		xsct xdg-utils xdg-user-dirs \
 		pacman-contrib socat exfat-utils \
-		xorg-xinit xclip xdotool wmname
+		xorg-xinit xclip xdotool wmname wmctrl
 # libx11 libxft libxrandr libxinerama
 # xorg-server xorg-xwininfo xorg-xprop xorg-xrdb xorg-xrandr xorg-xsetroot xorg-xbacklight
 else
