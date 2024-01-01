@@ -2,6 +2,7 @@
 
 # chrome://flags - ozone > auto
 # about:config - media.peerconnection.enabled > true
+# https://wiki.hyprland.org/Nvidia/
 
 for dir in hypr waybar swaylock xsettingsd nwg-look; do
 	cp -r "$HOME/dotfiles/.config/$dir" "$HOME/.config"
@@ -18,24 +19,6 @@ paru -S hyprland-git xdg-desktop-portal-hyprland \
 # kooha - Minimalistic screen recorder, using the xdg-desktop-portal ScreenCast protocol
 # ydotool - A generic Linux command-line automation tool for Wayland
 # waydroid - Container-based approach to boot a full Android system
-
-## https://wiki.hyprland.org/Nvidia/
-
-# Nvidia driver and mkinitcpio
-# modules_to_add="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
-# sed -i "s/^MODULES=.*/MODULES=($modules_to_add)/" /etc/mkinitcpio.conf
-# sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
-
-# Setting for the NVIDIA kernel module
-printf "Setup kernel module for NVIDIA? (y/N): "
-read -r choice
-if [ "$choice" = "y" ]; then
-	sudo cat <<EOF | sudo tee /etc/modprobe.d/nvidia.conf
-options nvidia-drm modeset=1
-EOF
-else
-	:
-fi
 
 sudo pacman -S --noconfirm waybar file-roller tumbler wlroots polkit-gnome \
 	qt5-wayland qt6-wayland viewnior sddm-runit \

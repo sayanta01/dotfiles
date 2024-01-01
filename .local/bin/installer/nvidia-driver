@@ -1,0 +1,44 @@
+#!/bin/sh
+
+check_nvidia() {
+	sudo pacman -S --noconfirm nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia \
+		nvtop glmark2
+
+	if ! grep -q "nvidia_drm.modeset=1" /etc/default/grub; then
+		parameter="nvidia_drm.modeset=1"
+		sudo sed -i "/^GRUB_CMDLINE_LINUX_DEFAULT=/ s/\"\(.*\)\"/\"\1 $parameter\"/" /etc/default/grub
+		sudo update-grub
+		echo "GRUB has been updated with the parameter: $parameter"
+	else
+		echo "The parameter $parameter is already present in GRUB configuration"
+	fi
+
+	modules_to_add="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
+	sudo sed -i "s/^MODULES=.*/MODULES=($modules_to_add)/" /etc/mkinitcpio.conf
+	sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
+
+	sudo cat <<EOF | sudo tee /etc/modprobe.d/nvidia.conf
+  options nvidia-drm modeset=1
+EOF
+}
+
+# Check if an LTS kernel is detected
+if uname -r | grep -q 'lts'; then
+	echo "LTS kernel detected"
+
+	# Check Nvidia GPU
+	if lspci | grep -i nvidia; then
+		check_nvidia
+	else
+		echo "No NVIDIA GPU detected"
+	fi
+
+else
+	echo "Installing LTS kernel"
+	sudo pacman -S --noconfirm linux-lts linux-lts-headers
+fi
+
+# Fix screen tearing on X
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+
+# https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
