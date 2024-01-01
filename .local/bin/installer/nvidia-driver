@@ -36,6 +36,7 @@ if uname -r | grep -q 'lts'; then
 else
 	echo "Installing LTS kernel"
 	sudo pacman -S --noconfirm linux-lts linux-lts-headers
+	sudo grub-mkconfig -o /boot/grub/grub.cfg
 fi
 
 # Fix screen tearing on X
