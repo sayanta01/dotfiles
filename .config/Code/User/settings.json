@@ -1,8 +1,8 @@
 {
   "editor.fontFamily": "JetBrainsMono NF",
   "editor.fontLigatures": true,
-  "editor.fontSize": 19,
-  "terminal.integrated.fontSize": 19,
+  "editor.fontSize": 20,
+  "terminal.integrated.fontSize": 20,
   "workbench.editor.highlightModifiedTabs": true,
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": false,
@@ -43,10 +43,6 @@
       "before": ["<S-h>"],
       "commands": ["workbench.action.previousEditor"]
     },
-    // {
-    //   "before": ["<S-b>"],
-    //   "commands": [":enew"]
-    // },
     // basic
     {
       "before": ["<leader>", "/"],
@@ -143,11 +139,11 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "v"],
+      "before": ["<leader>", "\\"],
       "commands": ["workbench.action.splitEditor"]
     },
     {
-      "before": ["<leader>", "s"],
+      "before": ["<leader>", "-"],
       "commands": ["workbench.action.splitEditorDown"]
     },
     {
