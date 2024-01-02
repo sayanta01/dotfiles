@@ -82,10 +82,9 @@ sudo apt purge xfce4-clipman catfish onboard xterm cherrytree plymouth
 distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
 [ "$distro" = "Kali" ] && sudo apt purge qterminal kali-hidpi-mode
 
-distro=$(grep ID= /etc/os-release | sed -n 2p | cut -d= -f2)
-if [ "$distro" = "ubuntu" ] || [ "$distro" = "kali" ]; then
+if [ -f /etc/debian_version ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >>~/.config/zsh/.zshrc
+		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
 	ln -s ~/.config/x11/xinitrc ~/.xinitrc

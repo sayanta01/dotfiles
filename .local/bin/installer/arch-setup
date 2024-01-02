@@ -91,24 +91,19 @@ if [ "$distro" = "Artix" ]; then
 	# sudo pacman -S --noconfirm pulseaudio pulseaudio-bluetooth
 
 	## Services
-	sudo pacman -S --noconfirm openssh-runit docker-runit bluez-runit dbus-runit cronie-runit
+	sudo pacman -S --noconfirm openssh-runit docker-runit bluez-runit dbus-runit
 	sudo ln -s /etc/runit/sv/sshd /run/runit/service
 	sudo ln -s /run/runit/sv/docker /run/runit/service
 	# sudo touch /run/runit/service/docker/down
 	sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 	sudo ln -s /etc/runit/sv/dbus /run/runit/service
-	# sudo ln -s /etc/runit/sv/cronie /run/runit/service
 else
 	sudo pacman -S --noconfirm pipewire pipewire-pulse wireplumber
 	systemctl --user --now enable pipewire pipewire-pulse wireplumber
 
 	## Services
-	sudo pacman -S --noconfirm openssh docker bluez dbus cronie
+	sudo pacman -S --noconfirm openssh docker bluez dbus
 fi
-
-# Display Manager
-# sudo pacman -S --noconfirm lightdm-gtk-greeter-settings grub-customizer
-# dm-tool switch-to-greeter
 
 # GUI apps
 printf "Install GUI pkgs? (y/N): "
