@@ -69,7 +69,7 @@ else
 	:
 fi
 
-yes | curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh
 
 # wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/dl/vscode.deb
 # aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
