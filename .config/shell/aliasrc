@@ -3,44 +3,52 @@
 # Replace sudo with doas
 # alias sudo='doas'
 
-# Debian
-# alias update='sudo nala update'
-# alias uplist='apt list --upgradable'
-# alias remove='sudo nala purge'
-# alias clean='sudo apt -y autoremove; sudo apt clean'
-# alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
-# alias installed='sudo apt list --installed'
-# bigpkg() {
-# 	dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{size=$1/1024; name=$2; printf "%.2f MB\t%s\n", size, name}'
-# }
+if [ -f /etc/arch-release ]; then
+	# Arch aliases
+	alias update="sudo pacman -Syyu && echo '########## ⬆️AUR ##########'; paru -Sua"
+	alias remove="sudo pacman -Rns"
+	alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo "########## 🚮cleaning Paru cache ##########"; rm -rf ~/.cache/paru'
+	alias unlock="sudo rm /var/lib/pacman/db.lck"
+	alias fix-key="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
+	alias installed="grep -i installed /var/log/pacman.log"
+	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
+elif [ -f /etc/debian_version ]; then
+	# Debian aliases
+	alias update='sudo nala update'
+	alias uplist='apt list --upgradable'
+	alias remove='sudo nala purge'
+	alias clean='sudo apt -y autoremove; sudo apt clean'
+	alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
+	alias installed='sudo apt list --installed'
+	bigpkg() {
+		dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{size=$1/1024; name=$2; printf "%.2f MB\t%s\n", size, name}'
+	}
+else
+	:
+fi
 
-# Arch
-alias update="sudo pacman -Syyu && echo '########## ⬆️AUR ##########'; paru -Sua"
-alias remove="sudo pacman -Rns"
-alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo "########## 🚮cleaning Paru cache ##########"; rm -rf ~/.cache/paru'
-alias unlock="sudo rm /var/lib/pacman/db.lck"
-alias fix-key="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
-alias installed="grep -i installed /var/log/pacman.log"
-alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
-
-# Runit
-alias doc-on="sudo sv start docker"
-alias doc-off="sudo sv stop docker"
-alias vm-on="sudo sv start libvirtd virtlogd spice-vdagentd"
-alias vm-off="sudo sv stop libvirtd virtlogd spice-vdagentd"
-
-# Systemd
-# alias doc-on="sudo systemctl start docker.socket"
-# alias doc-off="sudo systemctl stop docker.socket"
-# alias vm-on="sudo systemctl start libvirtd.service"
-# alias vm-off="sudo systemctl stop libvirtd.service"
-alias sysctlist="systemctl list-unit-files --type=service"
-alias probe="sudo -E hw-probe -all -upload"
-alias sysctlfail="systemctl --failed"
-alias jctl="sudo journalctl -p 3 -xb"
-alias cleanjctl="sudo journalctl --vacuum-time=2weeks"
-alias chain="sudo systemd-analyze critical-chain"
-alias blame="sudo systemd-analyze blame"
+if grep -q '^runit$' </proc/1/comm; then
+	# Runit
+	alias doc-on="sudo sv start docker"
+	alias doc-off="sudo sv stop docker"
+	alias vm-on="sudo sv start libvirtd virtlogd spice-vdagentd"
+	alias vm-off="sudo sv stop libvirtd virtlogd spice-vdagentd"
+elif grep -q '^systemd$' </proc/1/comm; then
+	# Systemd
+	alias doc-on="sudo systemctl start docker.socket"
+	alias doc-off="sudo systemctl stop docker.socket"
+	alias vm-on="sudo systemctl start libvirtd.service"
+	alias vm-off="sudo systemctl stop libvirtd.service"
+	alias sysctlist="systemctl list-unit-files --type=service"
+	alias probe="sudo -E hw-probe -all -upload"
+	alias sysctlfail="systemctl --failed"
+	alias jctl="sudo journalctl -p 3 -xb"
+	alias cleanjctl="sudo journalctl --vacuum-time=2weeks"
+	alias chain="sudo systemd-analyze critical-chain"
+	alias blame="sudo systemd-analyze blame"
+else
+	:
+fi
 
 alias la="exa --icons"
 alias ls="ls --color=auto"

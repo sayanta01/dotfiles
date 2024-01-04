@@ -2,7 +2,7 @@
 
 # notify-send -t 990 "🌡$(cat /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input| cut -b -2)°C"
 notify-send "⚙️ CPU $(top -bn1 | awk '/^%Cpu/ {print $2}' | cut -c 1,2 | sed 's/\.//g') "
-notify-send "菉 GPU $(nvidia-smi | grep % | cut -c 61-63) "
+notify-send " GPU $(nvidia-smi | grep % | cut -c 61-63) "
 
 notify-send " CPU-Temp $(sensors | awk '/Core 0/ {print $3}' | cut -c 2- | cut -c 1,2,5,6,7)"
 notify-send "🌡️GPU-Temp $(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)°C"
@@ -17,5 +17,14 @@ notify-send "🚀 Upt $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ da
 # notify-send " Init - $(ps -p1 | awk '/1/ {print $4}')"
 # notify-send " OS - $(awk -F '"' '/PRETTY_NAME/ { print $2 }' /etc/os-release)"
 
-notify-send "📦 PAC $({ checkupdates 2>/dev/null | wc -l;echo "| AUR";paru -Qum 2>/dev/null | wc -l; } | sed ':a;N;s/\n/ /;ba')"
-# notify-send "📦 APT $(aptitude search '~U' | wc -l)"
+if [ -f /etc/debian_version ]; then
+	notify-send "📦 APT $(aptitude search '~U' | wc -l)"
+elif [ -f /etc/arch-release ]; then
+	notify-send "📦 PAC $({
+		checkupdates 2>/dev/null | wc -l
+		echo "| AUR"
+		paru -Qum 2>/dev/null | wc -l
+	} | sed ':a;N;s/\n/ /;ba')"
+else
+	:
+fi
