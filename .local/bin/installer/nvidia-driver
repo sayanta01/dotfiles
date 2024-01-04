@@ -7,7 +7,7 @@ check_nvidia() {
 	if ! grep -q "nvidia_drm.modeset=1" /etc/default/grub; then
 		parameter="nvidia_drm.modeset=1"
 		sudo sed -i "/^GRUB_CMDLINE_LINUX_DEFAULT=/ s/\"\(.*\)\"/\"\1 $parameter\"/" /etc/default/grub
-		sudo update-grub
+		sudo grub-mkconfig -o /boot/grub/grub.cfg
 		echo "GRUB has been updated with the parameter: $parameter"
 	else
 		echo "The parameter $parameter is already present in GRUB configuration"

@@ -5,17 +5,18 @@
 # change git config username
 # change btch mac-add
 # add notify-sound if u want
+# Todo: Enable TouchPad Tapping for Laptop 
+
+# Better for laptops [ Todo: add for debian ]
+sudo cat <<EOF | sudo tee /etc/NetworkManager/conf.d/wifi-powersave.conf
+[connection]
+wifi.powersave = 2
+EOF
 
 # Change DNS server to cloudflare
 sudo cat <<EOF | sudo tee /etc/resolv.conf
 nameserver 1.1.1.1
 nameserver 8.8.8.8
-EOF
-
-# Better for laptops [ Todo: find for debian ]
-sudo cat <<EOF | sudo tee /etc/NetworkManager/conf.d/wifi-powersave.conf
-[connection]
-wifi.powersave = 2
 EOF
 
 # Display Asterisks while entering pswd
@@ -29,17 +30,6 @@ sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
 # Reboot Even if System Utterly Broken (REISUB)
 echo "1" > /proc/sys/kernel/sysrq
 echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
-
-# Enable TouchPad Tapping for Laptop
-sudo mkdir /etc/X11/xorg.conf.d && sudo touch /etc/X11/xorg.conf.d/30-touchpad.conf
-sudo cat <<EOF | sudo tee /etc/X11/xorg.conf.d/30-touchpad.conf
-Section "InputClass"
-       Identifier "devname"
-       Driver "libinput"
-               Option "Tapping" "on"
-               Option "NaturalScrolling" "true"
-EndSection
-EOF
 
 # Use dash symlink for /bin/sh  - do this carefully it can break whole system
 # readlink /bin/sh  - check system shell
