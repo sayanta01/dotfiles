@@ -53,7 +53,7 @@ if [ "$choice" = "y" ]; then
 		noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
 		eza bat fd fzf man-db bash-completion starship \
 		mate-calc meld firefox grub-customizer \
-		linux-lts linux-lts-headers kitty neovim newsboat \
+		linux-lts linux-lts-headers linux-firmware kitty neovim newsboat \
 		gnome-keyring cowsay htop neofetch \
 		bspwm polybar sxhkd rofi dunst \
 		qt5ct qt6ct lxappearance xcape pass \
@@ -64,7 +64,7 @@ if [ "$choice" = "y" ]; then
 		lf gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zathura zathura-pdf-mupdf ghostscript \
 		zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
-		rsync wget yt-dlp aria2 jq \
+		rsync wget aria2 jq \
 		xdg-utils xdg-user-dirs \
 		pacman-contrib socat exfat-utils \
 		xorg-xinit xclip xdotool wmname wmctrl
@@ -91,18 +91,18 @@ if [ "$distro" = "Artix" ]; then
 	# sudo pacman -S --noconfirm pulseaudio pulseaudio-bluetooth
 
 	## Services
-	sudo pacman -S --noconfirm openssh-runit docker-runit bluez-runit dbus-runit
+	sudo pacman -S --noconfirm openssh-runit bluez-runit dbus-runit docker-runit
 	sudo ln -s /etc/runit/sv/sshd /run/runit/service
-	sudo ln -s /run/runit/sv/docker /run/runit/service
-	# sudo touch /run/runit/service/docker/down
 	sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 	sudo ln -s /etc/runit/sv/dbus /run/runit/service
+	sudo ln -s /run/runit/sv/docker /run/runit/service
+	sudo touch /run/runit/service/docker/down
 else
 	sudo pacman -S --noconfirm pipewire pipewire-pulse wireplumber
 	systemctl --user --now enable pipewire pipewire-pulse wireplumber
 
 	## Services
-	sudo pacman -S --noconfirm openssh docker bluez dbus
+	sudo pacman -S --noconfirm openssh bluez dbus docker
 fi
 
 # GUI apps
@@ -132,11 +132,11 @@ if [ "$choice" = "y" ]; then
 	sudo touch /run/runit/service/libvirtd/down
 	sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service
 	sudo touch /run/runit/service/spice-vdagentd/down
-	# sudo systemctl enable --now libvirtd  # arch
+	# sudo systemctl start --now libvirtd  # arch
 	sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
 	sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
 	sudo usermod -aG libvirt "$USER"
-# sudo systemctl restart libvirtd  # arch
+  # sudo systemctl restart libvirtd  # arch
 else
 	:
 fi
@@ -145,7 +145,7 @@ fi
 if command -v paru >/dev/null 2>&1; then
 	printf "Install AUR pkgs? (y/N): "
 	read -r choice
-	[ "$choice" = "y" ] && paru -S betterlockscreen colorpicker visual-studio-code-bin simple-mtpfs
+	[ "$choice" = "y" ] && paru -S betterlockscreen colorpicker visual-studio-code-bin simple-mtpfs yt-dlp
 else
 	git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru && cd ~/.cache/paru && makepkg -fsri --noconfirm
 	printf "Install AUR pkgs? (y/N): "
@@ -153,11 +153,9 @@ else
 	[ "$choice" = "y" ] && paru -S betterlockscreen colorpicker visual-studio-code-bin simple-mtpfs
 fi
 
-# /etc/pacman.conf    #IgnorePkg =
-
 # Teletype font
 # sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
-sudo su root -c "echo -e FONT='ter-d18b' > /etc/vconsole.conf"
+# sudo su root -c "echo -e FONT='ter-d18b' > /etc/vconsole.conf"
 
 # Fix qt
 sudo sh -c 'echo "QT_QPA_PLATFORMTHEME=\"qt5ct\"" > /etc/environment'
