@@ -16,8 +16,8 @@ chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.s
 printf "Update/Install Fonts? (y/N): "
 read -r choice
 if [ "$choice" = "y" ]; then
-	[ -d /usr/share/fonts/nerd-fonts ] && sudo rm -r nerd-fonts
-	[ -d /usr/share/fonts/nerd-fonts ] || sudo mkdir /usr/share/fonts/nerd-fonts
+	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
+	[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
 	wget https://github.com/subframe7536/Maple-font/releases/latest/download/MapleMono-NF.zip
 	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/nerd-fonts
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
@@ -84,7 +84,7 @@ distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
 
 if [ -f /etc/debian_version ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
+		echo "source ~/.profile" >>~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
 	ln -s ~/.config/x11/xinitrc ~/.xinitrc

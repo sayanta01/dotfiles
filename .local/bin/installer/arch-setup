@@ -15,7 +15,7 @@ chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.s
 printf "Update/Install Fonts? (y/N): "
 read -r choice
 if [ "$choice" = "y" ]; then
-	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r nerd-fonts
+	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
 	[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
 	wget https://github.com/subframe7536/Maple-font/releases/latest/download/MapleMono-NF.zip
 	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/nerd-fonts
@@ -91,10 +91,10 @@ if [ "$distro" = "Artix" ]; then
 	# sudo pacman -S --noconfirm pulseaudio pulseaudio-bluetooth
 
 	## Services
-	sudo pacman -S --noconfirm openssh-runit bluez-runit dbus-runit docker-runit
+	sudo pacman -S --noconfirm openssh-runit dbus-runit bluez-runit docker-runit
 	sudo ln -s /etc/runit/sv/sshd /run/runit/service
-	sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 	sudo ln -s /etc/runit/sv/dbus /run/runit/service
+  sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 	sudo ln -s /run/runit/sv/docker /run/runit/service
 	sudo touch /run/runit/service/docker/down
 else
@@ -102,7 +102,7 @@ else
 	systemctl --user --now enable pipewire pipewire-pulse wireplumber
 
 	## Services
-	sudo pacman -S --noconfirm openssh bluez dbus docker
+	sudo pacman -S --noconfirm openssh dbus bluez docker
 fi
 
 # GUI apps
@@ -132,11 +132,11 @@ if [ "$choice" = "y" ]; then
 	sudo touch /run/runit/service/libvirtd/down
 	sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service
 	sudo touch /run/runit/service/spice-vdagentd/down
-	# sudo systemctl start --now libvirtd  # arch
+	# sudo systemctl start --now libvirtd  # Arch
 	sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
 	sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
 	sudo usermod -aG libvirt "$USER"
-  # sudo systemctl restart libvirtd  # arch
+  # sudo systemctl restart libvirtd  # Arch
 else
 	:
 fi

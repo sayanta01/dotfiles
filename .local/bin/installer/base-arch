@@ -31,15 +31,15 @@ mount /dev/sda1 /mnt/boot/efi
 # swapon /dev/sda3
 
 ##### install base system #####
-basestrap /mnt base base-devel linux linux-headers linux-firmware neovim zsh tmux runit elogind-runit  ( artix )
- pacstrap -K /mnt base base-devel linux linux-headers linux-firmware neovim zsh tmux  ( arch )
+basestrap /mnt base base-devel linux linux-headers linux-firmware neovim zsh tmux runit elogind-runit  ( Artix )
+ pacstrap -K /mnt base base-devel linux linux-headers linux-firmware neovim zsh tmux  ( Arch )
 
 #### generate fstab ####
-fstabgen -U /mnt >> /mnt/etc/fstab  ( artix )
-genfstab -U /mnt >> /mnt/etc/fstab  ( arch )
+fstabgen -U /mnt >> /mnt/etc/fstab  ( Artix )
+ genfstab -U /mnt >> /mnt/etc/fstab  ( Arch )
 
-artix-chroot /mnt  ( artix )
- arch-chroot /mnt  ( arch )
+artix-chroot /mnt  ( Artix )
+ arch-chroot /mnt  ( Arch )
 
 vim /etc/pacman.conf                    # uncmnt colors and ParallerDownloads, add ILoveCandy
 vim /etc/makepkg.conf                   # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
@@ -48,13 +48,13 @@ vim /etc/makepkg.conf                   # uncmnt MAKEFLAGS - more cores faster c
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
 # date -s "1 JAN 2022 00:00:00"
-timedatectl set-ntp true  ( arch )
+timedatectl set-ntp true  ( Arch )
 
 #### set localization ####
 vim /etc/locale.gen                     # uncmnt US.UTF-8
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
-export LC_COLLATE="C"  ( artix ) 
+export LC_COLLATE="C"  ( Artix ) 
 
 echo LilWarmachine > /etc/hostname
 
@@ -63,11 +63,11 @@ vim /etc/hosts
 ::1         localhost
 127.0.1.1   LilWarmachine.localdomain   LilWarmachine
 
-pacman -S git dosfstools dhcpcd xorg networkmanager-runit  ( artix )
-ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( artix after reboot )
+pacman -S git dosfstools dhcpcd xorg networkmanager-runit  ( Artix )
+ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( Artix after reboot )
 
-pacman -S git dosfstools dhcpcd xorg networkmanager reflector  ( arch )
-systemctl enable NetworkManager  ( arch )
+ pacman -S git dosfstools dhcpcd xorg networkmanager reflector  ( Arch )
+ systemctl enable NetworkManager  ( Arch )
 
 #### install bootloader ####
 pacman -S grub os-prober efibootmgr
@@ -123,4 +123,4 @@ Include = /etc/pacman.d/mirrorlist-arch
 sudo pacman-key --init
 sudo pacman-key --populate archlinux
 sudo pacman -Syyu
-# sudo dbus-uuidgen | sudo tee /var/lib/dbus/machine-id    ( artix )
+# sudo dbus-uuidgen | sudo tee /var/lib/dbus/machine-id    ( Artix )
