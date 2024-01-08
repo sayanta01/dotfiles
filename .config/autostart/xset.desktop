@@ -1,12 +1,10 @@
 [Desktop Entry]
 Encoding=UTF-8
-Version=1.2.5
 Type=Application
-Name=xset
-Comment=move faster
+Name=Xset
+Comment=Move Faster
 Exec=xset r rate 280 60
-OnlyShowIn=XFCE;
-RunHook=0
+OnlyShowIn=GNOME;XFCE;
 StartupNotify=false
 Terminal=false
 Hidden=false
