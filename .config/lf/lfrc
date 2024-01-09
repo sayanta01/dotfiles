@@ -5,7 +5,7 @@ set icons true
 set cleaner "~/.config/lf/lf_kitty_clean"
 set previewer "~/.config/lf/lf_kitty_preview"
 
-# Cmds/Functions
+# Functions
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
         text/*|application/json) $EDITOR "$f";;

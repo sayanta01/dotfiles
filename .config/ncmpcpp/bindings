@@ -1,6 +1,6 @@
 ##############################################################
 ## This is the example bindings file. Copy it to            ##
-## ~/.ncmpcpp/bindings or $XDG_CONFIG_HOME/ncmpcpp/bindings ##
+## $XDG_CONFIG_HOME/ncmpcpp/bindings or ~/.ncmpcpp/bindings ##
 ## and set up your preferences                              ##
 ##############################################################
 #
@@ -170,6 +170,9 @@
 #
 #def_key "backspace"
 #  replay_song
+#
+#def_key "backspace"
+#  play
 #
 #def_key "f"
 #  seek_forward
@@ -390,10 +393,6 @@
 #def_key "q"
 #  quit
 #
-#def_key "f"
-#	find
-#def_key "f"
-#	find_item_forward
 
 def_key "+"
     show_clock

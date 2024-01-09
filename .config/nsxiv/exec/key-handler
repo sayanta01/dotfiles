@@ -3,21 +3,7 @@
 # ctrl x them shortkey
 session_type="$XDG_SESSION_TYPE"
 
-if [ "$session_type" = "x11" ]; then
-	while read -r file; do
-		case "$1" in
-		"w") xwallpaper --zoom "$file" & ;;
-		"d") mv "$file" ~/.local/share/Trash/files ;;
-		"r") convert -rotate 90 "$file" "$file" ;;
-		"R") convert -rotate 90 "$file" "$file" ;;
-		"f") convert -flop "$file" "$file" ;;
-		"c") xclip -sel c -t image/png <"$file" && notify-send "$file Copied " ;;
-		"y") readlink -f "$file" | xclip -sel clip &&
-			notify-send "$(readlink -f "$file") path copied to clipboard" & ;;
-		"g") gimp "$file" ;;
-		esac
-	done
-elif [ "$session_type" = "wayland" ]; then
+if [ "$session_type" = "wayland" ]; then
 	while read -r file; do
 		case "$1" in
 		"w") swww img "$file" & ;;
@@ -26,12 +12,11 @@ elif [ "$session_type" = "wayland" ]; then
 		"R") convert -rotate 90 "$file" "$file" ;;
 		"f") convert -flop "$file" "$file" ;;
 		"c") wl-copy -t image/png <"$file" && notify-send "$file Copied " ;;
-		"y") readlink -f "$file" | xclip -sel clip &&
+		"y") readlink -f "$file" | wl-copy &&
 			notify-send "$(readlink -f "$file") path copied to clipboard" & ;;
 		"g") gimp "$file" ;;
 		esac
 	done
-
 else
 	while read -r file; do
 		case "$1" in

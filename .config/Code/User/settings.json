@@ -1,33 +1,41 @@
 {
+  // Fonts
   "editor.fontFamily": "JetBrainsMono NF",
   "editor.fontLigatures": true,
   "editor.fontSize": 20,
   "terminal.integrated.fontSize": 20,
-  "workbench.editor.highlightModifiedTabs": true,
+  // Extensions
   "extensions.autoUpdate": "onlyEnabledExtensions",
-  "extensions.ignoreRecommendations": false,
+  "extensions.ignoreRecommendations": true,
+  // UI
   "breadcrumbs.enabled": false,
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
-  "search.sortOrder": "type",
+  "editor.scrollbar.vertical": "hidden",
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "fluent-icons",
+  // Misc
+  "workbench.editor.highlightModifiedTabs": true,
   "editor.rename.enablePreview": false,
-  "search.searchOnType": false,
   "terminal.integrated.gpuAcceleration": "on",
   "editor.bracketPairColorization.enabled": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "vim.highlightedyank.color": "rgba(20, 99, 89, 0.6)",
-  "vim.highlightedyank.enable": true,
+  "search.sortOrder": "type",
+  "search.searchOnType": false,
   "editor.linkedEditing": true,
   "[python]": {
     "editor.formatOnType": true
   },
+  // Vim
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(20, 99, 89, 0.6)",
   "vim.easymotion": true,
   "vim.easymotionMarkerooundColor": "#020202",
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
-  // "vim.sneak": true,
+  "vim.sneak": true,
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
@@ -70,6 +78,10 @@
     },
     // LSP
     {
+      "before": ["l", "D"],
+      "commands": ["editor.action.peekDeclaration"]
+    },
+    {
       "before": ["l", "d"],
       "commands": ["editor.action.revealDefinition"]
       // "commands": ["editor.action.peekDefinition"]
@@ -79,12 +91,24 @@
       "commands": ["editor.action.showHover"]
     },
     {
-      "before": ["g", "r"],
-      "commands": ["editor.action.goToReferences"]
-    },
-    {
       "before": ["g", "i"],
       "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["l", "t"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["<leader>", "l", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "l", "a"],
+      "commands": ["editor.action.codeAction"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
     },
     {
       "before": ["g", "l"],
@@ -99,33 +123,13 @@
       "commands": ["editor.action.marker.nextInFiles"]
     },
     {
-      "before": ["l", "t"],
-      "commands": ["editor.action.goToTypeDefinition"]
-    },
-    {
-      "before": ["<leader>", "l", "r"],
-      "commands": ["editor.action.rename"]
-    },
-    {
       "before": ["<leader>", "l", "f"],
       "commands": ["editor.action.formatDocument"]
-    },
-    {
-      "before": ["<leader>", "l", "a"],
-      "commands": ["editor.action.codeAction"]
     },
     {
       "before": ["<leader>", "l", "q"],
       "commands": ["editor.action.quickFix"]
     }
-    // {
-    //   "before": ["<leader>", "l", "i"],
-    //   "commands": ["editor.showIncomingCalls"]
-    // },
-    // {
-    //   "before": ["<leader>", "l", "o"],
-    //   "commands": ["editor.showOutgoingCalls"]
-    // }
   ],
   "vim.visualModeKeyBindings": [
     {
@@ -184,6 +188,5 @@
   "errorLens.enabled": true,
   "explorer.confirmDragAndDrop": false,
   "window.menuBarVisibility": "toggle",
-  "editor.scrollbar.vertical": "hidden",
   "git.openRepositoryInParentFolders": "never"
 }

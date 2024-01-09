@@ -1,64 +1,78 @@
+# Dunst configuration
+
 [global]
+    ### Display ###
     monitor = 0
     follow = mouse
+
+    ### Geometry ###
     width = 299
     height = 299
     origin = top-right
     offset = 9x38
     scale = 0
-    notification_limit = 0
+    notification_limit = 20
+
+    ### Progress bar ###
+    progress_bar = false
+    progress_bar_height = 20
+    progress_bar_frame_width = 2
+    progress_bar_min_width = 199
+    progress_bar_max_width = 269
     indicate_hidden = yes
-    # transparency = 0
+    transparency = 0
     separator_height = 2
     padding = 8
     horizontal_padding = 8
     frame_width = 2
     frame_color = "#abb2bf"
+    gap_size = 0
     separator_color = frame
     sort = yes
+
+    ### Text ###
     font = "JetBrainsMono NF Thin 11"
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
     alignment = center
+    vertical_alignment = center
     show_age_threshold = 60
-    # icon_position = left
+    ellipsize = middle   
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+
+    ### Icons ###
+    enable_recursive_icon_lookup = false
+    # icon_theme = Adwaita
+    icon_position = left
     min_icon_size = 40
     max_icon_size = 50
+    icon_path = false
+    # text_icon_padding = 0
+
+    ### History ###
     sticky_history = yes
     history_length = 20
+
+    ### Misc/Advanced ###
     browser = /usr/xdg/bin-open
     always_run_script = true
     title = Dunst
     class = Dunst
     corner_radius = 0
-    # text_icon_padding = 0
-    icon_path = false
-    ignore_newline = no
-    stack_duplicates = true
-    hide_duplicate_count = false
-    show_indicators = yes
-    gap_size = 0
     ignore_dbusclose = false
-    vertical_alignment = center
-    ellipsize = middle   
-    enable_recursive_icon_lookup = false
-    progress_bar = false
-    
-    # progress_bar_height = 90
-    # progress_bar_frame_width = 2
-    # progress_bar_min_width = 200
-    # progress_bar_max_width = 280
-  
-  
-## Wayland ##
-    #Uncomment for notications appear under fullscreen
-    #applications (default: overlay)
-    #Set this to true to use X11 output on Wayland
+
+    ### Wayland ###
+    # Uncomment for notications appear under fullscreen
+    # applications (default: overlay)
+    # Set this to true to use X11 output on Wayland
     # layer = top
     # force_xwayland = false
-    # force_xinerama = false
 
+    ### Shortcuts ###
     close = ctrl+shift+space
     close_all = ctrl+shift+space
     history = ctrl+shift+grave
@@ -67,7 +81,6 @@
 
 [experimental]
      per_monitor_dpi = false
-
 
 [urgency_low]
      background = "#000000"
@@ -78,13 +91,15 @@
      background = "#282a36"
      foreground = "#d8dee9"
      timeout = 4
+     override_pause_level = 20
 
 [urgency_critical]
      background = "#900000"
      foreground = "#ffffff"
      frame_color = "#ff0000"
      timeout = 6
+     override_pause_level = 40
 
-// [play_sound]
-     // summary = "*"
-      // script = "~/.local/bin/oneliner/notify-sound"  
+# [play_sound]
+#      summary = "*"
+#      script = "~/.local/bin/oneliner/notify-sound"  

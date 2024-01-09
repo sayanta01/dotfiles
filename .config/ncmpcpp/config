@@ -1,8 +1,9 @@
+##### NCMPCPP #####
 ncmpcpp_directory = "~/.config/ncmpcpp"
+lyrics_directory = "~/.local/share/lyrics"
 visualizer_type = "spectrum"
 visualizer_fps = 69
 message_delay_time = "1"
-lyrics_directory = "~/.local/share/lyrics"
 
 [visibility]
 header_visibility = yes
