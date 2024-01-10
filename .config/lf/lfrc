@@ -6,6 +6,10 @@ set cleaner "~/.config/lf/lf_kitty_clean"
 set previewer "~/.config/lf/lf_kitty_preview"
 
 # Functions
+cmd on-select &{{
+    lf -remote "send $id set statfmt \"$(exa -ld --color=always "$f")\""
+}}
+
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
         text/*|application/json) $EDITOR "$f";;
@@ -15,13 +19,16 @@ cmd open ${{
 
 # Archive bindings
 cmd extract ${{
-  case "$f" in
-      *.zip) unzip "$f" ;;
-      *.tar.gz) tar -xzvf "$f" ;;
-      *.tar.bz2) tar -xjvf "$f" ;;
-      *.tar) tar -xvf "$f" ;;
-      *) echo "Unsupported format" ;;
-  esac
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.Z) uncompress $fx;;
+        *.7z) 7z x $f;;
+    esac
 }}
 
 # Move to Trash
@@ -58,6 +65,7 @@ cmd mkdir ${{
   mkdir $ans
 }}
 
+# Move to <path>
 cmd moveto ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
@@ -69,6 +77,7 @@ cmd moveto ${{
 	notify-send "🚚 File(s) moved." "File(s) moved to $dest."
 }}
 
+# Copy to <path>
 cmd copyto ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
@@ -80,7 +89,7 @@ cmd copyto ${{
 	notify-send "📋 File(s) copied." "File(s) copies to $dest."
 }}
 
-# give permission
+# Permission
 cmd chmod ${{
   printf "Mode Bits: "
   read ans
@@ -93,24 +102,28 @@ cmd chmod ${{
   lf -remote 'send reload'
 }}
 
-cmd bulkrename ${{
-    tmpfile_old="$(mktemp)"
-    tmpfile_new="$(mktemp)"
-
-    [ -n "$fs" ] && fs=$(basename -a $fs) || fs=$(ls)
-
-    echo "$fs" > "$tmpfile_old"
-    echo "$fs" > "$tmpfile_new"
-    $EDITOR "$tmpfile_new"
-
-    [ "$(wc -l < "$tmpfile_old")" -eq "$(wc -l < "$tmpfile_new")" ] || { rm -f "$tmpfile_old" "$tmpfile_new"; exit 1; }
-
-    paste "$tmpfile_old" "$tmpfile_new" | while IFS="$(printf '\t')" read -r src dst
-    do
-        [ "$src" = "$dst" ] || [ -e "$dst" ] || mv -- "$src" "$dst"
+# Bulk Rename
+cmd bulk-rename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    if [ -n "$fs" ]; then
+        fs="$(basename -a $fs)"
+    else
+        fs="$(ls)"
+    fi
+    printf '%s\n' "$fs" >"$old"
+    printf '%s\n' "$fs" >"$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
     done
-
-    rm -f "$tmpfile_old" "$tmpfile_new"
+    rm -- "$old" "$new"
     lf -remote "send $id unselect"
 }}
 
@@ -141,11 +154,8 @@ map C copyto
 map R reload
 map U unselect
 map L clear
-
 map B bulkrename
 map <enter> open
-# map c $code "$f"
-# map nv $nvim "$f"
 
 # Movement
 map gd cd ~/dl
