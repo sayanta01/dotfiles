@@ -1,28 +1,34 @@
 [Default Applications]
+# xdg-open will use these settings to determine how to open filetypes
+# These .desktop entries can also be seen and changed in ~/.local/share/applications/
+
 image/png=img.desktop;
+image/jpg=img.desktop;
 image/jpeg=img.desktop;
 image/gif=img.desktop;
 video/x-matroska=video.desktop;
+video/mp4=video.desktop
 application/postscript=pdf.desktop;
-application/pdf=org.pwmt.zathura.desktop;
+application/pdf=pdf.desktop;
 text/x-shellscript=text.desktop;
 text/plain=text.desktop;
-x-scheme-handler/https=google-chrome.desktop
-x-scheme-handler/http=google-chrome.desktop
-text/html=google-chrome.desktop
+inode/directory=file.desktop
 
 # xdg-settings set default-web-browser google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/ftp=google-chrome.desktop;
+text/html=google-chrome.desktop
+text/xml=google-chrome.desktop;
+application/json=text.desktop
 
 [Added Associations]
 image/svg+xml=org.inkscape.Inkscape.desktop;
 application/x-shellscript=nvim.desktop;
 
-# Set mime manually
-#### xdg-mime query filetype (file)      # check filetype
-#### xdg-mime query default (file/type)  # check default app of filetype
-
-# xdg-mime default nsxiv.desktop image/jpeg
-# xdg-mime default nsxiv.desktop image/jpg
-# xdg-mime default nsxiv.desktop image/png
-# xdg-mime default inkscape.desktop image/svg+xml
-# xdg-mime default org.pwmt.zathura.desktop application/pdf
+# Manually set
+#### xdg-mime query filetype <photo.png>    # check filetype
+#### xdg-mime query default <image/jpg>     # check default app of filetype
+#### xdg-mime default nsxiv.desktop image/png
+#### xdg-mime default inkscape.desktop image/svg+xml
+#### xdg-mime default org.pwmt.zathura.desktop application/pdf

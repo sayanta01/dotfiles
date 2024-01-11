@@ -5,7 +5,7 @@ tw      🤝      # STICKY_OTHER_WRITABLE
 ow             # OTHER_WRITABLE
 st      󰞅       # STICKY
 di             # DIR
-pi      p       # FIFO
+pi      󱑹       # FIFO
 so      🔌      # SOCK
 bd      🧱      # BLK
 cd      󰈍       # CHR
@@ -60,7 +60,7 @@ fi             # FILE
 *.webp          
 *.gif	          
 *.ico           
-*.twig          󰁜
+*.twig          󰥛
 *.cpp           
 *.c++           
 *.cxx           
