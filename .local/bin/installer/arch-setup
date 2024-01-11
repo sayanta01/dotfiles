@@ -46,7 +46,7 @@ sudo cp -r ~/.local/share/icons/BeautySolar /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 
-printf "Install main pkgs? (y/N): "
+printf "Install Main pkgs? (y/N): "
 read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
