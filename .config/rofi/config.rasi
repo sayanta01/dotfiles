@@ -28,34 +28,34 @@ configuration {
 }
 
 window {
-    border: 			 	0px;
-    border-radius:	0px;
-    padding: 				0;
-    width: 		  		30%;
+    border: 			 	  0px;
+    border-radius:	  0px;
+    padding: 				  0;
+    width: 		  	  	30%;
 }
 
 mainbox {
-    border:  0;
-    padding: 0;
+    border:           0;
+    padding:          0;
 }
 
 textbox {
-    text-color: @foreground;
+    text-color:       @foreground;
 }
 
 listview {
-    lines:	      6;
-    columns:      1;
-    border:       0px 0px 0px 0px;
-    border-color: @separatorcolor;
-    spacing:      4px;
-    scrollbar:    false;
-    padding:      0px 8px 8px;
+    lines:	          6;
+    columns:          1;
+    border:           0px 0px 0px 0px;
+    border-color:     @separatorcolor;
+    spacing:          4px;
+    scrollbar:        false;
+    padding:          0px 8px 8px;
 }
 
 element {
-    border:       0;
-    padding:      8px; 
+    border:           0;
+    padding:          8px; 
 }
 
 element normal.normal {
@@ -133,28 +133,28 @@ entry {
 }
 
 button {
-    padding: 4px;
-    margin: 0px 8px 5px 8px;
+    padding:          4px;
+    margin:           0px 8px 5px 8px;
     background-color: @blank;
-    text-color: @tab;
-    vertical-align: 0.5; 
+    text-color:       @tab;
+    vertical-align:   0.5; 
     horizontal-align: 0.5;
-    border-radius: 4px;
-    border: 0px 0px 2px 0px;
-    border-color: @blank-underline;
+    border-radius:    4px;
+    border:           0px 0px 2px 0px;
+    border-color:     @blank-underline;
 }
 
 button selected {
     background-color: @bg-col-light;
-    text-color: @tab-selected;
-    border-radius: 2px;
-    border: 0px 0px 2px 0px;
-    border-color: @button-underline;
+    text-color:       @tab-selected;
+    border-radius:    2px;
+    border:           0px 0px 2px 0px;
+    border-color:     @button-underline;
 }
 
 prompt {
-    padding: 0px 0px ;
-    text-color: @foreground;
+                      padding: 0px 0px ;
+                      text-color: @foreground;
 }
 
 inputbar {
