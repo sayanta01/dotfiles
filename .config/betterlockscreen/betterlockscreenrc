@@ -1,0 +1,45 @@
+# default options
+display_on=0
+span_image=false
+lock_timeout=300
+fx_list=(dim blur dimblur pixel dimpixel color)
+dim_level=40
+blur_level=2
+pixel_scale=10,1000
+solid_color=333333
+wallpaper_cmd="feh --bg-fill"
+quiet=false
+
+# default theme
+loginbox=000000
+loginshadow=000000
+locktext=""
+font="SF Pro Text"
+
+ringwrongcolor=282a36     # show ring before entering pswd 
+insidewrongcolor=d23c3d  # show inside before entering pswd
+
+ringcolor=282a36   # show ring while entering pswd
+insidecolor=50fa7b  # show inside while entering pswd
+keyhlcolor=282a36  # blink while entering pswd
+
+separatorcolor=f8f8f2
+
+ringvercolor=ffffff    # show ring while verifying pswd
+insidevercolor=000000  # show inside while verifying pswd
+
+timecolor=f8f8f2
+time_format="%a,%I:%M:%S"
+
+greetercolor=f1fa8c  # type pswd text
+verifcolor=ffffff   # verification text
+wrongcolor=d23c3d   # wrong text
+layoutcolor=ffffff  # english (US)
+
+bshlcolor=282a36  # blink backspace
+
+modifcolor=d23c3d
+bgcolor=8be9fd
+
+verifcolor=ffffff
+wrongtext="Failure!"
