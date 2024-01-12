@@ -94,7 +94,7 @@ if [ "$distro" = "Artix" ]; then
 	sudo pacman -S --noconfirm openssh-runit dbus-runit bluez-runit docker-runit
 	sudo ln -s /etc/runit/sv/sshd /run/runit/service
 	sudo ln -s /etc/runit/sv/dbus /run/runit/service
-  sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
+	sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 	sudo ln -s /run/runit/sv/docker /run/runit/service
 	sudo touch /run/runit/service/docker/down
 else
@@ -136,7 +136,7 @@ if [ "$choice" = "y" ]; then
 	sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
 	sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
 	sudo usermod -aG libvirt "$USER"
-  # sudo systemctl restart libvirtd  # Arch
+	# sudo systemctl restart libvirtd  # Arch
 else
 	:
 fi
@@ -153,9 +153,22 @@ else
 	[ "$choice" = "y" ] && paru -S betterlockscreen colorpicker visual-studio-code-bin simple-mtpfs
 fi
 
+# Configure pacman
+edit_pacman_conf() {
+	conf="/etc/pacman.conf"
+	lines="Color CheckSpace VerbosePkgLists ParallelDownloads"
+
+	for l in $lines; do
+		grep -q "^#$l" "$conf" && sudo sed -i "s/^#$l/$l/" "$conf" && echo "Uncommented: $l" || echo "$l is already Uncommented"
+	done
+
+	grep -q "^ParallelDownloads" "$conf" && ! grep -q "^ILoveCandy" "$conf" && sudo sed -i "/^ParallelDownloads/a ILoveCandy" "$conf" && echo "Added ILoveCandy below ParallelDownloads" || echo "ILoveCandy already exists"
+}
+edit_pacman_conf && sudo pacman -Sy
+
 # Teletype font
-# sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
-# sudo su root -c "echo -e FONT='ter-d18b' > /etc/vconsole.conf"
+sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
+sudo su root -c "echo -e FONT='ter-d18b' > /etc/vconsole.conf"
 
 # Fix qt
 sudo sh -c 'echo "QT_QPA_PLATFORMTHEME=\"qt5ct\"" > /etc/environment'
