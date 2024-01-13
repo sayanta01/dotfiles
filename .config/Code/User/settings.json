@@ -15,7 +15,7 @@
   "editor.minimap.renderCharacters": false,
   "editor.scrollbar.vertical": "hidden",
   "editor.renderWhitespace": "none",
-  "editor.cursorBlinking": "smooth",
+  "editor.cursorBlinking": "solid",
   "window.titleBarStyle": "custom",
   // Theme
   "workbench.colorTheme": "GitHub Dark",
@@ -164,17 +164,7 @@
   "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-a>": false,
-    "<C-f>": false,
-    // VS Code new marker @ next occurence
-    "<C-d>": false,
-    // Cut
-    "<C-x>": false,
-    // Copy
-    "<C-c>": false,
-    // Paste
-    "<C-v>": false,
-    "<C-z>": false,
-    "<C-y>": false
+    "<C-f>": false
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -194,5 +184,6 @@
   // Misc
   "workbench.startupEditor": "none",
   "explorer.confirmDragAndDrop": false,
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
+  "telemetry.telemetryLevel": "off"
 }
