@@ -25,7 +25,7 @@
   "workbench.editor.enablePreview": false,
   "editor.rename.enablePreview": false,
   "terminal.integrated.gpuAcceleration": "on",
-  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.enabled": false,
   "search.sortOrder": "type",
   "search.searchOnType": false,
   "editor.linkedEditing": true,
