@@ -32,13 +32,13 @@
   // Vim
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "rgba(20, 99, 89, 0.6)",
-  "vim.easymotion": true,
-  "vim.easymotionMarkerooundColor": "#020202",
   "vim.incsearch": true,
+  "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
-  "vim.sneak": true,
+  // "vim.easymotion": true,
+  // "vim.easymotionMarkerooundColor": "#020202",
+  // "vim.sneak": true,
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
