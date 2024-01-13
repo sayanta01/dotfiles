@@ -1,31 +1,34 @@
 {
-  // Fonts
-  "editor.fontFamily": "JetBrainsMono NF",
+  // Font
+  "editor.fontFamily": "JetBrainsMono NF Thin",
   "editor.fontLigatures": true,
   "editor.fontSize": 20,
-  "terminal.integrated.fontSize": 20,
-  // Extensions
+  "terminal.integrated.fontSize": 19,
+  // Extension
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
+  "errorLens.enabled": true,
   // UI
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "off",
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "editor.scrollbar.vertical": "hidden",
+  "editor.renderWhitespace": "none",
+  "editor.cursorBlinking": "smooth",
+  "window.titleBarStyle": "custom",
+  // Theme
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.productIconTheme": "fluent-icons",
-  // Misc
+  // Setting
   "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.enablePreview": false,
   "editor.rename.enablePreview": false,
   "terminal.integrated.gpuAcceleration": "on",
   "editor.bracketPairColorization.enabled": true,
   "search.sortOrder": "type",
   "search.searchOnType": false,
   "editor.linkedEditing": true,
-  "[python]": {
-    "editor.formatOnType": true
-  },
   // Vim
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "rgba(20, 99, 89, 0.6)",
@@ -51,7 +54,7 @@
       "before": ["<S-h>"],
       "commands": ["workbench.action.previousEditor"]
     },
-    // basic
+    // Basic
     {
       "before": ["<leader>", "/"],
       "commands": ["editor.action.commentLine"]
@@ -84,7 +87,6 @@
     {
       "before": ["l", "d"],
       "commands": ["editor.action.revealDefinition"]
-      // "commands": ["editor.action.peekDefinition"]
     },
     {
       "before": ["<S-k>"],
@@ -180,13 +182,17 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.renderWhitespace": "none",
-  "editor.cursorBlinking": "solid",
-  "errorLens.enabled": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Misc
+  "workbench.startupEditor": "none",
   "explorer.confirmDragAndDrop": false,
-  "window.menuBarVisibility": "toggle",
   "git.openRepositoryInParentFolders": "never"
 }
