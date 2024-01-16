@@ -66,3 +66,5 @@ sw() {
 		sleep 1
 	done
 }
+
+[ -f /etc/debian_version ] && bigpkg() { dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'; }

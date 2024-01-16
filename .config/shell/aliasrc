@@ -1,7 +1,9 @@
 #!/bin/sh
 
-# Replace sudo with doas
-# alias sudo='doas'
+# Replace sudo < doas if installed
+if command -v doas >/dev/null; then
+	alias sudo="doas"
+fi
 
 if [ -f /etc/arch-release ]; then
 	# Arch aliases
@@ -14,15 +16,12 @@ if [ -f /etc/arch-release ]; then
 	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 elif [ -f /etc/debian_version ]; then
 	# Debian aliases
-	alias update='sudo nala update'
-	alias uplist='apt list --upgradable'
-	alias remove='sudo nala purge'
-	alias clean='sudo apt -y autoremove; sudo apt clean'
-	alias fix='sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing'
-	alias installed='sudo apt list --installed'
-	bigpkg() {
-		dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{size=$1/1024; name=$2; printf "%.2f MB\t%s\n", size, name}'
-	}
+	alias update="sudo nala update"
+	alias uplist="apt list --upgradable"
+	alias remove="sudo nala purge"
+	alias clean="sudo apt -y autoremove; sudo apt clean"
+	alias fix="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
+	alias installed="sudo apt list --installed"
 else
 	:
 fi
