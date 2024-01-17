@@ -1,17 +1,17 @@
 #!/bin/sh
 
-# notify-send -t 990 "🌡$(cat /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input| cut -b -2)°C"
+# notify-send -t 990 "🌡$(cut -b -2 < /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input)°C"
 notify-send "⚙️ CPU $(top -bn1 | awk '/^%Cpu/ {print $2}' | cut -c 1,2 | sed 's/\.//g') "
-notify-send " GPU $(nvidia-smi | grep % | cut -c 61-63) "
+notify-send " GPU $(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits) "
 
-notify-send " CPU-Temp $(sensors | awk '/Core 0/ {print $3}' | cut -c 2- | cut -c 1,2,5,6,7)"
+notify-send " CPU-Temp $(sensors | awk '/Core 0/ {print $3}' | cut -c 2- | cut -c 1,2,5,6,7)"
 notify-send "🌡️GPU-Temp $(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)°C"
 
 notify-send "🧠 RAM $(free -h | awk '/Mem:/ {print $3}' | cut -f1 -d 'i')"
 notify-send "💾 Dsk $(df -h / | awk 'NR==2{print $4}')"
 notify-send "⌨️ Layout $(setxkbmap -query | grep layout | awk '{print $2}' | tr "[:lower:]" "[:upper:]")"
 
-notify-send "🚀 Upt $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
+notify-send "🚀 UpT $(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')"
 
 # notify-send " Kernel - $(uname -r)"
 # notify-send " Init - $(ps -p1 | awk '/1/ {print $4}')"
