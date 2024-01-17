@@ -31,13 +31,6 @@ sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
 echo "1" > /proc/sys/kernel/sysrq
 echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
 
-# Use dash symlink for /bin/sh  - do this carefully it can break whole system
-# readlink /bin/sh  - check system shell
-# install checkbashisms dash
-# find /usr/bin/ -type f -perm -o=r -print0 | xargs -0r gawk '/^#!.*( |[/])sh/{printf "%s\0", FILENAME} {nextfile}' | xargs -0r checkbashisms  - check if all your /usr/bin script is compatible with dash or not
-# sudo ln -sfT dash /usr/bin/sh  - change dash as system shell, only run this, after you've corrected all your script for dash
-# sudo vim /usr/share/libalpm/hooks/bash-update.hook >> http://0x0.st/okdY.sh || install dashbinsh from AUR  - fix overwriting symlink after update bash
-
 # Replace sudo with doas
 # install opendoas
 # echo 'permit persist keepenv :wheel' | sudo tee -a /etc/doas.conf
