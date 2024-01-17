@@ -32,10 +32,12 @@ fi
 
 # Suckless
 sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev
-[ -d ~/dl/st/ ] || git clone --depth=1 https://github.com/sayanta01/st.git ~/dl/st
-cd ~/dl/st && sudo make clean install
-[ -d ~/dl/dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu.git ~/dl/dmenu
-cd ~/dl/dmenu && sudo make clean install
+[ -d ./st/ ] || git clone --depth=1 https://github.com/sayanta01/st.git 
+[ -d ./dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu.git
+if ! command -v dmenu >/dev/null || ! command -v st >/dev/null; then
+	cd dmenu && sudo make clean install
+  cd st && sudo make clean install
+fi
 
 # Nvim
 git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
@@ -84,7 +86,7 @@ distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
 
 if [ -f /etc/debian_version ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
+		echo "source ~/.profile" >>~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
 	ln -s ~/.config/x11/xinitrc ~/.xinitrc

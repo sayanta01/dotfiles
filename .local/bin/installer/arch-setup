@@ -30,10 +30,12 @@ else
 fi
 
 # Suckless
-[ -d ~/dl/st/ ] || git clone --depth=1 https://github.com/sayanta01/st.git ~/dl/st
-cd ~/dl/st && sudo make clean install
-[ -d ~/dl/dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu.git ~/dl/dmenu
-cd ~/dl/dmenu && sudo make clean install
+[ -d ./st/ ] || git clone --depth=1 https://github.com/sayanta01/st.git 
+[ -d ./dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu.git
+if ! command -v dmenu >/dev/null || ! command -v st >/dev/null; then
+	cd dmenu && sudo make clean install
+  cd st && sudo make clean install
+fi
 
 # Nvim
 git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
