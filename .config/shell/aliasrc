@@ -20,7 +20,7 @@ elif [ -f /etc/debian_version ]; then
 	alias uplist="apt list --upgradable"
 	alias remove="sudo nala purge"
 	alias clean="sudo apt -y autoremove; sudo apt clean"
-	alias fix="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
+	alias fix-deb="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
 	alias installed="sudo apt list --installed"
 else
 	:
