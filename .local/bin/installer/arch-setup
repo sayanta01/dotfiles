@@ -57,7 +57,7 @@ if [ "$choice" = "y" ]; then
 		mate-calc meld firefox grub-customizer \
 		linux-lts linux-lts-headers linux-firmware kitty neovim newsboat \
 		gnome-keyring cowsay htop neofetch \
-		bspwm polybar sxhkd rofi dunst \
+		bspwm sxhkd polybar rofi dunst \
 		qt5ct qt6ct lxappearance xcape pass \
 		pavucontrol playerctl pulsemixer mpd ncmpcpp \
 		net-tools wireless_tools iftop network-manager-applet \
