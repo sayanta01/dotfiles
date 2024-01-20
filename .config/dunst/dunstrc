@@ -95,8 +95,8 @@
 
 [urgency_critical]
      background = "#900000"
-     foreground = "#ffffff"
-     frame_color = "#ff0000"
+     foreground = "#F8F8F2"
+     frame_color = "#FF5555"
      timeout = 6
      override_pause_level = 40
 

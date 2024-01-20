@@ -94,7 +94,7 @@ alt + F8
 Print
     maim | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Ful.png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
                  
-# ss select   
+# selected ss
 shift + Print            
         maim -s | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
 
@@ -126,7 +126,7 @@ alt + t
 super + Return
         kitty 
 
-# thunar
+# file manager
 super + e
         thunar
 
@@ -138,11 +138,11 @@ ctrl + alt + k
 ctrl + alt + l
        ~/.local/bin/lockscreen
 	     
-# kill task
+# killer 
 ctrl + alt + Delete
        ~/.local/bin/dm-script/kil	     
 
-# scratchpad
+# scratch-pad
 alt + Return
       ~/.local/bin/bspwm/scpad
 
