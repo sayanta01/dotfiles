@@ -12,6 +12,10 @@ window#waybar {
   border-radius: 0px;
 }
 
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
 #workspaces button {
   color: #c0caf5;
   background-color: #040303;
@@ -20,9 +24,9 @@ window#waybar {
   margin-right: 2px;
 }
 
-#workspaces button.active {
+#workspaces button:hover {
   color: #414868;
-  background-color: #c0caf5;
+  background-color: #b0b9d4;
   border-radius: 1px;
 }
 
@@ -31,15 +35,15 @@ window#waybar {
   background-color: #eba0ac;
 }
 
-#workspaces button.urgent {
-  color: #11111b;
-  background-color: #bd2c40;
+#workspaces button.active {
+  color: #040303;
+  background-color: #c0caf5;
   border-radius: 1px;
 }
 
-#workspaces button:hover {
-  color: #414868;
-  background-color: #b0b9e4;
+#workspaces button.urgent {
+  color: #11111b;
+  background-color: #bd2c40;
   border-radius: 1px;
 }
 
