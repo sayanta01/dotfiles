@@ -16,17 +16,17 @@ loginshadow=000000
 locktext=""
 font="SF Pro Text"
 
-ringwrongcolor=282a36     # show ring before entering pswd 
-insidewrongcolor=d23c3d  # show inside before entering pswd
+ringwrongcolor=282a36     # show ring before typing
+insidewrongcolor=d23c3d  # show inside before typing
 
-ringcolor=282a36   # show ring while entering pswd
-insidecolor=50fa7b  # show inside while entering pswd
-keyhlcolor=282a36  # blink while entering pswd
+ringcolor=282a36   # show ring while typing
+insidecolor=50fa7b  # show inside while typing
+keyhlcolor=282a36  # blink while typing
 
 separatorcolor=f8f8f2
 
-ringvercolor=ffffff    # show ring while verifying pswd
-insidevercolor=000000  # show inside while verifying pswd
+ringvercolor=ffffff    # show ring while verifying
+insidevercolor=000000  # show inside while verifying
 
 timecolor=f8f8f2
 time_format="%a,%I:%M:%S"

@@ -14,11 +14,10 @@
   "modules-right": [
     "custom/date",
     "custom/nettraf",
-    // "custom/cpu",
-    "custom/memory",
     "pulseaudio",
-    "custom/separator",
-    "pulseaudio#microphone",
+    // "custom/separator",
+    // "pulseaudio#microphone",
+    "custom/memory",
     // "battery",
     "tray"
   ],
@@ -83,24 +82,10 @@
     "exec": "~/.local/bin/statusbar/bar-time",
     "on-click": "~/.local/bin/statusbar/notify-cal"
   },
-  // "battery": {
-  //   "states": {
-  //     "good": 94,
-  //     "warning": 29,
-  //     "critical": 16
-  //   },
-  //   "format": "{icon} {capacity}%",
-  //   "format-charging": "{capacity}% ",
-  //   "format-plugged": "{capacity}% ",
-  //   "format-alt": "{time} {icon}",
-  //   // "format-good": "", // An empty format will hide the module
-  //   // "format-full": "",
-  //   "format-icons": ["", "", "", "", ""]
-  // },
   "pulseaudio": {
     "tooltip": false,
     "format": "{icon} {volume}%",
-    "format-muted": " Muted",
+    "format-muted": "🔇 Muted",
     "on-click": "pamixer -t",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "pamixer -i 5",
@@ -113,18 +98,18 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": ["🔉", "🔈", "🔊"]
     }
-  },
-  "pulseaudio#microphone": {
-    "tooltip": false,
-    "format": "{format_source}",
-    "format-source": " {volume}%",
-    "format-source-muted": " Muted",
-    "on-click": "pamixer --default-source -t",
-    // "on-click-right": "kitty --class floating -e pulsemixer",
-    "on-scroll-up": "pamixer --default-source -i 5",
-    "on-scroll-down": "pamixer --default-source -d 5",
-    "scroll-step": 5
   }
+  // "pulseaudio#microphone": {
+  //   "tooltip": false,
+  //   "format": "{format_source}",
+  //   "format-source": " {volume}%",
+  //   "format-source-muted": " Muted",
+  //   "on-click": "pamixer --default-source -t",
+  //   // "on-click-right": "kitty --class floating -e pulsemixer",
+  //   "on-scroll-up": "pamixer --default-source -i 5",
+  //   "on-scroll-down": "pamixer --default-source -d 5",
+  //   "scroll-step": 5
+  // }
 }

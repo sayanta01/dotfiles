@@ -99,8 +99,8 @@ shift + Print
         maim -s | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
 
 # ss window
-# alt + Print 
-	    # maim -i $(xdotool getactivewindow) $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Win.png | notify-send -t 800 "Window Screenshot Taken"
+alt + Print 
+	    maim -i $(xdotool getactivewindow) $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Win.png | notify-send -t 800 "Window Screenshot Taken"
 	                           
 # chrome
 alt + b
@@ -113,14 +113,6 @@ alt + 0
 # dmenu
 super + @space 
         dmenu_run
-
-# spotify
-alt + s
-      spotify-launcher
-                        
-# telegram
-alt + t
-      telegram-desktop
 
 # terminal
 super + Return

@@ -56,8 +56,6 @@
       <property name="&lt;Alt&gt;F8" type="string" value="playerctl next"/>
       <property name="&lt;Super&gt;F7" type="string" value="playerctl play-pause"/>
       <property name="&lt;Alt&gt;F6" type="string" value="playerctl previous"/>
-      <property name="&lt;Alt&gt;s" type="string" value="spotify-launcher"/>
-      <property name="&lt;Alt&gt;t" type="string" value="telegram-desktop"/>
       <property name="Print" type="string" value="xfce4-screenshooter -f"/>
       <property name="&lt;Alt&gt;Return" type="string" value="xfce4-terminal --drop-down"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="xfce4-taskmanager"/>
