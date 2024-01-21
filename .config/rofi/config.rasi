@@ -8,19 +8,15 @@ configuration {
 
 * {
     font:                           "JetBrainsMono NF 12";
-    foreground:                     #a7b5cd;
-    background:                     #101216;
-    highlight:	             		    #f8f8f2;
-    red:                            #973d46;
-    darkred:                        #973d46;
+    foreground:                     #f8f8f2;
+    background:                     #101214;
+    urgent-background:              #ff5555;
     blue:                           #517ba5;
-    darkblue:                       #517ba5;
     yellow:                         #e0ae4a;
-    darkyellow:                     #e0ae4a;
     separatorcolor:                 #a7b5cd;
     border:                         #1b1e25;
     bg-col-light:                   #689d69;
-    tab:                            #689d6a;
+    tab:                            #689d66;
     tab-selected:                   #1d2021;
     blank:                          #1f2223;
     blank-underline:                #191c1d;
@@ -28,100 +24,110 @@ configuration {
 }
 
 window {
-    border: 			 	  0px;
-    border-radius:	  0px;
-    padding: 				  0;
-    width: 		  	  	30%;
+    // background-color: @background;
+    border: 			 	   0px;
+    border-radius:	   0px;
+    // border-color:   @background;
+    padding: 				   0;
+    width: 		  	   	 30%;
 }
 
 mainbox {
-    border:           0;
-    padding:          0;
+    border:            0;
+    padding:           0;
 }
 
 textbox {
-    text-color:       @foreground;
+    text-color:        @foreground;
 }
 
 listview {
-    lines:	          6;
-    columns:          1;
-    border:           0px 0px 0px 0px;
-    border-color:     @separatorcolor;
-    spacing:          4px;
-    scrollbar:        false;
-    padding:          0px 8px 8px;
+    lines:	           6;
+    columns:           1;
+    border:            0px;
+    border-color:      @separatorcolor;
+    spacing:           4px;
+    scrollbar:         false;
+    padding:           0px 8px 8px;
 }
 
 element {
-    border:           0;
-    padding:          8px; 
+    border:            0;
+    padding:           8px; 
 }
 
 element normal.normal {
-    background-color: @background;
-    text-color:       @foreground;
-    border-radius:    2px;
+    background-color:  @background;
+    text-color:        @foreground;
+    border-radius:     2px;
 }
 
 element normal.urgent {
-    background-color: @red;
-    text-color:       @background;
-    border-radius:    2px;
+    background-color:  @urgent-background;
+    text-color:        @background;
+    border-radius:     2px;
 }
 
 element normal.active {
-    background-color: @foreground;
-    text-color:       @background;
-    border-radius:    2px;
+    background-color:  @foreground;
+    text-color:        @background;
+    border-radius:     2px;
 }
 
 element selected.normal {
-    background-color: @blue;
-    text-color:       @background;
-    border-radius:    2px;
+    background-color:  @blue;
+    text-color:        @foreground;
+    border-radius:     2px;
 }
 
 element selected.urgent {
-    background-color: @red;
-    text-color:       @background;
-    border-radius:    2px;
+    background-color:  @urgent-background;
+    text-color:        @background;
+    border-radius:     2px;
 }
 
 element selected.active {
-    background-color: @yellow;
-    text-color:       @background;
-    border-radius:    2px;
+    background-color:  @yellow;
+    text-color:        @background;
+    border-radius:     2px;
 }
 
 element alternate.normal {
-    background-color: @background;
-    text-color:       @foreground;
-    border-radius:    2px;
+    background-color:  @background;
+    text-color:        @foreground;
+    border-radius:     2px;
 }
 
 element alternate.urgent {
-    background-color: @border;
-    text-color:       @background;
-    border-radius:    2px;
+    background-color:  @border;
+    text-color:        @background;
+    border-radius:     2px;
 }
 
 element alternate.active {
-    background-color: @border;
-    text-color:       @background;
-    border-radius:    2px;
+    background-color:  @border;
+    text-color:        @background;
+    border-radius:     2px;
 }
 
-element-text {
-    cursor:           inherit;
-    highlight:        inherit;
-    text-color:       inherit;
+button {
+    padding:           4px;
+    margin:            0px 8px 6px 8px;
+    background-color:  @blank;
+    text-color:        @tab;
+    vertical-align:    0.5; 
+    horizontal-align:  0.5;
+    border-radius:     4px;
+    border:            0px 0px 4px 0px;
+    border-color:      @blank-underline;
 }
 
-element-icon {
-    size:             1.0em;
-    cursor:           inherit;
-    text-color:       inherit;
+button selected {
+    background-color:  @bg-col-light;
+    text-color:        @tab-selected;
+    border-radius:     2px;
+    border:            0px 0px 4px 0px;
+    border-color:      @button-underline;
 }
 
 entry {
@@ -132,36 +138,28 @@ entry {
     placeholder-color: @foreground;
 }
 
-button {
-    padding:          4px;
-    margin:           0px 8px 5px 8px;
-    background-color: @blank;
-    text-color:       @tab;
-    vertical-align:   0.5; 
-    horizontal-align: 0.5;
-    border-radius:    4px;
-    border:           0px 0px 2px 0px;
-    border-color:     @blank-underline;
-}
-
-button selected {
-    background-color: @bg-col-light;
-    text-color:       @tab-selected;
-    border-radius:    2px;
-    border:           0px 0px 2px 0px;
-    border-color:     @button-underline;
-}
-
 prompt {
-                      padding: 0px 0px ;
-                      text-color: @foreground;
+    padding:           0px 0px ;
+    text-color:        @foreground;
 }
 
 inputbar {
-    background-color: #282a36;
-    margin:           0px 0px 0px 0px;
-    border:           8px;
-    border-radius:    6px;
-    border-color:     @background;
-    children:         [entry];
+    background-color:  #282a36;
+    margin:            0px 0px 0px 0px;
+    border:            8px;
+    border-radius:     6px;
+    border-color:      @background;
+    children:          [entry];
+}
+
+element-text {
+    // cursor:           inherit;
+    highlight:         inherit;
+    text-color:        inherit;
+}
+
+element-icon {
+    size:             1.0em;
+    // cursor:         inherit;
+    // text-color:     inherit;
 }
