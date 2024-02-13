@@ -31,20 +31,21 @@ mount /dev/sda1 /mnt/boot/efi
 # swapon /dev/sda3
 
 ##### install base system #####
-basestrap /mnt base base-devel linux linux-headers linux-firmware neovim zsh tmux runit elogind-runit  ( Artix )
- pacstrap -K /mnt base base-devel linux linux-headers linux-firmware neovim zsh tmux  ( Arch )
+basestrap /mnt base base-devel linux linux-headers linux-firmware neovim tmux runit elogind-runit  ( Artix )
+ pacstrap -K /mnt base base-devel linux linux-headers linux-firmware neovim tmux  ( Arch )
 
 #### generate fstab ####
 fstabgen -U /mnt >> /mnt/etc/fstab  ( Artix )
  genfstab -U /mnt >> /mnt/etc/fstab  ( Arch )
 
+#### chroot ####
 artix-chroot /mnt  ( Artix )
  arch-chroot /mnt  ( Arch )
 
 vim /etc/pacman.conf                    # uncmnt ParallerDownloads
 vim /etc/makepkg.conf                   # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
 
-#### configure system clock ####
+#### configure sys clock ####
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
 # date -s "1 JAN 2022 00:00:00"
@@ -56,6 +57,7 @@ locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C"  ( Artix ) 
 
+#### network configuration ####
 echo LilWarmachine > /etc/hostname
 
 vim /etc/hosts
@@ -66,7 +68,7 @@ vim /etc/hosts
 pacman -S git dosfstools dhcpcd xorg networkmanager-runit  ( Artix )
 ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( Artix after reboot )
 
- pacman -S git dosfstools dhcpcd xorg networkmanager reflector  ( Arch )
+ pacman -S git dosfstools dhcpcd xorg networkmanager ( Arch )
  systemctl enable NetworkManager  ( Arch )
 
 #### install bootloader ####
@@ -75,8 +77,8 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 passwd  # set root pswd
-useradd -m -G wheel,storage,power -s /bin/zsh bot
-passwd bot
+useradd -m -G wheel,storage,power `USER`
+passwd `USER`
 
 EDITOR=vim visudo                       # uncmnt %wheel ALL=(ALL:ALL) ALL
 exit - chroot environment

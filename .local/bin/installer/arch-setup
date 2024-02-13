@@ -65,7 +65,7 @@ if [ "$choice" = "y" ]; then
 		zip unzip unrar p7zip engrampa \
 		lf gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zathura zathura-pdf-mupdf ghostscript \
-		zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
+		zsh zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
 		rsync wget aria2 jq \
 		xdg-utils xdg-user-dirs \
 		pacman-contrib socat exfat-utils \
