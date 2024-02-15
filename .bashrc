@@ -2,6 +2,7 @@
 # ~/.bashrc
 #
 
+
 eval "$(starship init bash)"
 # export PS1="\W \[\e[31m\]❯\[\e[m\] "
 
