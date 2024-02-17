@@ -32,7 +32,6 @@ fi
 
 # Suckless
 sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev
-[ -d ./st/ ] || git clone --depth=1 https://github.com/sayanta01/st
 [ -d ./dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu
 if ! command -v dmenu >/dev/null || ! command -v st >/dev/null; then
 	cd dmenu && sudo make clean install

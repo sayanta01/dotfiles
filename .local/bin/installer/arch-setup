@@ -30,7 +30,6 @@ else
 fi
 
 # Suckless
-[ -d ./st/ ] || git clone --depth=1 https://github.com/sayanta01/st 
 [ -d ./dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu
 if ! command -v dmenu >/dev/null || ! command -v st >/dev/null; then
 	cd dmenu && sudo make clean install
