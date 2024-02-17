@@ -26,7 +26,7 @@ application/json=text.desktop
 image/svg+xml=org.inkscape.Inkscape.desktop;
 application/x-shellscript=nvim.desktop;
 
-# Manually set
+# Manually
 #### xdg-mime query filetype <photo.png>    # check filetype
 #### xdg-mime query default <image/jpg>     # check default app of filetype
 #### xdg-mime default nsxiv.desktop image/png

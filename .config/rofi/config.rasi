@@ -153,13 +153,13 @@ inputbar {
 }
 
 element-text {
-    // cursor:           inherit;
+    // cursor:            inherit;
     highlight:         inherit;
     text-color:        inherit;
 }
 
 element-icon {
-    size:             1.0em;
-    // cursor:         inherit;
-    // text-color:     inherit;
+    size:              1.0em;
+    // cursor:            inherit;
+    // text-color:        inherit;
 }

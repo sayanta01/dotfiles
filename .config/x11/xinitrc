@@ -9,6 +9,7 @@ fi
 . "$HOME/.profile"
 
 fav=bspwm
+
 case "$1" in
 	bspwm) bspwm ;;
 	xfce) startxfce4 ;;

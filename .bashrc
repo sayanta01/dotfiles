@@ -2,24 +2,25 @@
 # ~/.bashrc
 #
 
-
 eval "$(starship init bash)"
 # export PS1="\W \[\e[31m\]❯\[\e[m\] "
 
 [[ $- != *i* ]] && return # If not running interactively, don't do anything
 
 # shopt -s autocd        # Allows you to cd into directory merely by typing the directory name
-shopt -s histappend # Append to the history file, don't overwrite it
+shopt -s histappend    # Append to the history file, don't overwrite it
 # shopt -s checkwinsize  # Check the window size after each command and, if necessary, update the values of LINES and COLUMNS
 
+# History
 export HISTFILESIZE=2000
 export HISTSIZE=2000
 export HISTCONTROL=erasedups:ignoreboth
 
-# Aliases
+# Load aliases and shortcuts if existent
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
 [ -f "$HOME/.config/shell/shortcutrc" ] && source "$HOME/.config/shell/shortcutrc"
 
+# Fzf history
 function hst() {
 	if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 		history | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
