@@ -85,9 +85,9 @@ PROMPT=' %{$fg[red]%}❯${vcs_info_msg_0_}%  '
 # Fzf history
 function hst() {
 	if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
-		history | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
+		history 0 | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
 	else
-		history | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
+		history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
 	fi
 }
 
