@@ -33,8 +33,8 @@ fi
 # Suckless
 sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev
 [ -d ./dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu
-if ! command -v dmenu >/dev/null || ! command -v st >/dev/null; then
-	cd dmenu && sudo make clean install
+if ! command -v dmenu >/dev/null; then
+  cd dmenu && sudo make clean install
 	cd st && sudo make clean install
 fi
 
@@ -59,7 +59,7 @@ if [ "$choice" = "y" ]; then
 		bspwm polybar rofi dunst \
 		qt5ct lxappearance xcape pass \
 		kitty maim playerctl pulsemixer \
-    net-tools wireless-tools iftop \
+		net-tools wireless-tools iftop \
 		ffmpeg mpv nsxiv exa fzf fd-find \
 		zathura htop meld \
 		xclip xdotool xwallpaper gpg \
