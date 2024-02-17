@@ -1,11 +1,11 @@
 # Dunst configuration
 
 [global]
-    ### Display ###
+    ## Display ##
     monitor = 0
     follow = mouse
 
-    ### Geometry ###
+    ## Geometry ##
     width = 299
     height = 299
     origin = top-right
@@ -13,7 +13,7 @@
     scale = 0
     notification_limit = 20
 
-    ### Progress bar ###
+    ## Progress bar ##
     progress_bar = false
     progress_bar_height = 20
     progress_bar_frame_width = 2
@@ -30,7 +30,7 @@
     separator_color = frame
     sort = yes
 
-    ### Text ###
+    ## Text ##
     font = "JetBrainsMono NF Thin 11"
     line_height = 0
     markup = full
@@ -44,7 +44,7 @@
     hide_duplicate_count = false
     show_indicators = yes
 
-    ### Icons ###
+    ## Icons ##
     enable_recursive_icon_lookup = false
     # icon_theme = Adwaita
     icon_position = left
@@ -53,11 +53,11 @@
     icon_path = false
     # text_icon_padding = 0
 
-    ### History ###
+    ## History ##
     sticky_history = yes
     history_length = 20
 
-    ### Misc/Advanced ###
+    ## Misc/Advanced ##
     browser = /usr/xdg/bin-open
     always_run_script = true
     title = Dunst
@@ -65,14 +65,14 @@
     corner_radius = 0
     ignore_dbusclose = false
 
-    ### Wayland ###
+    ## Wayland ##
     # Uncomment for notications appear under fullscreen
     # applications (default: overlay)
     # Set this to true to use X11 output on Wayland
     # layer = top
     # force_xwayland = false
 
-    ### Shortcuts ###
+    ## Shortcuts ##
     close = ctrl+shift+space
     close_all = ctrl+shift+space
     history = ctrl+shift+grave
