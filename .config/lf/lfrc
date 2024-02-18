@@ -2,8 +2,8 @@
 set hidden true
 set ignorecase true
 set icons true
-set cleaner "~/.config/lf/lf_kitty_clean"
-set previewer "~/.config/lf/lf_kitty_preview"
+# set cleaner "~/.config/lf/lf_kitty_clean"
+# set previewer "~/.config/lf/lf_kitty_preview"
 
 # Functions
 cmd on-select &{{
@@ -17,7 +17,7 @@ cmd open ${{
     esac
 }}
 
-# Archive bindings
+# Archive
 cmd extract ${{
     set -f
     case $f in
@@ -47,7 +47,7 @@ cmd trash ${{
 }}
 
 # Restore from Trash
-cmd trash_restore ${{
+cmd trash-restore ${{
   tre
 }}
 
@@ -102,7 +102,7 @@ cmd chmod ${{
   lf -remote 'send reload'
 }}
 
-# Bulk Rename
+# Bulk rename
 cmd bulk-rename ${{
     old="$(mktemp)"
     new="$(mktemp)"
@@ -141,8 +141,8 @@ map . set hidden!
 map E extract
 map ex $bash "$f"
 map dd trash
-map DD delete
-map dr trash_restore
+# map DD delete
+map dr trash-restore
 map mf mkfile
 map md mkdir
 map x cut
@@ -154,10 +154,10 @@ map C copyto
 map R reload
 map U unselect
 map L clear
-map B bulkrename
+map B bulk-rename
 map <enter> open
 
-# Movement
+# Shortcuts
 map gd cd ~/dl
 map gD cd ~/dox
 map gp cd ~/pix
