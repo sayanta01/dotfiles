@@ -8,7 +8,7 @@ if [ "$HYPRGAMEMODE" = 1 ]; then
         keyword decoration:drop_shadow 0;\
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
-	notify-send -t 600 "Decor "
+	notify-send -t 200 "Decor "
 	exit
 fi
-hyprctl reload && notify-send -t 400 "Restart hypr "
+hyprctl reload && notify-send -t 200 "Decor "
