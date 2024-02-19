@@ -4,7 +4,7 @@
 for dir in desk dl dox music pix vids pub templates code imp; do
 	mkdir -p ~/"$dir"
 done
-for dots in .bashrc .profile .vimrc .xprofile .zprofile; do
+for dots in .bashrc .profile .xprofile .zprofile; do
 	cp -r "$HOME/dotfiles/$dots" "$HOME"
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
