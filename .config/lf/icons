@@ -50,7 +50,7 @@ fi             # FILE
 *.ini           
 *.yml           
 *.yaml          
-*.toml          
+*.toml          T
 *.bat           
 *.mk            
 *.jpg	          
@@ -172,7 +172,7 @@ fi             # FILE
 *gemfile                
 *makefile               
 *cmakelists.txt         
-*robots.txt             󱚞
+*robots.txt             󱙺
 
 # file names
 *Gruntfile.coffee       

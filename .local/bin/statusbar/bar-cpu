@@ -1,8 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-# Get the current CPU usage in percent
 cpu_usage=$(top -bn1 | awk '/^%Cpu/ {print $2}' | cut -c 1,2 | sed 's/\.//g')
 
-# Print the CPU usage in percent
 # echo " $cpu_usage "
 echo "🤖 $cpu_usage%"

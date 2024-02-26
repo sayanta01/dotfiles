@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#
+
 # https://github.com/sdushantha/fontpreview
 # Dependencies: nsxiv, imagemagick, xdotool, fzf
 

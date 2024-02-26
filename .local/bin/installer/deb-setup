@@ -60,7 +60,7 @@ if [ "$choice" = "y" ]; then
 		qt5ct lxappearance xcape pass \
 		kitty maim playerctl pulsemixer \
 		net-tools wireless-tools iftop \
-		ffmpeg mpv nsxiv exa fzf fd-find \
+		ffmpeg mpv nsxiv rust-eza fzf fd-find \
 		zathura htop meld \
 		xclip xdotool xwallpaper gpg \
 		exiftool aria2 wmname neofetch \

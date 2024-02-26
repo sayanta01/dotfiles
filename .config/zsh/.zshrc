@@ -14,7 +14,6 @@
 bindkey -e                                        # emacs key bindings
 bindkey -s '^o' 'lfcd^M'
 bindkey -s '^r' 'hst^M'
-bindkey -s '^t' 'tmux^M'
 bindkey ' ' magic-space                           # history expansion on space
 bindkey '^U' backward-kill-line                   # ctrl + u
 bindkey '^[[3;5~' kill-word                       # backward del

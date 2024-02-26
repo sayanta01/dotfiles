@@ -1,17 +1,18 @@
-# Basic Settings
-set hidden true
+# Basic settings
+set hidden false
 set ignorecase true
 set icons true
-# set cleaner "~/.config/lf/lf_kitty_clean"
-set previewer "~/.config/lf/lf_kitty_preview"
+set cleaner "~/.config/lf/cleaner"
+set previewer "~/.config/lf/scope"
 
 # Functions
 cmd on-select &{{
-    lf -remote "send $id set statfmt \"$(exa -ld --color=always "$f")\""
+    lf -remote "send $id set statfmt \"$(eza -ld --color=always "$f")\""
 }}
 
+# Opening
 cmd open ${{
-    case $(file --mime-type "$f" -bL) in
+    case $(file --mime-type "$f" -b) in
         text/*|application/json) $EDITOR "$f";;
         *) xdg-open "$f" ;;
     esac
@@ -28,10 +29,11 @@ cmd extract ${{
         *.rar) unrar x $f;;
         *.Z) uncompress $fx;;
         *.7z) 7z x $f;;
+        *) echo "Unsupported format";;
     esac
 }}
 
-# Move to Trash
+# Move to trash
 cmd trash ${{
   files=$(printf "$fx" | tr '\n' ';')
   while [ "$files" ]; do
@@ -74,7 +76,7 @@ cmd moveto ${{
 	for x in $fx; do
 		eval mv -iv \"$x\" \"$dest\"
 	done &&
-	notify-send "🚚 File(s) moved." "File(s) moved to $dest."
+	notify-send "🚚 File(s) moved" "File(s) moved to $dest"
 }}
 
 # Copy to <path>
@@ -86,7 +88,7 @@ cmd copyto ${{
 	for x in $fx; do
 		eval cp -ivr \"$x\" \"$dest\"
 	done &&
-	notify-send "📋 File(s) copied." "File(s) copies to $dest."
+	notify-send "📋 File(s) copied" "File(s) copies to $dest"
 }}
 
 # Permission
@@ -136,7 +138,7 @@ map o
 map '"'
 map "'"
 
-# Basic Functions
+# Basic functions
 map . set hidden!
 map E extract
 map ex $bash "$f"

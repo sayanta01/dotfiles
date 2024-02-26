@@ -1,4 +1,13 @@
-#!/bin/bash
+#!/bin/sh
+
+# Autostart
+xsetroot -cursor_name left_ptr &
+sh ~/.config/sxhkd/sxhkd.sh &
+sh ~/.config/polybar/launch.sh &
+xset r rate 280 60 &
+xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# xcape -e 'super_l=alt_l|0' &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -12,6 +21,7 @@ bspc config borderless_monocle true
 bspc config gapless_monocle false
 bspc config focus_follows_pointer true
 bspc config pointer_modifier mod1
+# bspc config honor_size_hints true ## Honor size hints: do not make windows smaller than they wish to be
 
 # Pywal
 # https://github.com/dylanaraps/pywal/wiki/Customization#bspwm
@@ -31,12 +41,3 @@ bspc rule -a Nm-connection-editor state=floating center=on
 bspc rule -a Pavucontrol state=floating center=on
 bspc rule -a Blueman-manager state=floating center=on
 bspc rule -a scpad locked=on sticky=on state=floating rectangle=999x800+460+90
-
-# Autostart
-xsetroot -cursor_name left_ptr &
-sh ~/.config/polybar/launch.sh &
-sh ~/.config/sxhkd/sxhkd.sh &
-xset r rate 280 60 &
-xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# xcape -e 'super_l=alt_l|0' &

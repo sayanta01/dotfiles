@@ -165,7 +165,7 @@ edit_pacman_conf() {
 
 	grep -q "^ParallelDownloads" "$conf" && ! grep -q "^ILoveCandy" "$conf" && sudo sed -i "/^ParallelDownloads/a ILoveCandy" "$conf" && echo "Added ILoveCandy below ParallelDownloads" || echo "ILoveCandy already exists"
 }
-edit_pacman_conf && sudo pacman -Sy
+edit_pacman_conf
 
 # Teletype font
 sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz

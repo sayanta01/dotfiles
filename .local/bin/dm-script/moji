@@ -3,11 +3,11 @@
 session_type="$XDG_SESSION_TYPE"
 
 if [ "$session_type" = "x11" ]; then
-	emoji=$(curl -s https://raw.githubusercontent.com/jchook/emoji-menu/master/data/emojis.txt | dmenu -i -p "Emojis" -l 20)
+	emoji=$(curl -sSL https://raw.githubusercontent.com/jchook/emoji-menu/master/data/emojis.txt | dmenu -i -p "Emojis" -l 20)
 	selected=$(echo "$emoji" | awk '{print $1}')
 	printf "%s" "$selected" | xclip -sel c
 elif [ "$session_type" = "wayland" ]; then
-	emoji=$(curl -s https://raw.githubusercontent.com/jchook/emoji-menu/master/data/emojis.txt | dmenu -i -p "Emojis" -l 20)
+	emoji=$(curl -sSL https://raw.githubusercontent.com/jchook/emoji-menu/master/data/emojis.txt | dmenu -i -p "Emojis" -l 20)
 	selected=$(echo "$emoji" | awk '{print $1}')
 	printf "%s" "$selected" | wl-copy
 fi

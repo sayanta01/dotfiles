@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Tab for select
 gio trash --list | column -t -s "$(printf '\t')" | fzf -i -e -m -d / --with-nth 4.. \
