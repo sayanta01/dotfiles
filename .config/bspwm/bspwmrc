@@ -1,14 +1,5 @@
 #!/bin/sh
 
-# Autostart
-xsetroot -cursor_name left_ptr &
-sh ~/.config/sxhkd/sxhkd.sh &
-sh ~/.config/polybar/launch.sh &
-xset r rate 280 60 &
-xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# xcape -e 'super_l=alt_l|0' &
-
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width 1
@@ -41,3 +32,12 @@ bspc rule -a Nm-connection-editor state=floating center=on
 bspc rule -a Pavucontrol state=floating center=on
 bspc rule -a Blueman-manager state=floating center=on
 bspc rule -a scpad locked=on sticky=on state=floating rectangle=999x800+460+90
+
+# Autostart
+xsetroot -cursor_name left_ptr &
+sh ~/.config/sxhkd/sxhkd.sh &
+sh ~/.config/polybar/launch.sh &
+xset r rate 280 60 &
+xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# xcape -e 'super_l=alt_l|0' &

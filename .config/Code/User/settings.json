@@ -1,14 +1,11 @@
 {
-  // Font
   "editor.fontFamily": "JetBrainsMono NF Thin",
   "editor.fontLigatures": true,
   "editor.fontSize": 20,
   "terminal.integrated.fontSize": 19,
-  // Extension
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
   "errorLens.enabled": true,
-  // UI
   "breadcrumbs.enabled": true,
   "breadcrumbs.filePath": "off",
   "editor.minimap.enabled": false,
@@ -17,10 +14,8 @@
   "editor.renderWhitespace": "none",
   "editor.cursorBlinking": "solid",
   "window.titleBarStyle": "custom",
-  // Theme
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "material-icon-theme",
-  // Setting
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.enablePreview": false,
   "editor.rename.enablePreview": false,
@@ -36,129 +31,266 @@
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
-  // "vim.easymotion": true,
-  // "vim.easymotionMarkerooundColor": "#020202",
-  // "vim.sneak": true,
+  "vim.easymotion": true,
+  "vim.easymotionMarkerooundColor": "#020202",
   "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    }
+    // {
+    //   "before": ["j", "k"],
+    //   "after": ["<Esc>"]
+    // }
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": ["<S-l>"],
-      "commands": ["workbench.action.nextEditor"]
+      "before": [
+        "<S-l>"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
     },
     {
-      "before": ["<S-h>"],
-      "commands": ["workbench.action.previousEditor"]
+      "before": [
+        "<S-h>"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
     },
     // Basic
     {
-      "before": ["<leader>", "/"],
-      "commands": ["editor.action.commentLine"]
+      "before": [
+        "<leader>",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     },
     {
-      "before": ["<leader>", "w"],
-      "commands": [":w!"]
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        ":w!"
+      ]
     },
     {
-      "before": ["<leader>", "q"],
-      "commands": [":q!"]
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "commands": [
+        ":q!"
+      ]
     },
     {
-      "before": ["<leader>", "x"],
-      "commands": [":bdelete"]
+      "before": [
+        "<leader>",
+        "x"
+      ],
+      "commands": [
+        ":bdelete"
+      ]
     },
     {
-      "before": ["<leader>", "n"],
-      "commands": [":nohl"]
+      "before": [
+        "<leader>",
+        "n"
+      ],
+      "commands": [
+        ":nohl"
+      ]
     },
     {
-      "before": ["<leader>", "z"],
-      "commands": ["workbench.action.toggleZenMode"]
+      "before": [
+        "<leader>",
+        "z"
+      ],
+      "commands": [
+        "workbench.action.toggleZenMode"
+      ]
     },
     // LSP
     {
-      "before": ["l", "D"],
-      "commands": ["editor.action.peekDeclaration"]
+      "before": [
+        "g",
+        "D"
+      ],
+      "commands": [
+        "editor.action.peekDeclaration"
+      ]
     },
     {
-      "before": ["l", "d"],
-      "commands": ["editor.action.revealDefinition"]
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
     },
     {
-      "before": ["<S-k>"],
-      "commands": ["editor.action.showHover"]
+      "before": [
+        "<S-k>"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
     },
     {
-      "before": ["g", "i"],
-      "commands": ["editor.action.goToImplementation"]
+      "before": [
+        "g",
+        "i"
+      ],
+      "commands": [
+        "editor.action.goToImplementation"
+      ]
     },
     {
-      "before": ["l", "t"],
-      "commands": ["editor.action.goToTypeDefinition"]
+      "before": [
+        "<leader>",
+        "D"
+      ],
+      "commands": [
+        "editor.action.goToTypeDefinition"
+      ]
     },
     {
-      "before": ["<leader>", "l", "r"],
-      "commands": ["editor.action.rename"]
+      "before": [
+        "<leader>",
+        "r",
+        "n"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
     },
     {
-      "before": ["<leader>", "l", "a"],
-      "commands": ["editor.action.codeAction"]
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.codeAction"
+      ]
     },
     {
-      "before": ["g", "r"],
-      "commands": ["editor.action.goToReferences"]
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
     },
     {
-      "before": ["g", "l"],
-      "commands": ["errorLens.toggle"]
+      "before": [
+        "g",
+        "l"
+      ],
+      "commands": [
+        "errorLens.toggle"
+      ]
     },
     {
-      "before": ["[", "d"],
-      "commands": ["editor.action.marker.prevInFiles"]
+      "before": [
+        "[",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.prevInFiles"
+      ]
     },
     {
-      "before": ["]", "d"],
-      "commands": ["editor.action.marker.nextInFiles"]
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ]
     },
     {
-      "before": ["<leader>", "l", "f"],
-      "commands": ["editor.action.formatDocument"]
+      "before": [
+        "<leader>",
+        "l",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
     },
     {
-      "before": ["<leader>", "l", "q"],
-      "commands": ["editor.action.quickFix"]
+      "before": [
+        "<leader>",
+        "l",
+        "q"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [">"],
-      "after": [">", "g", "v"]
+      "before": [
+        ">"
+      ],
+      "after": [
+        ">",
+        "g",
+        "v"
+      ]
     },
     {
-      "before": ["<"],
-      "after": ["<", "g", "v"]
+      "before": [
+        "<"
+      ],
+      "after": [
+        "<",
+        "g",
+        "v"
+      ]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "\\"],
-      "commands": ["workbench.action.splitEditor"]
+      "before": [
+        "<leader>",
+        "\\"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
     },
     {
-      "before": ["<leader>", "-"],
-      "commands": ["workbench.action.splitEditorDown"]
+      "before": [
+        "<leader>",
+        "-"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
+      ]
     },
     {
-      "before": ["<leader>", "f"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
     },
     {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.view.explorer"]
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ]
     }
   ],
   "vim.leader": "<space>",

@@ -32,10 +32,6 @@
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-  {
-    "key": "alt+\\",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
   // Explorer bind
   {
     "command": "explorer.newFile",
