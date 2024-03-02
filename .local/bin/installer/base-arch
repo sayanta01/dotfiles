@@ -35,12 +35,12 @@ basestrap /mnt base base-devel linux linux-headers linux-firmware neovim tmux ru
  pacstrap -K /mnt base base-devel linux linux-headers linux-firmware neovim tmux  ( Arch )
 
 #### generate fstab ####
-fstabgen -U /mnt >> /mnt/etc/fstab  ( Artix )
- genfstab -U /mnt >> /mnt/etc/fstab  ( Arch )
+fstabgen -U /mnt >> /mnt/etc/fstab  [ Artix ]
+ genfstab -U /mnt >> /mnt/etc/fstab  [ Arch ]
 
 #### chroot ####
-artix-chroot /mnt  ( Artix )
- arch-chroot /mnt  ( Arch )
+artix-chroot /mnt  [ Artix ]
+ arch-chroot /mnt  [ Arch ]
 
 vim /etc/pacman.conf                    # uncmnt ParallerDownloads
 vim /etc/makepkg.conf                   # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
@@ -49,13 +49,13 @@ vim /etc/makepkg.conf                   # uncmnt MAKEFLAGS - more cores faster c
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
 # date -s "1 JAN 2022 00:00:00"
-timedatectl set-ntp true  ( Arch )
+timedatectl set-ntp true  [ Arch ]
 
 #### set localization ####
 vim /etc/locale.gen                     # uncmnt US.UTF-8
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
-export LC_COLLATE="C"  ( Artix ) 
+export LC_COLLATE="C"  [ Artix ] 
 
 #### network configuration ####
 echo LilWarmachine > /etc/hostname
@@ -65,11 +65,11 @@ vim /etc/hosts
 ::1         localhost
 127.0.1.1   LilWarmachine.localdomain   LilWarmachine
 
-pacman -S git dosfstools dhcpcd xorg networkmanager-runit  ( Artix )
-ln -s /etc/runit/sv/NetworkManager /run/runit/service  ( Artix after reboot )
+pacman -S git dosfstools dhcpcd xorg networkmanager-runit  [ Artix ]
+ln -s /etc/runit/sv/NetworkManager /run/runit/service  [ Artix after reboot ]
 
- pacman -S git dosfstools dhcpcd xorg networkmanager ( Arch )
- systemctl enable NetworkManager  ( Arch )
+ pacman -S git dosfstools dhcpcd xorg networkmanager [ Arch ]
+ systemctl enable NetworkManager  [ Arch  ]
 
 #### install bootloader ####
 pacman -S grub os-prober efibootmgr
@@ -96,7 +96,7 @@ Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
 Server = https://ftp.crifo.org/artix-universe/
 
 sudo pacman -Sy artix-archlinux-support
-# sudo pacman -S artix-keyring  ( fix corrupted pkg "PGP signature" )
+# sudo pacman -S artix-keyring  [ fix corrupted pkg "PGP signature" ]
 # sudo pacman-key --populate artix
 
 /etc/pacman.conf >> in End
@@ -125,4 +125,4 @@ Include = /etc/pacman.d/mirrorlist-arch
 sudo pacman-key --init
 sudo pacman-key --populate archlinux
 sudo pacman -Syyu
-# sudo dbus-uuidgen | sudo tee /var/lib/dbus/machine-id    ( Artix )
+# sudo dbus-uuidgen | sudo tee /var/lib/dbus/machine-id    [ Artix ]

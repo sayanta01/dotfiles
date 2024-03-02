@@ -7,9 +7,14 @@ configuration {
 } 
 
 * {
-    font:                           "JetBrainsMono NF 12";
+    font:                           "JetBrainsMono NF 11";
     foreground:                     #f8f8f2;
     background:                     #101214;
+    highlight:	             		    #60fa7b;
+    // red:                            #973d46;
+    // darkred:                        #973d46;
+    // darkblue:                       #517ba5;
+    // darkyellow:                     #e0ae4a;
     urgent-background:              #ff5555;
     blue:                           #517ba5;
     yellow:                         #e0ae4a;

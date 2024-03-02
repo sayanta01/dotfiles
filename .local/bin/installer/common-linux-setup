@@ -44,4 +44,4 @@ echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
 # -i ecryptfs-utils cryptsetup
 # use this when u get laptop
 
-# sudo vim /etc/hosts          ( blk sites )
+# sudo vim /etc/hosts          [ blk sites ]

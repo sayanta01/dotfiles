@@ -1,5 +1,3 @@
-#!/bin/sh
-
 ## wsl --help
 
 # wsl --install

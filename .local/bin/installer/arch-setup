@@ -12,7 +12,7 @@ cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
 # Fonts
-printf "Update/Install Fonts? (y/N): "
+printf "Update/Install Fonts? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
 	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
@@ -47,7 +47,7 @@ sudo cp -r ~/.local/share/icons/BeautySolar /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 
-printf "Install Main pkgs? (y/N): "
+printf "Install Main pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
@@ -107,7 +107,7 @@ else
 fi
 
 # GUI apps
-printf "Install GUI pkgs? (y/N): "
+printf "Install GUI pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm scrcpy android-tools android-file-transfer \
@@ -122,7 +122,7 @@ else
 fi
 
 # VM
-printf "Install QEMU-VM ? (y/N): "
+printf "Install QEMU-VM ? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm qemu virt-manager dnsmasq bridge-utils openbsd-netcat libvirt-runit spice-vdagent-runit
@@ -144,12 +144,12 @@ fi
 
 # AUR
 if command -v paru >/dev/null 2>&1; then
-	printf "Install AUR pkgs? (y/N): "
+	printf "Install AUR pkgs? [y/N]: "
 	read -r choice
 	[ "$choice" = "y" ] && paru -S betterlockscreen colorpicker visual-studio-code-bin simple-mtpfs yt-dlp
 else
 	git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru && cd ~/.cache/paru && makepkg -fsri --noconfirm
-	printf "Install AUR pkgs? (y/N): "
+	printf "Install AUR pkgs? [y/N]: "
 	read -r choice
 	[ "$choice" = "y" ] && paru -S betterlockscreen colorpicker visual-studio-code-bin simple-mtpfs
 fi

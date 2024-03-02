@@ -31,7 +31,7 @@ Type=Application
 EOF
 
 # Sddm theme
-printf "SDDM theme? (y/N): "
+printf "SDDM theme? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
 	git clone --depth=1 https://github.com/JaKooLit/simple-sddm.git ~/simple-sddm

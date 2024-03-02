@@ -13,7 +13,7 @@ cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
 # Fonts
-printf "Update/Install Fonts? (y/N): "
+printf "Update/Install Fonts? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
 	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
@@ -34,7 +34,7 @@ fi
 sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xcb-dev libxcb-res0-dev
 [ -d ./dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu
 if ! command -v dmenu >/dev/null; then
-  cd dmenu && sudo make clean install
+	cd dmenu && sudo make clean install
 	cd st && sudo make clean install
 fi
 
@@ -49,7 +49,7 @@ sudo cp -r ~/.local/share/icons/BeautySolar /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 
-printf "Install Main pkgs? (y/N): "
+printf "Install Main pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
 	sudo apt install -y nala apt-transport-https \
@@ -72,7 +72,11 @@ else
 	:
 fi
 
-curl -sS https://starship.rs/install.sh | sh
+if ! command -v starship >/dev/null 2>&1; then
+	curl -sS https://starship.rs/install.sh | sh
+else
+	:
+fi
 
 # wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O ~/dl/vscode.deb
 # aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
