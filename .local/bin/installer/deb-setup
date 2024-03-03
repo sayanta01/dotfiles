@@ -38,7 +38,7 @@ if ! command -v dmenu >/dev/null; then
 	cd st && sudo make clean install
 fi
 
-# Nvim
+# Vim
 [ -d ~/.config/nvim/ ] || git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
 # Tmux
 [ -d ~/.config/tmux/plugins/ ] || git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm

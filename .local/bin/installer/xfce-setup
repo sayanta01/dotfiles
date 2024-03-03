@@ -26,7 +26,7 @@ remove_pkg xfce4-appfinder xfce4-power-manager xfwm4-themes
 #xfce4-dev-tools  # Developer tools
 #thunar-volman    # Automatic management of removeable devices in Thunar
 
-##===== Xfce4 Goodies =====##
+##==== Xfce4 Goodies ====##
 install_pkg xfce4-taskmanager xfce4-screenshooter ristretto xfce4-whiskermenu-plugin \
 	xfce4-pulseaudio-plugin xfce4-datetime-plugin xfce4-cpugraph-plugin xfce4-cpufreq-plugin
 

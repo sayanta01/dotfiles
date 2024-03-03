@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Dmenu wrapper script for system functions
+# dmenu wrapper script for system functions
 case "$(readlink -f /sbin/init)" in
 *systemd*) ctl='systemctl' ;;
 *) ctl='loginctl' ;;

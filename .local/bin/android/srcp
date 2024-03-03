@@ -23,12 +23,12 @@ camera() {
 		--orientation=90
 }
 
-# sound in earphone - fix mic
+# sound in earphone
 game() {
 	scrcpy --no-video --audio-output-buffer=10
 }
 
-# Call the functions based on user input
+# call the functions based on user input
 if [ "$1" = "connect" ]; then
 	connect
 elif [ "$1" = "audio" ]; then
