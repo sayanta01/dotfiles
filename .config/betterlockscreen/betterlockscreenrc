@@ -29,7 +29,7 @@ ringvercolor=ffffff    # show ring while verifying
 insidevercolor=000000  # show inside while verifying
 
 timecolor=f8f8f2
-time_format="%a,%I:%M:%S"
+time_format="%a,%I:%M"
 
 greetercolor=f1fa8c  # type pswd text
 verifcolor=ffffff    # verification text

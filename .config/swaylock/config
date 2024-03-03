@@ -1,3 +1,5 @@
+# configuration
+
 daemonize
 show-failed-attempts
 screenshot
@@ -16,8 +18,8 @@ inside-color=1f1d2e
 text-color=e0def4
 text-caps-lock-color=e0def4
 
-key-hl-color=31748f
-bs-hl-color=eb6f92
+key-hl-color=040303
+bs-hl-color=040303
 
 separator-color=04030300
 
