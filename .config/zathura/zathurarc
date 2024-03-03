@@ -1,4 +1,4 @@
-# 
+# Theme
 set completion-group-bg         "#181f21" # Background
 set completion-group-fg         "#dadada" # Comment
 set completion-bg               "#1f2628" # Background

@@ -35,7 +35,7 @@ TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 # Enable completion 
 autoload -Uz compinit && compinit -d $HOME/.cache/zcompdump
 zmodload zsh/complist
-_comp_options+=(globdots)		# Include hidden files
+_comp_options+=(globdots)		# show hidden files
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-prompt %S TAB for more
 zstyle ':completion:*' verbose true
@@ -49,7 +49,7 @@ setopt hist_ignore_space       # ignore commands that start with space
 setopt hist_ignore_all_dups    # ignore duplicated commands history list
 setopt hist_verify             # show command with history expansion
 
-# Load aliases and shortcuts if existent
+# Load aliases & shortcuts
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
 [ -f "$HOME/.config/shell/shortcutrc" ] && source "$HOME/.config/shell/shortcutrc"
 

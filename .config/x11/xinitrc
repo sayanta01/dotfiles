@@ -9,7 +9,6 @@ fi
 . "$HOME/.profile"
 
 fav=bspwm
-
 case "$1" in
 	bspwm) bspwm ;;
 	xfce) startxfce4 ;;
@@ -17,4 +16,4 @@ case "$1" in
 	*) exec $fav ;;
 esac
 
-# /usr/share/xsession    -- session path
+# /usr/share/xsession  -- session path

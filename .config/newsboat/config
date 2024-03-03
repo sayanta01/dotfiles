@@ -16,7 +16,7 @@ bind-key U show-urls
 bind-key D pb-download
 bind-key x pb-delete
 
-# for pywal
+# pywal
 color background          default default
 color listnormal          default default
 color listfocus           black   yellow dim

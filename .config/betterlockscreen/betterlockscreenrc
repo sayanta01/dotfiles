@@ -1,4 +1,4 @@
-# default options
+# options
 display_on=0
 span_image=false
 lock_timeout=300
@@ -10,7 +10,7 @@ solid_color=333333
 wallpaper_cmd="feh --bg-fill"
 quiet=false
 
-# default theme
+# theme
 loginbox=000000
 loginshadow=000000
 locktext=""

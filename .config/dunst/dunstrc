@@ -44,7 +44,7 @@
     hide_duplicate_count = false
     show_indicators = yes
 
-    ## Icons ##
+    ## Sign ##
     enable_recursive_icon_lookup = false
     # icon_theme = Adwaita
     icon_position = left
@@ -57,7 +57,7 @@
     sticky_history = yes
     history_length = 20
 
-    ## Misc/Advanced ##
+    ## Misc ##
     browser = /usr/xdg/bin-open
     always_run_script = true
     title = Dunst

@@ -2,19 +2,19 @@
 # wm independent hotkeys
 #
 
-# brightness control
+# brightness ctrl
 XF86MonBrightness{Up,Down}
 	               xbacklight {-inc 10,-dec 10}
 	
-# volume control 
+# volume ctrl 
 XF86Audio{RaiseVolume,LowerVolume,Mute}
          pamixer {-i 5,-d 5,-t}
 
-# mic control
+# mic ctrl
 XF86AudioMicMute
          pamixer --default-source -t
 
-# music control 
+# music ctrl 
 XF86Audio{Prev,Next}
          playerctl {previous,next}
 
@@ -98,11 +98,11 @@ Print
 shift + Print            
         maim -s | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
 
-# ss window
+# window ss
 alt + Print 
 	    maim -i $(xdotool getactivewindow) $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Win.png | notify-send -t 800 "Window Screenshot Taken"
 	                           
-# chrome
+# web 
 alt + b
       $BROWSER
         
@@ -126,11 +126,11 @@ super + e
 ctrl + alt + k
        mate-calculator
 
-# screenlock
+# screen-lock
 ctrl + alt + l
        ~/.local/bin/lockscreen
 	     
-# killer 
+# killer
 ctrl + alt + Delete
        ~/.local/bin/dm-script/kil	     
 
@@ -142,7 +142,7 @@ alt + Return
 # bspwm hotkeys
 #
 
-# make sxhkd reload its configuration files
+# reload sxhkd configuration
 super + Escape
 	      notify-send -t 500 "reloading sxhkd!"; pkill -USR1 -x sxhkd
 	
@@ -150,7 +150,7 @@ super + Escape
 super + alt + {q,r}
       	bspc {quit,wm -r}
 
-# close and kill
+# close or kill
 super + {_,shift + }q
         bspc node -{c,k}
 
@@ -171,7 +171,7 @@ super + g
 # state/flags
 #
 
-# increase\decrease window gap on focused desktop
+# increase/decrease window gap on focused desktop
 super + {minus,equal}
         bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-, +} 5))
 

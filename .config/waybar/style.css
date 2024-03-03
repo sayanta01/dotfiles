@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0;
   font-family: JetBrainsMono NF;
-  font-weight: normal;
+  font-weight: 100;
   font-size: 16px;
   box-shadow: none;
 }
@@ -49,7 +49,8 @@ window#waybar.hidden {
 #custom-memory,
 #custom-separator,
 #pulseaudio,
-#tray,
+#tray
+
 #tray {
   padding: 0px 10px;
   margin-right: 2px;
@@ -89,20 +90,6 @@ window#waybar.hidden {
 #pulseaudio {
   color: #f8f8f2;
   background-color: #2a2e36;
-  border-radius: 8px 0px 0px 8px;
-  margin-right: 0px;
-}
-
-#custom-separator {
-  color: #89b4fa;
-  background-color: #2a2e36;
-  padding: 0px 0px 0px 0px;
-  border-radius: 0px 0px 0px 0px;
-}
-
-#pulseaudio.microphone {
-  color: #f8f8f2;
-  background-color: #2a2e36;
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 8px 8px 8px 8px;
   margin-right: 0px;
 }

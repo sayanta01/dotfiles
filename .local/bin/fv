@@ -223,7 +223,7 @@ if [ -f "$font" ]; then
 	generate_preview "$font" "$FONT_PREVIEW"
 
 	# Display the font preview using sxiv
-	sxiv -g "$SIZE$POSITION" -N "fontpreview" -b "$FONT_PREVIEW" &
+	nsxiv -g "$SIZE$POSITION" -N "fontpreview" -b "$FONT_PREVIEW" &
 
 	# For some strange reason, sxiv just doesnt have time to read the file
 	sleep 0.1

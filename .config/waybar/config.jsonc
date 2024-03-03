@@ -8,15 +8,13 @@
   // "gtk-layer-shell": true,
   "modules-left": [
     "hyprland/workspaces",
-    "hyprland/window",
+    // "hyprland/window",
     "custom/now-playing"
   ],
   "modules-right": [
     "custom/date",
     "custom/nettraf",
     "pulseaudio",
-    // "custom/separator",
-    // "pulseaudio#microphone",
     "custom/memory",
     // "battery",
     "tray"
@@ -98,18 +96,11 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["🔉", "🔈", "🔊"]
+      "default": [
+        "🔉",
+        "🔈",
+        "🔊"
+      ]
     }
   }
-  // "pulseaudio#microphone": {
-  //   "tooltip": false,
-  //   "format": "{format_source}",
-  //   "format-source": " {volume}%",
-  //   "format-source-muted": " Muted",
-  //   "on-click": "pamixer --default-source -t",
-  //   // "on-click-right": "kitty --class floating -e pulsemixer",
-  //   "on-scroll-up": "pamixer --default-source -i 5",
-  //   "on-scroll-down": "pamixer --default-source -d 5",
-  //   "scroll-step": 5
-  // }
 }

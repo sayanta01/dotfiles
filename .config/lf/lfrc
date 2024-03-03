@@ -33,7 +33,7 @@ cmd extract ${{
     esac
 }}
 
-# Move to trash
+# Move to Trash
 cmd trash ${{
   files=$(printf "$fx" | tr '\n' ';')
   while [ "$files" ]; do

@@ -2,7 +2,7 @@
 
 # bat --color=always --theme=base16 "$1"
 
-# Photo preview handler
+# Picture preview handler
 file=$1
 w=$2
 h=$3
