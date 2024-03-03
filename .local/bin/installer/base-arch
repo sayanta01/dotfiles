@@ -31,8 +31,8 @@ mount /dev/sda1 /mnt/boot/efi
 # swapon /dev/sda3
 
 #### install base system ####
-basestrap /mnt base base-devel linux linux-headers linux-firmware neovim tmux runit elogind-runit  ( Artix )
- pacstrap -K /mnt base base-devel linux linux-headers linux-firmware neovim tmux  ( Arch )
+basestrap /mnt base base-devel linux linux-headers linux-firmware neovim tmux runit elogind-runit  [ Artix ]
+ pacstrap -K /mnt base base-devel linux linux-headers linux-firmware neovim tmux  [ Arch ]
 
 #### generate fstab ####
 fstabgen -U /mnt >> /mnt/etc/fstab  [ Artix ]
@@ -80,7 +80,7 @@ passwd  # set root pswd
 useradd -m -G wheel,storage,power `USER`
 passwd `USER`
 
-EDITOR=vim visudo                       # uncmnt %wheel ALL=(ALL:ALL) ALL
+EDITOR=nvim visudo                       # uncmnt %wheel ALL=(ALL:ALL) ALL
 exit - chroot environment
 sudo reboot
 
