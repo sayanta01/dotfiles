@@ -1,4 +1,4 @@
-##### NCMPCPP #####
+#### NCMPCPP ####
 ncmpcpp_directory = "~/.config/ncmpcpp"
 lyrics_directory = "~/.local/share/lyrics"
 visualizer_type = "spectrum"
@@ -16,7 +16,7 @@ progressbar_look = "━│─"
 statusbar_color = white
 display_bitrate = "yes"
 
-[ General Colors ]
+[General Colors]
 colors_enabled = "yes"
 main_window_color = "green"
 header_window_color = "blue"
@@ -24,19 +24,19 @@ volume_color = "green"
 progressbar_color = "blue"
 progressbar_elapsed_color = "blue"
 
-[ Selected tracks ]
+[Selected tracks]
 selected_item_prefix = "+ "
 discard_colors_if_item_is_selected = "yes"
 
-[ Alternative interface ]
+[Alternative interface]
 user_interface = "alternative"
 alternative_header_first_line_format = "$0$aqqu$/a {$6%a$9 - }{$3%t$9}|{$3%f$9} $0$atqq$/a$9"
 alternative_header_second_line_format = "{{$4%b$9}{ [$8%y$9]}}|{$4%D$9}"
 
-[ Display modes]
+[Display modes]
 browser_display_mode = "classic"
 playlist_display_mode = "columns"
 
-[ Song list ]
+[Song list]
 song_columns_list_format = "(10)[blue]{l} (30)[green]{t} (30)[magenta]{a} (30)[yellow]{b}"
 song_list_format = "{$7%a - $9}{$5%t$9}|{$5%f$9}$R{$6%b $9}{$3%l$9}"
