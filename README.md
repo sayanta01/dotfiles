@@ -1,2 +1,2 @@
 ## Desktop
-![desktop](docs/bspwm.png)
+![desktop](docs/desktop.png)
