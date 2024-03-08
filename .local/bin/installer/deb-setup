@@ -22,10 +22,10 @@ if [ "$choice" = "y" ]; then
 	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/nerd-fonts
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/nerd-fonts
-	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
-	yes | sudo unzip FiraCode.zip -d /usr/share/fonts/nerd-fonts
+	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/RobotoMono.zip
+	yes | sudo unzip RobotoMono.zip -d /usr/share/fonts/nerd-fonts
 	fc-cache -fv
-	rm -rf MapleMono-NF.zip JetBrainsMono.zip FiraCode.zip
+	rm -rf MapleMono-NF.zip JetBrainsMono.zip RobotoMono.zip
 else
 	:
 fi
