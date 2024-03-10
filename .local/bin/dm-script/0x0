@@ -1,7 +1,6 @@
 #!/bin/sh
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	# file=$(find "$HOME" -type f | dmenu -i -l 20)
 	file=$(fd -H -t f | dmenu -i -l 20)
 
 	if [ -n "$file" ]; then
