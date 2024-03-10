@@ -1,9 +1,7 @@
 #!/bin/sh
 
-session_type="$XDG_SESSION_TYPE"
-
-if [ "$session_type" = "x11" ]; then
-	printf '%s\n' "$(xclip -o)" >>/tmp/tmpclip.txt
-elif [ "$session_type" = "wayland" ]; then
-	printf '%s\n' "$(wl-paste -n)" >>/tmp/tmpclip.txt
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	printf '%s\n' "$(wl-paste -n)" >> /tmp/tmpclip.txt
+else
+	printf '%s\n' "$(xclip -o)" >> /tmp/tmpclip.txt
 fi

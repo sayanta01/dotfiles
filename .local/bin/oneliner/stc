@@ -1,13 +1,11 @@
 #!/bin/sh
 
-session_type="$XDG_SESSION_TYPE"
-
-if [ "$session_type" = "x11" ]; then
-	xsct -t 4999 
-elif [ "$session_type" = "wayland" ]; then
+if [ -n "$WAYLAND_DISPLAY" ]; then
 	if pgrep -x "wlsunset" >/dev/null; then
 		killall wlsunset >/dev/null 2>&1
 	else
 		wlsunset -t 4999 >/dev/null 2>&1 &
 	fi
+else
+	xsct -t 4999
 fi

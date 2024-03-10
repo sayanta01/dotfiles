@@ -83,11 +83,11 @@ PROMPT=' %{$fg[red]%}❯${vcs_info_msg_0_}%  '
  
 # Fzf history
 function hst() {
-	if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
-		history 0 | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
-	else
-		history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
-	fi
+  if [ -n "$WAYLAND_DISPLAY" ]; then
+    history 0 | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
+  else
+    history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
+  fi
 }
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

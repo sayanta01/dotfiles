@@ -7,7 +7,7 @@
 # otherwise it opens link in browser.
 
 # check session type and select appropriate clipboard tool
-if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+if [ -n "$WAYLAND_DISPLAY" ]; then
 	clipboard_tool="wl-paste -n"
 else
 	clipboard_tool="xclip -o"

@@ -1,23 +1,19 @@
 #!/bin/sh
 
-session_type="$XDG_SESSION_TYPE"
-
-if [ "$session_type" = "x11" ]; then
+if [ -n "$WAYLAND_DISPLAY" ]; then
 	# file=$(find "$HOME" -type f | dmenu -i -l 20)
 	file=$(fd -H -t f | dmenu -i -l 20)
 
 	if [ -n "$file" ]; then
-		# curl -F "file=@$file" ix.io | xclip -sel c
-		curl -F "file=@$file" 0x0.st | xclip -sel c
+		curl -F "file=@$file" 0x0.st | wl-copy
 		notify-send "0x0 "
 	fi
-elif [ "$session_type" = "wayland" ]; then
+else
 	# file=$(find "$HOME" -type f | dmenu -i -l 20)
 	file=$(fd -H -t f | dmenu -i -l 20)
 
 	if [ -n "$file" ]; then
-		# curl -F "file=@$file" ix.io | xclip -sel c
-		curl -F "file=@$file" 0x0.st | wl-copy
+		curl -F "file=@$file" 0x0.st | xclip -sel c
 		notify-send "0x0 "
 	fi
 fi

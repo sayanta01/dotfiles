@@ -1,9 +1,7 @@
 #!/bin/sh
 
-session_type="$XDG_SESSION_TYPE"
-
-if [ "$session_type" = "x11" ]; then
-	betterlockscreen -l blur
-elif [ "$session_type" = "wayland" ]; then
+if [ -n "$WAYLAND_DISPLAY" ]; then
 	swaylock
+else
+	betterlockscreen -l blur
 fi

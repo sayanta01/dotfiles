@@ -1,9 +1,7 @@
 #!/bin/sh
 
-session_type="$XDG_SESSION_TYPE"
-
-if [ "$session_type" = "x11" ]; then
-  dmenu -i -l 40 < /tmp/tmpclip.txt | tr -d '\n' | xclip -sel c
-elif [ "$session_type" = "wayland" ]; then
-  dmenu -i -l 40 < /tmp/tmpclip.txt | tr -d '\n' | wl-copy
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	dmenu -i -l 40 </tmp/tmpclip.txt | tr -d '\n' | wl-copy
+else
+	dmenu -i -l 40 </tmp/tmpclip.txt | tr -d '\n' | xclip -sel c
 fi
