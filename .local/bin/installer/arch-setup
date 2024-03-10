@@ -54,13 +54,13 @@ if [ "$choice" = "y" ]; then
 		noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
 		eza bat fd fzf man-db bash-completion starship \
 		mate-calc meld firefox grub-customizer \
-		linux-lts linux-lts-headers linux-firmware kitty neovim newsboat \
+		linux-lts linux-lts-headers linux-firmware kitty neovim \
 		gnome-keyring cowsay htop neofetch \
 		bspwm sxhkd polybar rofi dunst \
 		qt5ct qt6ct lxappearance xcape pass \
-		pavucontrol playerctl pulsemixer mpd ncmpcpp \
-		net-tools wireless_tools iftop network-manager-applet \
-		mpv mediainfo perl-image-exiftool nsxiv maim xwallpaper python-pip python-pywal \
+		pavucontrol playerctl pulsemixer \
+		mpv mediainfo perl-image-exiftool nsxiv maim xwallpaper python-pywal \
+    net-tools wireless_tools network-manager-applet \
 		zip unzip unrar p7zip engrampa \
 		lf gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zathura zathura-pdf-mupdf ghostscript \

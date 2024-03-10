@@ -59,12 +59,12 @@ if [ "$choice" = "y" ]; then
 		bspwm polybar rofi dunst \
 		qt5ct lxappearance xcape pass \
 		kitty maim playerctl pulsemixer \
-		net-tools wireless-tools iftop \
-		ffmpeg mpv nsxiv rust-eza fzf fd-find \
+		net-tools wireless-tools \
+		mpv nsxiv rust-eza fzf fd-find \
 		zathura htop meld \
 		xclip xdotool xwallpaper gpg \
 		exiftool aria2 wmname neofetch \
-		docker.io ssh net-tools iftop
+		docker.io ssh net-tools
 	# betterlockscreen ncdu translate-shell
 	# sudo systemctl enable docker.socket
 	sudo systemctl enable ssh.socket
@@ -91,7 +91,7 @@ distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
 
 if [ -f /etc/debian_version ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >>~/.config/zsh/.zshrc
+		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
 	ln -s ~/.config/x11/xinitrc ~/.xinitrc
