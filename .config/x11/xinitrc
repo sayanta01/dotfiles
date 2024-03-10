@@ -8,6 +8,8 @@ fi
 
 . "$HOME/.profile"
 
+export XDG_SESSION_TYPE="x11"
+
 fav=bspwm
 case "$1" in
 	bspwm) bspwm ;;
