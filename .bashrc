@@ -8,7 +8,7 @@ eval "$(starship init bash)"
 [[ $- != *i* ]] && return # if not running interactively, don't do anything
 
 # shopt -s autocd        # cd into dir by just typing the dir name
-shopt -s histappend    # append to the history file, don't overwrite it
+shopt -s histappend # append to the history file, don't overwrite it
 # shopt -s checkwinsize  # check the window size after each command and, if necessary, update the values of LINES and COLUMNS
 
 # History
@@ -20,12 +20,12 @@ export HISTCONTROL=erasedups:ignoreboth
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
 [ -f "$HOME/.config/shell/shortcutrc" ] && source "$HOME/.config/shell/shortcutrc"
 
-# fzf history
+# Fzf history
 function hst() {
-	if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
-		history | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		history 0 | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
 	else
-		history | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
+		history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
 	fi
 }
 
