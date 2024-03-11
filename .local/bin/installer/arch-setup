@@ -17,14 +17,10 @@ read -r choice
 if [ "$choice" = "y" ]; then
 	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
 	[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
-	wget https://github.com/subframe7536/Maple-font/releases/latest/download/MapleMono-NF.zip
-	yes | sudo unzip MapleMono-NF.zip -d /usr/share/fonts/nerd-fonts
 	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 	yes | sudo unzip JetBrainsMono.zip -d /usr/share/fonts/nerd-fonts
-	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/GeistMono.zip
-	yes | sudo unzip GeistMono.zip -d /usr/share/fonts/nerd-fonts
 	fc-cache -fv
-	rm -rf MapleMono-NF.zip JetBrainsMono.zip GeistMono.zip
+	rm -rf JetBrainsMono.zip
 else
 	:
 fi
@@ -60,7 +56,7 @@ if [ "$choice" = "y" ]; then
 		qt5ct qt6ct lxappearance xcape pass \
 		pavucontrol playerctl pulsemixer \
 		mpv mediainfo perl-image-exiftool nsxiv maim xwallpaper python-pywal \
-    net-tools wireless_tools network-manager-applet \
+		net-tools wireless_tools network-manager-applet \
 		zip unzip unrar p7zip engrampa \
 		lf gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zathura zathura-pdf-mupdf ghostscript \
