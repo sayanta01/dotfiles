@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-winclass="$(xdotool search --class scpad)"
+winclass="$(xdotool search --class scratchpad)"
 if [ -z "$winclass" ]; then
-	kitty --class scpad
+	kitty --class scratchpad
 else
 	if [ ! -f /tmp/scpad ]; then
 		touch /tmp/scpad && xdotool windowunmap "$winclass"

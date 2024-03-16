@@ -12,9 +12,8 @@ done
 paru -S hyprland-git xdg-desktop-portal-hyprland \
 	wlr-randr hyprpicker swaylock-effects \
 	grim slurp swappy swww libsixel \
-	hyprprop wlsunset waypipe nwg-look-bin \
+	hyprprop wlsunset nwg-look-bin waypipe \
 	libva libva-nvidia-driver-git
-# kooha - Minimalistic screen recorder, using the xdg-desktop-portal ScreenCast protocol
 # ydotool - A generic Linux command-line automation tool for Wayland
 # waydroid - Container-based approach to boot a full Android system
 

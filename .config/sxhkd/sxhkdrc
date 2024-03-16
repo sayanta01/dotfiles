@@ -122,10 +122,6 @@ super + Return
 super + e
         thunar
 
-# calc
-ctrl + alt + k
-       mate-calculator
-
 # screen-lock
 ctrl + alt + l
        ~/.local/bin/lockscreen
@@ -136,7 +132,7 @@ ctrl + alt + Delete
 
 # scratch-pad
 alt + Return
-      ~/.local/bin/bspwm/scpad
+      ~/.local/bin/bspwm/scratchpad
 
 #
 # bspwm hotkeys

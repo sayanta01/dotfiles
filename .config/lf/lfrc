@@ -1,6 +1,4 @@
 # Basic settings
-set hidden false
-set ignorecase true
 set icons true
 set cleaner "~/.config/lf/cleaner"
 set previewer "~/.config/lf/scope"
@@ -29,7 +27,6 @@ cmd extract ${{
         *.rar) unrar x $f;;
         *.Z) uncompress $fx;;
         *.7z) 7z x $f;;
-        *) echo "Unsupported format";;
     esac
 }}
 
@@ -129,21 +126,18 @@ cmd bulk-rename ${{
     lf -remote "send $id unselect"
 }}
 
-# Bindings
-# Remove some defaults
+# Remove some defaults bindings
+map d
 map m
 map n
-map d
 map o
-map '"'
 map "'"
+map '"'
 
-# Basic functions
+# Mappings 
 map . set hidden!
 map E extract
-map ex $bash "$f"
 map dd trash
-# map DD delete
 map dr trash-restore
 map mf mkfile
 map md mkdir
@@ -151,20 +145,21 @@ map x cut
 map y copy
 map p paste
 map r rename
+map u unselect
 map M moveto
 map C copyto
 map R reload
-map U unselect
 map L clear
 map B bulk-rename
 map <enter> open
+map T $kitty
 
 # Shortcuts
-map gd cd ~/dl
+map gh cd ~/desk
 map gD cd ~/dox
+map gd cd ~/dl
 map gp cd ~/pix
 map gv cd ~/vids
-map gh cd ~/desk
 map gm cd ~/music 
 map gl cd ~/.local
 map gc cd ~/.config

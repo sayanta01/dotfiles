@@ -3,7 +3,7 @@ ln             # LINK
 or      ❌      # ORPHAN
 tw      🤝      # STICKY_OTHER_WRITABLE
 ow             # OTHER_WRITABLE
-st      󰞅       # STICKY
+st      t       # STICKY
 di             # DIR
 pi      󱑹       # FIFO
 so      🔌      # SOCK
@@ -15,7 +15,7 @@ ex      🎯      # EXEC
 fi             # FILE
 
 # file extensions
-*.styl          
+*.styl          󰰡
 *.sass          
 *.scss          
 *.htm           
@@ -50,7 +50,7 @@ fi             # FILE
 *.ini           
 *.yml           
 *.yaml          
-*.toml          T
+*.toml          󰬁
 *.bat           
 *.mk            
 *.jpg	          
@@ -200,7 +200,7 @@ fi             # FILE
 *require.min.js         󰓾
 *materialize.min.js     
 *materialize.min.css    
-*mootools.min.js        
+*mootools.min.js        
 *vimrc                  
 Vagrantfile             
 
@@ -278,55 +278,55 @@ Vagrantfile             
 *.xcf               
 
 # video formats
-*.mov	              🎥
-*.mpg	              🎥
-*.mpeg              🎥
-*.m2v               🎥
-*.mkv	              🎥
-*.webm              🎥
-*.ogm               🎥
-*.mp4	              🎥
-*.m4v	              🎥
-*.mp4v              🎥
-*.vob               🎥
-*.qt                🎥
-*.nuv               🎥
-*.wmv	              🎥
-*.asf               🎥
-*.rm                🎥
-*.rmvb              🎥
-*.flc               🎥
-*.avi               🎥
-*.fli               🎥
-*.flv               🎥
-*.gl                🎥
-*.dl                🎥
-*.xwd               🎥
-*.yuv               🎥
-*.cgm               🎥
-*.emf               🎥
-*.ogv               🎥
-*.ogx               🎥
-*.kdenlive          🎬
-*.prproj            🎬
+*.mov	              
+*.mpg	              
+*.mpeg              
+*.m2v               
+*.mkv	              
+*.webm              
+*.ogm               
+*.mp4	              
+*.m4v	              
+*.mp4v              
+*.vob               
+*.qt                
+*.nuv               
+*.wmv	              
+*.asf               
+*.rm                
+*.rmvb              
+*.flc               
+*.avi               
+*.fli               
+*.flv               
+*.gl                
+*.dl                
+*.xwd               
+*.yuv               
+*.cgm               
+*.emf               
+*.ogv               
+*.ogx               
+*.kdenlive          
+*.prproj            
 
 # audio formats
-*.aac               🎵
-*.au                🎵
-*.flac              🎼
-*.m4a               🎵
-*.mid               🎵
-*.midi              🎵
-*.mka               🎵
-*.mp3               🎵
-*.mpc               🎵
-*.ogg               🎵
-*.ra                🎵
-*.wav               🎼
-*.oga               🎵
-*.opus              🎵
-*.spx               🎵
-*.xspf              🎵
+*.aac               󰽴
+*.au                󰽴
+*.flac              
+*.m4a               󰽴
+*.mid               󰽴
+*.midi              󰽴
+*.mka               󰽴
+*.mp3               󰽴
+*.mpc               󰽴
+*.ogg               󰽴
+*.ra                󰽴
+*.wav               
+*.oga               󰽴
+*.opus              󰽴
+*.spx               󰽴
+*.xspf              󰽴
 
 # other formats
 *.pdf	              
@@ -373,10 +373,9 @@ Vagrantfile             
 *.log	              
 *.iso	              📀
 *.img               📀
-*.bib               🎓
 *.ged               👪
 *.part                         
-*.torrent           
-*.magnet            🧲
+*.torrent           
+*.magnet            
 *.pro               
 *.desktop           

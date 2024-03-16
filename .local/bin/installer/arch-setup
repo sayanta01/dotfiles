@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for dir in desk dl dox music pix vids pub templates code imp; do
+for dir in desk dl dox music pix vids pub templates code; do
 	mkdir -p ~/"$dir"
 done
 for dots in .bashrc .profile .xprofile .zprofile; do
@@ -29,7 +29,6 @@ fi
 [ -d ./dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu
 if ! command -v dmenu >/dev/null; then
 	cd dmenu && sudo make clean install
-	cd st && sudo make clean install
 fi
 
 # Vim
@@ -49,24 +48,24 @@ if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 		noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
 		eza bat fd fzf man-db bash-completion starship \
-		mate-calc meld firefox grub-customizer \
+		meld firefox grub-customizer \
 		linux-lts linux-lts-headers linux-firmware kitty neovim \
 		gnome-keyring cowsay htop neofetch \
 		bspwm sxhkd polybar rofi dunst \
 		qt5ct qt6ct lxappearance xcape pass \
 		pavucontrol playerctl pulsemixer \
 		mpv mediainfo perl-image-exiftool nsxiv maim xwallpaper python-pywal \
-		net-tools wireless_tools network-manager-applet \
+		net-tools wireless_tools \
 		zip unzip unrar p7zip engrampa \
 		lf gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zathura zathura-pdf-mupdf ghostscript \
-		zsh zsh-syntax-highlighting zsh-completions zsh-autosuggestions \
+		zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
 		rsync wget aria2 jq \
 		xdg-utils xdg-user-dirs \
 		pacman-contrib socat exfat-utils \
 		xorg-xinit xclip xdotool wmname wmctrl
-# libx11 libxft libxrandr libxinerama
-# xsct xorg-server xorg-xwininfo xorg-xprop xorg-xrdb xorg-xrandr xorg-xsetroot xorg-xbacklight
+	# libx11 libxft libxrandr libxinerama
+	# xsct xorg-server xorg-xwininfo xorg-xprop xorg-xrdb xorg-xrandr xorg-xsetroot xorg-xbacklight
 else
 	:
 fi
@@ -100,6 +99,7 @@ else
 
 	## Services
 	sudo pacman -S --noconfirm openssh dbus bluez docker
+	sudo systemctl disable docker.socket
 fi
 
 # GUI apps
@@ -108,9 +108,7 @@ read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm scrcpy android-tools android-file-transfer \
 		obs-studio blender audacity gimp inkscape \
-		kdeconnect telegram-desktop \
-		blueman bluez-utils \
-		ntfs-3g
+		kdeconnect blueman bluez-utils ntfs-3g
 # virtualbox virtualbox-guest-utils
 # sudo usermod -aG vboxusers "$USER"  # USB usage for Virtual-Box
 else

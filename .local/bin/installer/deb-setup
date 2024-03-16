@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # yes | sudo apt full-upgrade
-for dir in desk dl dox music pix vids pub templates code imp; do
+for dir in desk dl dox music pix vids pub templates code; do
 	mkdir -p ~/"$dir"
 done
 for dots in .bashrc .profile .xprofile .zprofile; do
@@ -31,7 +31,6 @@ sudo apt install -y libxft-dev librust-harfbuzz-rs-dev libxinerama-dev libx11-xc
 [ -d ./dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu
 if ! command -v dmenu >/dev/null; then
 	cd dmenu && sudo make clean install
-	cd st && sudo make clean install
 fi
 
 # Vim
@@ -49,21 +48,20 @@ printf "Install Main pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
 	sudo apt install -y nala apt-transport-https \
-		zsh zsh-syntax-highlighting zsh-autosuggestions \
+		zsh zsh-autosuggestions zsh-syntax-highlighting \
 		tmux fonts-terminus \
 		fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
 		bspwm polybar rofi dunst \
 		qt5ct lxappearance xcape pass \
 		kitty maim playerctl pulsemixer \
-		net-tools wireless-tools \
 		mpv nsxiv rust-eza fzf fd-find \
 		zathura htop meld \
 		xclip xdotool xwallpaper gpg \
 		exiftool aria2 wmname neofetch \
-		docker.io ssh net-tools
-	# betterlockscreen ncdu translate-shell
-	# sudo systemctl enable docker.socket
-	sudo systemctl enable ssh.socket
+		net-tools wireless-tools \
+		ssh docker.io
+	sudo systemctl enable ssh
+	sudo systemctl disable docker.socket
 else
 	:
 fi
@@ -86,7 +84,7 @@ distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
 
 if [ -f /etc/debian_version ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >>~/.config/zsh/.zshrc
+		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
 	ln -s ~/.config/x11/xinitrc ~/.xinitrc

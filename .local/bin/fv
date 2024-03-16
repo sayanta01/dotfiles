@@ -41,14 +41,14 @@ optional arguments:
 }
 
 pre_exit() {
-	# Get the proccess ID of this script and kill it.
+	# Get the proccess ID of this script and kill it
 	# We are dumping the output of kill to /dev/null
 	# because if the user quits nsxiv before they
 	# exit this script, an error will be shown
 	# from kill and we dont want that
 	kill -9 "$(cat "$PIDFILE" 2>/dev/null)" &>/dev/null
 
-	# Delete tempfiles, so we don't leave useless files behind.
+	# Delete tempfiles, so we don't leave useless files behind
 	rm -rf "$FONTPREVIEW_DIR"
 }
 
@@ -73,7 +73,7 @@ main() {
 		}
 	done
 
-	# Checking for enviornment variables which the user might have set.
+	# Checking for enviornment variables which the user might have set
 	# This config file for fontpreview is pretty much the bashrc, zshrc, etc
 	# Majority of the variables in fontpreview can changed using the enviornment variables
 	# and this makes fontpreview very customizable
@@ -85,10 +85,10 @@ main() {
 	[[ $FONTPREVIEW_FG_COLOR != "" ]] && FG_COLOR=$FONTPREVIEW_FG_COLOR
 	[[ $FONTPREVIEW_PREVIEW_TEXT != "" ]] && PREVIEW_TEXT=$FONTPREVIEW_PREVIEW_TEXT
 
-	# Save the window ID of the terminal window fontpreview is executed in.
+	# Save the window ID of the terminal window fontpreview is executed in
 	# This is so that when we open up sxiv, we can change the focus back to
 	# the terminal window, so that the user can search for the fonts without
-	# having to manualy change the focus back to the terminal.
+	# having to manualy change the focus back to the terminal
 	xdotool getactivewindow >"$TERMWIN_IDFILE"
 
 	# Flag to run some commands only once in the loop
@@ -150,7 +150,7 @@ trap "" SIGTSTP
 trap pre_exit EXIT
 
 # Use mktemp to create a temporary directory that won't
-# collide with temporary files of other application.
+# collide with temporary files of other application
 FONTPREVIEW_DIR="$(mktemp -d "${TMPDIR:-/tmp}/fontpreview_dir.XXXXXXXX")" || exit
 PIDFILE="$FONTPREVIEW_DIR/fontpreview.pid"
 touch "$PIDFILE" || exit
@@ -212,13 +212,13 @@ while true; do
 	shift
 done
 
-# Point a font file to fontpreview and it will preview it.
+# Point a font file to fontpreview and it will preview it
 # Example:
 #   $ fontpreview /path/to/fontFile.ttf
 #
 # This is useful because people can preview fonts which they have not
 # installed onto their system. So if they want to preview a font file that
-# is in their Downloads directory, then they can easily preview it.
+# is in their Downloads directory, then they can easily preview it
 if [ -f "$font" ]; then
 	generate_preview "$font" "$FONT_PREVIEW"
 

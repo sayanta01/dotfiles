@@ -3,5 +3,5 @@
 cpu_temp=$(sensors | awk '/Core 0/ {print $3}' | cut -c 2- | cut -b 1,2)
 echo "🌡 $cpu_temp°C"
 
-# For click module
+# For click Module
 # notify-send -t 990 " $(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)°C"

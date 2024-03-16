@@ -18,7 +18,7 @@ elif [ -f /etc/debian_version ]; then
 	# Debian aliases
 	alias update="sudo nala update"
 	alias uplist="apt list --upgradable"
-	alias remove="sudo nala purge"
+	alias remove="sudo apt remove --purge"
 	alias clean="sudo apt -y autoremove; sudo apt clean"
 	alias fix-deb="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
 	alias installed="sudo apt list --installed"

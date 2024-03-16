@@ -1,6 +1,4 @@
 #!/bin/sh
 
 cpu_usage=$(top -bn1 | awk '/^%Cpu/ {print $2}' | cut -c 1,2 | sed 's/\.//g')
-
-# echo " $cpu_usage "
 echo "🤖 $cpu_usage%"

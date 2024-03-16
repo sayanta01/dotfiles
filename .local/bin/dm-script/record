@@ -7,7 +7,7 @@ killrecording() {
 	# kill with SIGTERM, allowing finishing touches
 	kill -15 "$recpid"
 	rm -f /tmp/recordingpid
-	# even after SIGTERM, ffmpeg may still run, so SIGKILL it
+	# even after SIGTERM, ffmpeg may still run, so use SIGKILL
 	sleep 2
 	kill -9 "$recpid"
 	recording_active=0
@@ -16,7 +16,6 @@ killrecording() {
 
 video() {
 	# default_sink=$(pactl info | grep 'Default Sink' | cut -d':' -f 2)
-
 	ffmpeg -thread_queue_size 4096 \
 		-f x11grab \
 		-r 60 -probesize 42M -i :0.0 \
@@ -32,10 +31,9 @@ video() {
 
 audio() {
 	# default_audio_sink=$(pactl list sources | grep "Name" | cut -d':' -f 2)
-
 	ffmpeg \
 		-f pulse -ac 2 -i default \
-		"$(xdg-user-dir MUSIC)/$(date '+%I:%M_%d_%b').mp4" &
+		"$(xdg-user-dir MUSIC)/$(date '+%I:%M_%d_%b').flac" &
 	echo $! >/tmp/recordingpid
 	recording_active=1
 }
@@ -79,9 +77,9 @@ selected_vid() {
 }
 
 case "$1" in
-video) video ;;
-audio) audio ;;
-selected_vid) selected_vid ;;
-kill) killrecording ;;
-*) ([ -f /tmp/recordingpid ] && asktoend && exit) || askrecording ;;
+  video) video ;;
+  audio) audio ;;
+  selected_vid) selected_vid ;;
+  kill) killrecording ;;
+  *) ([ -f /tmp/recordingpid ] && asktoend && exit) || askrecording ;;
 esac

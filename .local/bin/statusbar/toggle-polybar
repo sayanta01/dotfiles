@@ -14,4 +14,4 @@ else
 	bspc config -m "$toggle" top_padding 29
 fi
 
-# run `xwininfo` click polybar get window id
+# run `xwininfo` click polybar to get window id
