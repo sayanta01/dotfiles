@@ -55,7 +55,7 @@ if [ "$choice" = "y" ]; then
 		qt5ct qt6ct lxappearance xcape pass \
 		pavucontrol playerctl pulsemixer \
 		mpv mediainfo perl-image-exiftool nsxiv maim xwallpaper python-pywal \
-		net-tools wireless_tools \
+		net-tools wireless_tools network-manager-applet \
 		zip unzip unrar p7zip engrampa \
 		lf gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zathura zathura-pdf-mupdf ghostscript \
@@ -162,7 +162,7 @@ edit_pacman_conf() {
 edit_pacman_conf
 
 # Teletype font
-sudo setfont /usr/share/kbd/consolefonts/ter-d16b.psf.gz
+sudo setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
 sudo su root -c "echo -e FONT='ter-d18b' > /etc/vconsole.conf"
 
 # Fix qt

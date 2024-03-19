@@ -22,7 +22,7 @@
     <property name="double_click_action" type="string" value="maximize"/>
     <property name="double_click_distance" type="int" value="5"/>
     <property name="double_click_time" type="int" value="250"/>
-    <property name="easy_click" type="string" value="Alt"/>
+    <property name="easy_click" type="string" value="Super"/>
     <property name="focus_delay" type="int" value="14"/>
     <property name="focus_hint" type="bool" value="true"/>
     <property name="focus_new" type="bool" value="true"/>
@@ -62,7 +62,7 @@
     <property name="theme" type="string" value="empty"/>
     <property name="tile_on_move" type="bool" value="false"/>
     <property name="title_alignment" type="string" value="center"/>
-    <property name="title_font" type="string" value="SF Pro Text Medium 11"/>
+    <property name="title_font" type="string" value="Cantarell 11"/>
     <property name="title_horizontal_offset" type="int" value="0"/>
     <property name="titleless_maximize" type="bool" value="false"/>
     <property name="title_shadow_active" type="string" value="false"/>

@@ -7,7 +7,7 @@ configuration {
 } 
 
 * {
-    font:                           "JetBrainsMono NF Thin 12";
+    font:                           "Cantarell 12";
     foreground:                     #f8f8f2;
     background:                     #101214;
     highlight:	             		    #60fa7b;

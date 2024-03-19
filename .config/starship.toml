@@ -3,7 +3,6 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
-$git_metrics\
 $character"""
 
 command_timeout = 20000
@@ -27,9 +26,6 @@ style = "bright-black"
 ahead = ""
 format = '([\[$all_status$ahead_behind\]]($style) )'
 style = "cyan"
-
-[git_metrics]
-disabled = false
 
 [character]
 success_symbol = "[❯](pink)"

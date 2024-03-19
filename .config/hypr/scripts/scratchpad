@@ -1,6 +1,6 @@
 #!/bin/sh
 
-workspace_name="${1:-terminal}"
+workspace_name="${1:-magic}"
 cmd="${2:-kitty}"
 
 windows=$(hyprctl clients -j | jq ".[] | select(.workspace.name == \"special:$workspace_name\")")

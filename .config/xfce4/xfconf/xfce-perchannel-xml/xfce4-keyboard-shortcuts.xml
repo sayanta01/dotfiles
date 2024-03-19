@@ -37,18 +37,16 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="exo-open --launch TerminalEmulator"/>
       <property name="&lt;Super&gt;e" type="string" value="thunar"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Alt&gt;F7" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"/>
+      <property name="&lt;Alt&gt;F7" type="string" value="playerctl --player=spotify play-pause"/>
       <property name="&lt;Super&gt;space" type="string" value="dmenu_run"/>
       <property name="&lt;Alt&gt;b" type="string" value="exo-open --launch WebBrowser"/>
       <property name="&lt;Super&gt;Return" type="string" value="kitty"/>
       <property name="&lt;Alt&gt;F5" type="string" value="./.local/bin/audiosw"/>
-      <property name="&lt;Alt&gt;F1" type="string" value="./.local/bin/btch"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;d" type="string" value="./.local/bin/dm-script/dclip"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;t" type="string" value="./.local/bin/dm-script/tclip"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="./.local/bin/lockscreen"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;p" type="string" value="./.local/bin/wallch"/>
       <property name="&lt;Super&gt;u" type="string" value="./.local/bin/xfce/toggle-xfce-panel"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;k" type="string" value="mate-calculator"/>
       <property name="&lt;Alt&gt;F2" type="string" value="pamixer -d 5"/>
       <property name="&lt;Alt&gt;F3" type="string" value="pamixer -i 5">
         <property name="startup-notify" type="bool" value="true"/>
@@ -143,25 +141,23 @@
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Up" type="string" value="move_window_up_key"/>
       <property name="Left" type="string" value="left_key"/>
       <property name="override" type="bool" value="true"/>
-      <!-- <property name="&lt;Super&gt;semicolon" type="string" value="maximize_horiz_key"/> -->
-      <!-- <property name="&lt;Super&gt;slash" type="string" value="maximize_vert_key"/> -->
       <property name="&lt;Primary&gt;&lt;Super&gt;s" type="string" value="stick_window_key"/>
       <property name="&lt;Super&gt;f" type="string" value="fullscreen_key"/>
       <property name="&lt;Super&gt;m" type="string" value="maximize_window_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;braceleft" type="string" value="move_window_left_workspace_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;braceright" type="string" value="move_window_right_workspace_key"/>
-      <property name="&lt;Primary&gt;&lt;Super&gt;1" type="string" value="move_window_workspace_1_key"/>
-      <property name="&lt;Primary&gt;&lt;Super&gt;2" type="string" value="move_window_workspace_2_key"/>
-      <property name="&lt;Primary&gt;&lt;Super&gt;3" type="string" value="move_window_workspace_3_key"/>
-      <property name="&lt;Primary&gt;&lt;Super&gt;4" type="string" value="move_window_workspace_4_key"/>
-      <property name="&lt;Primary&gt;&lt;Super&gt;5" type="string" value="move_window_workspace_5_key"/>
-      <property name="&lt;Primary&gt;&lt;Super&gt;6" type="string" value="move_window_workspace_6_key"/>
-      <property name="&lt;Primary&gt;&lt;Super&gt;7" type="string" value="move_window_workspace_7_key"/>
-      <property name="&lt;Primary&gt;&lt;Super&gt;8" type="string" value="move_window_workspace_8_key"/>
-      <property name="&lt;Primary&gt;&lt;Super&gt;0" type="string" value="move_window_workspace_10_key"/>
-      <property name="&lt;Primary&gt;&lt;Super&gt;9" type="string" value="move_window_workspace_9_key"/>
-      <property name="&lt;Super&gt;i" type="string" value="tile_up_key"/>
-      <property name="&lt;Super&gt;o" type="string" value="tile_down_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;1" type="string" value="move_window_workspace_1_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;2" type="string" value="move_window_workspace_2_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;3" type="string" value="move_window_workspace_3_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;4" type="string" value="move_window_workspace_4_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;5" type="string" value="move_window_workspace_5_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;6" type="string" value="move_window_workspace_6_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;7" type="string" value="move_window_workspace_7_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;8" type="string" value="move_window_workspace_8_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;9" type="string" value="move_window_workspace_9_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;0" type="string" value="move_window_workspace_10_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;k" type="string" value="tile_up_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;j" type="string" value="tile_down_key"/>
       <property name="&lt;Super&gt;h" type="string" value="tile_left_key"/>
       <property name="&lt;Super&gt;l" type="string" value="tile_right_key"/>
       <property name="&lt;Super&gt;j" type="string" value="tile_up_left_key"/>

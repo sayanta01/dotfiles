@@ -14,7 +14,7 @@ quiet=false
 loginbox=000000
 loginshadow=000000
 locktext=""
-font="SF Pro Text"
+font="Cantarell"
 
 ringwrongcolor=282a36    # show ring before typing
 insidewrongcolor=d23c3d  # show inside before typing

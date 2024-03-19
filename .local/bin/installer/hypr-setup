@@ -33,12 +33,12 @@ EOF
 printf "SDDM theme? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
-	git clone --depth=1 https://github.com/JaKooLit/simple-sddm.git ~/simple-sddm
+	sudo pacman -S qt5-quickcontrols2 qt5-graphicaleffects
+	git clone --depth=1 https://github.com/sayanta01/simple-sddm.git ~/simple-sddm
 	sudo mv ~/simple-sddm /usr/share/sddm/themes/
 	sudo cat <<EOF | sudo tee /etc/sddm.conf.d/sddm.conf
 [Theme]
 Current=simple-sddm
-Font=JetBrainsMono NF
 EOF
 else
 	:

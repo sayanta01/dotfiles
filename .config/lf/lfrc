@@ -135,7 +135,7 @@ map "'"
 map '"'
 
 # Mappings 
-map . set hidden!
+map zh set hidden!
 map E extract
 map dd trash
 map dr trash-restore

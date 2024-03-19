@@ -1,10 +1,5 @@
 #!/bin/sh
 
-# Replace sudo < doas if installed
-if command -v doas >/dev/null; then
-	alias sudo="doas"
-fi
-
 if [ -f /etc/arch-release ]; then
 	# Arch aliases
 	alias update="sudo pacman -Syyu && echo '########## ⬆️AUR ##########'; paru -Sua"

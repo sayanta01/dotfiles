@@ -99,7 +99,3 @@
      frame_color = "#ff5555"
      timeout = 6
      override_pause_level = 40
-
-# [play_sound]
-#      summary = "*"
-#      script = "~/.local/bin/oneliner/notify-sound"  

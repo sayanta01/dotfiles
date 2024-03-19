@@ -31,15 +31,6 @@ sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
 echo "1" > /proc/sys/kernel/sysrq
 echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
 
-# Replace sudo with doas
-# install opendoas
-# echo 'permit persist keepenv :wheel' | sudo tee -a /etc/doas.conf
-# alias sudo='doas'
-# -- Disable sudo --
-# cmnt in - EDITOR=vim visudo
-# User privilege specification
-# allow memebers of group wheel to exec any command
-
 # Encrypt home dir
 # -i ecryptfs-utils cryptsetup
 # use this when u get laptop

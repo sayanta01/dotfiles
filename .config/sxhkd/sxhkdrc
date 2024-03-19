@@ -2,19 +2,19 @@
 # wm independent hotkeys
 #
 
-# brightness ctrl
+# brightness
 XF86MonBrightness{Up,Down}
 	               xbacklight {-inc 10,-dec 10}
 	
-# volume ctrl 
+# volume 
 XF86Audio{RaiseVolume,LowerVolume,Mute}
          pamixer {-i 5,-d 5,-t}
 
-# mic ctrl
+# mic
 XF86AudioMicMute
          pamixer --default-source -t
 
-# music ctrl 
+# music
 XF86Audio{Prev,Next}
          playerctl {previous,next}
 
@@ -26,7 +26,7 @@ super + n
         ~/.local/bin/bspwm/layout
         # bsp-layout next --layouts tall,tiled && notify-send -t 900 "$(bsp-layout get) layout"
 
-# hide/unhide bar
+# toggle bar
 super + u
         ~/.local/bin/statusbar/toggle-polybar
 
@@ -50,10 +50,6 @@ super + alt + t
 super + alt + d
         ~/.local/bin/dm-script/dclip
 
-# bluetooth
-alt + F1
-      ~/.local/bin/btch    		    
-	     
 # vol down
 alt + F2
       pamixer -d 5 
@@ -70,11 +66,11 @@ alt + F4
 super + F4
         ~/.local/bin/dm-script/sys-action
 	 
-# switch audio
+# switch aud
 alt + F5       
       ~/.local/bin/audiosw    
 
-# previous
+# prev
 alt + F6 
       playerctl previous   
 	
@@ -84,7 +80,7 @@ super + F7
   
 # spotify play/pause
 alt + F7
-      dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+      playerctl --player=spotify play-pause
 
 # next
 alt + F8
@@ -92,7 +88,7 @@ alt + F8
        
 # screenshot
 Print
-    maim | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Ful.png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
+    maim | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M).png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
                  
 # selected ss
 shift + Print            
@@ -114,7 +110,7 @@ alt + 0
 super + @space 
         dmenu_run
 
-# terminal
+# term
 super + Return
         kitty 
 
@@ -171,6 +167,11 @@ super + g
 super + {minus,equal}
         bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-, +} 5))
 
+# set the window state
+  super + {p,shift + p}
+  bspc node -t {tiled,pseudo_tiled}
+
+# floating/fullscreen
 super + {s,f}
         {bspc config pointer_follows_focus true; \
         bspc node -t $(bspc query -N -n -n .tiled >/dev/null && echo floating || echo tiled); \
@@ -180,9 +181,6 @@ super + {s,f}
         bspc node -f; \
         bspc config pointer_follows_focus false}
 
-# set the window state
-super + {p,shift + p}
-       	bspc node -t {tiled,pseudo_tiled}
 
 # set the node flags
 super + ctrl + {m,x,s,p}
@@ -223,8 +221,8 @@ super + shift + bracket{left,right}
         bspc node -d {prev,next}.local --follow;
 	
 # focus the node for the given path jump
-super + {p,b,comma,period}
-       	bspc node -f @{parent,brother,first,second}
+# super + {t,b,comma,period}
+#        	bspc node -f @{parent,brother,first,second}
 
 #
 # preselect

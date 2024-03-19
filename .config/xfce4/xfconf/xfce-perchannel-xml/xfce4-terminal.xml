@@ -7,14 +7,14 @@
   <property name="dropdown-position-vertical" type="uint" value="6"/>
   <property name="dropdown-show-borders" type="bool" value="false"/>
   <property name="font-allow-bold" type="bool" value="true"/>
-  <property name="font-name" type="string" value="JetBrainsMono Nerd Font Light 14"/>
+  <property name="font-name" type="string" value="JetBrainsMono Nerd Font Ultra-Light 16"/>
   <property name="text-blink-mode" type="string" value="TERMINAL_TEXT_BLINK_MODE_NEVER"/>
   <property name="misc-menubar-default" type="bool" value="false"/>
   <property name="misc-confirm-close" type="bool" value="false"/>
   <property name="misc-borders-default" type="bool" value="false"/>
   <property name="color-bold-is-bright" type="bool" value="true"/>
-  <property name="color-foreground" type="string" value="#ffffff"/>
-  <property name="color-background" type="string" value="#000000"/>
+  <property name="color-foreground" type="string" value="#e0def4"/>
+  <property name="color-background" type="string" value="#191724"/>
   <property name="color-background-vary" type="bool" value="false"/>
   <property name="color-cursor-foreground" type="string" value=""/>
   <property name="color-cursor" type="string" value=""/>
@@ -24,7 +24,7 @@
   <property name="color-selection-use-default" type="bool" value="true"/>
   <property name="color-bold" type="string" value=""/>
   <property name="color-bold-use-default" type="bool" value="true"/>
-  <property name="color-palette" type="string" value="#21222C;#ff5555;#50fa7b;#f1fa8c;#bd93f9;#ff79c6;#8be9fd;#f8f8f2;#6272a4;#ff6e6e;#69ff94;#ffffa5;#d6acff;#ff92df;#a4ffff;#ffffff"/>
+  <property name="color-palette" type="string" value="#26233a;#eb6f92;#9ccfd8;#f6c177;#31748f;#c4a7e7;#ebbcba;#e0def4;#6e6a86;#eb6f92;#9ccfd8;#f6c177;#31748f;#c4a7e7;#ebbcba;#e0def4"/>
   <property name="color-use-theme" type="bool" value="false"/>
   <property name="tab-activity-color" type="string" value="#aa0000"/>
   <property name="misc-middle-click-opens-uri" type="bool" value="true"/>
