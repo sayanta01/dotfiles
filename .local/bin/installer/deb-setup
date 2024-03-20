@@ -44,6 +44,15 @@ sudo cp -r ~/.local/share/icons/BeautySolar /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 
+# chech this in debian
+		# gnome-keyring \
+		# mpv mediainfo perl-image-exiftool nsxiv maim xwallpaper python-pywal \
+		# zip unzip unrar p7zip engrampa \
+		# lf gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
+		# rsync wget aria2 jq \
+		# xdg-utils xdg-user-dirs \
+		# xorg-xinit xclip xdotool wmname wmctrl
+
 printf "Install Main pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
@@ -53,11 +62,11 @@ if [ "$choice" = "y" ]; then
 		fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
 		bspwm polybar rofi dunst \
 		qt5ct lxappearance xcape pass \
-		kitty maim playerctl pulsemixer \
-		mpv nsxiv rust-eza fzf fd-find \
+		kitty maim pavucontrol playerctl \
+		mpv nsxiv exa fd-find fzf \
 		zathura htop meld \
 		xclip xdotool xwallpaper gpg \
-		exiftool aria2 wmname neofetch \
+		mediainfo aria2 wmname neofetch \
 		net-tools wireless-tools \
 		ssh docker.io
 	sudo systemctl enable ssh

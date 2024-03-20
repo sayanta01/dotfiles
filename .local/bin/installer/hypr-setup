@@ -18,8 +18,8 @@ paru -S hyprland-git xdg-desktop-portal-hyprland \
 # waydroid - Container-based approach to boot a full Android system
 
 sudo pacman -S --noconfirm waybar file-roller tumbler wlroots polkit-gnome \
-	qt5-wayland qt6-wayland viewnior sddm-runit \
-	wl-clipboard wf-recorder ffmpegthumbs
+	qt5-wayland qt6-wayland sddm-runit viewnior \
+	ffmpegthumbs wl-clipboard wf-recorder
 
 sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop
 [Desktop Entry]

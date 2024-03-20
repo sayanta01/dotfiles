@@ -31,7 +31,7 @@
     sort = yes
 
     ## Text ##
-    font = "JetBrainsMono NF Thin 11"
+    font = Monospace 12
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
@@ -70,7 +70,7 @@
     # applications (default: overlay)
     # Set this to true to use X11 output on Wayland
     # layer = top
-    # force_xwayland = false
+    force_xwayland = true
 
     ## Shortcuts ##
     close = ctrl+shift+space

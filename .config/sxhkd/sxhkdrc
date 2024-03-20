@@ -98,10 +98,6 @@ shift + Print
 alt + Print 
 	    maim -i $(xdotool getactivewindow) $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Win.png | notify-send -t 800 "Window Screenshot Taken"
 	                           
-# web 
-alt + b
-      $BROWSER
-        
 # rofi
 alt + 0
       rofi -show drun -show-icons
