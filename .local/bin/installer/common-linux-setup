@@ -2,34 +2,31 @@
 
 # TODO
 # change default browser -> .profile
-# Todo: Enable TouchPad Tapping for Laptop 
+# Todo: Enable touchpad tapping for Laptop 
+# Encrypt home - when u get laptop
 
-# Better for laptops [ Todo: add for debian ]
+# For laptop
 sudo cat <<EOF | sudo tee /etc/NetworkManager/conf.d/wifi-powersave.conf
 [connection]
 wifi.powersave = 2
 EOF
 
-# Change DNS server to cloudflare
+# Cloudflare DNS server
 sudo cat <<EOF | sudo tee /etc/resolv.conf
 nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
 
-# Display Asterisks while entering pswd
+# Display asterisks while entering pswd
 # sudo su root -c "echo Defaults pwfeedback >> /etc/sudoers"
 
-# Remove Firefox ~/.pulse-cookie
+# Remove FF ~/.pulse-cookie
 sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
 
 # SysRq
 # https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
-# Reboot Even if System Utterly Broken (REISUB)
+# Reboot Even if System Utterly Broken `REISUB`
 echo "1" > /proc/sys/kernel/sysrq
 echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
 
-# Encrypt home dir
-# -i ecryptfs-utils cryptsetup
-# use this when u get laptop
-
-# sudo vim /etc/hosts          [ blk sites ]
+# sudo vim /etc/hosts      [ blk sites ]

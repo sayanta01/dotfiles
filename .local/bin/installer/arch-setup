@@ -165,7 +165,3 @@ sudo su root -c "echo -e FONT='ter-d18b' > /etc/vconsole.conf"
 
 # Fix qt
 sudo sh -c 'echo "QT_QPA_PLATFORMTHEME=\"qt5ct\"" > /etc/environment'
-
-# Get percentage of connected device
-sudo sed -i 's/# ControllerMode = bredr/ControllerMode = bredr/' /etc/bluetooth/main.conf
-sudo sed -i 's/^# \(Experimental = true\)/\1/' /etc/bluetooth/main.conf
