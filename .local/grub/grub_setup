@@ -1,0 +1,19 @@
+#!/bin/sh
+
+sudo cp -r catppuccin-mocha-grub-theme /usr/share/grub/themes/
+echo 'GRUB_THEME="/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt"' | sudo tee -a /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+# sudo rm -rf /usr/share/images/desktop-base/desktop-grub.png
+
+echo 'menuentry "Reboot" --class restart {
+  reboot
+}
+menuentry "ShutDown" --class shutdown {
+  halt
+}' | sudo tee -a /etc/grub.d/40_custom
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+# grub-customizer - pkg
+# https://github.com/catppuccin/grub
+# Remove Grub menu showing `Get by holding ESC`
+# GRUB_TIMEOUT_STYLE=hidden

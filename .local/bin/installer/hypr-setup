@@ -14,12 +14,13 @@ paru -S hyprland-git xdg-desktop-portal-hyprland \
 	grim slurp swappy swww libsixel \
 	hyprprop wlsunset nwg-look-bin waypipe \
 	libva libva-nvidia-driver-git
-# ydotool - A generic Linux command-line automation tool for Wayland
+
+# https://arewewaylandyet.com/
 # waydroid - Container-based approach to boot a full Android system
 
-sudo pacman -S --noconfirm waybar file-roller tumbler wlroots polkit-gnome \
-	qt5-wayland qt6-wayland sddm-runit viewnior \
-	ffmpegthumbs wl-clipboard wf-recorder
+sudo pacman -S --noconfirm waybar wlroots polkit-gnome \
+	qt5-wayland qt6-wayland sddm-runit \
+	wl-clipboard wf-recorder
 
 sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop
 [Desktop Entry]

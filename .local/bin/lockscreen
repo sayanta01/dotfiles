@@ -3,5 +3,5 @@
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	swaylock
 else
-	betterlockscreen -l blur
+  slock
 fi

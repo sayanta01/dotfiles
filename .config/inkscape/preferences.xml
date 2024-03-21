@@ -335,7 +335,7 @@
   </group>
   <group id="ui" language="" />
   <group id="live_effects" flattening="0" />
-  <group id="theme" defaultPreferDarkTheme="0" defaultIconTheme="Papirus-FlatMix" defaultGtkTheme="Sweet-Dark-v40"
+  <group id="theme" defaultPreferDarkTheme="0" defaultIconTheme="BeautySolar" defaultGtkTheme="Sweet-Dark"
     narrowSpinButton="1" preferDarkTheme="1" darkTheme="1" symbolicIcons="0" symbolicDefaultBaseColors="1"
     symbolicDefaultHighColors="1" syntax-color-theme="inkscape-dark" iconTheme="multicolor">
     <group id="multicolor" symbolicBaseColor="3958107135" symbolicSuccessColor="180295167"

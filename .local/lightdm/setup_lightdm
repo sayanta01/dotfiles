@@ -4,17 +4,14 @@
 # dm-tool switch-to-greeter
 
 if [ -d "$HOME/.local/share/walls" ]; then
-	set -- "$HOME/.local/share/walls"/*
-	if [ -e "$1" ]; then
-		sudo cp "$1" "/etc/lightdm/lightdm-wall.jpg" >/dev/null 2>&1
-	fi
+	sudo cp ~/.local/share/walls/astro.jpg /etc/lightdm/wallpaper.jpg 2>/dev/null
 fi
 
 echo '[greeter]
-background = /etc/lightdm/cyberpunk-girl.jpg
-font-name = MapleMono NF 12
+background = /etc/lightdm/wallpaper.jpg
+font-name = Cantarell 12
 hide-user-image = true
-theme-name = Sweet-Dark-v40
-icon-theme-name = elementary
+theme-name = Sweet-Dark
+icon-theme-name = Adwaita 
 clock-format = %a, %d %b 🕗 %I:%M
 indicators = ~host;~spacer;~clock;~spacer;~session;~power' | sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf

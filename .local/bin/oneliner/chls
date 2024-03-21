@@ -1,3 +1,0 @@
-#!/bin/sh
-
-[ "$XDG_SESSION_TYPE" = "x11" ] && betterlockscreen -u ~/.local/share/walls --fx blur && notify-send "Lockscreen changed 🖼️"

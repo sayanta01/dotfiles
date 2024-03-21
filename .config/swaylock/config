@@ -1,5 +1,4 @@
 # configuration
-
 daemonize
 show-failed-attempts
 screenshot
