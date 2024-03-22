@@ -7,9 +7,7 @@
   "tooltip": false,
   // "gtk-layer-shell": true,
   "modules-left": [
-    "hyprland/workspaces",
-    // "hyprland/window",
-    "custom/now-playing"
+    "hyprland/workspaces"
   ],
   "modules-right": [
     "custom/date",
@@ -19,9 +17,6 @@
     // "battery",
     "tray"
   ],
-  "hyprland/window": {
-    "max-length": 42
-  },
   "hyprland/workspaces": {
     "all-outputs": true,
     "on-click": "activate",
@@ -55,18 +50,6 @@
     "on-click-right": "kitty --class floating -e nmtui"
     // "return-type": "json"
   },
-  "custom/now-playing": {
-    "tooltip": false,
-    "format": " 󰎉 {}",
-    "interval": 2,
-    "exec": "~/.local/bin/statusbar/now-playing"
-  },
-  // "custom/cpu": {
-  //   "tooltip": false,
-  //   "interval": 4,
-  //   "exec": "~/.local/bin/statusbar/bar-cpu",
-  //   "on-click": "notify-send \"🖥 Cpu hogs\" \"$(ps axch -o cmd:16,%cpu --sort=-%cpu | head)\""
-  // },
   "custom/memory": {
     "tooltip": false,
     "interval": 4,

@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-  background-color: #040302;
+  background-color: #010101;
   border-radius: 0px;
 }
 
@@ -18,7 +18,7 @@ window#waybar.hidden {
 
 #workspaces button {
   color: #c0caf5;
-  background-color: #040302;
+  background-color: #010101;
   padding-left: 11px;
   padding-right: 12px;
   margin-right: 2px;
@@ -31,19 +31,18 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-  color: #040302;
+  color: #010101;
   background-color: #c0caf5;
   border-radius: 1px;
 }
 
 #workspaces button.urgent {
-  color: #040302;
+  color: #010101;
   background-color: #bd2c40;
   border-radius: 1px;
 }
 
 #workspaces,
-#window,
 #custom-date,
 #custom-nettraf,
 #custom-memory,
@@ -57,17 +56,10 @@ window#waybar.hidden {
 }
 
 #workspaces {
-  background-color: #040302;
+  background-color: #010101;
   padding-left: 0px;
   padding-right: 0px;
   margin-left: 4px;
-}
-
-#window {
-  color: #d1dbf6;
-  background-color: #2a2e36;
-  border-radius: 8px;
-  margin-left: 5px;
 }
 
 #custom-date {
@@ -78,7 +70,7 @@ window#waybar.hidden {
 }
 
 #custom-nettraf {
-  color: #89b4fa;
+  color: #62afef;
   margin-right: 5px;
 }
 
