@@ -1,23 +1,11 @@
 #!/bin/sh
 
-notify-send "⚙️ CPU $(top -bn1 | awk '/^%Cpu/ {print $2}' | cut -c 1,2 | sed 's/\.//g') "
-notify-send " GPU $(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits) "
-
-notify-send " CPU-Temp $(sensors | awk '/Core 0/ {print $3}' | cut -c 2- | cut -c 1,2,5,6,7)"
-notify-send "🌡️GPU-Temp $(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)°C"
-
-notify-send "🧠 RAM $(free -h | awk '/Mem:/ {print $3}' | cut -f1 -d 'i')"
-notify-send "💾 Dsk $(df -h / | awk 'NR==2{print $4}')"
-notify-send "⌨️ Layout $(setxkbmap -query | grep layout | awk '{print $2}' | tr "[:lower:]" "[:upper:]")"
+notify-send " $(top -bn1 | awk '/^%Cpu/ {print $2}' | cut -c 1,2 | sed 's/\.//g') "
+notify-send "🌡️$(sensors | awk '/Core 0/ {print $3}' | cut -c 2- | cut -c 1,2,5,6,7)"
+notify-send "💾$(df -h / | awk 'NR==2{print $4}')"
 
 if [ -f /etc/debian_version ]; then
 	notify-send "📦 APT $(apt list --upgradable 2>/dev/null | grep -c '/')"
 elif [ -f /etc/arch-release ]; then
-	notify-send "📦 PAC $({
-		checkupdates 2>/dev/null | wc -l
-		echo "| AUR"
-		paru -Qum 2>/dev/null | wc -l
-	} | sed ':a;N;s/\n/ /;ba')"
-else
-	:
+	notify-send "📦 PAC $(checkupdates 2>/dev/null | wc -l | tr -d '\n') ▏AUR $(paru -Qum 2>/dev/null | wc -l)"
 fi

@@ -104,9 +104,9 @@ fi
 printf "Install GUI pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
-	sudo pacman -S --noconfirm scrcpy android-tools android-file-transfer \
-		obs-studio audacity gimp inkscape blender \
-		kdeconnect blueman bluez-utils ntfs-3g
+	sudo pacman -S --noconfirm scrcpy kdeconnect \
+    obs-studio gimp audacity \
+		blueman bluez-utils ntfs-3g
 # virtualbox virtualbox-guest-utils
 # sudo usermod -aG vboxusers "$USER"  # use USB
 else

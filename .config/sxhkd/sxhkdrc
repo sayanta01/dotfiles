@@ -6,25 +6,16 @@
 XF86MonBrightness{Up,Down}
 	               xbacklight {-inc 10,-dec 10}
 	
-# volume 
-XF86Audio{RaiseVolume,LowerVolume,Mute}
-         pamixer {-i 5,-d 5,-t}
+# volume
+XF86Audio{LowerVolume,RaiseVolume,Mute}
+         pamixer {-d 5,-i 5,-t}
 
-# mic
 XF86AudioMicMute
          pamixer --default-source -t
 
 # music
-XF86Audio{Prev,Next}
-         playerctl {previous,next}
-
-XF86AudioPlay 
-         playerctl play-pause
-
-# switch layout
-super + n
-        ~/.local/bin/bspwm/layout
-        # bsp-layout next --layouts tall,tiled && notify-send -t 900 "$(bsp-layout get) layout"
+XF86Audio{Prev,Play,Next}
+         playerctl {previous,play-pause,next}
 
 # toggle bar
 super + u
@@ -34,83 +25,61 @@ super + u
 super + d
         while bspc node any.hidden.window -g hidden=off; do false; done && while bspc node 'any.!hidden.window' -g hidden=on; do :; done
 
-# pywal
+# switch layout
+super + n
+        ~/.local/bin/bspwm/layout
+
+# colors
 super + alt + o
         ~/.local/bin/pywal
 
-# wallpaper 
 super + alt + p
         ~/.local/bin/wallch
 
-# tmp clip
+# clipboard
 super + alt + t
         ~/.local/bin/dm-script/tclip
 
-# display clip
 super + alt + d
         ~/.local/bin/dm-script/dclip
 
-# vol down
-alt + F2
-      pamixer -d 5 
-
-# vol up
-alt + F3
-      pamixer -i 5 
-
-# mute
-alt + F4
-      pamixer -t
+# volume
+alt + {F2,F3,F4}
+      pamixer {-d 5,-i 5,-t}
 
  # system action
 super + F4
         ~/.local/bin/dm-script/sys-action
-	 
-# switch aud
+
+# music
 alt + F5       
       ~/.local/bin/audiosw    
 
-# prev
-alt + F6 
-      playerctl previous   
-	
-# play/pause   
+alt + {F6,F7,F8} 
+      playerctl {previous,--player=spotify play-pause,next}   
+
 super + F7
         playerctl play-pause
   
-# spotify play/pause
-alt + F7
-      playerctl --player=spotify play-pause
-
-# next
-alt + F8
-      playerctl next
-       
 # screenshot
 Print
     maim | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M).png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
                  
-# selected ss
 shift + Print            
         maim -s | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
 
-# window ss
-alt + Print 
-	    maim -i $(xdotool getactivewindow) $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Win.png | notify-send -t 800 "Window Screenshot Taken"
-	                           
-# rofi
-alt + 0
-      rofi -show drun -show-icons
+# menu
+ctrl + Escape
+       rofi -show drun -show-icons
 
-# dmenu
 super + @space 
         dmenu_run
 
-# term
+# terminal
 super + Return
         kitty 
 
-# file manager
+# explore
 super + e
         thunar
 
@@ -122,7 +91,7 @@ ctrl + alt + l
 ctrl + alt + Delete
        ~/.local/bin/dm-script/kil	     
 
-# scratch-pad
+# scratchpad
 alt + Return
       ~/.local/bin/bspwm/scratchpad
 
@@ -132,13 +101,13 @@ alt + Return
 
 # reload sxhkd configuration
 super + Escape
-	      notify-send -t 500 "reloading sxhkd!"; pkill -USR1 -x sxhkd
+	      notify-send -t 600 "reload sxhkd!"; pkill -USR1 -x sxhkd
 	
 # quit/restart bspwm
 super + alt + {q,r}
       	bspc {quit,wm -r}
 
-# close or kill
+# close and kill
 super + {_,shift + }q
         bspc node -{c,k}
 
