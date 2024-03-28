@@ -96,7 +96,6 @@ Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
 Server = https://ftp.crifo.org/artix-universe/
 
 sudo pacman -Sy artix-archlinux-support
-# sudo pacman -S artix-keyring  [ fix corrupted pkg "PGP signature" ]
 
 /etc/pacman.conf >> in End
 #### ARCH REPO ####
@@ -112,6 +111,7 @@ Include = /etc/pacman.d/mirrorlist-arch
 [core]
 Include = /etc/pacman.d/mirrorlist-arch
 
+sudo pacman-key --init
 sudo pacman-key --populate archlinux
 sudo pacman -Syu
 # sudo dbus-uuidgen | sudo tee /var/lib/dbus/machine-id    [ Artix ]

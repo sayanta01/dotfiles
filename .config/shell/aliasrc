@@ -4,14 +4,14 @@ if [ -f /etc/arch-release ]; then
 	# Arch aliases
 	alias update="sudo pacman -Syyu && echo '########## ⬆️AUR ##########'; paru -Sua"
 	alias remove="sudo pacman -Rns"
-	alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo pacman -Sc --noconfirm; echo "########## 🚮cleaning Paru cache ##########"; rm -rf ~/.cache/paru'
+	alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo paccache -r; echo "###### 🚮cleaning Paru cache ######"; rm -rf ~/.cache/paru'
 	alias unlock="sudo rm /var/lib/pacman/db.lck"
-	alias fix-key="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
+	alias fix-key="sudo pacman-key --init; sudo pacman-key --populate archlinux"
 	alias installed="grep -i installed /var/log/pacman.log"
 	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 elif [ -f /etc/debian_version ]; then
 	# Debian aliases
-	alias update="sudo nala update"
+	alias update="sudo apt update"
 	alias uplist="apt list --upgradable"
 	alias remove="sudo apt remove --purge"
 	alias clean="sudo apt -y autoremove; sudo apt clean"
@@ -50,8 +50,8 @@ alias lt="exa --icons --tree"
 alias ll="exa --icons -lgha --group-directories-first"
 alias lm="ls -t -1"
 alias lsn="exa | wc -l"
-alias l-="ls -l | grep -v 'd'"
-alias ld="ls -l | grep '^d'"
+alias l-="ls -l | grep -v 'd'" # files only
+alias ld="ls -l | grep '^d'"   # dirs only
 alias l.="ls -A | grep '^\.'"
 
 alias grep="grep --color=auto"
@@ -68,7 +68,6 @@ alias less="less -R"
 alias mkdir="mkdir -pv"
 alias trim="sudo fstrim -va"
 alias logout='sudo pkill -u "$USER"'
-alias sdn="sudo shutdown -h now"
 alias fix-faillock='faillock --user "$USER" --reset'
 
 alias lg="lazygit"
@@ -94,8 +93,8 @@ alias py-server="python -m http.server 8000"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias multitail="multitail --no-repeat -c"
 
-alias ff='fd --type f --hidden --exclude .git | fzf --preview "bat --color=always --style=numbers --line-range=:500 {}" | xargs -r "$EDITOR"'
-alias bigf="du -hxs * | sort -rh | head"
+alias ff='fd --type f --hidden --exclude .git | fzf --preview "bat --color=always --theme OneHalfDark -p --line-range=:500 {}" | xargs -r "$EDITOR"'
+alias bf="du -hxs * | sort -rh | head"
 alias psmem="ps axch -o cmd,%mem --sort=-%mem | head"
 alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | head"
 alias microcode="grep . /sys/devices/system/cpu/vulnerabilities/*"
@@ -112,8 +111,7 @@ alias bc="bc -ql"
 alias hw="hwinfo --short"
 alias dmesg="sudo dmesg -T"
 alias shred="shred -uvzn3"
-alias bat="bat --theme OneHalfDark"
-alias cat="bat --theme OneHalfDark -p"
+alias bat="bat --theme OneHalfDark -p"
 alias pu="pushd"
 alias po="popd"
 alias ffmpeg="ffmpeg -hide_banner"

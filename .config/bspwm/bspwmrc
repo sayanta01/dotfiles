@@ -31,4 +31,4 @@ sh ~/.config/polybar/launch.sh &
 xset r rate 280 60 &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# xcape -e 'super_l=alt_l|0' &
+# xcape -e 'Super_L=Control_L|Escape' &

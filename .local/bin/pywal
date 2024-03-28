@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# Check if the program is running
 if pgrep bspwm >/dev/null; then
 	wal -qi ~/.local/share/walls && bspc wm -r
 else

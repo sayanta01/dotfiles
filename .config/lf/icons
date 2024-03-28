@@ -268,8 +268,8 @@ Vagrantfile             
 *.tif               
 *.tiff              
 *.png               
-*.svg               󰜡
-*.svgz              󰜡
+*.svg               󰕙
+*.svgz              󰕙
 *.mng               
 *.pcx               
 *.avif              

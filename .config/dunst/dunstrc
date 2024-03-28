@@ -31,7 +31,7 @@
     sort = yes
 
     ## Text ##
-    font = JetBrainsMono 12
+    font = Monospace 12
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
