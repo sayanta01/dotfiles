@@ -48,7 +48,6 @@ if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 		noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
 		eza bat fd fzf man-db bash-completion starship meld \
-		linux-firmware \
     kitty neovim htop neofetch cowsay \
 		bspwm sxhkd polybar rofi dunst slock \
 		qt5ct qt6ct lxappearance xcape pass \
@@ -138,12 +137,12 @@ fi
 if command -v paru >/dev/null 2>&1; then
 	printf "Install AUR pkgs? [y/N]: "
 	read -r choice
-	[ "$choice" = "y" ] && paru -S colorpicker yt-dlp simple-mtpfs visual-studio-code-bin
+	[ "$choice" = "y" ] && paru -S colorpicker simple-mtpfs yt-dlp visual-studio-code-bin
 else
 	git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru && cd ~/.cache/paru && makepkg -fsri --noconfirm
 	printf "Install AUR pkgs? [y/N]: "
 	read -r choice
-	[ "$choice" = "y" ] && paru -S colorpicker yt-dlp simple-mtpfs visual-studio-code-bin
+	[ "$choice" = "y" ] && paru -S colorpicker simple-mtpfs yt-dlp visual-studio-code-bin
 fi
 
 # Configure pacman
