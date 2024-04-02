@@ -48,7 +48,7 @@ if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 		noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
 		eza bat fd fzf man-db bash-completion starship meld \
-		linux-lts linux-lts-headers linux-firmware \
+		linux-firmware \
     kitty neovim htop neofetch cowsay \
 		bspwm sxhkd polybar rofi dunst slock \
 		qt5ct qt6ct lxappearance xcape pass \
