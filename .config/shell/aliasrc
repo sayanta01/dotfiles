@@ -2,8 +2,7 @@
 
 if [ -f /etc/arch-release ]; then
 	# Arch aliases
-	alias update="sudo pacman -Syyu && echo '########## ⬆️AUR ##########'; paru -Sua"
-	alias remove="sudo pacman -Rns"
+	alias update="sudo pacman -Syyu && echo '###### ⬆️AUR ######'; paru -Sua"
 	alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo paccache -r; echo "###### 🚮cleaning Paru cache ######"; rm -rf ~/.cache/paru'
 	alias unlock="sudo rm /var/lib/pacman/db.lck"
 	alias fix-pac="sudo pacman -Sy archlinux-keyring; sudo pacman-key --refresh"
@@ -11,7 +10,6 @@ if [ -f /etc/arch-release ]; then
 	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 elif [ -f /etc/debian_version ]; then
 	# Debian aliases
-	alias update="sudo apt update"
 	alias uplist="apt list --upgradable"
 	alias remove="sudo apt remove --purge"
 	alias clean="sudo apt -y autoremove; sudo apt clean"
@@ -88,8 +86,8 @@ alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/ro
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 alias tb="nc termbin.com 9999"
 alias myip="curl ifconfig.me; echo"
-alias php-server="php -S 0.0.0.0:8000"
-alias py-server="python -m http.server 8000"
+alias php-serve="php -S 0.0.0.0:8000"
+alias py-serve="python -m http.server 8000"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias multitail="multitail --no-repeat -c"
 
@@ -128,8 +126,8 @@ alias vim="nvim"
 alias vimdiff="nvim -d"
 alias se="sudoedit"
 alias aft="android-file-transfer"
-alias ytdl-vid="yt-dlp -f bestvideo+bestaudio"
-alias ytdl-aud="yt-dlp --extract-audio --audio-format m4a"
+alias ytdlv="yt-dlp -f bestvideo+bestaudio --external-downloader aria2c" 
+alias ytdla="yt-dlp -x --audio-format mp3"
 
 # Arch Linux only
 # https://archlinux.org/mirrorlist/
