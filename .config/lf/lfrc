@@ -156,8 +156,8 @@ map T $kitty
 
 # Shortcuts
 map gh cd ~/desk
-map gD cd ~/dox
 map gd cd ~/dl
+map gD cd ~/dox
 map gp cd ~/pix
 map gv cd ~/vids
 map gm cd ~/music 
