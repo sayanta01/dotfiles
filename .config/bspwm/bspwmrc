@@ -28,7 +28,7 @@ bspc rule -a scratchpad locked=on sticky=on state=floating rectangle=999x800+460
 xsetroot -cursor_name left_ptr &
 sh ~/.config/sxhkd/sxhkd.sh &
 sh ~/.config/polybar/launch.sh &
-xset r rate 280 60 &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
+xset r rate 280 60 &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # xcape -e 'Super_L=Control_L|Escape' &

@@ -40,7 +40,6 @@
       <property name="&lt;Alt&gt;F7" type="string" value="playerctl --player=spotify play-pause"/>
       <property name="&lt;Super&gt;space" type="string" value="dmenu_run"/>
       <property name="&lt;Super&gt;Return" type="string" value="kitty"/>
-      <property name="&lt;Alt&gt;F5" type="string" value="./.local/bin/audiosw"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;d" type="string" value="./.local/bin/dm-script/dclip"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;t" type="string" value="./.local/bin/dm-script/tclip"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="./.local/bin/lockscreen"/>
