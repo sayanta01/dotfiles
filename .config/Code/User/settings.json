@@ -66,15 +66,6 @@
     {
       "before": [
         "<leader>",
-        "w"
-      ],
-      "commands": [
-        ":w!"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
         "q"
       ],
       "commands": [
@@ -92,11 +83,10 @@
     },
     {
       "before": [
-        "<leader>",
-        "n"
+        "<Esc>"
       ],
       "commands": [
-        ":nohl"
+        ":noh"
       ]
     },
     {
@@ -253,24 +243,6 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<leader>",
-        "\\"
-      ],
-      "commands": [
-        "workbench.action.splitEditor"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "-"
-      ],
-      "commands": [
-        "workbench.action.splitEditorDown"
-      ]
-    },
     {
       "before": [
         "<leader>",
