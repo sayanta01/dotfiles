@@ -3,7 +3,7 @@ ln             # LINK
 or      ❌      # ORPHAN
 tw      🤝      # STICKY_OTHER_WRITABLE
 ow             # OTHER_WRITABLE
-st      t       # STICKY
+st      󱍭       # STICKY
 di             # DIR
 pi      󱑹       # FIFO
 so      🔌      # SOCK
@@ -50,7 +50,7 @@ fi             # FILE
 *.ini           
 *.yml           
 *.yaml          
-*.toml          󰬁
+*.toml          T
 *.bat           
 *.mk            
 *.jpg	          
@@ -200,7 +200,7 @@ fi             # FILE
 *require.min.js         󰓾
 *materialize.min.js     
 *materialize.min.css    
-*mootools.min.js        
+*mootools.min.js        
 *vimrc                  
 Vagrantfile             
 
@@ -313,7 +313,7 @@ Vagrantfile             
 # audio formats
 *.aac               󰽴
 *.au                󰽴
-*.flac              
+*.flac              
 *.m4a               󰽴
 *.mid               󰽴
 *.midi              󰽴
@@ -322,7 +322,7 @@ Vagrantfile             
 *.mpc               󰽴
 *.ogg               󰽴
 *.ra                󰽴
-*.wav               
+*.wav               
 *.oga               󰽴
 *.opus              󰽴
 *.spx               󰽴
@@ -337,9 +337,9 @@ Vagrantfile             
 *.appx              󰨡
 *.msi               󰨡
 *.app               󰀶
-*.txt	              
-*.mom	              
-*.me	              
+*.txt	              
+*.mom	              
+*.me	              󱞏
 *.ms	              ✍
 *.gpg               🔐
 *.ssh               🔑
@@ -370,7 +370,7 @@ Vagrantfile             
 *.1                 
 *.nfo	              
 *.info              
-*.log	              
+*.log	              󰯃
 *.iso	              📀
 *.img               📀
 *.ged               👪

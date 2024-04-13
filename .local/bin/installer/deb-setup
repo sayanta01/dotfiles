@@ -66,12 +66,6 @@ else
 	:
 fi
 
-if ! command -v starship >/dev/null 2>&1; then
-	curl -sS https://starship.rs/install.sh | sh
-else
-	:
-fi
-
 # aria2c -x9 -o PacketTracer.deb -d ~/dl https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 # cd ~/dl && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 

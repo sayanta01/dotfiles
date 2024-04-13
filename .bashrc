@@ -2,8 +2,7 @@
 # ~/.bashrc
 #
 
-eval "$(starship init bash)"
-# export PS1="\W \[\e[31m\]❯\[\e[m\] "
+export PS1=" \W \[\e[31m\]❯\[\e[m\] "
 
 [[ $- != *i* ]] && return # if not running interactively, don't do anything
 
