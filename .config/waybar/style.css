@@ -17,7 +17,7 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-  color: #c0caf5;
+  color: #c0caF5;
   background-color: #010101;
   padding-left: 11px;
   padding-right: 12px;
@@ -32,7 +32,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
   color: #010101;
-  background-color: #c0caf5;
+  background-color: #c0caF5;
   border-radius: 1px;
 }
 
@@ -63,24 +63,24 @@ window#waybar.hidden {
 }
 
 #custom-date {
-  color: #f8f8f2;
+  color: #F8F8F2;
   background-color: #2a2e36;
   border-radius: 8px;
   margin-right: 5px;
 }
 
 #custom-nettraf {
-  color: #62afef;
+  color: #62aFeF;
   margin-right: 5px;
 }
 
 #custom-memory {
-  color: #f8f8f2;
+  color: #F8F8F2;
   margin-right: 5px;
 }
 
 #pulseaudio {
-  color: #f8f8f2;
+  color: #F8F8F2;
   background-color: #2a2e36;
   border-radius: 8px 8px 8px 8px;
   margin-right: 0px;

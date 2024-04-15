@@ -8,14 +8,14 @@ configuration {
 
 * {
     font:                           "Cantarell 12";
-    foreground:                     #f8f8f2;
-    background:                     #101214;
-    highlight:	             		    #60fa7b;
+    foreground:                     #F8F8F2;
+    background:                     #010101;
+    highlight:	             		    #60Fa7b;
     // red:                            #973d46;
     // darkred:                        #973d46;
     // darkblue:                       #517ba5;
     // darkyellow:                     #e0ae4a;
-    urgent-background:              #ff5555;
+    urgent-background:              #FF5555;
     blue:                           #517ba5;
     yellow:                         #e0ae4a;
     separatorcolor:                 #a7b5cd;
@@ -23,7 +23,7 @@ configuration {
     bg-col-light:                   #689d69;
     tab:                            #689d66;
     tab-selected:                   #1d2021;
-    blank:                          #1f2223;
+    blank:                          #1F2223;
     blank-underline:                #191c1d;
     button-underline:               #518554;
 }

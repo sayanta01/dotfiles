@@ -25,7 +25,7 @@
     padding = 8
     horizontal_padding = 8
     frame_width = 2
-    frame_color = "#abb2bf"
+    frame_color = "#abb2bF"
     gap_size = 0
     separator_color = frame
     sort = yes
@@ -73,9 +73,9 @@
     force_xwayland = true
 
     ## Shortcuts ##
-    close = ctrl+shift+space
-    close_all = ctrl+shift+space
-    history = ctrl+shift+grave
+    # close = ctrl+shift+space
+    # close_all = ctrl+shift+space
+    # history = ctrl+shift+grave
     mouse_left_click = close_current
     mouse_right_click = close_all
 
@@ -83,7 +83,7 @@
      per_monitor_dpi = false
 
 [urgency_low]
-     background = "#000000"
+     background = "#010101"
      foreground = "#888888"
      timeout = 2
 
@@ -95,7 +95,7 @@
 
 [urgency_critical]
      background = "#900000"
-     foreground = "#f8f8f2"
-     frame_color = "#ff5555"
+     foreground = "#d8dee9"
+     frame_color = "#FF5555"
      timeout = 6
      override_pause_level = 40

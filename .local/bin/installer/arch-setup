@@ -9,7 +9,7 @@ done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 [ -d ~/pix/ss/ ] || mkdir -p ~/pix/ss/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
-chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
+chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/
 
 # Fonts
 printf "Update/Install Fonts? [y/N]: "
@@ -55,7 +55,7 @@ if [ "$choice" = "y" ]; then
 		mpv mediainfo nsxiv maim xwallpaper python-pywal \
 		net-tools wireless_tools network-manager-applet \
 		unrar unzip p7zip file-roller \
-		lf gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
+		gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zathura zathura-pdf-mupdf \
 		zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
 		rsync wget aria2 jq \
@@ -145,18 +145,17 @@ else
 	[ "$choice" = "y" ] && paru -S colorpicker simple-mtpfs yt-dlp visual-studio-code-bin
 fi
 
-# Configure pacman
-edit_pacman_conf() {
-	conf="/etc/pacman.conf"
-	lines="Color CheckSpace VerbosePkgLists ParallelDownloads"
-
-	for l in $lines; do
-		grep -q "^#$l" "$conf" && sudo sed -i "s/^#$l/$l/" "$conf" && echo "Uncommented: $l" || echo "$l is already Uncommented"
-	done
-
-	grep -q "^ParallelDownloads" "$conf" && ! grep -q "^ILoveCandy" "$conf" && sudo sed -i "/^ParallelDownloads/a ILoveCandy" "$conf" && echo "Added ILoveCandy below ParallelDownloads" || echo "ILoveCandy already exists"
-}
-edit_pacman_conf
+# edit_pacman_conf() {
+# 	conf="/etc/pacman.conf"
+# 	lines="Color CheckSpace VerbosePkgLists ParallelDownloads"
+#
+# 	for l in $lines; do
+# 		grep -q "^#$l" "$conf" && sudo sed -i "s/^#$l/$l/" "$conf" && echo "Uncommented: $l" || echo "$l is already Uncommented"
+# 	done
+#
+# 	grep -q "^ParallelDownloads" "$conf" && ! grep -q "^ILoveCandy" "$conf" && sudo sed -i "/^ParallelDownloads/a ILoveCandy" "$conf" && echo "Added ILoveCandy below ParallelDownloads" || echo "ILoveCandy already exists"
+# }
+# edit_pacman_conf
 
 # Teletype font
 sudo setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz

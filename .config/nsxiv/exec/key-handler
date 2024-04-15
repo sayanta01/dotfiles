@@ -11,7 +11,7 @@ if [ "$session_type" = "wayland" ]; then
 		"r") convert -rotate 90 "$file" "$file" ;;
 		"R") convert -rotate 90 "$file" "$file" ;;
 		"f") convert -flop "$file" "$file" ;;
-		"c") wl-copy -t image/png <"$file" && notify-send "$file Copied " ;;
+		"c") wl-copy -t image/png <"$file" && notify-send "$file Copied" ;;
 		"y") readlink -f "$file" | wl-copy &&
 			notify-send "$(readlink -f "$file") path copied to clipboard" & ;;
 		"g") gimp "$file" ;;
@@ -25,7 +25,7 @@ else
 		"r") convert -rotate 90 "$file" "$file" ;;
 		"R") convert -rotate 90 "$file" "$file" ;;
 		"f") convert -flop "$file" "$file" ;;
-		"c") xclip -sel c -t image/png <"$file" && notify-send "$file Copied " ;;
+		"c") xclip -sel c -t image/png <"$file" && notify-send "$file Copied" ;;
 		"y") readlink -f "$file" | xclip -sel clip &&
 			notify-send "$(readlink -f "$file") path copied to clipboard" & ;;
 		"g") gimp "$file" ;;
