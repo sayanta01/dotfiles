@@ -54,14 +54,13 @@
     "tooltip": false,
     "interval": 4,
     "exec": "~/.local/bin/statusbar/bar-mem",
-    "on-click": "notify-send \"🧠 Memory hogs\" \"$(ps axch -o cmd:16,%mem --sort=-%mem | head)\"",
+    "on-click": "notify-send \"🧠 Memory hog\" \"$(ps axch -o cmd:16,%mem --sort=-%mem | head)\"",
     "on-click-right": "kitty --class floating -e htop"
   },
   "custom/date": {
     "tooltip": false,
     "interval": 2,
-    "exec": "~/.local/bin/statusbar/bar-time",
-    "on-click": "~/.local/bin/statusbar/notify-cal"
+    "exec": "~/.local/bin/statusbar/bar-time"
   },
   "pulseaudio": {
     "tooltip": false,

@@ -1,11 +1,12 @@
 {
-  "editor.fontFamily": "JetBrainsMono NF Thin",
+  // "editor.fontFamily": "JetBrainsMono NF",
   "editor.fontLigatures": true,
-  "editor.fontSize": 18,
-  "terminal.integrated.fontSize": 18,
+  "editor.fontSize": 19,
+  "terminal.integrated.fontSize": 19,
+  "terminal.integrated.gpuAcceleration": "on",
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
-  "errorLens.enabled": true,
+  // "errorLens.enabled": true,
   "breadcrumbs.enabled": true,
   "breadcrumbs.filePath": "off",
   "editor.minimap.enabled": false,
@@ -15,12 +16,11 @@
   "editor.matchBrackets": "near",
   "editor.renderWhitespace": "none",
   "editor.cursorBlinking": "solid",
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "GitHub Dark Default",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.editor.highlightModifiedTabs": true,
+  // "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.enablePreview": false,
   "editor.rename.enablePreview": false,
-  "terminal.integrated.gpuAcceleration": "on",
   "editor.bracketPairColorization.enabled": false,
   "search.sortOrder": "type",
   "search.searchOnType": false,
@@ -47,222 +47,104 @@
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": [
-        "<S-l>"
-      ],
-      "commands": [
-        "workbench.action.nextEditor"
-      ]
+      "before": ["<S-l>"],
+      "commands": ["workbench.action.nextEditor"]
     },
     {
-      "before": [
-        "<S-h>"
-      ],
-      "commands": [
-        "workbench.action.previousEditor"
-      ]
+      "before": ["<S-h>"],
+      "commands": ["workbench.action.previousEditor"]
     },
     // Basic
     {
-      "before": [
-        "<leader>",
-        "q"
-      ],
-      "commands": [
-        ":q!"
-      ]
+      "before": ["<leader>", "q"],
+      "commands": [":q!"]
     },
     {
-      "before": [
-        "<leader>",
-        "x"
-      ],
-      "commands": [
-        ":bdelete"
-      ]
+      "before": ["<leader>", "x"],
+      "commands": [":bdelete"]
     },
     {
-      "before": [
-        "<Esc>"
-      ],
-      "commands": [
-        ":noh"
-      ]
+      "before": ["<Esc>"],
+      "commands": [":noh"]
     },
     {
-      "before": [
-        "<leader>",
-        "z"
-      ],
-      "commands": [
-        "workbench.action.toggleZenMode"
-      ]
+      "before": ["<leader>", "z"],
+      "commands": ["workbench.action.toggleZenMode"]
     },
     // LSP
     {
-      "before": [
-        "g",
-        "D"
-      ],
-      "commands": [
-        "editor.action.revealDeclaration"
-      ]
+      "before": ["g", "D"],
+      "commands": ["editor.action.revealDeclaration"]
     },
     {
-      "before": [
-        "g",
-        "d"
-      ],
-      "commands": [
-        "editor.action.revealDefinition"
-      ]
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
     },
     {
-      "before": [
-        "<S-k>"
-      ],
-      "commands": [
-        "editor.action.showHover"
-      ]
+      "before": ["<S-k>"],
+      "commands": ["editor.action.showHover"]
     },
     {
-      "before": [
-        "g",
-        "i"
-      ],
-      "commands": [
-        "editor.action.goToImplementation"
-      ]
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
     },
     {
-      "before": [
-        "<leader>",
-        "D"
-      ],
-      "commands": [
-        "editor.action.goToTypeDefinition"
-      ]
+      "before": ["<leader>", "D"],
+      "commands": ["editor.action.goToTypeDefinition"]
     },
     {
-      "before": [
-        "<leader>",
-        "r",
-        "n"
-      ],
-      "commands": [
-        "editor.action.rename"
-      ]
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
     },
     {
-      "before": [
-        "<leader>",
-        "c",
-        "a"
-      ],
-      "commands": [
-        "editor.action.codeAction"
-      ]
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.codeAction"]
     },
     {
-      "before": [
-        "g",
-        "r"
-      ],
-      "commands": [
-        "editor.action.goToReferences"
-      ]
-    },
-    // {
-    //   "before": [
-    //     "g",
-    //     "l"
-    //   ],
-    //   "commands": [
-    //     "errorLens.toggle"
-    //   ]
-    // },
-    {
-      "before": [
-        "[",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.prevInFiles"
-      ]
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
     },
     {
-      "before": [
-        "]",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.nextInFiles"
-      ]
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prevInFiles"]
     },
     {
-      "before": [
-        "<leader>",
-        "l",
-        "f"
-      ],
-      "commands": [
-        "editor.action.formatDocument"
-      ]
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.nextInFiles"]
     },
     {
-      "before": [
-        "<leader>",
-        "l",
-        "q"
-      ],
-      "commands": [
-        "editor.action.quickFix"
-      ]
+      "before": ["<leader>", "l", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "l", "q"],
+      "commands": ["editor.action.quickFix"]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        ">"
-      ],
-      "after": [
-        ">",
-        "g",
-        "v"
-      ]
+      "before": [">"],
+      "after": [">", "g", "v"]
     },
     {
-      "before": [
-        "<"
-      ],
-      "after": [
-        "<",
-        "g",
-        "v"
-      ]
+      "before": ["<"],
+      "after": ["<", "g", "v"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "f"
-      ],
-      "commands": [
-        "workbench.action.toggleSidebarVisibility"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "e"
-      ],
-      "commands": [
-        "workbench.view.explorer"
-      ]
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
     }
+    // {
+    //   "before": ["<leader>", "f"],
+    //   "commands": ["workbench.action.toggleSidebarVisibility"]
+    // },
   ],
   "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
@@ -275,9 +157,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   // Misc

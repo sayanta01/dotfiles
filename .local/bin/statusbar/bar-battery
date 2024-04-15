@@ -20,4 +20,4 @@ fi
 echo bat="$bat_status $bat_capacity%"
 
 # get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
-# printf "^c$blue^  ﮣ $get_capacity"
+# printf "^c$blue^ 🔌 $get_capacity"
