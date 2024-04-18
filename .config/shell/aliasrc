@@ -42,10 +42,9 @@ else
 	:
 fi
 
-alias la="exa --icons"
 alias ls="ls --color=auto"
-alias lt="exa --icons --tree"
-alias ll="exa --icons -lgha --group-directories-first"
+alias lt="exa --tree"
+alias ll="exa -lgha --group-directories-first"
 alias lm="ls -t -1"
 alias lsn="exa | wc -l"
 alias l-="ls -l | grep -v 'd'" # files only
@@ -71,14 +70,13 @@ alias fix-faillock='faillock --user "$USER" --reset'
 alias lg="lazygit"
 alias add.="git add ."
 alias addup="git add -u"
-alias branch="git branch"
 alias checkout="git checkout"
+alias branch="git branch"
 alias clone="git clone"
+alias status="git status"
 alias commit="git commit -m"
 alias fetch="git fetch"
-alias status="git status"
 alias tag="git tag"
-alias newtag="git tag -a"
 alias pull="git pull origin"
 alias push="git push origin"
 
@@ -115,7 +113,6 @@ alias po="popd"
 alias ffmpeg="ffmpeg -hide_banner"
 alias ffplay="ffplay -hide_banner"
 alias ffprobe="ffprobe -hide_banner"
-alias tsm="transmission-remote"
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias nvidia-setting='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'

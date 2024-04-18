@@ -138,7 +138,7 @@ button selected {
 entry {
     spacing:           0;
     padding:	         8px;
-    text-color:        #f8f8f2;
+    text-color:        @foreground;
     placeholder:       "";
     placeholder-color: @foreground;
 }

@@ -47,12 +47,12 @@ lazyg() {
 	git push
 }
 
-lfcd() {
-	dir=$(lf -print-last-dir "$@")
-	while ! cd "$dir" 2>/dev/null; do
-		dir=$(dirname "$dir")
-	done
-}
+# lfcd() {
+# 	dir=$(lf -print-last-dir "$@")
+# 	while ! cd "$dir" 2>/dev/null; do
+# 		dir=$(dirname "$dir")
+# 	done
+# }
 
 # For some reason, rot13 pops up everywhere
 rot13() {

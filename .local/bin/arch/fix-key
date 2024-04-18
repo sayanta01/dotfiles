@@ -9,7 +9,7 @@ if [ "$distro" = "Artix" ]; then
 elif [ "$distro" = "Arch" ]; then
 	echo "Running Arch-specific commands..."
 	# sudo pacman -Sy archlinux-keyring
- #  sudo pacman-key --refresh
+  # sudo pacman-key --refresh
 else
 	:
 fi
