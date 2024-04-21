@@ -143,7 +143,6 @@ super + {s,f}
         bspc node -f; \
         bspc config pointer_follows_focus false}
 
-
 # set the node flags
 super + ctrl + {m,x,s,p}
 	      bspc node -g {marked,locked,sticky,private}
