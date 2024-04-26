@@ -46,7 +46,7 @@ alias ls="ls --color=auto"
 alias lt="exa --tree"
 alias ll="exa -lgha --group-directories-first"
 alias lm="ls -t -1"
-alias lsn="exa | wc -l"
+alias lsn="ls | wc -l"
 alias l-="ls -l | grep -v 'd'" # files only
 alias ld="ls -l | grep '^d'"   # dirs only
 alias l.="ls -A | grep '^\.'"
