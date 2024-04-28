@@ -54,7 +54,7 @@
     "tooltip": false,
     "interval": 4,
     "exec": "~/.local/bin/statusbar/bar-mem",
-    "on-click": "notify-send \"🧠 Memory hog\" \"$(ps axch -o cmd:16,%mem --sort=-%mem | head)\"",
+    "on-click": "notify-send \"$(ps axch -o cmd:16,%mem --sort=-%mem | head)\"",
     "on-click-right": "kitty --class floating -e htop"
   },
   "custom/date": {
