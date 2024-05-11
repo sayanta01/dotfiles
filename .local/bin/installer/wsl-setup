@@ -1,4 +1,4 @@
-## wsl --help
+## wsl --help ##
 
 # wsl --install
 # wsl --set-default-version 2
@@ -11,7 +11,7 @@
 # wsl -l -v # list installed
 # wsl -t Ubuntu # terminate
 
-sudo apt install -y wget curl x11-xserver-utils dbus-x11 xrdp xfce4 xfce4-goodies
+sudo apt install -y wget x11-xserver-utils dbus-x11 xrdp xfce4 xfce4-goodies
 
 # DE
 sudo sed -i 's/3389/3390/g' /etc/xrdp/xrdp.ini

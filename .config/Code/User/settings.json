@@ -3,7 +3,7 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 19,
   "terminal.integrated.fontSize": 19,
-  "terminal.integrated.gpuAcceleration": "on",
+  // "terminal.integrated.gpuAcceleration": "on",
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
   // "errorLens.enabled": true,
@@ -132,10 +132,10 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.view.explorer"]
-    }
+    // {
+    //   "before": ["<leader>", "e"],
+    //   "commands": ["workbench.view.explorer"]
+    // }
     // {
     //   "before": ["<leader>", "f"],
     //   "commands": ["workbench.action.toggleSidebarVisibility"]

@@ -10,9 +10,9 @@ done
 
 # AUR
 paru -S hyprland-git xdg-desktop-portal-hyprland \
-	wlr-randr hyprpicker swaylock-effects \
+	hyprpicker swaylock-effects wlr-randr \
 	grim slurp swappy swww libsixel \
-	hyprprop wlsunset nwg-look-bin waypipe \
+	wlsunset hyprprop nwg-look-bin waypipe \
 	libva libva-nvidia-driver-git
 
 # https://arewewaylandyet.com/

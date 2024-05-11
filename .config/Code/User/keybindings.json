@@ -5,7 +5,6 @@
     "key": "ctrl+alt+v",
     "command": "toggleVim"
   },
-
   // Navigate buffers
   {
     "key": "ctrl+tab",
@@ -25,7 +24,6 @@
     "command": "selectPrevSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
-
   // Move text up/down
   {
     "key": "alt+j",
@@ -36,7 +34,6 @@
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-
   // Switch window
   {
     "key": "ctrl+h",
@@ -54,21 +51,29 @@
     "key": "ctrl+l",
     "command": "workbench.action.navigateRight"
   },
-
   // Explorer
   {
-    "command": "explorer.newFile",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "space e"
+  },
+  {
+    "key": "space e",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "a",
+    "command": "explorer.newFile",
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "command": "renameFile",
     "key": "r",
+    "command": "renameFile",
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "command": "deleteFile",
     "key": "d",
+    "command": "deleteFile",
     "when": "filesExplorerFocus && !inputFocus"
   }
 ]

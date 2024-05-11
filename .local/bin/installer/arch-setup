@@ -47,14 +47,13 @@ if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 		noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
 		eza bat fd fzf man-db bash-completion meld \
-    kitty neovim htop neofetch cowsay \
+    kitty neovim htop cowsay \
 		bspwm sxhkd polybar rofi dunst slock \
 		qt5ct qt6ct lxappearance xcape pass \
 		pavucontrol playerctl pulsemixer \
 		mpv mediainfo nsxiv maim xwallpaper python-pywal \
 		net-tools wireless_tools network-manager-applet \
 		unrar unzip p7zip file-roller \
-		gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zathura zathura-pdf-mupdf \
 		zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
 		rsync wget aria2 jq \
@@ -103,8 +102,8 @@ printf "Install GUI pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm scrcpy kdeconnect \
-    obs-studio gimp audacity \
-		blueman bluez-utils ntfs-3g
+    blueman bluez-utils ntfs-3g
+# obs-studio gimp audacity
 # virtualbox virtualbox-guest-utils
 # sudo usermod -aG vboxusers "$USER"  # use USB
 else

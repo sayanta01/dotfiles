@@ -13,18 +13,18 @@ remove_pkg() {
 remove_pkg xfce4-appfinder xfce4-power-manager xfwm4-themes
 
 #### Install ####
-#exo              # Application library
-#garcon           # Implementation of the freedesktop.org menu specification
-#tumbler          # D-Bus service for applications to request thumbnails
-#xfce4-session    # Session manager
-#xfce4-settings   # Settings manager
-#xfconf           # Flexible, easy-to-use configuration management system
-#xfdesktop        # Desktop manager
-#xfwm4            # Window manager
-#libxfce4ui       # Commonly used Xfce widgets among Xfce applications
-#libxfce4util     # Basic utility non-GUI functions
-#xfce4-dev-tools  # Developer tools
-#thunar-volman    # Automatic management of removeable devices in Thunar
+# exo              # Application library
+# garcon           # Implementation of the freedesktop.org menu specification
+# tumbler          # D-Bus service for applications to request thumbnails
+# xfce4-session    # Session manager
+# xfce4-settings   # Settings manager
+# xfconf           # Flexible, easy-to-use configuration management system
+# xfdesktop        # Desktop manager
+# xfwm4            # Window manager
+# libxfce4ui       # Commonly used Xfce widgets among Xfce applications
+# libxfce4util     # Basic utility non-GUI functions
+# xfce4-dev-tools  # Developer tools
+# thunar-volman    # Automatic management of removeable devices in Thunar
 
 ##==== Xfce4 Goodies ====##
 install_pkg xfce4-taskmanager xfce4-screenshooter ristretto xfce4-whiskermenu-plugin \
