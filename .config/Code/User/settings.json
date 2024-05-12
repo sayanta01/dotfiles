@@ -46,14 +46,14 @@
     // }
   ],
   "vim.normalModeKeyBindings": [
-    {
-      "before": ["<S-l>"],
-      "commands": ["workbench.action.nextEditor"]
-    },
-    {
-      "before": ["<S-h>"],
-      "commands": ["workbench.action.previousEditor"]
-    },
+    // {
+    //   "before": ["<S-l>"],
+    //   "commands": ["workbench.action.nextEditor"]
+    // },
+    // {
+    //   "before": ["<S-h>"],
+    //   "commands": ["workbench.action.previousEditor"]
+    // },
     // Basic
     {
       "before": ["<leader>", "q"],

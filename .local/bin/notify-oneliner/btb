@@ -6,7 +6,7 @@
 
 connect=$(bluetoothctl info)
 if [ "$connect" = "Missing device address argument" ]; then
-	notify-send "Bluetooth device not connected"
+	notify-send "Bluetooth not connected"
 else
-	notify-send -t 999 "🎧 $(bluetoothctl info | grep Battery | cut -d '(' -f 2 | cut -d ')' -f 1) "
+	notify-send -t 999 "🎧 $(bluetoothctl info | grep Battery | cut -d '(' -f 2 | cut -d ')' -f 1)󰏰 "
 fi

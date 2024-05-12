@@ -5,7 +5,7 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 
 	if [ -n "$file" ]; then
 		curl -F "file=@$file" 0x0.st | wl-copy
-		notify-send "0x0 "
+		notify-send "0x0 📎"
 	fi
 else
 	# file=$(find "$HOME" -type f | dmenu -i -l 20)
@@ -13,6 +13,6 @@ else
 
 	if [ -n "$file" ]; then
 		curl -F "file=@$file" 0x0.st | xclip -sel c
-		notify-send "0x0 "
+		notify-send "0x0 📎"
 	fi
 fi

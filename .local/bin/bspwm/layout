@@ -9,7 +9,7 @@ default="tiled"
 curr_layout=$(bsp-layout get)
 
 if [ "$curr_layout" = $default ]; then
-	bsp-layout set $master && notify-send -t 600 "Tiled 󰯋"
+	bsp-layout set $master && notify-send -t 600 "󰯋"
 else
-	bsp-layout set $default && notify-send -t 600 "Normal "
+	bsp-layout set $default && notify-send -t 600 ""
 fi
