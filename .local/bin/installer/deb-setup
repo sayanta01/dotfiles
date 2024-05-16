@@ -50,14 +50,14 @@ if [ "$choice" = "y" ]; then
 		fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
 		exa fd-find fzf \
 		kitty htop \
-		bspwm polybar rofi dunst slock \
+		bspwm polybar rofi slock dunst \
 		qt5ct lxappearance xcape \
-		pavucontrol playerctl \
+		pavucontrol playerctl pamixer \
 		mpv mediainfo nsxiv maim xwallpaper \
 		net-tools wireless-tools \
 		file-roller lf zathura \
 		zsh zsh-autosuggestions zsh-syntax-highlighting \
-		rsync curl aria2 jq \
+		rsync aria2 jq \
 		xclip xdotool wmname wmctrl \
 		sudo systemctl enable ssh
 	# sudo systemctl disable docker.socket

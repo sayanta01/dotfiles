@@ -42,8 +42,8 @@ fstabgen -U /mnt >> /mnt/etc/fstab  [ Artix ]
 artix-chroot /mnt  [ Artix ]
  arch-chroot /mnt  [ Arch ]
 
-vim /etc/pacman.conf                    # uncmnt ParallerDownloads
-vim /etc/makepkg.conf                   # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
+nvim /etc/pacman.conf                    # uncmnt ParallerDownloads
+nvim /etc/makepkg.conf                   # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
 
 #### configure sys clock ####
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
@@ -52,7 +52,7 @@ hwclock --systohc
 timedatectl set-ntp true  [ Arch ]
 
 #### set localization ####
-vim /etc/locale.gen      # uncmnt US.UTF-8
+nvim /etc/locale.gen      # uncmnt en_US.UTF-8 UTF-8
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C"  [ Artix ] 
@@ -60,7 +60,7 @@ export LC_COLLATE="C"  [ Artix ]
 #### network configuration ####
 echo LilWarmachine > /etc/hostname
 
-vim /etc/hosts
+nvim /etc/hosts
 127.0.0.1   localhost
 ::1         localhost
 127.0.1.1   LilWarmachine.localdomain   LilWarmachine

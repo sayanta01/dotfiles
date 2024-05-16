@@ -4,11 +4,11 @@
 
 # brightness
 XF86MonBrightness{Up,Down}
-	               xbacklight {-inc 10,-dec 10}
+                 brightnessctl s {+5%,5%-}
 	
 # volume
-XF86Audio{LowerVolume,RaiseVolume,Mute}
-         pamixer {-d 5,-i 5,-t}
+XF86Audio{Mute,LowerVolume,RaiseVolume}
+         pamixer {-t,-d 5,-i 5}
 
 XF86AudioMicMute
          pamixer --default-source -t
@@ -44,8 +44,8 @@ super + alt + d
         ~/.local/bin/dm-script/dclip
 
 # volume
-alt + {F2,F3,F4}
-      pamixer {-d 5,-i 5,-t}
+alt + {F1,F2,F3}
+      pamixer {-t,-d 5,-i 5}
 
  # system action
 super + F4
