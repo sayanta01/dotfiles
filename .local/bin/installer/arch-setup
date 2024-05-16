@@ -54,6 +54,7 @@ if [ "$choice" = "y" ]; then
 		mpv mediainfo nsxiv maim xwallpaper python-pywal \
 		net-tools wireless_tools network-manager-applet \
 		unrar unzip p7zip file-roller \
+		gvfs gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zathura zathura-pdf-mupdf \
 		zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
 		rsync wget aria2 jq \
