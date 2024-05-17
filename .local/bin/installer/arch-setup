@@ -160,7 +160,7 @@ fi
 
 # Teletype font
 sudo setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
-sudo su root -c "echo -e FONT='ter-d18b' > /etc/vconsole.conf"
+sudo su root -c "echo -e FONT='ter-120b' > /etc/vconsole.conf"
 
 # Fix qt
 sudo sh -c 'echo "QT_QPA_PLATFORMTHEME=\"qt5ct\"" > /etc/environment'
