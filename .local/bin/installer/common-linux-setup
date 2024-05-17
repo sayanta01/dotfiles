@@ -1,15 +1,8 @@
 #!/bin/sh
 
-# TODO
+# TODO :
 # change default browser -> .profile
-# Todo: Enable touchpad tapping for Laptop 
 # Encrypt home - when u get laptop
-
-# For laptop
-sudo cat <<EOF | sudo tee /etc/NetworkManager/conf.d/wifi-powersave.conf
-[connection]
-wifi.powersave = 2
-EOF
 
 # Cloudflare DNS server
 sudo cat <<EOF | sudo tee /etc/resolv.conf

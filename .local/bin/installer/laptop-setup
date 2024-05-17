@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Enable tap to click
+[ ! -f /etc/X11/xorg.conf.d/40-libinput.conf ] && printf 'Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+        Option "Tapping" "on"
+        Option "NaturalScrolling" "true"
+EndSection' >/etc/X11/xorg.conf.d/40-libinput.conf
+
+sudo cat <<EOF | sudo tee /etc/NetworkManager/conf.d/wifi-powersave.conf
+[connection]
+wifi.powersave = 2
+EOF
