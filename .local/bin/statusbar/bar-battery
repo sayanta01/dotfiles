@@ -3,7 +3,7 @@
 read -r bat_status </sys/class/power_supply/BAT0/status
 read -r bat_capacity </sys/class/power_supply/BAT0/capacity
 if [ "$bat_status" = "Charging" ]; then
-	bat_status=""
+	bat_status=""
 elif [ "$bat_capacity" -gt 80 ]; then
 	bat_status=""
 elif [ "$bat_capacity" -gt 60 ]; then
@@ -17,6 +17,3 @@ else
 fi
 
 echo "$bat_status $bat_capacity%"
-
-# get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
-# printf "^c$blue^ 🔌 $get_capacity"
