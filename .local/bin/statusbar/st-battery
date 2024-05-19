@@ -1,7 +1,8 @@
 #!/bin/sh
 
-read -r bat_status </sys/class/power_supply/BAT0/status
-read -r bat_capacity </sys/class/power_supply/BAT0/capacity
+bat_status=$(cat /sys/class/power_supply/BAT?*/status)
+bat_capacity=$(cat /sys/class/power_supply/BAT?*/capacity)
+
 if [ "$bat_status" = "Charging" ]; then
 	bat_status=""
 elif [ "$bat_capacity" -gt 80 ]; then
