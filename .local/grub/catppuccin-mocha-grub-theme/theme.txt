@@ -26,8 +26,8 @@ terminal-border: "0"
   height = 50%  
   item_font = "Unifont Regular 16"
   # item_font = "ChalkDust Regular 14"
-  item_color = "#CDD6F4"
-  selected_item_color = "#CDD6F4"
+  item_color = "#CDD6E4"
+  selected_item_color = "#CDD6E4"
   icon_width = 30
   icon_height = 30
   item_icon_space = 7
@@ -45,6 +45,6 @@ terminal-border: "0"
   align = "center"
   id = "__timeout__"
   text = "Booting in %d seconds"
-  color = "#CDD6F4"
+  color = "#CDD6E4"
   # font = "ChalkDust Regular 14"
 }
