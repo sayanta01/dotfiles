@@ -46,21 +46,21 @@
   "custom/nettraf": {
     "tooltip": false,
     "interval": 4,
-    "exec": "~/.local/bin/statusbar/nettraf",
+    "exec": "~/.local/bin/statusbar/sb-nettraf",
     "on-click-right": "kitty --class floating -e nmtui"
     // "return-type": "json"
   },
   "custom/memory": {
     "tooltip": false,
     "interval": 4,
-    "exec": "~/.local/bin/statusbar/st-mem",
+    "exec": "~/.local/bin/statusbar/sb-mem",
     // "on-click": "notify-send \"$(ps axch -o cmd:16,%mem --sort=-%mem | head)\"",
     "on-click-right": "kitty --class floating -e htop"
   },
   "custom/date": {
     "tooltip": false,
     "interval": 2,
-    "exec": "~/.local/bin/statusbar/st-time"
+    "exec": "~/.local/bin/statusbar/sb-time"
   },
   "pulseaudio": {
     "tooltip": false,
