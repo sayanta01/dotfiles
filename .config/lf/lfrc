@@ -1,0 +1,165 @@
+# Basic settings
+set icons true
+set previewer "~/.config/lf/scope"
+set cleaner "~/.config/lf/cleaner"
+
+# Functions
+# cmd on-select &{{
+#     lf -remote "send $id set statfmt \"$(eza -ld --color=always "$f")\""
+# }}
+
+# Opening
+cmd open ${{
+    case $(file --mime-type "$f" -b) in
+        text/*|application/json) $EDITOR "$f";;
+        *) xdg-open "$f" ;;
+    esac
+}}
+
+# Archive
+cmd extract ${{
+    set -f
+    case $f in
+        *.tar.bz | *.tbz | *.tar.bz2| *.tbz2) tar xjvf $f;;
+        *.tar.gz | *.tgz) tar xzvf $f;;
+        *.tar.xz | *.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.Z) uncompress $fx;;
+        *.7z) 7z x $f;;
+    esac
+}}
+
+# Move to Trash
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    file=${files%%;*}
+
+    trash-put "$(basename "$file")"
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+# Restore from Trash
+cmd trash-restore ${{
+  tre
+}}
+
+# Create file
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  touch $ans
+}}
+
+# Create directory
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+# Move to <path>
+cmd moveto ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	clear; echo "Move to where?"
+	dest="$(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|')" &&
+	for x in $fx; do
+		eval mv -iv \"$x\" \"$dest\"
+	done &&
+	notify-send "🚚 File(s) moved" "File(s) moved to $dest"
+}}
+
+# Copy to <path>
+cmd copyto ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	clear; echo "Copy to where?"
+	dest="$(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|')" &&
+	for x in $fx; do
+		eval cp -ivr \"$x\" \"$dest\"
+	done &&
+	notify-send "File(s) copied" "File(s) copies to $dest"
+}}
+
+# Permission
+cmd chmod ${{
+  printf "Mode Bits: "
+  read ans
+
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+
+  lf -remote 'send reload'
+}}
+
+# Bulk rename
+cmd bulk-rename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    if [ -n "$fs" ]; then
+        fs="$(basename -a $fs)"
+    else
+        fs="$(ls)"
+    fi
+    printf '%s\n' "$fs" >"$old"
+    printf '%s\n' "$fs" >"$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
+}}
+
+# Remove some defaults bindings
+map d
+map m
+map n
+map o
+map "'"
+map '"'
+
+# Mappings 
+map zh set hidden!
+map E extract
+map dd trash
+map dr trash-restore
+map mf mkfile
+map md mkdir
+map x cut
+map y copy
+map p paste
+map r rename
+map u unselect
+map M moveto
+map C copyto
+map R reload
+map L clear
+map B bulk-rename
+map <enter> open
+map T $kitty
+
+# Shortcuts
+map gh cd ~/desk
+map gd cd ~/dl
+map gD cd ~/dox
+map gp cd ~/pix
+map gv cd ~/vids
+map gm cd ~/music 
+map gl cd ~/.local
+map gc cd ~/.config
