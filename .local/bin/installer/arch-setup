@@ -54,15 +54,14 @@ if [ "$choice" = "y" ]; then
 		mpv mediainfo nsxiv maim xwallpaper python-pywal \
 		net-tools wireless_tools network-manager-applet \
 		unrar unzip p7zip file-roller \
-		gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zathura zathura-pdf-mupdf \
+		gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
-		rsync wget aria2 jq \
+		rsync aria2 jq wget \
 		xdg-utils xdg-user-dirs \
 		pacman-contrib socat exfat-utils \
 		xclip xdotool wmname wmctrl
-	# xorg-xinit xorg-server xorg-xwininfo xorg-xprop xorg-xrandr xorg-xsetroot
-	# xsct brightnessctl
+	# xorg-xinit xorg-server xorg-xwininfo xorg-xsetroot
 else
 	:
 fi
@@ -138,12 +137,12 @@ fi
 if command -v paru >/dev/null 2>&1; then
 	printf "Install AUR pkgs? [y/N]: "
 	read -r choice
-	[ "$choice" = "y" ] && paru -S colorpicker simple-mtpfs yt-dlp
+	[ "$choice" = "y" ] && paru -S xsct colorpicker simple-mtpfs yt-dlp
 else
 	git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru && cd ~/.cache/paru && makepkg -fsri --noconfirm
 	printf "Install AUR pkgs? [y/N]: "
 	read -r choice
-	[ "$choice" = "y" ] && paru -S colorpicker simple-mtpfs yt-dlp
+	[ "$choice" = "y" ] && paru -S xsct colorpicker simple-mtpfs yt-dlp
 fi
 
 # edit_pacman_conf() {
@@ -162,5 +161,5 @@ fi
 sudo setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
 sudo su root -c "echo -e FONT='ter-120b' > /etc/vconsole.conf"
 
-# Fix qt
+# Qt
 sudo sh -c 'echo "QT_QPA_PLATFORMTHEME=\"qt5ct\"" > /etc/environment'

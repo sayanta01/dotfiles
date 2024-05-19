@@ -55,9 +55,10 @@ if [ "$choice" = "y" ]; then
 		pavucontrol playerctl pamixer \
 		mpv mediainfo nsxiv maim xwallpaper \
 		net-tools wireless-tools \
-		file-roller lf zathura \
+		file-roller zathura \
 		zsh zsh-autosuggestions zsh-syntax-highlighting \
 		rsync aria2 jq \
+    xdg-utils \
 		xclip xdotool wmname wmctrl
 		sudo systemctl enable ssh
 	# sudo systemctl disable docker.socket
