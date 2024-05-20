@@ -134,7 +134,7 @@ fi             # FILE
 *.r             󰟔
 *.rproj         󰗆
 *.sol           
-*.pem           
+*.pem           
 
 # file names
 *gruntfile.coffee       
@@ -374,7 +374,7 @@ Vagrantfile             
 *.img               📀
 *.ged               👪
 *.part                         
-*.torrent           
+*.torrent           
 *.magnet            
 *.pro               
 *.desktop           
