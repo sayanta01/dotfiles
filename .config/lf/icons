@@ -163,7 +163,7 @@ fi             # FILE
 *license                
 *node_modules           
 *react.jsx              
-*procfile               
+*procfile               
 *dockerfile             
 *docker-compose.yml     
 *rakefile               
@@ -184,7 +184,7 @@ fi             # FILE
 *.DS_Store              
 *LICENSE                
 *React.jsx              
-*Procfile               
+*Procfile               
 *Dockerfile             
 *Docker-compose.yml     
 *Rakefile               
@@ -198,7 +198,7 @@ fi             # FILE
 *backbone.min.js        
 *require.min.js         󰓾
 *materialize.min.js     
-*materialize.min.css    
+*materialize.min.css    
 *mootools.min.js        
 *vimrc                  
 Vagrantfile             
@@ -373,7 +373,7 @@ Vagrantfile             
 *.iso	              📀
 *.img               📀
 *.ged               👪
-*.part                         
+*.part              
 *.torrent           
 *.magnet            
 *.pro               

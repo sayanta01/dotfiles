@@ -89,7 +89,7 @@ alias py-serve="python -m http.server 8000"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias multitail="multitail --no-repeat -c"
 
-alias ff='fd --type f --hidden --exclude .git | fzf --preview "bat --color=always --theme OneHalfDark -p --line-range=:500 {}" | xargs -r "$EDITOR"'
+alias ff='fd --type f --hidden --exclude .git | fzf --preview "bat --color=always --theme=OneHalfDark -p --line-range=:500 {}" | xargs -r "$EDITOR"'
 alias bf="du -hxs * | sort -rh | head"
 alias psmem="ps axch -o cmd,%mem --sort=-%mem | less"
 alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | less"

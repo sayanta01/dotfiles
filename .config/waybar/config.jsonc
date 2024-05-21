@@ -12,7 +12,7 @@
   "modules-right": [
     "custom/date",
     "custom/nettraf",
-    "pulseaudio",
+    "audio",
     "custom/memory",
     // "battery",
     "tray"

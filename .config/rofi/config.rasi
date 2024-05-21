@@ -1,8 +1,8 @@
 configuration {
-    sidebar-mode: true;
     modi: "drun,run";
-    display-drun: "Apps";
+    sidebar-mode: true;
     drun-display-format: "{icon} {name}";
+    display-drun: "Apps";
     display-run: "Cmds";
 } 
 
@@ -149,7 +149,7 @@ prompt {
 }
 
 inputbar {
-    background-color:  #282a36;
+    background-color:  #282e36;
     margin:            0px 0px 0px 0px;
     border:            8px;
     border-radius:     6px;

@@ -1,9 +1,10 @@
 # Basic settings
 set icons true
-# set previewer "~/.config/lf/scope"
-# set cleaner "~/.config/lf/cleaner"
+set drawbox false
+set previewer "~/.config/lf/preview"
+set cleaner "~/.config/lf/clean"
+set errorfmt ""
 set promptfmt " ❯ \033[34;1m%d\033[0m\033[1m%f\033[0m"
-# set rulerfmt "  %a|  %p|  \033[7;31m %m \033[0m|  \033[7;33m %c \033[0m|  \033[7;35m %s \033[0m|  \033[7;34m %f \033[0m|  %i/%t"
 set rulerfmt "%i/%t"
 set timefmt "Mon _2 Jan 15:04"
 
@@ -132,9 +133,6 @@ map d
 map m
 map "'"
 map '"'
-map a reload
-map b reload
-map <esc> reload
 
 # Mappings
 map zh set hidden!

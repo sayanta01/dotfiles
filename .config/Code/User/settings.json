@@ -6,7 +6,6 @@
   // "terminal.integrated.gpuAcceleration": "on",
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
-  // "errorLens.enabled": true,
   "breadcrumbs.enabled": true,
   "breadcrumbs.filePath": "off",
   "editor.minimap.enabled": false,
@@ -141,11 +140,6 @@
     //   "commands": ["workbench.action.toggleSidebarVisibility"]
     // },
   ],
-  // Misc
-  "workbench.startupEditor": "none",
-  "explorer.confirmDragAndDrop": false,
-  "git.openRepositoryInParentFolders": "never",
-  "telemetry.telemetryLevel": "off",
   // Format
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -165,4 +159,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
+  // Misc
+  "workbench.startupEditor": "none",
+  "explorer.confirmDragAndDrop": false,
+  "git.openRepositoryInParentFolders": "never",
+  "telemetry.telemetryLevel": "off",
 }

@@ -9,7 +9,7 @@ done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 [ -d ~/pix/ss/ ] || mkdir -p ~/pix/ss/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
-chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/
+chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
 # Fonts
 printf "Update/Install Fonts? [y/N]: "

@@ -10,60 +10,59 @@
     height = 299
     origin = top-right
     offset = 9x38
-    scale = 0
-    notification_limit = 20
+    # scale = 0
+    # notification_limit = 20
 
     ## Progress bar ##
-    progress_bar = false
+    # progress_bar = true
     progress_bar_height = 20
     progress_bar_frame_width = 2
     progress_bar_min_width = 199
     progress_bar_max_width = 269
-    indicate_hidden = yes
-    transparency = 0
-    separator_height = 2
-    padding = 8
-    horizontal_padding = 8
+    # indicate_hidden = yes
+    # transparency = 0
+    # separator_height = 2
+    # padding = 8
+    # horizontal_padding = 8
+    # text_icon_padding = 0
     frame_width = 2
-    frame_color = "#abb2bF"
-    gap_size = 0
-    separator_color = frame
-    sort = yes
+    # frame_color = "#aaaaaa"
+    # gap_size = 0
+    # separator_color = frame
+    # sort = yes
 
     ## Text ##
     font = Monospace 12
-    line_height = 0
-    markup = full
-    format = "<b>%s</b>\n%b"
+    # line_height = 0
+    # markup = full
+    # format = "<b>%s</b>\n%b"
     alignment = center
     vertical_alignment = center
-    show_age_threshold = 60
-    ellipsize = middle   
-    ignore_newline = no
-    stack_duplicates = true
-    hide_duplicate_count = false
-    show_indicators = yes
+    # show_age_threshold = 60
+    # ellipsize = middle   
+    # ignore_newline = no
+    # stack_duplicates = true
+    # hide_duplicate_count = false
+    # show_indicators = yes
 
-    ## Sign ##
+    ## Icons ##
     enable_recursive_icon_lookup = false
     # icon_theme = Adwaita
-    icon_position = left
+    # icon_position = left
     min_icon_size = 40
     max_icon_size = 50
     icon_path = false
-    # text_icon_padding = 0
 
     ## History ##
-    sticky_history = yes
-    history_length = 20
+    # sticky_history = yes
+    # history_length = 20
 
     ## Misc ##
-    browser = /usr/xdg/bin-open
-    always_run_script = true
-    title = Dunst
-    class = Dunst
-    corner_radius = 0
-    ignore_dbusclose = false
+    # browser = /usr/xdg/bin-open
+    # always_run_script = true
+    # title = Dunst
+    # class = Dunst
+    # ignore_dbusclose = false
 
     ## Wayland ##
     # Uncomment for notications appear under fullscreen
@@ -73,14 +72,13 @@
     force_xwayland = true
 
     ## Shortcuts ##
-    # close = ctrl+shift+space
     # close_all = ctrl+shift+space
     # history = ctrl+shift+grave
     mouse_left_click = close_current
     mouse_right_click = close_all
 
 [experimental]
-     per_monitor_dpi = false
+     # per_monitor_dpi = false
 
 [urgency_low]
      background = "#010101"
@@ -89,13 +87,13 @@
 
 [urgency_normal]
      background = "#282a36"
-     foreground = "#d8dee9"
+     foreground = "#d8d8d8"
      timeout = 4
      override_pause_level = 20
 
 [urgency_critical]
      background = "#900000"
-     foreground = "#d8dee9"
-     frame_color = "#FF5555"
+     foreground = "#d8d8d8"
+     frame_color = "#FF0000"
      timeout = 6
      override_pause_level = 40

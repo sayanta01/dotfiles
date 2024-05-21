@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# bat --color=always --theme=base16 "$1"
+bat --color=always --theme=OneHalfDark -p "$1"
 
-# Picture preview handler
+# w/Pistol
 file=$1
 w=$2
 h=$3
@@ -16,7 +16,7 @@ fi
 
 pistol "$file"
 
-# File preview handler
+# Luke's
 # set -C -f
 # IFS="$(printf '%b_' '\n')"
 # IFS="${IFS%_}"
