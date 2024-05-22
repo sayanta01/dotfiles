@@ -5,7 +5,7 @@ screenshot
 clock
 effect-blur=29x6
 effect-vignette=1:1
-color=1f1d2e80
+color=1F1d2e80
 font=SF Pro Text
 indicator
 indicator-radius=180
@@ -13,9 +13,9 @@ indicator-thickness=8
 
 line-color=040303
 ring-color=040303
-inside-color=1f1d2e
-text-color=e0def4
-text-caps-lock-color=e0def4
+inside-color=1F1d2e
+text-color=e0deF4
+text-caps-lock-color=e0deF4
 
 key-hl-color=040303
 bs-hl-color=040303
@@ -23,19 +23,19 @@ bs-hl-color=040303
 separator-color=04030300
 
 line-ver-color=040303
-ring-ver-color=31748f
-inside-ver-color=1f1d2e
-text-ver-color=31748f
+ring-ver-color=31748F
+inside-ver-color=1F1d2e
+text-ver-color=31748F
 
 line-wrong-color=040303
-ring-wrong-color=eb6f92
-inside-wrong-color=1f1d2e
-text-wrong-color=e0def4
+ring-wrong-color=eb6F92
+inside-wrong-color=1F1d2e
+text-wrong-color=e0deF4
 
 line-clear-color=040303
-ring-clear-color=9ccfd8
-inside-clear-color=1f1d2e
-text-clear-color=e0def4
+ring-clear-color=9ccFd8
+inside-clear-color=1F1d2e
+text-clear-color=e0deF4
 
 grace=0
 grace-no-mouse

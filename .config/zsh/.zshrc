@@ -45,7 +45,7 @@ HISTSIZE=9000
 SAVEHIST=9000
 HISTFILE="$HOME/.local/share/history"
 setopt hist_ignore_space       # ignore commands that start with space
-setopt hist_ignore_all_dups    # ignore duplicated commands history list
+setopt hist_ignore_all_dups    # ignore duplicated commands
 setopt hist_verify             # show command with history expansion
 
 # Load aliases & shortcuts

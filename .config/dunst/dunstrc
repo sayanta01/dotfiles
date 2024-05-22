@@ -86,7 +86,7 @@
      timeout = 2
 
 [urgency_normal]
-     background = "#282a36"
+     background = "#313244"
      foreground = "#d8d8d8"
      timeout = 4
      override_pause_level = 20

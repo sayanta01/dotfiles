@@ -10,17 +10,16 @@ done
 
 # AUR
 paru -S hyprland-git xdg-desktop-portal-hyprland \
-	hyprpicker swaylock-effects wlr-randr \
+	hyprpicker swaylock-effects-git wlr-randr \
 	grim slurp swappy swww libsixel \
-	wlsunset hyprprop nwg-look-bin waypipe \
+	wlsunset hyprprop-git nwg-look-bin \
 	libva libva-nvidia-driver-git
 
 # https://arewewaylandyet.com/
 # waydroid - Container-based approach to boot a full Android system
 
 sudo pacman -S --noconfirm waybar wlroots polkit-gnome \
-	qt5-wayland qt6-wayland sddm-runit \
-	wl-clipboard wf-recorder
+	qt5-wayland qt6-wayland wl-clipboard wf-recorder
 
 sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop
 [Desktop Entry]

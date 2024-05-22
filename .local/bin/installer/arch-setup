@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# https://dither8.xyz/guide/arch-postinstall
 for dir in desk dl dox music pix vids pub templates; do
 	mkdir -p ~/"$dir"
 done
@@ -83,9 +84,9 @@ if [ "$distro" = "Artix" ]; then
 	# sudo pacman -S --noconfirm pulseaudio pulseaudio-bluetooth
 
 	## Services
-	sudo pacman -S --noconfirm openssh-runit dbus-runit docker-runit bluez-runit
+	sudo pacman -S --noconfirm dbus-runit openssh-runit docker-runit bluez-runit
+  sudo ln -s /etc/runit/sv/dbus /run/runit/service
 	sudo ln -s /etc/runit/sv/sshd /run/runit/service
-	sudo ln -s /etc/runit/sv/dbus /run/runit/service
 	sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 	sudo ln -s /run/runit/sv/docker /run/runit/service
 	sudo touch /run/runit/service/docker/down
@@ -94,8 +95,9 @@ else
 	systemctl --user --now enable pipewire pipewire-pulse wireplumber
 
 	## Services
-	sudo pacman -S --noconfirm openssh dbus docker bluez
-	sudo systemctl disable docker.socket
+	sudo pacman -S --noconfirm dbus openssh docker bluez
+  sudo systemctl enable bluetooth.service
+  sudo systemctl disable docker.service
 fi
 
 # GUI apps

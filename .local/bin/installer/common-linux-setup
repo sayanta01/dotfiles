@@ -1,8 +1,7 @@
 #!/bin/sh
 
 # TODO :
-# change default browser -> .profile
-# Encrypt home - when u get laptop
+# change default browser -> .profile / mimeapps.list
 
 # Cloudflare DNS server
 sudo cat <<EOF | sudo tee /etc/resolv.conf

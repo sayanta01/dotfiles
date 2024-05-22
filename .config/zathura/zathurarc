@@ -1,43 +1,3 @@
-# Theme
-set notification-error-bg       "#FF5555" # Red
-set notification-error-fg       "#dadada" # Foreground
-set notification-warning-bg     "#FFb86c" # Orange
-set notification-warning-fg     "#22292b" # Selection
-set notification-bg             "#010101" 
-set notification-fg             "#dadada" 
-
-set completion-bg               "#1F2628" # Background
-set completion-fg               "#6d7476" # Comment
-set completion-group-bg         "#181F21" # Background
-set completion-group-fg         "#dadada" # Comment
-set completion-highlight-bg     "#6da4cd" # Selection
-set completion-highlight-fg     "#22292b" # Foreground
-
-set index-bg                    "#010101" 
-set index-fg                    "#dadada" 
-set index-active-bg             "#22292b" 
-set index-active-fg             "#dadada" 
-
-set inputbar-bg                 "#010101" 
-set inputbar-fg                 "#dadada" 
-set statusbar-bg                "#010101"  
-set statusbar-fg                "#dadada"  
-
-set highlight-color             "#FFb86c" # Orange
-set highlight-active-color      "#FF79c6" # Pink
-
-set default-bg                  "#010101"
-set default-fg                  "#dadada"
-
-set render-loading              true
-set render-loading-fg           "#010101"
-set render-loading-bg           "#dadada"
-
-# Recolor mode setting
-set recolor-lightcolor          "#010101" # Background
-set recolor-darkcolor           "#dadada" # Foreground
-
-# Startup options
 set sandbox none
 set recolor true
 set font "Monospace 10"
@@ -48,12 +8,9 @@ set adjust-open width
 set selection-clipboard clipboard
 set statusbar-h-padding 0
 set statusbar-v-padding 0
-
-# https://www.huge-man-linux.net/man1/zathura.html
 map u scroll half-up
 map d scroll half-down
 map D toggle_page_mode
 map R reload
 map r rotate
 map P print
-map i recolor
