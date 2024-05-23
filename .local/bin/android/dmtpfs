@@ -25,5 +25,5 @@ fi
 if [ -z "$(find "$Dir$Name" -maxdepth 0 -empty)" ]; then
 	fusermount -u "$Dir$Name" && gio trash "$Dir" && notify-send "Device Unmounted 📵"
 else
-	simple-mtpfs --device "$Id" "$Dir$Name" && notify-send "📲 Device Mounted in $Dir$Name"
+	simple-mtpfs --device "$Id" "$Dir$Name" && notify-send "Device Mounted in $Dir$Name"
 fi
