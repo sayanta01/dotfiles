@@ -1,6 +1,4 @@
-
 ![](Art/Sweet-theme.png)
-
 
 #### Installation
 
@@ -13,4 +11,3 @@ gsettings set org.gnome.desktop.interface gtk-theme "Sweet"
 gsettings set org.gnome.desktop.wm.preferences theme "Sweet"
 ```
 or Change via distribution specific tool.
-

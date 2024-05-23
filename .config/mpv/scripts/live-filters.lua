@@ -14,20 +14,12 @@
 -- to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
 -- and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 --
--- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software
 --
 -- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 -- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 -- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
--- IN THE SOFTWARE.
-
-
-
-
---[[ Shift - w ]]
-
-
-
+-- IN THE SOFTWARE
 
 local utils = require("mp.utils")
 local options = require("mp.options")
@@ -425,7 +417,7 @@ function update()
 	-- inline with the surrounding text, but it sets the advance to the width
 	-- of the drawing. So the cursor doesn't affect layout too much, make it as
 	-- thin as possible and make it appear to be 1px wide by giving it 0.5px
-	-- horizontal borders.
+	-- horizontal borders
 	local cheight = opts["font-size"] * 8
 	local cglyph = "{\\r"
 		.. "\\1a&H44&\\3a&H44&\\4a&H99&"
@@ -440,7 +432,7 @@ function update()
 	local after_cur = ass_escape(line:sub(cursor))
 
 	-- Render log messages as ASS. This will render at most screeny / font-size
-	-- messages.
+	-- messages
 	local log_ass = ""
 	local log_messages = #log_ring
 	local log_max_lines = math.ceil(screeny / opts["font-size"])
@@ -509,7 +501,7 @@ function show_and_type(text)
 end
 
 -- Naive helper function to find the next UTF-8 character in 'str' after 'pos'
--- by skipping continuation bytes. Assumes 'str' contains valid UTF-8.
+-- by skipping continuation bytes. Assumes 'str' contains valid UTF-8
 function next_utf8(str, pos)
 	if pos > str:len() then
 		return pos
@@ -645,7 +637,7 @@ function go_history(new_pos)
 
 	-- If the user was editing a non-history line, save it as the last history
 	-- entry. This makes it much less frustrating to accidentally hit Up/Down
-	-- while editing a line.
+	-- while editing a line
 	if old_pos == #history + 1 and line ~= "" and history[#history] ~= line then
 		history[#history + 1] = line
 	end
@@ -681,7 +673,7 @@ end
 function prev_word()
 	-- This is basically the same as next_word() but backwards, so reverse the
 	-- string in order to do a "backwards" find. This wouldn't be as annoying
-	-- to do if Lua didn't insist on 1-based indexing.
+	-- to do if Lua didn't insist on 1-based indexing
 	cursor = line:len() - select(2, line:reverse():find("%s*[^%s]*", line:len() - cursor + 2)) + 1
 	update()
 end
@@ -697,10 +689,10 @@ end
 --   pattern: A Lua pattern used in string:find. Should return the start and
 --            end positions of the word to be completed in the first and second
 --            capture groups (using the empty parenthesis notation "()")
---   list: A list of candidate completion values.
+--   list: A list of candidate completion values
 --   append: An extra string to be appended to the end of a successful
 --           completion. It is only appended if 'list' contains exactly one
---           match.
+--           match
 local completers = {
 
 	{ pattern = "^%s*()[%w_-]+()$", list = vfx_list, append = "" },
@@ -708,7 +700,7 @@ local completers = {
 
 -- Use 'list' to find possible tab-completions for 'part.' Returns the longest
 -- common prefix of all the matching list items and a flag that indicates
--- whether the match was unique or not.
+-- whether the match was unique or not
 function complete_match(part, list)
 	local completion = nil
 	local full_match = false
@@ -749,9 +741,10 @@ function complete()
             -- Multiple input commands can be separated by semicolons, so all
             -- completions that are anchored at the start of the string with
             -- '^' can start from a semicolon as well. Replace ^ with ; and try
-            -- to match again.
+            -- to match again
             _, _, s, e = before_cur:find(completer.pattern:gsub('^^', ';'))
         end--]]
+
 		if s then
 			-- If the completer's pattern found a word, check the completer's
 			-- list for possible completions
@@ -760,7 +753,7 @@ function complete()
 			if c then
 				-- If there was only one full match from the list, add
 				-- completer.append to the final string. This is normally a
-				-- space or a quotation mark followed by a space.
+				-- space or a quotation mark followed by a space
 				if full and completer.append then
 					c = c .. completer.append
 				end
@@ -877,9 +870,9 @@ end
 
 -- The REPL has pretty specific requirements for key bindings that aren't
 -- really satisified by any of mpv's helper methods, since they must be in
--- their own input section, but they must also raise events on key-repeat.
+-- their own input section, but they must also raise events on key-repeat
 -- Hence, this function manually creates an input section and puts a list of
--- bindings in it.
+-- bindings in it
 function add_repl_bindings(bindings)
 	local cfg = ""
 	for i, binding in ipairs(bindings) do
@@ -899,7 +892,7 @@ local binding_name_map = {
 }
 
 -- List of input bindings. This is a weird mashup between common GUI text-input
--- bindings and readline bindings.
+-- bindings and readline bindings
 local bindings = {
 	{
 		"esc",
@@ -1012,7 +1005,7 @@ local bindings = {
 -- inclusive. Note, this is a pretty hacky way to do text input. mpv's input
 -- system was designed for single-key key bindings rather than text input, so
 -- things like dead-keys and non-ASCII input won't work. This is probably okay
--- though, since all mpv's commands and properties can be represented in ASCII.
+-- though, since all mpv's commands and properties can be represented in ASCII
 for b = (" "):byte(), ("~"):byte() do
 	local c = string.char(b)
 	local binding = binding_name_map[c] or c

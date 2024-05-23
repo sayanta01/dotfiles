@@ -4,21 +4,17 @@ configuration {
     drun-display-format: "{icon} {name}";
     display-drun: "Apps";
     display-run: "Cmds";
-} 
+}
 
 * {
     font:                           "Cantarell 12";
     foreground:                     #F8F8F2;
     background:                     #010101;
-    highlight:	             		    #60Fa7b;
-    // red:                            #973d46;
-    // darkred:                        #973d46;
-    // darkblue:                       #517ba5;
-    // darkyellow:                     #e0ae4a;
+    highlight:	             		    #60Fb7b;
     urgent-background:              #FF5555;
-    blue:                           #517ba5;
-    yellow:                         #e0ae4a;
-    separatorcolor:                 #a7b5cd;
+    blue:                           #517bb5;
+    yellow:                         #e09e4b;
+    separatorcolor:                 #b7b5cd;
     border:                         #1b1e25;
     bg-col-light:                   #689d69;
     tab:                            #689d66;
@@ -58,7 +54,7 @@ listview {
 
 element {
     border:            0;
-    padding:           8px; 
+    padding:           8px;
 }
 
 element normal.normal {
@@ -120,7 +116,7 @@ button {
     margin:            0px 8px 6px 8px;
     background-color:  @blank;
     text-color:        @tab;
-    vertical-align:    0.5; 
+    vertical-align:    0.5;
     horizontal-align:  0.5;
     border-radius:     4px;
     border:            0px 0px 4px 0px;
@@ -158,9 +154,9 @@ inputbar {
 }
 
 element-text {
-    // cursor:            inherit;
     highlight:         inherit;
     text-color:        inherit;
+    // cursor:            inherit;
 }
 
 element-icon {
