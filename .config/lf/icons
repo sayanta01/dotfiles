@@ -99,7 +99,7 @@ fi             # FILE
 *.scala         
 *.go            
 *.dart          
-*.xul           󰏚
+*.xul           
 *.sln           
 *.suo           
 *.pl            
@@ -128,8 +128,11 @@ fi             # FILE
 *.ts            
 *.tsx           
 *.jl            
+*.pp            
 *.vue           
 *.elm           
+*.swift         󰀷
+*.xcplayground  󰀷
 *.tex           
 *.r             󰟔
 *.rproj         󰗆
@@ -194,7 +197,7 @@ fi             # FILE
 
 # file patterns
 *jquery.min.js          
-*angular.min.js         
+*angular.min.js         󰚿
 *backbone.min.js        
 *require.min.js         󰓾
 *materialize.min.js     
@@ -331,7 +334,7 @@ Vagrantfile             
 *.pdf	              
 *.djvu              
 *.epub              
-*.elf               
+*.elf               
 *.exe               󰨡
 *.appx              󰨡
 *.msi               󰨡
@@ -372,9 +375,8 @@ Vagrantfile             
 *.log	              󰌱
 *.iso	              📀
 *.img               📀
-*.ged               👪
 *.part              
-*.torrent           
+*.torrent           
 *.magnet            
 *.pro               
-*.desktop           
+*.desktop           󰟀
