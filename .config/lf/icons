@@ -149,7 +149,7 @@ fi             # FILE
 *.gitconfig             
 *.gitignore             
 *.gitattributes         
-*.gitlab-ci.yml         
+*.gitlab-ci.yml         󰮠
 *.bashrc                
 *.zshrc                 
 *.zshenv                

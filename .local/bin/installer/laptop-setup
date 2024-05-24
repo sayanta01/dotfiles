@@ -2,6 +2,8 @@
 
 sudo pacman -S --noconfirm brightnessctl
 
+# https://youtu.be/Pn2iUgW3l6w?si=-O52reqVLFTnNws9
+
 git clone --depth=1 https://github.com/AdnanHodzic/auto-cpufreq.git
 cd auto-cpufreq && sudo ./auto-cpufreq-installer
 
