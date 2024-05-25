@@ -53,12 +53,12 @@ fi             # FILE
 *.toml          󰰤
 *.bat           
 *.mk            
-*.jpg	          
-*.jpeg          
-*.bmp           
-*.png         	
+# *.jpg	          
+# *.jpeg          
+# *.bmp           
+# *.png         	
+# *.gif	          
 *.webp          
-*.gif	          
 *.ico           
 *.twig          󰥛
 *.cpp           
@@ -77,7 +77,6 @@ fi             # FILE
 *.nix           
 *.lua           
 *.java          
-*.jar           
 *.sh            
 *.fish          
 *.bash          
@@ -122,7 +121,7 @@ fi             # FILE
 *.leex          
 *.heex          
 *.vim           
-*.ai            
+*.ai            󰯫
 *.psd           
 *.psb           
 *.ts            
@@ -137,7 +136,7 @@ fi             # FILE
 *.r             󰟔
 *.rproj         󰗆
 *.sol           
-*.pem           
+*.pem           
 
 # file names
 *gruntfile.coffee       
@@ -169,6 +168,9 @@ fi             # FILE
 *procfile               
 *dockerfile             
 *docker-compose.yml     
+*docker-compose.yaml    
+*compose.yml            
+*compose.yaml           
 *rakefile               
 *config.ru              
 *gemfile                
@@ -220,7 +222,7 @@ Vagrantfile             
 *.txz               
 *.tzo               
 *.t7z               
-*.zip  	            
+*.zip  	            
 *.z                 
 *.dz                
 *.gz                
@@ -340,7 +342,7 @@ Vagrantfile             
 *.msi               󰨡
 *.app               󰀶
 *.txt	              
-*.mom	              
+*.mom	              
 *.me	              󱞏
 *.ms                
 *.gpg               🔐
@@ -348,7 +350,6 @@ Vagrantfile             
 *.key               🔑
 *.rsa               🔑
 *.pem               🔑
-*.sig               🪪
 *.csv	              📓
 *.xlsx              📓
 *.r                 📊
@@ -376,7 +377,7 @@ Vagrantfile             
 *.iso	              📀
 *.img               📀
 *.part              
-*.torrent           
+*.torrent           
 *.magnet            
 *.pro               
 *.desktop           󰟀
