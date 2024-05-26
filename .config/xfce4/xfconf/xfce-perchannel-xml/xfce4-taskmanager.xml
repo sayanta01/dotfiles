@@ -2,17 +2,15 @@
 
 <channel name="xfce4-taskmanager" version="1.0">
   <property name="window-maximized" type="bool" value="false"/>
-  <property name="window-width" type="int" value="860"/>
-  <property name="window-height" type="int" value="969"/>
   <property name="interface" type="empty">
     <property name="show-all-processes" type="bool" value="false"/>
+		<property name="show-application-icons" type="bool" value="true"/>
+		<property name="full-command-line" type="bool" value="true"/>
     <property name="process-tree" type="bool" value="true"/>
+		<property name="show-legend" type="bool" value="true"/>
+		<property name="more-precision" type="bool" value="false"/>
     <property name="refresh-rate" type="uint" value="1000"/>
-    <property name="show-application-icons" type="bool" value="true"/>
-    <property name="full-command-line" type="bool" value="true"/>
-    <property name="show-legend" type="bool" value="true"/>
-    <property name="more-precision" type="bool" value="false"/>
   </property>
-  <property name="prompt-terminate-task" type="bool" value="false"/>
+  <property name="prompt-terminate-task" type="bool" value="true"/>
   <property name="show-status-icon" type="bool" value="false"/>
 </channel>

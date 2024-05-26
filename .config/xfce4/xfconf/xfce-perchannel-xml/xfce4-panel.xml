@@ -18,14 +18,14 @@
         <value type="int" value="2"/>
         <value type="int" value="5"/>
         <value type="int" value="9"/>
-        <value type="int" value="12"/>
+        <value type="int" value="10"/>
         <value type="int" value="8"/>
         <value type="int" value="6"/>
         <value type="int" value="1"/>
       </property>
       <property name="enable-struts" type="bool" value="true"/>
+			<property name="autohide-behavior" type="uint" value="0"/>
       <property name="length-adjust" type="bool" value="true"/>
-      <property name="autohide-behavior" type="uint" value="0"/>
       <property name="mode" type="uint" value="0"/>
     </property>
   </property>
@@ -34,10 +34,11 @@
       <property name="grouping" type="bool" value="true"/>
       <property name="show-labels" type="bool" value="true"/>
       <property name="flat-buttons" type="bool" value="true"/>
-      <property name="show-tooltips" type="bool" value="false"/>
+      <property name="show-tooltips" type="bool" value="true"/>
       <property name="sort-order" type="uint" value="0"/>
       <property name="include-all-monitors" type="bool" value="false"/>
       <property name="window-scrolling" type="bool" value="false"/>
+			<property name="middle-click" type="uint" value="1"/>
     </property>
     <property name="plugin-3" type="string" value="separator">
       <property name="expand" type="bool" value="false"/>
@@ -54,13 +55,10 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-items" type="array">
-        <value type="string" value="KDE Connect Indicator"/>
-        <value type="string" value="TelegramDesktop"/>
         <value type="string" value="blueman"/>
       </property>
       <property name="known-legacy-items" type="array">
         <value type="string" value="task manager"/>
-        <value type="string" value="xfce terminal"/>
       </property>
     </property>
     <property name="plugin-8" type="string" value="pulseaudio">
@@ -70,11 +68,10 @@
       <property name="enable-wnck" type="bool" value="false"/>
       <property name="enable-multimedia-keys" type="bool" value="false"/>
       <property name="enable-mpris" type="bool" value="false"/>
-      <property name="known-players" type="string" value="Chrome;firefox;spotify"/>
     </property>
-    <property name="plugin-12" type="string" value="clock">
+    <property name="plugin-10" type="string" value="clock">
       <property name="digital-layout" type="uint" value="3"/>
-      <property name="digital-time-font" type="string" value="SF Pro Text Medium 11"/>
+			<property name="digital-time-font" type="string" value="Cantarell 12"/>
       <property name="digital-time-format" type="string" value="%a, %d %b 🕖 %I:%M"/>
       <property name="mode" type="uint" value="2"/>
     </property>
@@ -93,18 +90,10 @@
       <property name="favorites-in-recent" type="bool" value="true"/>
       <property name="recent" type="array">
         <value type="string" value="thunar-settings.desktop"/>
-        <value type="string" value="thunar.desktop"/>
-        <value type="string" value="xfce-mouse-settings.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="xfce4-accessibility-settings.desktop"/>
-        <value type="string" value="nm-connection-editor.desktop"/>
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
-        <value type="string" value="google-chrome.desktop"/>
-        <value type="string" value="xfce4-screenshooter.desktop"/>
-        <value type="string" value="virt-manager.desktop"/>
       </property>
+			<property name="show-command-settings" type="bool" value="false"/>
       <property name="show-command-lockscreen" type="bool" value="false"/>
-      <property name="show-command-settings" type="bool" value="false"/>
       <property name="show-command-logout" type="bool" value="false"/>
       <property name="show-command-menueditor" type="bool" value="false"/>
       <property name="show-command-profile" type="bool" value="false"/>

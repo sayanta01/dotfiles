@@ -62,29 +62,25 @@
     <property name="show-workspace-names" type="bool" value="true"/>
     <property name="show" type="bool" value="false"/>
     <property name="show-icons" type="bool" value="true"/>
-    <property name="show-sticky-once" type="bool" value="false"/>
     <property name="show-submenus" type="bool" value="false"/>
+		<property name="show-sticky-once" type="bool" value="false"/>
   </property>
   <property name="desktop-icons" type="empty">
     <property name="file-icons" type="empty">
       <property name="show-home" type="bool" value="false"/>
       <property name="show-filesystem" type="bool" value="false"/>
+			<property name="show-trash" type="bool" value="false"/>
       <property name="show-removable" type="bool" value="false"/>
       <property name="show-network-removable" type="bool" value="false"/>
       <property name="show-device-removable" type="bool" value="false"/>
       <property name="show-unknown-removable" type="bool" value="false"/>
-      <property name="show-trash" type="bool" value="false"/>
     </property>
     <property name="show-tooltips" type="bool" value="true"/>
-    <property name="use-custom-font-size" type="bool" value="false"/>
+		<property name="show-hidden-files" type="bool" value="false"/>
   </property>
   <property name="desktop-menu" type="empty">
-    <property name="show-icons" type="bool" value="true"/>
-    <property name="show" type="bool" value="false"/>
-    <property name="show-delete" type="bool" value="true"/>
-  </property>
-  <property name="last" type="empty">
-    <property name="window-width" type="int" value="895"/>
-    <property name="window-height" type="int" value="584"/>
+		<property name="show-delete" type="bool" value="true"/>
+		<property name="show" type="bool" value="false"/>
+		<property name="show-icons" type="bool" value="true"/>
   </property>
 </channel>
