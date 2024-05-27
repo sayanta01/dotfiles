@@ -47,10 +47,6 @@ super + alt + d
 alt + {F1,F2,F3}
       pamixer {-t,-d 5,-i 5}
 
- # system action
-super + F4
-        ~/.local/bin/dm-script/sys-action
-
 # music
 alt + {F6,F7,F8} 
       playerctl {previous,--player=spotify play-pause,next}   
@@ -85,8 +81,12 @@ ctrl + alt + l
        ~/.local/bin/lockscreen
 	     
 # killer
-ctrl + alt + Delete
+ctrl + shift + Escape
        ~/.local/bin/dm-script/kil	     
+
+# system action
+			 ctrl + alt + Delete
+			 ~/.local/bin/dm-script/sys-action
 
 # scratchpad
 alt + Return
