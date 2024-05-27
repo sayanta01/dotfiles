@@ -58,7 +58,7 @@ if [ "$choice" = "y" ]; then
 		zathura zathura-pdf-mupdf \
 		gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
 		zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
-		rsync aria2 jq wget \
+		rsync aria2 jq \
 		xdg-utils xdg-user-dirs \
 		pacman-contrib socat exfat-utils \
 		xclip xdotool wmname wmctrl
