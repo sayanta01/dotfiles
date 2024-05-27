@@ -85,7 +85,7 @@ ctrl + shift + Escape
        ~/.local/bin/dm-script/kil	     
 
 # system action
-			 ctrl + alt + Delete
+ctrl + alt + Delete
 			 ~/.local/bin/dm-script/sys-action
 
 # scratchpad
