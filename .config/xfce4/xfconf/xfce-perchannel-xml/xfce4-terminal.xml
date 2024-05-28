@@ -13,10 +13,10 @@
   <property name="misc-confirm-close" type="bool" value="false"/>
   <property name="misc-borders-default" type="bool" value="false"/>
   <property name="color-bold-is-bright" type="bool" value="true"/>
-  <property name="color-foreground" type="string" value="#e0def4"/>
-  <property name="color-background" type="string" value="#191724"/>
+  <property name="color-foreground" type="string" value="#e0deF4"/>
+  <property name="color-background" type="string" value="#010101"/>
   <property name="color-background-vary" type="bool" value="false"/>
-  <property name="color-cursor-foreground" type="string" value=""/>
+  <property name="color-cursor-foreground" type="string" value="#0087bd"/>
   <property name="color-cursor" type="string" value=""/>
   <property name="color-cursor-use-default" type="bool" value="true"/>
   <property name="color-selection" type="string" value=""/>
@@ -24,9 +24,9 @@
   <property name="color-selection-use-default" type="bool" value="true"/>
   <property name="color-bold" type="string" value=""/>
   <property name="color-bold-use-default" type="bool" value="true"/>
-  <property name="color-palette" type="string" value="#26233a;#eb6f92;#9ccfd8;#f6c177;#31748f;#c4a7e7;#ebbcba;#e0def4;#6e6a86;#eb6f92;#9ccfd8;#f6c177;#31748f;#c4a7e7;#ebbcba;#e0def4"/>
+	<property name="color-palette" type="string" value="#26233b;#eb6F92;#9ccfd8;#F6c177;#31748F;#c497e7;#ebbcbb;#e0deF4;#6e6b86;#eb6F92;#9ccfd8;#F6c177;#31748F;#c497e7;#ebbcbb;#e0deF4"/>
   <property name="color-use-theme" type="bool" value="false"/>
-  <property name="tab-activity-color" type="string" value="#aa0000"/>
+  <property name="tab-activity-color" type="string" value="#389DAA"/>
   <property name="misc-middle-click-opens-uri" type="bool" value="true"/>
   <property name="scrolling-on-keystroke" type="bool" value="true"/>
   <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_NONE"/>

@@ -23,7 +23,7 @@
 		<property name="double_click_distance" type="int" value="5"/>
 		<property name="double_click_time" type="int" value="250"/>
 		<property name="easy_click" type="string" value="Super"/>
-		<property name="focus_delay" type="int" value="14"/>
+		<property name="focus_delay" type="int" value="250"/>
 		<property name="focus_hint" type="bool" value="true"/>
 		<property name="focus_new" type="bool" value="true"/>
 		<property name="frame_opacity" type="int" value="100"/>

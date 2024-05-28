@@ -2,7 +2,7 @@
 
 # chrome://flags - ozone > auto
 # about:config - media.peerconnection.enabled > true
-# https://wiki.hyprland.org/Nvidia/
+# https://wiki.hyprland.org/Nvidia
 
 for dir in hypr waybar swaylock xsettingsd nwg-look; do
 	cp -r "$HOME/dotfiles/.config/$dir" "$HOME/.config"
@@ -15,7 +15,7 @@ paru -S hyprland-git xdg-desktop-portal-hyprland \
 	wlsunset hyprprop-git nwg-look-bin \
 	libva libva-nvidia-driver-git
 
-# https://arewewaylandyet.com/
+# https://arewewaylandyet.com
 # waydroid - Container-based approach to boot a full Android system
 
 sudo pacman -S --noconfirm waybar wlroots polkit-gnome \
