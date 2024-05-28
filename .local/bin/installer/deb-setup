@@ -8,8 +8,8 @@ for dots in .bashrc .profile .xprofile .zprofile; do
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 [ -d ~/pix/ss/ ] || mkdir -p ~/pix/ss/
-cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
-chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
+cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config/
+chmod -R +x ~/.config/bspwm/ ~/.config/sxhkd/sxhkd.sh ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
 # Fonts
 printf "Update/Install Fonts? [y/N]: "
@@ -25,18 +25,13 @@ else
 fi
 
 # Suckless
-sudo apt install -y libx11-dev libxft-dev libxinerama-dev
-[ -d ./dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu
-if ! command -v dmenu >/dev/null; then
-	cd dmenu && sudo make clean install
-fi
+git clone --depth=1 https://github.com/sayanta01/dmenu ~/.config/dmenu && cd ~/.config/dmenu && sudo make clean install
 
-# Vim
-[ -d ~/.config/nvim/ ] || git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
-# Tmux
-[ -d ~/.config/tmux/plugins/ ] || git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+# Tools
+git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
+git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
-# Themes
+# Looks
 git clone --depth=1 https://github.com/sayanta01/BeautySolar ~/.local/share/icons/BeautySolar
 sudo cp -r ~/.local/share/icons/BeautySolar /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
@@ -48,7 +43,7 @@ if [ "$choice" = "y" ]; then
 	sudo apt install -y ssh tmux apt-transport-https \
 		fonts-cantarell fonts-terminus \
 		fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
-		exa fd-find fzf \
+		exa fd-find fzf bash-completion \
 		kitty htop \
 		bspwm polybar rofi slock dunst \
 		qt5ct lxappearance xcape \
@@ -71,10 +66,6 @@ fi
 
 # Fix debian
 sudo ln -s /usr/bin/fdfind /usr/bin/fd
-# sudo apt purge xfce4-clipman catfish onboard cherrytree plymouth
-
-# distro=$(lsb_release -a | awk -F ':\t' '/Distributor ID/ {print $2}')
-# [ "$distro" = "Kali" ] && sudo apt purge qterminal kali-hidpi-mode
 
 if [ -f /etc/debian_version ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then

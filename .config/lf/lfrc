@@ -29,7 +29,7 @@ cmd extract ${{
         *.tar.gz | *.tgz) tar xzvf $f;;
         *.tar.xz | *.txz) tar xJvf $f;;
         *.zip) unzip $f;;
-        *.rar) unrar x $f;;
+        *.rar) 7z x $f;;
         *.Z) uncompress $fx;;
         *.7z) 7z x $f;;
     esac

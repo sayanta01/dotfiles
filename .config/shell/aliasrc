@@ -10,7 +10,6 @@ if [ -f /etc/arch-release ]; then
 	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 elif [ -f /etc/debian_version ]; then
 	# Debian aliases
-	alias uplist="apt list --upgradable"
 	alias remove="sudo apt remove --purge"
 	alias clean="sudo apt -y autoremove; sudo apt clean"
 	alias fix-deb="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"

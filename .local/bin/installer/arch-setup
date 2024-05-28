@@ -9,10 +9,9 @@ for dots in .bashrc .profile .xprofile .zprofile; do
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 [ -d ~/pix/ss/ ] || mkdir -p ~/pix/ss/
-cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config
-chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.config/sxhkd/sxhkd.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
+cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config/
+chmod -R +x ~/.config/bspwm/ ~/.config/sxhkd/sxhkd.sh ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
-# Fonts
 printf "Update/Install Fonts? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
@@ -26,17 +25,13 @@ else
 fi
 
 # Suckless
-[ -d ./dmenu/ ] || git clone --depth=1 https://github.com/sayanta01/dmenu
-if ! command -v dmenu >/dev/null; then
-	cd dmenu && sudo make clean install
-fi
+git clone --depth=1 https://github.com/sayanta01/dmenu ~/.config/dmenu && cd ~/.config/dmenu && sudo make clean install
 
-# Vim
-[ -d ~/.config/nvim/ ] || git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
-# Tmux
-[ -d ~/.config/tmux/plugins/ ] || git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+# Tools
+git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
+git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
-# Themes
+# Looks
 git clone --depth=1 https://github.com/sayanta01/BeautySolar ~/.local/share/icons/BeautySolar
 sudo cp -r ~/.local/share/icons/BeautySolar /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
@@ -47,8 +42,8 @@ read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 		noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
-		eza bat fd fzf man-db bash-completion \
-		kitty neovim htop cowsay \
+		eza fd fzf bat bash-completion man-db \
+		neovim kitty htop cowsay \
 		bspwm sxhkd polybar rofi slock dunst \
 		qt5ct qt6ct lxappearance xcape pass \
 		pavucontrol playerctl pamixer \
@@ -60,21 +55,26 @@ if [ "$choice" = "y" ]; then
 		zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
 		rsync aria2 jq \
 		xdg-utils xdg-user-dirs \
-		pacman-contrib socat exfat-utils \
+		pacman-contrib socat exfatprogs \
 		xclip xdotool wmname wmctrl
 	# xorg-xinit xorg-server xorg-xwininfo xorg-xsetroot
 else
 	:
 fi
 
-# Check CPU vendor
-cpu_vendor=$(grep vendor_id /proc/cpuinfo | uniq | awk -F ': ' '{print $2}')
-if [ "$cpu_vendor" = "GenuineIntel" ]; then
-	sudo pacman -S --noconfirm intel-ucode
-elif [ "$cpu_vendor" = "AuthenticAMD" ]; then
-	sudo pacman -S --noconfirm amd-ucode
+printf "Install Microcode? [y/N]: "
+read -r choice
+if [ "$choice" = "y" ]; then
+	cpu_vendor=$(grep vendor_id /proc/cpuinfo | uniq | awk -F ': ' '{print $2}')
+	if [ "$cpu_vendor" = "GenuineIntel" ]; then
+		sudo pacman -S --noconfirm intel-ucode
+	elif [ "$cpu_vendor" = "AuthenticAMD" ]; then
+		sudo pacman -S --noconfirm amd-ucode
+	else
+		echo "Unsupported CPU vendor"
+	fi
 else
-	echo "Unsupported CPU vendor"
+	:
 fi
 
 ## Audio server
@@ -85,7 +85,7 @@ if [ "$distro" = "Artix" ]; then
 
 	## Services
 	sudo pacman -S --noconfirm dbus-runit openssh-runit docker-runit bluez-runit
-  sudo ln -s /etc/runit/sv/dbus /run/runit/service
+	sudo ln -s /etc/runit/sv/dbus /run/runit/service
 	sudo ln -s /etc/runit/sv/sshd /run/runit/service
 	sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 	sudo ln -s /run/runit/sv/docker /run/runit/service
@@ -96,15 +96,14 @@ else
 
 	## Services
 	sudo pacman -S --noconfirm dbus openssh docker bluez
-  sudo systemctl enable bluetooth.service
-  sudo systemctl disable docker.service
+	sudo systemctl enable bluetooth.service
+	sudo systemctl disable docker.service
 fi
 
-# GUI apps
 printf "Install GUI pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
-	sudo pacman -S --noconfirm scrcpy kdeconnect
+	sudo pacman -S --noconfirm kdeconnect scrcpy
 # meld ntfs-3g
 # obs-studio gimp audacity
 # blueman bluez-utils
