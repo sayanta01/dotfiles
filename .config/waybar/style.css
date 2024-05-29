@@ -25,7 +25,7 @@ window#waybar.hidden {
 }
 
 #workspaces button:hover {
-  color: #414868;
+  color: #040404;
   background-color: #b0b9d4;
   border-radius: 1px;
 }
