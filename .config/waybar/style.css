@@ -43,11 +43,12 @@ window#waybar.hidden {
 }
 
 #workspaces,
+#custom-battery,
 #custom-date,
 #custom-nettraf,
+#pulseaudio,
 #custom-memory,
 #custom-separator,
-#pulseaudio,
 #tray #tray {
   padding: 0px 10px;
   margin-right: 2px;
@@ -58,6 +59,11 @@ window#waybar.hidden {
   padding-left: 0px;
   padding-right: 0px;
   margin-left: 4px;
+}
+
+#custom-battery {
+  color: #F8F8F2;
+  margin-right: 5px;
 }
 
 #custom-date {
@@ -77,7 +83,7 @@ window#waybar.hidden {
   margin-right: 5px;
 }
 
-#audio {
+#pulseaudio {
   color: #F8F8F2;
   background-color: #282e36;
   border-radius: 8px 8px 8px 8px;

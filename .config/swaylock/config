@@ -6,19 +6,20 @@ clock
 effect-blur=29x6
 effect-vignette=1:1
 color=1F1d2e80
-font=SF Pro Text
+# font=SF Pro Text
+font=Cantarell
 indicator
-indicator-radius=180
-indicator-thickness=8
+indicator-radius=160
+indicator-thickness=6
 
-line-color=040303
-ring-color=040303
+line-color=FFFFFF
+ring-color=FFFFFF
 inside-color=1F1d2e
 text-color=e0deF4
 text-caps-lock-color=e0deF4
 
-key-hl-color=040303
-bs-hl-color=040303
+key-hl-color=FFFFFF
+bs-hl-color=FFFFFF
 
 separator-color=04030300
 
@@ -40,7 +41,6 @@ text-clear-color=e0deF4
 grace=0
 grace-no-mouse
 grace-no-touch
-datestr=%a, %d %b
+datestr=
 timestr=%I:%M:%S
-fade-in=0.2
 ignore-empty-password

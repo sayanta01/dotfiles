@@ -10,11 +10,11 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
+		// "custom/battery",
     "custom/date",
     "custom/nettraf",
-    "audio",
+    "pulseaudio",
     "custom/memory",
-    // "battery",
     "tray"
   ],
   "hyprland/workspaces": {
@@ -43,6 +43,16 @@
     "icon-size": 18,
     "spacing": 6
   },
+	// "custom/battery": {
+	// 	"tooltip": false,
+	// 	"interval": 4,
+	// 	"exec": "~/.local/bin/statusbar/battery"
+	// },
+	"custom/date": {
+		"tooltip": false,
+		"interval": 2,
+		"exec": "~/.local/bin/statusbar/sb-time"
+	},
   "custom/nettraf": {
     "tooltip": false,
     "interval": 4,
@@ -50,39 +60,34 @@
     "on-click-right": "kitty --class floating -e nmtui"
     // "return-type": "json"
   },
+	"pulseaudio": {
+		"tooltip": false,
+		"format": "{icon} {volume}%",
+		"format-muted": "🔇 Muted",
+		"on-click": "pamixer -t",
+		"on-click-right": "pavucontrol",
+		"on-scroll-up": "pamixer -i 5",
+		"on-scroll-down": "pamixer -d 5",
+		"scroll-step": 5,
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"🔉",
+				"🔈",
+				"🔊"
+			]
+		}
+	},
   "custom/memory": {
     "tooltip": false,
     "interval": 4,
     "exec": "~/.local/bin/statusbar/sb-mem",
     // "on-click": "notify-send \"$(ps axch -o cmd:16,%mem --sort=-%mem | head)\"",
     "on-click-right": "kitty --class floating -e htop"
-  },
-  "custom/date": {
-    "tooltip": false,
-    "interval": 2,
-    "exec": "~/.local/bin/statusbar/sb-time"
-  },
-  "pulseaudio": {
-    "tooltip": false,
-    "format": "{icon} {volume}%",
-    "format-muted": "🔇 Muted",
-    "on-click": "pamixer -t",
-    "on-click-right": "pavucontrol",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
-    "scroll-step": 5,
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": [
-        "🔉",
-        "🔈",
-        "🔊"
-      ]
-    }
   }
 }
