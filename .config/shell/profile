@@ -2,6 +2,7 @@
 # shellcheck disable=SC2155
 
 export MANPAGER='nvim +Man!'
+export FZF_DEFAULT_OPTS="--prompt='🔎' --pointer='❯'"
 
 # Paths
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
