@@ -3,7 +3,7 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 19,
   "terminal.integrated.fontSize": 19,
-  // "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.gpuAcceleration": "on",
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
   "breadcrumbs.enabled": true,
@@ -15,15 +15,12 @@
   "editor.matchBrackets": "near",
   "editor.renderWhitespace": "none",
   "editor.cursorBlinking": "solid",
+	"editor.rename.enablePreview": false,
+	"editor.bracketPairColorization.enabled": false,
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.iconTheme": "material-icon-theme",
-  // "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.enablePreview": false,
-  "editor.rename.enablePreview": false,
-  "editor.bracketPairColorization.enabled": false,
-  "search.sortOrder": "type",
-  "search.searchOnType": false,
-  "editor.linkedEditing": true,
   // Vim
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "rgba(20, 99, 89, 0.6)",
@@ -158,10 +155,10 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
   // Misc
   "workbench.startupEditor": "none",
   "explorer.confirmDragAndDrop": false,
   "git.openRepositoryInParentFolders": "never",
-  "telemetry.telemetryLevel": "off",
+  "telemetry.telemetryLevel": "off"
 }

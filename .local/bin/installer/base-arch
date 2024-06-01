@@ -10,7 +10,7 @@ station <adpater-name> connect <network-name>
 
 #### change tty font ####
 pacman -Sy terminus-font
-setfont /usr/share/kbd/consolefonts/ter-122b.psf.gz
+setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
 
 #### partition disk ####
 cfdisk /dev/sda

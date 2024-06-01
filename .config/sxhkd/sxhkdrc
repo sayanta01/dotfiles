@@ -36,13 +36,6 @@ super + alt + o
 super + alt + p
         ~/.local/bin/wallch
 
-# clipboard
-super + alt + t
-        ~/.local/bin/dm-script/tclip
-
-super + alt + d
-        ~/.local/bin/dm-script/dclip
-
 # volume
 alt + {F1,F2,F3}
       pamixer {-t,-d 5,-i 5}
