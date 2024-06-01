@@ -1,6 +1,5 @@
 # Basic settings
 set icons true
-set drawbox false
 set previewer "~/.config/lf/preview"
 set cleaner "~/.config/lf/clean"
 set errorfmt ""

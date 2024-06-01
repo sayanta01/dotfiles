@@ -1,7 +1,6 @@
 #!/bin/sh
 
 if [ -f /etc/arch-release ]; then
-	# Arch aliases
 	alias update="sudo pacman -Syyu && echo '###### ⬆️AUR ######'; paru -Sua"
 	alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo paccache -r; echo "###### 🚮cleaning Paru cache ######"; rm -rf ~/.cache/paru'
 	alias unlock="sudo rm /var/lib/pacman/db.lck"
@@ -9,7 +8,6 @@ if [ -f /etc/arch-release ]; then
 	alias installed="grep -i installed /var/log/pacman.log"
 	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 elif [ -f /etc/debian_version ]; then
-	# Debian aliases
 	alias remove="sudo apt remove --purge"
 	alias clean="sudo apt -y autoremove; sudo apt clean"
 	alias fix-deb="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
@@ -19,20 +17,18 @@ else
 fi
 
 if grep -q '^runit$' </proc/1/comm; then
-	# Runit
 	alias doc-on="sudo sv start docker"
 	alias doc-off="sudo sv stop docker"
 	alias vm-on="sudo sv start libvirtd virtlogd spice-vdagentd"
 	alias vm-off="sudo sv stop libvirtd virtlogd spice-vdagentd"
 elif grep -q '^systemd$' </proc/1/comm; then
-	# Systemd
 	alias doc-on="sudo systemctl start docker.service"
 	alias doc-off="sudo systemctl stop docker.service"
 	alias vm-on="sudo systemctl start libvirtd.service"
 	alias vm-off="sudo systemctl stop libvirtd.service"
 	alias sysctlist="systemctl list-unit-files --type=service"
-	alias probe="sudo -E hw-probe -all -upload"
 	alias sysctlfail="systemctl --failed"
+	alias probe="sudo -E hw-probe -all -upload"
 	alias jctl="sudo journalctl -p 3 -xb"
 	alias cleanjctl="sudo journalctl --vacuum-time=2weeks"
 	alias chain="sudo systemd-analyze critical-chain"
@@ -67,15 +63,12 @@ alias logout='sudo pkill -u "$USER"'
 alias fix-faillock='faillock --user "$USER" --reset'
 
 alias lg="lazygit"
-alias add.="git add ."
-alias addup="git add -u"
 alias checkout="git checkout"
 alias branch="git branch"
 alias clone="git clone"
 alias status="git status"
 alias commit="git commit -m"
 alias fetch="git fetch"
-alias tag="git tag"
 alias pull="git pull origin"
 alias push="git push origin"
 
@@ -83,8 +76,8 @@ alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/ro
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 alias tb="nc termbin.com 9999"
 alias myip="curl ifconfig.me; echo"
-alias php-serve="php -S 0.0.0.0:8000"
-alias py-serve="python -m http.server 8000"
+alias php-server="php -S 0.0.0.0:8000"
+alias py-server="python -m http.server 8000"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias multitail="multitail --no-repeat -c"
 
@@ -92,7 +85,7 @@ alias ff='fd --type f --hidden --exclude .git | fzf --preview "bat --color=alway
 alias bf="du -hxs * | sort -rh | head"
 alias psmem="ps axch -o cmd,%mem --sort=-%mem | less"
 alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | less"
-alias microcode="grep . /sys/devices/system/cpu/vulnerabilities/*"
+alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
 alias userlist="cut -d: -f1 /etc/passwd | sort"
 
 alias ping="ping -c 6"
@@ -122,11 +115,11 @@ alias vim="nvim"
 alias vimdiff="nvim -d"
 alias se="sudoedit"
 alias aft="android-file-transfer"
-alias ytdlv="yt-dlp -f bestvideo+bestaudio --external-downloader aria2c" 
+alias ytdlv="yt-dlp -f bestvideo+bestaudio --external-downloader aria2c"
 alias ytdla="yt-dlp -x --audio-format mp3"
 
 # Arch Linux only
-# https://archlinux.org/mirrorlist/
+# https://archlinux.org/mirrorlist
 # alias arch-mirror= "sudo reflector --verbose --fastest 40 --latest 60 --sort rate --save /etc/pacman.d/mirrorlist"
 # alias arch-mirrora="sudo reflector --verbose --latest 60 --sort age --save /etc/pacman.d/mirrorlist"
 # alias arch-mirrord="sudo reflector --verbose --latest 60 --sort delay --save /etc/pacman.d/mirrorlist"

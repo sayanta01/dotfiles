@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# ctrl x them shortkey
+# ctrl x then key
 session_type="$XDG_SESSION_TYPE"
 
 if [ "$session_type" = "wayland" ]; then
