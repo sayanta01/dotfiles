@@ -6,7 +6,7 @@
   <property name="dropdown-always-show-tabs" type="bool" value="false"/>
   <property name="dropdown-position-vertical" type="uint" value="6"/>
   <property name="dropdown-show-borders" type="bool" value="false"/>
-  <property name="font-allow-bold" type="bool" value="true"/>
+  <property name="font-allow-bold" type="bool" value="false"/>
   <property name="font-name" type="string" value="JetBrainsMono Nerd Font Ultra-Light 16"/>
   <property name="text-blink-mode" type="string" value="TERMINAL_TEXT_BLINK_MODE_NEVER"/>
   <property name="misc-menubar-default" type="bool" value="false"/>
