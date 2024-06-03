@@ -4,14 +4,15 @@
   <property name="misc-show-unsafe-paste-dialog" type="bool" value="false"/>
   <property name="dropdown-status-icon" type="bool" value="false"/>
   <property name="dropdown-always-show-tabs" type="bool" value="false"/>
-  <property name="dropdown-position-vertical" type="uint" value="6"/>
+  <property name="dropdown-position-vertical" type="uint" value="16"/>
+	<property name="dropdown-width" type="uint" value="60"/>
   <property name="dropdown-show-borders" type="bool" value="false"/>
   <property name="font-allow-bold" type="bool" value="false"/>
   <property name="font-name" type="string" value="JetBrainsMono Nerd Font Ultra-Light 16"/>
   <property name="text-blink-mode" type="string" value="TERMINAL_TEXT_BLINK_MODE_NEVER"/>
   <property name="misc-menubar-default" type="bool" value="false"/>
-  <property name="misc-confirm-close" type="bool" value="false"/>
-  <property name="misc-borders-default" type="bool" value="false"/>
+  <property name="misc-confirm-close" type="bool" value="true"/>
+  <property name="misc-borders-default" type="bool" value="true"/>
   <property name="color-bold-is-bright" type="bool" value="true"/>
   <property name="color-foreground" type="string" value="#e0deF4"/>
   <property name="color-background" type="string" value="#010101"/>
@@ -30,5 +31,4 @@
   <property name="misc-middle-click-opens-uri" type="bool" value="true"/>
   <property name="scrolling-on-keystroke" type="bool" value="true"/>
   <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_NONE"/>
-  <property name="dropdown-width" type="uint" value="60"/>
 </channel>
