@@ -41,7 +41,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # History
-HISTSIZE=1000
+HISTSIZE=2000
 SAVEHIST=2000
 HISTFILE="$HOME/.local/share/history"
 setopt hist_ignore_space       # ignore commands that start with space
