@@ -111,8 +111,7 @@ alias nvidia-setting='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/setting
 
 alias iv="xrdb merge ~/.config/x11/xresources; nsxiv"
 alias za="zathura"
-alias vim="nvim"
-alias vimdiff="nvim -d"
+# alias nvd="nvim -d"
 alias se="sudoedit"
 alias aft="android-file-transfer"
 alias ytdlv="yt-dlp -f bestvideo+bestaudio --external-downloader aria2c"
