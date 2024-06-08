@@ -9,10 +9,11 @@
 		<property name="blank-on-ac" type="int" value="58"/>
 		<property name="dpms-on-ac-off" type="uint" value="60"/>
 		<property name="general-notification" type="bool" value="false"/>
-		<property name="brightness-step-count" type="uint" value="7"/>
+		<property name="brightness-step-count" type="uint" value="2"/>
 		<property name="dpms-enabled" type="bool" value="false"/>
 		<property name="lock-screen-suspend-hibernate" type="bool" value="false"/>
 		<property name="logind-handle-lid-switch" type="bool" value="false"/>
 		<property name="inactivity-on-ac" type="uint" value="14"/>
+		<property name="brightness-exponential" type="bool" value="false"/>
 	</property>
 </channel>

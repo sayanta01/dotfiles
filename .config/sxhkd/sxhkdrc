@@ -4,7 +4,7 @@
 
 # brightness
 XF86MonBrightness{Up,Down}
-                 brightnessctl s {+5%,5%-}
+                 brightnessctl s {+2%,2%-}
 	
 # volume
 XF86Audio{Mute,LowerVolume,RaiseVolume}
