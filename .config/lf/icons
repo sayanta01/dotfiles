@@ -6,11 +6,11 @@ ow             # OTHER_WRITABLE
 st      󱍭       # STICKY
 di             # DIR
 pi      󱑹       # FIFO
-so      🔌      # SOCK
+so             # SOCK
 bd      🧱      # BLK
 cd      󰈍       # CHR
-su             # SETUID
-sg      👥      # SETGID
+su             # SETUID
+sg             # SETGID
 ex      🎯      # EXEC
 fi             # FILE
 
@@ -60,7 +60,7 @@ fi             # FILE
 # *.gif	          
 *.webp          
 *.ico           
-*.twig          󰥛
+*.twig          󱋿
 *.cpp           
 *.c++           
 *.cxx           
@@ -161,7 +161,7 @@ fi             # FILE
 *_vimrc                 
 *_gvimrc                
 *.bashprofile           
-*favicon.ico            
+*favicon.ico            
 *license                
 *node_modules           
 *react.jsx              
@@ -370,9 +370,9 @@ Vagrantfile             
 *.rom               🎮
 *.xex               🎮
 *.jrz               🎮
-*.1                 󰋽
-*.nfo	              󰋽
-*.info              󰋽
+*.1                 
+*.nfo	              
+*.info              
 *.log	              󰌱
 *.iso	              📀
 *.img               📀
