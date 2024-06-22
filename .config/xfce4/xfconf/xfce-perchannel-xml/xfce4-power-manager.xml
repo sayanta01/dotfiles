@@ -10,8 +10,8 @@
 		<property name="dpms-on-ac-off" type="uint" value="60"/>
 		<property name="general-notification" type="bool" value="false"/>
 		<property name="brightness-step-count" type="uint" value="2"/>
-		<property name="dpms-enabled" type="bool" value="false"/>
-		<property name="lock-screen-suspend-hibernate" type="bool" value="false"/>
+		<property name="dpms-enabled" type="bool" value="true"/>
+		<property name="lock-screen-suspend-hibernate" type="bool" value="true"/>
 		<property name="logind-handle-lid-switch" type="bool" value="false"/>
 		<property name="inactivity-on-ac" type="uint" value="14"/>
 		<property name="brightness-exponential" type="bool" value="false"/>

@@ -4,8 +4,8 @@
   <property name="misc-show-unsafe-paste-dialog" type="bool" value="false"/>
   <property name="dropdown-status-icon" type="bool" value="false"/>
   <property name="dropdown-always-show-tabs" type="bool" value="false"/>
-  <property name="dropdown-position-vertical" type="uint" value="16"/>
 	<property name="dropdown-width" type="uint" value="60"/>
+  <property name="dropdown-position-vertical" type="uint" value="10"/>
   <property name="dropdown-show-borders" type="bool" value="false"/>
   <property name="font-allow-bold" type="bool" value="false"/>
   <property name="font-name" type="string" value="JetBrainsMono Nerd Font Ultra-Light 15"/>
