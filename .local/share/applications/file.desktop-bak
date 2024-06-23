@@ -1,4 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=File manager
-Exec=kitty -e lf %u

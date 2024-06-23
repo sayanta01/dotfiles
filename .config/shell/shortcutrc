@@ -25,7 +25,7 @@ joke() {
 	curl -sSL https://v2.jokeapi.dev/joke/Any | jq -r '.category, .setup, .delivery'
 }
 
-qot() {
+quote() {
 	curl https://api.quotable.io/random -s | jq -r '"\(.content) - \(.author)"'
 }
 
@@ -47,13 +47,6 @@ lazyg() {
 	git push
 }
 
-# lfcd() {
-# 	dir=$(lf -print-last-dir "$@")
-# 	while ! cd "$dir" 2>/dev/null; do
-# 		dir=$(dirname "$dir")
-# 	done
-# }
-
 # For some reason, rot13 pops up everywhere
 rot13() {
 	if [ $# -eq 0 ]; then
@@ -74,4 +67,11 @@ sw() {
 	done
 }
 
-bigpkgs() { [ -f /etc/debian_version ] && dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}' || echo "Not running Debian"; }
+bigpkg() { [ -f /etc/debian_version ] && dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}' || echo "Not running Debian"; }
+
+# lfcd() {
+# 	dir=$(lf -print-last-dir "$@")
+# 	while ! cd "$dir" 2>/dev/null; do
+# 		dir=$(dirname "$dir")
+# 	done
+# }

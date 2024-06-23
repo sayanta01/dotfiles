@@ -82,15 +82,15 @@ alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' 
 alias multitail="multitail --no-repeat -c"
 
 alias ff='fd --type f --hidden --exclude .git | fzf --preview "bat --color=always --theme=OneHalfDark -p --line-range=:500 {}" | xargs -r "$EDITOR"'
-alias bf="du -hxs * | sort -rh | head"
 alias psmem="ps axch -o cmd,%mem --sort=-%mem | less"
 alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | less"
+alias bf="du -hxs * | sort -rh | head"
 alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
 alias userlist="cut -d: -f1 /etc/passwd | sort"
 
 alias ping="ping -c 6"
-alias ports="netstat -tulanp"
-alias copy="rsync --progress -aluvr"
+alias ports="netstat -tulpan"
+alias copy="rsync --progress -avzhP"
 
 alias df="df -h"
 alias du="du -h"

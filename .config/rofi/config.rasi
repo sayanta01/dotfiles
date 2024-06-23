@@ -1,5 +1,5 @@
 configuration {
-    modi: "drun,run";
+    modes: "drun,run";
     sidebar-mode: true;
     drun-display-format: "{icon} {name}";
     display-drun: "Apps";
@@ -25,9 +25,9 @@ configuration {
 }
 
 window {
-    // background-color: @background;
+    background-color: @background;
     border: 			 	   0px;
-    border-radius:	   0px;
+    // border-radius:	   0px;
     // border-color:   @background;
     padding: 				   0;
     width: 		  	   	 30%;
@@ -55,6 +55,11 @@ listview {
 element {
     border:            0;
     padding:           8px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
 }
 
 element normal.normal {
@@ -112,22 +117,19 @@ element alternate.active {
 }
 
 button {
+    background-color:  @blank;
     padding:           4px;
     margin:            0px 8px 6px 8px;
-    background-color:  @blank;
     text-color:        @tab;
     vertical-align:    0.5;
     horizontal-align:  0.5;
-    border-radius:     4px;
-    border:            0px 0px 4px 0px;
-    border-color:      @blank-underline;
 }
 
-button selected {
+button.selected {
     background-color:  @bg-col-light;
     text-color:        @tab-selected;
-    border-radius:     2px;
     border:            0px 0px 4px 0px;
+    border-radius:     2px;
     border-color:      @button-underline;
 }
 
@@ -136,31 +138,17 @@ entry {
     padding:	         8px;
     text-color:        @foreground;
     placeholder:       "";
-    placeholder-color: @foreground;
 }
 
 prompt {
-    padding:           0px 0px ;
+    spacing:           0;
     text-color:        @foreground;
 }
 
 inputbar {
+    border-color:      @background;
     background-color:  #282e36;
-    margin:            0px 0px 0px 0px;
     border:            8px;
     border-radius:     6px;
-    border-color:      @background;
     children:          [entry];
-}
-
-element-text {
-    highlight:         inherit;
-    text-color:        inherit;
-    // cursor:            inherit;
-}
-
-element-icon {
-    size:              1.0em;
-    // cursor:            inherit;
-    // text-color:        inherit;
 }
