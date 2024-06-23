@@ -1,8 +1,8 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Name=Xset
-Comment=Move Faster
+Name=xset
+Comment=Move faster
 Exec=xset r rate 280 60
 OnlyShowIn=GNOME;XFCE;
 StartupNotify=false

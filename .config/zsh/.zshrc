@@ -8,22 +8,20 @@
 # setopt magicequalsubst      # enable filename expansion for arguments of the form ‘anything=expression’
 # setopt nonomatch            # hide error message if there is no match for the pattern
 # setopt notify               # report the status of background jobs immediately
-# setopt promptsubst          # enable command substitution in prompt
 
 # Keybindings
-bindkey -e                                        # emacs key bindings
+bindkey -e                                        # emacs mode
 bindkey -s '^r' 'hst^M'
 bindkey ' ' magic-space                           # history expansion on space
-bindkey '^U' backward-kill-line                   # ctrl + u
 bindkey '^[[3;5~' kill-word                       # backward del
 bindkey '^[[3~' delete-char                       # delete
-bindkey '^[[1;5C' forward-word                    # ctrl + ->
-bindkey '^[[1;5D' backward-word                   # ctrl + <-
+bindkey '^[[1;5C' forward-word                    # ctrl ->
+bindkey '^[[1;5D' backward-word                   # ctrl <-
 bindkey '^[[5~' beginning-of-buffer-or-history    # page up
 bindkey '^[[6~' end-of-buffer-or-history          # page down
 bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
-bindkey '^[[Z' undo                               # shift + Tab undo last action
+bindkey '^[[Z' undo                               # shift Tab undo last action
 
 # Hide EOL sign ('%')
 # PROMPT_EOL_MARK="" 
@@ -34,7 +32,7 @@ TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 # Enable completion 
 autoload -Uz compinit && compinit -d $HOME/.cache/zcompdump
 zmodload zsh/complist
-_comp_options+=(globdots)		# show hidden files
+_comp_options+=(globdots)		# include hidden files
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-prompt %S TAB for more
 zstyle ':completion:*' verbose true
@@ -67,16 +65,16 @@ fi
 
 # Prompt
 autoload -Uz vcs_info colors && colors
-precmd() { vcs_info }
-setopt prompt_subst
-zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 +vi-git-untracked(){
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
         git status --porcelain | grep '??' &> /dev/null ; then
         hook_com[staged]+='!' 
     fi
 }
+precmd() { vcs_info }
+setopt prompt_subst
 zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}[%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%}]"
 PROMPT=' %{$fg[red]%}❯${vcs_info_msg_0_}%  '
  
