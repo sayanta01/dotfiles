@@ -2,16 +2,19 @@
 
 if [ -f /etc/arch-release ]; then
 	alias update="sudo pacman -Syyu && echo '###### ⬆️AUR ######'; paru -Sua"
-	alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo paccache -r; echo "###### 🚮cleaning Paru cache ######"; rm -rf ~/.cache/paru'
 	alias unlock="sudo rm /var/lib/pacman/db.lck"
 	alias fix-key="sudo pacman -Sy archlinux-keyring; sudo pacman-key --refresh"
+  alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo paccache -r; echo "###### 🚮cleaning Paru cache ######"; rm -rf ~/.cache/paru'
 	alias installed="grep -i installed /var/log/pacman.log"
 	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 elif [ -f /etc/debian_version ]; then
 	alias remove="sudo apt remove --purge"
-	alias clean="sudo apt -y autoremove; sudo apt clean"
 	alias fix-deb="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
+  alias clean="sudo apt -y autoremove; sudo apt clean"
 	alias installed="sudo apt list --installed"
+	bigpkg() {
+		dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
+	}
 else
 	:
 fi

@@ -276,7 +276,7 @@ Vagrantfile             
 *.svgz              󰕙
 *.mng               
 *.pcx               
-*.avif              
+*.avif              
 *.krita             
 *.kra               
 *.xcf               

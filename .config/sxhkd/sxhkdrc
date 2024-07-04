@@ -21,7 +21,7 @@ XF86Audio{Prev,Play,Next}
 super + u
         ~/.local/bin/statusbar/toggle-polybar
 
-# hide all open windows
+# display/hide the windows
 super + d
         while bspc node any.hidden.window -g hidden=off; do false; done && while bspc node 'any.!hidden.window' -g hidden=on; do :; done
 
@@ -145,30 +145,30 @@ super + ctrl + {m,x,s,p}
 #
 
 # focus the node in the given direction
-        super + {_,shift + }{h,j,k,l}
+super + {_,shift + }{h,j,k,l}
         bspc node -{f,s} {west,south,north,east}
-
-# focus or send to the given desktop
-        super + {_,shift + }{1-9,0}
-        bspc {desktop -f,node -d} '^{1-9,10}'
 
 # focus the next/previous window in the current desktop
 alt + {_,shift + }Tab
      	bspc node -f {next,prev}.local.!hidden.window
 
-# focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	      bspc desktop -f {prev,next}.local
-
 # focus the last node/desktop
 super + {grave,Tab}
-	      bspc {node,desktop} -f last
+      bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
       	bspc wm -h off; \
 	      bspc node {older,newer} -f; \
       	bspc wm -h on
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+        bspc desktop -f {prev,next}.local
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	      bspc {desktop -f,node -d} '^{1-9,10}'
 
 # move node to the previous/next desktop
 super + shift + bracket{left,right}

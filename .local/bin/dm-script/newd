@@ -1,6 +1,6 @@
 #!/bin/sh
 
-choice=$(printf "add-newd\nshow-newd" | dmenu -i -p " ")
+choice=$(printf "add-newd\nshow-newd" | dmenu -i -p "󰗚 ")
 
 if [ "$choice" = "add-newd" ]; then
 	while true; do
