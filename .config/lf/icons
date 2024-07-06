@@ -60,7 +60,7 @@ fi             # FILE
 # *.gif	          
 *.webp          
 *.ico           
-*.twig          󱋿
+*.twig          󰪂
 *.cpp           
 *.c++           
 *.cxx           
@@ -68,10 +68,10 @@ fi             # FILE
 *.cp            
 *.c             
 *.cs            
-*.h             H
-*.hh            H
-*.hpp           H
-*.hxx           H
+*.h             ℍ
+*.hh            ℍ
+*.hpp           ℍ
+*.hxx           ℍ
 *.hs            
 *.lhs           
 *.nix           
