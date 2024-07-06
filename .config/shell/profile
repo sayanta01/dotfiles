@@ -1,14 +1,12 @@
 #!/bin/sh
 # shellcheck disable=SC2155
 
-export MANPAGER='nvim +Man!'
-# export FZF_DEFAULT_OPTS="--prompt='🔎' --pointer='❯'"
-
 # Paths
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
 export PATH="$PATH:$HOME/.local/share/cargo/bin"
 
 # Default programs
+export MANPAGER='nvim +Man!'
 export EDITOR="nvim"
 export TERMINAL="kitty"
 export READER="zathura"
@@ -55,5 +53,5 @@ export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 export LESSHISTFILE="-"            # disable files
 export QT_QPA_PLATFORMTHEME="gtk2" # have QT use gtk2 theme
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export _JAVA_AWT_WM_NONREPARENTING=1      # fix Java applications
+export _JAVA_AWT_WM_NONREPARENTING=1 # fix Java applications
 export AWT_TOOLKIT="MToolkit wmname LG3D"

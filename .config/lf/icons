@@ -35,9 +35,9 @@ fi             # FILE
 *.js            
 *.mjs           
 *.jsx           
-*.rb            
-*.gemspec       
-*.rake          
+*.rb            
+*.gemspec       
+*.rake          
 *.php           
 *.py            
 *.pyc           
@@ -50,7 +50,7 @@ fi             # FILE
 *.ini           
 *.yml           
 *.yaml          
-*.toml          󰰤
+*.toml          
 *.bat           
 *.mk            
 # *.jpg	          
@@ -93,8 +93,7 @@ fi             # FILE
 *.dump          
 *.clj           
 *.cljc          
-*.cljs          
-*.edn           
+*.edn           
 *.scala         
 *.go            
 *.dart          

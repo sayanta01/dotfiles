@@ -40,7 +40,7 @@ game() {
 if [ "$1" = "connect" ]; then
 	connect
 elif [ "$1" = "aud" ]; then
-	audio
+	aud
 elif [ "$1" = "bcam" ]; then
 	bcam
 elif [ "$1" = "fcam" ]; then
