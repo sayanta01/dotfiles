@@ -21,7 +21,7 @@ cmd extract ${{
     case $f in
         *.tar.bz | *.tbz | *.tar.bz2| *.tbz2) tar xjvf $f;;
         *.tar.gz | *.tgz) tar xzvf $f;;
-        *.tar.xz | *.txz) tar xJvf $f;;
+        *.txz | *.tar.xz) tar xJvf $f;;
         *.zip) unzip $f;;
         *.rar) 7z x $f;;
         *.Z) uncompress $fx;;
@@ -62,18 +62,6 @@ cmd mkdir ${{
   read ans
   mkdir $ans
 }}
-
-# cmd chmod ${{
-#   printf "Mode Bits: "
-#   read ans
-#
-#   for file in "$fx"
-#   do
-#     chmod $ans $file
-#   done
-#
-#   lf -remote 'send reload'
-# }}
 
 # Bulk rename
 cmd bulk-rename ${{

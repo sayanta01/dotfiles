@@ -135,7 +135,7 @@ fi             # FILE
 *.r             󰟔
 *.rproj         󰗆
 *.sol           
-*.pem           
+*.pem           
 
 # file names
 *gruntfile.coffee       
