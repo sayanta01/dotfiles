@@ -1,5 +1,5 @@
 # You can add comments to these files with #
-cac $HOME/.cache
+ca  $HOME/.cache
 cf  $HOME/.config
 sc  $HOME/.local/bin
 dt   $HOME/.local/share

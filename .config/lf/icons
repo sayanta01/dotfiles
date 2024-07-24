@@ -26,10 +26,10 @@ fi             # FILE
 *.xml	          
 *.css           
 *.less          
-*.md            
-*.mdx           
-*.markdown      
-*.rmd	          
+*.md             
+*.mdx            
+*.markdown       
+*.rmd	           
 *.json          
 *.webmanifest   
 *.js            

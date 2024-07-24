@@ -1,9 +1,7 @@
 set sandbox none
 set recolor true
 set font "Monospace 10"
-set page-padding 2
-set window-height 800
-set window-width 800
+set page-padding 4
 set adjust-open width
 set selection-clipboard clipboard
 set statusbar-h-padding 0

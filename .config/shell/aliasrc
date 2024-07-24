@@ -65,7 +65,7 @@ alias logout='sudo pkill -u "$USER"'
 alias fix-faillock='faillock --user "$USER" --reset'
 
 alias lg="lazygit"
-alias checkout="git checkout"
+alias chkout="git checkout"
 alias branch="git branch"
 alias clone="git clone"
 alias status="git status"
@@ -113,15 +113,8 @@ alias nvidia-setting='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/setting
 
 alias iv="xrdb merge ~/.config/x11/xresources; nsxiv"
 alias za="zathura"
+alias aft="android-file-transfer"
 # alias nvd="nvim -d"
 alias se="sudoedit"
-alias aft="android-file-transfer"
 alias ytdlv="yt-dlp -f bestvideo+bestaudio --external-downloader aria2c"
 alias ytdla="yt-dlp -x --audio-format mp3"
-
-# Arch Linux only
-# https://archlinux.org/mirrorlist
-# alias arch-mirror= "sudo reflector --verbose --fastest 40 --latest 60 --sort rate --save /etc/pacman.d/mirrorlist"
-# alias arch-mirrora="sudo reflector --verbose --latest 60 --sort age --save /etc/pacman.d/mirrorlist"
-# alias arch-mirrord="sudo reflector --verbose --latest 60 --sort delay --save /etc/pacman.d/mirrorlist"
-# alias arch-mirrors="sudo reflector --verbose --latest 60 --sort score --save /etc/pacman.d/mirrorlist"

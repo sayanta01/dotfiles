@@ -7,148 +7,148 @@ configuration {
 }
 
 * {
-    font:                           "Cantarell 12";
-    foreground:                     #F8F8F2;
-    background:                     #010101;
-    highlight:	             		    #60Fb7b;
-    urgent-background:              #FF5555;
-    blue:                           #517bb5;
-    yellow:                         #e09e4b;
-    separatorcolor:                 #b7b5cd;
-    border:                         #1b1e25;
-    bg-col-light:                   #689d69;
-    tab:                            #689d66;
-    tab-selected:                   #1d2021;
-    blank:                          #1F2223;
-    blank-underline:                #191c1d;
-    button-underline:               #518554;
+    font:               "Cantarell 12";
+    foreground:         #F8F8F2;
+    background:         #010101;
+    highlight:	        #60Fb7b;
+    urgent-background:  #FF5555;
+    blue:               #517bb5;
+    yellow:             #e09e4b;
+    separatorcolor:     #b7b5cd;
+    border:             #1b1e25;
+    bg-col-light:       #689d69;
+    tab:                #689d66;
+    tab-selected:       #1d2021;
+    blank:              #1F2223;
+    blank-underline:    #191c1d;
+    button-underline:   #518554;
 }
 
 window {
-    background-color: @background;
-    border: 			 	   0px;
-    // border-radius:	   0px;
-    // border-color:   @background;
-    padding: 				   0;
-    width: 		  	   	 30%;
+    background-color:   @background;
+    border: 			 	    0px;
+    // border-radius:	  0px;
+    // border-color:    @background;
+    padding: 				    0;
+    width: 		    	   	30%;
 }
 
 mainbox {
-    border:            0;
-    padding:           0;
+    border:             0;
+    padding:            0;
 }
 
 textbox {
-    text-color:        @foreground;
+    text-color:         @foreground;
 }
 
 listview {
-    lines:	           6;
-    columns:           1;
-    border:            0px;
-    border-color:      @separatorcolor;
-    spacing:           4px;
-    scrollbar:         false;
-    padding:           0px 8px 8px;
+    lines:	            6;
+    columns:            1;
+    border:             0px;
+    border-color:       @separatorcolor;
+    spacing:            4px;
+    scrollbar:          false;
+    padding:            0px 8px 8px;
 }
 
 element {
-    border:            0;
-    padding:           8px;
+    border:             0;
+    padding:            8px;
 }
 
 element-text {
-    background-color: inherit;
-    text-color:       inherit;
+    background-color:   inherit;
+    text-color:         inherit;
 }
 
 element normal.normal {
-    background-color:  @background;
-    text-color:        @foreground;
-    border-radius:     2px;
+    background-color:   @background;
+    text-color:         @foreground;
+    border-radius:      2px;
 }
 
 element normal.urgent {
-    background-color:  @urgent-background;
-    text-color:        @background;
-    border-radius:     2px;
+    background-color:   @urgent-background;
+    text-color:         @background;
+    border-radius:      2px;
 }
 
 element normal.active {
-    background-color:  @foreground;
-    text-color:        @background;
-    border-radius:     2px;
+    background-color:   @foreground;
+    text-color:         @background;
+    border-radius:      2px;
 }
 
 element selected.normal {
-    background-color:  @blue;
-    text-color:        @foreground;
-    border-radius:     2px;
+    background-color:   @blue;
+    text-color:         @foreground;
+    border-radius:      2px;
 }
 
 element selected.urgent {
-    background-color:  @urgent-background;
-    text-color:        @background;
-    border-radius:     2px;
+    background-color:   @urgent-background;
+    text-color:         @background;
+    border-radius:      2px;
 }
 
 element selected.active {
-    background-color:  @yellow;
-    text-color:        @background;
-    border-radius:     2px;
+    background-color:   @yellow;
+    text-color:         @background;
+    border-radius:      2px;
 }
 
 element alternate.normal {
-    background-color:  @background;
-    text-color:        @foreground;
-    border-radius:     2px;
+    background-color:   @background;
+    text-color:         @foreground;
+    border-radius:      2px;
 }
 
 element alternate.urgent {
-    background-color:  @border;
-    text-color:        @background;
-    border-radius:     2px;
+    background-color:   @border;
+    text-color:         @background;
+    border-radius:      2px;
 }
 
 element alternate.active {
-    background-color:  @border;
-    text-color:        @background;
-    border-radius:     2px;
+    background-color:   @border;
+    text-color:         @background;
+    border-radius:      2px;
 }
 
 button {
-    background-color:  @blank;
-    padding:           4px;
-    margin:            0px 8px 6px 8px;
-    text-color:        @tab;
-    vertical-align:    0.5;
-    horizontal-align:  0.5;
+    background-color:   @blank;
+    padding:            4px;
+    margin:             0px 8px 6px 8px;
+    text-color:         @tab;
+    vertical-align:     0.5;
+    horizontal-align:   0.5;
 }
 
 button.selected {
-    background-color:  @bg-col-light;
-    text-color:        @tab-selected;
-    border:            0px 0px 4px 0px;
-    border-radius:     2px;
-    border-color:      @button-underline;
+    background-color:   @bg-col-light;
+    text-color:         @tab-selected;
+    border:             0px 0px 4px 0px;
+    border-radius:      2px;
+    border-color:       @button-underline;
 }
 
 entry {
-    spacing:           0;
-    padding:	         8px;
-    text-color:        @foreground;
-    placeholder:       "";
+    spacing:            0;
+    padding:	          8px;
+    text-color:         @foreground;
+    placeholder:        "";
 }
 
 prompt {
-    spacing:           0;
-    text-color:        @foreground;
+    spacing:            0;
+    text-color:         @foreground;
 }
 
 inputbar {
-    border-color:      @background;
-    background-color:  #282e36;
-    border:            8px;
-    border-radius:     6px;
-    children:          [entry];
+    border-color:       @background;
+    background-color:   #282e36;
+    border:             8px;
+    border-radius:      6px;
+    children:           [entry];
 }

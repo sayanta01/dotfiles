@@ -1,79 +1,77 @@
 // Place your key bindings in this file to override the defaults
 // https://gist.github.com/ixahmedxi
+// https://github.com/Melkeydev/vscode_bindings
 [
-	{
-		"key": "ctrl+alt+v",
-		"command": "toggleVim"
-	},
-	{
-		"key": "tab",
-		"command": "selectNextSuggestion",
-		"when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-	},
-	{
-		"key": "shift+tab",
-		"command": "selectPrevSuggestion",
-		"when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-	},
-	// Navigate buffers
-	{
-		"key": "ctrl+tab",
-		"command": "workbench.action.nextEditor"
-	},
-	{
-		"key": "ctrl+shift+tab",
-		"command": "workbench.action.previousEditor"
-	},
-	// Move text up/down
-	{
-		"key": "alt+j",
-		"command": "editor.action.moveLinesDownAction"
-	},
-	{
-		"key": "alt+k",
-		"command": "editor.action.moveLinesUpAction",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	// Switch window
-	{
-		"key": "ctrl+h",
-		"command": "workbench.action.navigateLeft"
-	},
-	{
-		"key": "ctrl+j",
-		"command": "workbench.action.navigateDown"
-	},
-	{
-		"key": "ctrl+k",
-		"command": "workbench.action.navigateUp"
-	},
-	{
-		"key": "ctrl+l",
-		"command": "workbench.action.navigateRight"
-	},
-	// Explorer
-	// {
-	//   "command": "workbench.action.toggleSidebarVisibility",
-	//   "key": "space e"
-	// },
-	// {
-	//   "key": "space e",
-	//   "command": "workbench.files.action.focusFilesExplorer",
-	//   "when": "editorTextFocus"
-	// },
-	{
-		"key": "a",
-		"command": "explorer.newFile",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"key": "r",
-		"command": "renameFile",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"key": "d",
-		"command": "deleteFile",
-		"when": "filesExplorerFocus && !inputFocus"
-	}
+  {
+    "key": "ctrl+alt+v",
+    "command": "toggleVim"
+  },
+  {
+    "key": "tab",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+tab",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  // {
+  //   "key": "ctrl+tab",
+  //   "command": "workbench.action.nextEditor"
+  // },
+  // {
+  //   "key": "ctrl+shift+tab",
+  //   "command": "workbench.action.previousEditor"
+  // },
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction"
+  },
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // Switch window
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "space e"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "space e",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  }
 ]
