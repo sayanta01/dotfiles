@@ -84,8 +84,9 @@ EDITOR=nvim visudo                       # uncmnt %wheel ALL=(ALL:ALL) ALL
 exit - chroot environment
 sudo reboot
 
+
 #### Add Arch Repo on Artix ####
-sudo pacman -S artix-archlinux-support
+sudo pacman -Sy artix-archlinux-support
 sudo pacman-key --populate archlinux
 sudo pacman -Syu
 
