@@ -6,7 +6,7 @@ export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
 export PATH="$PATH:$HOME/.local/share/cargo/bin"
 
 # Default programs
-export MANPAGER='nvim +Man!'
+export MANPAGER="nvim +Man!"
 export EDITOR="nvim"
 export TERMINAL="kitty"
 export READER="zathura"
