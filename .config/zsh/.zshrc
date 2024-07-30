@@ -1,6 +1,6 @@
 # cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
-# setopt autocd               # change directory just by typing its name
+# setopt autocd               # cd into dir by just typing the dir name
 # setopt interactivecomments  # allow comments in interactive mode
 # setopt extendedglob
 # setopt correct              # auto correct mistakes

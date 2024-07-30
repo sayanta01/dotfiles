@@ -35,15 +35,15 @@ basestrap /mnt base base-devel linux linux-headers linux-firmware neovim tmux ru
  pacstrap -K /mnt base base-devel linux linux-headers linux-firmware neovim tmux  [ Arch ]
 
 #### generate fstab ####
-fstabgen -U /mnt >> /mnt/etc/fstab  [ Artix ]
+fstabgen -U /mnt >> /mnt/etc/fstab   [ Artix ]
  genfstab -U /mnt >> /mnt/etc/fstab  [ Arch ]
 
 #### chroot ####
 artix-chroot /mnt  [ Artix ]
  arch-chroot /mnt  [ Arch ]
 
-nvim /etc/pacman.conf                    # uncmnt ParallerDownloads
-nvim /etc/makepkg.conf                   # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
+nvim /etc/pacman.conf         # uncmnt ParallerDownloads
+nvim /etc/makepkg.conf        # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
 
 #### configure sys clock ####
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
@@ -52,7 +52,7 @@ hwclock --systohc
 timedatectl set-ntp true  [ Arch ]
 
 #### set localization ####
-nvim /etc/locale.gen      # uncmnt en_US.UTF-8 UTF-8
+nvim /etc/locale.gen  # uncmnt en_US.UTF-8 UTF-8
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C"  [ Artix ] 
@@ -66,10 +66,10 @@ nvim /etc/hosts
 127.0.1.1   LilWarmachine.localdomain   LilWarmachine
 
 pacman -S git dosfstools dhcpcd xorg networkmanager-runit  [ Artix ]
-ln -s /etc/runit/sv/NetworkManager /run/runit/service  [ Artix after reboot ]
+ln -s /etc/runit/sv/NetworkManager /run/runit/service      [ Artix after reboot ]
 
- pacman -S git dosfstools dhcpcd xorg networkmanager [ Arch ]
- systemctl enable NetworkManager  [ Arch  ]
+ pacman -S git dosfstools dhcpcd xorg networkmanager  [ Arch ]
+ systemctl enable NetworkManager                      [ Arch ]
 
 #### install bootloader ####
 pacman -S grub os-prober efibootmgr
@@ -80,11 +80,12 @@ passwd  # set root pswd
 useradd -m -G wheel,storage,power `USER`
 passwd `USER`
 
-EDITOR=nvim visudo                       # uncmnt %wheel ALL=(ALL:ALL) ALL
+EDITOR=nvim visudo         # uncmnt %wheel ALL=(ALL:ALL) ALL
 exit - chroot environment
 sudo reboot
 
-#### Add Arch Repo on Artix ####
+
+# https://wiki.artixlinux.org/Main/Repositories#Arch_repositories
 sudo pacman -S artix-archlinux-support
 sudo pacman-key --populate archlinux
 sudo pacman -Syu

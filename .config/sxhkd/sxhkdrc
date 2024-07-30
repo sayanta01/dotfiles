@@ -73,7 +73,7 @@ super + e
 ctrl + alt + l
        ~/.local/bin/lockscreen
 	     
-# killer
+# task killer
 ctrl + shift + Escape
        ~/.local/bin/dm-script/kil	     
 
@@ -118,7 +118,7 @@ super + g
 # state/flags
 #
 
-# inc/dec window gap of current desktop
+# change window gap of current desktop
 super + {minus,equal}
         bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-, +} 5))
 
@@ -136,9 +136,9 @@ super + {s,f}
         bspc node -f; \
         bspc config pointer_follows_focus false}
 
-# set the node flags
+# set the node flags -- changed
 super + ctrl + {m,x,s,p}
-	      bspc node -g {marked,locked,sticky,private}
+ 	      bspc node -g {marked,locked,sticky,private}
 
 #
 # focus/swap
@@ -148,7 +148,7 @@ super + ctrl + {m,x,s,p}
 super + {_,shift + }{h,j,k,l}
         bspc node -{f,s} {west,south,north,east}
 
-# focus the next/previous window in the current desktop
+# focus the next/previous window in the current desktop -- changed
 alt + {_,shift + }Tab
      	bspc node -f {next,prev}.local.!hidden.window
 
@@ -166,13 +166,13 @@ super + {o,i}
 super + bracket{left,right}
         bspc desktop -f {prev,next}.local
 
+# move node to the previous/next desktop
+      super + shift + bracket{left,right}
+      bspc node -d {prev,next}.local --follow;
+
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	      bspc {desktop -f,node -d} '^{1-9,10}'
-
-# move node to the previous/next desktop
-super + shift + bracket{left,right}
-        bspc node -d {prev,next}.local --follow;
 	
 # focus the node for the given path jump
 # super + {t,b,comma,period}
