@@ -7,7 +7,6 @@ done
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config/
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
-# Fonts
 printf "Update/Install Fonts? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
@@ -64,7 +63,7 @@ sudo ln -s /usr/bin/fdfind /usr/bin/fd
 
 if [ -f /etc/debian_version ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >>~/.config/zsh/.zshrc
+		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
 	ln -s ~/.config/x11/xinitrc ~/.xinitrc
