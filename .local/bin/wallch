@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Get the current desktop session
 current_session=$XDG_CURRENT_DESKTOP
 
-# Define the function for setting wallpapers in XFCE
 set_wallpaper_xfce() {
 	dir="${HOME}/.local/share/walls"
 	monitor="$(xrandr --query | grep " connected" | cut -d" " -f1)"
@@ -11,14 +9,12 @@ set_wallpaper_xfce() {
 	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor"$monitor"/workspace0/last-image -s "${RANDFILE}"
 }
 
-# Define the function for setting wallpapers in Hyprland
 set_wallpaper_hyprland() {
 	dir="${HOME}/.local/share/walls"
 	BG="$(find "$dir" -name '*.jpg' -o -name '*.png' | shuf -n1)"
 	PROGRAM="swww-daemon"
 	trans_type="simple"
 
-	# Check if the program is running
 	if pgrep "$PROGRAM" >/dev/null; then
 		swww img "$BG" --transition-fps 244 --transition-type $trans_type --transition-duration 1
 	else
@@ -26,7 +22,6 @@ set_wallpaper_hyprland() {
 	fi
 }
 
-# Define the function for setting wallpapers in other sessions
 set_wallpaper_other() {
 	dir="${HOME}/.local/share/walls"
 	BG="$(find "$dir" -name '*.jpg' -o -name '*.png' | shuf -n1)"
@@ -34,7 +29,6 @@ set_wallpaper_other() {
 	xwallpaper --zoom "$BG"
 }
 
-# Check the current session and run the appropriate function
 case "$current_session" in
 "XFCE")
 	set_wallpaper_xfce

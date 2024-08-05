@@ -5,15 +5,11 @@
 # brightness
 XF86MonBrightness{Up,Down}
                  brightnessctl s {+2%,2%-}
-	
-# volume
-XF86Audio{Mute,LowerVolume,RaiseVolume}
-         pamixer {-t,-d 5,-i 5}
-
-XF86AudioMicMute
-         pamixer --default-source -t
 
 # media
+XF86Audio{Mute,LowerVolume,RaiseVolume,MicMute}
+         pamixer {-t,-d 5,-i 5,--default-source -t}
+
 XF86Audio{Prev,Play,Next}
          playerctl {previous,play-pause,next}
 
@@ -21,36 +17,28 @@ XF86Audio{Prev,Play,Next}
 super + u
         ~/.local/bin/statusbar/toggle-polybar
 
-# display/hide the windows
+# hide/show all windows
 super + d
         while bspc node any.hidden.window -g hidden=off; do false; done && while bspc node 'any.!hidden.window' -g hidden=on; do :; done
 
-# switch layout
-super + n
-        ~/.local/bin/bspwm/layout
-
 # colors
-super + alt + o
-        ~/.local/bin/pywal
+# super + alt + o
+#         ~/.local/bin/pywal
 
-super + alt + p
-        ~/.local/bin/wallch
+# super + alt + p
+#         ~/.local/bin/wallch
 
-# volume
+# media 
 alt + {F1,F2,F3}
       pamixer {-t,-d 5,-i 5}
 
-# media 
 alt + {F6,F7,F8} 
-      playerctl {previous,--player=spotify play-pause,next}   
+      playerctl {previous,play-pause,next}
 
-super + F7
-        playerctl play-pause
-  
 # screenshot
 Print
     maim | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M).png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
-                 
+
 shift + Print            
         maim -s | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
 
@@ -72,18 +60,17 @@ super + e
 # screen-lock
 ctrl + alt + l
        ~/.local/bin/lockscreen
-	     
+
 # task killer
 ctrl + shift + Escape
        ~/.local/bin/dm-script/kil	     
 
 # system action
 ctrl + alt + Delete
-			 ~/.local/bin/dm-script/sys-action
+  		 ~/.local/bin/dm-script/sys-action
 
-# scratchpad
 alt + Return
-      ~/.local/bin/bspwm/scratchpad
+      ~/.config/bspwm/scripts/scratchpad
 
 #
 # bspwm hotkeys
@@ -91,8 +78,8 @@ alt + Return
 
 # reload sxhkd configuration
 super + Escape
-       notify-send -t 600 "reload sxhkd!"; pkill -USR1 -x sxhkd
-	
+        notify-send -t 600 "reload sxhkd!"; pkill -USR1 -x sxhkd
+
 # quit/restart bspwm
 super + alt + {q,r}
       	bspc {quit,wm -r}
@@ -118,13 +105,13 @@ super + g
 # state/flags
 #
 
-# change window gap of current desktop
+# change the window gap of the current desktop
 super + {minus,equal}
         bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-, +} 5))
 
 # set the window state
-  super + {p,shift + p}
-  bspc node -t {tiled,pseudo_tiled}
+super + {p,shift + p}
+        bspc node -t {tiled,pseudo_tiled}
 
 # floating/fullscreen
 super + {s,f}
@@ -154,12 +141,12 @@ alt + {_,shift + }Tab
 
 # focus the last node/desktop
 super + {grave,Tab}
-      bspc {node,desktop} -f last
+        bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
       	bspc wm -h off; \
-	      bspc node {older,newer} -f; \
+        bspc node {older,newer} -f; \
       	bspc wm -h on
 
 # focus the next/previous desktop in the current monitor
@@ -167,13 +154,13 @@ super + bracket{left,right}
         bspc desktop -f {prev,next}.local
 
 # move node to the previous/next desktop
-      super + shift + bracket{left,right}
-      bspc node -d {prev,next}.local --follow;
+super + shift + bracket{left,right}
+        bspc node -d {prev,next}.local --follow;
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	      bspc {desktop -f,node -d} '^{1-9,10}'
-	
+        bspc {desktop -f,node -d} '^{1-9,10}'	
+
 # focus the node for the given path jump
 # super + {t,b,comma,period}
 #        	bspc node -f @{parent,brother,first,second}
@@ -184,11 +171,11 @@ super + {_,shift + }{1-9,0}
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
-	      bspc node -p {west,south,north,east}
+        bspc node -p {west,south,north,east}
 
 # preselect the ratio
 super + ctrl + {1-9}
-       	bspc node -o 0.{1-9}
+        bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
 super + ctrl + space
@@ -204,12 +191,12 @@ super + ctrl + shift + space
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
-	      bspc node -z {left -160 0,bottom 0 160,top 0 -160,right 160 0}
+        bspc node -z {left -160 0,bottom 0 160,top 0 -160,right 160 0}
 
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
-	      bspc node -z {right -160 0,top 0 160,bottom 0 -160,left 160 0}
+        bspc node -z {right -160 0,top 0 160,bottom 0 -160,left 160 0}
 
 # move a floating window
 super + {Left,Down,Up,Right}
-	      bspc node -v {-160 0,0 160,0 -160,160 0}
+        bspc node -v {-160 0,0 160,0 -160,160 0}

@@ -114,11 +114,6 @@ map <enter> open
 map T $kitty > /dev/null 2>&1
 
 # Shortcuts
-map gh cd ~/desk
-map gd cd ~/dl
-map gD cd ~/dox
-map gp cd ~/pix
-map gv cd ~/vids
-map gm cd ~/music 
-map gl cd ~/.local
+map gh cd ~/
 map gc cd ~/.config
+map gl cd ~/.local

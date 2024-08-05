@@ -31,7 +31,6 @@ fcam() {
 		--orientation=90
 }
 
-# get sound
 game() {
 	scrcpy --no-video --audio-output-buffer=10
 }

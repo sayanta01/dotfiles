@@ -11,9 +11,9 @@ elif [ -f /etc/debian_version ]; then
 	alias fix-pkg="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
 	alias clean="sudo apt -y autoremove; sudo apt clean"
 	alias installed="sudo apt list --installed"
-	bigpkg() {
-		dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
-	}
+	# bigpkg() {
+	# 	dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
+	# }
 else
 	:
 fi
@@ -71,8 +71,8 @@ alias clone="git clone"
 alias status="git status"
 alias commit="git commit -m"
 alias fetch="git fetch"
-alias pull="git pull origin"
-alias push="git push origin"
+alias pull="git pull"
+alias push="git push"
 
 alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"

@@ -25,7 +25,7 @@ bspc rule -a scratchpad locked=on sticky=on state=floating
 
 # Autostart
 xsetroot -cursor_name left_ptr &
-sh ~/.config/sxhkd/sxhkd.sh &
+pidof -q sxhkd || sxhkd -c ~/.config/bspwm/sxhkdrc &
 sh ~/.config/polybar/launch.sh &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
 xset r rate 280 60 &

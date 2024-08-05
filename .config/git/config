@@ -6,4 +6,4 @@
 [color]
 	ui = true
 [alias]
-  lgod = log --graph --oneline --decorate
+  lgod = log --oneline --graph --decorate

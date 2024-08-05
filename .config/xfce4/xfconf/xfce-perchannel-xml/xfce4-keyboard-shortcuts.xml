@@ -42,7 +42,7 @@
       <property name="&lt;Super&gt;Return" type="string" value="kitty"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="./.local/bin/lockscreen"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;p" type="string" value="./.local/bin/wallch"/>
-      <property name="&lt;Super&gt;u" type="string" value="./.local/bin/xfce/toggle-xfce-panel"/>
+      <property name="&lt;Super&gt;u" type="string" value="./.local/bin/statusbar/toggle-xfce-panel"/>
 			<property name="&lt;Alt&gt;F1" type="string" value="pamixer -t"/>
       <property name="&lt;Alt&gt;F2" type="string" value="pamixer -d 5"/>
       <property name="&lt;Alt&gt;F3" type="string" value="pamixer -i 5">

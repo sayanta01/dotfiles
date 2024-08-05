@@ -11,9 +11,6 @@ elif [ "$choice" = "white-noise" ]; then
 elif [ "$choice" = "classic" ]; then
 	url="https://live.musopen.org:8085/streamvbr0"
 	pkill -f "$url" || mpv "$url"
-elif [ "$choice" = "yt-playlist" ]; then
-	url="https://youtube.com/playlist?list=PLfl-IU7vdGi4jo_zwNjIRaeF36Fn0lh1T"
-	pkill -f "$url" || mpv "$url" --no-video
 else
 	:
 fi

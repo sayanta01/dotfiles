@@ -1,13 +1,11 @@
 #!/bin/sh
 
-Dir=$HOME/phone/
+Dir=$HOME/Phone/
 
-# Make the phone directory if it doesn't exist
 if [ ! -d "$Dir" ]; then
 	mkdir "$Dir"
 fi
 
-# Select device
 Devices=$(simple-mtpfs -l)
 
 if [ -z "$Devices" ]; then

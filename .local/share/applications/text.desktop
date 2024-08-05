@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Text editor
-Exec=kitty -e nvim %u
+Name=Text Editor
+Exec=nvim %F
 
 # update-desktop-database ~/.local/share/applications/

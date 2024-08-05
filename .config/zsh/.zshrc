@@ -11,7 +11,7 @@
 
 # Keybindings
 bindkey -e                                        # emacs mode
-bindkey -s '^r' 'hst^M'
+# bindkey -s '^r' 'hst^M'
 bindkey ' ' magic-space                           # history expansion on space
 bindkey '^[[3;5~' kill-word                       # backward del
 bindkey '^[[3~' delete-char                       # delete
@@ -21,7 +21,7 @@ bindkey '^[[5~' beginning-of-buffer-or-history    # page up
 bindkey '^[[6~' end-of-buffer-or-history          # page down
 bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
-bindkey '^[[Z' undo                               # shift Tab undo last action
+bindkey '^[[Z' undo                               # Shift Tab undo last action
 
 # Hide EOL sign ('%')
 # PROMPT_EOL_MARK="" 

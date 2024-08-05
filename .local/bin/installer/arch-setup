@@ -1,16 +1,12 @@
 #!/bin/sh
 
 # https://dither8.xyz/guide/arch-postinstall
-for dir in desk dl dox music pix vids pub templates; do
-	mkdir -p ~/"$dir"
-done
 for dots in .bashrc .profile .xprofile .zprofile; do
 	cp -r "$HOME/dotfiles/$dots" "$HOME"
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
-[ -d ~/pix/ss/ ] || mkdir -p ~/pix/ss/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config/
-chmod -R +x ~/.config/bspwm/ ~/.config/sxhkd/sxhkd.sh ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
+chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
 printf "Update/Install Fonts? [y/N]: "
 read -r choice
@@ -41,7 +37,7 @@ printf "Install Main pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
-		noto-fonts noto-fonts-emoji noto-fonts-cjk terminus-font \
+		noto-fonts noto-fonts-emoji noto-fonts-cjk \
 		eza fd fzf bat bash-completion man-db \
 		neovim kitty htop cowsay \
 		bspwm sxhkd polybar rofi slock dunst \
