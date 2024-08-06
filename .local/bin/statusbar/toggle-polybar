@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
 
-# Dependences - xdo, xorg-xwininfo
-toggle=$(xrandr -q | grep ' connected' | cut -d' ' -f1)
-monitor="polybar-example_$toggle"
-
-WINDOW_STATE=$(xwininfo -name "$monitor" | grep 'Map State:' | sed -e 's/.*:\s//g')
-
-if [[ "IsViewable" == "$WINDOW_STATE" ]]; then
-	xdo hide -N Polybar
-	bspc config -m "$toggle" top_padding 0
+if [ -f /tmp/polybarhidden ]; then
+	polybar-msg cmd show
+	bspc config top_padding 29
+	rm /tmp/polybarhidden
 else
-	xdo show -N Polybar
-	bspc config -m "$toggle" top_padding 29
+	polybar-msg cmd hide
+	bspc config top_padding 0
+	touch /tmp/polybarhidden
 fi

@@ -58,20 +58,20 @@ else
 	:
 fi
 
-printf "Install Microcode? [y/N]: "
-read -r choice
-if [ "$choice" = "y" ]; then
-	cpu_vendor=$(grep vendor_id /proc/cpuinfo | uniq | awk -F ': ' '{print $2}')
-	if [ "$cpu_vendor" = "GenuineIntel" ]; then
-		sudo pacman -S --noconfirm intel-ucode
-	elif [ "$cpu_vendor" = "AuthenticAMD" ]; then
-		sudo pacman -S --noconfirm amd-ucode
-	else
-		echo "Unsupported CPU vendor"
-	fi
-else
-	:
-fi
+# printf "Install Microcode? [y/N]: "
+# read -r choice
+# if [ "$choice" = "y" ]; then
+# 	cpu_vendor=$(grep vendor_id /proc/cpuinfo | uniq | awk -F ': ' '{print $2}')
+# 	if [ "$cpu_vendor" = "GenuineIntel" ]; then
+# 		sudo pacman -S --noconfirm intel-ucode
+# 	elif [ "$cpu_vendor" = "AuthenticAMD" ]; then
+# 		sudo pacman -S --noconfirm amd-ucode
+# 	else
+# 		echo "Unsupported CPU vendor"
+# 	fi
+# else
+# 	:
+# fi
 
 ## Audio server
 distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
