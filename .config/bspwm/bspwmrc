@@ -4,7 +4,7 @@ bspc monitor -d 0 1 2 3 4 5 6 7 8 9
 
 # bspc config border_width 1
 bspc config window_gap 4
-bspc config top_padding 29
+# bspc config top_padding 29
 bspc config pointer_motion_interval 16
 
 bspc config split_ratio 0.48

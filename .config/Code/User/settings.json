@@ -17,8 +17,6 @@
   "editor.bracketPairColorization.enabled": false,
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.iconTheme": "material-icon-theme",
-  // "workbench.editor.highlightModifiedTabs": true,
-  // "workbench.editor.enablePreview": false,
   "vim.highlightedyank.enable": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
