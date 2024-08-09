@@ -63,7 +63,7 @@ ctrl + alt + l
 
 # task killer
 ctrl + shift + Escape
-       ~/.local/bin/dm-script/kil	     
+       ~/.local/bin/dm-script/kill-ps     
 
 # system action
 ctrl + alt + Delete

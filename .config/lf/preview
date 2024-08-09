@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-bat --color=always --theme=OneHalfDark -p "$1"
+# bat --color=always --theme=OneHalfDark -p "$1"
 
 file=$1
 w=$2
