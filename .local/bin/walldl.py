@@ -10,7 +10,7 @@ import sys
 
 import requests
 
-DOWNLOAD_DIR = f"{str(pathlib.Path.home())}/pix/wall"
+DOWNLOAD_DIR = f"{str(pathlib.Path.home())}/Pictures/wall"
 
 
 def generate_id():
