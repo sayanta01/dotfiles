@@ -70,10 +70,10 @@
       <property name="enable-mpris" type="bool" value="false"/>
     </property>
     <property name="plugin-10" type="string" value="clock">
-      <property name="digital-layout" type="uint" value="3"/>
-			<property name="digital-time-font" type="string" value="Sans 12"/>
-      <property name="digital-time-format" type="string" value="%a, %d %b 🕖 %I:%M"/>
       <property name="mode" type="uint" value="2"/>
+      <property name="digital-time-font" type="string" value="Sans 12"/>
+      <property name="digital-time-format" type="string" value="%a, %d %b 🕖 %I:%M"/>
+      <property name="digital-layout" type="uint" value="3"/>
     </property>
     <property name="plugin-7" type="string" value="whiskermenu">
       <property name="launcher-show-description" type="bool" value="false"/>
