@@ -15,15 +15,15 @@ ex      🎯      # EXEC
 fi             # FILE
 
 # file extensions
-*.styl          󰰡
+*.styl          
 *.sass          
 *.scss          
-*.htm           
+*.htm           
 *.html          
+*.xml	          
 *.slim          
 *.haml          
 *.ejs           
-*.xml	          
 *.css           
 *.less          
 *.md             
@@ -43,7 +43,7 @@ fi             # FILE
 *.pyc           
 *.pyo           
 *.pyd           
-*.coffee        󰛊
+*.coffee        
 *.mustache      
 *.hbs           
 *.conf          
@@ -57,8 +57,8 @@ fi             # FILE
 # *.jpeg          
 # *.bmp           
 # *.png         	
-# *.gif	          
 *.webp          
+# *.gif	          
 *.ico           
 *.twig          󰪂
 *.cpp           
@@ -93,6 +93,7 @@ fi             # FILE
 *.dump          
 *.clj           
 *.cljc          
+*.cljs          
 *.edn           
 *.scala         
 *.go            
@@ -114,13 +115,13 @@ fi             # FILE
 *.d             󰯴
 *.erl           
 *.hrl           
-**.ex           
+*.ex            
 *.exs           
 *.eex           
 *.leex          
 *.heex          
 *.vim           
-*.ai            󰯫
+*.ai            
 *.psd           
 *.psb           
 *.ts            
@@ -160,7 +161,7 @@ fi             # FILE
 *_vimrc                 
 *_gvimrc                
 *.bashprofile           
-*favicon.ico            
+*favicon.ico            
 *license                
 *node_modules           
 *react.jsx              
@@ -310,8 +311,8 @@ Vagrantfile             
 *.emf              
 *.ogv              
 *.ogx              
-*.kdenlive         
-*.prproj           
+*.kdenlive         
+*.prproj           
 
 # audio formats
 *.aac              
@@ -333,8 +334,8 @@ Vagrantfile             
 
 # other formats
 *.pdf	             
-*.djvu             
-*.epub             
+*.djvu             📚
+*.epub             📚
 *.elf              
 *.exe              󰨡
 *.appx             󰨡
@@ -344,31 +345,23 @@ Vagrantfile             
 *.mom	             
 *.me	             󱞏
 *.ms               
-*.gpg              🔐
-*.ssh              🔑
-*.key              🔑
-*.rsa              🔑
-*.pem              🔑
+*.gpg              🔒
 *.csv	             📓
 *.xlsx             📓
-*.r                📊
-*.R                📊
-*.Rmd	             📊
-*.m	               📊
 *.z64              🎮
 *.v64              🎮
 *.n64              🎮
 *.gba              🎮
 *.nes              🎮
 *.gdi              🎮
-*.gam              🎮
-*.sav              🎮
-*.scm              🎮
-*.bin              🎮
-*.psv              🎮
-*.rom              🎮
-*.xex              🎮
-*.jrz              🎮
+# *.gam              🎮
+# *.sav              🎮
+# *.scm              🎮
+# *.bin              🎮
+# *.psv              🎮
+# *.rom              🎮
+# *.xex              🎮
+# *.jrz              🎮
 *.1                
 *.nfo	             
 *.info             
@@ -378,5 +371,4 @@ Vagrantfile             
 *.part             
 *.torrent          
 *.magnet           
-*.pro              
 *.desktop          󰟀
