@@ -50,15 +50,15 @@
     "key": "ctrl+l",
     "command": "workbench.action.navigateRight"
   },
-  {
-    "command": "workbench.action.toggleSidebarVisibility",
-    "key": "space e"
-  },
-  {
-    "command": "workbench.files.action.focusFilesExplorer",
-    "key": "space e",
-    "when": "editorTextFocus"
-  },
+  //{
+  //  "command": "workbench.action.toggleSidebarVisibility",
+  //  "key": "space e"
+  //},
+  //{
+  //  "command": "workbench.files.action.focusFilesExplorer",
+  //  "key": "space e",
+  //  "when": "editorTextFocus"
+  //},
   {
     "key": "a",
     "command": "explorer.newFile",

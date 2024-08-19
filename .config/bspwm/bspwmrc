@@ -28,6 +28,6 @@ xsetroot -cursor_name left_ptr &
 pidof -q sxhkd || sxhkd -c ~/.config/bspwm/sxhkdrc &
 sh ~/.config/polybar/launch.sh &
 xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
-xset r rate 280 60 &
+xset r rate 300 50 &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # xcape -e 'Super_L=Control_L|Escape' &
