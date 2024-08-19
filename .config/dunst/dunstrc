@@ -2,13 +2,13 @@
 
 [global]
     ## Display ##
-    monitor = 0
+    # monitor = 0
     follow = mouse
 
     ## Geometry ##
-    width = 299
-    height = 299
-    origin = top-right
+    # width = 300
+    # height = 300
+    # origin = top-right
     offset = 9x38
     # scale = 0
     # notification_limit = 20
@@ -17,8 +17,8 @@
     # progress_bar = true
     progress_bar_height = 20
     progress_bar_frame_width = 2
-    progress_bar_min_width = 199
-    progress_bar_max_width = 269
+    # progress_bar_min_width = 150
+    # progress_bar_max_width = 300
     # indicate_hidden = yes
     # transparency = 0
     # separator_height = 2
@@ -37,7 +37,7 @@
     # markup = full
     # format = "<b>%s</b>\n%b"
     alignment = center
-    vertical_alignment = center
+    # vertical_alignment = center
     # show_age_threshold = 60
     # ellipsize = middle   
     # ignore_newline = no
@@ -46,11 +46,11 @@
     # show_indicators = yes
 
     ## Icons ##
-    enable_recursive_icon_lookup = false
+    # enable_recursive_icon_lookup = true
     # icon_theme = Adwaita
     # icon_position = left
-    min_icon_size = 40
-    max_icon_size = 50
+    # min_icon_size = 32
+    # max_icon_size = 128
     icon_path = false
 
     ## History ##
