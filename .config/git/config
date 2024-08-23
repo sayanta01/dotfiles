@@ -6,4 +6,4 @@
 [color]
 	ui = true
 [alias]
-  lgod = log --oneline --graph --decorate
+  logd = log --graph --oneline --decorate --all --color --abbrev-commit --date=relative --pretty=format:"%C(auto)%h %C(green)(%ar)%C(reset) %s %C(cyan)%d%C(reset) %C(blue)<%an>%C(reset)"

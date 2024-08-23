@@ -5,7 +5,7 @@
 
 # https://youtu.be/vfPE9C5uvJ0?si=UoC3swluQJ66M4mj
 
-# Cloudflare DNS server
+# Cloudflare DNS
 sudo cat <<EOF | sudo tee /etc/resolv.conf
 nameserver 1.1.1.1
 nameserver 8.8.8.8
@@ -14,7 +14,7 @@ EOF
 # Display asterisks while entering pswd
 # sudo su root -c "echo Defaults pwfeedback >> /etc/sudoers"
 
-# Remove FF ~/.pulse-cookie
+# Remove ~/.pulse-cookie
 sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
 
 # SysRq

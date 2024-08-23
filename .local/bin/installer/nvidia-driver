@@ -43,3 +43,4 @@ fi
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
 # https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
+# steam setting > downloads > disable shader pre-caching

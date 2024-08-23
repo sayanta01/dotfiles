@@ -32,15 +32,15 @@ TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 # Enable completion 
 autoload -Uz compinit && compinit -d $HOME/.cache/zcompdump
 zmodload zsh/complist
-_comp_options+=(globdots)		# include hidden files
+_comp_options+=(globdots)  # include hidden files
 zstyle ':completion:*' menu select
-zstyle ':completion:*' list-prompt %S TAB for more
-zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# zstyle ':completion:*' list-prompt %S TAB for more
+# zstyle ':completion:*' verbose true
 
 # History
 HISTSIZE=2000
-SAVEHIST=2000
+SAVEHIST=$HISTSIZE
 HISTFILE="$HOME/.local/share/history"
 setopt hist_ignore_space       # ignore commands that start with space
 setopt hist_ignore_all_dups    # ignore duplicated commands
