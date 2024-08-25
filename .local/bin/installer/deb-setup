@@ -37,7 +37,7 @@ read -r choice
 if [ "$choice" = "y" ]; then
 	sudo apt install -y ssh tmux apt-transport-https \
 		fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
-		exa fd-find fzf bash-completion \
+		exa fzf bash-completion \
 		kitty htop \
 		bspwm polybar rofi slock dunst \
 		qt5ct lxappearance xcape \
@@ -57,9 +57,6 @@ fi
 
 # aria2c -x9 -o PacketTracer.deb -d ~/ https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 # cd ~/ && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
-
-# Fix debian
-sudo ln -s /usr/bin/fdfind /usr/bin/fd
 
 if [ -f /etc/debian_version ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then

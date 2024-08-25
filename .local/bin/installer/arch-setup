@@ -38,7 +38,7 @@ read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 		noto-fonts noto-fonts-emoji noto-fonts-cjk \
-		eza fd fzf bat bash-completion man-db \
+		eza fzf bash-completion man-db \
 		neovim kitty htop cowsay \
 		bspwm sxhkd polybar rofi slock dunst \
 		qt5ct qt6ct lxappearance xcape pass \

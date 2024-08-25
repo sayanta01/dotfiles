@@ -77,9 +77,9 @@ selected_vid() {
 }
 
 case "$1" in
-  video) video ;;
-  audio) audio ;;
-  selected_vid) selected_vid ;;
-  kill) killrecording ;;
-  *) ([ -f /tmp/recordingpid ] && asktoend && exit) || askrecording ;;
+video) video ;;
+audio) audio ;;
+selected_vid) selected_vid ;;
+kill) killrecording ;;
+*) ([ -f /tmp/recordingpid ] && asktoend && exit) || askrecording ;;
 esac

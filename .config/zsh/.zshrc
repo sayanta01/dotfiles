@@ -35,8 +35,6 @@ zmodload zsh/complist
 _comp_options+=(globdots)  # include hidden files
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-# zstyle ':completion:*' list-prompt %S TAB for more
-# zstyle ':completion:*' verbose true
 
 # History
 HISTSIZE=2000

@@ -1,8 +1,8 @@
 #!/bin/sh
 
-choice=$(printf "add-newd\nshow-newd" | dmenu -i -p "󰗚 ")
+choice=$(printf "add\nshow" | dmenu -i -p "󰗚 ")
 
-if [ "$choice" = "add-newd" ]; then
+if [ "$choice" = "add" ]; then
 	while true; do
 		word=$(dmenu -p "Enter Word " <&-)
 		if [ -z "$word" ]; then
@@ -14,7 +14,7 @@ if [ "$choice" = "add-newd" ]; then
 		fi
 		echo "$word -> $mean" >> ~/.local/share/vocab/words.txt
 	done
-elif [ "$choice" = "show-newd" ]; then
+elif [ "$choice" = "show" ]; then
 	newd="$(dmenu -p " " -l 20 <"$HOME/.local/share/vocab/words.txt" | cut -d' ' -f1)"
 	echo "$newd" | tr "\n" " " | xclip -sel c
 else

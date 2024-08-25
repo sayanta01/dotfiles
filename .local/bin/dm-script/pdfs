@@ -1,8 +1,12 @@
 #!/bin/sh
 
-# pdf_files=$(find ~ -name "*.pdf" -type f)
-pdf_files=$(fd . -e pdf ~/)
-chosen_file=$(echo "$pdf_files" | dmenu -i -l 20 -p "Choose a PDF:")
+if command -v fd >/dev/null; then
+	pdf_file=$(fd -e pdf)
+else
+	pdf_file=$(find . -maxdepth 7 -type f -name "*.pdf" -not -path '*/\.*' 2>/dev/null)
+fi
+
+chosen_file=$(echo "$pdf_file" | dmenu -i -l 20 -p "Choose a PDF:")
 if [ -n "$chosen_file" ]; then
 	zathura "$chosen_file" 2>/dev/null &
 fi

@@ -1,18 +1,16 @@
 #!/bin/sh
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	file=$(fd -H -t f | dmenu -i -l 20)
-
-	if [ -n "$file" ]; then
-		curl -F "file=@$file" 0x0.st | wl-copy
-		notify-send "0x0 📎"
-	fi
+if command -v fd >/dev/null; then
+	file=$(fd -t f | dmenu -i -l 20)
 else
-	# file=$(find "$HOME" -type f | dmenu -i -l 20)
-	file=$(fd -H -t f | dmenu -i -l 20)
+	file=$(find . -maxdepth 9 -type f -not -path '*/\.*' 2>/dev/null | dmenu -i -l 20)
+fi
 
-	if [ -n "$file" ]; then
+if [ -n "$file" ]; then
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		curl -F "file=@$file" 0x0.st | wl-copy
+	else
 		curl -F "file=@$file" 0x0.st | xclip -sel c
-		notify-send "0x0 📎"
 	fi
+	notify-send "0x0 📎"
 fi
