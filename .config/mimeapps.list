@@ -5,8 +5,8 @@
 
 text/x-shellscript=text.desktop;
 text/plain=text.desktop;
-application/postscript=pdf.desktop;
-application/pdf=pdf.desktop;
+application/postscript=org.pwmt.zathura.desktop;
+application/pdf=org.pwmt.zathura.desktop;
 image/png=nsxiv.desktop;
 image/jpeg=nsxiv.desktop;
 image/gif=nsxiv.desktop;
@@ -27,8 +27,6 @@ image/svg+xml=org.inkscape.Inkscape.desktop
 application/x-shellscript=text.desktop;
 
 # Manually
-## xdg-mime query filetype photo.png # check filetype
-## xdg-mime query default image/jpg  # check default app of filetype
-## xdg-mime default nsxiv.desktop image/png
-## xdg-mime default org.inkscape.Inkscape.desktop image/svg+xml
-## xdg-mime default org.pwmt.zathura.desktop application/pdf
+# xdg-mime query filetype photo.png # check filetype
+# xdg-mime query default image/jpg  # check default app of filetype
+# xdg-mime default org.pwmt.zathura.desktop application/pdf # set the default application

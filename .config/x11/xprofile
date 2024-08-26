@@ -1,9 +1,8 @@
 #!/bin/sh
 
-killall -9 pipewire pipewire-pulse wireplumber xcape kdeconnect-indicator
+killall -9 pipewire pipewire-pulse wireplumber xcape
 
 pipewire &
 pipewire-pulse &
 wireplumber &
 xcape -e 'Super_L=Control_L|Escape' &
-kdeconnect-indicator &

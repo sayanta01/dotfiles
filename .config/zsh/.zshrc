@@ -2,25 +2,17 @@
 
 # setopt autocd               # cd into dir by just typing the dir name
 # setopt interactivecomments  # allow comments in interactive mode
-# setopt extendedglob
-# setopt correct              # auto correct mistakes
-# setopt numericglobsort      # sort filenames numerically when it makes sense
-# setopt magicequalsubst      # enable filename expansion for arguments of the form ‘anything=expression’
-# setopt nonomatch            # hide error message if there is no match for the pattern
+# setopt extendedglob         # enables advanced pattern matching in globbing
 # setopt notify               # report the status of background jobs immediately
 
 # Keybindings
 bindkey -e                                        # emacs mode
 # bindkey -s '^r' 'hst^M'
 bindkey ' ' magic-space                           # history expansion on space
-bindkey '^[[3;5~' kill-word                       # backward del
+bindkey '^[[3;5~' kill-word                       # backward del [A-d]
 bindkey '^[[3~' delete-char                       # delete
-bindkey '^[[1;5C' forward-word                    # ctrl ->
-bindkey '^[[1;5D' backward-word                   # ctrl <-
-bindkey '^[[5~' beginning-of-buffer-or-history    # page up
-bindkey '^[[6~' end-of-buffer-or-history          # page down
-bindkey '^[[H' beginning-of-line                  # home
-bindkey '^[[F' end-of-line                        # end
+bindkey '^[[1;5C' forward-word                    # ctrl -> [A-f]
+bindkey '^[[1;5D' backward-word                   # ctrl <- [A-b]
 bindkey '^[[Z' undo                               # Shift Tab undo last action
 
 # Hide EOL sign ('%')
@@ -42,7 +34,6 @@ SAVEHIST=$HISTSIZE
 HISTFILE="$HOME/.local/share/history"
 setopt hist_ignore_space       # ignore commands that start with space
 setopt hist_ignore_all_dups    # ignore duplicated commands
-setopt hist_verify             # show command with history expansion
 
 # Load aliases & shortcuts
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
