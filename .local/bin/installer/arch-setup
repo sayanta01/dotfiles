@@ -14,8 +14,7 @@ if [ "$choice" = "y" ]; then
 	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
 	[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
 	curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
-	sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts
-	fc-cache -fv
+	sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
 else
 	:
 fi

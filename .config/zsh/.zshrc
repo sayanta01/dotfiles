@@ -75,6 +75,7 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}[%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%}]"
 PROMPT=' %{$fg[red]%}❯${vcs_info_msg_0_}%  '
+# PROMPT=' %1~ %F{red}❯ %f'
  
 # Fzf history
 function hst() {

@@ -9,7 +9,7 @@
     # width = 300
     # height = 300
     # origin = top-right
-    offset = 9x38
+    # offset = 10x50
     # scale = 0
     # notification_limit = 20
 
@@ -67,8 +67,8 @@
     ## Wayland ##
     # Uncomment for notications appear under fullscreen
     # applications (default: overlay)
-    # Set this to true to use X11 output on Wayland
     # layer = top
+    # Set this to true to use X11 output on Wayland
     force_xwayland = true
 
     ## Shortcuts ##

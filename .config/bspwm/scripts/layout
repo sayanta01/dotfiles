@@ -3,13 +3,19 @@
 # - Dependency
 # curl https://raw.githubusercontent.com/phenax/bsp-layout/master/install.sh | bash -;
 
-master="tall"
-default="tiled"
-
-curr_layout=$(bsp-layout get)
-
-if [ "$curr_layout" = $default ]; then
-	bsp-layout set $master && notify-send -t 600 "󰯋"
-else
-	bsp-layout set $default && notify-send -t 600 ""
+if ! pgrep -x "bspwm" >/dev/null; then
+	exit 1
 fi
+
+current_layout=$(bsp-layout get)
+
+case "$current_layout" in
+"tiled")
+	bsp-layout set tall
+	notify-send -t 600 "󰯋"
+	;;
+*)
+	bsp-layout set tiled
+	notify-send -t 600 ""
+	;;
+esac

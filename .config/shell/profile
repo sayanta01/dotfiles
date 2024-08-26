@@ -38,11 +38,9 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
-## $ npm config edit
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" # $ npm config edit
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
-## $ mkdir -p "$XDG_DATA_HOME"/wineprefixes
-export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
+export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default" # $ mkdir -p "$XDG_DATA_HOME"/wineprefixes
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/history"
