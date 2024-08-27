@@ -53,12 +53,7 @@ fi             # FILE
 *.toml          
 *.bat           
 *.mk            
-# *.jpg	          
-# *.jpeg          
-# *.bmp           
-# *.png         	
 *.webp          
-# *.gif	          
 *.ico           
 *.twig          󰪂
 *.cpp           

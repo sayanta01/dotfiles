@@ -4,7 +4,7 @@
   "exclusive": true,
   "passthrough": false,
   "ipc": false,
-  "tooltip": false,
+  //"tooltip": false,
   // "gtk-layer-shell": true,
   "modules-left": ["hyprland/workspaces"],
   "modules-right": [

@@ -36,7 +36,7 @@ read -r choice
 if [ "$choice" = "y" ]; then
 	sudo apt install -y ssh tmux apt-transport-https \
 		fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
-		exa fzf bash-completion \
+		fzf bash-completion \
 		kitty htop \
 		bspwm polybar rofi slock dunst \
 		qt5ct lxappearance xcape \

@@ -1,7 +1,5 @@
 # cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
-# setopt autocd               # cd into dir by just typing the dir name
-# setopt interactivecomments  # allow comments in interactive mode
 # setopt extendedglob         # enables advanced pattern matching in globbing
 # setopt notify               # report the status of background jobs immediately
 
@@ -21,7 +19,7 @@ bindkey '^[[Z' undo                               # Shift Tab undo last action
 # Time format
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
-# Enable completion 
+# Completion 
 autoload -Uz compinit && compinit -d $HOME/.cache/zcompdump
 zmodload zsh/complist
 _comp_options+=(globdots)  # include hidden files
