@@ -7,13 +7,14 @@ if [ -f /etc/arch-release ]; then
 	alias installed="grep -i installed /var/log/pacman.log"
 	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 elif [ -f /etc/debian_version ]; then
+	alias fd="fdfind"
 	alias remove="sudo apt remove --purge"
 	alias fix-pkg="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
 	alias clean="sudo apt -y autoremove; sudo apt clean"
 	alias installed="sudo apt list --installed"
-	# bigpkg() {
-	# 	dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
-	# }
+	bigpkg() {
+		dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
+	}
 else
 	:
 fi
