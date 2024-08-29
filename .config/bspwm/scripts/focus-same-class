@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Get the class of the focused window
+focused_class=$(xprop -id "$(bspc query -N -n focused)" WM_CLASS | awk -F '"' '{print $4}')
+
+# Get all window IDs of the same class
+mapfile -t same_class_windows < <(bspc query -N -n .window | xargs -I{} sh -c "xprop -id {} WM_CLASS | grep -q \"$focused_class\" && echo {}")
+
+# If no windows of the same class found, exit
+[ ${#same_class_windows[@]} -eq 0 ] && exit 1
+
+# Find the index of the focused window and calculate the next index
+for i in "${!same_class_windows[@]}"; do
+	if [ "${same_class_windows[$i]}" = "$(bspc query -N -n focused)" ]; then
+		next_index=$(((i + 1) % ${#same_class_windows[@]}))
+		break
+	fi
+done
+
+# Focus the next window
+bspc node -f "${same_class_windows[$next_index]}"

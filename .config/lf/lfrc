@@ -1,5 +1,6 @@
-# Basic settings
+# Basic vars
 set icons true
+set ifs "\n"
 set previewer "~/.config/lf/preview"
 set cleaner "~/.config/lf/clean"
 set errorfmt ""
@@ -7,7 +8,6 @@ set promptfmt " ❯ \033[34;1m%d\033[0m\033[1m%f\033[0m"
 set rulerfmt "%i/%t"
 set timefmt "Mon _2 Jan 15:04"
 
-# Opening
 cmd open ${{
     case $(file --mime-type "$f" -b) in
         text/*|application/json) $EDITOR "$f";;
@@ -15,7 +15,6 @@ cmd open ${{
     esac
 }}
 
-# Archive
 cmd extract ${{
     set -f
     case $f in
@@ -29,51 +28,16 @@ cmd extract ${{
     esac
 }}
 
-# Move to Trash
-cmd trash ${{
-  files=$(printf "$fx" | tr '\n' ';')
-  while [ "$files" ]; do
-    file=${files%%;*}
-
-    gio trash "$(basename "$file")"
-    if [ "$files" = "$file" ]; then
-      files=''
-    else
-      files="${files#*;}"
-    fi
-  done
-}}
-
-# Restore from Trash
-cmd trash-restore ${{
-  tre
-}}
-
-# Create file
-cmd mkfile ${{
-  printf "File Name: "
-  read ans
-  touch $ans
-}}
-
-# Create directory
-cmd mkdir ${{
-  printf "Directory Name: "
-  read ans
-  mkdir $ans
-}}
-
-# Bulk rename
 cmd bulk-rename ${{
     old="$(mktemp)"
     new="$(mktemp)"
     if [ -n "$fs" ]; then
-        fs="$(basename -a $fs)"
+        fs="$(basename -a -- $fs)"
     else
         fs="$(ls)"
     fi
-    printf '%s\n' "$fs" >"$old"
-    printf '%s\n' "$fs" >"$new"
+    printf '%s\n' "$fs" > "$old"
+    printf '%s\n' "$fs" > "$new"
     $EDITOR "$new"
     [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
     paste "$old" "$new" | while IFS= read -r names; do
@@ -88,14 +52,53 @@ cmd bulk-rename ${{
     lf -remote "send $id unselect"
 }}
 
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    file=${files%%;*}
+
+    gio trash "$(basename "$file")"
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+cmd trash-restore ${{
+  tre
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  touch $ans
+}}
+
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd toggle-preview %{{
+    if [ "$lf_preview" = true ]; then
+        lf -remote "send $id :set preview false; set ratios 1:5"
+    else
+        lf -remote "send $id :set preview true; set ratios 1:2:3"
+    fi
+}}
+
 # Remove some default bindings
 map d
 map m
 map "'"
 map '"'
 
-# Mappings
+# Bindings
 map zh set hidden!
+map zp toggle-preview
 map E extract
 map B bulk-rename
 map dd trash
@@ -111,9 +114,9 @@ map R reload
 map v invert
 map u unselect
 map <enter> open
-map T $kitty > /dev/null 2>&1
+map T $$TERMINAL > /dev/null 2>&1
 
 # Shortcuts
-map gh cd ~/
+map gh cd ~
 map gc cd ~/.config
 map gl cd ~/.local
