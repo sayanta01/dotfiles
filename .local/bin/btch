@@ -1,7 +1,7 @@
 #!/bin/sh
 
-dizo="B4:9A:95:94:9B:CC"
-mivi="BB:8C:CF:C8:C1:04"
+dizo="B2:9A:95:94:9B:CC"
+mivi="BB:8C:CF:C8:C1:02"
 
 choice=$(printf "dizo\nmivi" | dmenu -i -p "Choose device ")
 

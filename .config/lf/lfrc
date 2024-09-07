@@ -1,6 +1,7 @@
 # Basic vars
 set icons true
 set ifs "\n"
+set scrolloff 6
 set previewer "~/.config/lf/preview"
 set cleaner "~/.config/lf/clean"
 set errorfmt ""
