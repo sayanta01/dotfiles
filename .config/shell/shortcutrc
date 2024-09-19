@@ -63,7 +63,7 @@ rot13() {
 sw() {
 	elapsed_time=0
 	while true; do
-		clear
+		tput reset
 		printf "%02d:%02d:%02d\n" $(("$elapsed_time" / 3600)) $(("$elapsed_time" % 3600 / 60)) $(("$elapsed_time" % 60))
 		elapsed_time=$((elapsed_time + 1))
 		sleep 1

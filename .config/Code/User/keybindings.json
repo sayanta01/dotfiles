@@ -50,15 +50,34 @@
     "key": "ctrl+l",
     "command": "workbench.action.navigateRight"
   },
-  //{
-  //  "command": "workbench.action.toggleSidebarVisibility",
-  //  "key": "space e"
-  //},
-  //{
-  //  "command": "workbench.files.action.focusFilesExplorer",
-  //  "key": "space e",
-  //  "when": "editorTextFocus"
-  //},
+  // Explorer
+  {
+    "key": "space e",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.files.action.focusFilesExplorer"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
+  },
+  {
+    "key": "space e",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    "when": "sideBarFocus && !inputFocus"
+  },
+  {
+    "key": "space e",
+    "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
   {
     "key": "a",
     "command": "explorer.newFile",

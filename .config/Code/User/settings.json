@@ -3,8 +3,6 @@
   // "editor.fontLigatures": true,
   "editor.fontSize": 19,
   "terminal.integrated.fontSize": 19,
-  "extensions.ignoreRecommendations": true,
-  "extensions.autoUpdate": "onlyEnabledExtensions",
   "breadcrumbs.filePath": "off",
   "editor.minimap.enabled": false,
   "editor.matchBrackets": "near",
@@ -23,26 +21,19 @@
     "<C-a>": false,
     "<C-f>": false
   },
-  // "vim.insertModeKeyBindings": [
-  //   //{ "before": ["j", "k"], "after": ["<Esc>"] }
-  // ],
   "vim.normalModeKeyBindings": [
-    {
-      "before": ["ctrl+p"],
-      "commands": ["workbench.action.quickOpen"],
-      "silent": true
-    },
+    { "before": ["ctrl+p"], "commands": ["workbench.action.quickOpen"], "silent": true },
     // { "before": ["<S-l>"], "commands": ["workbench.action.nextEditor"] },
     // { "before": ["<S-h>"], "commands": ["workbench.action.previousEditor"] },
     { "before": ["leader", "q"], "commands": [":q!"] },
     { "before": ["leader", "x"], "commands": [":bdelete"] },
     { "before": ["<Esc>"], "commands": [":noh"] },
     { "before": ["g", "D"], "commands": ["editor.action.revealDeclaration"] },
-    // { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
+    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
     { "before": ["<S-k>"], "commands": ["editor.action.showHover"] }, // gh
     { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
     { "before": ["<leader>", "t"], "commands": ["editor.action.goToTypeDefinition"] }, // CS-F12
-    //{ "before": ["<leader>", "r", "n"], "commands": ["editor.action.rename"] },
+    { "before": ["<leader>", "r", "n"], "commands": ["editor.action.rename"] },
     { "before": ["<leader>", "c", "a"], "commands": ["editor.action.codeAction"] },
     { "before": ["g", "r"], "commands": ["editor.action.goToReferences"] }, // S-F12
     { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
@@ -53,9 +44,6 @@
   "vim.visualModeKeyBindings": [
     { "before": [">"], "commands": ["editor.action.indentLines"] },
     { "before": ["<"], "commands": ["editor.action.outdentLines"] }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    // { "before": ["<leader>", "e"], "commands": ["workbench.view.explorer"] }
   ],
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -76,5 +64,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "explorer.confirmDragAndDrop": false,
-  "telemetry.telemetryLevel": "off"
+  "telemetry.telemetryLevel": "off",
+  "extensions.ignoreRecommendations": true,
+  "extensions.autoUpdate": "onlyEnabledExtensions"
 }

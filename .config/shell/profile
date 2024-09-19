@@ -1,8 +1,7 @@
 #!/bin/sh
 # shellcheck disable=SC2155
 
-# Paths
-export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
+export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 export PATH="$PATH:$HOME/.local/share/cargo/bin"
 
 # Default programs
@@ -18,7 +17,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-# Fixing paths
+# ~/ Clean-up
 export GOPATH="$XDG_DATA_HOME/go"
 export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
@@ -49,8 +48,7 @@ export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 
-export LESSHISTFILE="-"            # disable files
-export QT_QPA_PLATFORMTHEME="gtk2" # have QT use gtk2 theme
+export LESSHISTFILE="-" # disable files
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export _JAVA_AWT_WM_NONREPARENTING=1 # fix Java applications
 export AWT_TOOLKIT="MToolkit wmname LG3D"
