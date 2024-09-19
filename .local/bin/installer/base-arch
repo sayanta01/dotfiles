@@ -42,8 +42,8 @@ fstabgen -U /mnt >> /mnt/etc/fstab   [ Artix ]
 artix-chroot /mnt  [ Artix ]
  arch-chroot /mnt  [ Arch ]
 
-nvim /etc/pacman.conf         # uncmnt ParallerDownloads
-nvim /etc/makepkg.conf        # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
+nvim /etc/pacman.conf        # uncmnt ParallerDownloads
+nvim /etc/makepkg.conf       # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
 
 #### configure sys clock ####
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
@@ -80,7 +80,7 @@ passwd  # set root pswd
 useradd -m -G wheel,storage,power `USER`
 passwd `USER`
 
-EDITOR=nvim visudo         # uncmnt %wheel ALL=(ALL:ALL) ALL
+EDITOR=nvim visudo        # uncmnt %wheel ALL=(ALL:ALL) ALL
 exit - chroot environment
 sudo reboot
 
