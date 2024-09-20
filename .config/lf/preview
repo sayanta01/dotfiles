@@ -28,7 +28,7 @@ video/*)
 	[ ! -f "$CACHE.jpg" ] && pdftoppm -jpeg -f 1 -singlefile "$file" "$CACHE"
 	draw "$CACHE.jpg"
 	;;
-text/* | */xml | application/json)
+text/* | application/*)
 	cat "$file"
 	exit 0
 	;;

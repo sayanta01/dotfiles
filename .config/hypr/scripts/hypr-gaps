@@ -28,10 +28,10 @@ fi
 
 # Determine whether to increase or decrease based on the argument
 case "$1" in
-"increase")
+"inc")
 	adjust_gaps 4
 	;;
-"decrease")
+"dec")
 	adjust_gaps -4
 	;;
 *)

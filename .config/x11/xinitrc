@@ -10,7 +10,7 @@ fi
 
 fav=bspwm
 case "$1" in
-	bspwm) bspwm ;;
-	xfce) startxfce4 ;;
-	*) exec $fav ;;
+bspwm) bspwm ;;
+xfce) startxfce4 ;;
+*) exec dbus-launch --sh-syntax --exit-with-session $fav ;;
 esac
