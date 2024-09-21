@@ -2,7 +2,7 @@
 
 winclass="$(xdotool search --class scratchpad)"
 if [ -z "$winclass" ]; then
-	kitty --class scratchpad
+	$TERMINAL --class scratchpad
 else
 	if [ ! -f /tmp/scpad ]; then
 		touch /tmp/scpad && xdotool windowunmap "$winclass"

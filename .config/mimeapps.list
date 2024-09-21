@@ -12,7 +12,6 @@ image/jpeg=nsxiv.desktop;
 image/gif=nsxiv.desktop;
 video/x-matroska=mpv.desktop
 video/mp4=mpv.desktop
-inode/directory=file.desktop
 
 # xdg-settings set default-web-browser google-chrome.desktop
 text/html=google-chrome.desktop;
@@ -29,4 +28,4 @@ application/x-shellscript=text.desktop;
 # Manually
 # xdg-mime query filetype photo.png # check filetype
 # xdg-mime query default image/jpg  # check default app of filetype
-# xdg-mime default org.pwmt.zathura.desktop application/pdf # set the default application
+# xdg-mime default org.inkscape.Inkscape.desktop image/svg+xml # set the default application

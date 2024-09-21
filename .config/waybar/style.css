@@ -17,7 +17,7 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-  color: #c0c6F5;
+  color: #c0c6f5;
   background-color: #010101;
   padding-left: 11px;
   padding-right: 12px;
@@ -32,13 +32,13 @@ window#waybar.hidden {
 
 #workspaces button.active {
   color: #010101;
-  background-color: #c0c6F5;
+  background-color: #c0c6f5;
   border-radius: 1px;
 }
 
 #workspaces button.urgent {
   color: #010101;
-  background-color: #FF5555;
+  background-color: #ff5555;
   border-radius: 1px;
 }
 
@@ -61,29 +61,29 @@ window#waybar.hidden {
 }
 
 #custom-battery {
-  color: #F8F8F2;
+  color: #f8f8f2;
   margin-right: 5px;
 }
 
 #custom-date {
-  color: #F8F8F2;
+  color: #f8f8f2;
   background-color: #282e36;
   border-radius: 8px;
   margin-right: 5px;
 }
 
 #custom-nettraf {
-  color: #62bFeF;
+  color: #62bfef;
   margin-right: 5px;
 }
 
 #custom-memory {
-  color: #F8F8F2;
+  color: #f8f8f2;
   margin-right: 5px;
 }
 
 #pulseaudio {
-  color: #F8F8F2;
+  color: #f8f8f2;
   background-color: #282e36;
   border-radius: 8px 8px 8px 8px;
   margin-right: 0px;

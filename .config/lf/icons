@@ -11,7 +11,7 @@ bd      🧱      # BLK
 cd      󰈍       # CHR
 su             # SETUID
 sg             # SETGID
-ex      🎯      # EXEC
+ex             # EXEC
 fi             # FILE
 
 # file extensions
@@ -26,10 +26,10 @@ fi             # FILE
 *.ejs           
 *.css           
 *.less          
-*.md             
-*.mdx            
-*.markdown       
-*.rmd	           
+*.md            
+*.mdx           
+*.markdown      
+*.rmd	          
 *.json          
 *.webmanifest   
 *.js            
@@ -340,7 +340,7 @@ Vagrantfile             
 *.mom	             
 *.me	             󱞏
 *.ms               
-*.gpg              🔒
+*.gpg              
 *.csv	             📓
 *.xlsx             📓
 *.z64              🎮

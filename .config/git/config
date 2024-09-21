@@ -6,4 +6,4 @@
 [color]
 	ui = true
 [alias]
-  logd = log --graph --oneline --decorate --all --color --abbrev-commit --date=relative --pretty=format:"%C(auto)%h %C(green)(%ar)%C(reset) %s %C(cyan)%d%C(reset) %C(blue)<%an>%C(reset)"
+  logd = log --graph --oneline --decorate --all --abbrev-commit --date=relative --pretty=format:'%h (%ar) %s %d <%an>'
