@@ -1,6 +1,6 @@
 #!/bin/sh
 
-_ figlet lolcat espeak cool-retro-term mapscii jp2a carbonyl \
+_ cowsay figlet lolcat espeak cool-retro-term mapscii jp2a carbonyl \
 	nyancat cmatrix asciiquarium hollywood tty-clock
 
 # Games

@@ -3,9 +3,7 @@
 PROGRAM="picom"
 WM="bspwm"
 
-# only for BSPWM
-current_wm=$(wmctrl -m | awk '/Name:/ {print $2}')
-if [ "$current_wm" = "$WM" ]; then
+if pgrep -x "$WM" >/dev/null; then
 	if pgrep "$PROGRAM" >/dev/null; then
 		pkill "$PROGRAM"
 	else

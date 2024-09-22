@@ -46,8 +46,8 @@ alias ll="exa -lgha --group-directories-first || ls -alh"
 alias lm="ls -t -1"
 alias lc="ls | wc -l"
 alias l-="ls -l | grep -v 'd'" # files only
-alias ld="ls -l | grep '^d'"   # dirs only
-alias l.="ls -A | grep '^\.'"
+alias ld="ls -ld */"           # dirs only
+alias l.="ls -ld .*"
 
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"

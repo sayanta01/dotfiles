@@ -37,21 +37,22 @@ read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
 		noto-fonts noto-fonts-emoji noto-fonts-cjk \
-		fzf bash-completion man-db \
-		neovim kitty htop cowsay \
+		fzf bash-completion htop \
+		kitty neovim zsh \
+		zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
 		bspwm sxhkd polybar rofi slock dunst \
-		qt5ct qt6ct lxappearance xcape pass \
+		qt5ct lxappearance xcape pass \
+		mpv nsxiv maim xwallpaper python-pywal \
 		pavucontrol playerctl pamixer \
-		mpv mediainfo nsxiv maim xwallpaper python-pywal \
-		net-tools wireless_tools network-manager-applet \
-		unrar unzip p7zip file-roller \
-		zathura zathura-pdf-mupdf \
+		net-tools network-manager-applet \
+		rsync aria2 jq socat \
+		lf mediainfo ffmpegthumbnailer \
+		unzip p7zip file-roller \
 		gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
-		zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
-		rsync aria2 jq \
+		zathura zathura-pdf-mupdf \
 		xdg-utils xdg-user-dirs \
-		pacman-contrib socat exfatprogs \
-		xclip xdotool wmname wmctrl
+		pacman-contrib exfatprogs \
+		xclip xdotool wmname
 	# xorg-xinit xorg-server xorg-xwininfo xorg-xsetroot
 else
 	:
