@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# TODO :
-# change default browser -> .profile
-
 # https://youtu.be/vfPE9C5uvJ0?si=UoC3swluQJ66M4mj
 
 # Cloudflare DNS
@@ -23,6 +20,6 @@ sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
 echo "1" > /proc/sys/kernel/sysrq
 echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
 
-# sudo vim /etc/hosts    [ blk sites ]
+# sudo vim /etc/hosts [ blk sites ]
 
 # lightdm-gtk-greeter-settings - dm-tool switch-to-greeter

@@ -10,6 +10,7 @@ application/pdf=org.pwmt.zathura.desktop;
 image/png=nsxiv.desktop;
 image/jpeg=nsxiv.desktop;
 image/gif=nsxiv.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop
 video/x-matroska=mpv.desktop
 video/mp4=mpv.desktop
 
@@ -22,7 +23,6 @@ x-scheme-handler/ftp=google-chrome.desktop;
 application/json=text.desktop
 
 [Added Associations]
-image/svg+xml=org.inkscape.Inkscape.desktop
 application/x-shellscript=text.desktop;
 
 # Manually

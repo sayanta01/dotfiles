@@ -10,7 +10,7 @@ remove_pkg() {
 	# sudo apt remove "$@"
 }
 
-remove_pkg xfce4-appfinder xfce4-power-manager xfwm4-themes
+remove_pkg xfce4-appfinder xfwm4-themes
 
 #### Install ####
 # exo              # Application library

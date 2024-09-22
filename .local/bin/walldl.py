@@ -16,6 +16,7 @@ DOWNLOAD_DIR = f"{str(pathlib.Path.home())}/Pictures/wall"
 def generate_id():
     return "".join(random.choices(string.ascii_lowercase + string.digits, k=6))
 
+
 def get_ext(url):
     ext = os.path.splitext(url)[1]
     return ext

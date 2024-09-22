@@ -71,7 +71,7 @@ selected_vid() {
 		-video_size "$W"x"$H" \
 		-i :0.0+"$X,$Y" \
 		-c:v libx264 -qp 0 \
-		"$(xdg-user-dir VIDEOS)/$(date '+%I:%M_%d_%b')-box.mkv" &
+		"$(xdg-user-dir VIDEOS)/$(date '+%I:%M_%d_%b')-Sel.mkv" &
 	echo $! >/tmp/recordingpid
 	recording_active=1
 }

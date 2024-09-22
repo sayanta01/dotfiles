@@ -103,7 +103,7 @@ if [ "$choice" = "y" ]; then
 # obs-studio gimp audacity
 # blueman bluez-utils
 # virtualbox virtualbox-guest-utils
-# sudo usermod -aG vboxusers "$USER"  # use USB
+# sudo usermod -aG vboxusers "$USER" # use USB
 else
 	:
 fi
@@ -120,11 +120,11 @@ if [ "$choice" = "y" ]; then
 	sudo touch /run/runit/service/libvirtd/down
 	sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service
 	sudo touch /run/runit/service/spice-vdagentd/down
-	# sudo systemctl start --now libvirtd  # Arch
+	# sudo systemctl start --now libvirtd # Arch
 	sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
 	sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
 	sudo usermod -aG libvirt "$USER"
-	# sudo systemctl restart libvirtd  # Arch
+	# sudo systemctl restart libvirtd # Arch
 else
 	:
 fi

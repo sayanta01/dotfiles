@@ -7,11 +7,11 @@ HIDE=2  # set hide behavior `1=intelligently, 2=always`
 CURR=$(xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior)
 
 case $CURR in
-# visible -> hide it
+# visible to hide it
 0) xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior -s $HIDE ;;
-# intelligent -> visible
+# intelligent to visible
 1) xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior -s 0 ;;
-# hidden -> visible
+# hidden to visible
 2) xfconf-query -c xfce4-panel -p /panels/panel-$PANEL/autohide-behavior -s 0 ;;
 # otherwise ignore
 *) ;;

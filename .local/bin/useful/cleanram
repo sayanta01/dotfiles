@@ -3,7 +3,7 @@
 # use once a week
 # sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
 
-echo "----- Memory Status before the RAM free-up ----"
+echo "---- Memory Status before the RAM free-up ----"
 
 free -h
 sudo sync

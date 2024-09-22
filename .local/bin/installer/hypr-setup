@@ -12,11 +12,11 @@ done
 paru -S hyprland-git xdg-desktop-portal-hyprland \
 	hyprpicker swaylock-effects-git \
 	grim slurp swappy swww \
-	wlsunset hyprprop-git \
+	wlsunset nwg-look-bin \
 	libva libva-nvidia-driver-git
 
 # https://arewewaylandyet.com
-# libsixel nwg-look-bin
+# libsixel hyprprop-git
 # waydroid - Container-based approach to boot a full Android system
 
 sudo pacman -S --noconfirm waybar wlroots polkit-gnome \
