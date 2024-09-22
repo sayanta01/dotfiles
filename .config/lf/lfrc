@@ -70,13 +70,13 @@ cmd trash-restore ${{
   tre
 }}
 
-cmd toggle-preview %{{
-    if [ "$lf_preview" = true ]; then
-        lf -remote "send $id :set preview false; set ratios 1:5"
-    else
-        lf -remote "send $id :set preview true; set ratios 1:2:3"
-    fi
-}}
+# cmd toggle-preview %{{
+#     if [ "$lf_preview" = true ]; then
+#         lf -remote "send $id :set preview false; set ratios 1:5"
+#     else
+#         lf -remote "send $id :set preview true; set ratios 1:2:3"
+#     fi
+# }}
 
 cmd mk %{{
     IFS=" "
@@ -98,7 +98,7 @@ map d
 map dd trash
 map dr trash-restore
 map zh set hidden!
-map zp toggle-preview
+# map zp toggle-preview
 map E extract
 map R bulk-rename
 map y copy
