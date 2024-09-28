@@ -2,63 +2,51 @@
 # wm independent hotkeys
 #
 
-# brightness
 XF86MonBrightness{Up,Down}
-                 brightnessctl s {+2%,2%-}
+       brightnessctl s {+2%,2%-}
 
-# media
 XF86Audio{Mute,LowerVolume,RaiseVolume,MicMute}
-         pamixer {-t,-d 5,-i 5,--default-source -t}
+         {wpctl set-mute @DEFAULT_SINK@ toggle, \
+          wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-, \
+          wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+, \
+         	wpctl set-mute @DEFAULT_SOURCE@ toggle}
 
 XF86Audio{Prev,Play,Next}
          playerctl {previous,play-pause,next}
 
-# toggle bar
-super + u
-        ~/.local/bin/statusbar/toggle-polybar
+super + {u,d}
+        {~/.local/bin/statusbar/toggle-polybar, \
+         while bspc node any.hidden.window -g hidden=off; do false; done && while bspc node 'any.!hidden.window' -g hidden=on; do :; done}
 
-# hide/show all windows
-super + d
-        while bspc node any.hidden.window -g hidden=off; do false; done && while bspc node 'any.!hidden.window' -g hidden=on; do :; done
-
-# media 
 alt + {F1,F2,F3}
-      pamixer {-t,-d 5,-i 5}
+      {wpctl set-mute @DEFAULT_SINK@ toggle, \
+       wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-, \
+       wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+}
 
-alt + {F6,F7,F8} 
+alt + {F6,F7,F8}
       playerctl {previous,play-pause,next}
 
-# screenshot
 Print
     maim | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M).png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
 
-shift + Print            
-        maim -s | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎" 
+shift + Print
+        maim -s | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎"
 
-# program launcher
 ctrl + Escape
        rofi -show drun -show-icons
 
 super + @space 
         dmenu_run
 
-# terminal emulator
-super + Return
-        kitty 
+super + {Return, e}
+        {kitty, thunar}
 
-# explore
-super + e
-        thunar
-
-# screen-lock
 ctrl + alt + l
        ~/.local/bin/lockscreen
 
-# task killer
 ctrl + shift + Escape
-       ~/.local/bin/dm-script/kill-ps     
+       ~/.local/bin/dm-script/kill-ps
 
-# system action
 ctrl + alt + Delete
   		 ~/.local/bin/dm-script/sys-action
 
@@ -145,13 +133,13 @@ super + {o,i}
 super + bracket{left,right}
         bspc desktop -f {prev,next}.local
 
-# move node to the previous/next desktop
+# focus and move the node to the previous/next desktop
 super + shift + bracket{left,right}
         bspc node -d {prev,next}.local --follow;
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-        bspc {desktop -f,node -d} '^{1-9,10}'	
+        bspc {desktop -f,node -d} '^{1-9,10}'
 
 # focus the node for the given path jump
 # super + {t,b,comma,period}
