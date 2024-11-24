@@ -58,7 +58,7 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C" [ Artix ] 
 
 #### network configuration ####
-echo LilWarmachine > /etc/hostname
+echo Warm > /etc/hostname
 
 nvim /etc/hosts
 127.0.0.1   localhost

@@ -12,7 +12,7 @@ current_layout=$(bsp-layout get)
 case "$current_layout" in
 "tiled")
 	bsp-layout set tall
-	notify-send -t 600 "󰯋"
+	notify-send -t 600 ""
 	;;
 *)
 	bsp-layout set tiled

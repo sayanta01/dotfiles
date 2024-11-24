@@ -6,8 +6,6 @@ else
 	. "$HOME/.xprofile"
 fi
 
-# . "$HOME/.profile"
-
 fav=bspwm
 case "$1" in
 bspwm) bspwm ;;

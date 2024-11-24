@@ -1,22 +1,39 @@
-#!/bin/sh
+#!/bin/bash
 
-choice=$(printf "add\nshow" | dmenu -i -p "󰗚 ")
+VOCAB_FILE="$HOME/.local/share/vocab/words.txt"
+DMENU="dmenu -i -l 20"
 
-if [ "$choice" = "add" ]; then
+copy_to_clipboard() {
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		wl-copy
+	else
+		xclip -sel clip
+	fi
+}
+
+add_word() {
 	while true; do
-		word=$(dmenu -p "Enter Word " <&-)
-		if [ -z "$word" ]; then
-			break
-		fi
-		mean=$(dmenu -p "Enter Meaning " <&-)
-		if [ -z "$mean" ]; then
-			break
-		fi
-		echo "$word -> $mean" >> ~/.local/share/vocab/words.txt
+		word=$($DMENU -p "Word:")
+		[ -z "$word" ] && break
+		mean=$($DMENU -p "Meaning:")
+		[ -z "$mean" ] && break
+		echo "$word -> $mean" >>"$VOCAB_FILE"
 	done
-elif [ "$choice" = "show" ]; then
-	newd="$(dmenu -p " " -l 20 <"$HOME/.local/share/vocab/words.txt" | cut -d' ' -f1)"
-	echo "$newd" | tr "\n" " " | xclip -sel c
-else
-	:
-fi
+}
+
+show_word() {
+	if [ ! -s "$VOCAB_FILE" ]; then
+		$DMENU -p "Vocabulary is empty"
+		return
+	fi
+	selected_word=$($DMENU <"$VOCAB_FILE" | cut -d' ' -f1)
+	[ -n "$selected_word" ] && echo -n "$selected_word" | copy_to_clipboard
+}
+
+[ -f "$VOCAB_FILE" ] || mkdir -p "$(dirname "$VOCAB_FILE")" && touch "$VOCAB_FILE"
+choice=$(printf "add\nshow" | $DMENU -p "󰗚 ")
+
+case "$choice" in
+add) add_word ;;
+show) show_word ;;
+esac

@@ -4122,43 +4122,37 @@ spinner {
  **********/
 switch {
   font-size: 1px;
-  font-weight: bold;
-  outline-offset: -4px;
-  transition: all 200ms ease-in;
-  border: 1px solid #090a0f;
-  border-radius: 14px;
-  color: transparent;
-  padding: 2.3px 0px;
-  background: linear-gradient(to right, #1E2233, #1E2233); }
+  min-width: 40px;
+  min-height: 25px;
+  background-size: 40px 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: -gtk-scaled(url("../assets/switch-off.svg"), url("../assets/switch-off.svg"));
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   switch:disabled {
-    background-color: #171a26; }
-  switch:backdrop {
-    background-color: #161925;
-    transition: 200ms ease-out; }
-    switch:backdrop:disabled {
-      background-color: #171a26; }
-  switch:active, switch:checked {
-    background: linear-gradient(to right, #f7005a, #fadd00); }
-    switch:active slider, switch:checked slider {
-      background: #fff; }
-    switch:active:backdrop, switch:checked:backdrop {
-      background: linear-gradient(to right, #de0051, #e1c600); }
-      switch:active:backdrop slider:backdrop, switch:checked:backdrop slider:backdrop {
-        box-shadow: none;
-        background-color: rgba(24, 27, 40, 0.9);
-        border: none; }
+    background-image: -gtk-scaled(url("../assets/switch-insensitive.svg"), url("../assets/switch-insensitive.svg")); }
+    switch:disabled slider {
+      background-image: -gtk-scaled(url("../assets/switch-slider-insensitive.svg"), url("../assets/switch-slider-insensitive@2.png")); }
+  switch, switch slider {
+    outline-color: transparent;
+    color: transparent;
+    border: none;
+    box-shadow: none; }
+  switch:checked {
+    background-image: -gtk-scaled(url("../assets/switch-on.svg"), url("../assets/switch-on.svg")); }
+    switch:checked slider {
+      background-image: -gtk-scaled(url("../assets/switch-slider-on.svg"), url("../assets/switch-slider-on@2.png")); }
+    switch:checked:disabled {
+      background-image: -gtk-scaled(url("../assets/switch-on-insensitive.svg"), url("../assets/switch-on-insensitive.svg")); }
+      switch:checked:disabled slider {
+        background-image: -gtk-scaled(url("../assets/switch-slider-on-insensitive.svg"), url("../assets/switch-slider-on-insensitive@@.png")); }
   switch slider {
-    padding: 2px;
-    margin: 0 2.3px;
-    min-width: 12px;
-    min-height: 12px;
-    border-radius: 100%;
-    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    background-color: #151723; }
-    switch slider:backdrop {
-      padding: 2px;
-      box-shadow: none;
-      background-color: #181b28; }
+    min-width: 1px;
+    min-height: 1px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: transparent;
+    background-image: -gtk-scaled(url("../assets/switch-slider-off.svg"), url("../assets/switch-slider-off@2.png")); }
   switch trough:active, switch trough:checked {
     background-color: #c50ed2; }
     switch trough:active:backdrop, switch trough:checked:backdrop {
@@ -5501,6 +5495,16 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
   #gnc-id-main-window .arrow.button.toggle:hover {
     border-color: #c50ed2; }
 
+/*******************
+ * Calendar events *
+********************/
+.color-light.timed label {
+  color: #C3C7D1;
+  opacity: 1; }
+.week-view .color-light.timed label, .color-light label, .year-view .color-light:not(.timed) label {
+  color: #161925;
+  opacity: 1; }
+
 .xfce4-panel {
   border-radius: 0; }
   .xfce4-panel.panel {
@@ -5525,14 +5529,16 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
   color: white;
   border-radius: 0;
   border: none;
-  background-color: rgba(24, 27, 40, 0); }
+  background-color: rgba(24, 27, 40, 0);
+  transition: none; }
   .xfce4-panel.panel button.flat:hover:not(.open_group) {
     border: none;
     background-color: #2b3148; }
   .xfce4-panel.panel button.flat:active:not(.open_group), .xfce4-panel.panel button.flat:checked:not(.open_group) {
-    color: #fefefe;
-    border-bottom: 2px solid #c50ed2;
-    background-color: #212638; }
+    color: white;
+    background: linear-gradient(to right, #5800E2, #FF00E6) left bottom #141620 no-repeat;
+    background-size: 100% 2px;
+    border: 0; }
     .xfce4-panel.panel button.flat:active:not(.open_group) label, .xfce4-panel.panel button.flat:active:not(.open_group) image, .xfce4-panel.panel button.flat:checked:not(.open_group) label, .xfce4-panel.panel button.flat:checked:not(.open_group) image {
       color: inherit; }
 
@@ -6005,6 +6011,9 @@ MsdOsdWindow.background.osd {
     border: none;
     border-radius: 5px; }
 
+.mate-panel-menu-bar, .mate-panel-menu-bar button {
+  border-radius: 0; }
+
 /***********************
  * App-Specific Styles *
  ***********************/
@@ -6167,18 +6176,18 @@ ConversationListView {
   .nemo-window .places-treeview iconview.cell:selected {
     background: #c50ed2; }
 .nemo-window .sidebar {
-  color: #98abb2;
+  color: #C3C7D1;
   background-color: #161925; }
   .nemo-window .sidebar .view, .nemo-window .sidebar iconview, .nemo-window .sidebar .iconview, .nemo-window .sidebar row {
     background-color: transparent; }
 .nemo-window .nemo-window-pane widget.entry {
   background-clip: padding-box;
+  background-color: #252a3f;
   min-height: 28px;
   padding: 5px;
   color: #C3C7D1;
-  border: 1px solid #090a0f;
-  border-radius: 3px;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.9), inset 1px 0 rgba(0, 0, 0, 0.96), inset -1px 0 rgba(0, 0, 0, 0.96), inset 0 -1px rgba(0, 0, 0, 0.98), 0 1px rgba(255, 255, 255, 0.6); }
+  border: 1px solid #c50ed2;
+  border-radius: 3px; }
   .nemo-window .nemo-window-pane widget.entry:selected {
     background-color: #c50ed2;
     color: #fefefe; }
@@ -6202,16 +6211,16 @@ ConversationListView {
       background: linear-gradient(to right, #c50ed2, #8500f7);
       box-shadow: 0px 0px 5px rgba(197, 14, 210, 0.98);
       color: white; }
-.nemo-window .nemo-inactive-pane .view, .nemo-window .nemo-inactive-pane iconview,
+.nemo-window .nemo-inactive-pane .view:not(:selected), .nemo-window .nemo-inactive-pane iconview:not(:selected),
 .nemo-window .nemo-inactive-pane iconview {
-  background-color: #141722; }
+  background-color: #0b0c12; }
 
 .caja-notebook .frame {
   border-width: 0 0 1px; }
 .caja-notebook .entry {
-  background: #161925;
+  background: #23283b;
   color: #C3C7D1;
-  border-color: #090a0f; }
+  border-color: #c50ed2; }
   .caja-notebook .entry:selected {
     background: #c50ed2;
     color: #fefefe; }
@@ -6229,7 +6238,7 @@ ConversationListView {
   .caja-side-pane widget .vertical {
     background: #161925;
     padding: 3px 2px;
-    color: #98abb2; }
+    color: #C3C7D1; }
     .caja-side-pane treeview.view:hover,
     .caja-side-pane textview.view text:hover,
     .caja-side-pane viewport.frame:hover,

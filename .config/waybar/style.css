@@ -46,7 +46,7 @@ window#waybar.hidden {
 #custom-battery,
 #custom-date,
 #custom-nettraf,
-#pulseaudio,
+#audio,
 #custom-memory,
 #tray #tray {
   padding: 0px 10px;
@@ -82,7 +82,7 @@ window#waybar.hidden {
   margin-right: 5px;
 }
 
-#pulseaudio {
+#audio {
   color: #f8f8f2;
   background-color: #282e36;
   border-radius: 8px 8px 8px 8px;

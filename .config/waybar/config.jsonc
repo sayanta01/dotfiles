@@ -1,17 +1,16 @@
 {
   "layer": "top",
-  "position": "top",
-  "exclusive": true,
-  "passthrough": false,
-  "ipc": false,
-  //"tooltip": false,
+  // "position": "top",
+  // "exclusive": true,
+  // "passthrough": false,
+  // "ipc": false,
   // "gtk-layer-shell": true,
   "modules-left": ["hyprland/workspaces"],
   "modules-right": [
     // "custom/battery",
     "custom/date",
     "custom/nettraf",
-    "pulseaudio",
+    "audio",
     "custom/memory",
     "tray"
   ],
@@ -32,11 +31,6 @@
       "10": "󰡑"
     }
   },
-  // "custom/separator": {
-  //   "tooltip": false,
-  //   "format": "/",
-  //   "interval": "once"
-  // },
   "tray": {
     "icon-size": 18,
     "spacing": 6
@@ -45,6 +39,7 @@
   // 	"tooltip": false,
   // 	"interval": 4,
   // 	"exec": "~/.local/bin/statusbar/battery"
+  //  "return-type": "json"
   // },
   "custom/date": {
     "tooltip": false,
@@ -56,16 +51,15 @@
     "interval": 4,
     "exec": "~/.local/bin/statusbar/sb-nettraf",
     "on-click-right": "kitty --class floating -e nmtui"
-    // "return-type": "json"
   },
-  "pulseaudio": {
+  "audio": {
     "tooltip": false,
-    "format": "{icon} {volume}%",
-    "format-muted": "🔇 Muted",
-    "on-click": "pamixer -t",
+    "format": "{icon}{volume}%",
+    "format-muted": "🔇Muted",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
+    "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
     "scroll-step": 5,
     "format-icons": {
       "headphone": "󰋋",

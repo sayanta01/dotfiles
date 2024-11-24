@@ -7,13 +7,12 @@ done
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config/
 chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
-printf "Update/Install Fonts? [y/N]: "
+printf "Fonts? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
-	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
-	[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
-	curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
-	sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
+	[ ! -d ~/.local/share/fonts ] && mkdir -p ~/.local/share/fonts
+	cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/JetBrainsMono/Ligatures/Thin/JetBrainsMonoNerdFont-Thin.ttf
+	cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/JetBrainsMono/Ligatures/Thin/JetBrainsMonoNerdFontMono-Thin.ttf
 else
 	:
 fi
@@ -26,8 +25,8 @@ git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
 git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # Looks
-git clone --depth=1 https://github.com/sayanta01/BeautySolar ~/.local/share/icons/BeautySolar
-sudo cp -r ~/.local/share/icons/BeautySolar /usr/share/icons
+# git clone --depth=1 https://github.com/sayanta01/BeautySolar ~/.local/share/icons/BeautySolar
+# sudo cp -r ~/.local/share/icons/BeautySolar /usr/share/icons
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 
@@ -59,7 +58,7 @@ fi
 
 if [ -f /etc/debian_version ]; then
 	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
+		echo "source ~/.profile" >>~/.config/zsh/.zshrc
 	fi
 	ln -s ~/.config/zsh/.zshrc ~/.zshrc
 	ln -s ~/.config/x11/xinitrc ~/.xinitrc

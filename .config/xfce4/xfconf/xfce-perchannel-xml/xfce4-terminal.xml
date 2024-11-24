@@ -8,7 +8,7 @@
   <property name="dropdown-position-vertical" type="uint" value="10"/>
   <property name="dropdown-show-borders" type="bool" value="false"/>
   <property name="font-allow-bold" type="bool" value="false"/>
-  <property name="font-name" type="string" value="JetBrainsMono Nerd Font Ultra-Light 15"/>
+  <property name="font-name" type="string" value="JetBrainsMono Nerd Font Ultra-Light 16"/>
   <property name="text-blink-mode" type="string" value="TERMINAL_TEXT_BLINK_MODE_NEVER"/>
   <property name="misc-menubar-default" type="bool" value="false"/>
   <property name="misc-confirm-close" type="bool" value="true"/>

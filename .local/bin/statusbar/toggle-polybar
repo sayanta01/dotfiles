@@ -2,7 +2,7 @@
 
 if [ -f /tmp/polybarhidden ]; then
 	polybar-msg cmd show
-	bspc config top_padding 29
+	bspc config top_padding 28
 	rm /tmp/polybarhidden
 else
 	polybar-msg cmd hide

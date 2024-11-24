@@ -9,6 +9,7 @@ get_default_sink() {
 }
 
 DEF_SINK=$(get_default_sink)
+
 for SINK in $(get_all_sinks); do
 	[ -z "$FIRST" ] && FIRST=$SINK # Save the first index in case the current default is the last in the list
 	if [ " $SINK" = "$DEF_SINK" ]; then

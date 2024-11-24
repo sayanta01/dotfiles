@@ -5,7 +5,7 @@ notify-send "🌡️$(sensors | awk '/Core 0/ {print $3}' | cut -c 2- | cut -c 1
 notify-send "💾$(df -h / | awk 'NR==2{print $4}')"
 
 if [ -f /etc/debian_version ]; then
-	notify-send "📦 APT $(apt list --upgradable 2>/dev/null | grep -c '/')"
+	notify-send "APT $(apt list --upgradable 2>/dev/null | grep -c '/')"
 elif [ -f /etc/arch-release ]; then
-	notify-send "📦 PAC $(sudo checkupdates 2>/dev/null | wc -l | tr -d '\n') ▏AUR $(paru -Qum 2>/dev/null | wc -l)"
+	notify-send "PAC $(sudo checkupdates 2>/dev/null | wc -l | tr -d '\n') ▏AUR $(paru -Qum 2>/dev/null | wc -l)"
 fi

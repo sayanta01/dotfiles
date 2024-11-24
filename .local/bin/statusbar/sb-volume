@@ -1,8 +1,11 @@
 #!/bin/sh
 
-[ "$(pamixer --get-mute)" = true ] && echo '🔇Muted' && exit
+if wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q '\[MUTED\]'; then
+	echo '🔇Muted'
+	exit
+fi
 
-vol="$(pamixer --get-volume)"
+vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}')
 
 if [ "$vol" -gt "70" ]; then
 	icon="🔊"
