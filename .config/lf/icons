@@ -7,7 +7,7 @@ st      󱍭       # STICKY
 di             # DIR
 pi      󱑹       # FIFO
 so             # SOCK
-bd      󰟾       # BLK
+bd             # BLK
 cd      󰈍       # CHR
 su             # SETUID
 sg             # SETGID
@@ -50,7 +50,7 @@ fi             # FILE
 *.ini           
 *.yml           
 *.yaml          
-*.toml          
+*.toml          
 *.bat           
 *.mk            
 *.webp          
@@ -122,7 +122,7 @@ fi             # FILE
 *.ts            
 *.tsx           
 *.jl            
-*.pp            
+*.pp            
 *.vue           
 *.elm           
 *.swift         󰀷
@@ -145,7 +145,7 @@ fi             # FILE
 *.gitconfig             
 *.gitignore             
 *.gitattributes         
-*.gitlab-ci.yml         󰮠
+*.gitlab-ci.yml         
 *.bashrc                
 *.zshrc                 
 *.zshenv                
@@ -328,41 +328,22 @@ Vagrantfile             
 
 # other formats
 *.pdf	             
-*.djvu             📚
-*.epub             📚
+*.djvu             
+*.epub             
 *.txt	             
 *.mom	             
 *.me	             󱞏
 *.ms               
 *.gpg              
-*.csv	             📓
-*.xlsx             📓
-*.z64              🎮
-*.v64              🎮
-*.n64              🎮
-*.gba              🎮
-*.nes              🎮
-*.gdi              🎮
+*.csv	             
+*.xlsx             
 *.1                
 *.nfo	             
 *.info             
 *.log	             󰌱
-*.iso	             📀
-*.img              📀
+*.iso	             
+*.img              
 *.part             
-*.torrent          
-*.elf              
-*.exe              󰨡
-*.appx             󰨡
-*.msi              󰨡
-*.app              󰀶
-# *.gam              🎮
-# *.sav              🎮
-# *.scm              🎮
-# *.bin              🎮
-# *.psv              🎮
-# *.rom              🎮
-# *.xex              🎮
-# *.jrz              🎮
-# *.magnet           
-# *.desktop          󰟀
+*.torrent          
+*.desktop          󰟀
+*.magnet           

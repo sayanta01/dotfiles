@@ -72,8 +72,8 @@
     force_xwayland = true
 
     ## Shortcuts ##
-    # close_all = ctrl+shift+space
-    # history = ctrl+shift+grave
+    close_all = ctrl+shift+space
+    history = ctrl+shift+grave
     mouse_left_click = close_current
     mouse_right_click = close_all
 

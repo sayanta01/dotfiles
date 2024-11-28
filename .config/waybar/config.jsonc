@@ -62,9 +62,9 @@
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
     "scroll-step": 5,
     "format-icons": {
-      "headphone": "󰋋",
-      "hands-free": "󰋋",
-      "headset": "󰋋",
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
       "phone": "󰷰",
       "portable": "󰷰",
       "car": "󰄋",
