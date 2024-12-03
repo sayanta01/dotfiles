@@ -333,7 +333,6 @@ Vagrantfile             
 *.txt	             
 *.mom	             
 *.me	             󱞏
-*.ms               
 *.gpg              
 *.csv	             
 *.xlsx             

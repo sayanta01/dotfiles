@@ -25,6 +25,12 @@ ext() {
 	fi
 }
 
+del() {
+	for file in "$@"; do
+		gio trash "$file" || mv "$file" ~/.local/share/Trash/files
+	done
+}
+
 joke() {
 	curl -sSL https://v2.jokeapi.dev/joke/Any | jq -r '.category, .setup, .delivery'
 }

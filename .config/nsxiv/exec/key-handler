@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# ctrl x then key
 session_type="$XDG_SESSION_TYPE"
 copy_command="xclip -sel clip"
 wallpaper_command="xwallpaper --zoom"
@@ -9,10 +8,11 @@ wallpaper_command="xwallpaper --zoom"
 	wallpaper_command="swww img"
 }
 
+# ctrl x then key
 while read -r file; do
 	case "$1" in
 	"w") $wallpaper_command "$file" & ;;
-	"d") mv "$file" ~/.local/share/Trash/files ;;
+	"d") gio trash "$file" || mv "$file" ~/.local/share/Trash/files ;;
 	"r") convert -rotate 90 "$file" "$file" ;;
 	"R") convert -rotate -90 "$file" "$file" ;;
 	"f") convert -flop "$file" "$file" ;;

@@ -53,17 +53,15 @@ cmd bulk-rename ${{
 }}
 
 cmd trash ${{
-  files=$(printf "$fx" | tr '\n' ';')
-  while [ "$files" ]; do
-    file=${files%%;*}
-
-    gio trash "$(basename "$file")"
-    if [ "$files" = "$file" ]; then
-      files=''
+    mkdir -p ~/.local/share/Trash/files
+    if [ -z "$fs" ]; then
+        gio trash "$f" || mv "$f" ~/.local/share/Trash/files
     else
-      files="${files#*;}"
+       IFS="$(printf '\n\t')"
+       printf '%s\n' "$fs" | while IFS= read -r file; do
+           gio trash "$file" || mv "$file" ~/.local/share/Trash/files
+       done
     fi
-  done
 }}
 
 cmd trash-restore ${{
@@ -98,5 +96,3 @@ map u unselect
 map <enter> open
 map T $$TERMINAL > /dev/null 2>&1
 map gh cd ~
-map gc cd ~/.config
-map gl cd ~/.local

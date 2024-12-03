@@ -59,7 +59,7 @@ alt + Return
 
 # reload sxhkd configuration
 super + Escape
-        notify-send -t 600 "reload sxhkd!"; pkill -USR1 -x sxhkd
+        notify-send -t 600 "Reloaded sxhkd!"; pkill -USR1 -x sxhkd
 
 # quit/restart bspwm
 super + alt + {q,r}
@@ -111,9 +111,21 @@ super + ctrl + {m,x,s,p}
 super + {_,shift + }{h,j,k,l}
         bspc node -{f,s} {west,south,north,east}
 
+# focus the node for the given path jump
+# super + {t,b,comma,period}
+#        	bspc node -f @{parent,brother,first,second}
+
 # focus the next/previous window in the current desktop
 alt + {_,shift + }Tab
      	bspc node -f {next,prev}.local.!hidden.window
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+        bspc desktop -f {prev,next}.local
+
+# focus and move the node to the previous/next desktop
+super + shift + bracket{left,right}
+        bspc node -d {prev,next}.local --follow;
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -125,21 +137,9 @@ super + {o,i}
         bspc node {older,newer} -f; \
       	bspc wm -h on
 
-# focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-        bspc desktop -f {prev,next}.local
-
-# focus and move the node to the previous/next desktop
-super + shift + bracket{left,right}
-        bspc node -d {prev,next}.local --follow;
-
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
         bspc {desktop -f,node -d} '^{1-9,10}'
-
-# focus the node for the given path jump
-# super + {t,b,comma,period}
-#        	bspc node -f @{parent,brother,first,second}
 
 #
 # preselect
@@ -167,12 +167,12 @@ super + ctrl + shift + space
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
-        bspc node -z {left -220 0,bottom 0 160,top 0 -160,right 220 0}
+        bspc node -z {left -240 0,bottom 0 180,top 0 -180,right 240 0}
 
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
-        bspc node -z {right -220 0,top 0 160,bottom 0 -160,left 220 0}
+        bspc node -z {right -240 0,top 0 180,bottom 0 -180,left 240 0}
 
 # move a floating window
 super + {Left,Down,Up,Right}
-        bspc node -v {-180 0,0 180,0 -160,180 0}
+        bspc node -v {-240 0,0 180,0 -180,240 0}

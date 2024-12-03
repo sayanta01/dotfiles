@@ -18,12 +18,9 @@ else
 	:
 fi
 
-# Suckless
-git clone --depth=1 https://github.com/sayanta01/dmenu ~/.config/dmenu && cd ~/.config/dmenu && sudo make clean install
-
 # Tools
+git clone --depth=1 https://github.com/sayanta01/dmenu ~/.config/dmenu && cd ~/.config/dmenu && sudo make clean install
 git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
-git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # Looks
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
