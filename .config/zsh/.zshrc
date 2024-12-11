@@ -1,24 +1,16 @@
 # cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
-# setopt extendedglob # enables advanced pattern matching in globbing
-# setopt notify       # report the status of background jobs immediately
-
 bindkey -e                      # emacs mode
-# bindkey -s '^r' 'hst^M'
-bindkey ' ' magic-space         # history expansion on space
 bindkey '^[[3;5~' kill-word     # backward del [A-d]
 bindkey '^[[3~' delete-char     # del
 bindkey '^[[1;5C' forward-word  # [A-f]
 bindkey '^[[1;5D' backward-word # [A-b]
 bindkey '^[[Z' undo             # Shift Tab undo last action
 
-# PROMPT_EOL_MARK="" 
-# Hide EOL sign ('%')
-
 TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
-# Completion 
-autoload -Uz compinit && compinit -d $HOME/.cache/zcompdump
+autoload -Uz compinit
+compinit -d $HOME/.cache/zcompdump
 zmodload zsh/complist
 _comp_options+=(globdots) # include hidden files
 zstyle ':completion:*' menu select
@@ -33,17 +25,8 @@ setopt hist_ignore_all_dups
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
 [ -f "$HOME/.config/shell/shortcutrc" ] && source "$HOME/.config/shell/shortcutrc"
 
-if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]; then
-    . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
-else
-    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-fi
-
-if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]; then
-    . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null
-else
-    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null 
-fi
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ] || source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null || source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
 PROMPT=' %1~ %F{red}❯ %f'
  

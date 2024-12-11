@@ -68,7 +68,7 @@ cmd trash-restore ${{
   tre
 }}
 
-cmd mk %{{
+cmd create %{{
     IFS=" "
     item="$*"
     if [[ "$item" == */ ]]; then
@@ -81,7 +81,7 @@ cmd mk %{{
 }}
 
 # Bindings
-map a push :mk<space>
+map a push :create<space>
 map d
 map dd trash
 map dr trash-restore
@@ -96,3 +96,4 @@ map u unselect
 map <enter> open
 map T $$TERMINAL > /dev/null 2>&1
 map gh cd ~
+map gc cd ~/.config/

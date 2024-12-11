@@ -13,7 +13,7 @@ sudo mkinitcpio -p linux-lts / linux
 # /etc/default/grub  `GRUB_CMDLINE_LINUX_DEFATULT add - splash rd.udev.log_priority=3 vt.global_cursor_default=0`
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-sudo cp -r lone /usr/share/plymouth/themes
+sudo cp -r lone /usr/share/plymouth/themes/
 # sudo plymouth-set-default-theme -l
 sudo plymouth-set-default-theme -R lone
 

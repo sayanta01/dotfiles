@@ -74,8 +74,7 @@
   "custom/memory": {
     "tooltip": false,
     "interval": 4,
-    "exec": "~/.local/bin/statusbar/sb-mem",
-    // "on-click": "notify-send \"$(ps axch -o cmd:16,%mem --sort=-%mem | head)\"",
+    "exec": "echo \"🧠 $(free -h | awk '/Mem:/ { print $3 }' | cut -f1 -d 'i')\"",
     "on-click-right": "kitty --class floating -e htop"
   }
 }
