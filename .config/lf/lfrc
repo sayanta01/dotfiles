@@ -10,7 +10,7 @@ set timefmt "Mon _2 Jan 15:04"
 
 cmd open &{{
     case $(file --mime-type -Lb "$f") in
-        text/* | application/*) lf -remote "send $id \$nvim \$fx";;
+        text/* | application/*) lf -remote "send $id \$nvim \$fx" ;;
         *) for f in $fx; do xdg-open "$f" > /dev/null 2> /dev/null & done ;;
     esac
 }}
@@ -34,7 +34,7 @@ cmd bulk-rename ${{
     old="$(mktemp)"
     new="$(mktemp)"
     if [ -n "$fs" ]; then
-        fs="$(basename -a -- $fs)"
+        fs="$(basename -a -- "$fs")"
     else
         fs="$(ls)"
     fi
