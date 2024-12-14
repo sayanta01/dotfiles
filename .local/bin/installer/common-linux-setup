@@ -8,7 +8,7 @@ nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
 
-# Display asterisks while entering pswd
+# Show asterisks while entering pswd
 # sudo su root -c "echo Defaults pwfeedback >> /etc/sudoers"
 
 # Remove ~/.pulse-cookie

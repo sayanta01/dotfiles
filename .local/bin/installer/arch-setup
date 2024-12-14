@@ -2,7 +2,7 @@
 
 # https://dither8.xyz/guide/arch-postinstall
 for dots in .bashrc .profile .xprofile .zprofile; do
-  cp -r "$HOME/dotfiles/$dots" "$HOME"
+	cp -r "$HOME/dotfiles/$dots" "$HOME"
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config/

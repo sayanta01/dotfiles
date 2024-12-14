@@ -1,8 +1,8 @@
 #!/bin/sh
 
 check_nvidia() {
-	sudo pacman -S --noconfirm nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia \
-		nvtop glmark2
+	sudo pacman -S --noconfirm nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia
+	# nvtop glmark2
 
 	if ! grep -q "nvidia_drm.modeset=1" /etc/default/grub; then
 		parameter="nvidia_drm.modeset=1"
@@ -22,11 +22,10 @@ check_nvidia() {
 EOF
 }
 
-# Check if an LTS kernel is detected
+# Check LTS kernel
 if uname -r | grep -q 'lts'; then
 	echo "LTS kernel detected"
 
-	# Check Nvidia GPU
 	if lspci | grep -i nvidia; then
 		check_nvidia
 	else
@@ -39,7 +38,7 @@ else
 	sudo grub-mkconfig -o /boot/grub/grub.cfg
 fi
 
-# Fix screen tearing on X
+# Fix tearing on X
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
 # https://github.com/korvahannu/arch-nvidia-drivers-installation-guide

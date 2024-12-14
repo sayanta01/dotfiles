@@ -1,63 +1,63 @@
-# enable efi                   # VM settings
+# enable efi                   # VM setup
 # ls /sys/firmware/efi/efivars # check uefi
 
-#### connect wifi ####
+## connect wifi ##
 iwctl
-device list # show adpater
+device list
 station <adpater-name> scan 
-station <adpater-name> get-networks # show available networks
+station <adpater-name> get-networks
 station <adpater-name> connect <network-name>
 
-#### change tty font ####
+## change tty font ##
 pacman -Sy terminus-font
 setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
 
-#### partition disk ####
+## partition disk ##
 cfdisk /dev/sda
 sda1 boot 400M # partition type EFI system
 sda2 root      # give rest of space
 # sda3 swap    - optional
 write & quit
 
-#### formating ####
+## formating ##
 mkfs.fat -F 32 /dev/sda1
 mkfs.ext4 /dev/sda2
 # mkswap /dev/sda3
 
-#### mounting ####
+## mounting ##
 mount /dev/sda2 /mnt
 mkdir -p /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
 # swapon /dev/sda3
 
-#### install base system ####
+## install base system ##
 basestrap /mnt base base-devel linux-lts linux-headers linux-firmware neovim tmux runit elogind-runit [ Artix ]
  pacstrap -K /mnt base base-devel linux-lts linux-headers linux-firmware neovim tmux [ Arch ]
 
-#### generate fstab ####
+## generate fstab ##
 fstabgen -U /mnt >> /mnt/etc/fstab  [ Artix ]
  genfstab -U /mnt >> /mnt/etc/fstab [ Arch ]
 
-#### chroot ####
+## chroot ##
 artix-chroot /mnt [ Artix ]
  arch-chroot /mnt [ Arch ]
 
 nvim /etc/pacman.conf  # uncmnt ParallerDownloads
 nvim /etc/makepkg.conf # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
 
-#### configure sys clock ####
+## configure sys clock ##
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
 # date -s "1 JAN 2022 00:00:00"
 timedatectl set-ntp true [ Arch ]
 
-#### set localization ####
+## set localization ##
 nvim /etc/locale.gen  # uncmnt en_US.UTF-8 UTF-8
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C" [ Artix ] 
 
-#### network configuration ####
+## network configuration ##
 echo Warm > /etc/hostname
 
 nvim /etc/hosts
@@ -71,7 +71,7 @@ ln -s /etc/runit/sv/NetworkManager /run/runit/service     [ Artix after reboot ]
  pacman -S git dosfstools dhcpcd xorg networkmanager [ Arch ]
  systemctl enable NetworkManager                     [ Arch ]
 
-#### install bootloader ####
+## install bootloader ##
 pacman -S grub os-prober efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg

@@ -7,7 +7,7 @@ sudo pacman -S --noconfirm brightnessctl
 git clone --depth=1 https://github.com/AdnanHodzic/auto-cpufreq.git
 cd auto-cpufreq && sudo ./auto-cpufreq-installer
 
-# Enable tap to click
+# Enable tap-to-click
 [ ! -f /etc/X11/xorg.conf.d/40-libinput.conf ] && printf 'Section "InputClass"
         Identifier "libinput touchpad catchall"
         MatchIsTouchpad "on"
