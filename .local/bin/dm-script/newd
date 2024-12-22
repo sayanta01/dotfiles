@@ -17,7 +17,7 @@ add_word() {
 		[ -z "$word" ] && break
 		mean=$($DMENU -p "Meaning:")
 		[ -z "$mean" ] && break
-		echo "$word -> $mean" >>"$VOCAB_FILE"
+		echo "$word - $mean" >>"$VOCAB_FILE"
 	done
 }
 

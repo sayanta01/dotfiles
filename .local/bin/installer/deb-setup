@@ -9,14 +9,12 @@ chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config
 
 printf "Fonts? [y/N]: "
 read -r choice
-if [ "$choice" = "y" ]; then
+[ "$choice" = "y" ] && {
 	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
 	[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
 	curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
 	sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
-else
-	:
-fi
+}
 
 # Tools
 git clone --depth=1 https://github.com/sayanta01/dmenu ~/.config/dmenu && cd ~/.config/dmenu && sudo make clean install
@@ -28,39 +26,31 @@ sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 
 printf "Install Main Pkgs? [y/N]: "
 read -r choice
-if [ "$choice" = "y" ]; then
-	sudo apt install -y ssh tmux apt-transport-https \
-		fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
-		fzf bash-completion \
-		kitty htop \
-		bspwm polybar rofi slock dunst \
-		qt5ct lxappearance xcape \
-		pavucontrol playerctl pamixer \
-		mpv nsxiv maim xwallpaper \
-		net-tools wireless-tools \
-		file-roller zathura \
-		zsh zsh-autosuggestions zsh-syntax-highlighting \
-		rsync aria2 jq \
-		xdg-utils \
-		xclip xdotool wmname
-	# sudo systemctl enable ssh
-	sudo systemctl disable docker.socket
-else
-	:
-fi
+[ "$choice" = "y" ] && sudo apt install -y ssh tmux apt-transport-https \
+	fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
+	fzf bash-completion \
+	kitty htop \
+	bspwm polybar rofi slock dunst \
+	qt5ct lxappearance xcape \
+	pavucontrol playerctl pamixer \
+	mpv nsxiv maim xwallpaper \
+	net-tools wireless-tools \
+	file-roller zathura \
+	zsh zsh-autosuggestions zsh-syntax-highlighting \
+	rsync aria2 jq \
+	xdg-utils \
+	xclip xdotool wmname
+sudo systemctl enable ssh
+sudo systemctl disable docker
 
 # aria2c -x9 -o PacketTracer.deb -d ~/ https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 # cd ~/ && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
-if [ -f /etc/debian_version ]; then
-	if ! grep -q "source ~/.profile" ~/.config/zsh/.zshrc; then
-		echo "source ~/.profile" >> ~/.config/zsh/.zshrc
-	fi
-	ln -s ~/.config/zsh/.zshrc ~/.zshrc
-	ln -s ~/.config/x11/xinitrc ~/.xinitrc
-else
-	:
-fi
+[ -f /etc/debian_version ] && {
+	grep -q "source ~/.profile" ~/.config/zsh/.zshrc || echo "source ~/.profile" >>~/.config/zsh/.zshrc
+	ln -sf ~/.config/zsh/.zshrc ~/.zshrc
+	ln -sf ~/.config/x11/xinitrc ~/.xinitrc
+}
 
 # TTY font
 # sudo dpkg-reconfigure console-setup
