@@ -10,12 +10,12 @@ chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config
 
 printf "Fonts? [y/N]: "
 read -r choice
-[ "$choice" = "y" ] && {
+if [ "$choice" = "y" ]; then
 	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
 	[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
 	curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
 	sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
-}
+fi
 
 # Tools
 git clone --depth=1 https://github.com/sayanta01/dmenu ~/.config/dmenu && cd ~/.config/dmenu && sudo make clean install
@@ -27,26 +27,28 @@ sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 
 printf "Install Main Pkgs? [y/N]: "
 read -r choice
-[ "$choice" = "y" ] && sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
-	noto-fonts noto-fonts-emoji noto-fonts-cjk \
-	fzf htop bash-completion \
-	kitty neovim zsh \
-	zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
-	bspwm sxhkd polybar rofi slock dunst \
-	qt5ct lxappearance xcape pass \
-	mpv nsxiv maim xwallpaper python-pywal \
-	pavucontrol playerctl \
-	net-tools network-manager-applet \
-	rsync aria2 jq socat \
-	lf mediainfo ffmpegthumbnailer \
-	unzip p7zip file-roller \
-	gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
-	zathura zathura-pdf-mupdf \
-	xdg-utils xdg-user-dirs \
-	pacman-contrib exfatprogs \
-	xclip xdotool wmname
-# xorg-xinit xorg-server xorg-xwininfo xorg-xsetroot
-# kdeconnect scrcpy meld ntfs-3g blueman bluez-utils
+if [ "$choice" = "y" ]; then
+	sudo pacman -S --noconfirm ttf-joypixels ttf-font-awesome \
+		noto-fonts noto-fonts-emoji noto-fonts-cjk \
+		fzf htop bash-completion \
+		kitty neovim zsh \
+		zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
+		bspwm sxhkd polybar rofi slock dunst \
+		qt5ct lxappearance xcape pass \
+		mpv nsxiv maim xwallpaper python-pywal \
+		pavucontrol playerctl \
+		net-tools network-manager-applet \
+		rsync aria2 jq socat \
+		lf mediainfo ffmpegthumbnailer \
+		unzip p7zip file-roller \
+		gvfs-mtp thunar thunar-archive-plugin thunar-media-tags-plugin \
+		zathura zathura-pdf-mupdf \
+		xdg-utils xdg-user-dirs \
+		pacman-contrib exfatprogs \
+		xclip xdotool wmname
+	# xorg-xinit xorg-server xorg-xwininfo xorg-xsetroot
+	# kdeconnect scrcpy meld ntfs-3g blueman bluez-utils
+fi
 
 # printf "Install Microcode? [y/N]: "
 # read -r choice
@@ -87,8 +89,6 @@ if [ "$choice" = "y" ]; then
 	sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
 	sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
 	sudo usermod -aG libvirt "$USER"
-else
-	:
 fi
 
 # AUR

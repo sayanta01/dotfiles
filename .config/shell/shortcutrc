@@ -18,10 +18,10 @@ ext() {
 		*.xz) unxz "$1" ;;
 		*.deb) ar x "$1" ;;
 		*.exe) cabextract "$1" ;;
-		*) echo "'$1' cannot be extracted via ext()" ;;
+		*) echo "'$1' unknown archive format" ;;
 		esac
 	else
-		echo "'$1' is not a valid file"
+		echo "'$1' invalid file"
 	fi
 }
 
@@ -83,9 +83,9 @@ rot13() {
 	fi
 }
 
-# lfcd() {
-# 	dir=$(lf -print-last-dir "$@")
-# 	while ! cd "$dir" 2>/dev/null; do
-# 		dir=$(dirname "$dir")
-# 	done
-# }
+lfcd() {
+	dir=$(lf -print-last-dir "$@") || return
+	while [ -n "$dir" ] && ! cd "$dir" 2>/dev/null; do
+		dir=$(dirname "$dir")
+	done
+}

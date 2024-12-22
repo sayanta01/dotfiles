@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 PANEL=1 # set the panel number
 HIDE=2  # set hide behavior `1=intelligently, 2=always`

@@ -90,8 +90,8 @@ alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
 alias userlist="cut -d: -f1 /etc/passwd | sort"
 
 alias ping="ping -c 6"
-alias ports="netstat -tulpan"
-alias copy="rsync --progress -avzhP"
+alias ports="netstat -tulpn"
+alias copy="rsync -avzhP"
 
 alias df="df -h"
 alias du="du -h"
