@@ -7,7 +7,7 @@ configuration {
 }
 
 * {
-    font:               "Mono 12";
+    font:               "Sans 12";
     foreground:         #f8f8f2;
     background:         #010101;
     separatorcolor:     #b7b5cd;
