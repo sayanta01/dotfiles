@@ -1,15 +1,15 @@
 #!/bin/sh
 
-# chrome://flags - ozone > auto
+# chrome://flags - ozone > wayland
 # about:config - media.peerconnection.enabled > true
-# https://wiki.hyprland.org/Nvidia
 
 for dir in hypr waybar swaylock xsettingsd nwg-look; do
 	cp -r "$HOME/dotfiles/.config/$dir" "$HOME/.config"
 done
+chmod -R +x ~/.config/hypr/
 
 paru -S hyprland-git xdg-desktop-portal-hyprland \
-	hyprpicker-git swaylock-effects-git \
+	hyprpicker-git \
 	grim slurp swappy swww \
 	wlsunset nwg-look
 # libva libva-nvidia-driver-git
@@ -20,11 +20,3 @@ paru -S hyprland-git xdg-desktop-portal-hyprland \
 
 sudo pacman -S --noconfirm waybar polkit-gnome \
 	qt5-wayland qt6-wayland wl-clipboard wf-recorder
-
-# sudo cat <<EOF | sudo tee /usr/share/wayland-sessions/hyprland.desktop
-# [Desktop Entry]
-# Name=Hyprland
-# Comment=An intelligent dynamic tiling Wayland compositor
-# Exec=dbus-launch Hyprland
-# Type=Application
-# EOF

@@ -59,10 +59,10 @@ cmd trash ${{
     if [ -z "$fs" ]; then
         gio trash "$f" || mv "$f" ~/.local/share/Trash/files
     else
-       IFS="$(printf '\n\t')"
-       printf '%s\n' "$fs" | while IFS= read -r file; do
+        IFS="$(printf '\n\t')"
+        printf '%s\n' "$fs" | while IFS= read -r file; do
            gio trash "$file" || mv "$file" ~/.local/share/Trash/files
-       done
+        done
     fi
 }}
 

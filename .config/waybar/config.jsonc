@@ -10,7 +10,7 @@
     // "custom/battery",
     "custom/date",
     "custom/nettraf",
-    "audio",
+    "pulseaudio",
     "custom/memory",
     "tray"
   ],
@@ -52,7 +52,7 @@
     "exec": "~/.local/bin/statusbar/sb-nettraf",
     "on-click-right": "kitty --class floating -e nmtui"
   },
-  "audio": {
+  "pulseaudio": {
     "tooltip": false,
     "format": "{icon}{volume}%",
     "format-muted": "🔇Muted",

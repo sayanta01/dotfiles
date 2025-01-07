@@ -28,7 +28,7 @@ window {
     background-color: @background;
     border:           0px;
     padding:          0px;
-    width:            30%;
+    width:            32%;
 }
 
 mainbox {
@@ -134,4 +134,5 @@ prompt {
 inputbar {
     padding:  10px;
     children: [entry];
+    background-color: @blank;
 }
