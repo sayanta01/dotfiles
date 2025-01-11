@@ -16,7 +16,6 @@ check_nvidia() {
 	sudo mkinitcpio -P
 }
 
-# Check LTS kernel
 if uname -r | grep -q 'lts'; then
 	echo "LTS kernel detected"
 	lspci | grep -iq nvidia && check_nvidia || echo "No NVIDIA GPU detected"

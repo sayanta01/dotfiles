@@ -61,7 +61,7 @@ cmd trash ${{
     else
         IFS="$(printf '\n\t')"
         printf '%s\n' "$fs" | while IFS= read -r file; do
-           gio trash "$file" || mv "$file" ~/.local/share/Trash/files
+            gio trash "$file" || mv "$file" ~/.local/share/Trash/files
         done
     fi
 }}
