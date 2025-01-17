@@ -1,12 +1,14 @@
 * {
-  font-family: JetBrainsMono NF;
-  font-weight: 200;
+  font-family: "JetBrainsMono NF";
   font-size: 16px;
+  font-weight: 200;
+  min-height: 10px;
+  border: none;
+  padding: 1px;
 }
 
 window#waybar {
   background-color: #010101;
-  border-radius: 0px;
 }
 
 window#waybar.hidden {
@@ -16,27 +18,26 @@ window#waybar.hidden {
 #workspaces button {
   color: #c0c6f5;
   background-color: #010101;
-  padding-left: 11px;
-  padding-right: 12px;
+  padding: 0px 10px 0px 9px;
   margin-right: 2px;
 }
 
 #workspaces button:hover {
   color: #040404;
   background-color: #b0b9d4;
-  border-radius: 1px;
+  border-radius: 0px;
 }
 
 #workspaces button.active {
   color: #010101;
   background-color: #c0c6f5;
-  border-radius: 1px;
+  border-radius: 0px;
 }
 
 #workspaces button.urgent {
   color: #010101;
   background-color: #ff5555;
-  border-radius: 1px;
+  border-radius: 0px;
 }
 
 #workspaces,
@@ -45,16 +46,14 @@ window#waybar.hidden {
 #custom-nettraf,
 #pulseaudio,
 #custom-memory,
-#tray #tray {
-  padding: 0px 10px;
-  margin-right: 2px;
+#tray,
+#tray {
+  padding: 0px 6px;
 }
 
 #workspaces {
   background-color: #010101;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: 4px;
+  padding: 0px;
 }
 
 #custom-battery {
@@ -64,8 +63,7 @@ window#waybar.hidden {
 
 #custom-date {
   color: #f8f8f2;
-  background-color: #282e36;
-  border-radius: 8px;
+  background-color: #1a1b26;
   margin-right: 5px;
 }
 
@@ -74,14 +72,12 @@ window#waybar.hidden {
   margin-right: 5px;
 }
 
-#custom-memory {
+#pulseaudio {
   color: #f8f8f2;
+  background-color: #1a1b26;
   margin-right: 5px;
 }
 
-#pulseaudio {
+#custom-memory {
   color: #f8f8f2;
-  background-color: #282e36;
-  border-radius: 8px 8px 8px 8px;
-  margin-right: 0px;
 }

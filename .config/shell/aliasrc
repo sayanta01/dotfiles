@@ -108,7 +108,7 @@ alias ffprobe="ffprobe -hide_banner"
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias nvidia-setting='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
-alias pywal="wal -qi ~/.local/share/walls"
+alias pywal="wal -qi ~/.local/share/walls >/dev/null"
 
 alias iv="xrdb merge ~/.config/x11/xresources; nsxiv"
 alias za="zathura"

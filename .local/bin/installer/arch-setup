@@ -35,7 +35,7 @@ if [ "$choice" = "y" ]; then
 		zsh-autosuggestions zsh-syntax-highlighting zsh-completions \
 		bspwm sxhkd polybar rofi slock dunst \
 		qt5ct lxappearance xcape pass \
-		mpv nsxiv maim xwallpaper python-pywal \
+		mpv nsxiv maim xwallpaper \
 		pavucontrol playerctl \
 		net-tools network-manager-applet \
 		rsync aria2 jq socat \

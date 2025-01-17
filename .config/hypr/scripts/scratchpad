@@ -1,12 +1,10 @@
 #!/bin/sh
 
-workspace_name="${1:-magic}"
+workspace="${1:-magic}"
 cmd="${2:-kitty}"
 
-windows=$(hyprctl clients -j | jq ".[] | select(.workspace.name == \"special:$workspace_name\")")
-
-if [ -z "$windows" ]; then
-	hyprctl dispatch "exec [workspace special:$workspace_name] $cmd"
+if hyprctl clients | grep -q "special:$workspace"; then
+	hyprctl dispatch togglespecialworkspace "$workspace"
 else
-	hyprctl dispatch togglespecialworkspace "$workspace_name"
+	hyprctl dispatch "exec [workspace special:$workspace] $cmd"
 fi
