@@ -27,10 +27,16 @@ alt + {F6,F7,F8}
     playerctl {previous,play-pause,next}
 
 Print
-    maim | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M).png | xclip -sel c -t image/png | notify-send -t 800 "Screenshot Taken 📎"
+    screenshot_path="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
+    maim | tee "$screenshot_path" | xclip -sel c -t image/png && \
+    echo -n "file://$screenshot_path" | xclip -sel c -t text/uri-list && \
+    notify-send -t 800 "Screenshot Taken 📎"
 
 shift + Print
-    maim -s | tee $(xdg-user-dir PICTURES)/ss/$(date +%d_%b_%I:%M)-Sel.png | xclip -sel c -t image/png | notify-send -t 800 "Selected Screenshot 📎"
+    screenshot_path="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
+    maim -s | tee "$screenshot_path" | xclip -sel c -t image/png && \
+    echo -n "file://$screenshot_path" | xclip -sel c -t text/uri-list && \
+    notify-send -t 800 "Screenshot Taken 📎"
 
 ctrl + Escape
     rofi -show drun -show-icons
