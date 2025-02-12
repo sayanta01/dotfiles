@@ -1,12 +1,10 @@
 #!/bin/sh
 
-# wireless setup
 connect() {
 	ip=$(adb shell ip route | awk '{print $9}')
-	adb tcpip 5555 && adb connect "$ip":5555
+	adb tcpip 5555 && adb connect "$ip:5555"
 }
 
-# audio recording
 aud() {
 	[ -d "$(xdg-user-dir MUSIC)/audio/" ] || mkdir -p "$(xdg-user-dir MUSIC)/audio/"
 	scrcpy --no-video --audio-source=mic \
@@ -14,7 +12,6 @@ aud() {
 		--record="$(xdg-user-dir MUSIC)/audio/$(date +%d_%b_%I:%M)-recording.opus"
 }
 
-# works like a charm
 bcam() {
 	scrcpy --video-source=camera \
 		--audio-source=mic \
@@ -35,7 +32,6 @@ game() {
 	scrcpy --no-video --audio-output-buffer=10
 }
 
-# call the functions based on user input
 if [ "$1" = "connect" ]; then
 	connect
 elif [ "$1" = "aud" ]; then
