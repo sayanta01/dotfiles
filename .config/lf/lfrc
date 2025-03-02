@@ -4,7 +4,7 @@ set ifs "\n"
 set previewer "~/.config/lf/preview"
 set cleaner "~/.config/lf/clean"
 set errorfmt ""
-set promptfmt " ❯ \033[34;1m%d\033[0m\033[1m%f\033[0m"
+set promptfmt " \033[34;1m%d\033[0m\033[1m%f\033[0m"
 set rulerfmt "%i/%t"
 set timefmt "Mon _2 Jan 15:04"
 

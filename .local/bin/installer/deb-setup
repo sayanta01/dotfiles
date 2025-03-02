@@ -27,7 +27,7 @@ sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 printf "Install Main Pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
-	sudo apt install -y ssh tmux apt-transport-https \
+	sudo apt install -y ssh apt-transport-https \
 		fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
 		fzf htop bash-completion kitty \
     zsh zsh-autosuggestions zsh-syntax-highlighting \
