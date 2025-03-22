@@ -10,8 +10,8 @@ set timefmt "Mon _2 Jan 15:04"
 
 cmd open &{{
     case $(file --mime-type -Lb "$f") in
-        text/* | application/*) lf -remote "send $id \$nvim \$fx" ;;
-        *) for f in $fx; do xdg-open "$f" > /dev/null 2> /dev/null & done ;;
+        text/* | application/json | inode/x-empty | application/x-subrip) lf -remote "send $id \$nvim \$fx" ;;
+        *) for f in $fx; do xdg-open "$f" >/dev/null 2>&1; done ;;
     esac
 }}
 
@@ -31,26 +31,22 @@ cmd extract ${{
 }}
 
 cmd bulk-rename ${{
-    old="$(mktemp)"
-    new="$(mktemp)"
-    if [ -n "$fs" ]; then
-        fs="$(basename -a -- "$fs")"
-    else
-        fs="$(ls)"
-    fi
-    printf '%s\n' "$fs" > "$old"
-    printf '%s\n' "$fs" > "$new"
-    $EDITOR "$new"
-    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
-    paste "$old" "$new" | while IFS= read -r names; do
-        src="$(printf '%s' "$names" | cut -f1)"
-        dst="$(printf '%s' "$names" | cut -f2)"
-        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
-            continue
-        fi
-        mv -- "$src" "$dst"
+    tmpfile_old="$(mktemp)"
+    tmpfile_new="$(mktemp)"
+
+    [ -n "$fs" ] && fs=$(basename -a $fs) || fs=$(ls)
+
+    printf '%s\n' "$fs" > "$tmpfile_old"
+    printf '%s\n' "$fs" > "$tmpfile_new"
+    $EDITOR "$tmpfile_new"
+
+    [ "$(wc -l < "$tmpfile_old")" -eq "$(wc -l < "$tmpfile_new")" ] || { rm -f "$tmpfile_old" "$tmpfile_new"; exit 1; }
+    paste "$tmpfile_old" "$tmpfile_new" | while IFS="$(printf '\t')" read -r src dst
+    do
+        [ "$src" = "$dst" ] || [ -e "$dst" ] || mv -- "$src" "$dst"
     done
-    rm -- "$old" "$new"
+
+    rm -f "$tmpfile_old" "$tmpfile_new"
     lf -remote "send $id unselect"
 }}
 
@@ -92,8 +88,8 @@ map dr trash-restore
 map zh set hidden!
 map E extract
 map R bulk-rename
-map y copy
 map x cut
+map y copy
 map p paste
 map v invert
 map u unselect

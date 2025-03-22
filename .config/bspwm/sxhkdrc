@@ -3,7 +3,7 @@
 #
 
 XF86MonBrightness{Up,Down}
-    brightnessctl s {+5%,5%-}
+    brightnessctl s {+2%,2%-}
 
 XF86Audio{Mute,LowerVolume,RaiseVolume,MicMute}
     {wpctl set-mute @DEFAULT_SINK@ toggle, \
