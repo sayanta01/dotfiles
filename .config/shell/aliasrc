@@ -46,7 +46,7 @@ alias lm="ls -t -1"
 alias lc="ls | wc -l"
 alias l-="ls -l | grep -v 'd'" # files only
 alias ld="ls -ld */"           # dirs only
-alias l.="ls -ld .*"
+alias lh="ls -ld .*"
 
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
@@ -75,16 +75,15 @@ alias pull="git pull"
 alias push="git push"
 
 alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
-alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 alias tb="nc termbin.com 9999"
 alias myip="curl ifconfig.me; echo"
-alias php-server="php -S 0.0.0.0:8000"
-alias py-server="python -m http.server 8000"
+alias php-serve="php -S 0.0.0.0:8000"
+alias py-serve="python -m http.server 8000"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias multitail="multitail --no-repeat -c"
 alias ff='fzf --preview "cat {}" | xargs -r "$EDITOR"'
-alias psmem="ps axch -o cmd,%mem --sort=-%mem | less"
-alias pscpu="ps axch -o cmd,%cpu --sort=-%cpu | less"
+alias psm="ps axch -o cmd,%mem --sort=-%mem | less"
+alias psc="ps axch -o cmd,%cpu --sort=-%cpu | less"
 alias bf="du -hxs * | sort -rh | head" # dust
 alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
 alias userlist="cut -d: -f1 /etc/passwd | sort"
@@ -109,11 +108,8 @@ alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias nvidia-setting='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
 alias pywal="wal -qi ~/.local/share/walls >/dev/null"
-
-alias iv="xrdb merge ~/.config/x11/xresources; nsxiv"
-alias za="zathura"
-alias aft="android-file-transfer"
 # alias nvd="nvim -d"
+alias iv="xrdb merge ~/.config/x11/xresources; nsxiv"
 alias se="sudoedit"
 alias ytdlv="yt-dlp -f bestvideo+bestaudio --external-downloader aria2c"
 alias ytdla="yt-dlp -x --audio-format mp3"

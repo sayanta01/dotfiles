@@ -27,19 +27,16 @@ sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 printf "Install Main Pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
-	sudo apt install -y ssh apt-transport-https \
-		fonts-noto fonts-noto-color-emoji fonts-noto-cjk \
+	sudo apt install -y apt-transport-https \
+		fonts-noto fonts-noto-color-emoji \
 		fzf htop bash-completion kitty \
     zsh zsh-autosuggestions zsh-syntax-highlighting \
-		bspwm polybar rofi slock dunst \
-		qt5ct lxappearance xcape \
+		bspwm polybar rofi slock dunst xcape \
     mpv nsxiv maim xwallpaper \
-		pavucontrol playerctl pamixer \
-		net-tools wireless-tools \
+		pavucontrol playerctl \
 		file-roller zathura \
-		rsync aria2 jq \
-		xdg-utils \
-		xclip xdotool wmname
+		aria2 jq \
+		xdg-utils xclip xdotool wmname
 	# sudo systemctl enable ssh
 	# sudo systemctl disable docker
 fi

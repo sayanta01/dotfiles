@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<channel name="xfce4-screenshooter" version="1.0">
-  <property name="actions" type="empty">
-    <property name="actions" type="int" value="0"/>
-  </property>
-</channel>

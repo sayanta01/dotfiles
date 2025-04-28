@@ -1,16 +1,16 @@
 {
   // "editor.fontFamily": "JetBrainsMono NF",
-  "editor.fontSize": 20,
-  "terminal.integrated.fontSize": 20,
-  "breadcrumbs.filePath": "off",
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
   "editor.minimap.enabled": false,
-  "editor.matchBrackets": "near",
+  "breadcrumbs.filePath": "off",
   "editor.cursorBlinking": "solid",
+  "editor.matchBrackets": "near",
   "editor.bracketPairColorization.enabled": false,
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.iconTheme": "material-icon-theme",
+  "telemetry.telemetryLevel": "off",
   "vim.highlightedyank.enable": true,
-  "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
@@ -20,63 +20,30 @@
     "<C-a>": false,
     "<C-f>": false
   },
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
   "vim.normalModeKeyBindings": [
-    {
-      "before": ["ctrl+p"],
-      "commands": ["workbench.action.quickOpen"],
-      "silent": true
-    },
-    // { "before": ["<S-l>"], "commands": ["workbench.action.nextEditor"] },
-    // { "before": ["<S-h>"], "commands": ["workbench.action.previousEditor"] },
-    { "before": ["<leader>", "q"], "commands": [":q!"] },
-    { "before": ["<leader>", "x"], "commands": [":bdelete"] },
+    { "before": ["<C-p>"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["<C-w>"], "commands": ["workbench.action.closeActiveEditor"] },
+    { "before": ["<S-l>"], "commands": ["workbench.action.nextEditor"] },
+    { "before": ["<S-h>"], "commands": ["workbench.action.previousEditor"] },
     { "before": ["<Esc>"], "commands": [":noh"] },
-    { "before": ["g", "D"], "commands": ["editor.action.revealDeclaration"] },
-    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
     { "before": ["<S-k>"], "commands": ["editor.action.showHover"] }, // gh
-    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
-    {
-      "before": ["<leader>", "t"],
-      "commands": ["editor.action.goToTypeDefinition"]
-    }, // C-S-F12
-    { "before": ["<leader>", "r", "n"], "commands": ["editor.action.rename"] },
-    {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.codeAction"]
-    },
+    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] }, // C-F12
+    { "before": ["g", "y"], "commands": ["editor.action.goToTypeDefinition"] }, // C-S-F12
     { "before": ["g", "r"], "commands": ["editor.action.goToReferences"] }, // S-F12
     { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
-    { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
-    {
-      "before": ["<leader>", "l", "f"],
-      "commands": ["editor.action.formatDocument"]
-    },
-    { "before": ["<leader>", "l", "q"], "commands": ["editor.action.quickFix"] }
+    { "before": ["]", "d"], "commands": ["editor.action.marker.next"] }
   ],
   "vim.visualModeKeyBindings": [
     { "before": [">"], "commands": ["editor.action.indentLines"] },
     { "before": ["<"], "commands": ["editor.action.outdentLines"] }
   ],
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "explorer.confirmDragAndDrop": false,
-  "telemetry.telemetryLevel": "off"
-  // "extensions.ignoreRecommendations": true,
-  // "extensions.autoUpdate": "onlyEnabledExtensions"
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }
 }

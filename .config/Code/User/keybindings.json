@@ -1,32 +1,9 @@
-// Place your key bindings in this file to override the defaults
-// https://gist.github.com/ixahmedxi
-// https://github.com/Melkeydev/vscode_bindings
 [
-  {
-    "key": "ctrl+alt+v",
-    "command": "toggleVim"
-  },
-  {
-    "key": "tab",
-    "command": "selectNextSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
-  {
-    "key": "shift+tab",
-    "command": "selectPrevSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
-  // {
-  //   "key": "ctrl+tab",
-  //   "command": "workbench.action.nextEditor"
-  // },
-  // {
-  //   "key": "ctrl+shift+tab",
-  //   "command": "workbench.action.previousEditor"
-  // },
+  // Move lines
   {
     "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction"
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
     "key": "alt+k",
@@ -51,33 +28,6 @@
     "command": "workbench.action.navigateRight"
   },
   // Explorer
-  {
-    "key": "space e",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.toggleSidebarVisibility",
-        "workbench.files.action.focusFilesExplorer"
-      ]
-    },
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
-  },
-  {
-    "key": "space e",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.toggleSidebarVisibility",
-        "workbench.action.focusActiveEditorGroup"
-      ]
-    },
-    "when": "sideBarFocus && !inputFocus"
-  },
-  {
-    "key": "space e",
-    "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
   {
     "key": "a",
     "command": "explorer.newFile",

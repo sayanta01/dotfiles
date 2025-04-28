@@ -8,6 +8,5 @@ set statusbar-v-padding 0
 map u scroll half-up
 map d scroll half-down
 map D toggle_page_mode
-map R reload
 map r rotate
-map P print
+map R reload

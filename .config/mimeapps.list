@@ -21,6 +21,6 @@ inode/directory=text.desktop
 ; x-scheme-handler/https=google-chrome.desktop;
 ; x-scheme-handler/ftp=google-chrome.desktop;
 
-# xdg-mime query filetype photo.png
+# xdg-mime query filetype file.ext
 # xdg-mime query default image/jpg
 # xdg-mime default nvim.desktop text/plain

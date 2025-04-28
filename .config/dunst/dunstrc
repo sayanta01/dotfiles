@@ -87,7 +87,6 @@
 
 [urgency_normal]
     background = "#313244"
-    background = "#1a1b26"
     foreground = "#ffffff"
     timeout = 4
     override_pause_level = 30
@@ -96,5 +95,5 @@
     background = "#900000"
     foreground = "#ffffff"
     frame_color = "#ff0000"
-    timeout = 6
+    timeout = 8
     override_pause_level = 60

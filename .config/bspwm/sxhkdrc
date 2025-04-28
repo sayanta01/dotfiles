@@ -171,9 +171,12 @@ super + ctrl + shift + space
 # move/resize
 #
 
-# expand a window by moving one of its side outward
+# expand/contract a window 
 super + alt + {h,j,k,l}
-    bspc node -z {left -240 0,bottom 0 180,top 0 -180,right 240 0}
+    bspc node -z {left -240 0 || bspc node -z right -240 0, \
+    bottom 0 180 || bspc node -z top 0 180, \
+    top 0 -180 || bspc node -z bottom 0 -180, \
+    right 240 0 || bspc node -z left 240 0}
 
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}

@@ -274,7 +274,7 @@ Vagrantfile             
 *.avif             
 *.krita            
 *.kra              
-*.xcf              
+*.xcf              
 
 # video formats
 *.mov	             

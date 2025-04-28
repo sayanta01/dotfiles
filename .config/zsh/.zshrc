@@ -1,5 +1,3 @@
-# cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
-
 bindkey -e                      # emacs mode
 bindkey '^[[3;5~' kill-word     # backward del [A-d]
 bindkey '^[[3~' delete-char     # del
@@ -25,7 +23,7 @@ setopt hist_ignore_all_dups
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
 [ -f "$HOME/.config/shell/shortcutrc" ] && source "$HOME/.config/shell/shortcutrc"
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ] || source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null || source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null || source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
 PROMPT=' %1~ %F{red}❯ %f'
@@ -37,6 +35,3 @@ function hst() {
     history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
   fi
 }
-
-# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-# [[ -s "$HOME/.local/share/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.local/share/sdkman/bin/sdkman-init.sh"

@@ -1,16 +1,16 @@
 #!/bin/sh
 
 if command -v fd >/dev/null; then
-	file=$(fd -t f | dmenu -i -l 20)
+  file=$(fd -t f | dmenu -i -l 20 -p "Upload File")
 else
-	file=$(find . -maxdepth 9 -type f -not -path '*/\.*' 2>/dev/null | dmenu -i -l 20)
+  file=$(find . -maxdepth 9 -type f -not -path '*/\.*' 2>/dev/null | dmenu -i -l 20 -p "Upload File")
 fi
 
 if [ -n "$file" ]; then
-	if [ -n "$WAYLAND_DISPLAY" ]; then
-		curl -F "file=@$file" 0x0.st | wl-copy
-	else
-		curl -F "file=@$file" 0x0.st | xclip -sel c
-	fi
-	notify-send "0x0 📎"
+  if [ -n "$WAYLAND_DISPLAY" ]; then
+    curl -F "file=@$file" 0x0.st | wl-copy
+  else
+    curl -F "file=@$file" 0x0.st | xclip -sel c
+  fi
+  notify-send "0x0 📎"
 fi
