@@ -1,8 +1,8 @@
 #!/bin/sh
 
 draw() {
-  kitty +kitten icat --silent --stdin no --transfer-mode file --place "${w}x${h}@${x}x${y}" "$1" </dev/null >/dev/tty
-  exit 1
+	kitty +kitten icat --silent --stdin no --transfer-mode file --place "${w}x${h}@${x}x${y}" "$1" </dev/null >/dev/tty
+	exit 1
 }
 
 file="$1"
@@ -13,25 +13,25 @@ y="$5"
 
 case "$(file -Lb --mime-type "$file")" in
 image/*)
-  draw "$file"
-  ;;
+	draw "$file"
+	;;
 audio/*)
-  mediainfo "$file"
-  ;;
+	mediainfo "$file"
+	;;
 video/*)
-  CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/lf/thumb.$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' -- "$(readlink -f "$1")" | sha256sum | cut -d' ' -f1)"
-  [ ! -f "$CACHE" ] && ffmpegthumbnailer -i "$1" -o "$CACHE" -s 0
-  draw "$CACHE"
-  ;;
+	CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/lf/thumb.$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' -- "$(readlink -f "$1")" | sha256sum | cut -d' ' -f1)"
+	[ ! -f "$CACHE" ] && ffmpegthumbnailer -i "$1" -o "$CACHE" -s 0
+	draw "$CACHE"
+	;;
 */pdf)
-  CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/lf/thumb.$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' -- "$(readlink -f "$1")" | sha256sum | cut -d' ' -f1)"
-  [ ! -f "$CACHE.jpg" ] && pdftoppm -jpeg -f 1 -singlefile "$file" "$CACHE"
-  draw "$CACHE.jpg"
-  ;;
+	CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/lf/thumb.$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' -- "$(readlink -f "$1")" | sha256sum | cut -d' ' -f1)"
+	[ ! -f "$CACHE.jpg" ] && pdftoppm -jpeg -f 1 -singlefile "$file" "$CACHE"
+	draw "$CACHE.jpg"
+	;;
 text/* | application/*)
-  cat "$file"
-  exit 0
-  ;;
+	cat "$file"
+	exit 0
+	;;
 esac
 
 pistol "$file"

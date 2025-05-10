@@ -59,6 +59,9 @@ ctrl + alt + Delete
 alt + Return
     ~/.config/bspwm/scripts/scratchpad
 
+# alt + grave
+#     ~/.config/bspwm/scripts/cycle-app
+
 #
 # bspwm hotkeys
 #
