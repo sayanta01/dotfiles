@@ -1,7 +1,7 @@
 #!/bin/sh
 
 for dots in .bashrc .profile .xprofile .zprofile; do
-	cp -r "$HOME/dotfiles/$dots" "$HOME"
+  cp -r "$HOME/dotfiles/$dots" "$HOME"
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config/
@@ -10,10 +10,10 @@ chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config
 printf "Fonts? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
-	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
-	[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
-	curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
-	sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
+  [ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
+  [ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
+  curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+  sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
 fi
 
 # Tools
@@ -27,27 +27,26 @@ sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 printf "Install Main Pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
-	sudo apt install -y apt-transport-https \
-		fonts-noto fonts-noto-color-emoji \
-		fzf htop bash-completion kitty \
+  sudo apt install -y jq \
+    fonts-noto fonts-noto-color-emoji \
+    kitty fzf htop bash-completion \
     zsh zsh-autosuggestions zsh-syntax-highlighting \
-		bspwm polybar rofi slock dunst xcape \
+    bspwm polybar rofi slock dunst xcape \
     mpv nsxiv maim xwallpaper \
-		pavucontrol playerctl \
-		file-roller zathura \
-		aria2 jq \
-		xdg-utils xclip xdotool wmname
-	# sudo systemctl enable ssh
-	# sudo systemctl disable docker
+    pavucontrol playerctl \
+    file-roller zathura \
+    xdg-utils xclip xdotool wmname
+  # sudo systemctl enable ssh
+  # sudo systemctl disable docker
 fi
 
 # aria2c -x9 -o PacketTracer.deb -d ~/ https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
 # cd ~/ && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
 if [ -f /etc/debian_version ]; then
-	grep -q "source ~/.profile" ~/.config/zsh/.zshrc || echo "source ~/.profile" >> ~/.config/zsh/.zshrc
-	ln -sf ~/.config/zsh/.zshrc ~/.zshrc
-	ln -sf ~/.config/x11/xinitrc ~/.xinitrc
+  grep -q "source ~/.profile" ~/.config/zsh/.zshrc || echo "source ~/.profile" >> ~/.config/zsh/.zshrc
+  ln -sf ~/.config/zsh/.zshrc ~/.zshrc
+  ln -sf ~/.config/x11/xinitrc ~/.xinitrc
 fi
 
 # TTY font

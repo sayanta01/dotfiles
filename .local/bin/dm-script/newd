@@ -31,7 +31,7 @@ show_word() {
 }
 
 [ -f "$VOCAB_FILE" ] || mkdir -p "$(dirname "$VOCAB_FILE")" && touch "$VOCAB_FILE"
-choice=$(printf "add\nshow" | $DMENU -p "󰗚 ")
+choice=$(printf "add\nshow" | $DMENU -p "📖")
 
 case "$choice" in
 add) add_word ;;

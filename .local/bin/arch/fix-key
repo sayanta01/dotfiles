@@ -1,15 +1,10 @@
 #!/bin/sh
 
-distro=$(lsb_release -a | grep 'Distributor ID' | cut -f 2)
-if [ "$distro" = "Artix" ]; then
+if [ -f /etc/pacman.d/mirrorlist ]; then
 	# sudo rm -r /etc/pacman.d/gnupg
 	sudo pacman -Sy archlinux-keyring
 	sudo pacman-key --init
 	sudo pacman-key --populate archlinux
 	sudo pacman-key --refresh-keys
 	# sudo pacman -Scc
-elif [ "$distro" = "Arch" ]; then
-	echo "Running Arch-specific commands..."
-else
-	:
 fi

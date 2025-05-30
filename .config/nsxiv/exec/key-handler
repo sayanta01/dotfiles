@@ -1,23 +1,22 @@
 #!/bin/sh
 
-session_type="$XDG_SESSION_TYPE"
-copy_command="xclip -sel clip"
-wallpaper_command="xwallpaper --zoom"
-[ "$session_type" = "wayland" ] && {
-	copy_command="wl-copy"
-	wallpaper_command="swww img"
-}
+copy_cmd="xclip -sel clip"
+wall_cmd="xwallpaper --zoom"
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	copy_cmd="wl-copy"
+	wall_cmd="swww img"
+fi
 
 # ctrl x then key
 while read -r file; do
 	case "$1" in
-	"w") $wallpaper_command "$file" & ;;
+	"w") $wall_cmd "$file" & ;;
 	"d") gio trash "$file" || mv "$file" ~/.local/share/Trash/files ;;
 	"r") convert -rotate 90 "$file" "$file" ;;
 	"R") convert -rotate -90 "$file" "$file" ;;
 	"f") convert -flop "$file" "$file" ;;
-	"c") $copy_command -t image/png <"$file" && notify-send "$file Copied" ;;
-	"y") readlink -f "$file" | $copy_command &&
+	"c") $copy_cmd -t image/png <"$file" && notify-send "$file copied" ;;
+	"y") readlink -f "$file" | $copy_cmd &&
 		notify-send "$(readlink -f "$file") path copied to clipboard" & ;;
 	"g") gimp "$file" ;;
 	esac

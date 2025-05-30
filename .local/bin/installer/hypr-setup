@@ -9,9 +9,8 @@ done
 chmod -R +x ~/.config/hypr/
 
 paru -S hyprland-git xdg-desktop-portal-hyprland \
-	hyprpicker-git \
-	grim slurp swappy swww \
-	wlsunset nwg-look
+	hyprpicker-git wlsunset \
+	grim slurp swappy swww
 # libva libva-nvidia-driver-git
 
 # https://arewewaylandyet.com

@@ -8,7 +8,7 @@ XF86MonBrightness{Up,Down}
 XF86Audio{Mute,LowerVolume,RaiseVolume,MicMute}
     {wpctl set-mute @DEFAULT_SINK@ toggle, \
     wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-, \
-    wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+, \
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1, \
     wpctl set-mute @DEFAULT_SOURCE@ toggle}
 
 XF86Audio{Prev,Play,Next}
@@ -59,8 +59,8 @@ ctrl + alt + Delete
 alt + Return
     ~/.config/bspwm/scripts/scratchpad
 
-# alt + grave
-#     ~/.config/bspwm/scripts/cycle-app
+alt + grave
+    ~/.config/bspwm/scripts/cycle-app
 
 #
 # bspwm hotkeys
