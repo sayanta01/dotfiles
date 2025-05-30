@@ -1,11 +1,11 @@
 #!/bin/sh
 
-if wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q '\[MUTED\]'; then
-	echo '🔇Muted'
+if wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null | grep -q "\[MUTED\]"; then
+	echo "🔇Muted"
 	exit
 fi
 
-vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}')
+vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null | awk '{print int($2 * 100)}')
 
 if [ "$vol" -gt "70" ]; then
 	icon="🔊"
