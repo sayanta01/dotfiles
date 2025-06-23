@@ -3,19 +3,16 @@
 # chrome://flags - ozone > wayland
 # about:config - media.peerconnection.enabled > true
 
-for dir in hypr waybar swaylock xsettingsd nwg-look; do
+for dir in hypr waybar; do
 	cp -r "$HOME/dotfiles/.config/$dir" "$HOME/.config"
 done
 chmod -R +x ~/.config/hypr/
 
-paru -S hyprland-git xdg-desktop-portal-hyprland \
-	hyprpicker-git wlsunset \
-	grim slurp swappy swww
-# libva libva-nvidia-driver-git
+sudo pacman -S hyprland xdg-desktop-portal-hyprland \
+	waybar polkit-gnome \
+	grim slurp swappy swww \
+	hyprpicker \
+	qt5-wayland qt6-wayland wl-clipboard wf-recorder
 
 # https://arewewaylandyet.com
-# libsixel hyprprop-git waydroid
 # waydroid - container-based approach to boot a full Android system
-
-sudo pacman -S --noconfirm waybar polkit-gnome \
-	qt5-wayland qt6-wayland wl-clipboard wf-recorder

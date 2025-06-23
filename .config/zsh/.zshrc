@@ -25,7 +25,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.pl
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null || source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
 autoload -U colors && colors	
-PROMPT=' %1~ %F{red}❯ %f'
+PROMPT=$'%~\n%F{red}❯ %f'
  
 function hst() {
   if [ -n "$WAYLAND_DISPLAY" ]; then

@@ -1,94 +1,83 @@
-# enable efi                   # VM setup
-# ls /sys/firmware/efi/efivars # check uefi
-
-## connect wifi ##
+## Connect wifi ##
 iwctl
 device list
-station <adpater-name> scan 
 station <adpater-name> get-networks
 station <adpater-name> connect <network-name>
 
-## change tty font ##
+## Change tty font ##
 pacman -Sy terminus-font
 setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
 
-## partition disk ##
+## Partition disk ##
 cfdisk /dev/sda
-sda1 boot 400M # partition type EFI system
-sda2 root      # give rest of space
-# sda3 swap    - optional
+sda1 boot 1G # partition type EFI system
+sda2 root    # rest of the space
 write & quit
 
-## formating ##
+## Formatting ##
 mkfs.fat -F 32 /dev/sda1
 mkfs.ext4 /dev/sda2
-# mkswap /dev/sda3
 
-## mounting ##
+## Mounting ##
 mount /dev/sda2 /mnt
 mkdir -p /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
-# swapon /dev/sda3
 
-## install base system ##
-basestrap /mnt base base-devel linux-lts linux-headers linux-firmware neovim tmux runit elogind-runit [ Artix ]
- pacstrap -K /mnt base base-devel linux-lts linux-headers linux-firmware neovim tmux [ Arch ]
+## Install base system ##
+basestrap -i /mnt base base-devel linux-lts linux-firmware runit elogind-runit neovim dosfstools [ Artix ]
+fstabgen -U /mnt >> /mnt/etc/fstab [ Artix ]
 
-## generate fstab ##
-fstabgen -U /mnt >> /mnt/etc/fstab  [ Artix ]
- genfstab -U /mnt >> /mnt/etc/fstab [ Arch ]
+pacstrap -K /mnt base base-devel linux-lts linux-firmware neovim dosfstools [ Arch ]
+genfstab -U /mnt >> /mnt/etc/fstab [ Arch ]
 
-## chroot ##
+## Chroot ##
 artix-chroot /mnt [ Artix ]
- arch-chroot /mnt [ Arch ]
+arch-chroot /mnt [ Arch ]
 
-nvim /etc/pacman.conf  # uncmnt ParallerDownloads
-nvim /etc/makepkg.conf # uncmnt MAKEFLAGS - more cores faster compile - put nm of threads of computer for faster compile
+nvim /etc/pacman.conf  # uncomment ParallelDownloads
+nvim /etc/makepkg.conf # uncomment MAKEFLAGS - set to your CPU thread count (for faster compilation)
 
-## configure sys clock ##
+## Set time ##
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
-# date -s "1 JAN 2022 00:00:00"
 timedatectl set-ntp true [ Arch ]
 
-## set localization ##
-nvim /etc/locale.gen  # uncmnt en_US.UTF-8 UTF-8
+## Set localization ##
+nvim /etc/locale.gen  # uncomment en_US.UTF-8 UTF-8
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
-export LC_COLLATE="C" [ Artix ] 
+export LC_COLLATE="C" [ Artix ]
 
-## network configuration ##
-echo Warm > /etc/hostname
-
+## Network configuration ##
+echo "Hostname" > /etc/hostname
 nvim /etc/hosts
-127.0.0.1   localhost
-::1         localhost
-127.0.1.1   LilWarmachine.localdomain   LilWarmachine
+127.0.0.1    localhost
+::1          localhost
+127.0.1.1    "Hostname".localdomain    "Hostname"
 
-pacman -S git dosfstools dhcpcd xorg networkmanager-runit [ Artix ]
-ln -s /etc/runit/sv/NetworkManager /run/runit/service     [ Artix after reboot ]
+pacman -S xorg networkmanager-runit [ Artix ]
+ln -s /etc/runit/sv/NetworkManager /run/runit/service [ Artix After Reboot ]
 
- pacman -S git dosfstools dhcpcd xorg networkmanager [ Arch ]
- systemctl enable NetworkManager                     [ Arch ]
+pacman -S xorg networkmanager [ Arch ]
+systemctl enable NetworkManager [ Arch ]
 
-## install bootloader ##
+## Install bootloader ##
 pacman -S grub os-prober efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
-passwd # set root pswd
-useradd -m -G wheel,storage,power `USER`
-passwd `USER`
+passwd # Set the root passwd
 
-EDITOR=nvim visudo # uncmnt %wheel ALL=(ALL:ALL) ALL
-exit - chroot environment
-sudo reboot
+## Add user ##
+useradd -m -G wheel "User"
+passwd "User"
+EDITOR=nvim visudo # uncomment %wheel ALL=(ALL:ALL) ALL
+exit & reboot
 
 # https://wiki.artixlinux.org/Main/Repositories#Arch_repositories
-sudo pacman -S artix-archlinux-support
+sudo pacman -S artix-archlinux-support [ Artix ]
 sudo pacman-key --populate archlinux
 sudo pacman -Syu
 
-# [ Artix ]
-dbus-uuidgen | sudo tee /var/lib/dbus/machine-id
-echo "export \$(dbus-launch)" | sudo tee /etc/profile.d/dbus.sh
+dbus-uuidgen | sudo tee /var/lib/dbus/machine-id [ Artix ]
+echo "export \$(dbus-launch)" | sudo tee /etc/profile.d/dbus.sh [ Artix ]

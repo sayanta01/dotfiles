@@ -18,8 +18,8 @@ window#waybar.hidden {
 #workspaces button {
   color: #c0c6f5;
   background-color: #010101;
-  padding: 0px 10px 0px 9px;
-  margin-right: 2px;
+  padding: 0 10px 0 8px;
+  margin-right: 6px;
 }
 
 #workspaces button:hover {

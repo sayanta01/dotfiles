@@ -1,5 +1,4 @@
 {
-  "layer": "top",
   "modules-left": [
     "hyprland/workspaces"
   ],
@@ -9,7 +8,7 @@
     "custom/nettraf",
     "pulseaudio",
     "custom/memory",
-    "tray",
+    "tray"
   ],
   "hyprland/workspaces": {
     "all-outputs": true,
@@ -25,12 +24,15 @@
       "7": "󱍅",
       "8": "",
       "9": "",
-      "10": "󰡑",
+      "10": "󰡑"
     },
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    }
   },
   "tray": {
     "icon-size": 18,
-    "spacing": 6,
+    "spacing": 6
   },
   // "custom/battery": {
   // 	"tooltip": false,
@@ -41,13 +43,13 @@
   "custom/date": {
     "tooltip": false,
     "interval": 2,
-    "exec": "~/.local/bin/statusbar/sb-time",
+    "exec": "~/.local/bin/statusbar/sb-time"
   },
   "custom/nettraf": {
     "tooltip": false,
     "interval": 4,
     "exec": "~/.local/bin/statusbar/sb-nettraf",
-    "on-click-right": "kitty --class floating -e nmtui",
+    "on-click-right": "kitty --class floating -e nmtui"
   },
   "pulseaudio": {
     "tooltip": false,
@@ -69,13 +71,13 @@
         "🔈",
         "🔉",
         "🔊"
-      ],
-    },
+      ]
+    }
   },
   "custom/memory": {
     "tooltip": false,
     "interval": 4,
     "exec": "echo \"🧠 $(free -h | awk '/Mem:/ { print $3 }' | cut -f1 -d 'i')\"",
-    "on-click-right": "kitty --class floating -e htop",
-  },
+    "on-click-right": "kitty --class floating -e htop"
+  }
 }

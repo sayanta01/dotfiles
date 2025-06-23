@@ -1,7 +1,6 @@
 #!/bin/sh
 
-killall -9 pipewire pipewire-pulse wireplumber
-
+killall -q pipewire pipewire-pulse wireplumber
 pipewire &
 pipewire-pulse &
 wireplumber &

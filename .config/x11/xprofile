@@ -1,8 +1,6 @@
 #!/bin/sh
 
-killall -9 pipewire pipewire-pulse wireplumber xcape
-
+killall -q pipewire pipewire-pulse wireplumber
 pipewire &
 pipewire-pulse &
 wireplumber &
-xcape -e 'Super_L=Control_L|Escape' &

@@ -1,0 +1,123 @@
+
+* {
+  font-family: "JetBrainsMono NF";
+  font-size: 16px;
+  font-weight: 300;
+  min-height: 20px;
+  border: none;
+  padding: 1px;
+}
+
+window#waybar {
+  background-color: #010101;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* Default workspace button (occupied but not active) */
+#workspaces button {
+  color: #c0c6f5;
+  background-color: #010101;
+  padding: 0px 10px 0px 9px;
+  margin-right: 2px;
+}
+
+/* Hover state */
+#workspaces button:hover {
+  color: #040404;
+  background-color: #b0b9d4;
+  border-radius: 0px;
+}
+
+/* Default hover state for occupied workspaces */
+#workspaces button:hover {
+  color: #c0c6f5;
+  background-color: #b0b9d4;
+  border-radius: 0px;
+}
+
+/* Hover state for empty workspaces */
+#workspaces button.empty:hover {
+  color: #c0c6f5;
+  background-color: #c0c6f5;
+  /* Using your disabled color for subtle hover on empty */
+  border-radius: 0px;
+}
+
+/* Hover state for active workspace (optional - you might want to disable hover on active) */
+#workspaces button.active:hover {
+  color: #010101;
+  background-color: #c0c6f5;
+  /* background-color: #010101; */
+  /* color: #c0c6f5; */
+  /* Keep same as active, or make it slightly different */
+  border-radius: 0px;
+}
+
+/* Active/focused workspace with windows (matches your polybar label-focused) */
+#workspaces button.active {
+  color: #010101;
+  background-color: #c0c6f5;
+  border-radius: 0px;
+}
+
+/* Active/focused but EMPTY workspace - lighter background */
+#workspaces button.active.empty {
+  color: #010101;
+  background-color: #c0c6f5;
+  /* Using your background-alt color for lighter effect */
+  border-radius: 0px;
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+  color: #010101;
+  background-color: #ff5555;
+  border-radius: 0px;
+}
+
+/* Empty workspace (matches your polybar label-empty) */
+#workspaces button.empty {
+  color: #45475f;
+  background-color: #010101;
+}
+
+/* Custom workspaces styling (if using the script approach) */
+#custom-workspaces {
+  padding: 0px 6px;
+  background-color: #010101;
+}
+
+.workspace-active {
+  color: #010101;
+  background-color: #c0c6f5;
+  padding: 0px 10px;
+  margin-right: 2px;
+}
+
+.workspace-occupied {
+  color: #c0c6f5;
+  background-color: #010101;
+  padding: 0px 10px;
+  margin-right: 2px;
+}
+
+.workspace-empty {
+  color: #45475f;
+  background-color: #010101;
+  padding: 0px 10px;
+  margin-right: 2px;
+}
+
+#workspaces,
+#tray,
+#tray {
+  padding: 0px 6px;
+}
+
+#workspaces {
+  background-color: #010101;
+  padding: 0px;
+}
