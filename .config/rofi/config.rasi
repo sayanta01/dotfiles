@@ -7,28 +7,26 @@ configuration {
 }
 
 * {
-    font:               "Sans 12";
-    foreground:         #f8f8f2;
-    background:         #010101;
-    separatorcolor:     #b7b5cd;
-    highlight:          #65bcff;
-    normal-bg:          #2d3f76;
-    urgent-bg:          #ff5555;
-    active-bg:          #e09e4b;
-    border:             #1b1e25;
-    bg-col-light:       #689d69;
-    tab:                #689d66;
-    tab-selected:       #1d2021;
-    blank:              #1f2223;
-    // blank-underline:  #191c1d;
-    button-underline:   #518554;
+    font:                "Sans 12";
+    foreground:          #f8f8f2;
+    background:          #010101;
+    separator:           #b7b5cd;
+    selected-normal-bg:  #2d3f76;
+    selected-active-bg:  #e09e4b;
+    urgent-bg:           #ff5555;
+    alternate-normal-bg: #1b1e25;
+    button-bg:           #1f2223;
+    button-fg:           #689d66;
+    button-sel-bg:       #689d69;
+    button-sel-fg:       #1d2021;
+    button-sel-border:   #518554;
 }
 
 window {
     background-color: @background;
     border:           0px;
     padding:          0px;
-    width:            32%;
+    width:            30%;
 }
 
 mainbox {
@@ -36,11 +34,18 @@ mainbox {
     padding: 0;
 }
 
+inputbar {
+    padding:  10px;
+    children: [entry];
+}
+
+entry {
+    text-color:  @foreground;
+    placeholder: "";
+}
+
 message {
-    margin:  0px 8px 0.0em;
-    border:  0px;
-    padding: 0px;
-    expand:  false;
+    expand: false;
 }
 
 textbox {
@@ -49,46 +54,50 @@ textbox {
 
 listview {
     lines:	      6;
-    border:       0px;
-    border-color: @separatorcolor;
-    padding:      0px;
     spacing:      2px;
+    border:       0px;
+    border-color: @separator;
+    padding:      0px;
     scrollbar:    false;
 }
 
 element {
-    border:  0;
-    padding: 8px;
+    padding: 10px;
 }
 
 element-text {
     background-color: inherit;
     text-color:       inherit;
+    highlight:        #65bcff;
 }
 
 element normal.normal {
     background-color: @background;
     text-color:       @foreground;
 }
+
 element normal.urgent {
     background-color: @urgent-bg;
     text-color:       @foreground;
 }
+
 element normal.active {
     background-color: @background;
     text-color:       @foreground;
 }
 
 element selected.normal {
-    background-color: @normal-bg;
+    background-color: @selected-normal-bg;
     text-color:       @foreground;
 }
+
 element selected.urgent {
     background-color: @urgent-bg;
     text-color:       @background;
 }
+
 element selected.active {
-    background-color: @active-bg;
+    background-color: @selected-active-bg;
     text-color:       @foreground;
 }
 
@@ -96,43 +105,28 @@ element alternate.normal {
     background-color: @background;
     text-color:       @foreground;
 }
+
 element alternate.urgent {
-    background-color: @border;
+    background-color: @alternate-normal-bg;
     text-color:       @foreground;
 }
+
 element alternate.active {
-    background-color: @border;
+    background-color: @alternate-normal-bg;
     text-color:       @foreground;
 }
 
 button {
-    padding:          4px;
-    background-color: @blank;
-    text-color:       @tab;
+    background-color: @button-bg;
+    text-color:       @button-fg;
+    padding:          5px;
     vertical-align:   0.0;
     horizontal-align: 0.5;
 }
 
-button.selected {
-    border:           0px 0px 4px;
-    border-color:     @button-underline;
-    background-color: @bg-col-light;
-    text-color:       @tab-selected;
-}
-
-entry {
-    spacing:     0;
-    text-color:  @foreground;
-    placeholder: "";
-}
-
-prompt {
-    // spacing:    0;
-    // text-color: @foreground;
-}
-
-inputbar {
-    padding:  10px;
-    children: [entry];
-    background-color: @blank;
+button selected {
+    background-color: @button-sel-bg;
+    text-color:       @button-sel-fg;
+    border:           0px 0px 5px;
+    border-color:     @button-sel-border;
 }

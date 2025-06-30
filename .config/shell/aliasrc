@@ -88,7 +88,6 @@ alias bf="du -hxs * | sort -rh | head" # dust
 alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
 alias userlist="cut -d: -f1 /etc/passwd | sort"
 
-alias ping="ping -c 6"
 alias ports="netstat -tulpn"
 alias copy="rsync -avzhP"
 

@@ -21,21 +21,21 @@ super + {u,d}
 alt + {F1,F2,F3}
     {wpctl set-mute @DEFAULT_SINK@ toggle, \
     wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-, \
-    wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+}
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1}
 
 alt + {F6,F7,F8}
     playerctl {previous,play-pause,next}
 
 Print
-    path="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim | tee "$path" | xclip -sel c -t image/png && \
-    echo -n "file://$path" | xclip -sel c -t text/uri-list && \
+    path_="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
+    maim | tee "$path_" | xclip -sel c -t image/png && \
+    echo -n "file://$path_" | xclip -sel c -t text/uri-list && \
     notify-send -t 800 "Screenshot Taken 📎"
 
 shift + Print
-    path="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim -s | tee "$path" | xclip -sel c -t image/png && \
-    echo -n "file://$path" | xclip -sel c -t text/uri-list && \
+    path_="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
+    maim -s | tee "$path_" | xclip -sel c -t image/png && \
+    echo -n "file://$path_" | xclip -sel c -t text/uri-list && \
     notify-send -t 800 "Screenshot Taken 📎"
 
 ctrl + Escape

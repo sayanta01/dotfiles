@@ -1,12 +1,19 @@
 #!/usr/bin/env bash
 
-winclass="$(xdotool search --class scratchpad)"
-if [ -z "$winclass" ]; then
-	$TERMINAL --class scratchpad
+scratchpad_id=$(bspc query -N -n .window | while read -r id; do
+  if bspc query -T -n "$id" | grep -q '"className":"scratchpad"'; then
+    echo "$id"
+    break
+  fi
+done)
+
+if [ -n "$scratchpad_id" ]; then
+  if bspc query -N -n .hidden | grep -q "$scratchpad_id"; then
+    bspc node "$scratchpad_id" -g hidden=off -f
+  else
+    bspc node "$scratchpad_id" -g hidden=on
+  fi
 else
-	if [ ! -f /tmp/scpad ]; then
-		touch /tmp/scpad && xdotool windowunmap "$winclass"
-	elif [ -f /tmp/scpad ]; then
-		rm /tmp/scpad && xdotool windowmap "$winclass"
-	fi
+  bspc rule -a scratchpad --one-shot state=floating sticky=on locked=on
+  $TERMINAL --class scratchpad &
 fi
