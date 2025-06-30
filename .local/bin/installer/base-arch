@@ -10,18 +10,17 @@ setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
 
 ## Partition disk ##
 cfdisk /dev/sda
-sda1 boot 1G # partition type EFI system
-sda2 root    # rest of the space
+sda1 boot 1G # Type EFI system
+sda2 root    # Rest of the space
 write & quit
 
 ## Formatting ##
-mkfs.fat -F 32 /dev/sda1
 mkfs.ext4 /dev/sda2
+mkfs.fat -F 32 /dev/sda1
 
 ## Mounting ##
 mount /dev/sda2 /mnt
-mkdir -p /mnt/boot/efi
-mount /dev/sda1 /mnt/boot/efi
+mount --mkdir /dev/sda1 /mnt/boot/efi
 
 ## Install base system ##
 basestrap -i /mnt base base-devel linux-lts linux-firmware runit elogind-runit neovim dosfstools [ Artix ]
@@ -56,7 +55,7 @@ nvim /etc/hosts
 127.0.1.1    "Hostname".localdomain    "Hostname"
 
 pacman -S xorg networkmanager-runit [ Artix ]
-ln -s /etc/runit/sv/NetworkManager /run/runit/service [ Artix After Reboot ]
+ln -s /etc/runit/sv/NetworkManager /run/runit/service [ Artix - After Reboot ]
 
 pacman -S xorg networkmanager [ Arch ]
 systemctl enable NetworkManager [ Arch ]

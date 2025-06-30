@@ -35,7 +35,7 @@ if [ "$choice" = "y" ]; then
     mpv nsxiv maim xwallpaper \
     pavucontrol playerctl \
     file-roller zathura \
-    xdg-utils xclip xdotool wmname
+    xdg-utils xclip wmname
   # sudo systemctl enable ssh
   # sudo systemctl disable docker
 fi

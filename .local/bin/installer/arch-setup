@@ -33,28 +33,29 @@ if [ "$choice" = "y" ]; then
     kitty neovim zsh \
     zsh-autosuggestions zsh-syntax-highlighting \
     bspwm sxhkd polybar rofi slock dunst \
-    xcape pass jq \
+    xcape pass jq polkit-gnome \
     mpv nsxiv maim xwallpaper \
     pavucontrol playerctl \
     network-manager-applet \
     lf mediainfo ffmpegthumbnailer \
     unzip p7zip file-roller \
     gvfs-mtp thunar-archive-plugin \
-    zathura zathura-pdf-mupdf \
+    zathura-pdf-mupdf \
     xdg-utils xdg-user-dirs \
-    pacman-contrib exfatprogs \
-    xclip xdotool wmname
+    pacman-contrib \
+    xclip wmname
   # xorg-xinit xorg-server xorg-xwininfo xorg-xsetroot
-	# kdeconnect scrcpy meld ntfs-3g aria2
+  # kdeconnect scrcpy meld aria2
+  # ntfs-3g exfatprogs
 fi
 
-# printf "Install Microcode? [y/N]: "
-# read -r choice
-# if [ "$choice" = "y" ]; then
-# 	cpu_vendor=$(awk -F ': ' '/vendor_id/ {print $2}' /proc/cpuinfo | uniq)
-# 	[ "$cpu_vendor" = "GenuineIntel" ] && sudo pacman -S --noconfirm intel-ucode
-# 	[ "$cpu_vendor" = "AuthenticAMD" ] && sudo pacman -S --noconfirm amd-ucode
-# fi
+printf "Install Microcode? [y/N]: "
+read -r choice
+if [ "$choice" = "y" ]; then
+  cpu_vendor=$(awk -F ': ' '/vendor_id/ {print $2}' /proc/cpuinfo | uniq)
+  [ "$cpu_vendor" = "GenuineIntel" ] && sudo pacman -S --noconfirm intel-ucode
+  [ "$cpu_vendor" = "AuthenticAMD" ] && sudo pacman -S --noconfirm amd-ucode
+fi
 
 ## Services
 init_sys=$(ps -p 1 -o comm=)
