@@ -1,3 +1,5 @@
+- Disable Secure Boot
+
 ## Connect wifi ##
 iwctl
 device list
@@ -33,9 +35,6 @@ genfstab -U /mnt >> /mnt/etc/fstab [ Arch ]
 artix-chroot /mnt [ Artix ]
 arch-chroot /mnt [ Arch ]
 
-nvim /etc/pacman.conf  # uncomment ParallelDownloads
-nvim /etc/makepkg.conf # uncomment MAKEFLAGS - set to your CPU thread count (for faster compilation)
-
 ## Set time ##
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
@@ -48,11 +47,14 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C" [ Artix ]
 
 ## Network configuration ##
-echo "Hostname" > /etc/hostname
+echo "hostname" > /etc/hostname
 nvim /etc/hosts
 127.0.0.1    localhost
 ::1          localhost
-127.0.1.1    "Hostname".localdomain    "Hostname"
+127.0.1.1    "hostname".localdomain    "hostname"
+
+# nvim /etc/pacman.conf  # uncomment ParallelDownloads
+# nvim /etc/makepkg.conf # uncomment MAKEFLAGS - set to your CPU thread count (for faster compilation)
 
 pacman -S xorg networkmanager-runit [ Artix ]
 ln -s /etc/runit/sv/NetworkManager /run/runit/service [ Artix - After Reboot ]
@@ -68,8 +70,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 passwd # Set the root passwd
 
 ## Add user ##
-useradd -m -G wheel "User"
-passwd "User"
+useradd -m -G wheel "user"
+passwd "user"
 EDITOR=nvim visudo # uncomment %wheel ALL=(ALL:ALL) ALL
 exit & reboot
 

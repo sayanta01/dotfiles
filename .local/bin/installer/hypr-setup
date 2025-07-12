@@ -9,7 +9,7 @@ done
 chmod -R +x ~/.config/hypr/
 
 sudo pacman -S hyprland xdg-desktop-portal-hyprland waybar \
-	grim slurp swappy swww hyprpicker \
+	grim slurp swappy swww \
 	qt5-wayland qt6-wayland wl-clipboard wf-recorder
 
 # https://arewewaylandyet.com

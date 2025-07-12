@@ -1,9 +1,9 @@
 [user]
 	name = sayanta
-	email = sayantasingh01@gmail.com
+	email = sayanta01@gmail.com
 [advice]
   statusHints = false
 [color]
 	ui = true
 [alias]
-  logd = log --graph --oneline --decorate --all --abbrev-commit --date=relative --pretty=format:'%h (%ar) %s %d <%an>'
+  logd = log --graph --decorate --all --abbrev-commit --date=relative --pretty=format:'%h (%ar) %s %d <%an>'

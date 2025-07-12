@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	hyprpicker -a -n
+  hyprpicker -a -n
 else
-	colorpicker --short --one-shot --preview | xclip -sel c
+  colorpicker --short --one-shot --preview | xclip -sel c
 fi

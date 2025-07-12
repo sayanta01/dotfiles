@@ -2,9 +2,8 @@
   font-family: "JetBrainsMono NF";
   font-size: 16px;
   font-weight: 300;
-  min-height: 10px;
+  min-height: 28px;
   border: none;
-  padding: 1px;
 }
 
 window#waybar {

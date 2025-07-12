@@ -1,16 +1,13 @@
 #!/bin/sh
 
-choice=$(printf "lofi\nwhite-noise\nclassic\nyt-playlist" | dmenu -i -p "Choose music ")
+choice=$(printf "lofi\nclassic" | dmenu -i -p "Choose music ")
 
 if [ "$choice" = "lofi" ]; then
-	url="https://youtu.be/jfKfPfyJRdk"
-	pkill -f $url || mpv "$url" --no-video
-elif [ "$choice" = "white-noise" ]; then
-	url="https://youtu.be/ArwcHjmsw3A"
-	pkill -f $url || mpv "$url" --no-video
+  url="https://youtu.be/jfKfPfyJRdk"
+  pkill -f $url || mpv "$url" --no-video
 elif [ "$choice" = "classic" ]; then
-	url="https://live.musopen.org:8085/streamvbr0"
-	pkill -f "$url" || mpv "$url"
+  url="https://live.musopen.org:8085/streamvbr0"
+  pkill -f "$url" || mpv "$url"
 else
-	:
+  :
 fi

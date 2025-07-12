@@ -3,7 +3,7 @@
 if command -v fd >/dev/null; then
   file=$(fd -t f | dmenu -i -l 20 -p "Upload File")
 else
-  file=$(find . -maxdepth 9 -type f -not -path '*/\.*' 2>/dev/null | dmenu -i -l 20 -p "Upload File")
+  file=$(find . -maxdepth 6 -type f -not -path '*/\.*' 2>/dev/null | dmenu -i -l 20 -p "Upload File")
 fi
 
 if [ -n "$file" ]; then

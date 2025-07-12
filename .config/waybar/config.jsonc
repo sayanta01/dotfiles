@@ -36,7 +36,7 @@
   },
   // "custom/battery": {
   // 	"tooltip": false,
-  // 	"interval": 4,
+  // 	"interval": 5,
   // 	"exec": "~/.local/bin/statusbar/battery"
   //  "return-type": "json"
   // },
@@ -47,7 +47,7 @@
   },
   "custom/nettraf": {
     "tooltip": false,
-    "interval": 4,
+    "interval": 5,
     "exec": "~/.local/bin/statusbar/sb-nettraf",
     "on-click-right": "kitty --class floating -e nmtui"
   },
@@ -76,8 +76,8 @@
   },
   "custom/memory": {
     "tooltip": false,
-    "interval": 4,
+    "interval": 5,
     "exec": "echo \"🧠 $(free -h | awk '/Mem:/ { print $3 }' | cut -f1 -d 'i')\"",
-    "on-click-right": "kitty --class floating -e htop"
+    "on-click-right": "$TERMINAL --class floating -e htop"
   }
 }

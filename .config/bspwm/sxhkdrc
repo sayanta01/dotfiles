@@ -3,7 +3,7 @@
 #
 
 XF86MonBrightness{Up,Down}
-    brightnessctl -e4 -n2 {+5%,5%-}
+    brightnessctl -e4 -n2 set {5%+,5%-}
 
 XF86Audio{Mute,LowerVolume,RaiseVolume,MicMute}
     {wpctl set-mute @DEFAULT_SINK@ toggle, \
@@ -30,13 +30,13 @@ Print
     path_="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
     maim | tee "$path_" | xclip -sel c -t image/png && \
     echo -n "file://$path_" | xclip -sel c -t text/uri-list && \
-    notify-send -t 800 "Screenshot Taken 📎"
+    notify-send -t 500 "Screenshot Taken 📎"
 
 shift + Print
     path_="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
     maim -s | tee "$path_" | xclip -sel c -t image/png && \
     echo -n "file://$path_" | xclip -sel c -t text/uri-list && \
-    notify-send -t 800 "Screenshot Taken 📎"
+    notify-send -t 500 "Screenshot Taken 📎"
 
 ctrl + Escape
     rofi -show drun -show-icons
@@ -68,7 +68,7 @@ alt + grave
 
 # reload sxhkd configuration
 super + Escape
-    notify-send -t 900 "Reloaded sxhkd!"; pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd && notify-send -t 500 "Reloaded sxhkd!"
 
 # quit/restart bspwm
 super + alt + {q,r}

@@ -40,10 +40,8 @@ else
 fi
 
 alias ls="ls --color=auto"
-alias lt="ls | tree"
-alias ll="exa -lgha --group-directories-first || ls -alh"
+alias ll="exa -alh --group-directories-first || ls -alh"
 alias lm="ls -t -1"
-alias lc="ls | wc -l"
 alias l-="ls -l | grep -v 'd'" # files only
 alias ld="ls -ld */"           # dirs only
 alias lh="ls -ld .*"
@@ -58,21 +56,20 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
 alias clr="clear"
-alias less="less -R"
 alias mkdir="mkdir -pv"
-alias trim="sudo fstrim -va"
+alias trim="sudo fstrim -av"
 alias logout='sudo pkill -u "$USER"'
 alias fix-faillock='faillock --user "$USER" --reset'
 
 alias lg="lazygit"
-alias chkout="git checkout"
-alias branch="git branch"
-alias clone="git clone"
-alias status="git status"
-alias commit="git commit -m"
-alias fetch="git fetch"
-alias pull="git pull"
-alias push="git push"
+# alias clone="git clone"
+# alias status="git status"
+# alias commit="git commit -m"
+# alias chkout="git checkout"
+# alias branch="git branch"
+# alias fetch="git fetch"
+# alias pull="git pull"
+# alias push="git push"
 
 alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias tb="nc termbin.com 9999"
@@ -89,7 +86,7 @@ alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
 alias userlist="cut -d: -f1 /etc/passwd | sort"
 
 alias ports="netstat -tulpn"
-alias copy="rsync -avzhP"
+alias rsync="rsync -avhP"
 
 alias df="df -h"
 alias du="du -h"
@@ -98,13 +95,9 @@ alias bc="bc -ql"
 alias hw="hwinfo --short"
 alias dmesg="sudo dmesg -T"
 alias shred="shred -uvzn4"
-alias pu="pushd"
-alias po="popd"
-alias ffmpeg="ffmpeg -hide_banner"
-alias ffplay="ffplay -hide_banner"
-alias ffprobe="ffprobe -hide_banner"
-alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
-alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
+# alias ffmpeg="ffmpeg -hide_banner"
+# alias ffplay="ffplay -hide_banner"
+# alias ffprobe="ffprobe -hide_banner"
 alias nvidia-setting='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
 alias pywal="wal -qi ~/.local/share/walls >/dev/null"
 # alias nvd="nvim -d"

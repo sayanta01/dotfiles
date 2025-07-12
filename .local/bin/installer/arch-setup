@@ -33,7 +33,7 @@ if [ "$choice" = "y" ]; then
     kitty neovim zsh \
     zsh-autosuggestions zsh-syntax-highlighting \
     bspwm sxhkd polybar rofi slock dunst \
-    xcape pass jq polkit-gnome \
+    xcape pass polkit-gnome jq \
     mpv nsxiv maim xwallpaper \
     pavucontrol playerctl \
     network-manager-applet \
@@ -42,11 +42,8 @@ if [ "$choice" = "y" ]; then
     gvfs-mtp thunar-archive-plugin \
     zathura-pdf-mupdf \
     xdg-utils xdg-user-dirs \
-    pacman-contrib \
     xclip wmname
-  # xorg-xinit xorg-server xorg-xwininfo xorg-xsetroot
-  # kdeconnect scrcpy meld aria2
-  # ntfs-3g exfatprogs
+  # ntfs-3g exfatprogs meld xorg-xsetroot
 fi
 
 printf "Install Microcode? [y/N]: "

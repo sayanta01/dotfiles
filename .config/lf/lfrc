@@ -1,8 +1,8 @@
 # Basic vars
 set icons true
 set ifs "\n"
-set previewer "~/.config/lf/preview"
-set cleaner "~/.config/lf/clean"
+set previewer "~/.config/lf/previewer"
+set cleaner "~/.config/lf/cleaner"
 set errorfmt ""
 set promptfmt "\033[34;1m%d\033[0m\033[1m%f\033[0m"
 set rulerfmt "%i/%t"
@@ -25,7 +25,7 @@ cmd extract ${{
         *.gz) gunzip "$f" ;;
         *.zip) unzip "$f";;
         *.rar) 7z x "$f" ;;
-        *.Z) uncompress "$fx" ;;
+        *.Z) uncompress "$f" ;;
         *.7z) 7z x "$f" ;;
     esac
 }}
@@ -34,7 +34,7 @@ cmd bulk-rename ${{
     tmpfile_old="$(mktemp)"
     tmpfile_new="$(mktemp)"
 
-    [ -n "$fs" ] && fs=$(basename -a $fs) || fs=$(ls)
+    [ -n "$fs" ] && fs="$(basename -a $fs)" || fs="$(ls)"
 
     printf '%s\n' "$fs" > "$tmpfile_old"
     printf '%s\n' "$fs" > "$tmpfile_new"
@@ -52,14 +52,15 @@ cmd bulk-rename ${{
 
 cmd trash ${{
     mkdir -p ~/.local/share/Trash/files
-    if [ -z "$fs" ]; then
-        gio trash "$f" || mv "$f" ~/.local/share/Trash/files
-    else
-        IFS="$(printf '\n\t')"
-        printf '%s\n' "$fs" | while IFS= read -r file; do
-            gio trash "$file" || mv "$file" ~/.local/share/Trash/files
-        done
-    fi
+    clear; tput cup $(($(tput lines)/3)); tput bold
+    set -f
+    printf "%s\n\t" "$fx"
+    printf "Move to trash? [y/N]: "
+    read ans
+    [ "${ans,,}" = "y" ] || exit 0
+    printf '%s\n' "$fx" | while IFS= read -r file; do
+        gio trash "$file" || mv "$file" ~/.local/share/Trash/files
+    done
 }}
 
 cmd trash-restore ${{

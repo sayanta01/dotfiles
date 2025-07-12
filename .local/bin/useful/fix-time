@@ -1,3 +1,0 @@
-#!/bin/sh
-
-sudo date -s "$(date -d "$(curl -sI google.com | grep -i '^date:' | cut -d' ' -f2-)" | xargs -I {} date --date='{}' "+%d-%b-%Y %H:%M:%S")"

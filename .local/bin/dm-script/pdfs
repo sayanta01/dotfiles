@@ -3,7 +3,7 @@
 if command -v fd >/dev/null; then
 	pdf_file=$(fd -e pdf)
 else
-	pdf_file=$(find . -maxdepth 7 -type f -name "*.pdf" -not -path '*/\.*' 2>/dev/null)
+	pdf_file=$(find . -maxdepth 6 -type f -name "*.pdf" -not -path '*/\.*' 2>/dev/null)
 fi
 
 chosen_file=$(echo "$pdf_file" | dmenu -i -l 20 -p "Choose PDF")

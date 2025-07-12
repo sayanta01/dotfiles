@@ -1,6 +1,6 @@
 #!/bin/sh
 
-selected_pid=$(ps -u "$USER" -o pid,%mem,%cpu,comm | sort -k2 -r | dmenu -i -l 20 | awk '{print $1}')
+selected_pid=$(ps -u "$USER" -o pid,%cpu,%mem,comm | sort -k2 -r | dmenu -i -l 20 | awk '{print $1}')
 
 if [ -n "$selected_pid" ]; then
 	kill -15 "$selected_pid"

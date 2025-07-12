@@ -13,7 +13,6 @@ bspc config presel_feedback_color "#44475A"
 
 bspc rule -a Screenkey manage=off
 bspc rule -a pavucontrol state=floating center=on
-bspc rule -a Lxappearance state=floating center=on
 
 # Autostart
 xsetroot -cursor_name left_ptr &
