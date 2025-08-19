@@ -62,20 +62,10 @@ alias logout='sudo pkill -u "$USER"'
 alias fix-faillock='faillock --user "$USER" --reset'
 
 alias lg="lazygit"
-# alias clone="git clone"
-# alias status="git status"
-# alias commit="git commit -m"
-# alias chkout="git checkout"
-# alias branch="git branch"
-# alias fetch="git fetch"
-# alias pull="git pull"
-# alias push="git push"
-
 alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias tb="nc termbin.com 9999"
 alias myip="curl ifconfig.me; echo"
-alias php-serve="php -S 0.0.0.0:8000"
-alias py-serve="python -m http.server 8000"
+# alias py-server="python -m http.server 8000"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias multitail="multitail --no-repeat -c"
 alias ff='fzf --preview "cat {}" | xargs -r "$EDITOR"'
@@ -95,7 +85,6 @@ alias bc="bc -ql"
 alias hw="hwinfo --short"
 alias dmesg="sudo dmesg -T"
 alias shred="shred -uvzn4"
-# alias ffmpeg="ffmpeg -hide_banner"
 # alias ffplay="ffplay -hide_banner"
 # alias ffprobe="ffprobe -hide_banner"
 alias nvidia-setting='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'

@@ -41,7 +41,7 @@ shift + Print
 ctrl + Escape
     rofi -show drun -show-icons
 
-super + @space 
+super + @space
     dmenu_run
 
 super + {Return, e}
@@ -174,7 +174,7 @@ super + ctrl + shift + space
 # move/resize
 #
 
-# expand/contract a window 
+# expand/contract a window
 super + alt + {h,j,k,l}
     bspc node -z {left -240 0 || bspc node -z right -240 0, \
     bottom 0 180 || bspc node -z top 0 180, \

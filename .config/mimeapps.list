@@ -12,15 +12,8 @@ image/gif=nsxiv.desktop;
 video/x-matroska=mpv.desktop;
 video/mp4=mpv.desktop;
 application/json=text.desktop;
-; inode/directory=lf.desktop;
 
 # xdg-settings set default-web-browser google-chrome.desktop
-; text/html=google-chrome.desktop;
-; text/xml=google-chrome.desktop;
-; x-scheme-handler/http=google-chrome.desktop;
-; x-scheme-handler/https=google-chrome.desktop;
-; x-scheme-handler/ftp=google-chrome.desktop;
-
 # xdg-mime query filetype file.ext
 # xdg-mime query default image/jpg
 # xdg-mime default nvim.desktop text/plain

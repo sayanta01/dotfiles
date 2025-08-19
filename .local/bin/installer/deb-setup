@@ -49,5 +49,5 @@ if [ -f /etc/debian_version ]; then
   ln -sf ~/.config/x11/xinitrc ~/.xinitrc
 fi
 
-# TTY font
+# TTY Font
 # sudo dpkg-reconfigure console-setup

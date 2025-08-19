@@ -1,5 +1,6 @@
 configuration {
     modes: "drun,run";
+    font: "Sans 12";
     sidebar-mode: true;
     drun-display-format: "{icon} {name}";
     display-drun: "Apps";
@@ -7,10 +8,9 @@ configuration {
 }
 
 * {
-    font:                "Sans 12";
     foreground:          #f8f8f2;
     background:          #010101;
-    separator:           #b7b5cd;
+    separatorcolor:      #b7b5cd;
     selected-normal-bg:  #2d3f76;
     selected-active-bg:  #e09e4b;
     urgent-bg:           #ff5555;
@@ -23,7 +23,7 @@ configuration {
 }
 
 window {
-    background-color: @background;
+    background-color: var(background);
     border:           0px;
     padding:          0px;
     width:            32%;
@@ -40,7 +40,7 @@ inputbar {
 }
 
 entry {
-    text-color:  @foreground;
+    text-color: var(foreground);
     placeholder: "";
 }
 
@@ -49,16 +49,16 @@ message {
 }
 
 textbox {
-    text-color: @foreground;
+    text-color: var(foreground);
 }
 
 listview {
-    lines:	      6;
-    spacing:      2px;
     border:       0px;
-    border-color: @separator;
+    border-color: var(separatorcolor);
+    lines:	      6;
     padding:      0px;
     scrollbar:    false;
+    spacing:      2px;
 }
 
 element {
@@ -72,61 +72,61 @@ element-text {
 }
 
 element normal.normal {
-    background-color: @background;
-    text-color:       @foreground;
+    background-color: var(background);
+    text-color:       var(foreground);
 }
 
 element normal.urgent {
-    background-color: @urgent-bg;
-    text-color:       @foreground;
+    background-color: var(urgent-bg);
+    text-color:       var(foreground);
 }
 
 element normal.active {
-    background-color: @background;
-    text-color:       @foreground;
+    background-color: var(background);
+    text-color:       var(foreground);
 }
 
 element selected.normal {
-    background-color: @selected-normal-bg;
-    text-color:       @foreground;
+    background-color: var(selected-normal-bg);
+    text-color:       var(foreground);
 }
 
 element selected.urgent {
-    background-color: @urgent-bg;
-    text-color:       @background;
+    background-color: var(urgent-bg);
+    text-color:       var(background);
 }
 
 element selected.active {
-    background-color: @selected-active-bg;
-    text-color:       @foreground;
+    background-color: var(selected-active-bg);
+    text-color:       var(foreground);
 }
 
 element alternate.normal {
-    background-color: @background;
-    text-color:       @foreground;
+    background-color: var(background);
+    text-color:       var(foreground);
 }
 
 element alternate.urgent {
-    background-color: @alternate-normal-bg;
-    text-color:       @foreground;
+    background-color: var(alternate-normal-bg);
+    text-color:       var(foreground);
 }
 
 element alternate.active {
-    background-color: @alternate-normal-bg;
-    text-color:       @foreground;
+    background-color: var(alternate-normal-bg);
+    text-color:       var(foreground);
 }
 
 button {
-    background-color: @button-bg;
-    text-color:       @button-fg;
+    background-color: var(button-bg);
+    text-color:       var(button-fg);
     padding:          5px;
     vertical-align:   0.0;
     horizontal-align: 0.5;
 }
 
 button selected {
-    background-color: @button-sel-bg;
-    text-color:       @button-sel-fg;
+    background-color: var(button-sel-bg);
+    text-color:       var(button-sel-fg);
     border:           0px 0px 5px;
-    border-color:     @button-sel-border;
+    border-color:     var(button-sel-border);
 }

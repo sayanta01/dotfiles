@@ -11,9 +11,6 @@ EOF
 # Show asterisks while entering pswd
 # sudo su root -c "echo Defaults pwfeedback >> /etc/sudoers"
 
-# Remove ~/.pulse-cookie
-# sudo su root -c "echo cookie-file = /tmp/pulse-cookie >> /etc/pulse/client.conf"
-
 # SysRq
 # https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
 # Reboot Even if System Utterly Broken `REISUB`

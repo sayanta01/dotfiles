@@ -54,7 +54,7 @@ cmd trash ${{
     mkdir -p ~/.local/share/Trash/files
     clear; tput cup $(($(tput lines)/3)); tput bold
     set -f
-    printf "%s\n\t" "$fx"
+    printf "%s\n" "$fx"
     printf "Move to trash? [y/N]: "
     read ans
     [ "${ans,,}" = "y" ] || exit 0

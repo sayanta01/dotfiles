@@ -7,7 +7,6 @@ export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 # Default programs
 export EDITOR="nvim"
 export TERMINAL="kitty"
-export MANPAGER="nvim +Man!"
 export BROWSER="google-chrome-stable"
 
 # ~/ Clean-up
