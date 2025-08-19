@@ -89,7 +89,7 @@ fi
 command -v paru >/dev/null 2>&1 || git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru && cd ~/.cache/paru && makepkg -fsri --noconfirm
 printf "Install AUR Pkgs? [y/N]: "
 read -r choice
-[ "$choice" = "y" ] && paru -S xsct colorpicker yt-dlp
+[ "$choice" = "y" ] && paru -S xsct yt-dlp colorpicker
 
 # Teletype font
 # sudo setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
