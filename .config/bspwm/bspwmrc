@@ -22,3 +22,4 @@ xwallpaper --zoom ~/.local/share/walls/wallpaper.jpg &
 xset r rate 300 50 &
 pidof -q xcape || xcape -e "Super_L=Control_L|Escape" &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+wmname LG3D &

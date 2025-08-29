@@ -4,32 +4,32 @@ action=$(echo -e "Install Program\nRemove Program" | fzf)
 
 case $action in
 "Install Program")
-	package=$(pacman -Si |
-		awk '/^Name/{name=$3} /^Download Size/{ds=$4$5} /^Repo/{repo=$3} /^Description/{sub(/^.{18}/,"", $0); print name, "["ds"]", "("repo") =>", $0} ' |
-		sort -d | fzf | awk '{print $1}')
+  package=$(pacman -Si |
+    awk '/^Name/{name=$3} /^Download Size/{ds=$4$5} /^Repo/{repo=$3} /^Description/{sub(/^.{18}/,"", $0); print name, "["ds"]", "("repo") =>", $0} ' |
+    sort -d | fzf | awk '{print $1}')
 
-	if [ -z "$package" ]; then
-		exit 0
-	fi
+  if [ -z "$package" ]; then
+    exit 0
+  fi
 
-	sudo pacman -S --noconfirm "$package"
-	notify-send "$package 📦"
-	;;
+  sudo pacman -S --noconfirm "$package"
+  notify-send "$package 📦"
+  ;;
 "Remove Program")
-	package=$(pacman -Qi |
-		awk '/^Name/{name=$3} /^Installed Size/{ds=$4$5} /^Repo/{repo=$3} /^Description/{sub(/^.{18}/,"", $0); print name, "["ds"] =>", $0} ' |
-		sort -d | fzf | awk '{print $1}')
+  package=$(pacman -Qi |
+    awk '/^Name/{name=$3} /^Installed Size/{ds=$4$5} /^Repo/{repo=$3} /^Description/{sub(/^.{18}/,"", $0); print name, "["ds"] =>", $0} ' |
+    sort -d | fzf | awk '{print $1}')
 
-	if [ -z "$package" ]; then
-		exit 0
-	fi
+  if [ -z "$package" ]; then
+    exit 0
+  fi
 
-	sudo pacman -Rns --noconfirm "$package"
-	notify-send "$package 🗑️"
-	;;
+  sudo pacman -Rns --noconfirm "$package"
+  notify-send "$package 🗑️"
+  ;;
 *)
-	exit 1
-	;;
+  exit 1
+  ;;
 esac
 
 exit 0
