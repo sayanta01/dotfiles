@@ -44,7 +44,7 @@ fi
 # cd ~/ && chmod +x PacketTracer.deb && sudo dpkg -i PacketTracer.deb
 
 if [ -f /etc/debian_version ]; then
-  grep -q "source ~/.profile" ~/.config/zsh/.zshrc || echo "source ~/.profile" >> ~/.config/zsh/.zshrc
+  grep -q "source ~/.profile" ~/.config/zsh/.zshrc || echo "source ~/.profile" >>~/.config/zsh/.zshrc
   ln -sf ~/.config/zsh/.zshrc ~/.zshrc
   ln -sf ~/.config/x11/xinitrc ~/.xinitrc
 fi

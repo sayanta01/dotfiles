@@ -41,7 +41,7 @@ window#waybar.hidden {
 
 #workspaces,
 #custom-battery,
-#custom-date,
+#custom-clock,
 #custom-nettraf,
 #pulseaudio,
 #custom-memory,
@@ -60,7 +60,7 @@ window#waybar.hidden {
   margin-right: 5px;
 }
 
-#custom-date {
+#custom-clock {
   color: #f8f8f2;
   background-color: #1a1b26;
   margin-right: 5px;

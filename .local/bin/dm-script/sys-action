@@ -6,10 +6,11 @@ case "$(readlink -f /sbin/init)" in
 *) ctl='loginctl' ;;
 esac
 
+menu=$(command -v dmenu >/dev/null && echo "dmenu -i" || echo "rofi -dmenu -i")
 upt=$(uptime -p | sed -e 's/up //g' -e 's/ days/d/g' -e 's/ day/d/g' -e 's/ hours/h/g' -e 's/ hour/h/g' -e 's/ minutes/m/g' -e 's/ minute/m/g' -e 's/, / /g')
 
-case "$(printf " reboot\n shutdown\n display-off\n logout" | dmenu -i -p "Upt: $upt")" in
-' reboot') $ctl reboot ;;
+case "$(printf " reboot\n shutdown\n display-off\n logout" | $menu -p "Upt: $upt")" in
+' reboot') $ctl reboot ;;
 ' shutdown') $ctl poweroff ;;
 ' display-off') xset dpms force off ;;
 ' logout') kill -9 -1 ;;

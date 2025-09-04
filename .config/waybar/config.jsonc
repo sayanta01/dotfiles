@@ -43,7 +43,7 @@
   "custom/date": {
     "tooltip": false,
     "interval": 2,
-    "exec": "~/.local/bin/statusbar/sb-time"
+    "exec": "~/.local/bin/statusbar/sb-clock"
   },
   "custom/nettraf": {
     "tooltip": false,

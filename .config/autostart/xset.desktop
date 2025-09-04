@@ -1,8 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=xset
+Name=Xset
 Comment=Move faster
 Exec=xset r rate 300 50
 StartupNotify=false
-Terminal=false
-Hidden=false

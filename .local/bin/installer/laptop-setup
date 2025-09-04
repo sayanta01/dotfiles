@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pacman -S --noconfirm brightnessctl
+sudo pacman -S --noconfirm --needed brightnessctl
 
 # https://youtu.be/Pn2iUgW3l6w?si=-O52reqVLFTnNws9
 

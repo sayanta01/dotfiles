@@ -1,13 +1,14 @@
 #!/bin/sh
 
-choice=$(printf "lofi\nclassic" | dmenu -i -p "Choose music ")
+menu=$(command -v dmenu >/dev/null && echo "dmenu -i" || echo "rofi -dmenu -i")
+choice=$(printf "lofi\nclassic" | $menu -p "Choose music ")
 
 if [ "$choice" = "lofi" ]; then
-  url="https://youtu.be/jfKfPfyJRdk"
-  pkill -f $url || mpv "$url" --no-video
+	url="https://youtu.be/jfKfPfyJRdk"
+	pkill -f $url || mpv "$url" --no-video
 elif [ "$choice" = "classic" ]; then
-  url="https://live.musopen.org:8085/streamvbr0"
-  pkill -f "$url" || mpv "$url"
+	url="https://live.musopen.org:8085/streamvbr0"
+	pkill -f "$url" || mpv "$url"
 else
-  :
+	:
 fi

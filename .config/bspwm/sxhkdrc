@@ -42,7 +42,7 @@ ctrl + Escape
     rofi -show drun -show-icons
 
 super + @space
-    dmenu_run
+    command -v dmenu >/dev/null && dmenu_run || rofi -show run
 
 super + {Return, e}
     {kitty, thunar}
