@@ -4,13 +4,13 @@ MAX_WORKSPACE=10
 
 current=$(hyprctl activeworkspace | awk '/workspace ID/{print $3}')
 if [ "$1" = "next" ]; then
-  next=$((current == MAX_WORKSPACE ? 1 : current + 1))
+	next=$((current == MAX_WORKSPACE ? 1 : current + 1))
 else
-  next=$((current == 1 ? MAX_WORKSPACE : current - 1))
+	next=$((current == 1 ? MAX_WORKSPACE : current - 1))
 fi
 
 if [ "$2" = "move" ]; then
-  hyprctl dispatch movetoworkspace $next
+	hyprctl dispatch movetoworkspace $next
 else
-  hyprctl dispatch workspace $next
+	hyprctl dispatch workspace $next
 fi

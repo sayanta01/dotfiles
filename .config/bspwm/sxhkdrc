@@ -48,13 +48,13 @@ super + {Return, e}
     {kitty, thunar}
 
 ctrl + alt + l
-    ~/.local/bin/lockscreen
+    slock
 
 ctrl + shift + Escape
-    ~/.local/bin/dm-script/kill-ps
+    ~/.local/bin/dmscripts/kill-ps
 
 ctrl + alt + Delete
-    ~/.local/bin/dm-script/sys-action
+    ~/.local/bin/dmscripts/sys-action
 
 alt + Return
     ~/.config/bspwm/scripts/scratchpad

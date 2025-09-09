@@ -1,10 +1,10 @@
 #!/bin/sh
 
 workspace="${1:-magic}"
-cmd="${2:-kitty}"
+cmd="${2:-${TERMINAL:-kitty}}"
 
 if hyprctl clients | grep -q "special:$workspace"; then
-	hyprctl dispatch togglespecialworkspace "$workspace"
+  hyprctl dispatch togglespecialworkspace "$workspace"
 else
-	hyprctl dispatch "exec [workspace special:$workspace] $cmd"
+  hyprctl dispatch "exec [workspace special:$workspace] $cmd"
 fi

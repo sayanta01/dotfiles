@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if command -v fd >/dev/null; then
+  pdf_file=$(fd -e pdf . "$HOME")
+else
+  pdf_file=$(find "$HOME" -maxdepth 10 -type f -name "*.pdf" -not -path '*/\.*' 2>/dev/null)
+fi
+
+[ -n "$pdf_file" ] || exit
+
+chosen_file=$(echo "$pdf_file" | dmenu -i -l 20 -p "Choose PDF")
+if [ -n "$chosen_file" ]; then
+  zathura "$chosen_file" 2>/dev/null &
+fi

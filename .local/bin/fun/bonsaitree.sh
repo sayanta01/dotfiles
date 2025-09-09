@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# http://git.io/colorbars
 echo -e "              \e[32m&&"
 echo -e "             \e[32m&&&&&"
 echo -e "           \e[32m&&&\/& &&&"

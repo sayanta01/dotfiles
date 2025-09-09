@@ -1,7 +1,6 @@
 #!/bin/sh
 
-# original artwork by http://www.sanderfocus.nl/#/portfolio/tech-heroes
-
+# http://www.sanderfocus.nl/#/portfolio/tech-heroes
 cat <<'eof'
                      [38;5;255m,_ ,_==▄▂[0m
                   [38;5;255m,  ▂▃▄▄▅▅[48;5;240m▅[48;5;20m▂[48;5;240m▅¾[0m.            [38;5;199m/    [38;5;20m/[0m

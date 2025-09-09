@@ -24,7 +24,7 @@ setopt hist_ignore_all_dups
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null || source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null || source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
-autoload -U colors && colors	
+autoload -U colors && colors
 PROMPT=$'%~\n%F{red}❯ %f'
  
 function hst() {

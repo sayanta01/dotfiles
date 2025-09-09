@@ -19,4 +19,17 @@ echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
 
 # sudo vim /etc/hosts [ blk sites ]
 
-# lightdm-gtk-greeter-settings - dm-tool switch-to-greeter
+# grub-customizer
+echo 'menuentry "Reboot" --class restart {
+  reboot
+}
+menuentry "ShutDown" --class shutdown {
+  halt
+}' | sudo tee -a /etc/grub.d/40_custom
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+# https://github.com/catppuccin/grub
+# Remove Grub menu showing `Get by holding ESC`
+# GRUB_TIMEOUT_STYLE=hidden
+
+# https://github.com/adi1090x/plymouth-themes

@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	hyprlock
-else
-	slock
-fi

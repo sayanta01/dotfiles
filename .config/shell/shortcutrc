@@ -45,10 +45,6 @@ cht() {
 	sh -c "curl cheat.sh/$1"
 }
 
-wttr() {
-	sh -c "curl wttr.in/$1"
-}
-
 rate() {
 	sh -c "curl rate.sx/$1"
 }
@@ -68,15 +64,6 @@ sw() {
 		elapsed_time=$((elapsed_time + 1))
 		sleep 1
 	done
-}
-
-# For some reason, rot13 pops up everywhere
-rot13() {
-	if [ $# -eq 0 ]; then
-		tr 'a-mn-zA-MN-Z' 'n-za-mN-ZA-M'
-	else
-		echo "$*" | tr 'a-mn-zA-MN-Z' 'n-za-mN-ZA-M'
-	fi
 }
 
 lfcd() {

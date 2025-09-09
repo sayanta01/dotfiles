@@ -1,3 +1,3 @@
 #!/bin/sh
 
-tr -c "[:xdigit:]" " " </dev/urandom | lolcat
+tr -c "[:xdigit:]" " " </dev/urandom

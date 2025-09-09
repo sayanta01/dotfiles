@@ -1,18 +1,18 @@
 # file types
-ln      󰌷       # LINK
-or      ⊗       # ORPHAN
-tw      󰕘       # STICKY_OTHER_WRITABLE
-ow             # OTHER_WRITABLE
-st      󱍭       # STICKY
-di             # DIR
-pi      󱑹       # FIFO
-so             # SOCK
-bd             # BLK
-cd      󰈍       # CHR
-su             # SETUID
-sg             # SETGID
-ex             # EXEC
-fi             # FILE
+ln      󰌷      # LINK
+or      ⊗      # ORPHAN
+tw      󰕘      # STICKY_OTHER_WRITABLE
+ow            # OTHER_WRITABLE
+st      󱍭      # STICKY
+di            # DIR
+pi      󱑹      # FIFO
+so            # SOCK
+bd            # BLK
+cd      󰈍      # CHR
+su            # SETUID
+sg            # SETGID
+ex            # EXEC
+fi            # FILE
 
 # file extensions
 *.styl          
