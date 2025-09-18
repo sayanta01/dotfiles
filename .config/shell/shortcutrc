@@ -55,7 +55,7 @@ lazyg() {
 	git push
 }
 
-# Stop watch
+# stop watch
 sw() {
 	elapsed_time=0
 	while true; do

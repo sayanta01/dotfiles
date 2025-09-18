@@ -21,9 +21,6 @@ usage: fontpreview [-h] [--size \"px\"] [--position \"+x+y\"] [--search-prompt S
                    [--font-size \"FONT_SIZE\"] [--bg-color \"BG_COLOR\"] [--fg-color \"FG_COLOR\"]
                    [--preview-text \"PREVIEW_TEXT\"] [-i font.otf] [-o preview.png] [--version]
  
-┌─┐┌─┐┌┐┌┌┬┐┌─┐┬─┐┌─┐┬  ┬┬┌─┐┬ ┬
-├┤ │ ││││ │ ├─┘├┬┘├┤ └┐┌┘│├┤ │││
-└  └─┘┘└┘ ┴ ┴  ┴└─└─┘ └┘ ┴└─┘└┴┘
 Very customizable and minimal font previewer written in bash
  
 optional arguments:

@@ -1,4 +1,3 @@
-# Dunst configuration
 [global]
     follow = mouse
     frame_width = 2

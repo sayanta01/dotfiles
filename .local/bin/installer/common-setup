@@ -1,15 +1,11 @@
-#!/bin/sh
-
-# https://youtu.be/vfPE9C5uvJ0?si=UoC3swluQJ66M4mj
+https://youtu.be/vfPE9C5uvJ0?si=UoC3swluQJ66M4mj
+https://wiki.archlinux.org/title/Zram
 
 # Cloudflare DNS
 sudo cat <<EOF | sudo tee /etc/resolv.conf
 nameserver 1.1.1.1
 nameserver 8.8.8.8
 EOF
-
-# Show asterisks while entering pswd
-# sudo su root -c "echo Defaults pwfeedback >> /etc/sudoers"
 
 # SysRq
 # https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html

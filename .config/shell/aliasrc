@@ -65,12 +65,10 @@ alias lg="lazygit"
 alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias tb="nc termbin.com 9999"
 alias myip="curl ifconfig.me; echo"
-# alias py-server="python -m http.server 8000"
+alias py-serve="python -m http.server 8000"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias multitail="multitail --no-repeat -c"
 alias ff='fzf --preview "cat {}" | xargs -r "$EDITOR"'
-alias psm="ps axch -o cmd,%mem --sort=-%mem | less"
-alias psc="ps axch -o cmd,%cpu --sort=-%cpu | less"
 alias bf="du -hxs * | sort -rh | head" # dust
 alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
 alias userlist="cut -d: -f1 /etc/passwd | sort"
