@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -f /etc/arch-release ]; then
-	alias update="sudo pacman -Syyu && echo '###### ⬆️AUR ######'; paru -Sua"
+	alias update="sudo pacman -Syyu && echo '###### AUR ######'; paru -Sua"
 	alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo paccache -r; echo "###### 🚮cleaning Paru cache ######"; rm -rf ~/.cache/paru'
 	alias installed="grep -i installed /var/log/pacman.log"
 	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
@@ -58,20 +58,16 @@ alias rm="rm -iv"
 alias clr="clear"
 alias mkdir="mkdir -pv"
 alias trim="sudo fstrim -av"
-alias logout='sudo pkill -u "$USER"'
 alias fix-faillock='faillock --user "$USER" --reset'
 
 alias lg="lazygit"
 alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias tb="nc termbin.com 9999"
-alias myip="curl ifconfig.me; echo"
 alias py-serve="python -m http.server 8000"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
-alias multitail="multitail --no-repeat -c"
 alias ff='fzf --preview "cat {}" | xargs -r "$EDITOR"'
 alias bf="du -hxs * | sort -rh | head" # dust
 alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
-alias userlist="cut -d: -f1 /etc/passwd | sort"
 
 alias ports="netstat -tulpn"
 alias rsync="rsync -avhP"
@@ -89,5 +85,4 @@ alias iv="xrdb merge ~/.config/x11/xresources; nsxiv"
 alias ytdlv="yt-dlp --external-downloader aria2c"
 alias ytdla="yt-dlp -x --audio-format mp3 --audio-quality 0"
 # alias ffplay="ffplay -hide_banner"
-# alias ffprobe="ffprobe -hide_banner"
 # alias nvd="nvim -d"
