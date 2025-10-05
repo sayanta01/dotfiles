@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# https://wearewaylandnow.com
 # chrome://flags - ozone > wayland
 # about:config - media.peerconnection.enabled > true
 
@@ -11,6 +12,3 @@ chmod -R +x ~/.config/hypr/
 sudo pacman -S hyprland xdg-desktop-portal-hyprland waybar \
 	grim slurp swappy swww \
 	qt5-wayland qt6-wayland wl-clipboard wf-recorder
-
-# https://arewewaylandyet.com
-# waydroid - container-based approach to boot a full Android system

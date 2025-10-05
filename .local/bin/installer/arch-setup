@@ -25,7 +25,7 @@ git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 
-printf "Install Main Pkgs? [y/N]: "
+printf "Main Pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
   sudo pacman -S --noconfirm --needed noto-fonts noto-fonts-emoji \
@@ -46,7 +46,7 @@ if [ "$choice" = "y" ]; then
   # ntfs-3g exfatprogs meld xorg-xsetroot
 fi
 
-printf "Install Microcode? [y/N]: "
+printf "Microcode? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
   cpu_vendor=$(awk -F ': ' '/vendor_id/ {print $2}' /proc/cpuinfo | uniq)
@@ -67,7 +67,7 @@ else
 fi
 
 # VM
-# printf "Install QEMU? [y/N]: "
+# printf "QEMU? [y/N]: "
 # read -r choice
 # if [ "$choice" = "y" ]; then
 #   sudo pacman -S --noconfirm --needed qemu virt-manager dnsmasq bridge-utils libguestfs openbsd-netcat libvirt-runit spice-vdagent-runit
@@ -84,7 +84,7 @@ fi
 
 # AUR
 command -v paru >/dev/null 2>&1 || git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru && cd ~/.cache/paru && makepkg -fsri --noconfirm
-printf "Install AUR Pkgs? [y/N]: "
+printf "AUR pkgs? [y/N]: "
 read -r choice
 [ "$choice" = "y" ] && paru -S --needed xsct yt-dlp
 

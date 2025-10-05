@@ -6,5 +6,4 @@ if [ -f /etc/pacman.d/mirrorlist ]; then
 	sudo pacman-key --init
 	sudo pacman-key --populate archlinux
 	sudo pacman-key --refresh-keys
-	# sudo pacman -Scc
 fi

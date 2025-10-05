@@ -51,16 +51,16 @@ ctrl + alt + l
     slock
 
 ctrl + shift + Escape
-    ~/.local/bin/dmscripts/kill-ps
+    ~/.local/bin/dmscripts/pkm
 
 ctrl + alt + Delete
-    ~/.local/bin/dmscripts/sys-action
+    ~/.local/bin/dmscripts/sysact
 
 alt + Return
     ~/.config/bspwm/scripts/scratchpad
 
 alt + grave
-    ~/.config/bspwm/scripts/cycle-app
+    ~/.config/bspwm/scripts/samewin
 
 #
 # bspwm hotkeys

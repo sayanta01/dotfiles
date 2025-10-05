@@ -1,49 +1,47 @@
 #!/bin/sh
 
 if [ -f /etc/arch-release ]; then
-	alias update="sudo pacman -Syyu && echo '###### AUR ######'; paru -Sua"
-	alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo paccache -r; echo "###### 🚮cleaning Paru cache ######"; rm -rf ~/.cache/paru'
-	alias installed="grep -i installed /var/log/pacman.log"
-	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
+  alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo paccache -r; paru -Sc; rm -rf ~/.cache/paru'
+  alias installed="grep -i installed /var/log/pacman.log"
+  alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 elif [ -f /etc/debian_version ]; then
-	alias fd="fdfind"
-	alias remove="sudo apt remove --purge"
-	alias fix-pkg="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
-	alias clean="sudo apt -y autoremove; sudo apt clean"
-	alias installed="sudo apt list --installed"
-	bigpkg() {
-		dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
-	}
+  alias fd="fdfind"
+  alias fix-pkg="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
+  alias clean="sudo apt -y autoremove; sudo apt clean"
+  alias installed="sudo apt list --installed"
+  bigpkg() {
+    dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
+  }
 else
-	:
+  :
 fi
 
 if grep -q '^runit$' </proc/1/comm; then
-	alias doc-on="sudo sv start docker"
-	alias doc-off="sudo sv stop docker"
-	alias vm-on="sudo sv start libvirtd virtlogd spice-vdagentd"
-	alias vm-off="sudo sv stop libvirtd virtlogd spice-vdagentd"
+  alias doc-on="sudo sv start docker"
+  alias doc-off="sudo sv stop docker"
+  alias vm-on="sudo sv start libvirtd virtlogd spice-vdagentd"
+  alias vm-off="sudo sv stop libvirtd virtlogd spice-vdagentd"
 elif grep -q '^systemd$' </proc/1/comm; then
-	alias doc-on="sudo systemctl start docker"
-	alias doc-off="sudo systemctl stop docker"
-	alias vm-on="sudo systemctl start libvirtd"
-	alias vm-off="sudo systemctl stop libvirtd"
-	alias syslist="systemctl list-unit-files --type=service"
-	alias sysfailed="systemctl --failed"
-	alias probe="sudo -E hw-probe -all -upload"
-	alias jctl="sudo journalctl -p 3 -xb"
-	alias cleanjctl="sudo journalctl --vacuum-time=2weeks"
-	alias chain="sudo systemd-analyze critical-chain"
-	alias blame="sudo systemd-analyze blame"
+  alias doc-on="sudo systemctl start docker"
+  alias doc-off="sudo systemctl stop docker"
+  alias vm-on="sudo systemctl start libvirtd"
+  alias vm-off="sudo systemctl stop libvirtd"
+  alias syslist="systemctl list-unit-files --type=service"
+  alias sysfailed="systemctl --failed"
+  alias probe="sudo -E hw-probe -all -upload"
+  alias jctl="sudo journalctl -p 3 -xb"
+  alias cleanjctl="sudo journalctl --vacuum-time=2weeks"
+  alias chain="sudo systemd-analyze critical-chain"
+  alias blame="sudo systemd-analyze blame"
 else
-	:
+  :
 fi
 
 alias ls="ls --color=auto"
 alias ll="exa -alh --group-directories-first || ls -alh"
 alias lm="ls -t -1"
-alias l-="ls -l | grep -v 'd'" # files only
-alias ld="ls -ld */"           # dirs only
+alias l-="ls -l | grep -v 'd'"
+alias ld="ls -ld */"
 alias lh="ls -ld .*"
 
 alias grep="grep --color=auto"
@@ -55,8 +53,8 @@ alias ...="cd ../.."
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
-alias clr="clear"
 alias mkdir="mkdir -pv"
+alias clr="clear"
 alias trim="sudo fstrim -av"
 alias fix-faillock='faillock --user "$USER" --reset'
 
@@ -66,14 +64,13 @@ alias tb="nc termbin.com 9999"
 alias py-serve="python -m http.server 8000"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias ff='fzf --preview "cat {}" | xargs -r "$EDITOR"'
-alias bf="du -hxs * | sort -rh | head" # dust
 alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
 
 alias ports="netstat -tulpn"
 alias rsync="rsync -avhP"
 
 alias df="df -h"
-alias du="du -h"
+alias bf="du -hxs * | sort -rh | head" # dust
 alias free="free -h"
 alias bc="bc -ql"
 alias hw="hwinfo --short"
