@@ -28,24 +28,24 @@ alt + {F6,F7,F8}
 
 Print
     path_="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim | tee "$path_" | xclip -sel c -t image/png && \
+    maim "$path_" && xclip -sel c -t image/png < "$path_" && \
     echo -n "file://$path_" | xclip -sel c -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
 shift + Print
     path_="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim -s | tee "$path_" | xclip -sel c -t image/png && \
+    maim -s "$path_" || exit 0 && xclip -sel c -t image/png < "$path_" && \
     echo -n "file://$path_" | xclip -sel c -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
-ctrl + Escape
-    rofi -show drun -show-icons
+super + {Return, e}
+    {kitty, thunar}
 
 super + @space
     command -v dmenu >/dev/null && dmenu_run || rofi -show run
 
-super + {Return, e}
-    {kitty, thunar}
+ctrl + Escape
+    rofi -show drun -show-icons
 
 ctrl + alt + l
     slock
@@ -58,9 +58,6 @@ ctrl + alt + Delete
 
 alt + Return
     ~/.config/bspwm/scripts/scratchpad
-
-alt + grave
-    ~/.config/bspwm/scripts/samewin
 
 #
 # bspwm hotkeys
@@ -121,12 +118,16 @@ super + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-# super + {t,b,comma,period}
+# super + {p,b,comma,period}
 #     bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
 alt + {_,shift + }Tab
     bspc node -f {next,prev}.local.!hidden.window
+
+# focus the last node/desktop
+super + {grave,Tab}
+    bspc {node,desktop} -f last
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -135,10 +136,6 @@ super + bracket{left,right}
 # focus and move the node to the previous/next desktop
 super + shift + bracket{left,right}
     bspc node -d {prev,next}.local --follow;
-
-# focus the last node/desktop
-super + {grave,Tab}
-    bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}

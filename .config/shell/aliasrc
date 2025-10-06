@@ -61,14 +61,11 @@ alias fix-faillock='faillock --user "$USER" --reset'
 alias lg="lazygit"
 alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias tb="nc termbin.com 9999"
-alias py-serve="python -m http.server 8000"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias ff='fzf --preview "cat {}" | xargs -r "$EDITOR"'
 alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
-
 alias ports="netstat -tulpn"
 alias rsync="rsync -avhP"
-
 alias df="df -h"
 alias bf="du -hxs * | sort -rh | head" # dust
 alias free="free -h"
