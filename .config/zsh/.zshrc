@@ -16,8 +16,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 HISTSIZE=2000
 SAVEHIST=$HISTSIZE
 HISTFILE="$HOME/.local/share/history"
-setopt hist_ignore_space
 setopt hist_ignore_all_dups
+setopt hist_ignore_space
 
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
 [ -f "$HOME/.config/shell/shortcutrc" ] && source "$HOME/.config/shell/shortcutrc"

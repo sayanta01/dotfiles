@@ -3,20 +3,20 @@
 copy_cmd="xclip -sel clip"
 wall_cmd="xwallpaper --zoom"
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	copy_cmd="wl-copy"
-	wall_cmd="swww img"
+  copy_cmd="wl-copy"
+  wall_cmd="swww img"
 fi
 
 # ctrl x then key
 while read -r file; do
-	case "$1" in
-	"w") $wall_cmd "$file" & ;;
-	"d") gio trash "$file" || mv "$file" ~/.local/share/Trash/files ;;
-	"r") magick "$file" -rotate 90 "$file" ;;
-	"R") magick "$file" -rotate -90 "$file" ;;
-	"f") magick "$file" -flop "$file" ;;
-	"c") $copy_cmd -t image/png <"$file" && notify-send "$file copied" ;;
-	"y") readlink -f "$file" | $copy_cmd && notify-send "$(readlink -f "$file") path copied to clipboard" ;;
-	"g") setsid -f gimp "$file" ;;
-	esac
+  case "$1" in
+  "w") $wall_cmd "$file" & ;;
+  "d") gio trash "$file" || mv "$file" ~/.local/share/Trash/files ;;
+  "r") magick "$file" -rotate 90 "$file" ;;
+  "R") magick "$file" -rotate -90 "$file" ;;
+  "f") magick "$file" -flop "$file" ;;
+  "c") $copy_cmd -t image/png <"$file" && notify-send "$file copied" ;;
+  "y") readlink -f "$file" | $copy_cmd && notify-send "$(readlink -f "$file") path copied to clipboard" ;;
+  "g") setsid -f gimp "$file" ;;
+  esac
 done

@@ -1,12 +1,5 @@
 set sandbox none
 set recolor true
 set font "Monospace 10"
-set page-padding 4
 set selection-clipboard clipboard
-set statusbar-h-padding 0
-set statusbar-v-padding 0
-map u scroll half-up
-map d scroll half-down
 map D toggle_page_mode
-map r reload
-map R rotate
