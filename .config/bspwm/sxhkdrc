@@ -63,7 +63,7 @@ alt + Return
 # bspwm hotkeys
 #
 
-# reload sxhkd configuration
+# reload sxhkd
 super + Escape
     pkill -USR1 -x sxhkd && notify-send -t 500 "Reloaded sxhkd!"
 
