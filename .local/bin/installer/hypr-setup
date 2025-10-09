@@ -7,7 +7,7 @@
 for dir in hypr waybar; do
 	cp -r "$HOME/dotfiles/.config/$dir" "$HOME/.config"
 done
-chmod -R +x ~/.config/hypr/
+chmod -R u+x ~/.config/hypr/
 
 sudo pacman -S hyprland xdg-desktop-portal-hyprland waybar \
 	grim slurp swappy swww \

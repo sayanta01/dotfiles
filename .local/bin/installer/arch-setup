@@ -6,7 +6,7 @@ for dots in .bashrc .profile .xprofile .zprofile; do
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config/
-chmod -R +x ~/.config/bspwm/ ~/.config/polybar/launch.sh ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
+chmod -R u+x ~/.config/bspwm/ ~/.config/polybar/ ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
 printf "Fonts? [y/N]: "
 read -r choice
