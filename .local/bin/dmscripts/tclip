@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if [ -n "$WAYLAND_DISPLAY" ]; then
-  printf '%s\n' "$(wl-paste -n)" >>/tmp/tmpclip.txt
-else
-  printf '%s\n' "$(xclip -o)" >>/tmp/tmpclip.txt
-fi

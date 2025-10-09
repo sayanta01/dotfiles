@@ -28,14 +28,14 @@ alt + {F6,F7,F8}
 
 Print
     path_="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim "$path_" && xclip -sel c -t image/png < "$path_" && \
-    echo -n "file://$path_" | xclip -sel c -t text/uri-list && \
+    maim "$path_" && xclip -sel clip -t image/png < "$path_" && \
+    echo -n "file://$path_" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
 shift + Print
     path_="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim -s "$path_" || exit 0 && xclip -sel c -t image/png < "$path_" && \
-    echo -n "file://$path_" | xclip -sel c -t text/uri-list && \
+    maim -s "$path_" || exit 0 && xclip -sel clip -t image/png < "$path_" && \
+    echo -n "file://$path_" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
 super + {Return, e}

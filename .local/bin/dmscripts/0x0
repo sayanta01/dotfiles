@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if command -v dmenu >/dev/null; then
-  menu="dmenu -i -p 'Upload File'"
+  menu="dmenu -i -p 'Upload File:'"
 else
-  menu="rofi -dmenu -i -p 'Upload File'"
+  menu="rofi -dmenu -i -p 'Upload File:'"
 fi
 
 if command -v fd >/dev/null; then
@@ -16,6 +16,6 @@ fi
 if [ -n "$WAYLAND_DISPLAY" ]; then
   curl -F "file=@$file" 0x0.st | wl-copy
 else
-  curl -F "file=@$file" 0x0.st | xclip -sel c
+  curl -F "file=@$file" 0x0.st | xclip -sel clip
 fi
 notify-send "0x0 📎"

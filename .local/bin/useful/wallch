@@ -1,32 +1,26 @@
 #!/bin/sh
 
-current_session=$XDG_CURRENT_DESKTOP
+path="${HOME}/.local/share/walls"
+BG="$(find "$path" -name '*.jpg' -o -name '*.png' | shuf -n1)"
 
-set_wall_hyprland() {
-	dir="${HOME}/.local/share/walls"
-	BG="$(find "$dir" -name '*.jpg' -o -name '*.png' | shuf -n1)"
-	PROGRAM="swww-daemon"
-	trans_type="simple"
-
-	if pgrep "$PROGRAM" >/dev/null; then
-		swww img "$BG" --transition-fps 144 --transition-type $trans_type --transition-duration 1
+hypr_wall() {
+	if pgrep swww-daemon >/dev/null; then
+		swww img "$BG" --transition-fps 144 --transition-duration 1
 	else
-		swww-daemon && swww img "$BG" --transition-fps 144 --transition-type $trans_type --transition-duration 1
+		swww-daemon && swww img "$BG" --transition-fps 144 --transition-duration 1
 	fi
 }
 
-set_wall_other() {
-	dir="${HOME}/.local/share/walls"
-	BG="$(find "$dir" -name '*.jpg' -o -name '*.png' | shuf -n1)"
+x11() {
 	cat "$BG" > ~/.local/share/walls/wallpaper.jpg
 	xwallpaper --zoom "$BG"
 }
 
-case "$current_session" in
+case "$XDG_CURRENT_DESKTOP" in
 "Hyprland")
-	set_wall_hyprland
+	hypr_wall
 	;;
 *)
-	set_wall_other
+	x11
 	;;
 esac

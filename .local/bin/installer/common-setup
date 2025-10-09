@@ -27,5 +27,3 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 # https://github.com/catppuccin/grub
 # Remove Grub menu showing `Get by holding ESC`
 # GRUB_TIMEOUT_STYLE=hidden
-
-# https://github.com/adi1090x/plymouth-themes

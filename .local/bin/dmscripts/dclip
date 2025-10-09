@@ -1,9 +1,0 @@
-#!/bin/sh
-
-menu=$(command -v dmenu >/dev/null && echo "dmenu -i" || echo "rofi -dmenu -i")
-
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	$menu -l 10 </tmp/tmpclip.txt | tr -d '\n' | wl-copy
-else
-	$menu -l 10 </tmp/tmpclip.txt | tr -d '\n' | xclip -sel c
-fi

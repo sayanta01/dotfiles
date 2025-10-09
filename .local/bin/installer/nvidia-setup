@@ -1,32 +1,23 @@
-#!/bin/sh
+sudo pacman -S --noconfirm --needed linux-lts linux-lts-headers
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-check_nvidia() {
-  sudo pacman -S --noconfirm --needed nvidia-dkms nvidia-utils nvidia-settings
-  # lib32-nvidia-utils opencl-nvidia nvtop
+sudo pacman -S --noconfirm --needed nvidia-dkms nvidia-utils nvidia-settings
+# lib32-nvidia-utils opencl-nvidia nvtop
 
-  parameter="nvidia_drm.modeset=1"
-  if ! grep -q $parameter /etc/default/grub; then
-    sudo sed -i "/^GRUB_CMDLINE_LINUX_DEFAULT=/s/'\(.*\)'/'\1 $parameter'/" /etc/default/grub
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
-  fi
-
-  nvidia_modules="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
-  sudo sed -i -E "s/^(MODULES=\()/\1${nvidia_modules} /" /etc/mkinitcpio.conf
-  echo "options nvidia_drm modeset=1" | sudo tee /etc/modprobe.d/nvidia.conf
-  sudo mkinitcpio -P
-}
-
-if uname -r | grep -q 'lts'; then
-  echo "LTS kernel detected"
-  lspci | grep -iq nvidia && check_nvidia || echo "No NVIDIA GPU detected"
-else
-  echo "Installing LTS kernel"
-  sudo pacman -S --noconfirm --needed linux-lts linux-lts-headers
-  sudo grub-mkconfig -o /boot/grub/grub.cfg
+params="nvidia_drm.modeset=1"
+if ! grep -q $params /etc/default/grub; then
+	sudo sed -i "/^GRUB_CMDLINE_LINUX_DEFAULT=/s/'\(.*\)'/'\1 $params'/" /etc/default/grub
+	sudo grub-mkconfig -o /boot/grub/grub.cfg
 fi
 
-# Fix tearing on X
-# nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+echo "options nvidia_drm modeset=1" | sudo tee /etc/modprobe.d/nvidia.conf
+
+nvidia_modules="nvidia nvidia_modeset nvidia_uvm nvidia_drm"
+sudo sed -i -E 's/ nvidia_drm//g; s/ nvidia_uvm//g; s/ nvidia_modeset//g; s/ nvidia//g;' /etc/mkinitcpio.conf
+sudo sed -i -E "s/^(MODULES=\()/\1${nvidia_modules} /" /etc/mkinitcpio.conf
+sudo mkinitcpio -P
 
 # https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
+# https://wiki.hypr.land/Nvidia/
 # steam setting > downloads > disable shader pre-caching
+# Fix Screen Tearing in X11

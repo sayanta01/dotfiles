@@ -3,5 +3,5 @@
 if [ -n "$WAYLAND_DISPLAY" ]; then
   hyprpicker -a -n
 else
-  xcolor -P 144 | xclip -sel c
+  xcolor -P 144 | xclip -sel clip
 fi

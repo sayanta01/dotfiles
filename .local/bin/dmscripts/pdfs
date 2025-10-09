@@ -8,7 +8,7 @@ fi
 
 [ -n "$pdf_file" ] || exit
 
-chosen_file=$(echo "$pdf_file" | dmenu -i -l 20 -p "Choose PDF")
+chosen_file=$(echo "$pdf_file" | dmenu -i -l 20 -p "Choose PDF:")
 if [ -n "$chosen_file" ]; then
   zathura "$chosen_file" 2>/dev/null &
 fi
