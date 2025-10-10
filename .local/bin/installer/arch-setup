@@ -43,7 +43,7 @@ if [ "$choice" = "y" ]; then
     zathura-pdf-mupdf \
     xdg-utils xdg-user-dirs \
     xclip wmname
-  # ntfs-3g exfatprogs meld xorg-xsetroot
+  # ntfs-3g exfatprogs meld
 fi
 
 printf "Microcode? [y/N]: "
@@ -55,31 +55,30 @@ if [ "$choice" = "y" ]; then
 fi
 
 ## Services
-init_sys=$(ps -p 1 -o comm=)
-if [ "$init_sys" = "systemd" ]; then
+if [ "$(ps -p 1 -o comm=)" = "systemd" ]; then
   sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse && systemctl --user --now enable pipewire pipewire-pulse wireplumber
-  sudo pacman -S --noconfirm --needed dbus
   # sudo systemctl disable docker
 else
-  sudo pacman -S --noconfirm --needed pipewire pipewire-pulse wireplumber dbus-runit
-  sudo ln -s /etc/runit/sv/dbus /run/runit/service
+  sudo pacman -S --noconfirm --needed pipewire pipewire-pulse wireplumber
+  sudo pacman -S --noconfirm --needed dbus-runit && sudo ln -s /etc/runit/sv/dbus /run/runit/service
   # sudo ln -s /run/runit/sv/docker /run/runit/service && sudo touch /run/runit/service/docker/down
 fi
 
 # VM
+# https://share.google/XPZvqpBTiGmDcSDEu
 # printf "QEMU? [y/N]: "
 # read -r choice
 # if [ "$choice" = "y" ]; then
-#   sudo pacman -S --noconfirm --needed qemu virt-manager dnsmasq bridge-utils libguestfs openbsd-netcat libvirt-runit spice-vdagent-runit
-#   sudo ln -s /etc/runit/sv/virtlogd /run/runit/service
-#   sudo touch /run/runit/service/virtlogd/down
-#   sudo ln -s /etc/runit/sv/libvirtd /run/runit/service
-#   sudo touch /run/runit/service/libvirtd/down
-#   sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service
-#   sudo touch /run/runit/service/spice-vdagentd/down
-#   sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
-#   sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
-#   sudo usermod -aG libvirt "$USER"
+# 	sudo pacman -S --noconfirm --needed qemu-full virt-manager \
+# 		dnsmasq bridge-utils openbsd-netcat guestfs-tools libvirt spice-vdagent
+# 	sudo virsh net-start default
+# 	sudo virsh net-autostart default
+# 	sudo ln -s /etc/runit/sv/libvirtd /run/runit/service && sudo touch /run/runit/service/libvirtd/down
+# 	sudo ln -s /etc/runit/sv/virtlogd /run/runit/service && sudo touch /run/runit/service/virtlogd/down
+# 	sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service && sudo touch /run/runit/service/spice-vdagentd/down
+# 	sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
+# 	sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
+# 	sudo usermod -aG libvirt "$USER"
 # fi
 
 # AUR

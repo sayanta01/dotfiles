@@ -20,6 +20,6 @@ function hst() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		history 0 | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
 	else
-		history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel c
+		history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel clip
 	fi
 }
