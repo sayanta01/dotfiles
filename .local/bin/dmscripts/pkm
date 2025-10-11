@@ -1,9 +1,8 @@
 #!/bin/sh
 
-menu=$(command -v dmenu >/dev/null && echo "dmenu -i -l 20" || echo "rofi -dmenu -i -l 20")
-selected_pid=$(ps -u "$USER" -o pid,%cpu,%mem,comm | sort -k2 -r | $menu | awk '{print $1}')
+menu=$(command -v dmenu >/dev/null && echo "dmenu -i" || echo "rofi -dmenu -i")
+select_pid=$(ps -u "$USER" -o pid,%cpu,%mem,comm | sort -k2 -r | $menu -l 20 | awk '{print $1}')
 
-if [ -n "$selected_pid" ]; then
-  kill -15 "$selected_pid"
-  notify-send "killed process"
+if [ -n "$select_pid" ]; then
+  kill -15 "$select_pid"
 fi

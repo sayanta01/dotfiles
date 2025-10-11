@@ -92,18 +92,8 @@ super + g
 #
 
 # set the window state
-super + {p,shift + p}
-    bspc node -t {tiled,pseudo_tiled}
-
-# floating/fullscreen
-super + {s,f}
-    {bspc config pointer_follows_focus true; \
-    bspc node -t $(bspc query -N -n -n .tiled >/dev/null && echo floating || echo tiled); \
-    bspc node -f; \
-    bspc config pointer_follows_focus false,bspc config pointer_follows_focus true; \
-    bspc node -t $(bspc query -N -n -n .tiled >/dev/null && echo fullscreen || echo tiled); \
-    bspc node -f; \
-    bspc config pointer_follows_focus false}
+super + {t,shift + t,s,f}
+	bspc node -t \~{tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
 super + ctrl + {m,x,s,p}

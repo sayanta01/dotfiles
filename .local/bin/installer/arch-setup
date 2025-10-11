@@ -2,20 +2,11 @@
 
 # https://dither8.xyz/guide/arch-postinstall
 for dots in .bashrc .profile .xprofile .zprofile; do
-  cp -r "$HOME/dotfiles/$dots" "$HOME"
+	cp -r "$HOME/dotfiles/$dots" "$HOME"
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config/
 chmod -R u+x ~/.config/bspwm/ ~/.config/polybar/ ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
-
-printf "Fonts? [y/N]: "
-read -r choice
-if [ "$choice" = "y" ]; then
-  [ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
-  [ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
-  curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
-  sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
-fi
 
 # Tools
 git clone --depth=1 https://github.com/sayanta01/dmenu ~/.config/dmenu && cd ~/.config/dmenu && sudo make clean install
@@ -25,44 +16,56 @@ git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
 sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 
+printf "Fonts? [Y/n]: "
+read -r choice
+case "$choice" in [nN]) ;; esac
+[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
+[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
+curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
+
 printf "Main Pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
-  sudo pacman -S --noconfirm --needed noto-fonts noto-fonts-emoji \
-    fzf htop bash-completion \
-    kitty neovim zsh \
-    zsh-autosuggestions zsh-syntax-highlighting \
-    bspwm sxhkd polybar rofi slock dunst \
-    xcape pass polkit-gnome gnome-keyring jq \
-    mpv nsxiv maim xwallpaper \
-    pavucontrol playerctl \
-    network-manager-applet \
-    lf mediainfo ffmpegthumbnailer \
-    unzip p7zip file-roller \
-    gvfs-mtp thunar-archive-plugin \
-    zathura-pdf-mupdf \
-    xdg-utils xdg-user-dirs \
-    xclip wmname
-  # ntfs-3g exfatprogs meld
+	sudo pacman -S --noconfirm --needed noto-fonts noto-fonts-emoji \
+		kitty neovim fzf htop \
+		bash-completion zsh zsh-autosuggestions zsh-syntax-highlighting \
+		bspwm sxhkd polybar rofi slock dunst \
+		xcape pass polkit-gnome gnome-keyring \
+		mpv nsxiv maim xwallpaper \
+		pavucontrol playerctl \
+		network-manager-applet \
+		lf mediainfo ffmpegthumbnailer unzip p7zip file-roller \
+		gvfs-mtp thunar-archive-plugin \
+		zathura-pdf-mupdf jq \
+		xdg-utils xdg-user-dirs \
+		xclip wmname
+	# ntfs-3g exfatprogs meld
 fi
 
 printf "Microcode? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
-  cpu_vendor=$(awk -F ': ' '/vendor_id/ {print $2}' /proc/cpuinfo | uniq)
-  [ "$cpu_vendor" = "GenuineIntel" ] && sudo pacman -S --noconfirm --needed intel-ucode
-  [ "$cpu_vendor" = "AuthenticAMD" ] && sudo pacman -S --noconfirm --needed amd-ucode
+	cpu_vendor=$(awk -F ': ' '/vendor_id/ {print $2}' /proc/cpuinfo | uniq)
+	[ "$cpu_vendor" = "GenuineIntel" ] && sudo pacman -S --noconfirm --needed intel-ucode
+	[ "$cpu_vendor" = "AuthenticAMD" ] && sudo pacman -S --noconfirm --needed amd-ucode
 fi
 
 ## Services
 if [ "$(ps -p 1 -o comm=)" = "systemd" ]; then
-  sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse && systemctl --user --now enable pipewire pipewire-pulse wireplumber
-  # sudo systemctl disable docker
+	sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse && systemctl --user --now enable pipewire pipewire-pulse wireplumber
+	# sudo systemctl disable docker
 else
-  sudo pacman -S --noconfirm --needed pipewire pipewire-pulse wireplumber
-  sudo pacman -S --noconfirm --needed dbus-runit && sudo ln -s /etc/runit/sv/dbus /run/runit/service
-  # sudo ln -s /run/runit/sv/docker /run/runit/service && sudo touch /run/runit/service/docker/down
+	sudo pacman -S --noconfirm --needed pipewire pipewire-pulse wireplumber
+	sudo pacman -S --noconfirm --needed dbus-runit && sudo ln -s /etc/runit/sv/dbus /run/runit/service
+	# sudo ln -s /run/runit/sv/docker /run/runit/service && sudo touch /run/runit/service/docker/down
 fi
+
+# AUR
+command -v paru >/dev/null 2>&1 || git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru && cd ~/.cache/paru && makepkg -fsri --noconfirm
+printf "AUR pkgs? [y/N]: "
+read -r choice
+[ "$choice" = "y" ] && paru -S --needed xsct yt-dlp
 
 # VM
 # https://share.google/XPZvqpBTiGmDcSDEu
@@ -81,15 +84,6 @@ fi
 # 	sudo usermod -aG libvirt "$USER"
 # fi
 
-# AUR
-command -v paru >/dev/null 2>&1 || git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru && cd ~/.cache/paru && makepkg -fsri --noconfirm
-printf "AUR pkgs? [y/N]: "
-read -r choice
-[ "$choice" = "y" ] && paru -S --needed xsct yt-dlp
-
 # Teletype font
 # sudo setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
 # sudo su root -c "echo -e FONT='ter-120b' > /etc/vconsole.conf"
-
-# Qt
-sudo sh -c 'echo "QT_QPA_PLATFORMTHEME=\"qt5ct\"" > /etc/environment'
