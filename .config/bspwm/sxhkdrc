@@ -14,10 +14,6 @@ XF86Audio{Mute,LowerVolume,RaiseVolume,MicMute}
 XF86Audio{Prev,Play,Next}
     playerctl {previous,play-pause,next}
 
-super + {u,d}
-    {~/.local/bin/statusbar/toggle-polybar, \
-    while bspc node any.hidden.window -g hidden=off; do false; done && while bspc node 'any.!hidden.window' -g hidden=on; do :; done}
-
 alt + {F1,F2,F3}
     {wpctl set-mute @DEFAULT_SINK@ toggle, \
     wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-, \
@@ -37,6 +33,10 @@ shift + Print
     maim -s "$path_" || exit 0 && xclip -sel clip -t image/png < "$path_" && \
     echo -n "file://$path_" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
+
+super + {u,d}
+    {~/.local/bin/statusbar/toggle-polybar, \
+    while bspc node any.hidden.window -g hidden=off; do false; done && while bspc node 'any.!hidden.window' -g hidden=on; do :; done}
 
 super + {Return, e}
     {kitty, thunar}
@@ -79,14 +79,6 @@ super + {_,shift + }q
 super + m
     bspc desktop -l next
 
-# send the newest marked node to the newest preselected node
-super + y
-    bspc node -n newest.!automatic.local
-
-# swap the current node and the biggest window
-super + g
-    bspc node -s biggest.window
-
 #
 # state/flags
 #
@@ -123,12 +115,6 @@ super + bracket{left,right}
 super + shift + bracket{left,right}
     bspc node -d {prev,next}.local --follow;
 
-# focus the older or newer node in the focus history
-super + {o,i}
-    bspc wm -h off; \
-    bspc node {older,newer} -f; \
-    bspc wm -h on
-
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} '^{1-9,10}'
@@ -141,17 +127,9 @@ super + {_,shift + }{1-9,0}
 super + ctrl + {h,j,k,l}
     bspc node -p {west,south,north,east}
 
-# preselect the ratio
-super + ctrl + {1-9}
-    bspc node -o 0.{1-9}
-
 # cancel the preselection for the focused node
 super + ctrl + space
     bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-    bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize

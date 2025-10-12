@@ -1,76 +1,80 @@
 #!/bin/sh
 
 ext() {
-	if [ -f "$1" ]; then
-		case $1 in
-		*.tar.bz2 | *.tbz2) tar xjf "$1" ;;
-		*.tar.gz | *.tgz) tar xzf "$1" ;;
-		*.cbt | *.tar) tar xf "$1" ;;
-		*.txz | *.tar.xz) tar xJf "$1" ;;
-		*.tar.zst) unzstd "$1" ;;
-		*.lzma) unlzma "$1" ;;
-		*.bz2) bunzip2 "$1" ;;
-		*.gz) gunzip "$1" ;;
-		*.zip) unzip "$1" ;;
-		*.rar) 7z x "$1" ;;
-		*.Z) uncompress "$1" ;;
-		*.7z) 7z x "$1" ;;
-		*.xz) unxz "$1" ;;
-		*.deb) ar x "$1" ;;
-		*.exe) cabextract "$1" ;;
-		*) echo "'$1' unknown archive format" ;;
-		esac
-	else
-		echo "'$1' invalid file"
-	fi
+  if [ -f "$1" ]; then
+    case $1 in
+    *.tar.bz2 | *.tbz2) tar xjf "$1" ;;
+    *.tar.gz | *.tgz) tar xzf "$1" ;;
+    *.cbt | *.tar) tar xf "$1" ;;
+    *.txz | *.tar.xz) tar xJf "$1" ;;
+    *.tar.zst) unzstd "$1" ;;
+    *.lzma) unlzma "$1" ;;
+    *.bz2) bunzip2 "$1" ;;
+    *.gz) gunzip "$1" ;;
+    *.zip) unzip "$1" ;;
+    *.rar) 7z x "$1" ;;
+    *.Z) uncompress "$1" ;;
+    *.7z) 7z x "$1" ;;
+    *.xz) unxz "$1" ;;
+    *.deb) ar x "$1" ;;
+    *.exe) cabextract "$1" ;;
+    *) echo "'$1' unknown archive format" ;;
+    esac
+  else
+    echo "'$1' invalid file"
+  fi
 }
 
 del() {
-	for file in "$@"; do
-		gio trash "$file" || mv "$file" ~/.local/share/Trash/files
-	done
+  for file in "$@"; do
+    gio trash "$file" || mv "$file" ~/.local/share/Trash/files
+  done
 }
 
 tre() {
-	gio trash --list | column -t -s "$(printf '\t')" | fzf -i -e -m -d / --with-nth 4.. \
-		--bind 'home:first,end:last,ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all' \
-		--prompt="Trash restore: " | cut -d ' ' -f1 | while read -r line; do gio trash --restore "$line"; done
+  gio trash --list | column -t -s "$(printf '\t')" | fzf -i -e -m -d / --with-nth 4.. \
+    --bind 'home:first,end:last,ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all' \
+    --prompt="Trash restore: " | cut -d ' ' -f1 | while read -r line; do gio trash --restore "$line"; done
 }
 
 joke() {
-	curl -sSL https://v2.jokeapi.dev/joke/Any | jq -r '.category, .setup, .delivery'
+  curl -sSL https://v2.jokeapi.dev/joke/Any | jq -r '.category, .setup, .delivery'
 }
 
 cht() {
-	sh -c "curl cheat.sh/$1"
+  curl cheat.sh/"$1"
+}
+
+oxo() {
+  curl -F "file=@$1" 0x0.st
 }
 
 rate() {
-	sh -c "curl rate.sx/$1"
+  curl rate.sx/"$1"
 }
 
 lazyg() {
-	git add .
-	git commit -m "$1"
-	git push
+  git add .
+  git commit -m "$1"
+  git push
 }
 
 # stop watch
 sw() {
-	elapsed_time=0
-	while true; do
-		tput reset
-		printf "%02d:%02d:%02d\n" $(("$elapsed_time" / 3600)) $(("$elapsed_time" % 3600 / 60)) $(("$elapsed_time" % 60))
-		elapsed_time=$((elapsed_time + 1))
-		sleep 1
-	done
+  elapsed_time=0
+  while true; do
+    tput reset
+    printf "%02d:%02d:%02d\n" $(("$elapsed_time" / 3600)) $(("$elapsed_time" % 3600 / 60)) $(("$elapsed_time" % 60))
+    elapsed_time=$((elapsed_time + 1))
+    sleep 1
+  done
 }
 
 lfcd() {
-	dir=$(lf -print-last-dir "$@") || return
-	while [ -n "$dir" ] && ! cd "$dir" 2>/dev/null; do
-		dir=$(dirname "$dir")
-	done
+  dir=$(lf -print-last-dir "$@") || return
+  while [ -n "$dir" ] && ! cd "$dir" 2>/dev/null; do
+    dir=$(dirname "$dir")
+  done
 }
 
 # notify-send " $(top -bn1 | awk '/^%Cpu/ {print $2}' | cut -c 1,2 | sed 's/\.//g')󰏰 "
