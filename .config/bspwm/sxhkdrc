@@ -23,15 +23,15 @@ alt + {F6,F7,F8}
     playerctl {previous,play-pause,next}
 
 Print
-    path_="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim "$path_" && xclip -sel clip -t image/png < "$path_" && \
-    echo -n "file://$path_" | xclip -sel clip -t text/uri-list && \
+    dir="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
+    maim "$dir" && xclip -sel clip -t image/png < "$dir" && \
+    echo -n "file://$dir" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
 shift + Print
-    path_="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim -s "$path_" || exit 0 && xclip -sel clip -t image/png < "$path_" && \
-    echo -n "file://$path_" | xclip -sel clip -t text/uri-list && \
+    dir="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
+    maim -s "$dir" || exit 0 && xclip -sel clip -t image/png < "$dir" && \
+    echo -n "file://$dir" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
 super + {u,d}
