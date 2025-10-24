@@ -6,9 +6,9 @@ else
 	. "$HOME/.xprofile"
 fi
 
-fav=bspwm
-case "$1" in
+session=${1:-bspwm}
+case $session in
 bspwm) bspwm ;;
 gnome) gnome-session ;;
-*) exec dbus-launch --sh-syntax --exit-with-session $fav ;;
+*) exec $1 ;;
 esac

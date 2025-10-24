@@ -1,8 +1,9 @@
+# Check which kernel is installed & set appropriate headers package
 sudo pacman -S --noconfirm --needed linux-lts linux-lts-headers
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-sudo pacman -S --noconfirm --needed nvidia-dkms nvidia-utils nvidia-settings
-# lib32-nvidia-utils opencl-nvidia nvtop
+sudo pacman -S --noconfirm --needed nvidia-dkms nvidia-utils
+# nvidia-settings nvtop lib32-nvidia-utils opencl-nvidia egl-wayland libva-nvidia-driver
 
 params="nvidia_drm.modeset=1"
 if ! grep -q $params /etc/default/grub; then
@@ -19,5 +20,5 @@ sudo mkinitcpio -P
 
 # https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
 # https://wiki.hypr.land/Nvidia/
-# steam setting > downloads > disable shader pre-caching
+# Steam setting > downloads > disable shader pre-caching
 # Fix Screen Tearing in X11

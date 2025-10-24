@@ -4,8 +4,14 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 	if pgrep -x "wlsunset" >/dev/null; then
 		killall wlsunset >/dev/null 2>&1
 	else
-		wlsunset -t 4999 >/dev/null 2>&1 &
+		wlsunset -t 3700 >/dev/null 2>&1 &
 	fi
 else
-	xsct -t 4999
+	xsct -t 3700
 fi
+
+# if pgrep -x "gammastep" >/dev/null; then
+# 	killall gammastep >/dev/null 2>&1
+# else
+# 	gammastep -O 3700
+# fi

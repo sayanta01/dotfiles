@@ -5,5 +5,5 @@ polybar-msg cmd quit
 
 # Launch
 for m in $(polybar -M | cut -d ':' -f1); do
-  MONITOR=$m polybar example &
+  MONITOR=$m polybar --reload example &
 done

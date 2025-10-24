@@ -1,12 +1,11 @@
 #!/bin/sh
 
 menu=$(command -v dmenu >/dev/null && echo "dmenu -i" || echo "rofi -dmenu -i")
+emoji=$(curl -sSL https://raw.githubusercontent.com/jchook/emoji-menu/master/data/emojis.txt | $menu -l 20 -p Emojis:)
+selected=$(echo "$emoji" | awk '{print $1}')
+
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	emoji=$(curl -sSL https://raw.githubusercontent.com/jchook/emoji-menu/master/data/emojis.txt | $menu -l 20 -p Emojis:)
-	selected=$(echo "$emoji" | awk '{print $1}')
-	printf "%s" "$selected" | wl-copy
+  printf "%s" "$selected" | wl-copy
 else
-	emoji=$(curl -sSL https://raw.githubusercontent.com/jchook/emoji-menu/master/data/emojis.txt | $menu -l 20 -p Emojis:)
-	selected=$(echo "$emoji" | awk '{print $1}')
-	printf "%s" "$selected" | xclip -sel clip
+  printf "%s" "$selected" | xclip -sel clip
 fi

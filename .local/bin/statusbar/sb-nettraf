@@ -7,7 +7,7 @@ INT=1
 rx_bytes=$(cat /sys/class/net/*/statistics/rx_bytes | awk '{sum+=$1} END {print sum}')
 tx_bytes=$(cat /sys/class/net/*/statistics/tx_bytes | awk '{sum+=$1} END {print sum}')
 
-# Wait for the interval to Elapse : to slip or glide away `pass`
+# Wait for the interval to Elapse: to slip or glide away `pass`
 sleep $INT
 
 # Get the new total number of bytes received and transmitted

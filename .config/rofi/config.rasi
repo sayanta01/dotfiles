@@ -1,78 +1,44 @@
 configuration {
     modes: "drun,run";
-    font: "Sans 12";
+    font:  "Sans 12";
 }
 
 * {
-    foreground:          #f8f8f2;
-    background:          #16161e;
-    separatorcolor:      var(foreground);
-    selected-normal-bg:  #2d3f76;
-    selected-active-bg:  #ffc777;
-    urgent-bg:           #ff757f;
-    alternate-normal-bg: #30302f;
+    foreground: #f8f8f2;
+    background: #16161e;
+    selected-normal-background:  #2d3f76;
+    selected-active-background:  #ffc777;
+    alternate-normal-background: var(background);
+    alternate-active-background: var(background);
 }
 
 window {
-    width:        32%;
-    border-color: var(alternate-normal-bg);
+    width: 32%;
 }
+
 inputbar {
     padding:  10px;
     children: [ entry ];
 }
+
+message {
+    border: 1px solid 0px 0px;
+}
+
 entry {
     placeholder: "";
 }
+
 listview {
-    lines:	      6;
-    scrollbar:    false;
-    border:       1px solid 0px 0px;
-    border-color: var(separatorcolor);
+    lines:     6;
+    scrollbar: false;
+    border:    2px solid 0px 0px;
 }
 
 element {
     padding: 10px ;
 }
+
 element-text {
     highlight: #65bcff;
-}
-
-element normal.normal {
-    background-color: var(background);
-    text-color:       var(foreground);
-}
-element normal.urgent {
-    background-color: var(urgent-bg);
-    text-color:       var(foreground);
-}
-element normal.active {
-    background-color: var(background);
-    text-color:       var(foreground);
-}
-
-element selected.normal {
-    background-color: var(selected-normal-bg);
-    text-color:       var(foreground);
-}
-element selected.urgent {
-    background-color: var(urgent-bg);
-    text-color:       var(background);
-}
-element selected.active {
-    background-color: var(selected-active-bg);
-    text-color:       var(foreground);
-}
-
-element alternate.normal {
-    background-color: var(background);
-    text-color:       var(foreground);
-}
-element alternate.urgent {
-    background-color: var(alternate-normal-bg);
-    text-color:       var(foreground);
-}
-element alternate.active {
-    background-color: var(alternate-normal-bg);
-    text-color:       var(foreground);
 }

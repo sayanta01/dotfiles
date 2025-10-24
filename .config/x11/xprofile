@@ -4,5 +4,8 @@ killall -q pipewire pipewire-pulse wireplumber
 pipewire &
 pipewire-pulse &
 wireplumber &
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ] && [ -r "/run/user/$(id -u)/bus" ]; then
+  export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
+fi
 dbus-update-activation-environment --all
 eval "$(gnome-keyring-daemon --start --components=secrets)"

@@ -18,13 +18,15 @@ sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
 
 printf "Fonts? [Y/n]: "
 read -r choice
-case "$choice" in [nN]) ;; esac
-[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
-[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
-curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
-sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
+case "$choice" in [nN]) ;; *)
+	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
+	[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
+	curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+	sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
+	;;
+esac
 
-printf "Main Pkgs? [y/N]: "
+printf "Main pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
 	sudo pacman -S --noconfirm --needed noto-fonts noto-fonts-emoji \
@@ -69,16 +71,15 @@ read -r choice
 
 # VM
 # https://share.google/XPZvqpBTiGmDcSDEu
-# printf "QEMU? [y/N]: "
+# printf "KVM? [y/N]: "
 # read -r choice
 # if [ "$choice" = "y" ]; then
 # 	sudo pacman -S --noconfirm --needed qemu-full virt-manager \
-# 		dnsmasq bridge-utils openbsd-netcat guestfs-tools libvirt spice-vdagent
+# 		dnsmasq bridge-utils openbsd-netcat guestfs-tools libvirt
 # 	sudo virsh net-start default
 # 	sudo virsh net-autostart default
 # 	sudo ln -s /etc/runit/sv/libvirtd /run/runit/service && sudo touch /run/runit/service/libvirtd/down
 # 	sudo ln -s /etc/runit/sv/virtlogd /run/runit/service && sudo touch /run/runit/service/virtlogd/down
-# 	sudo ln -s /etc/runit/sv/spice-vdagentd /run/runit/service && sudo touch /run/runit/service/spice-vdagentd/down
 # 	sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
 # 	sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
 # 	sudo usermod -aG libvirt "$USER"

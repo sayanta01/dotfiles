@@ -4,8 +4,6 @@ bindkey '^[[1;5C' forward-word  # [A-f]
 bindkey '^[[1;5D' backward-word # [A-b]
 bindkey '^[[Z' undo             # [S-Tab]
 
-TIMEFMT=$'\ntotal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
-
 autoload -Uz compinit
 compinit -C -d $HOME/.cache/zcompdump
 zmodload zsh/complist

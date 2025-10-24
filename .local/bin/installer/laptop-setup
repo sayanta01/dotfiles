@@ -2,7 +2,7 @@ sudo pacman -S --noconfirm --needed brightnessctl
 
 # https://youtu.be/Pn2iUgW3l6w?si=-O52reqVLFTnNws9
 
-git clone --depth=1 https://github.com/AdnanHodzic/auto-cpufreq.git
+git clone https://github.com/AdnanHodzic/auto-cpufreq.git --depth=1
 cd auto-cpufreq && sudo ./auto-cpufreq-installer
 
 # Enable tap-to-click
@@ -14,8 +14,3 @@ cd auto-cpufreq && sudo ./auto-cpufreq-installer
         Option "Tapping" "on"
         Option "NaturalScrolling" "true"
 EndSection' >/etc/X11/xorg.conf.d/40-libinput.conf
-
-sudo cat <<EOF | sudo tee /etc/NetworkManager/conf.d/wifi-powersave.conf
-[connection]
-wifi.powersave = 2
-EOF
