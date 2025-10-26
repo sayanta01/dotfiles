@@ -14,31 +14,17 @@ XF86Audio{Mute,LowerVolume,RaiseVolume,MicMute}
 XF86Audio{Prev,Play,Next}
     playerctl {previous,play-pause,next}
 
-alt + {F1,F2,F3}
-    {wpctl set-mute @DEFAULT_SINK@ toggle, \
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-, \
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1}
-
-alt + {F6,F7,F8}
-    playerctl {previous,play-pause,next}
-
 Print
-    dir="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim "$dir" && xclip -sel clip -t image/png < "$dir" && \
+    path="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
+    maim "$path" && xclip -sel clip -t image/png < "$dir" && \
     echo -n "file://$dir" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
 shift + Print
-    dir="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim -s "$dir" || exit 0 && xclip -sel clip -t image/png < "$dir" && \
-    echo -n "file://$dir" | xclip -sel clip -t text/uri-list && \
+    path="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
+    maim -s "$path" || exit 0 && xclip -sel clip -t image/png < "$path" && \
+    echo -n "file://$path" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
-
-super + b
-    {polybar-msg cmd hide; bspc config top_padding 0, polybar-msg cmd show}
-
-super + d
-    while bspc node any.hidden.window -g hidden=off; do false; done && while bspc node "any.!hidden.window" -g hidden=on; do :; done
 
 super + {Return, e}
     {kitty, thunar}

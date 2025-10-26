@@ -2,8 +2,8 @@ https://wiki.archlinux.org/title/Zram
 
 # Cloudflare DNS
 sudo cat <<EOF | sudo tee /etc/resolv.conf
-nameserver 1.1.1.1
-nameserver 8.8.8.8
+nameserver 1.1.1.3
+nameserver 1.0.0.3
 EOF
 
 # SysRq
@@ -12,13 +12,4 @@ EOF
 echo "1" > /proc/sys/kernel/sysrq
 echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
 
-# https://github.com/catppuccin/grub
 # grub-customizer 
-
-echo 'menuentry "Reboot" --class restart {
-  reboot
-}
-menuentry "ShutDown" --class shutdown {
-  halt
-}' | sudo tee -a /etc/grub.d/40_custom
-sudo grub-mkconfig -o /boot/grub/grub.cfg

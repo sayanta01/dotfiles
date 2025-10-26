@@ -1,43 +1,43 @@
 #!/bin/sh
 
 if [ -f /etc/arch-release ]; then
-  alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo paccache -r; paru -Sc; rm -rf ~/.cache/paru'
-  alias installed="grep -i installed /var/log/pacman.log"
-  alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
+	alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo paccache -r; paru -Sc; rm -rf ~/.cache/paru'
+	alias installed="grep -i installed /var/log/pacman.log"
+	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 elif [ -f /etc/debian_version ]; then
-  alias fd="fdfind"
-  alias fix-pkg="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
-  alias clean="sudo apt -y autoremove; sudo apt clean"
-  alias installed="sudo apt list --installed"
-  bigpkg() {
-    dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
-  }
+	alias fd="fdfind"
+	alias fix-pkg="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
+	alias clean="sudo apt -y autoremove; sudo apt clean"
+	alias installed="sudo apt list --installed"
+	bigpkg() {
+		dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
+	}
 else
-  :
+	:
 fi
 
 if grep -q '^runit$' </proc/1/comm; then
-  alias doc-on="sudo sv start docker"
-  alias doc-off="sudo sv stop docker"
-  alias vm-on="sudo sv start libvirtd virtlogd"
-  alias vm-off="sudo sv stop libvirtd virtlogd"
+	alias doc-on="sudo sv start docker"
+	alias doc-off="sudo sv stop docker"
+	alias vm-on="sudo sv start libvirtd virtlogd"
+	alias vm-off="sudo sv stop libvirtd virtlogd"
 elif grep -q '^systemd$' </proc/1/comm; then
-  alias doc-on="sudo systemctl start docker"
-  alias doc-off="sudo systemctl stop docker"
-  alias vm-on="sudo systemctl start libvirtd libvirtd{,-ro,-admin,-tcp,-tls}.socket"
-  alias vm-off="sudo systemctl stop libvirtd libvirtd{,-ro,-admin,-tcp,-tls}.socket"
-  alias blame="sudo systemd-analyze blame"
-  alias jctl="sudo journalctl -p 3 -xb"
-  alias cleanjctl="sudo journalctl --vacuum-time=2weeks"
-  alias sysfailed="systemctl --failed"
-  alias chain="sudo systemd-analyze critical-chain"
-  alias syslist="systemctl list-unit-files --type=service"
+	alias doc-on="sudo systemctl start docker"
+	alias doc-off="sudo systemctl stop docker"
+	alias vm-on="sudo systemctl start libvirtd libvirtd{,-ro,-admin,-tcp,-tls}.socket"
+	alias vm-off="sudo systemctl stop libvirtd libvirtd{,-ro,-admin,-tcp,-tls}.socket"
+	alias blame="sudo systemd-analyze blame"
+	alias jctl="sudo journalctl -p 3 -xb"
+	alias cleanjctl="sudo journalctl --vacuum-time=2weeks"
+	alias sysfail="systemctl --failed"
+	alias chain="sudo systemd-analyze critical-chain"
+	alias syslist="systemctl list-unit-files --type=service"
 else
-  :
+	:
 fi
 
 alias ls="ls --color=auto"
-alias ll="exa -alh --group-directories-first || ls -alh"
+alias ll="eza -alh 2>/dev/null || ls -alh"
 alias lm="ls -t -1"
 alias l-="ls -l | grep -v 'd'"
 alias ld="ls -ld */"
@@ -63,10 +63,10 @@ alias ff='fd -t f | fzf --preview "cat {}" | xargs -r "$EDITOR"'
 alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
 alias dmesg="sudo dmesg -T"
 alias hw="hwinfo --short"
-alias ports="netstat -tulpn"
-alias rsync="rsync -avhP"
+alias openports="sudo ss -tulnp"
+alias rsync="rsync -azvhP"
+alias bf="dust -ir 2>/dev/null || du -sh * | sort -rh"
 alias df="df -h"
-alias bf="du -hxs * | sort -rh | head" # dust
 alias free="free -h"
 alias bc="bc -ql"
 alias shred="shred -uvzn4"

@@ -5,7 +5,7 @@ for dots in .bashrc .profile .xprofile .zprofile; do
 	cp -r "$HOME/dotfiles/$dots" "$HOME"
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
-cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share && cp -r ~/dotfiles/.config/. ~/.config/
+cp -r ~/dotfiles/.config/. ~/.config/ && cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
 chmod -R u+x ~/.config/bspwm/ ~/.config/polybar/ ~/.local/bin/ ~/.config/nsxiv/ ~/.config/lf/
 
 # Tools
@@ -13,8 +13,8 @@ git clone --depth=1 https://github.com/sayanta01/dmenu ~/.config/dmenu && cd ~/.
 git clone --depth=1 https://github.com/sayanta01/nvim ~/.config/nvim
 
 # Looks
-sudo cp -r ~/.local/share/themes/* /usr/share/themes
 sudo cp -r ~/.local/share/fonts/* /usr/share/fonts
+sudo cp -r ~/.local/share/themes/* /usr/share/themes
 
 printf "Fonts? [Y/n]: "
 read -r choice
@@ -35,14 +35,12 @@ if [ "$choice" = "y" ]; then
 		bspwm sxhkd polybar rofi slock dunst \
 		xcape pass polkit-gnome gnome-keyring \
 		mpv nsxiv maim xwallpaper \
-		pavucontrol playerctl \
-		network-manager-applet \
-		lf mediainfo ffmpegthumbnailer unzip p7zip file-roller \
+		pipewire pipewire-pulse wireplumber pavucontrol playerctl \
+		lf mediainfo ffmpegthumbnailer unzip file-roller \
 		gvfs-mtp thunar-archive-plugin \
 		zathura-pdf-mupdf jq \
-		xdg-utils xdg-user-dirs \
-		xclip wmname
-	# ntfs-3g exfatprogs meld
+		xdg-utils xdg-user-dirs xclip wmname
+	# ntfs-3g exfatprogs
 fi
 
 printf "Microcode? [y/N]: "
@@ -55,12 +53,11 @@ fi
 
 ## Services
 if [ "$(ps -p 1 -o comm=)" = "systemd" ]; then
-	sudo pacman -S --noconfirm --needed pipewire wireplumber pipewire-pulse && systemctl --user --now enable pipewire pipewire-pulse wireplumber
+	systemctl --user --now enable pipewire pipewire-pulse wireplumber
 	# sudo systemctl disable docker
 else
-	sudo pacman -S --noconfirm --needed pipewire pipewire-pulse wireplumber
 	sudo pacman -S --noconfirm --needed dbus-runit && sudo ln -s /etc/runit/sv/dbus /run/runit/service
-	# sudo ln -s /run/runit/sv/docker /run/runit/service && sudo touch /run/runit/service/docker/down
+	# sudo touch /run/runit/service/docker/down
 fi
 
 # AUR

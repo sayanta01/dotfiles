@@ -1,18 +1,18 @@
 # file types
-ln      󰌷      # LINK
-or      ⊗      # ORPHAN
-tw      󰕘      # STICKY_OTHER_WRITABLE
-ow            # OTHER_WRITABLE
-st      󱍭      # STICKY
-di            # DIR
-pi      󱑹      # FIFO
-so            # SOCK
-bd            # BLK
-cd      󰈍      # CHR
-su            # SETUID
-sg            # SETGID
-ex            # EXEC
-fi            # FILE
+ln      󰌷       # LINK
+or      ⊗       # ORPHAN
+tw      󰕘       # STICKY_OTHER_WRITABLE
+ow             # OTHER_WRITABLE
+st      󱍭       # STICKY
+di             # DIR
+pi      󱑹       # FIFO
+so             # SOCK
+bd             # BLK
+cd      󰈍       # CHR
+su             # SETUID
+sg             # SETGID
+ex             # EXEC
+fi             # FILE
 
 # file extensions
 *.styl          
@@ -132,7 +132,7 @@ fi            # FILE
 *.rproj         󰗆
 *.sol           
 
-# file names
+# file names (case-insensitive not supported in lf)
 *gruntfile.coffee       
 *gruntfile.js           
 *gruntfile.ls           
@@ -172,7 +172,7 @@ fi            # FILE
 *cmakelists.txt         
 *robots.txt             󱙺
 
-# file names
+# file names (case-sensitive adaptations)
 *Gruntfile.coffee       
 *Gruntfile.js           
 *Gruntfile.ls           
@@ -192,9 +192,9 @@ fi            # FILE
 *Makefile               
 *CMakeLists.txt         
 
-# file patterns
+# file patterns (file name adaptations)
 *jquery.min.js          
-*angular.min.js         󰚿
+*angular.min.js         
 *backbone.min.js        
 *require.min.js         
 *materialize.min.js     

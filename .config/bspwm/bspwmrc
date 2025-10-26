@@ -15,8 +15,8 @@ bspc rule -a Screenkey manage=off
 bspc rule -a pavucontrol state=floating center=on
 
 # Autostart
-pidof -q sxhkd || sxhkd -c ~/.config/bspwm/sxhkdrc &
-pidof -q xcape || xcape -e "Super_L=Control_L|Escape" &
+pgrep -x sxhkd >/dev/null || sxhkd -c ~/.config/bspwm/sxhkdrc &
+pgrep -x xcape >/dev/null || xcape -e "Super_L=Control_L|Escape" &
 xset r rate 300 50 &
 xsetroot -cursor_name left_ptr &
 sh ~/.config/polybar/launch.sh &

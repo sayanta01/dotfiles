@@ -2,5 +2,3 @@
 Type=Application
 Name=Text Editor
 Exec=kitty -e nvim %F
-
-# update-desktop-database ~/.local/share/applications/

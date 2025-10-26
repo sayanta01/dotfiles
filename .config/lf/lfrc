@@ -85,10 +85,10 @@ cmd create %{{
 # Bindings
 map a push :create<space>
 map D trash
-map tr trash-restore
-map zh set hidden!
+map U trash-restore
 map E extract
 map R bulk-rename
+map zh set hidden!
 map x cut
 map y copy
 map p paste

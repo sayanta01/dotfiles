@@ -1,8 +1,5 @@
 sudo pacman -S --noconfirm --needed brightnessctl
-
-# https://youtu.be/Pn2iUgW3l6w?si=-O52reqVLFTnNws9
-
-git clone https://github.com/AdnanHodzic/auto-cpufreq.git --depth=1
+git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 cd auto-cpufreq && sudo ./auto-cpufreq-installer
 
 # Enable tap-to-click

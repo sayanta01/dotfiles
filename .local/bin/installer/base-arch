@@ -1,16 +1,16 @@
 - Disable Secure Boot
 
-## Connect wifi ##
+## Connect Wifi ##
 iwctl
 device list
 station <adpater-name> get-networks
 station <adpater-name> connect <network-name>
 
-## Change tty font ##
+## Change TTY Font ##
 pacman -Sy terminus-font
 setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
 
-## Partition disk ##
+## Partition Disk ##
 cfdisk /dev/sda
 sda1 boot 1G # Type EFI system
 sda2 root    # Rest of the space
@@ -24,37 +24,37 @@ mkfs.fat -F 32 /dev/sda1
 mount /dev/sda2 /mnt
 mount --mkdir /dev/sda1 /mnt/boot/efi
 
-## Install base system ##
-basestrap -i /mnt base base-devel linux-lts linux-firmware runit elogind-runit neovim dosfstools [ Artix ]
+## Install Base-System ##
+basestrap -i /mnt base base-devel linux-lts linux-firmware neovim runit elogind-runit [ Artix ]
 fstabgen -U /mnt >> /mnt/etc/fstab [ Artix ]
 
-pacstrap -K /mnt base base-devel linux-lts linux-firmware neovim dosfstools [ Arch ]
+pacstrap -K /mnt base base-devel linux-lts linux-firmware neovim [ Arch ]
 genfstab -U /mnt >> /mnt/etc/fstab [ Arch ]
 
 ## Chroot ##
 artix-chroot /mnt [ Artix ]
 arch-chroot /mnt [ Arch ]
 
-## Set time ##
+## Set Time ##
 ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
 timedatectl set-ntp true [ Arch ]
 
-## Set localization ##
+## Set Localization ##
 nvim /etc/locale.gen  # uncomment en_US.UTF-8 UTF-8
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C" [ Artix ]
 
-## Network configuration ##
-echo "hostname" > /etc/hostname
+## Network Configuration ##
+echo myhostname > /etc/hostname
 nvim /etc/hosts
 127.0.0.1    localhost
 ::1          localhost
-127.0.1.1    "hostname".localdomain    "hostname"
+127.0.1.1    myhostname.localdomain myhostname
 
 # nvim /etc/pacman.conf  # uncomment ParallelDownloads
-# nvim /etc/makepkg.conf # uncomment MAKEFLAGS - set to your CPU thread count (for faster compilation)
+# nvim /etc/makepkg.conf # uncomment MAKEFLAGS - set to your CPU thread count (faster compilation)
 
 pacman -S xorg networkmanager-runit [ Artix ]
 ln -s /etc/runit/sv/NetworkManager /run/runit/service [ Artix - After Reboot ]
@@ -62,12 +62,12 @@ ln -s /etc/runit/sv/NetworkManager /run/runit/service [ Artix - After Reboot ]
 pacman -S xorg networkmanager [ Arch ]
 systemctl enable NetworkManager [ Arch ]
 
-## Install bootloader ##
+## install Bootloader ##
 pacman -S grub os-prober efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
-passwd # Set the root passwd
+passwd # Set the Root Password
 
 ## Add user ##
 useradd -m -G wheel "user"

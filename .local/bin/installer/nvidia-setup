@@ -20,5 +20,7 @@ sudo mkinitcpio -P
 
 # https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
 # https://wiki.hypr.land/Nvidia/
+# https://youtu.be/Pn2iUgW3l6w?si=-O52reqVLFTnNws9
 # Steam setting > downloads > disable shader pre-caching
 # Fix Screen Tearing in X11
+

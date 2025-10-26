@@ -22,7 +22,7 @@ inputbar {
 }
 
 message {
-    border: 1px solid 0px 0px;
+    border: 2px solid 0px 0px;
 }
 
 entry {
@@ -40,5 +40,5 @@ element {
 }
 
 element-text {
-    highlight: #65bcff;
+    highlight: #0db9d7;
 }
