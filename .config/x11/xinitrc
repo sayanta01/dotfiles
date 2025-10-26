@@ -7,8 +7,4 @@ else
 fi
 
 session=${1:-bspwm}
-case $session in
-bspwm) bspwm ;;
-gnome) gnome-session ;;
-*) exec $1 ;;
-esac
+exec dbus-run-session "$session"
