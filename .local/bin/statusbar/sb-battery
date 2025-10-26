@@ -4,17 +4,17 @@ bat_status=$(cat /sys/class/power_supply/BAT?*/status)
 bat_capacity=$(cat /sys/class/power_supply/BAT?*/capacity)
 
 if [ "$bat_status" = "Charging" ]; then
-	bat_status=""
+	bat_status="🔌"
 elif [ "$bat_capacity" -gt 80 ]; then
-	bat_status=""
+	bat_status="⚡"
 elif [ "$bat_capacity" -gt 60 ]; then
-	bat_status=""
+	bat_status="⚡"
 elif [ "$bat_capacity" -gt 40 ]; then
-	bat_status=""
+	bat_status="⚡"
 elif [ "$bat_capacity" -gt 20 ]; then
-	bat_status=""
+	bat_status="⚡"
 else
-	bat_status=""
+	bat_status="⚡"
 fi
 
 echo "$bat_status $bat_capacity%"
