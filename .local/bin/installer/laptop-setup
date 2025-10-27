@@ -1,6 +1,5 @@
 sudo pacman -S --noconfirm --needed brightnessctl
-git clone https://github.com/AdnanHodzic/auto-cpufreq.git
-cd auto-cpufreq && sudo ./auto-cpufreq-installer
+git clone https://github.com/AdnanHodzic/auto-cpufreq.git && cd auto-cpufreq && sudo ./auto-cpufreq-installer
 
 # Enable tap-to-click
 [ ! -f /etc/X11/xorg.conf.d/40-libinput.conf ] && printf 'Section "InputClass"

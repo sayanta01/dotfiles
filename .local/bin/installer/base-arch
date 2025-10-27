@@ -24,7 +24,7 @@ mkfs.fat -F 32 /dev/sda1
 mount /dev/sda2 /mnt
 mount --mkdir /dev/sda1 /mnt/boot/efi
 
-## Install Base-System ##
+## Base System ##
 basestrap -i /mnt base base-devel linux-lts linux-firmware neovim runit elogind-runit [ Artix ]
 fstabgen -U /mnt >> /mnt/etc/fstab [ Artix ]
 
@@ -62,14 +62,14 @@ ln -s /etc/runit/sv/NetworkManager /run/runit/service [ Artix - After Reboot ]
 pacman -S xorg networkmanager [ Arch ]
 systemctl enable NetworkManager [ Arch ]
 
-## install Bootloader ##
+## Bootloader ##
 pacman -S grub os-prober efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
-passwd # Set the Root Password
+passwd # Set Root Password
 
-## Add user ##
+## Add User ##
 useradd -m -G wheel "user"
 passwd "user"
 EDITOR=nvim visudo # uncomment %wheel ALL=(ALL:ALL) ALL

@@ -15,15 +15,17 @@ XF86Audio{Prev,Play,Next}
     playerctl {previous,play-pause,next}
 
 Print
-    path="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim "$path" && xclip -sel clip -t image/png < "$dir" && \
-    echo -n "file://$dir" | xclip -sel clip -t text/uri-list && \
+    dir="$HOME/Pictures/Screenshots" && [ -d "$dir" ] || mkdir -p "$dir" && \
+    file="$(date +%b-%d-%H-%M-%S).png" && \
+    maim "$dir/$file" && xclip -sel clip -t image/png <"$dir/$file" && \
+    printf 'file://%s/%s' "$dir" "$file" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
 shift + Print
-    path="$(xdg-user-dir PICTURES)/ss/$(date +%d-%b_%H-%M-%S).png" && \
-    maim -s "$path" || exit 0 && xclip -sel clip -t image/png < "$path" && \
-    echo -n "file://$path" | xclip -sel clip -t text/uri-list && \
+    dir="$HOME/Pictures/Screenshots" && [ -d "$dir" ] || mkdir -p "$dir" && \
+    file="$(date +%b-%d-%H-%M-%S).png" && \
+    maim -s "$dir/$file" || exit 0 && xclip -sel clip -t image/png <"$dir/$file" && \
+    printf 'file://%s/%s' "$dir" "$file" | xclip -sel clip -t text/uri-list &&
     notify-send -t 500 "Screenshot Taken 📎"
 
 super + {Return, e}

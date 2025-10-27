@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 scratchpad_id=$(bspc query -N -n .window | while read -r id; do
-  if bspc query -T -n "$id" | grep -q '"className":"scratchpad"'; then
+  if bspc query -T -n "$id" | grep -q '"className":"scratchy"'; then
     echo "$id"
     break
   fi
@@ -14,6 +14,6 @@ if [ -n "$scratchpad_id" ]; then
     bspc node "$scratchpad_id" -g hidden=on
   fi
 else
-  bspc rule -a scratchpad --one-shot state=floating sticky=on locked=on
-  $TERMINAL --class scratchpad &
+  bspc rule -a scratchy -o state=floating sticky=on locked=on
+  $TERMINAL --class scratchy &
 fi

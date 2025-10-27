@@ -2,8 +2,8 @@
 
 if [ -f /etc/pacman.d/mirrorlist ]; then
   # sudo rm -r /etc/pacman.d/gnupg
-	sudo pacman -Syu archlinux-keyring
-	sudo pacman-key --init
-	sudo pacman-key --populate archlinux
-	sudo pacman-key --refresh-keys
+  sudo pacman -Syu archlinux-keyring
+  sudo pacman-key --init
+  sudo pacman-key --populate archlinux
+  sudo pacman-key --refresh-keys
 fi

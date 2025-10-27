@@ -1,9 +1,8 @@
 #!/bin/sh
 
-clock=$(date '+%I')
+clock=$(date "+%I")
 
 case "$clock" in
-"00") icon="🕛" ;;
 "01") icon="🕐" ;;
 "02") icon="🕑" ;;
 "03") icon="🕒" ;;
@@ -18,4 +17,4 @@ case "$clock" in
 "12") icon="🕛" ;;
 esac
 
-date "+%a, %d %b $icon %I:%M"
+date "+%a, %d %b $icon %H:%M"

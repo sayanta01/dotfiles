@@ -1,47 +1,46 @@
 #!/bin/sh
 
-connect() {
-  ip=$(adb shell ip route | awk '{print $9}')
-  adb tcpip 5555 && adb connect "$ip:5555"
+conect() {
+	ip=$(adb shell ip route | awk "{print $9}")
+	adb tcpip 5555 && adb connect "$ip:5555"
 }
 
-aud() {
-  [ -d "$(xdg-user-dir MUSIC)/audio/" ] || mkdir -p "$(xdg-user-dir MUSIC)/audio/"
-  scrcpy --no-video --audio-source=mic \
-    --audio-bit-rate=128K \
-    --record="$(xdg-user-dir MUSIC)/audio/$(date +%d_%b_%I:%M)-recording.opus"
+audio() {
+	scrcpy --no-video --no-window --no-playback \
+		--audio-source=mic \
+		--record="$HOME/Music/$(date +%b-%d-%H-%M-%S).opus"
 }
 
 bcam() {
-  scrcpy --video-source=camera \
-    --audio-source=mic \
-    --camera-facing=back \
-    --camera-fps=40 \
-    --orientation=90
+	scrcpy --video-source=camera \
+		--audio-source=mic \
+		--camera-facing=back \
+		--camera-fps=40 \
+		--orientation=90
 }
 
 fcam() {
-  scrcpy --video-source=camera \
-    --audio-source=mic \
-    --camera-facing=front \
-    --camera-fps=40 \
-    --orientation=90
+	scrcpy --video-source=camera \
+		--audio-source=mic \
+		--camera-facing=front \
+		--camera-fps=40 \
+		--orientation=90
 }
 
 game() {
-  scrcpy --no-video --audio-output-buffer=10
+	scrcpy --no-video --no-window --audio-output-buffer=5
 }
 
 if [ "$1" = "connect" ]; then
-  connect
+	connect
 elif [ "$1" = "aud" ]; then
-  aud
+	aud
 elif [ "$1" = "bcam" ]; then
-  bcam
+	bcam
 elif [ "$1" = "fcam" ]; then
-  fcam
+	fcam
 elif [ "$1" = "game" ]; then
-  game
+	game
 else
-  exit 1
+	exit 1
 fi
