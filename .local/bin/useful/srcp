@@ -1,46 +1,30 @@
 #!/bin/sh
 
 conect() {
-	ip=$(adb shell ip route | awk "{print $9}")
-	adb tcpip 5555 && adb connect "$ip:5555"
+  ip=$(adb shell ip route | awk "{print $9}")
+  adb tcpip 5555 && adb connect "$ip:5555"
 }
 
 audio() {
-	scrcpy --no-video --no-window --no-playback \
-		--audio-source=mic \
-		--record="$HOME/Music/$(date +%b-%d-%H-%M-%S).opus"
+  scrcpy --no-video --no-window \
+    --audio-source=mic \
+    --record="$HOME/Music/$(date +%m-%d-%H-%M-%S).opus"
 }
 
-bcam() {
-	scrcpy --video-source=camera \
-		--audio-source=mic \
-		--camera-facing=back \
-		--camera-fps=40 \
-		--orientation=90
-}
-
-fcam() {
-	scrcpy --video-source=camera \
-		--audio-source=mic \
-		--camera-facing=front \
-		--camera-fps=40 \
-		--orientation=90
+camera() {
+  scrcpy --video-source=camera \
+    --camera-facing=back \
+    --orientation=90
 }
 
 game() {
-	scrcpy --no-video --no-window --audio-output-buffer=5
+  scrcpy --no-video --no-window --audio-output-buffer=5
 }
 
-if [ "$1" = "connect" ]; then
-	connect
-elif [ "$1" = "aud" ]; then
-	aud
-elif [ "$1" = "bcam" ]; then
-	bcam
-elif [ "$1" = "fcam" ]; then
-	fcam
-elif [ "$1" = "game" ]; then
-	game
-else
-	exit 1
-fi
+case "$1" in
+connect) connect ;;
+audio) audio ;;
+camera) camera ;;
+game) game ;;
+*) exit 1 ;;
+esac
