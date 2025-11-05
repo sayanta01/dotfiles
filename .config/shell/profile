@@ -37,5 +37,10 @@ export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 
 export LESSHISTFILE="-"
-export QT_QPA_PLATFORMTHEME="gtk2"
+export QT_QPA_PLATFORMTHEME="qt5ct"
 export _JAVA_AWT_WM_NONREPARENTING=1 # fix Java applications
+
+
+HISTFILE="$XDG_STATE_HOME"/zsh/history
+export HISTFILE="$XDG_STATE_HOME"/bash/history
+

@@ -12,7 +12,7 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 HISTSIZE=2000
-SAVEHIST=$HISTSIZE
+SAVEHIST=2000
 HISTFILE="$HOME/.local/share/history"
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
@@ -24,11 +24,3 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 autoload -U colors && colors
 PROMPT=$'%~\n%F{red}❯ %f'
- 
-function hst() {
-  if [ -n "$WAYLAND_DISPLAY" ]; then
-    history 0 | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
-  else
-    history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel clip
-  fi
-}

@@ -3,6 +3,6 @@
 # https://wearewaylandnow.com
 # chrome://flags - ozone > wayland
 
-sudo pacman -S hyprland xdg-desktop-portal-hyprland waybar \
+sudo pacman -S hyprland waybar xdg-desktop-portal-hyprland \
   grim slurp swappy swww \
   qt5-wayland qt6-wayland wl-clipboard

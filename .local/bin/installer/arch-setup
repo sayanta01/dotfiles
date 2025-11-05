@@ -43,14 +43,6 @@ if [ "$choice" = "y" ]; then
 	# ntfs-3g exfatprogs
 fi
 
-printf "Microcode? [y/N]: "
-read -r choice
-if [ "$choice" = "y" ]; then
-	cpu_vendor=$(awk -F ': ' '/vendor_id/ {print $2}' /proc/cpuinfo | uniq)
-	[ "$cpu_vendor" = "GenuineIntel" ] && sudo pacman -S --noconfirm --needed intel-ucode
-	[ "$cpu_vendor" = "AuthenticAMD" ] && sudo pacman -S --noconfirm --needed amd-ucode
-fi
-
 ## Services
 if [ "$(ps -p 1 -o comm=)" = "systemd" ]; then
 	systemctl --user --now enable pipewire pipewire-pulse wireplumber
@@ -64,7 +56,7 @@ fi
 command -v paru >/dev/null 2>&1 || git clone --depth=1 https://aur.archlinux.org/paru.git ~/.cache/paru && cd ~/.cache/paru && makepkg -fsri --noconfirm
 printf "AUR pkgs? [y/N]: "
 read -r choice
-[ "$choice" = "y" ] && paru -S --needed xsct yt-dlp
+[ "$choice" = "y" ] && paru -S --needed xsct
 
 # VM
 # https://share.google/XPZvqpBTiGmDcSDEu
@@ -78,10 +70,10 @@ read -r choice
 # 	sudo ln -s /etc/runit/sv/libvirtd /run/runit/service && sudo touch /run/runit/service/libvirtd/down
 # 	sudo ln -s /etc/runit/sv/virtlogd /run/runit/service && sudo touch /run/runit/service/virtlogd/down
 # 	sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' /etc/libvirt/libvirtd.conf
-# 	sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
 # 	sudo usermod -aG libvirt "$USER"
+# 	sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
 # fi
 
 # Teletype font
-# sudo setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
-# sudo su root -c "echo -e FONT='ter-120b' > /etc/vconsole.conf"
+# sudo setfont /usr/share/kbd/consolefonts/ter-124b.psf.gz
+# sudo su root -c "echo -e FONT='ter-124b' > /etc/vconsole.conf"

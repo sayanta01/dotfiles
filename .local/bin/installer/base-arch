@@ -1,4 +1,5 @@
-- Disable Secure Boot
+- Disable Secure Boot 
+- Convert MBR to GPT
 
 ## Connect Wifi ##
 iwctl
@@ -8,21 +9,21 @@ station <adpater-name> connect <network-name>
 
 ## Change TTY Font ##
 pacman -Sy terminus-font
-setfont /usr/share/kbd/consolefonts/ter-120b.psf.gz
+setfont ter-124b
 
 ## Partition Disk ##
-cfdisk /dev/sda
-sda1 boot 1G # Type EFI system
+cfdisk /dev/nvme0n1
+sda1 boot 1G # Type efi system
 sda2 root    # Rest of the space
 write & quit
 
 ## Formatting ##
-mkfs.ext4 /dev/sda2
-mkfs.fat -F 32 /dev/sda1
+mkfs.fat -F 32 /dev/nvme0n1p1
+mkfs.ext4 /dev/nvme0n1p2
 
 ## Mounting ##
-mount /dev/sda2 /mnt
-mount --mkdir /dev/sda1 /mnt/boot/efi
+mount /dev/nvme0n1p2 /mnt
+mount --mkdir /dev/nvme0n1p1 /mnt/boot/efi
 
 ## Base System ##
 basestrap -i /mnt base base-devel linux-lts linux-firmware neovim runit elogind-runit [ Artix ]
@@ -36,43 +37,42 @@ artix-chroot /mnt [ Artix ]
 arch-chroot /mnt [ Arch ]
 
 ## Set Time ##
-ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
 timedatectl set-ntp true [ Arch ]
 
 ## Set Localization ##
-nvim /etc/locale.gen  # uncomment en_US.UTF-8 UTF-8
+nvim /etc/locale.gen  # Uncomment en_US.UTF-8 UTF-8
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C" [ Artix ]
 
 ## Network Configuration ##
-echo myhostname > /etc/hostname
+echo `myhostname` > /etc/hostname
 nvim /etc/hosts
 127.0.0.1    localhost
 ::1          localhost
 127.0.1.1    myhostname.localdomain myhostname
 
-# nvim /etc/pacman.conf  # uncomment ParallelDownloads
-# nvim /etc/makepkg.conf # uncomment MAKEFLAGS - set to your CPU thread count (faster compilation)
+# nvim /etc/makepkg.conf # Uncomment MAKEFLAGS - set to your CPU thread count (faster compilation)
 
-pacman -S xorg networkmanager-runit [ Artix ]
+pacman -S networkmanager-runit [ Artix ]
 ln -s /etc/runit/sv/NetworkManager /run/runit/service [ Artix - After Reboot ]
 
-pacman -S xorg networkmanager [ Arch ]
+pacman -S networkmanager [ Arch ]
 systemctl enable NetworkManager [ Arch ]
-
-## Bootloader ##
-pacman -S grub os-prober efibootmgr
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
-grub-mkconfig -o /boot/grub/grub.cfg
 
 passwd # Set Root Password
 
 ## Add User ##
-useradd -m -G wheel "user"
-passwd "user"
-EDITOR=nvim visudo # uncomment %wheel ALL=(ALL:ALL) ALL
+useradd -m -G wheel `user`
+passwd `user`
+EDITOR=nvim visudo # Uncomment %wheel ALL=(ALL:ALL) ALL
+
+## Bootloader ##
+pacman -S grub efibootmgr os-prober
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --removable
+grub-mkconfig -o /boot/grub/grub.cfg
 exit & reboot
 
 # https://wiki.artixlinux.org/Main/Repositories#Arch_repositories
@@ -81,3 +81,7 @@ sudo pacman-key --populate archlinux
 sudo pacman -Syu
 
 dbus-uuidgen | sudo tee /var/lib/dbus/machine-id [ Artix ]
+
+## Essential Pkgs ##
+intel-ucode or amd-ucode
+ly xorg
