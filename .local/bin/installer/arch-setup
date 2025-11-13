@@ -2,7 +2,7 @@
 
 # https://dither8.xyz/guide/arch-postinstall
 for dots in .bashrc .profile .xprofile .zprofile; do
-	cp -r "$HOME/dotfiles/$dots" "$HOME"
+  cp -r "$HOME/dotfiles/$dots" "$HOME"
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
 cp -r ~/dotfiles/.config/. ~/.config/ && cp -r ~/dotfiles/.local/bin/* ~/.local/bin && cp -r ~/dotfiles/.local/share/* ~/.local/share
@@ -19,37 +19,37 @@ sudo cp -r ~/.local/share/themes/* /usr/share/themes
 printf "Fonts? [Y/n]: "
 read -r choice
 case "$choice" in [nN]) ;; *)
-	[ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
-	[ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
-	curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
-	sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
-	;;
+  [ -d /usr/share/fonts/nerd-fonts/ ] && sudo rm -r /usr/share/fonts/nerd-fonts
+  [ -d /usr/share/fonts/nerd-fonts/ ] || sudo mkdir /usr/share/fonts/nerd-fonts
+  curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+  sudo tar -xvf JetBrainsMono.tar.xz -C /usr/share/fonts/nerd-fonts && fc-cache -fv
+  ;;
 esac
 
 printf "Main pkgs? [y/N]: "
 read -r choice
 if [ "$choice" = "y" ]; then
-	sudo pacman -S --noconfirm --needed noto-fonts noto-fonts-emoji \
-		kitty neovim fzf htop \
-		bash-completion zsh zsh-autosuggestions zsh-syntax-highlighting \
-		bspwm sxhkd polybar rofi slock dunst \
-		xcape pass polkit-gnome gnome-keyring \
-		mpv nsxiv maim xwallpaper \
-		pipewire pipewire-pulse wireplumber pavucontrol playerctl \
-		lf mediainfo ffmpegthumbnailer unzip file-roller \
-		gvfs-mtp thunar-archive-plugin \
-		zathura-pdf-mupdf jq \
-		xdg-utils xdg-user-dirs xclip wmname
-	# ntfs-3g exfatprogs
+  sudo pacman -S --noconfirm --needed noto-fonts noto-fonts-emoji \
+    kitty neovim fzf htop \
+    bash-completion zsh zsh-autosuggestions zsh-syntax-highlighting \
+    bspwm sxhkd polybar rofi slock dunst \
+    xcape pass polkit-gnome gnome-keyring \
+    mpv nsxiv maim xwallpaper \
+    pipewire pipewire-pulse wireplumber pavucontrol playerctl \
+    lf mediainfo ffmpegthumbnailer unzip file-roller \
+    gvfs-mtp thunar-archive-plugin \
+    zathura-pdf-mupdf jq \
+    xdg-utils xdg-user-dirs xclip wmname
+  # ntfs-3g exfatprogs
 fi
 
 ## Services
 if [ "$(ps -p 1 -o comm=)" = "systemd" ]; then
-	systemctl --user --now enable pipewire pipewire-pulse wireplumber
-	# sudo systemctl disable docker
+  systemctl --user --now enable pipewire pipewire-pulse wireplumber
+  # sudo systemctl disable docker
 else
-	sudo pacman -S --noconfirm --needed dbus-runit && sudo ln -s /etc/runit/sv/dbus /run/runit/service
-	# sudo touch /run/runit/service/docker/down
+  sudo pacman -S --noconfirm --needed dbus-runit && sudo ln -s /etc/runit/sv/dbus /run/runit/service
+  # sudo touch /run/runit/service/docker/down
 fi
 
 # AUR
