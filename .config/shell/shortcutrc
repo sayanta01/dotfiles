@@ -60,11 +60,9 @@ lazyg() {
 }
 
 hst() {
-	if [ -n "$WAYLAND_DISPLAY" ]; then
-		history 0 | tac | cut -c 8- | fzf | tr -d '\n' | wl-copy
-	else
-		history 0 | tac | cut -c 8- | fzf | tr -d '\n' | xclip -sel clip
-	fi
+	hist_cmd=$([ -n "$ZSH_VERSION" ] && echo "history 0" || echo "history")
+	copy_cmd=$([ -n "$WAYLAND_DISPLAY" ] && echo "wl-copy" || echo "xclip -sel clip")
+	eval "$hist_cmd" | tac | cut -c 8- | fzf | tr -d '\n' | eval "$copy_cmd"
 }
 
 # stop watch

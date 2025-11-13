@@ -9,3 +9,5 @@ if [ "$(readlink -f /sbin/init)" != "/usr/lib/systemd/systemd" ]; then
   pipewire-pulse &
   wireplumber &
 fi
+
+export GTK_THEME=Adwaita:dark
