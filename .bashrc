@@ -11,7 +11,7 @@ shopt -s checkwinsize # check the window size after each command and, if necessa
 
 export HISTSIZE=2000
 export HISTFILESIZE=2000
-export HISTFILE="$HOME/.local/share/history"
+export HISTFILE="$HOME/.bash_history"
 export HISTCONTROL="erasedups:ignorespace"
 
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"

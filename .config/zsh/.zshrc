@@ -13,7 +13,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 HISTSIZE=2000
 SAVEHIST=2000
-HISTFILE="$HOME/.local/share/history"
+HISTFILE="$HOME/.local/state/zsh/history"
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
