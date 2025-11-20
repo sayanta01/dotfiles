@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # https://dither8.xyz/guide/arch-postinstall
-for dots in .bashrc .profile .xprofile .zprofile; do
+for dots in .bashrc .inputrc .profile .xprofile .zshrc .zprofile; do
   cp -r "$HOME/dotfiles/$dots" "$HOME"
 done
 [ -d ~/.local/bin/ ] || mkdir -p ~/.local/bin/
