@@ -58,6 +58,7 @@ alias fix-faillock='faillock --user "$USER" --reset'
 
 alias lg="lazygit"
 alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
+alias matrix='tr -c "[:xdigit:]" " " </dev/urandom'
 alias tb="nc termbin.com 9999"
 alias ff='fd -t f | fzf --preview "cat {}" | xargs -r "$EDITOR"'
 alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"

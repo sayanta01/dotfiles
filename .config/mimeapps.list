@@ -13,4 +13,4 @@ video/x-matroska=mpv.desktop;
 video/mp4=mpv.desktop;
 application/json=text.desktop;
 
-# xdg-settings set default-web-browser google-chrome.desktop
+# xdg-settings set default-web-browser firefox.desktop

@@ -15,14 +15,14 @@ XF86Audio{Prev,Play,Next}
     playerctl {previous,play-pause,next}
 
 Print
-    dir="$HOME/Pictures/Screenshots" && [ -d "$dir" ] || mkdir -p "$dir" && \
+    dir="$HOME/Pictures/Screenshots" && mkdir -p "$dir" && \
     file="$(date +%b-%d-%H-%M-%S).png" && \
     maim "$dir/$file" && xclip -sel clip -t image/png <"$dir/$file" && \
     printf 'file://%s/%s' "$dir" "$file" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
 shift + Print
-    dir="$HOME/Pictures/Screenshots" && [ -d "$dir" ] || mkdir -p "$dir" && \
+    dir="$HOME/Pictures/Screenshots" && mkdir -p "$dir" && \
     file="$(date +%b-%d-%H-%M-%S).png" && \
     maim -s "$dir/$file" || exit 0 && xclip -sel clip -t image/png <"$dir/$file" && \
     printf 'file://%s/%s' "$dir" "$file" | xclip -sel clip -t text/uri-list &&

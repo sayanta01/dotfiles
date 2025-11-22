@@ -23,10 +23,10 @@
     { "before": ["<S-l>"], "commands": ["workbench.action.nextEditor"] },
     { "before": ["<S-h>"], "commands": ["workbench.action.previousEditor"] },
     { "before": ["<Esc>"], "commands": [":noh"] },
-    { "before": ["<S-k>"], "commands": ["editor.action.showHover"] }, // gh
-    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] }, // C-F12
-    { "before": ["g", "y"], "commands": ["editor.action.goToTypeDefinition"] }, // C-S-F12
-    { "before": ["g", "r"], "commands": ["editor.action.goToReferences"] }, // S-F12
+    { "before": ["<S-k>"], "commands": ["editor.action.showHover"] },
+    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
+    { "before": ["g", "y"], "commands": ["editor.action.goToTypeDefinition"] },
+    { "before": ["g", "r"], "commands": ["editor.action.goToReferences"] },
     { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
     { "before": ["]", "d"], "commands": ["editor.action.marker.next"] }
   ],

@@ -83,5 +83,4 @@ sudo pacman -Syu
 dbus-uuidgen | sudo tee /var/lib/dbus/machine-id [ Artix ]
 
 ## Essential Pkgs ##
-intel-ucode or amd-ucode
-ly xorg
+ly xorg intel-ucode 
