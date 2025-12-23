@@ -64,7 +64,6 @@ hst() {
 	eval "$hist_cmd" | tac | cut -c 8- | fzf | tr -d '\n' | eval "$copy_cmd"
 }
 
-# stop watch
 sw() {
 	elapsed_time=0
 	while true; do

@@ -1,5 +1,6 @@
 # Basic vars
 set ifs "\n"
+set incsearch
 set scrolloff 10
 set icons true
 set previewer "~/.config/lf/previewer"
@@ -7,7 +8,7 @@ set cleaner "~/.config/lf/cleaner"
 set errorfmt ""
 set promptfmt "\033[34;1m%d\033[0m\033[1m%f\033[0m"
 set rulerfmt "%i/%t"
-set timefmt "Mon _2 Jan 15:04"
+set timefmt "Mon _2 Jan 15:04 2006"
 
 cmd open &{{
     case $(file --mime-type -Lb "$f") in

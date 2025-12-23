@@ -16,14 +16,14 @@ XF86Audio{Prev,Play,Next}
 
 Print
     dir="$HOME/Pictures/Screenshots" && mkdir -p "$dir" && \
-    file="$(date +%b-%d-%H-%M-%S).png" && \
+    file="$(date +%Y-%m-%d-%H-%M-%S).png" && \
     maim "$dir/$file" && xclip -sel clip -t image/png <"$dir/$file" && \
     printf 'file://%s/%s' "$dir" "$file" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
 shift + Print
     dir="$HOME/Pictures/Screenshots" && mkdir -p "$dir" && \
-    file="$(date +%b-%d-%H-%M-%S).png" && \
+    file="$(date +%Y-%m-%d-%H-%M-%S).png" && \
     maim -s "$dir/$file" || exit 0 && xclip -sel clip -t image/png <"$dir/$file" && \
     printf 'file://%s/%s' "$dir" "$file" | xclip -sel clip -t text/uri-list &&
     notify-send -t 500 "Screenshot Taken 📎"
@@ -75,7 +75,7 @@ super + m
 
 # set the window state
 super + {t,shift + t,s,f}
-	bspc node -t \~{tiled,pseudo_tiled,floating,fullscreen}
+    bspc node -t \~{tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
 super + ctrl + {m,x,s,p}
@@ -92,10 +92,6 @@ super + {_,shift + }{h,j,k,l}
 # focus the next/previous window in the current desktop
 alt + {_,shift + }Tab
     bspc node -f {last,prev}.local.!hidden.window
-
-# focus the last node/desktop
-# super + {grave,Tab}
-#     bspc {node,desktop} -f last
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}

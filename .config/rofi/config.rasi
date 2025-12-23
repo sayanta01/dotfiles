@@ -1,6 +1,6 @@
 configuration {
     modes: "drun,run";
-    font:  "Sans 12";
+    font:  "Sans 11";
 }
 
 * {

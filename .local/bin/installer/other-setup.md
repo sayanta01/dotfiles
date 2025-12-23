@@ -1,3 +1,12 @@
+https://wiki.archlinux.org/title/Zram
+
+# Cloudflare DNS
+sudo cat <<EOF | sudo tee /etc/resolv.conf
+nameserver 1.1.1.3
+nameserver 1.0.0.3
+EOF
+
+# Laptop 💻
 sudo pacman -S --noconfirm --needed brightnessctl
 git clone https://github.com/AdnanHodzic/auto-cpufreq.git && cd auto-cpufreq && sudo ./auto-cpufreq-installer
 
