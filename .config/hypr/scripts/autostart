@@ -2,9 +2,7 @@
 
 if [ "$(readlink -f /sbin/init)" != "/usr/lib/systemd/systemd" ]; then
 	killall pipewire pipewire-pulse wireplumber
-	while pgrep -x pipewire >/dev/null || pgrep -x wireplumber >/dev/null; do
-		sleep 0.1
-	done
+	sleep 1
 	pipewire &
 	pipewire-pulse &
 	wireplumber &

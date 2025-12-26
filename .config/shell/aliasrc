@@ -9,9 +9,9 @@ elif [ -f /etc/debian_version ]; then
 	alias fix-pkg="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
 	alias clean="sudo apt -y autoremove; sudo apt clean"
 	alias installed="sudo apt list --installed"
-	bigpkg() {
-		dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
-	}
+	# bigpkg() {
+	# 	dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
+	# }
 else
 	:
 fi
@@ -19,13 +19,13 @@ fi
 if grep -q '^runit$' </proc/1/comm; then
 	alias doc-on="sudo sv start docker"
 	alias doc-off="sudo sv stop docker"
-	# alias vm-on="sudo sv start libvirtd virtlogd"
-	# alias vm-off="sudo sv stop libvirtd virtlogd"
+	alias vm-on="sudo sv start libvirtd virtlogd"
+	alias vm-off="sudo sv stop libvirtd virtlogd"
 elif grep -q '^systemd$' </proc/1/comm; then
 	alias doc-on="sudo systemctl start docker"
 	alias doc-off="sudo systemctl stop docker"
-	# alias vm-on="sudo systemctl start libvirtd libvirtd{,-ro,-admin,-tcp,-tls}.socket"
-	# alias vm-off="sudo systemctl stop libvirtd libvirtd{,-ro,-admin,-tcp,-tls}.socket"
+	alias vm-on="sudo systemctl start libvirtd libvirtd{,-ro,-admin,-tcp,-tls}.socket"
+	alias vm-off="sudo systemctl stop libvirtd libvirtd{,-ro,-admin,-tcp,-tls}.socket"
 	alias blame="sudo systemd-analyze blame"
 	alias jctl="sudo journalctl -p 3 -xb"
 	alias cleanjctl="sudo journalctl --vacuum-time=2weeks"
@@ -72,5 +72,5 @@ alias bc="bc -ql"
 alias shred="shred -uvzn4"
 alias iv="xrdb merge ~/.config/x11/xresources; nsxiv"
 alias pywal="wal -qi ~/.local/share/walls >/dev/null"
-# alias ytdlv="yt-dlp --external-downloader aria2c"
-# alias ytdla="yt-dlp -x --audio-format mp3 --audio-quality 0"
+alias ytdlv="yt-dlp --external-downloader aria2c"
+alias ytdla="yt-dlp -x --audio-format mp3 --audio-quality 0"

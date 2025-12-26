@@ -6,10 +6,10 @@
   "editor.minimap.enabled": false,
   "telemetry.telemetryLevel": "off",
   "vim.highlightedyank.enable": true,
-  "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
-  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
   "vim.leader": "<space>",
+  "vim.useCtrlKeys": true,
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false

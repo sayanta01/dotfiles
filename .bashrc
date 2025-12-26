@@ -1,18 +1,18 @@
-#
-# ~/.bashrc
-#
-
-# [ -f "$HOME/.profile" ] && . "$HOME/.profile" # Put this in ~/.bash_profile
+# [ -f "$HOME/.profile" ] && . "$HOME/.profile" # put this in ~/.bash_profile
 [[ $- != *i* ]] && return # if not running interactively, don't do anything
 
 export PS1=" \W \[\e[31m\]%\[\e[m\] "
 
 shopt -s histappend   # append to the history file, don't overwrite it
-shopt -s checkwinsize # check the window size after each command and, if necessary, update the values of LINES and COLUMNS
+shopt -s checkwinsize # update window size after every command
+shopt -s lithist      # save history with newlines instead of ; where possible
 
-export HISTSIZE=2000
-export HISTFILESIZE=2000
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous on"
+
 export HISTFILE="$HOME/.bash_history"
+export HISTSIZE=50000
+export HISTFILESIZE=10000
 export HISTCONTROL="erasedups:ignorespace"
 
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"

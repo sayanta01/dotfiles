@@ -1,8 +1,8 @@
 # Check which kernel is installed to set appropriate headers pkg
-sudo pacman -S --noconfirm --needed linux-lts linux-lts-headers
+sudo pacman -S --noconfirm linux-lts linux-lts-headers
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-sudo pacman -S --noconfirm --needed nvidia-dkms nvidia-utils nvidia-settings libva-nvidia-driver
+sudo pacman -S --noconfirm nvidia-dkms nvidia-utils nvidia-settings libva-nvidia-driver
 
 echo "options nvidia_drm modeset=1" | sudo tee /etc/modprobe.d/nvidia.conf
 
@@ -11,14 +11,7 @@ sudo sed -i -E 's/ nvidia_drm//g; s/ nvidia_uvm//g; s/ nvidia_modeset//g; s/ nvi
 sudo sed -i -E "s/^(MODULES=\()/\1${nvidia_modules} /" /etc/mkinitcpio.conf
 sudo mkinitcpio -P
 
-<!-- params="nvidia_drm.modeset=1" -->
-<!-- if ! grep -q $params /etc/default/grub; then -->
-<!-- 	sudo sed -i "/^GRUB_CMDLINE_LINUX_DEFAULT=/s/'\(.*\)'/'\1 $params'/" /etc/default/grub -->
-<!-- 	sudo grub-mkconfig -o /boot/grub/grub.cfg -->
-<!-- fi -->
-
-<!-- https://github.com/korvahannu/arch-nvidia-drivers-installation-guide -->
-<!-- https://wiki.hypr.land/Nvidia/ -->
-<!-- https://youtu.be/Pn2iUgW3l6w?si=-O52reqVLFTnNws9 -->
-<!-- Steam setting > downloads > disable shader pre-caching -->
-<!-- Fix Screen Tearing in X11 -->
+https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
+https://wiki.hypr.land/Nvidia/
+https://youtu.be/Pn2iUgW3l6w?si=-O52reqVLFTnNws9
+Fix Screen Tearing in X11

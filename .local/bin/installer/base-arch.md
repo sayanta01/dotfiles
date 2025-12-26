@@ -1,53 +1,53 @@
 - Disable Secure Boot
 - Convert MBR to GPT
 
-# Connect Wifi #
+# Connect Wifi
 iwctl
 device list
 station <adpater-name> get-networks
 station <adpater-name> connect <network-name>
 
-# Change TTY Font #
+# Change TTY Font
 pacman -Sy terminus-font
 setfont ter-124b
 
-# Partition Disk #
+# Partition Disk
 cfdisk /dev/nvme0n1
 sda1 boot 1G # Type efi system
 sda2 root    # Rest of the space
 write & quit
 
-# Formatting #
+# Formatting
 mkfs.fat -F 32 /dev/nvme0n1p1
 mkfs.ext4 /dev/nvme0n1p2
 
-# Mounting #
+# Mounting
 mount /dev/nvme0n1p2 /mnt
 mount --mkdir /dev/nvme0n1p1 /mnt/boot/efi
 
-# Base System #
+# Base System
 basestrap -i /mnt base base-devel linux-lts linux-firmware neovim runit elogind-runit [ Artix ]
 fstabgen -U /mnt >> /mnt/etc/fstab [ Artix ]
 
 pacstrap -K /mnt base base-devel linux-lts linux-firmware neovim [ Arch ]
 genfstab -U /mnt >> /mnt/etc/fstab [ Arch ]
 
-# Chroot #
+# Chroot
 artix-chroot /mnt [ Artix ]
 arch-chroot /mnt [ Arch ]
 
-# Set Time #
+# Set Time
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
 timedatectl set-ntp true [ Arch ]
 
-# Set Localization #
+# Set Localization
 nvim /etc/locale.gen  # Uncomment en_US.UTF-8 UTF-8
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LC_COLLATE="C" [ Artix ]
 
-# Network Configuration #
+# Network Configuration
 echo `myhostname` > /etc/hostname
 nvim /etc/hosts
 127.0.0.1    localhost
@@ -64,12 +64,12 @@ systemctl enable NetworkManager [ Arch ]
 
 passwd # Set Root Password
 
-# Add User #
+# Add User
 useradd -m -G wheel `user`
 passwd `user`
 EDITOR=nvim visudo # Uncomment %wheel ALL=(ALL:ALL) ALL
 
-# Bootloader #
+# Bootloader
 pacman -S grub efibootmgr os-prober
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --removable
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -82,5 +82,5 @@ sudo pacman -Syu
 
 dbus-uuidgen | sudo tee /var/lib/dbus/machine-id [ Artix ]
 
-# Essential Pkgs #
+# Essential Pkgs
 ly xorg intel-ucode 

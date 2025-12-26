@@ -3,7 +3,7 @@
 dir="$HOME/.local/share/walls"
 BG="$(find "$dir" -name '*.jpg' -o -name '*.png' | shuf -n1)"
 
-hypr_wall() {
+wayland() {
 	if pgrep swww-daemon >/dev/null; then
 		swww img "$BG" --transition-fps 144 --transition-duration 1
 	else
@@ -18,7 +18,7 @@ x11() {
 
 case "$XDG_CURRENT_DESKTOP" in
 "Hyprland")
-	hypr_wall
+	wayland
 	;;
 *)
 	x11
