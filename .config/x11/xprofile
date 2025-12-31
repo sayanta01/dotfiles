@@ -1,11 +1,11 @@
 #!/bin/sh
 
-if [ "$(readlink -f /sbin/init)" != "/usr/lib/systemd/systemd" ]; then
-  killall pipewire pipewire-pulse wireplumber
-  sleep 1
-  pipewire &
-  pipewire-pulse &
-  wireplumber &
-fi
+# if [ "$(readlink -f /sbin/init)" != "/usr/lib/systemd/systemd" ]; then
+#   killall pipewire pipewire-pulse wireplumber
+#   sleep 1
+#   pipewire &
+#   pipewire-pulse &
+#   wireplumber &
+# fi
 
 export GTK_THEME=Adwaita:dark

@@ -12,6 +12,7 @@ image/gif=nsxiv.desktop;
 video/x-matroska=mpv.desktop;
 video/mp4=mpv.desktop;
 application/json=text.desktop;
+inode/directory=thunar.desktop
 
 # xdg-settings set default-web-browser firefox.desktop
 # xdg-mime default thunar.desktop inode/directory
