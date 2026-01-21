@@ -3,8 +3,8 @@
 mkdir -p "$HOME/.cache/lf"
 
 draw() {
-	kitten icat --stdin no --transfer-mode memory --place "${w}x${h}@${x}x${y}" "$1" </dev/null >/dev/tty
-	exit 1
+  kitten icat --stdin no --transfer-mode memory --place "${w}x${h}@${x}x${y}" "$1" </dev/null >/dev/tty
+  exit 1
 }
 
 file="$1"
@@ -17,23 +17,23 @@ CACHE="$HOME/.cache/lf/thumb.$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' -- "$(read
 
 case "$(file -Lb --mime-type "$file")" in
 image/*)
-	draw "$file"
-	;;
+  draw "$file"
+  ;;
 audio/*)
-	mediainfo "$file"
-	;;
+  mediainfo "$file"
+  ;;
 video/*)
-	[ ! -f "$CACHE" ] && ffmpegthumbnailer -i "$file" -o "$CACHE" -s 0
-	draw "$CACHE"
-	;;
+  [ ! -f "$CACHE" ] && ffmpegthumbnailer -i "$file" -o "$CACHE" -s 0
+  draw "$CACHE"
+  ;;
 */pdf)
-	[ ! -f "$CACHE.jpg" ] && pdftoppm -jpeg -f 1 -singlefile "$file" "$CACHE"
-	draw "$CACHE.jpg"
-	;;
+  [ ! -f "$CACHE.jpg" ] && pdftoppm -jpeg -f 1 -singlefile "$file" "$CACHE"
+  draw "$CACHE.jpg"
+  ;;
 text/* | application/*)
-	cat "$file"
-	exit 0
-	;;
+  cat "$file"
+  exit 0
+  ;;
 esac
 
 pistol "$file"

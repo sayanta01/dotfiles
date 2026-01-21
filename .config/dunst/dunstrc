@@ -1,5 +1,5 @@
 [global]
-    follow = mouse
+    follow = keyboard
     frame_width = 2
     font = Sans 12
     alignment = center

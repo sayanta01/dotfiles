@@ -6,6 +6,4 @@ export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
-
 export QT_QPA_PLATFORMTHEME=qt6ct
-export _JAVA_AWT_WM_NONREPARENTING=1

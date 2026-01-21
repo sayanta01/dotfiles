@@ -1,17 +1,13 @@
 #!/bin/sh
 
 if [ -f /etc/arch-release ]; then
+  alias big-pkg="expac -H M '%m\t%n' | sort -h | nl"
 	alias clean='sudo pacman -Rns $(pacman -Qtdq); sudo paccache -r; paru -Sc --noconfirm; rm -rf ~/.cache/paru'
 	alias installed="grep -i installed /var/log/pacman.log"
-	alias bigpkg="expac -H M '%m\t%n' | sort -h | nl"
 elif [ -f /etc/debian_version ]; then
-	alias fd="fdfind"
 	alias fix-pkg="sudo dpkg --configure -a; sudo apt --fix-broken install -y; sudo apt install -f; sudo apt update --fix-missing"
 	alias clean="sudo apt -y autoremove; sudo apt clean"
 	alias installed="sudo apt list --installed"
-	# bigpkg() {
-	# 	dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | awk '{printf "%.2f MB\t%s\n", $1/1024, $2}'
-	# }
 else
 	:
 fi
@@ -26,12 +22,12 @@ elif grep -q '^systemd$' </proc/1/comm; then
 	alias doc-off="sudo systemctl stop docker"
 	alias vm-on="sudo systemctl start libvirtd libvirtd{,-ro,-admin,-tcp,-tls}.socket"
 	alias vm-off="sudo systemctl stop libvirtd libvirtd{,-ro,-admin,-tcp,-tls}.socket"
-	alias blame="sudo systemd-analyze blame"
-	alias jctl="sudo journalctl -p 3 -xb"
-	alias cleanjctl="sudo journalctl --vacuum-time=2weeks"
-	alias sysfail="systemctl --failed"
-	alias chain="sudo systemd-analyze critical-chain"
-	alias syslist="systemctl list-unit-files --type=service"
+	alias jc="sudo journalctl -p 3 -xb"
+  alias jc-clean="sudo journalctl --vacuum-time=2weeks"
+  alias sc-blame="sudo systemd-analyze blame"
+  alias sc-chain="sudo systemd-analyze critical-chain"
+	alias sc-fail="systemctl --failed"
+	alias sc-list="systemctl list-unit-files --type=service"
 else
 	:
 fi
@@ -56,7 +52,6 @@ alias mkdir="mkdir -pv"
 alias clr="clear"
 alias fix-faillock='faillock --user "$USER" --reset'
 
-alias lg="lazygit"
 alias rr="curl https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias matrix='tr -c "[:xdigit:]" " " </dev/urandom'
 alias tb="nc termbin.com 9999"
@@ -64,12 +59,10 @@ alias ff='fd -t f | fzf --preview "cat {}" | xargs -r "$EDITOR"'
 alias vuln="grep . /sys/devices/system/cpu/vulnerabilities/*"
 alias dmesg="sudo dmesg -T"
 alias hw="hwinfo --short"
-alias openports="sudo ss -tulnp"
-alias rsync="rsync -azvhP"
+alias ports="sudo ss -tulnp"
 alias bf="dust -ir 2>/dev/null || du -sh * | sort -rh"
 alias df="df -h"
 alias bc="bc -ql"
-alias shred="shred -uvzn4"
 alias iv="xrdb merge ~/.config/x11/xresources; nsxiv"
 alias pywal="wal -qi ~/.local/share/walls >/dev/null"
 alias ytdlv="yt-dlp --external-downloader aria2c"

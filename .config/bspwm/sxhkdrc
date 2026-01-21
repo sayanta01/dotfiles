@@ -17,24 +17,24 @@ XF86Audio{Prev,Play,Next}
 Print
     dir="$HOME/Pictures/Screenshots" && mkdir -p "$dir" && \
     file="$(date +%Y-%m-%d-%H-%M-%S).png" && \
-    maim "$dir/$file" && xclip -sel clip -t image/png <"$dir/$file" && \
+    maim "$dir/$file" && xclip -sel clip -t image/png < "$dir/$file" && \
     printf 'file://%s/%s' "$dir" "$file" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
 shift + Print
     dir="$HOME/Pictures/Screenshots" && mkdir -p "$dir" && \
     file="$(date +%Y-%m-%d-%H-%M-%S).png" && \
-    maim -s "$dir/$file" || exit 0 && xclip -sel clip -t image/png <"$dir/$file" && \
-    printf 'file://%s/%s' "$dir" "$file" | xclip -sel clip -t text/uri-list &&
+    maim -s "$dir/$file" || exit 0 && xclip -sel clip -t image/png < "$dir/$file" && \
+    printf 'file://%s/%s' "$dir" "$file" | xclip -sel clip -t text/uri-list && \
     notify-send -t 500 "Screenshot Taken 📎"
 
-super + {Return, e}
-    {kitty, thunar}
+super + Return
+    kitty
 
 super + @space
-    command -v dmenu >/dev/null && dmenu_run || rofi -show run
+    command -v dmenu >/dev/null 2>&1 && dmenu_run || rofi -show run
 
-ctrl + Escape
+alt + F1
     rofi -show drun -show-icons
 
 ctrl + alt + l
@@ -62,7 +62,7 @@ super + alt + {q,r}
     bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }q
+super + {_,shift + }w
     bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -91,7 +91,7 @@ super + {_,shift + }{h,j,k,l}
 
 # focus the next/previous window in the current desktop
 alt + {_,shift + }Tab
-    bspc node -f {last,prev}.local.!hidden.window
+    bspc node -f {last,next}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -123,15 +123,15 @@ super + ctrl + space
 
 # expand/contract a window
 super + alt + {h,j,k,l}
-    bspc node -z {left -240 0 || bspc node -z right -240 0, \
+    bspc node -z {left -220 0 || bspc node -z right -220 0, \
     bottom 0 180 || bspc node -z top 0 180, \
     top 0 -180 || bspc node -z bottom 0 -180, \
-    right 240 0 || bspc node -z left 240 0}
+    right 220 0 || bspc node -z left 220 0}
 
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
-    bspc node -z {right -240 0,top 0 180,bottom 0 -180,left 240 0}
+    bspc node -z {right -220 0,top 0 180,bottom 0 -180,left 220 0}
 
 # move a floating window
 super + {Left,Down,Up,Right}
-    bspc node -v {-240 0,0 180,0 -180,240 0}
+    bspc node -v {-220 0,0 180,0 -180,220 0}

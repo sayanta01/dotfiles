@@ -5,9 +5,9 @@ configuration {
 
 * {
     foreground: #f8f8f2;
-    background: #16161e;
+    background: #181825;
     selected-normal-background:  #2d3f76;
-    selected-active-background:  #ffc777;
+    selected-active-background:  #ffb86c;
     alternate-normal-background: var(background);
     alternate-active-background: var(background);
 }

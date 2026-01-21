@@ -5,6 +5,7 @@
 
 text/x-shellscript=text.desktop;
 text/plain=text.desktop;
+application/postscript=org.pwmt.zathura.desktop;
 application/pdf=org.pwmt.zathura.desktop;
 image/png=nsxiv.desktop;
 image/jpeg=nsxiv.desktop;
@@ -15,4 +16,3 @@ application/json=text.desktop;
 inode/directory=thunar.desktop
 
 # xdg-settings set default-web-browser firefox.desktop
-# xdg-mime default thunar.desktop inode/directory

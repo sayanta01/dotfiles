@@ -1,0 +1,18 @@
+#!/bin/sh
+
+for battery in /sys/class/power_supply/BAT?*; do
+	[ -d "$battery" ] || continue
+
+	status=$(cat "$battery/status" 2>/dev/null)
+	capacity=$(cat "$battery/capacity" 2>/dev/null)
+
+	if [ "$status" = "Charging" ]; then
+		icon="🔌"
+	elif [ "$status" = "Discharging" ]; then
+		icon="⚡"
+	else
+		continue
+	fi
+
+	printf "%s %d%%" "$icon" "$capacity"
+done

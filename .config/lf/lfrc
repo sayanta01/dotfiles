@@ -12,24 +12,20 @@ set timefmt "Mon _2 Jan 15:04 2006"
 
 cmd open &{{
     case $(file --mime-type -Lb "$f") in
-        text/* | application/json | inode/x-empty) lf -remote "send $id \$$EDITOR \$fx" ;;
+        text/* | application/json | inode/empty) lf -remote "send $id \$$EDITOR \$fx" ;;
         *) for f in $fx; do xdg-open "$f" >/dev/null 2>&1; done ;;
     esac
 }}
 
-cmd extract ${{
-    set -f
-    case $f in
-        *.tar.bz | *.tbz | *.tar.bz2 | *.tbz2) tar xjvf "$f" ;;
-        *.tar.gz | *.tgz) tar xzvf "$f" ;;
-        *.txz | *.tar.xz) tar xJvf "$f" ;;
-        *.bz2) bunzip2 "$f" ;;
-        *.gz) gunzip "$f" ;;
-        *.zip) unzip "$f";;
-        *.rar) 7z x "$f" ;;
-        *.Z) uncompress "$f" ;;
-        *.7z) 7z x "$f" ;;
-    esac
+cmd create %{{
+    item="$*"
+    if [[ "$item" == */ ]]; then
+        mkdir -p -- "${item%/}"
+        lf -remote "send $id select \"$(printf '%s' "${item%/}" | sed 's/\\/\\\\/g;s/"/\\"/g')\""
+    else
+        touch -- "$item"
+        lf -remote "send $id select \"$(printf '%s' "$item" | sed 's/\\/\\\\/g;s/"/\\"/g')\""
+    fi
 }}
 
 cmd bulk-rename ${{
@@ -65,28 +61,10 @@ cmd trash ${{
     done
 }}
 
-cmd trash-restore ${{
-    gio trash --list | column -t -s "$(printf '\t')" | fzf -i -e -m -d / --with-nth 4.. \
-        --bind 'home:first,end:last,ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all' \
-        --prompt="Trash restore: " | cut -d ' ' -f1 | while read -r line; do gio trash --restore "$line"; done
-}}
-
-cmd create %{{
-    item="$*"
-    if [[ "$item" == */ ]]; then
-        mkdir -p -- "${item%/}"
-        lf -remote "send $id select \"$(printf '%s' "${item%/}" | sed 's/\\/\\\\/g;s/"/\\"/g')\""
-    else
-        touch -- "$item"
-        lf -remote "send $id select \"$(printf '%s' "$item" | sed 's/\\/\\\\/g;s/"/\\"/g')\""
-    fi
-}}
-
 # Bindings
 map a push :create<space>
-map D trash
-map U trash-restore
-map E extract
 map R bulk-rename
+map D trash
+map U $$SHELL -ic 'tre "$f"'
 map x cut
 map gh cd ~

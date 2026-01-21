@@ -1,27 +1,28 @@
 #!/bin/sh
 
+# https://youtube.com/shorts/JK8mhTBB8MQ?si=CjceJtN6_RbltaLo
 # adb pair ip:port -> pairing code
 # adb connect ip:port
 
 conect() {
-	ip=$(adb shell ip route | awk "{print $9}")
-	adb tcpip 5555 && adb connect "$ip:5555"
+  ip=$(adb shell ip route | awk "{print $9}")
+  adb tcpip 5555 && adb connect "$ip:5555"
 }
 
 audio() {
-	scrcpy --no-video --no-window \
-		--audio-source=mic \
-		--record="$HOME/Music/$(date +%Y-%m-%d-%H-%M-%S).opus"
+  scrcpy --no-video --no-window \
+    --audio-source=mic \
+    --record="$HOME/Music/$(date +%Y-%m-%d-%H-%M-%S).opus"
 }
 
 camera() {
-	scrcpy --video-source=camera \
-		--camera-facing=back \
-		--orientation=90
+  scrcpy --video-source=camera \
+    --camera-facing=back \
+    --orientation=90
 }
 
 game() {
-	scrcpy --no-video --no-window --audio-output-buffer=5
+  scrcpy --no-video --no-window --audio-output-buffer=5
 }
 
 case "$1" in
